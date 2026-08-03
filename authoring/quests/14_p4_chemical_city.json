@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p4",
+  "engine_id": "2014000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p4.intro",
+      "engine_id": "3014000000000001",
+      "purpose": "Why P4 works differently",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.raw_water",
+      "engine_id": "3014000000000002",
+      "purpose": "Three different waters in one world",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p4.treatment",
+      "engine_id": "3014000000000003",
+      "purpose": "One input, three outputs",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.sewage",
+      "engine_id": "3014000000000004",
+      "purpose": "Waste is feedstock for a neighbouring line",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.sulfur",
+      "engine_id": "3014000000000005",
+      "purpose": "Your first acid line",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.nitrogen",
+      "engine_id": "3014000000000006",
+      "purpose": "From air to fertiliser",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.chlorine",
+      "engine_id": "3014000000000007",
+      "purpose": "One plant, three products",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.fertiliser",
+      "engine_id": "3014000000000008",
+      "purpose": "Chemistry meets the calendar",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p4.kitchen_manual",
+      "engine_id": "3014000000000009",
+      "purpose": "Understand the process first",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p4.kitchen_batch",
+      "engine_id": "3014000000000010",
+      "purpose": "The same kitchen, without hands",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.rations",
+      "engine_id": "3014000000000011",
+      "purpose": "Variety instead of a mandatory menu",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.contract",
+      "engine_id": "3014000000000012",
+      "purpose": "Demand you can plan for",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p4.exit",
+      "engine_id": "3014000000000013",
+      "purpose": "The district outgrew its pipes",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

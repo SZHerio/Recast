@@ -1,0 +1,17 @@
+{
+  "__comment": "Хранимый рацион: то, что переживёт межсезонье и дорогу. Основа снабжения фракций и будущих орбитальных баз.",
+  "replace": false,
+  "values": [
+    "farmersdelight:apple_pie_slice",
+    "farmersdelight:chocolate_pie_slice",
+    "farmersdelight:sweet_berry_cheesecake_slice",
+    "farmersdelight:honey_cookie",
+    "farmersdelight:sweet_berry_cookie",
+    "farmersdelight:glow_berry_custard",
+    "farmersdelight:apple_cider",
+    "farmersdelight:fruit_salad",
+    "minecraft:pumpkin_pie",
+    "minecraft:dried_kelp",
+    "minecraft:golden_carrot"
+  ]
+}

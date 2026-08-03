@@ -1,0 +1,13 @@
+{
+  "__comment": "Возвратная пищевая тара P5. Каждая позиция раскрывается обратно без потерь: девять единиц вошли — девять вышли. Тара, которую нельзя вернуть, в городской контракт не принимается.",
+  "replace": false,
+  "values": [
+    "farmersdelight:cabbage_crate",
+    "farmersdelight:carrot_crate",
+    "farmersdelight:potato_crate",
+    "farmersdelight:beetroot_crate",
+    "farmersdelight:onion_crate",
+    "farmersdelight:tomato_crate",
+    "farmersdelight:rice_bag"
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "if_zemlemer_p2": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:kar98",
+    "secondary": "%tacz:taurus943",
+    "helmet": "minecraft:leather_helmet",
+    "chestplate": "minecraft:leather_chestplate",
+    "leggings": "minecraft:leather_leggings",
+    "boots": "minecraft:leather_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_zemlemer_p4": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m870",
+    "secondary": "%tacz:m1911",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_zemlemer_p5": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m16a1",
+    "secondary": "%tacz:glock_17",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_meridian_p2": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:db_long",
+    "secondary": "%tacz:taurus943",
+    "helmet": "minecraft:leather_helmet",
+    "chestplate": "minecraft:leather_chestplate",
+    "leggings": "minecraft:leather_leggings",
+    "boots": "minecraft:leather_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_meridian_p4": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m870",
+    "secondary": "%tacz:m1911",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_meridian_p5": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m16a1",
+    "secondary": "%tacz:glock_17",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_free_caravans_p2": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:db_short",
+    "secondary": "%tacz:rhino357",
+    "helmet": "minecraft:leather_helmet",
+    "chestplate": "minecraft:leather_chestplate",
+    "leggings": "minecraft:leather_leggings",
+    "boots": "minecraft:leather_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_free_caravans_p4": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m1911",
+    "secondary": "%tacz:taurus943",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_free_caravans_p5": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m16a1",
+    "secondary": "%tacz:m1911",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_helios_p2": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:kar98",
+    "secondary": "%tacz:rhino357",
+    "helmet": "minecraft:leather_helmet",
+    "chestplate": "minecraft:leather_chestplate",
+    "leggings": "minecraft:leather_leggings",
+    "boots": "minecraft:leather_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_helios_p4": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m870",
+    "secondary": "%tacz:m1911",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_helios_p5": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m16a1",
+    "secondary": "%tacz:glock_17",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_ash_root_p2": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:db_short",
+    "secondary": "%tacz:taurus943",
+    "helmet": "minecraft:leather_helmet",
+    "chestplate": "minecraft:leather_chestplate",
+    "leggings": "minecraft:leather_leggings",
+    "boots": "minecraft:leather_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_ash_root_p4": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:db_long",
+    "secondary": "%tacz:rhino357",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_ash_root_p5": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m870",
+    "secondary": "%tacz:m1911",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_scar_p2": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:rhino357",
+    "secondary": "%tacz:taurus943",
+    "helmet": "minecraft:leather_helmet",
+    "chestplate": "minecraft:leather_chestplate",
+    "leggings": "minecraft:leather_leggings",
+    "boots": "minecraft:leather_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_scar_p4": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m1911",
+    "secondary": "%tacz:rhino357",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_scar_p5": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m16a1",
+    "secondary": "%tacz:glock_17",
+    "helmet": "minecraft:iron_helmet",
+    "chestplate": "minecraft:iron_chestplate",
+    "leggings": "minecraft:iron_leggings",
+    "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "illagers": {
+    "aligned": [
+      "illagers",
+      "monster"
+    ],
+    "opposed": [
+      "villagers"
+    ],
+    "equipment": {
+      "table": "tacznpcs:npc/illager",
+      "dropChances": {
+        "mainhand": 1,
+        "head": 0.2,
+        "chest": 0.2,
+        "legs": 0.2,
+        "feet": 0.2
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager2.png"
+      }
+    ]
+  },
+  "villagers": {
+    "aligned": [
+      "villagers"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "equipment": {
+      "table": "tacznpcs:npc/villager",
+      "dropChances": {
+        "mainhand": 1,
+        "head": 0.2,
+        "chest": 0.2,
+        "legs": 0.2,
+        "feet": 0.2
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager1.png"
+      }
+    ]
+  },
+  "default": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:glock_17",
+    "skin": {
+      "id": "tacznpcs:entity/default.png"
+    }
+  }
+}

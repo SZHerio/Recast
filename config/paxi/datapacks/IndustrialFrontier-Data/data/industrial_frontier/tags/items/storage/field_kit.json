@@ -1,0 +1,13 @@
+{
+  "__comment": "Полевая логистика P5: то, что уезжает вместе с бригадой на стройку линии или в рейд. Ящик на месте работ дешевле, чем поездка домой за одним предметом.",
+  "replace": false,
+  "values": [
+    "farmersdelight:wooden_basket",
+    "farmersdelight:bamboo_basket",
+    "create:brown_toolbox",
+    "create:blue_toolbox",
+    "create:green_toolbox",
+    "create:red_toolbox",
+    "create:black_toolbox"
+  ]
+}

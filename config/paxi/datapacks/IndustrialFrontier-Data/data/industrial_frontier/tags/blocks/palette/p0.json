@@ -1,0 +1,18 @@
+{
+  "__comment": "Палитра P0: то, что берётся руками на месте. Лагерь, который не жалко бросить. Холст входит сюда ковриком: farmersdelight:canvas — это предмет, его нельзя поставить, и в теге блоков он ломал всю палитру.",
+  "replace": false,
+  "values": [
+    "minecraft:oak_log",
+    "minecraft:spruce_log",
+    "minecraft:birch_log",
+    "minecraft:oak_planks",
+    "minecraft:spruce_planks",
+    "minecraft:cobblestone",
+    "minecraft:stone",
+    "minecraft:dirt",
+    "minecraft:coarse_dirt",
+    "minecraft:gravel",
+    "farmersdelight:straw_bale",
+    "farmersdelight:canvas_rug"
+  ]
+}

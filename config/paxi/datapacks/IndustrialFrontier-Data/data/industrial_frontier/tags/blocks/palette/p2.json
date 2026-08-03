@@ -1,0 +1,18 @@
+{
+  "__comment": "Палитра P2: металл и промышленный лист. Появляется тепло, появляется и облицовка под него.",
+  "replace": false,
+  "values": [
+    "minecraft:iron_block",
+    "minecraft:iron_bars",
+    "minecraft:deepslate_bricks",
+    "minecraft:polished_deepslate",
+    "create:brass_casing",
+    "create:copper_casing",
+    "createdeco:iron_sheet_metal",
+    "createdeco:copper_sheet_metal",
+    "createdeco:zinc_sheet_metal",
+    "createdeco:iron_catwalk",
+    "createdeco:andesite_catwalk",
+    "createdeco:iron_support"
+  ]
+}

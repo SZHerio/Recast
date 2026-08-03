@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/easy_npc_sandbox.schema.json",
+  "title": "Non-executable Easy NPC sandbox design",
+  "type": "object",
+  "required": ["schema_version", "status", "purpose", "allowed_capabilities", "forbidden_commands", "activation_gate"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "status": { "const": "DESIGN_ONLY_NON_EXECUTABLE" },
+    "purpose": { "type": "string", "minLength": 1 },
+    "allowed_capabilities": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "forbidden_commands": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "activation_gate": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+  }
+}

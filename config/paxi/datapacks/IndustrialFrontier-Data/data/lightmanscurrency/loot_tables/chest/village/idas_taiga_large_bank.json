@@ -1,0 +1,34 @@
+{
+  "__comment": "Штатная таблица состояла из одной строки — счёты из Quark, которого в сборке нет. Из-за этого она не разбиралась целиком. Заменена монетами самого Lightman's Currency: сундук деревенского банка остаётся не пустым, а его содержимое становится тем, чем и должно быть в банке.",
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "lightmanscurrency:coin_copper",
+          "weight": 6,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 4.0, "max": 12.0 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lightmanscurrency:coin_iron",
+          "weight": 3,
+          "functions": [
+            { "function": "minecraft:set_count", "count": { "type": "minecraft:uniform", "min": 1.0, "max": 5.0 } }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "lightmanscurrency:coin_gold",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "random_sequence": "lightmanscurrency:chest/village/idas_taiga_large_bank"
+}

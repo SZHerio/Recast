@@ -1,0 +1,17 @@
+{
+  "__comment": "Совместимость Create с Biomes O' Plenty ссылается на biomesoplenty:white_lavender — в установленной версии BOP этого растения нет. Рецепт выключен условием, а не удалён: если мод обновится и предмет появится, достаточно убрать этот файл.",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stone"
+  }
+}

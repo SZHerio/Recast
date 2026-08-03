@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "build_id": "IF-M1-0001",
+  "full_ru_gate_status": "OPEN",
+  "full_ru_gate_blockers": [
+    "guideme.hardcoded_screen_titles",
+    "owner_visual_qa"
+  ],
+  "entries": [
+    {
+      "id": "ae2.guideme.markdown",
+      "priority": "P0",
+      "status": "STATIC_COMPLETE",
+      "scope": "119/119 assets/ae2/ae2guide/**/*.md pages; structural QA clean",
+      "machine_report": "docs/registries/generated/IF-M1-0001/guide_content_baseline.json",
+      "release_gate": "Owner completes visual navigation, search, scene, wrapping and item-link QA."
+    },
+    {
+      "id": "alexsmobs.animal_dictionary.editorial",
+      "priority": "P1",
+      "status": "STATIC_COMPLETE",
+      "scope": "91/91 pages editorially reviewed; 90 corrected Paxi overrides and one accepted vendor page",
+      "machine_report": "docs/registries/generated/IF-M1-0001/book_content_baseline.json",
+      "release_gate": "Owner completes in-game book rendering QA."
+    },
+    {
+      "id": "citadel.demo_book",
+      "priority": "P2",
+      "status": "STATIC_COMPLETE",
+      "scope": "2/2 ru_ru text pages and 2/2 common JSON literal labels",
+      "machine_report": "docs/registries/generated/IF-M1-0001/book_content_baseline.json",
+      "release_gate": "Owner confirms the demo book renders Russian if accessed."
+    },
+    {
+      "id": "guideme.hardcoded_screen_titles",
+      "priority": "P2",
+      "status": "OPEN",
+      "scope": "GuideME 20.1.15 (CurseForge 1173950/8204776): GuideME Guidebook; AE2 Guidebook Search; Navigation Tree",
+      "machine_report": null,
+      "release_gate": "Exact upstream version fixes the literals, or a narrow pack-owned CurseForge-published patch localizes them without a runtime translator."
+    }
+  ]
+}

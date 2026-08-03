@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/threat/faction.schema.json",
+  "title": "Faction definition",
+  "type": "object",
+  "required": ["schema_version", "id", "origin", "ideology", "economy", "industry_attitude", "city_attitude", "combat_doctrine", "base_tiers", "reputation_rules"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "id": { "type": "string", "pattern": "^industrial_frontier:faction/[a-z0-9_/-]+$" },
+    "origin": { "type": "string" },
+    "ideology": { "type": "string" },
+    "economy": { "type": "string" },
+    "industry_attitude": { "type": "string" },
+    "city_attitude": { "type": "string" },
+    "combat_doctrine": { "type": "string" },
+    "base_tiers": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "required": ["tier", "min_epoch", "max_epoch", "definition_id"],
+        "properties": {
+          "tier": { "type": "integer", "minimum": 0, "maximum": 6 },
+          "min_epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "max_epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "definition_id": { "type": "string" }
+        }
+      }
+    },
+    "reputation_rules": { "type": "object" }
+  }
+}

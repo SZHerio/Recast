@@ -1,0 +1,329 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/m2_domain_process_ownership.schema.json",
+  "title": "Recast M2 domain and process ownership",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "namespace",
+    "registry_id",
+    "status",
+    "scope_ru",
+    "domains",
+    "pathways",
+    "stages",
+    "contracts",
+    "gates",
+    "source_evidence"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "namespace": { "const": "industrial_frontier" },
+    "registry_id": { "const": "industrial_frontier:m2/domain_process_ownership" },
+    "status": { "const": "STATIC_COMPLETE_USER_GATE_PENDING" },
+    "scope_ru": { "type": "string", "minLength": 1 },
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "domain_id",
+          "status",
+          "title_ru",
+          "title_en",
+          "installed_mod_ids",
+          "planned_owner_labels",
+          "sovereign_role_ru",
+          "forbidden_role_ru",
+          "processes",
+          "evidence_refs",
+          "gate_refs"
+        ],
+        "properties": {
+          "domain_id": {
+            "type": "string",
+            "pattern": "^industrial_frontier:domain/[a-z0-9_/-]+$"
+          },
+          "status": {
+            "enum": [
+              "ACTIVE_INSTALLED",
+              "INSTALLED_PROGRESSION_GATED",
+              "GATED_NOT_INSTALLED"
+            ]
+          },
+          "title_ru": { "type": "string", "minLength": 1 },
+          "title_en": { "type": "string", "minLength": 1 },
+          "installed_mod_ids": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z0-9_.-]+$" },
+            "uniqueItems": true
+          },
+          "planned_owner_labels": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          },
+          "sovereign_role_ru": { "type": "string", "minLength": 1 },
+          "forbidden_role_ru": { "type": "string", "minLength": 1 },
+          "processes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "process_id",
+                "status",
+                "ownership",
+                "purpose_ru",
+                "io_semantics",
+                "input_refs",
+                "output_refs",
+                "earliest_epoch",
+                "automation_epoch",
+                "flow_contract",
+                "implementation_ru"
+              ],
+              "properties": {
+                "process_id": {
+                  "type": "string",
+                  "pattern": "^industrial_frontier:process/[a-z0-9_/-]+$"
+                },
+                "status": {
+                  "enum": [
+                    "ACTIVE_VENDOR",
+                    "ACTIVE_PACK",
+                    "ACTIVE_PACK_GATED",
+                    "DECIDED_NOT_ENFORCED",
+                    "GATED_NOT_INSTALLED"
+                  ]
+                },
+                "ownership": { "enum": ["PRIMARY", "SHARED_CONTRACT", "RESERVED_FUTURE"] },
+                "purpose_ru": { "type": "string", "minLength": 1 },
+                "io_semantics": { "const": "COVERAGE_ONLY_NOT_RECIPE" },
+                "input_refs": {
+                  "type": "array",
+                  "items": { "type": "string", "minLength": 1 },
+                  "uniqueItems": true
+                },
+                "output_refs": {
+                  "type": "array",
+                  "items": { "type": "string", "minLength": 1 },
+                  "uniqueItems": true
+                },
+                "earliest_epoch": { "$ref": "m2_common.schema.json#/$defs/nullableEpoch" },
+                "automation_epoch": { "$ref": "m2_common.schema.json#/$defs/nullableEpoch" },
+                "flow_contract": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "model",
+                    "non_material_exemption_reason_ru",
+                    "pathway_refs"
+                  ],
+                  "properties": {
+                    "model": {
+                      "enum": [
+                        "PATHWAY_OWNER",
+                        "NON_MATERIAL_COORDINATION"
+                      ]
+                    },
+                    "non_material_exemption_reason_ru": { "type": "string", "minLength": 1 },
+                    "pathway_refs": {
+                      "type": "array",
+                      "items": { "type": "string", "pattern": "^industrial_frontier:pathway/[a-z0-9_/-]+$" },
+                      "uniqueItems": true
+                    }
+                  }
+                },
+                "implementation_ru": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "evidence_refs": { "$ref": "m2_common.schema.json#/$defs/evidenceRefs" },
+          "gate_refs": { "$ref": "m2_common.schema.json#/$defs/gateRefs" }
+        }
+      }
+    },
+    "pathways": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pathway_id",
+          "parent_process_ref",
+          "owner_domain_ref",
+          "title_ru",
+          "title_en",
+          "status",
+          "purpose_ru",
+          "stage_refs"
+        ],
+        "properties": {
+          "pathway_id": { "type": "string", "pattern": "^industrial_frontier:pathway/[a-z0-9_/-]+$" },
+          "parent_process_ref": { "type": "string", "pattern": "^industrial_frontier:process/[a-z0-9_/-]+$" },
+          "owner_domain_ref": { "type": "string", "pattern": "^industrial_frontier:domain/[a-z0-9_/-]+$" },
+          "title_ru": { "type": "string", "minLength": 1 },
+          "title_en": { "type": "string", "minLength": 1 },
+          "status": {
+            "enum": [
+              "ACTIVE_INSTALLED",
+              "INSTALLED_PROGRESSION_GATED",
+              "DECIDED_NOT_ENFORCED",
+              "GATED_NOT_INSTALLED"
+            ]
+          },
+          "purpose_ru": { "type": "string", "minLength": 1 },
+          "stage_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "pattern": "^industrial_frontier:stage/[a-z0-9_/-]+$" },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stage_id",
+          "pathway_ref",
+          "parent_process_ref",
+          "owner_domain_ref",
+          "title_ru",
+          "title_en",
+          "status",
+          "stage_kind",
+          "input_groups",
+          "output_refs",
+          "waste_output_refs",
+          "recycle_input_refs",
+          "source_basis_ru",
+          "earliest_epoch",
+          "automation_epoch",
+          "implementation_ru"
+        ],
+        "properties": {
+          "stage_id": { "type": "string", "pattern": "^industrial_frontier:stage/[a-z0-9_/-]+$" },
+          "pathway_ref": { "type": "string", "pattern": "^industrial_frontier:pathway/[a-z0-9_/-]+$" },
+          "parent_process_ref": { "type": "string", "pattern": "^industrial_frontier:process/[a-z0-9_/-]+$" },
+          "owner_domain_ref": { "type": "string", "pattern": "^industrial_frontier:domain/[a-z0-9_/-]+$" },
+          "title_ru": { "type": "string", "minLength": 1 },
+          "title_en": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["STATIC_BINDING", "GATED_BINDING"] },
+          "stage_kind": {
+            "enum": [
+              "MATERIAL_SOURCE",
+              "MATERIAL_TRANSFORMATION",
+              "MATERIAL_SINK",
+              "IDENTITY_PRESERVING_SERVICE"
+            ]
+          },
+          "input_groups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["group_id", "logic", "substance_refs"],
+              "properties": {
+                "group_id": { "type": "string", "pattern": "^industrial_frontier:input_group/[a-z0-9_/-]+$" },
+                "logic": { "enum": ["ALL_OF", "ONE_OF"] },
+                "substance_refs": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": { "type": "string", "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$" },
+                  "uniqueItems": true
+                }
+              }
+            }
+          },
+          "output_refs": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$" },
+            "uniqueItems": true
+          },
+          "waste_output_refs": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$" },
+            "uniqueItems": true
+          },
+          "recycle_input_refs": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$" },
+            "uniqueItems": true
+          },
+          "source_basis_ru": { "type": "string", "minLength": 1 },
+          "earliest_epoch": { "$ref": "m2_common.schema.json#/$defs/nullableEpoch" },
+          "automation_epoch": { "$ref": "m2_common.schema.json#/$defs/nullableEpoch" },
+          "implementation_ru": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "contracts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "contract_id",
+          "status",
+          "source_domain_ref",
+          "target_domain_ref",
+          "direction",
+          "physical_basis_ru",
+          "payload_refs",
+          "earliest_epoch",
+          "no_bypass_rule_ru",
+          "evidence_refs",
+          "gate_refs"
+        ],
+        "properties": {
+          "contract_id": {
+            "type": "string",
+            "pattern": "^industrial_frontier:contract/[a-z0-9_/-]+$"
+          },
+          "status": { "enum": ["ACTIVE_VENDOR", "ACTIVE_PACK", "GATED_M2_IMPLEMENTATION", "GATED_NOT_INSTALLED"] },
+          "source_domain_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:domain/[a-z0-9_/-]+$"
+          },
+          "target_domain_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:domain/[a-z0-9_/-]+$"
+          },
+          "direction": { "enum": ["ONE_WAY", "BIDIRECTIONAL_MATERIAL_FLOW"] },
+          "physical_basis_ru": { "type": "string", "minLength": 1 },
+          "payload_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          },
+          "earliest_epoch": { "$ref": "m2_common.schema.json#/$defs/nullableEpoch" },
+          "no_bypass_rule_ru": { "type": "string", "minLength": 1 },
+          "evidence_refs": { "$ref": "m2_common.schema.json#/$defs/evidenceRefs" },
+          "gate_refs": { "$ref": "m2_common.schema.json#/$defs/gateRefs" }
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "m2_common.schema.json#/$defs/gate" }
+    },
+    "source_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "m2_common.schema.json#/$defs/sourceEvidence" }
+    }
+  }
+}

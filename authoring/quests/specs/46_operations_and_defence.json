@@ -1,0 +1,155 @@
+{
+  "key": "ops",
+  "file": "46_operations_and_defence",
+  "chapter_id": "2046000000000001",
+  "group_id": "1000000000000005",
+  "icon": "createbigcannons:cannon_mount",
+  "order": 1,
+  "tag": "diplomacy",
+  "optional": false,
+  "xp": 60,
+  "title_ru": "46 — Операции и оборона",
+  "title_en": "46 — Operations and defence",
+  "sub_ru": "Когда появляется что перерезать",
+  "sub_en": "When there is finally something to cut",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "minecraft:shield", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Теперь есть что перерезать",
+        "subtitle": "Почему давление начинается в пятой эпохе",
+        "desc": [
+          "Пока база помещалась в один экран, отбирать у вас было нечего. С появлением магистрали, порта, склада и пассажирской линии появилось и уязвимое место.",
+          "Внешний мир реагирует именно на это: операции запускают закрытые контракты и работающие узлы, а не прожитые дни. Показатели города смотрит команда «/if_city_report».",
+          "Правило, которое не меняется: у любой операции есть окно переговоров, и ни одна не разрушает вашу базу безвозвратно. Давление здесь — это задача, а не наказание."
+        ],
+        "task": "Понять, что запускает операции"
+      },
+      "en": {
+        "title": "Now there is something to cut",
+        "subtitle": "Why pressure starts in the fifth epoch",
+        "desc": [
+          "While the base fitted on one screen there was nothing to take from you. With a mainline, a port, a warehouse and a transit line, a vulnerable point appeared as well.",
+          "The outside world reacts to exactly that: operations are triggered by closed contracts and working nodes, not by days lived. The command /if_city_report shows the city indicators.",
+          "One rule does not change: every operation has a negotiation window, and none of them destroys your base permanently. Pressure here is a task, not a punishment."
+        ],
+        "task": "Understand what triggers operations"
+      }
+    },
+    {
+      "slug": "squads", "x": 3, "y": -1.5, "icon": "minecraft:iron_helmet", "deps": ["intro"],
+      "ru": {
+        "title": "Кто стоит на дороге",
+        "subtitle": "Фракция, эпоха, роль — и ничего больше",
+        "desc": [
+          "Снаряжение любого встречного отряда определяется тройкой: какая фракция, какая у неё эпоха, какая роль у бойца. Возраст мира и удача в расчёт не идут.",
+          "Отсюда главное следствие: патруль не носит того, чего вы ещё не можете произвести, и не роняет это в лут. Обойти эпоху через чужой труп нельзя.",
+          "Команда «/if_squad_loadout» показывает роли и их архетипы. Сапёр и расчёт орудия появляются только с пятой эпохи — до неё у противника нет ни задачи, ни повода."
+        ],
+        "task": "Разобрать правило снаряжения отряда"
+      },
+      "en": {
+        "title": "Who stands in the road",
+        "subtitle": "Faction, epoch, role — and nothing else",
+        "desc": [
+          "The kit of any squad you meet is defined by three things: which faction, which epoch it is in, which role the fighter has. World age and luck do not enter the calculation.",
+          "The main consequence: a patrol does not carry what you cannot yet produce, and does not drop it as loot. You cannot skip an epoch through someone else's corpse.",
+          "The command /if_squad_loadout lists the roles and their archetypes. The sapper and the gun crew appear only from the fifth epoch — before that the enemy has neither the task nor the reason."
+        ],
+        "task": "Work through the squad equipment rule"
+      }
+    },
+    {
+      "slug": "ordnance", "x": 6, "y": -1.5, "icon": "createbigcannons:solid_shot", "deps": ["squads"],
+      "ru": {
+        "title": "Пушка и её боезапас",
+        "subtitle": "Разделение по разрушительности",
+        "desc": [
+          "Пушка доступна рано и остаётся полезной: ядро и картечь стоят железа, дымовой снаряд — тоже. Этого хватает, чтобы отбиться и чтобы понять, как работает орудие.",
+          "А вот способность сносить укрепление — фугасный, бронебойный, осколочный и жидкостный снаряды — перенесена за сталь. Штатно они тоже стоили железа, то есть тяжёлая артиллерия существовала раньше промышленности, которая её объясняет.",
+          "Это ограничение по ущербу, а не запрет мода. Форма рецептов сохранена, изменился только материал корпуса."
+        ],
+        "task": "Понять, где проходит граница боезапаса"
+      },
+      "en": {
+        "title": "The gun and its ammunition",
+        "subtitle": "Split by destructiveness",
+        "desc": [
+          "The cannon is available early and stays useful: solid shot and grapeshot cost iron, and so does the smoke shell. That is enough to fight back and to learn how the gun works.",
+          "The ability to level a fortification — high-explosive, armour-piercing, shrapnel and fluid shells — moved behind steel. By default they too cost plain iron, meaning heavy artillery existed before the industry that explains it.",
+          "This is a damage limit, not a ban on the mod. The recipe shapes are unchanged; only the casing material moved."
+        ],
+        "task": "Understand where the ammunition line is drawn"
+      }
+    },
+    {
+      "slug": "operations", "x": 3, "y": 1.5, "icon": "minecraft:crossbow", "deps": ["intro"],
+      "ru": {
+        "title": "Пять операций",
+        "subtitle": "Что именно ставится на кон",
+        "desc": [
+          "Защита состава начинается, когда по плечу пошёл регулярный груз. На кону состав и груз — путь и сигналы не разрушаются, депо выпустит новый.",
+          "Блокада перекрывает одно плечо, а не сеть. Саботаж выводит из строя один узел линии, не трогая склад. Налёт на порт забирает груз с причала и одну баржу.",
+          "Совместная оборона — единственная, где на кону не ваше имущество, а репутация: помочь союзнику или нет. Отказ допустим и не делает фракцию врагом. Подробности — «/if_operations»."
+        ],
+        "task": "Разобрать, что теряется в каждой операции"
+      },
+      "en": {
+        "title": "Five operations",
+        "subtitle": "What exactly is at stake",
+        "desc": [
+          "Convoy escort starts when regular freight begins moving along a leg. The train and its cargo are at stake — track and signals are not destroyed and the depot will release another.",
+          "A blockade closes one leg, not the network. Sabotage disables one node of a line without touching the warehouse. A port raid takes the cargo on the quay and one barge.",
+          "Joint defence is the only one where your property is not at stake but your reputation is: help an ally or not. Refusing is allowed and does not make the faction an enemy. Details: /if_operations."
+        ],
+        "task": "Work through what is lost in each operation"
+      }
+    },
+    {
+      "slug": "treaties", "x": 6, "y": 1.5, "icon": "minecraft:written_book", "deps": ["operations"],
+      "ru": {
+        "title": "Договор — это состояние",
+        "subtitle": "У него есть цена, срок и последствие",
+        "desc": [
+          "Договор не выдаётся как награда и не лежит в инвентаре. Это состояние отношений, за которое платят и которое можно потерять поведением.",
+          "Договор о проходе снимает защиту состава и блокаду на согласованных маршрутах, но стоит доли с плеча. Портовая хартия снимает налёт и обязывает пропускать чужие баржи в очередь наравне со своими.",
+          "Есть и последствие для соседей: союз с одной фракцией виден остальным, и враждебные ей начинают считать ваш маршрут её интересом. Список — «/if_treaties»."
+        ],
+        "task": "Разобрать цену и последствие договора"
+      },
+      "en": {
+        "title": "A treaty is a state",
+        "subtitle": "It has a price, a term and a consequence",
+        "desc": [
+          "A treaty is not handed out as a reward and does not sit in your inventory. It is a state of relations that is paid for and that can be lost through behaviour.",
+          "A transit pact removes convoy escort and blockade on agreed routes but costs a share of the leg. A port charter removes the raid and obliges you to let other people's barges into the queue on equal terms.",
+          "There is a consequence for the neighbours: an alliance with one faction is visible to the rest, and those hostile to it start treating your route as its interest. The list: /if_treaties."
+        ],
+        "task": "Work through the price and consequence of a treaty"
+      }
+    },
+    {
+      "slug": "recovery", "x": 9, "y": 0, "icon": "minecraft:golden_apple", "deps": ["ordnance", "treaties"],
+      "ru": {
+        "title": "После операции",
+        "subtitle": "Восстановление прописано заранее",
+        "desc": [
+          "Каждая операция имеет записанный путь восстановления, и он известен до её начала. Потерянный состав возвращается на депо. Повреждённый узел чинится штатным ремонтом с сохранением настроек.",
+          "Баржа восстанавливается у причала, причал остаётся. Плечо после блокады открывается договором или сходом поста — рельсы никуда не деваются.",
+          "Смысл в том, что неудача стоит времени и ресурсов, но не прохождения. Сборка не отбирает у вас построенное — она заставляет строить с запасом."
+        ],
+        "task": "Знать путь восстановления до начала операции"
+      },
+      "en": {
+        "title": "After an operation",
+        "subtitle": "Recovery is written down in advance",
+        "desc": [
+          "Every operation has a written recovery path, and it is known before it starts. A lost train returns at the depot. A damaged node is repaired normally with its settings intact.",
+          "A barge is restored at the quay and the quay remains. After a blockade the leg reopens through a treaty or when the post withdraws — the rails do not go anywhere.",
+          "The point is that failure costs time and resources but not the run. The pack does not take away what you built — it makes you build with margin."
+        ],
+        "task": "Know the recovery path before the operation begins"
+      }
+    }
+  ]
+}

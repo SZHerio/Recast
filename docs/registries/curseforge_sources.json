@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "policy": "Every third-party JAR added by the pack author must be downloaded from an exact CurseForge file page/CDN URL and recorded here or in minecraftinstance.json. Visibility in the CurseForge App is not required by the owner as of 2026-08-02.",
+  "build_id": "IF-M1-0001",
+  "files": [
+    {
+      "file_name": "citadel-2.6.3-1.20.1.jar",
+      "project_id": 331936,
+      "file_id": 7476570,
+      "project_slug": "citadel",
+      "download_url": "https://edge.forgecdn.net/files/7476/570/citadel-2.6.3-1.20.1.jar",
+      "sha256": "56C7AB87348A5292583AAC787B6CF11B5193E77F02AF1D17EA75A96F8640B3CE",
+      "release_type": "release",
+      "purpose": "Mandatory Alex's Mobs dependency; requires Citadel 2.6.0 or newer."
+    },
+    {
+      "file_name": "jei-1.20.1-forge-15.20.0.134.jar",
+      "project_id": 238222,
+      "file_id": 8419086,
+      "project_slug": "jei",
+      "download_url": "https://edge.forgecdn.net/files/8419/086/jei-1.20.1-forge-15.20.0.134.jar",
+      "sha256": "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
+      "release_type": "beta",
+      "purpose": "Compatibility floor for GTCEu 7.5.3, which declares JEI 15.20.0.115 or newer.",
+      "replaces": "jei-1.20.1-forge-15.20.0.112.jar"
+    },
+    {
+      "file_name": "ftb-library-forge-2001.2.13.jar",
+      "project_id": 404465,
+      "file_id": 8226927,
+      "project_slug": "ftb-library-forge",
+      "download_url": "https://edge.forgecdn.net/files/8226/927/ftb-library-forge-2001.2.13.jar",
+      "sha256": "41810281B65336265CAE2C88412022D02F2F0A3F28C66A06173D86F98ACF14A7",
+      "release_type": "release",
+      "purpose": "FTB authoring stack library."
+    },
+    {
+      "file_name": "ftb-teams-forge-2001.3.2.jar",
+      "project_id": 404468,
+      "file_id": 7499810,
+      "project_slug": "ftb-teams-forge",
+      "download_url": "https://edge.forgecdn.net/files/7499/810/ftb-teams-forge-2001.3.2.jar",
+      "sha256": "B1CB4D82EA9F137A87E12A7AAF3329619294B56F7D70337DFD557A76E10B6E07",
+      "release_type": "release",
+      "purpose": "Team-owned quest progress and future Threat Director team identity."
+    },
+    {
+      "file_name": "ftb-quests-forge-2001.4.22.jar",
+      "project_id": 289412,
+      "file_id": 8078538,
+      "project_slug": "ftb-quests-forge",
+      "download_url": "https://edge.forgecdn.net/files/8078/538/ftb-quests-forge-2001.4.22.jar",
+      "sha256": "9EA9D159A78A2724CFE0457B024680FDB52A2126EFF9CFA5280A30578F647A68",
+      "release_type": "release",
+      "purpose": "Authoritative in-game guide and quest graph renderer."
+    },
+    {
+      "file_name": "ftb-xmod-compat-forge-2.1.3.jar",
+      "project_id": 889915,
+      "file_id": 6402486,
+      "project_slug": "ftb-xmod-compat",
+      "download_url": "https://edge.forgecdn.net/files/6402/486/ftb-xmod-compat-forge-2.1.3.jar",
+      "sha256": "16A8EB9DE88D5C33D29CB076CC39DFB337B2C54348E1EF1EFE9DD60CF85E5F72",
+      "release_type": "release",
+      "purpose": "Narrow FTB Quests integrations, including Filter System support."
+    },
+    {
+      "file_name": "ftb-filter-system-forge-20.0.1.jar",
+      "project_id": 943925,
+      "file_id": 6466153,
+      "project_slug": "ftb-filter-system",
+      "download_url": "https://edge.forgecdn.net/files/6466/153/ftb-filter-system-forge-20.0.1.jar",
+      "sha256": "FCB7B312A010986A868A6645E4E395B2635383A2387297C7C134AA4250959E24",
+      "release_type": "release",
+      "purpose": "Tag-aware quest tasks without enumerating equivalent items."
+    },
+    {
+      "file_name": "questsadditions-1.4.7.jar",
+      "project_id": 580129,
+      "file_id": 6004490,
+      "project_slug": "quests-additions",
+      "download_url": "https://edge.forgecdn.net/files/6004/490/questsadditions-1.4.7.jar",
+      "sha256": "C0914E53B3545972F1B81511A00363D724DA209AF290A0FDA301836BC5B3F2BA",
+      "release_type": "release",
+      "purpose": "Future place/structure tasks for functional city contracts; gated until a narrow user test."
+    },
+    {
+      "file_name": "kubejs-create-forge-2001.3.0-build.8.jar",
+      "project_id": 429371,
+      "file_id": 6265498,
+      "project_slug": "kubejs-create",
+      "download_url": "https://edge.forgecdn.net/files/6265/498/kubejs-create-forge-2001.3.0-build.8.jar",
+      "sha256": "7ED3229677A98159BADD9250F8E9555B5E8F7F7B55981F1A99B11E30574BAFD4",
+      "release_type": "release",
+      "purpose": "KubeJS ownership of Create recipe integration."
+    },
+    {
+      "file_name": "lootjs-forge-1.20.1-2.13.1.jar",
+      "project_id": 570630,
+      "file_id": 7551186,
+      "project_slug": "lootjs",
+      "download_url": "https://edge.forgecdn.net/files/7551/186/lootjs-forge-1.20.1-2.13.1.jar",
+      "sha256": "C1672330605A691B8A91B3A4D252F2D3A280F252874F1FC5FDD7CAD07D13B719",
+      "release_type": "release",
+      "purpose": "Single owner of future pack-authored loot changes."
+    },
+    {
+      "file_name": "Paxi-1.20-Forge-4.0.jar",
+      "project_id": 515708,
+      "file_id": 4749994,
+      "project_slug": "paxi",
+      "download_url": "https://edge.forgecdn.net/files/4749/994/Paxi-1.20-Forge-4.0.jar",
+      "sha256": "DD18DD9696D099137B170076676E8411E3D8385AF15941F68472F21167266F1A",
+      "release_type": "release",
+      "purpose": "Global delivery of the pack-owned datapack and Russian resource pack."
+    },
+    {
+      "file_name": "bettercombat-forge-1.9.0+1.20.1.jar",
+      "project_id": 639842,
+      "file_id": 7287334,
+      "project_slug": "better-combat-by-daedelus",
+      "download_url": "https://edge.forgecdn.net/files/7287/334/bettercombat-forge-1.9.0%2b1.20.1.jar",
+      "sha256": "49C69DCCF2C641246B4E3DECA81EBAC21F0EE119E81FC713B838B8E33569EEA1",
+      "release_type": "release",
+      "purpose": "Единственная механика ближнего боя M3; заменяет ванильный размах без второго боевого overhaul."
+    },
+    {
+      "file_name": "epic-knights-1.20.1-forge-10.11.jar",
+      "project_id": 509041,
+      "file_id": 7756534,
+      "project_slug": "epic-knights-shields-armor-and-weapons",
+      "download_url": "https://edge.forgecdn.net/files/7756/534/epic-knights-1.20.1-forge-10.11.jar",
+      "sha256": "6043FDC77EA9651B1293E8602C8E858C728628F6F6B6E9EFA247E4281F4CA733",
+      "release_type": "release",
+      "purpose": "Единственный исторический каталог холодного оружия и брони; потребляет сталь через общие forge-теги."
+    },
+    {
+      "file_name": "tacz-1.20.1-1.1.8-hotfix.jar",
+      "project_id": 1028108,
+      "file_id": 8141310,
+      "project_slug": "timeless-and-classics-guns",
+      "download_url": "https://edge.forgecdn.net/files/8141/310/tacz-1.20.1-1.1.8-hotfix.jar",
+      "sha256": "9ED8ADA1283ED7A793A70CC1B51C4A340F367CE84707E1A7B8CF21EE3D288D77",
+      "release_type": "release",
+      "purpose": "Единственная система огнестрела; вход в домен перенесён за сталь P2."
+    },
+    {
+      "file_name": "cloth-config-11.1.136-forge.jar",
+      "project_id": 348521,
+      "file_id": 5729105,
+      "project_slug": "cloth-config",
+      "download_url": "https://edge.forgecdn.net/files/5729/105/cloth-config-11.1.136-forge.jar",
+      "sha256": "1E895E85CF5B1E1905EF3178EC155C8BADFE22A1577B92C09143A5AA1F4CE0F2",
+      "release_type": "release",
+      "purpose": "Обязательная зависимость Better Combat [11.0.0,) и Epic Knights [11.0.99,)."
+    },
+    {
+      "file_name": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+      "project_id": 658587,
+      "file_id": 4587214,
+      "project_slug": "playeranimator",
+      "download_url": "https://edge.forgecdn.net/files/4587/214/player-animation-lib-forge-1.0.2-rc1%2b1.20.jar",
+      "sha256": "90D9965CB9EFDBDA29FDC5610BE3914CF7008BF5C392FF34F7AB25F96A852691",
+      "release_type": "release",
+      "purpose": "Обязательная зависимость Better Combat [1,)."
+    },
+    {
+      "file_name": "FarmersDelight-1.20.1-1.3.2.jar",
+      "project_id": 398521,
+      "file_id": 8083474,
+      "project_slug": "farmers-delight",
+      "download_url": "https://edge.forgecdn.net/files/8083/474/FarmersDelight-1.20.1-1.3.2.jar",
+      "sha256": "47AED94BB9192C4978FE199F9D3CA5895AECCFBE5B5A0869FDF3AA011C2641F7",
+      "release_type": "release",
+      "purpose": "Ручной пищевой срез P0-P2 по списку работ M3; владелец культур, ручной кухни, разделки и базовых блюд."
+    },
+    {
+      "file_name": "create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar",
+      "project_id": 628194,
+      "file_id": 8204836,
+      "project_slug": "create-central-kitchen",
+      "download_url": "https://edge.forgecdn.net/files/8204/836/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar",
+      "sha256": "E2DF6C4D862160A4BB5C5C19D3EAE3BE5226794D3E6FB5816BA69A20A34CCE9F",
+      "release_type": "release",
+      "purpose": "Пакетная автоматизация кухни Farmer’s Delight через Create 6.0.8; не создаёт параллельный каталог машин."
+    },
+    {
+      "file_name": "minecolonies-1.20.1-1.1.1274.jar",
+      "project_id": 245506,
+      "file_id": 8562856,
+      "project_slug": "minecolonies",
+      "download_url": "https://edge.forgecdn.net/files/8562/856/minecolonies-1.20.1-1.1.1274.jar",
+      "sha256": "F938B60BE97A3778FE041B46A0CB358F520704F86863A19A94FA0D6DA41CE1C3",
+      "release_type": "release",
+      "purpose": "Живое ядро города: население, профессии, склад и запросы. Создаёт постоянный спрос, но не производит высокоуровневые материалы."
+    },
+    {
+      "file_name": "structurize-1.20.1-1.0.816.jar",
+      "project_id": 298744,
+      "file_id": 8138301,
+      "project_slug": "structurize",
+      "download_url": "https://edge.forgecdn.net/files/8138/301/structurize-1.20.1-1.0.816.jar",
+      "sha256": "A4DC864C13A825546E09805CE754A4DC8D92919A69B940CE284B546DAD4E9699",
+      "release_type": "release",
+      "purpose": "Чертежи и основа собственного современного MineColonies-style."
+    },
+    {
+      "file_name": "domum_ornamentum-1.20.1-1.0.303-snapshot-universal.jar",
+      "project_id": 446069,
+      "file_id": 8338110,
+      "project_slug": "domum-ornamentum",
+      "download_url": "https://edge.forgecdn.net/files/8338/110/domum_ornamentum-1.20.1-1.0.303-snapshot-universal.jar",
+      "sha256": "6A8D84F68F37465F4FDC991C34623A6DCC8BB86A1EB6C6C738AACC9EEAC9D999",
+      "release_type": "release",
+      "purpose": "Материализуемые архитектурные блоки style-pack; обязательная зависимость MineColonies и Structurize."
+    },
+    {
+      "file_name": "blockui-1.20.1-1.0.193.jar",
+      "project_id": 528052,
+      "file_id": 7541343,
+      "project_slug": "blockui",
+      "download_url": "https://edge.forgecdn.net/files/7541/343/blockui-1.20.1-1.0.193.jar",
+      "sha256": "0658AEA747CFAEA37171EA0794E420C4AC40E638B1D7DEC50D196086B80A4CB7",
+      "release_type": "release",
+      "purpose": "Интерфейсная библиотека MineColonies и Structurize."
+    }
+  ],
+  "owner_exceptions": [
+    {
+      "file_name": "cc-tweaked-1.20.1-forge-1.120.0.jar",
+      "mod_id": "computercraft",
+      "version": "1.120.0",
+      "sha256": "F3CDE5A1AA20CA6ACE802FED8250920D73C000E32A392F887B02315DFC678E90",
+      "reason_ru": "CC: Tweaked прекратил публикацию на CurseForge: последняя доступная там forge-сборка — 1.113.1 (файл 5714507, сентябрь 2024). Advanced Peripherals 0.7.45r и новее требуют computercraft [1.116.1,), поэтому пара «новый AP + CurseForge-сборка CC» невозможна в принципе.",
+      "decision_ru": "Владелец принял решение установить forge-сборку 1.120.0 из стороннего источника. Это зарегистрированное исключение из правила CurseForge-only, а не его отмена: на все остальные моды правило действует без изменений.",
+      "alternative_ru": "Альтернатива без исключения — Advanced Peripherals 0.7.44r (файл 6623216), требующий computercraft [1.110.0,) и совместимый с CurseForge-сборкой 1.113.1. Сборка сохранена в backups/IF-M4-0001/mods на случай отката.",
+      "decided_on": "2026-08-02"
+    }
+  ]
+}

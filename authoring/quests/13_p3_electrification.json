@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p3",
+  "engine_id": "2013000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p3.intro",
+      "engine_id": "3013000000000001",
+      "purpose": "Three quantities you must not confuse",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p3.generator",
+      "engine_id": "3013000000000002",
+      "purpose": "Steam and fuel become kilowatts",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p3.cable",
+      "engine_id": "3013000000000003",
+      "purpose": "A wire is a rated part too",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p3.buffer",
+      "engine_id": "3013000000000004",
+      "purpose": "\"Available\" and \"enough\" are not the same",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p3.signal",
+      "engine_id": "3013000000000005",
+      "purpose": "And only after that a material",
+      "task_kind": "tag",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p3.machine",
+      "engine_id": "3013000000000006",
+      "purpose": "Casing, class and sides",
+      "task_kind": "tag",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p3.bridge",
+      "engine_id": "3013000000000007",
+      "purpose": "Energy must not travel in a circle",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p3.line",
+      "engine_id": "3013000000000008",
+      "purpose": "An end-to-end route without hands",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p3.exit",
+      "engine_id": "3013000000000009",
+      "purpose": "What you can do now and what comes next",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

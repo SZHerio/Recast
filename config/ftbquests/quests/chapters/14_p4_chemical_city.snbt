@@ -1,0 +1,365 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "14_p4_chemical_city"
+	group: "1000000000000004"
+	icon: "minecraft:water_bucket"
+	id: "2014000000000001"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{industrial_frontier.quest.p4.intro.desc.1}"
+				"{industrial_frontier.quest.p4.intro.desc.2}"
+				"{industrial_frontier.quest.p4.intro.desc.3}"
+			]
+			icon: "minecraft:water_bucket"
+			id: "3014000000000001"
+			rewards: [{
+				id: "5014000000000001"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "{industrial_frontier.quest.p4.intro.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000001"
+				title: "{industrial_frontier.quest.p4.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.intro.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3014000000000001"]
+			description: [
+				"{industrial_frontier.quest.p4.raw_water.desc.1}"
+				"{industrial_frontier.quest.p4.raw_water.desc.2}"
+				"{industrial_frontier.quest.p4.raw_water.desc.3}"
+			]
+			icon: "minecraft:bucket"
+			id: "3014000000000002"
+			rewards: [{
+				id: "5014000000000002"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.raw_water.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000002"
+				item: {
+					Count: 1
+					id: "minecraft:water_bucket"
+				}
+				title: "{industrial_frontier.quest.p4.raw_water.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p4.raw_water.title}"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3014000000000002"]
+			description: [
+				"{industrial_frontier.quest.p4.treatment.desc.1}"
+				"{industrial_frontier.quest.p4.treatment.desc.2}"
+				"{industrial_frontier.quest.p4.treatment.desc.3}"
+			]
+			icon: "minecraft:cauldron"
+			id: "3014000000000003"
+			rewards: [{
+				id: "5014000000000003"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.treatment.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000003"
+				title: "{industrial_frontier.quest.p4.treatment.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.treatment.title}"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3014000000000003"]
+			description: [
+				"{industrial_frontier.quest.p4.sewage.desc.1}"
+				"{industrial_frontier.quest.p4.sewage.desc.2}"
+				"{industrial_frontier.quest.p4.sewage.desc.3}"
+			]
+			icon: "minecraft:composter"
+			id: "3014000000000004"
+			rewards: [{
+				id: "5014000000000004"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.sewage.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000004"
+				title: "{industrial_frontier.quest.p4.sewage.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.sewage.title}"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3014000000000002"]
+			description: [
+				"{industrial_frontier.quest.p4.sulfur.desc.1}"
+				"{industrial_frontier.quest.p4.sulfur.desc.2}"
+				"{industrial_frontier.quest.p4.sulfur.desc.3}"
+			]
+			icon: "minecraft:gunpowder"
+			id: "3014000000000005"
+			rewards: [{
+				id: "5014000000000005"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.sulfur.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000005"
+				title: "{industrial_frontier.quest.p4.sulfur.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.sulfur.title}"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3014000000000005"]
+			description: [
+				"{industrial_frontier.quest.p4.nitrogen.desc.1}"
+				"{industrial_frontier.quest.p4.nitrogen.desc.2}"
+				"{industrial_frontier.quest.p4.nitrogen.desc.3}"
+			]
+			icon: "minecraft:bone_meal"
+			id: "3014000000000006"
+			rewards: [{
+				id: "5014000000000006"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.nitrogen.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000006"
+				title: "{industrial_frontier.quest.p4.nitrogen.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.nitrogen.title}"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3014000000000006"]
+			description: [
+				"{industrial_frontier.quest.p4.chlorine.desc.1}"
+				"{industrial_frontier.quest.p4.chlorine.desc.2}"
+				"{industrial_frontier.quest.p4.chlorine.desc.3}"
+			]
+			icon: "minecraft:blue_ice"
+			id: "3014000000000007"
+			rewards: [{
+				id: "5014000000000007"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.chlorine.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000007"
+				title: "{industrial_frontier.quest.p4.chlorine.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.chlorine.title}"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3014000000000004"
+				"3014000000000006"
+			]
+			description: [
+				"{industrial_frontier.quest.p4.fertiliser.desc.1}"
+				"{industrial_frontier.quest.p4.fertiliser.desc.2}"
+				"{industrial_frontier.quest.p4.fertiliser.desc.3}"
+			]
+			icon: "farmersdelight:organic_compost"
+			id: "3014000000000008"
+			rewards: [{
+				id: "5014000000000008"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.fertiliser.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				count: 8L
+				id: "4014000000000008"
+				item: {
+					Count: 1
+					id: "farmersdelight:organic_compost"
+				}
+				title: "{industrial_frontier.quest.p4.fertiliser.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p4.fertiliser.title}"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3014000000000008"]
+			description: [
+				"{industrial_frontier.quest.p4.kitchen_manual.desc.1}"
+				"{industrial_frontier.quest.p4.kitchen_manual.desc.2}"
+				"{industrial_frontier.quest.p4.kitchen_manual.desc.3}"
+			]
+			icon: "farmersdelight:cooking_pot"
+			id: "3014000000000009"
+			rewards: [{
+				id: "5014000000000009"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.kitchen_manual.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000009"
+				item: {
+					Count: 1
+					id: "farmersdelight:cooking_pot"
+				}
+				title: "{industrial_frontier.quest.p4.kitchen_manual.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p4.kitchen_manual.title}"
+			x: 15.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3014000000000009"]
+			description: [
+				"{industrial_frontier.quest.p4.kitchen_batch.desc.1}"
+				"{industrial_frontier.quest.p4.kitchen_batch.desc.2}"
+				"{industrial_frontier.quest.p4.kitchen_batch.desc.3}"
+			]
+			icon: "create:mechanical_mixer"
+			id: "3014000000000010"
+			rewards: [{
+				id: "5014000000000010"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.kitchen_batch.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000010"
+				title: "{industrial_frontier.quest.p4.kitchen_batch.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.kitchen_batch.title}"
+			x: 18.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3014000000000007"
+				"3014000000000009"
+			]
+			description: [
+				"{industrial_frontier.quest.p4.rations.desc.1}"
+				"{industrial_frontier.quest.p4.rations.desc.2}"
+				"{industrial_frontier.quest.p4.rations.desc.3}"
+			]
+			icon: "minecraft:bread"
+			id: "3014000000000011"
+			rewards: [{
+				id: "5014000000000011"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.rations.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000011"
+				title: "{industrial_frontier.quest.p4.rations.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.rations.title}"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3014000000000011"
+				"3014000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.p4.contract.desc.1}"
+				"{industrial_frontier.quest.p4.contract.desc.2}"
+				"{industrial_frontier.quest.p4.contract.desc.3}"
+			]
+			icon: "minecraft:paper"
+			id: "3014000000000012"
+			rewards: [{
+				id: "5014000000000012"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "{industrial_frontier.quest.p4.contract.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000012"
+				title: "{industrial_frontier.quest.p4.contract.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.contract.title}"
+			x: 18.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3014000000000012"
+				"3014000000000010"
+			]
+			description: [
+				"{industrial_frontier.quest.p4.exit.desc.1}"
+				"{industrial_frontier.quest.p4.exit.desc.2}"
+			]
+			icon: "minecraft:minecart"
+			id: "3014000000000013"
+			rewards: [{
+				id: "5014000000000013"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "diamond"
+			subtitle: "{industrial_frontier.quest.p4.exit.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4014000000000013"
+				title: "{industrial_frontier.quest.p4.exit.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p4.exit.title}"
+			x: 21.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.p4.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.p4.title}"
+}

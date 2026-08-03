@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.diplomacy",
+  "engine_id": "2045000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.diplomacy.intro",
+      "engine_id": "3045000000000001",
+      "purpose": "Six factions and one team of yours",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.diplomacy.epoch",
+      "engine_id": "3045000000000002",
+      "purpose": "Not world days, but the level you reached",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.diplomacy.reputation",
+      "engine_id": "3045000000000003",
+      "purpose": "From sworn enemy to special standing",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.diplomacy.affiliation",
+      "engine_id": "3045000000000004",
+      "purpose": "Three independent states",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.diplomacy.operation",
+      "engine_id": "3045000000000005",
+      "purpose": "Recon, warning, negotiation window",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.diplomacy.treaty",
+      "engine_id": "3045000000000006",
+      "purpose": "Cheaper than fighting",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.diplomacy.loot",
+      "engine_id": "3045000000000007",
+      "purpose": "Intelligence, not future weapons",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.diplomacy.recovery",
+      "engine_id": "3045000000000008",
+      "purpose": "Losing does not end the run",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

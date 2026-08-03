@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.ops",
+  "engine_id": "2046000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/46_operations_and_defence.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.ops.intro",
+      "engine_id": "3046000000000001",
+      "purpose": "Why pressure starts in the fifth epoch",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.ops.squads",
+      "engine_id": "3046000000000002",
+      "purpose": "Faction, epoch, role — and nothing else",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.ops.ordnance",
+      "engine_id": "3046000000000003",
+      "purpose": "Split by destructiveness",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.ops.operations",
+      "engine_id": "3046000000000004",
+      "purpose": "What exactly is at stake",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.ops.treaties",
+      "engine_id": "3046000000000005",
+      "purpose": "It has a price, a term and a consequence",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.ops.recovery",
+      "engine_id": "3046000000000006",
+      "purpose": "Recovery is written down in advance",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

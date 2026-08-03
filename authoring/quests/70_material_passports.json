@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.material_passports",
+  "engine_id": "2070000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+  "optional": true,
+  "purpose": "Teach the player how the pack treats material identity, forms, process ownership, worldgen and bypasses before progression content relies on those rules.",
+  "quests": [
+    {
+      "alias": "if.quest.passports.intro",
+      "engine_id": "3070000000000001",
+      "purpose": "Explain why a material passport is an enforceable pack contract.",
+      "teaching_sections": ["purpose", "source_of_truth", "player_use"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.passports.entity_form_id",
+      "engine_id": "3070000000000002",
+      "purpose": "Separate a substance from its physical form, concrete item ID and accepted tag.",
+      "teaching_sections": ["principle", "example", "interface", "diagnostics"],
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.passports.anatomy",
+      "engine_id": "3070000000000003",
+      "purpose": "Teach every field used by the M2 substance registry.",
+      "teaching_sections": ["source", "forms", "purity", "processes", "consumers", "waste", "automation"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.passports.worldgen_owner",
+      "engine_id": "3070000000000004",
+      "purpose": "Explain why one domain owns world generation for each resource.",
+      "teaching_sections": ["principle", "current_owner", "success", "diagnostics"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.passports.accepted_inputs",
+      "engine_id": "3070000000000005",
+      "purpose": "Demonstrate a pack-owned compatibility tag without inventing free conversions.",
+      "teaching_sections": ["tag_contract", "exact_action", "success", "diagnostics"],
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.passports.create_gt_contract",
+      "engine_id": "3070000000000006",
+      "purpose": "Show a legitimate hand-off from a standard metal form into a Create-owned product.",
+      "teaching_sections": ["domain_roles", "inputs", "process", "success", "limits"],
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.passports.specialized_forms",
+      "engine_id": "3070000000000007",
+      "purpose": "Explain why purity, danger and function can make forms intentionally non-equivalent.",
+      "teaching_sections": ["purity", "specialization", "safety", "diagnostics"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.passports.safe_equivalence",
+      "engine_id": "3070000000000008",
+      "purpose": "Teach safe acceptance of an ordinary plate through a pack-owned tag.",
+      "teaching_sections": ["equivalence", "material_balance", "exact_action", "cycle_rule"],
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.passports.bypass_audit",
+      "engine_id": "3070000000000009",
+      "purpose": "Give the player a human-readable checklist for detecting progression and duplication bypasses.",
+      "teaching_sections": ["cost", "epoch", "yield", "cycle", "domain_value", "reporting"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.passports.signoff",
+      "engine_id": "307000000000000A",
+      "purpose": "Close the optional M2 academy without changing tech_epoch or granting a reward.",
+      "teaching_sections": ["recap", "player_contract", "next_stage"],
+      "grind_class": "NONE"
+    }
+  ]
+}

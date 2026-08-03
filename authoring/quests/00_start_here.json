@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.start_here",
+  "engine_id": "2000000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/00_start_here.snbt",
+  "quests": [
+    {
+      "alias": "if.quest.start.welcome",
+      "engine_id": "3000000000000001",
+      "purpose": "Set expectations: one integrated industrial system, guided learning, medium grind.",
+      "teaching_sections": ["purpose", "difficulty", "how_to_learn"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.start.reading_the_book",
+      "engine_id": "3000000000000002",
+      "purpose": "Explain dependency lines, shapes, and the help path.",
+      "teaching_sections": ["interface", "diagnostics"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.start.jei",
+      "engine_id": "3000000000000003",
+      "purpose": "Teach recipes, uses, and search filters without treating JEI as a guidebook.",
+      "teaching_sections": ["interface", "recipe_lookup", "use_lookup", "diagnostics"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.start.team",
+      "engine_id": "3000000000000004",
+      "purpose": "Separate team quest progress from personal faction state.",
+      "teaching_sections": ["team_setup", "state_ownership"],
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.start.wood_tag",
+      "engine_id": "3000000000000005",
+      "purpose": "Prove tag-aware equivalent-material tasks and Paxi datapack delivery.",
+      "teaching_sections": ["principle", "exact_action", "success", "diagnostics"],
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.start.bulk_chest",
+      "engine_id": "3000000000000006",
+      "purpose": "Reference lesson for material-equivalent batch crafting.",
+      "teaching_sections": ["purpose", "prerequisites", "principle", "exact_layout", "success", "diagnostics", "anti_grind", "next_application"],
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.start.next",
+      "engine_id": "3000000000000007",
+      "purpose": "Close M1 onboarding and point to passport work before P0.",
+      "teaching_sections": ["recap", "next_stage"],
+      "grind_class": "NONE"
+    }
+  ]
+}

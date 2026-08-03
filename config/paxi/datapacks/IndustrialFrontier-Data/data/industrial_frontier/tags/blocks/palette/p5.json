@@ -1,0 +1,18 @@
+{
+  "__comment": "Палитра P5: региональная логистика. Разметка, эстакады, платформы и бетон — язык мест, где груз и люди движутся по расписанию. Бетон GregTech помечен необязательным: его блоки регистрируются в рантайме, и датапак не должен падать, если мод переставят.",
+  "replace": false,
+  "values": [
+    "minecraft:gray_concrete",
+    "minecraft:smooth_stone",
+    "minecraft:iron_bars",
+    "railways:yellow_hazard_stripes_diagonal_on_black",
+    "railways:black_hazard_stripes_chevron_on_white",
+    "createdeco:industrial_iron_catwalk",
+    "createdeco:industrial_iron_support",
+    "create:andesite_scaffolding",
+    "create:cut_asurine_bricks",
+    "mtr:platform",
+    { "id": "gtceu:light_concrete", "required": false },
+    { "id": "gtceu:dark_concrete", "required": false }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "evidence_type": "STATIC_JAR_INVENTORY_SNAPSHOT",
+  "source": "CurseForge launcher Minecraft 1.20.1 client JAR",
+  "source_sha256": "56B71336D2B4FDFFD197F56595B0DA93E32A946F78F382A299B8F4B92758BB0F",
+  "verified_on": "2026-08-02",
+  "method": "Read-only archive listing; Minecraft was not launched.",
+  "declared_item_models": [
+    "minecraft:raw_iron",
+    "minecraft:raw_iron_block",
+    "minecraft:iron_block",
+    "minecraft:raw_copper",
+    "minecraft:raw_copper_block",
+    "minecraft:copper_block",
+    "minecraft:raw_gold",
+    "minecraft:raw_gold_block",
+    "minecraft:gold_block",
+    "minecraft:gold_nugget"
+  ]
+}

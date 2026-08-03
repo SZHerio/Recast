@@ -1,0 +1,17 @@
+{
+  "__comment": "NuclearCraft ссылается на собственный предмет nuclearcraft:toroidal_accelerator_controller, который его же версия не регистрирует. Рецепт выключен условием, а не удалён: если мод обновится и предмет появится, достаточно убрать этот файл.",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stone"
+  }
+}

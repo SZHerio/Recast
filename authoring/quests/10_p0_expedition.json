@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p0",
+  "engine_id": "2010000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p0.brief",
+      "engine_id": "3010000000000001",
+      "purpose": "Where everything else begins",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p0.seasons",
+      "engine_id": "3010000000000002",
+      "purpose": "Seasons are a production constraint",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p0.camp",
+      "engine_id": "3010000000000003",
+      "purpose": "A temporary base is fine",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p0.food",
+      "engine_id": "3010000000000004",
+      "purpose": "Food before there is a farm",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p0.map",
+      "engine_id": "3010000000000005",
+      "purpose": "Surveying is engineering work",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p0.prospect",
+      "engine_id": "3010000000000006",
+      "purpose": "The geology here is different",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p0.loss",
+      "engine_id": "3010000000000007",
+      "purpose": "Progress should not evaporate",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p0.exit",
+      "engine_id": "3010000000000008",
+      "purpose": "From hands to machinery",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

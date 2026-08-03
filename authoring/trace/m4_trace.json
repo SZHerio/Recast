@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "build_id": "IF-M4-0001",
+  "features": [
+    {
+      "id": "m4.p4_chapter",
+      "owner": "Recast chemical city",
+      "artifact_count": 13,
+      "files": [
+        "authoring/quests/14_p4_chemical_city.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "consumers": ["player progression", "owner playtest", "M5 logistics chapters"]
+    },
+    {
+      "id": "m4.p4_localization",
+      "owner": "Recast russian release",
+      "artifact_count": 79,
+      "files": [
+        "config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/lang/ru_ru.json",
+        "config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/lang/en_us.json"
+      ],
+      "consumers": ["quest rendering", "localization coverage report"]
+    },
+    {
+      "id": "m4.municipal_water_line",
+      "owner": "Recast utility water",
+      "artifact_count": 3,
+      "files": [
+        "docs/registries/m2_substance_passports.json",
+        "docs/registries/m2_domain_process_ownership.json",
+        "docs/registries/m2_progression_graph.json"
+      ],
+      "consumers": ["city contracts", "agronomy", "M5 bulk processing"]
+    },
+    {
+      "id": "m4.food_automation",
+      "owner": "Recast food chain",
+      "artifact_count": 1,
+      "files": [
+        "docs/registries/curseforge_sources.json"
+      ],
+      "consumers": ["P4 batch kitchen quest", "city rations"]
+    }
+  ]
+}

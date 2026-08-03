@@ -1,0 +1,227 @@
+{
+  "key": "elements",
+  "file": "71_academy_of_elements",
+  "chapter_id": "2071000000000001",
+  "group_id": "1000000000000003",
+  "icon": "minecraft:brewing_stand",
+  "order": 1,
+  "tag": "academy",
+  "optional": true,
+  "xp": 20,
+  "title_ru": "71 — Академия элементов",
+  "title_en": "71 — Academy of elements",
+  "sub_ru": "Откуда берутся вещества и куда они уходят",
+  "sub_en": "Where substances come from and where they go",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "minecraft:brewing_stand", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Академия элементов", "subtitle": "Справочник, а не обязательная глава",
+        "desc": [
+          "Это не линия прогресса. Сюда заходят, когда нужно понять, откуда берётся конкретное вещество и куда оно потом уходит.",
+          "Здесь нет заданий на сдачу предметов и нет наград, ломающих экономику. Есть карточки процессов и объяснение, почему цепочка устроена именно так.",
+          "Каждый цикл описан одинаково: источник, ступени очистки, продукт, побочные потоки, потребители. Если побочному потоку некуда деться — цепочка спроектирована неправильно."
+        ],
+        "task": "Понять назначение Академии"
+      },
+      "en": {
+        "title": "Academy of elements", "subtitle": "A reference, not a required chapter",
+        "desc": [
+          "This is not a progression line. You come here when you need to understand where a substance comes from and where it goes afterwards.",
+          "There are no hand-in tasks and no rewards that break the economy. There are process cards and an explanation of why a chain is built the way it is.",
+          "Every cycle is described the same way: source, refining steps, product, side streams, consumers. If a side stream has nowhere to go, the chain is designed wrong."
+        ],
+        "task": "Understand what the Academy is for"
+      }
+    },
+    {
+      "slug": "purity", "x": 3, "y": 0, "icon": "minecraft:glass_bottle", "deps": ["intro"],
+      "ru": {
+        "title": "Чистота — это ступень", "subtitle": "Шесть классов, а не «хорошо» и «плохо»",
+        "desc": [
+          "Одно и то же вещество существует в шести классах: сырьё, техническая, химическая, электронная, реакторная и аэрокосмическая чистота.",
+          "Каждая следующая ступень стоит энергии и даёт отход. Поэтому реакторный уран не получают сразу — его доводят, и на каждой ступени часть массы уходит в сторону.",
+          "Практический вывод: не берите чистоту выше, чем требует рецепт. Лишняя ступень — это потраченная энергия и лишний отход, который тоже придётся куда-то деть."
+        ],
+        "task": "Различить шесть классов чистоты"
+      },
+      "en": {
+        "title": "Purity is a step", "subtitle": "Six classes, not good and bad",
+        "desc": [
+          "The same substance exists in six classes: raw, technical, chemical, electronic, reactor and aerospace purity.",
+          "Each next step costs energy and produces waste. Reactor-grade uranium is not obtained at once — it is refined, and at every step part of the mass goes sideways.",
+          "Practical conclusion: never take purity higher than the recipe requires. An extra step is spent energy and extra waste you must also place somewhere."
+        ],
+        "task": "Tell the six purity classes apart"
+      }
+    },
+    {
+      "slug": "carbon", "x": 6, "y": -1.5, "icon": "minecraft:coal", "deps": ["purity"],
+      "ru": {
+        "title": "Углеродный цикл", "subtitle": "Топливо, восстановитель и сырьё пластиков",
+        "desc": [
+          "Углерод работает в трёх ролях сразу. Он горит как топливо, забирает кислород у оксида как восстановитель и служит основой полимеров.",
+          "Отсюда кокс: его делают не ради жара, а ради химической работы в металлургии. Коксовый газ и смола идут дальше в химию, а не в никуда.",
+          "Позже тот же углерод возвращается активированным фильтрующим материалом — тем же элементом чистят то, что сами и загрязнили."
+        ],
+        "task": "Проследить три роли углерода"
+      },
+      "en": {
+        "title": "The carbon cycle", "subtitle": "Fuel, reductant and polymer feedstock",
+        "desc": [
+          "Carbon works in three roles at once. It burns as fuel, takes oxygen from oxides as a reductant, and serves as the base of polymers.",
+          "Hence coke: it is made not for heat but for chemical work in metallurgy. Coke gas and tar go on into chemistry, not into nothing.",
+          "Later the same carbon returns as activated filter media — the same element cleans what it helped pollute."
+        ],
+        "task": "Follow the three roles of carbon"
+      }
+    },
+    {
+      "slug": "sulfur", "x": 6, "y": 1.5, "icon": "minecraft:gunpowder", "deps": ["purity"],
+      "ru": {
+        "title": "Серный цикл", "subtitle": "Кислота, которая нужна всем",
+        "desc": [
+          "Сера приходит из минералов и из очистки нефтяных фракций. Её главный продукт — серная кислота, рабочая лошадь всей промышленной химии.",
+          "Кислота идёт в травление, аккумуляторы, переработку руды и удобрения. Одна линия кормит четыре отрасли — поэтому её и строят первой.",
+          "Кислотный контур замыкают, а не сливают. Это одновременно безопасность, экономия и первый настоящий возвратный поток вашей фабрики."
+        ],
+        "task": "Найти четырёх потребителей серной кислоты"
+      },
+      "en": {
+        "title": "The sulfur cycle", "subtitle": "The acid everyone needs",
+        "desc": [
+          "Sulfur comes from minerals and from cleaning petroleum fractions. Its main product is sulfuric acid, the workhorse of all industrial chemistry.",
+          "The acid goes into etching, batteries, ore processing and fertiliser. One line feeds four industries — which is why it is built first.",
+          "The acid loop is closed, not dumped. That is safety, economy and the first real return stream of your factory at once."
+        ],
+        "task": "Find four consumers of sulfuric acid"
+      }
+    },
+    {
+      "slug": "nitrogen", "x": 9, "y": -1.5, "icon": "minecraft:bone_meal", "deps": ["carbon"],
+      "ru": {
+        "title": "Азотный цикл", "subtitle": "Воздух превращается в еду и во взрывчатку",
+        "desc": [
+          "Азот берут прямо из воздуха, соединяют с водородом в аммиак, окисляют в азотную кислоту — и оттуда расходятся три ветви.",
+          "Первая кормит город удобрениями. Вторая даёт взрывчатые вещества. Третья уходит в ракетную химию P7.",
+          "Порядок не случаен: удобрения окупают линию быстрее, поэтому агрономия открывается раньше боеприпасов, а не по сюжету."
+        ],
+        "task": "Проследить путь от воздуха до удобрения"
+      },
+      "en": {
+        "title": "The nitrogen cycle", "subtitle": "Air becomes food and explosives",
+        "desc": [
+          "Nitrogen is taken straight from air, combined with hydrogen into ammonia, oxidised into nitric acid — and from there three branches diverge.",
+          "The first feeds the city with fertiliser. The second gives explosives. The third goes into P7 rocket chemistry.",
+          "The order is not arbitrary: fertiliser pays the line back sooner, so agronomy opens before ammunition, not for story reasons."
+        ],
+        "task": "Follow the path from air to fertiliser"
+      }
+    },
+    {
+      "slug": "chlorine", "x": 9, "y": 1.5, "icon": "minecraft:blue_ice", "deps": ["sulfur"],
+      "ru": {
+        "title": "Хлор-щелочной цикл", "subtitle": "Три продукта, от которых нельзя отказаться",
+        "desc": [
+          "Электролиз соляного раствора даёт хлор, водород и щёлочь одновременно. Выбрать только один продукт невозможно.",
+          "Это лучший урок всей Академии: химию нельзя планировать по одному веществу. Нужен хлор — водород и щёлочь всё равно появятся, и им нужен приёмник.",
+          "Хлор идёт в очистку воды и полимеры, водород возвращается в аммиак, щёлочь нейтрализует кислоты. Круг замыкается на предыдущих карточках."
+        ],
+        "task": "Назначить потребителя каждому из трёх продуктов"
+      },
+      "en": {
+        "title": "The chlor-alkali cycle", "subtitle": "Three products you cannot decline",
+        "desc": [
+          "Electrolysis of brine gives chlorine, hydrogen and alkali at the same time. Picking only one product is impossible.",
+          "This is the best lesson in the Academy: chemistry cannot be planned around a single substance. You want chlorine — hydrogen and alkali appear anyway, and they need a receiver.",
+          "Chlorine goes into water treatment and polymers, hydrogen returns to ammonia, alkali neutralises acids. The circle closes on the earlier cards."
+        ],
+        "task": "Assign a consumer to each of the three products"
+      }
+    },
+    {
+      "slug": "water", "x": 12, "y": 0, "icon": "minecraft:water_bucket", "deps": ["nitrogen", "chlorine"],
+      "ru": {
+        "title": "Водный цикл", "subtitle": "Три класса и обязательный сток",
+        "desc": [
+          "Сырая вода годится для охлаждения и стройки. Техническая прошла фильтрацию и принимается химией. Питьевая проходит ещё ступень и нужна городу.",
+          "Сток появляется всегда — это не опция. Он разделяется на осадок, биогаз и оборотную воду, и каждый поток имеет приёмник.",
+          "Возврат ограничен намеренно: часть воды теряется на испарение и промывку, поэтому подпитка сырой водой нужна постоянно. Вечного контура не бывает."
+        ],
+        "task": "Развести три класса воды и сток"
+      },
+      "en": {
+        "title": "The water cycle", "subtitle": "Three classes and mandatory effluent",
+        "desc": [
+          "Raw water suits cooling and construction. Technical water has been filtered and is accepted by chemistry. Drinking water passes one more stage and is what the city needs.",
+          "Effluent always appears — it is not optional. It splits into sludge, biogas and process water, and every stream has a receiver.",
+          "The return is bounded on purpose: some water is always lost to evaporation and washing, so raw make-up is permanent. A perpetual loop does not exist."
+        ],
+        "task": "Separate the three water classes and the effluent"
+      }
+    },
+    {
+      "slug": "silicon", "x": 15, "y": -1.5, "icon": "minecraft:redstone", "deps": ["water"],
+      "ru": {
+        "title": "Кремний и электроника", "subtitle": "Где чистота становится критичной",
+        "desc": [
+          "Кремний — первый материал, где класс чистоты решает всё. Техническая чистота годится для стекла, электронная — для пластин, и между ними несколько ступеней очистки.",
+          "Отсюда чистая комната: пыль, попавшая на пластину, портит её целиком. Это не декоративное требование, а условие процесса.",
+          "Электроника связывает всё остальное: без неё нет ни LV-станков, ни автоматики, ни цифровой фабрики P5."
+        ],
+        "task": "Понять, зачем электронике чистая комната"
+      },
+      "en": {
+        "title": "Silicon and electronics", "subtitle": "Where purity becomes critical",
+        "desc": [
+          "Silicon is the first material where the purity class decides everything. Technical purity suits glass, electronic purity suits wafers, and several refining steps sit between them.",
+          "Hence the clean room: dust landing on a wafer ruins it entirely. That is not a decorative requirement, it is a process condition.",
+          "Electronics ties everything else together: without it there are no LV machines, no automation and no P5 digital factory."
+        ],
+        "task": "Understand why electronics needs a clean room"
+      }
+    },
+    {
+      "slug": "nuclear", "x": 15, "y": 1.5, "icon": "minecraft:lava_bucket", "deps": ["water"],
+      "ru": {
+        "title": "Ядерный цикл", "subtitle": "Единственная цепочка, которая обязана замкнуться",
+        "desc": [
+          "Уран проходит длинный путь: концентрат, выщелачивание, очистка, реакторная чистота, разделение изотопов, изготовление топлива.",
+          "После реактора путь не кончается. Облучённое топливо выдерживают, перерабатывают и часть возвращают — остальное становится учтённым отходом с долгим хранением.",
+          "Это единственная цепочка сборки, где незамкнутый цикл не просто неоптимален, а недопустим: отход отсюда нельзя ни сжечь, ни закопать."
+        ],
+        "task": "Проследить топливный цикл до захоронения"
+      },
+      "en": {
+        "title": "The nuclear cycle", "subtitle": "The one chain that must close",
+        "desc": [
+          "Uranium travels a long road: concentrate, leaching, purification, reactor grade, isotope separation, fuel fabrication.",
+          "The road does not end at the reactor. Irradiated fuel is cooled, reprocessed and partly returned — the rest becomes accounted waste with long-term storage.",
+          "This is the one chain in the pack where an open loop is not merely suboptimal but unacceptable: this waste can be neither burned nor buried."
+        ],
+        "task": "Follow the fuel cycle through to disposal"
+      }
+    },
+    {
+      "slug": "index", "x": 18, "y": 0, "icon": "minecraft:book", "deps": ["silicon", "nuclear"], "shape": "diamond",
+      "ru": {
+        "title": "Как читать паспорт вещества", "subtitle": "Девять полей, которые отвечают на всё",
+        "desc": [
+          "У каждого вещества сборки есть паспорт: источник в мире, допустимые формы, классы чистоты, владельцы процессов, эпоха, потребители, отходы, возобновляемость и русский термин.",
+          "Если непонятно, откуда взять вещество или куда деть его отход, ответ в паспорте. Глава «70 — Паспорта материалов» разбирает его поля подробно.",
+          "Правило, которое стоит унести отсюда: у каждого потока есть владелец и приёмник. Вещество без приёмника — это ошибка проектирования, а не мусор."
+        ],
+        "task": "Открыть паспорт любого вещества и прочитать его поля"
+      },
+      "en": {
+        "title": "How to read a substance passport", "subtitle": "Nine fields that answer everything",
+        "desc": [
+          "Every substance in the pack has a passport: world source, allowed forms, purity classes, process owners, era, consumers, waste, renewability and the Russian term.",
+          "If you do not know where to get a substance or where to put its waste, the answer is in the passport. The chapter 70 — Material passports covers its fields in detail.",
+          "The rule to carry away: every stream has an owner and a receiver. A substance without a receiver is a design error, not rubbish."
+        ],
+        "task": "Open any substance passport and read its fields"
+      }
+    }
+  ]
+}

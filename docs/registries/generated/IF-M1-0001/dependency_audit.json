@@ -1,0 +1,1674 @@
+﻿{
+    "schema_version":  1,
+    "build_id":  "IF-M1-0001",
+    "generated_at":  "2026-08-02T00:25:44.6188111Z",
+    "providers":  [
+                      {
+                          "mod_id":  "ae2",
+                          "version":  "15.4.10",
+                          "origin":  "appliedenergistics2-forge-15.4.10.jar"
+                      },
+                      {
+                          "mod_id":  "aiimprovements",
+                          "version":  "0.5.2",
+                          "origin":  "AI-Improvements-1.20-0.5.2.jar"
+                      },
+                      {
+                          "mod_id":  "alexsmobs",
+                          "version":  "1.22.9",
+                          "origin":  "alexsmobs-1.22.9.jar"
+                      },
+                      {
+                          "mod_id":  "appleskin",
+                          "version":  "2.5.1+mc1.20.1",
+                          "origin":  "appleskin-forge-mc1.20.1-2.5.1.jar"
+                      },
+                      {
+                          "mod_id":  "aquaculture",
+                          "version":  "2.5.7",
+                          "origin":  "Aquaculture-1.20.1-2.5.7.jar"
+                      },
+                      {
+                          "mod_id":  "architectury",
+                          "version":  "9.2.14",
+                          "origin":  "architectury-9.2.14-forge.jar"
+                      },
+                      {
+                          "mod_id":  "bettercaves",
+                          "version":  "1.20.1-Forge-2.0.5",
+                          "origin":  "YungsBetterCaves-1.20.1-Forge-2.0.5.jar"
+                      },
+                      {
+                          "mod_id":  "betterdeserttemples",
+                          "version":  "1.20-Forge-3.0.3",
+                          "origin":  "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar"
+                      },
+                      {
+                          "mod_id":  "betterdungeons",
+                          "version":  "1.20-Forge-4.0.4",
+                          "origin":  "YungsBetterDungeons-1.20-Forge-4.0.4.jar"
+                      },
+                      {
+                          "mod_id":  "betterendisland",
+                          "version":  "1.20-Forge-2.0.6",
+                          "origin":  "YungsBetterEndIsland-1.20-Forge-2.0.6.jar"
+                      },
+                      {
+                          "mod_id":  "betterfortresses",
+                          "version":  "1.20-Forge-2.0.6",
+                          "origin":  "YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar"
+                      },
+                      {
+                          "mod_id":  "betterjungletemples",
+                          "version":  "1.20-Forge-2.0.5",
+                          "origin":  "YungsBetterJungleTemples-1.20-Forge-2.0.5.jar"
+                      },
+                      {
+                          "mod_id":  "betteroceanmonuments",
+                          "version":  "1.20-Forge-3.0.4",
+                          "origin":  "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar"
+                      },
+                      {
+                          "mod_id":  "betterstrongholds",
+                          "version":  "1.20-Forge-4.0.3",
+                          "origin":  "YungsBetterStrongholds-1.20-Forge-4.0.3.jar"
+                      },
+                      {
+                          "mod_id":  "betterwitchhuts",
+                          "version":  "1.20-Forge-3.0.3",
+                          "origin":  "YungsBetterWitchHuts-1.20-Forge-3.0.3.jar"
+                      },
+                      {
+                          "mod_id":  "carryon",
+                          "version":  "2.1.2.7",
+                          "origin":  "carryon-forge-1.20.1-2.1.2.7.jar"
+                      },
+                      {
+                          "mod_id":  "citadel",
+                          "version":  "2.6.3",
+                          "origin":  "citadel-2.6.3-1.20.1.jar"
+                      },
+                      {
+                          "mod_id":  "configuration",
+                          "version":  "2.2.0",
+                          "origin":  "gtceu-1.20.1-7.5.3.jar!/META-INF/jarjar/configuration-forge-1.20.1-2.2.0.jar"
+                      },
+                      {
+                          "mod_id":  "create",
+                          "version":  "6.0.8",
+                          "origin":  "create-1.20.1-6.0.8.jar"
+                      },
+                      {
+                          "mod_id":  "effortlessbuilding",
+                          "version":  "3.11",
+                          "origin":  "effortlessbuilding-1.20.1-3.11.jar"
+                      },
+                      {
+                          "mod_id":  "embeddium",
+                          "version":  "0.3.31+mc1.20.1",
+                          "origin":  "embeddium-0.3.31+mc1.20.1.jar"
+                      },
+                      {
+                          "mod_id":  "fastleafdecay",
+                          "version":  "32",
+                          "origin":  "FastLeafDecay-32.jar"
+                      },
+                      {
+                          "mod_id":  "flywheel",
+                          "version":  "1.0.6-beta-266",
+                          "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar"
+                      },
+                      {
+                          "mod_id":  "forge",
+                          "version":  "47.4.22",
+                          "origin":  "platform"
+                      },
+                      {
+                          "mod_id":  "ftbfiltersystem",
+                          "version":  "20.0.1",
+                          "origin":  "ftb-filter-system-forge-20.0.1.jar"
+                      },
+                      {
+                          "mod_id":  "ftblibrary",
+                          "version":  "2001.2.13",
+                          "origin":  "ftb-library-forge-2001.2.13.jar"
+                      },
+                      {
+                          "mod_id":  "ftbquests",
+                          "version":  "2001.4.22",
+                          "origin":  "ftb-quests-forge-2001.4.22.jar"
+                      },
+                      {
+                          "mod_id":  "ftbteams",
+                          "version":  "2001.3.2",
+                          "origin":  "ftb-teams-forge-2001.3.2.jar"
+                      },
+                      {
+                          "mod_id":  "ftbxmodcompat",
+                          "version":  "2.1.3",
+                          "origin":  "ftb-xmod-compat-forge-2.1.3.jar"
+                      },
+                      {
+                          "mod_id":  "glitchcore",
+                          "version":  "0.0.1.1",
+                          "origin":  "GlitchCore-forge-1.20.1-0.0.1.1.jar"
+                      },
+                      {
+                          "mod_id":  "gravestone",
+                          "version":  "1.20.1-1.0.35",
+                          "origin":  "gravestone-forge-1.20.1-1.0.35.jar"
+                      },
+                      {
+                          "mod_id":  "gtceu",
+                          "version":  "7.5.3",
+                          "origin":  "gtceu-1.20.1-7.5.3.jar"
+                      },
+                      {
+                          "mod_id":  "guideme",
+                          "version":  "20.1.15",
+                          "origin":  "guideme-20.1.15.jar"
+                      },
+                      {
+                          "mod_id":  "immersiveui",
+                          "version":  "0.3.0",
+                          "origin":  "ImmersiveUI-FORGE-0.3.0.jar"
+                      },
+                      {
+                          "mod_id":  "jade",
+                          "version":  "11.13.3+forge",
+                          "origin":  "Jade-1.20.1-Forge-11.13.3.jar"
+                      },
+                      {
+                          "mod_id":  "jei",
+                          "version":  "15.20.0.134",
+                          "origin":  "jei-1.20.1-forge-15.20.0.134.jar"
+                      },
+                      {
+                          "mod_id":  "jeresources",
+                          "version":  "1.4.0.247",
+                          "origin":  "JustEnoughResources-1.20.1-1.4.0.247.jar"
+                      },
+                      {
+                          "mod_id":  "kubejs",
+                          "version":  "2001.6.5-build.26",
+                          "origin":  "kubejs-forge-2001.6.5-build.26.jar"
+                      },
+                      {
+                          "mod_id":  "kubejs_create",
+                          "version":  "2001.3.0-build.8",
+                          "origin":  "kubejs-create-forge-2001.3.0-build.8.jar"
+                      },
+                      {
+                          "mod_id":  "kubejsadditions",
+                          "version":  "4.3.4",
+                          "origin":  "kubejsadditions-forge-4.3.4.jar"
+                      },
+                      {
+                          "mod_id":  "ldlib",
+                          "version":  "1.0.40.b",
+                          "origin":  "gtceu-1.20.1-7.5.3.jar!/META-INF/jarjar/ldlib-forge-1.20.1-1.0.40.b.jar"
+                      },
+                      {
+                          "mod_id":  "lootjs",
+                          "version":  "1.20.1-2.13.1",
+                          "origin":  "lootjs-forge-1.20.1-2.13.1.jar"
+                      },
+                      {
+                          "mod_id":  "minecraft",
+                          "version":  "1.20.1",
+                          "origin":  "platform"
+                      },
+                      {
+                          "mod_id":  "mixinextras",
+                          "version":  "0.4.1",
+                          "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar"
+                      },
+                      {
+                          "mod_id":  "modernui",
+                          "version":  "3.12.0.1",
+                          "origin":  "ModernUI-Forge-1.20.1-3.12.0.1-universal.jar"
+                      },
+                      {
+                          "mod_id":  "mousetweaks",
+                          "version":  "2.25.1",
+                          "origin":  "MouseTweaks-forge-mc1.20.1-2.25.1.jar"
+                      },
+                      {
+                          "mod_id":  "octolib",
+                          "version":  "0.5.0.1",
+                          "origin":  "OctoLib-FORGE-0.5.0.1+1.20.1.jar"
+                      },
+                      {
+                          "mod_id":  "paxi",
+                          "version":  "1.20-Forge-4.0",
+                          "origin":  "Paxi-1.20-Forge-4.0.jar"
+                      },
+                      {
+                          "mod_id":  "ponder",
+                          "version":  "1.0.92",
+                          "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar"
+                      },
+                      {
+                          "mod_id":  "ponderjs",
+                          "version":  "2.1.0",
+                          "origin":  "ponderjs-1.20.1-2.1.0.jar"
+                      },
+                      {
+                          "mod_id":  "questsadditions",
+                          "version":  "1.4.7",
+                          "origin":  "questsadditions-1.4.7.jar"
+                      },
+                      {
+                          "mod_id":  "rhino",
+                          "version":  "2001.2.3-build.10",
+                          "origin":  "rhino-forge-2001.2.3-build.10.jar"
+                      },
+                      {
+                          "mod_id":  "rubidium",
+                          "version":  "0.7.1",
+                          "origin":  "embeddium-0.3.31+mc1.20.1.jar"
+                      },
+                      {
+                          "mod_id":  "sereneseasons",
+                          "version":  "9.1.0.3",
+                          "origin":  "SereneSeasons-forge-1.20.1-9.1.0.3.jar"
+                      },
+                      {
+                          "mod_id":  "sodiumdynamiclights",
+                          "version":  "1.0.9",
+                          "origin":  "sodiumdynamiclights-forge-1.0.10-1.20.1.jar"
+                      },
+                      {
+                          "mod_id":  "sodiumoptionsapi",
+                          "version":  "1.0.10",
+                          "origin":  "sodiumoptionsapi-forge-1.0.10-1.20.1.jar"
+                      },
+                      {
+                          "mod_id":  "xaerolib",
+                          "version":  "1.7.1",
+                          "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar"
+                      },
+                      {
+                          "mod_id":  "xaerominimap",
+                          "version":  "26.4.2",
+                          "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar"
+                      },
+                      {
+                          "mod_id":  "xaeroworldmap",
+                          "version":  "1.44.2",
+                          "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar"
+                      },
+                      {
+                          "mod_id":  "yungsapi",
+                          "version":  "1.20-Forge-4.0.6",
+                          "origin":  "YungsApi-1.20-Forge-4.0.6.jar"
+                      }
+                  ],
+    "mandatory_checks":  [
+                             {
+                                 "owner_mod_id":  "ae2",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.3,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "appliedenergistics2-forge-15.4.10.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ae2",
+                                 "dependency_mod_id":  "guideme",
+                                 "required_range":  "[20.1.7,20.2.0)",
+                                 "actual_version":  "20.1.15",
+                                 "status":  "SATISFIED",
+                                 "origin":  "appliedenergistics2-forge-15.4.10.jar",
+                                 "provider_origin":  "guideme-20.1.15.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ae2",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "appliedenergistics2-forge-15.4.10.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "aiimprovements",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "AI-Improvements-1.20-0.5.2.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "aiimprovements",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "AI-Improvements-1.20-0.5.2.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "alexsmobs",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "alexsmobs-1.22.9.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "appleskin",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.12,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "appleskin-forge-mc1.20.1-2.5.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "aquaculture",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.18,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Aquaculture-1.20.1-2.5.7.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "architectury",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "architectury-9.2.14-forge.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "architectury",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "architectury-9.2.14-forge.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "bettercaves",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.3,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterCaves-1.20.1-Forge-2.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "bettercaves",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterCaves-1.20.1-Forge-2.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "bettercaves",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.6,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterCaves-1.20.1-Forge-2.0.5.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterdeserttemples",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterdeserttemples",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterdeserttemples",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterdungeons",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterdungeons",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterdungeons",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterendisland",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterendisland",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterendisland",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterfortresses",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterfortresses",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterfortresses",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterjungletemples",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterJungleTemples-1.20-Forge-2.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterjungletemples",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterJungleTemples-1.20-Forge-2.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterjungletemples",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterJungleTemples-1.20-Forge-2.0.5.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betteroceanmonuments",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betteroceanmonuments",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betteroceanmonuments",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterstrongholds",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterStrongholds-1.20-Forge-4.0.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterstrongholds",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterStrongholds-1.20-Forge-4.0.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterstrongholds",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterStrongholds-1.20-Forge-4.0.3.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterwitchhuts",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterWitchHuts-1.20-Forge-3.0.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterwitchhuts",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterWitchHuts-1.20-Forge-3.0.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "betterwitchhuts",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsBetterWitchHuts-1.20-Forge-3.0.3.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "carryon",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "carryon-forge-1.20.1-2.1.2.7.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "citadel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.34,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "citadel-2.6.3-1.20.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "configuration",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtceu-1.20.1-7.5.3.jar!/META-INF/jarjar/configuration-forge-1.20.1-2.2.0.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "create",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "create",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.3,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "create",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "create",
+                                 "dependency_mod_id":  "ponder",
+                                 "required_range":  "[0.8,)",
+                                 "actual_version":  "1.0.92",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar",
+                                 "provider_origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "effortlessbuilding",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "effortlessbuilding",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.3,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "effortlessbuilding",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "effortlessbuilding",
+                                 "dependency_mod_id":  "ponder",
+                                 "required_range":  "[0.8,)",
+                                 "actual_version":  "1.0.92",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar",
+                                 "provider_origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "fastleafdecay",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "FastLeafDecay-32.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-265.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-265.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbfiltersystem",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[9.1.12,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-filter-system-forge-20.0.1.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbfiltersystem",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-filter-system-forge-20.0.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbfiltersystem",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-filter-system-forge-20.0.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftblibrary",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[9.0.8,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-library-forge-2001.2.13.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftblibrary",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.3,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-library-forge-2001.2.13.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftblibrary",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-library-forge-2001.2.13.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbquests",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[9.0.8,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-quests-forge-2001.4.22.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbquests",
+                                 "dependency_mod_id":  "ftblibrary",
+                                 "required_range":  "[2001.2.1,)",
+                                 "actual_version":  "2001.2.13",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-quests-forge-2001.4.22.jar",
+                                 "provider_origin":  "ftb-library-forge-2001.2.13.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbquests",
+                                 "dependency_mod_id":  "ftbteams",
+                                 "required_range":  "[2001.1.4,)",
+                                 "actual_version":  "2001.3.2",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-quests-forge-2001.4.22.jar",
+                                 "provider_origin":  "ftb-teams-forge-2001.3.2.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbquests",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-quests-forge-2001.4.22.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbteams",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[9.1.12,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-teams-forge-2001.3.2.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbteams",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-teams-forge-2001.3.2.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbteams",
+                                 "dependency_mod_id":  "ftblibrary",
+                                 "required_range":  "[2001.2.0,)",
+                                 "actual_version":  "2001.2.13",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-teams-forge-2001.3.2.jar",
+                                 "provider_origin":  "ftb-library-forge-2001.2.13.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbteams",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-teams-forge-2001.3.2.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbxmodcompat",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[9.0.8,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-xmod-compat-forge-2.1.3.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbxmodcompat",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-xmod-compat-forge-2.1.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbxmodcompat",
+                                 "dependency_mod_id":  "ftblibrary",
+                                 "required_range":  "[2001.1.3,)",
+                                 "actual_version":  "2001.2.13",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-xmod-compat-forge-2.1.3.jar",
+                                 "provider_origin":  "ftb-library-forge-2001.2.13.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ftbxmodcompat",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ftb-xmod-compat-forge-2.1.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "glitchcore",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.3.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "GlitchCore-forge-1.20.1-0.0.1.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gravestone",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gravestone-forge-1.20.1-1.0.35.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gravestone",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gravestone-forge-1.20.1-1.0.35.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "gtceu",
+                                 "dependency_mod_id":  "configuration",
+                                 "required_range":  "[2.2.0,)",
+                                 "actual_version":  "2.2.0",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtceu-1.20.1-7.5.3.jar",
+                                 "provider_origin":  "gtceu-1.20.1-7.5.3.jar!/META-INF/jarjar/configuration-forge-1.20.1-2.2.0.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gtceu",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtceu-1.20.1-7.5.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gtceu",
+                                 "dependency_mod_id":  "ldlib",
+                                 "required_range":  "[1.0.40.b,)",
+                                 "actual_version":  "1.0.40.b",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtceu-1.20.1-7.5.3.jar",
+                                 "provider_origin":  "gtceu-1.20.1-7.5.3.jar!/META-INF/jarjar/ldlib-forge-1.20.1-1.0.40.b.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gtceu",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "1.20.1",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtceu-1.20.1-7.5.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "bare exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "guideme",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "guideme-20.1.15.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "guideme",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "guideme-20.1.15.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "immersiveui",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ImmersiveUI-FORGE-0.3.0.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "immersiveui",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ImmersiveUI-FORGE-0.3.0.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "immersiveui",
+                                 "dependency_mod_id":  "octolib",
+                                 "required_range":  "[0.4.2,)",
+                                 "actual_version":  "0.5.0.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ImmersiveUI-FORGE-0.3.0.jar",
+                                 "provider_origin":  "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "jade",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46, )",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Jade-1.20.1-Forge-11.13.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "jeresources",
+                                 "dependency_mod_id":  "jei",
+                                 "required_range":  "[15.2.0,)",
+                                 "actual_version":  "15.20.0.134",
+                                 "status":  "SATISFIED",
+                                 "origin":  "JustEnoughResources-1.20.1-1.4.0.247.jar",
+                                 "provider_origin":  "jei-1.20.1-forge-15.20.0.134.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejs",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[9.1.12,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejs-forge-2001.6.5-build.26.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejs",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejs-forge-2001.6.5-build.26.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejs",
+                                 "dependency_mod_id":  "rhino",
+                                 "required_range":  "[2001.2.2-build.1,)",
+                                 "actual_version":  "2001.2.3-build.10",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejs-forge-2001.6.5-build.26.jar",
+                                 "provider_origin":  "rhino-forge-2001.2.3-build.10.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejs_create",
+                                 "dependency_mod_id":  "create",
+                                 "required_range":  "[6,)",
+                                 "actual_version":  "6.0.8",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejs-create-forge-2001.3.0-build.8.jar",
+                                 "provider_origin":  "create-1.20.1-6.0.8.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejs_create",
+                                 "dependency_mod_id":  "kubejs",
+                                 "required_range":  "[2001.6.4-build.95,)",
+                                 "actual_version":  "2001.6.5-build.26",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejs-create-forge-2001.3.0-build.8.jar",
+                                 "provider_origin":  "kubejs-forge-2001.6.5-build.26.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejsadditions",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[6.5.82,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejsadditions-forge-4.3.4.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejsadditions",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[43,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejsadditions-forge-4.3.4.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kubejsadditions",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "kubejsadditions-forge-4.3.4.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ldlib",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtceu-1.20.1-7.5.3.jar!/META-INF/jarjar/ldlib-forge-1.20.1-1.0.40.b.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ldlib",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "1.20.1",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtceu-1.20.1-7.5.3.jar!/META-INF/jarjar/ldlib-forge-1.20.1-1.0.40.b.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "bare exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "lootjs",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "lootjs-forge-1.20.1-2.13.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "lootjs",
+                                 "dependency_mod_id":  "kubejs",
+                                 "required_range":  "[2001.6.4-build.120,)",
+                                 "actual_version":  "2001.6.5-build.26",
+                                 "status":  "SATISFIED",
+                                 "origin":  "lootjs-forge-1.20.1-2.13.1.jar",
+                                 "provider_origin":  "kubejs-forge-2001.6.5-build.26.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "lootjs",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "lootjs-forge-1.20.1-2.13.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "modernui",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.14,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ModernUI-Forge-1.20.1-3.12.0.1-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "modernui",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20, 1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ModernUI-Forge-1.20.1-3.12.0.1-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "octolib",
+                                 "dependency_mod_id":  "architectury",
+                                 "required_range":  "[9.2.14,)",
+                                 "actual_version":  "9.2.14",
+                                 "status":  "SATISFIED",
+                                 "origin":  "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "octolib",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "octolib",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "paxi",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Paxi-1.20-Forge-4.0.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "paxi",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Paxi-1.20-Forge-4.0.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "paxi",
+                                 "dependency_mod_id":  "yungsapi",
+                                 "required_range":  "[1.20-Forge-4.0.1,)",
+                                 "actual_version":  "1.20-Forge-4.0.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Paxi-1.20-Forge-4.0.jar",
+                                 "provider_origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1, 1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1, 1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1, 1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponderjs",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponderjs",
+                                 "dependency_mod_id":  "kubejs",
+                                 "required_range":  "[2001.6.4-build.114,)",
+                                 "actual_version":  "2001.6.5-build.26",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar",
+                                 "provider_origin":  "kubejs-forge-2001.6.5-build.26.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponderjs",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "questsadditions",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "questsadditions-1.4.7.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "questsadditions",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "questsadditions-1.4.7.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "sereneseasons",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.3.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "SereneSeasons-forge-1.20.1-9.1.0.3.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "sereneseasons",
+                                 "dependency_mod_id":  "glitchcore",
+                                 "required_range":  "[0.0.1.1,)",
+                                 "actual_version":  "0.0.1.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "SereneSeasons-forge-1.20.1-9.1.0.3.jar",
+                                 "provider_origin":  "GlitchCore-forge-1.20.1-0.0.1.1.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "sodiumdynamiclights",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "sodiumdynamiclights-forge-1.0.10-1.20.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "sodiumoptionsapi",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "xaerobetterpvp",
+                                 "dependency_mod_id":  "xaerolib",
+                                 "required_range":  "[1.0,)",
+                                 "actual_version":  "1.7.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar",
+                                 "provider_origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "xaerolib",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20, 1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "xaerolib",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20, 1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "xaerominimap",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20, 1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "xaeroworldmap",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20, 1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "xaeroworldmap",
+                                 "dependency_mod_id":  "xaerolib",
+                                 "required_range":  "[1.0,)",
+                                 "actual_version":  "1.7.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar",
+                                 "provider_origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "yungsapi",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[46.0.2,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "yungsapi",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "YungsApi-1.20-Forge-4.0.6.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             }
+                         ],
+    "hard_failure_count":  0,
+    "unverified_count":  0,
+    "metadata_errors":  [
+
+                        ]
+}

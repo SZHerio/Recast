@@ -1,0 +1,15 @@
+{
+  "__comment": "Палитра P1: обожжённый кирпич, стекло и первая медь. Поселение перестаёт быть временным.",
+  "replace": false,
+  "values": [
+    "minecraft:bricks",
+    "minecraft:terracotta",
+    "minecraft:glass",
+    "minecraft:glass_pane",
+    "minecraft:copper_block",
+    "minecraft:cut_copper",
+    "minecraft:stone_bricks",
+    "minecraft:smooth_stone",
+    "create:andesite_casing"
+  ]
+}

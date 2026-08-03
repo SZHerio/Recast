@@ -1,0 +1,1164 @@
+{
+  "schema_version": 1,
+  "namespace": "industrial_frontier",
+  "registry_id": "industrial_frontier:m2/material_forms",
+  "status": "STATIC_COMPLETE_USER_GATE_PENDING",
+  "scope_ru": "Точные формы, доказанные ресурсами Minecraft 1.20.1, Create 6.0.8, AE2 15.4.10, авторскими тегами и runtime-скриптами. Динамический полный census GTCEu и любые NuclearCraft/HBM/city/space ID не объявляются до owner-dump или установки.",
+  "coverage": {
+    "claim": "STATIC_TOUCHED_FORMS_COMPLETE_DYNAMIC_CENSUS_USER_GATE_PENDING",
+    "exhaustive_for": [
+      "Все exact item/fluid ID, на которые ссылаются текущие M1–M2 pack-теги и runtime-рецепты.",
+      "Подтверждённые Create zinc/brass/core-metal, AE2 certus/fluix и ванильные raw/storage формы четырнадцати стартовых паспортов.",
+      "Канонические GTCEu-выходы zinc, brass, iron/copper/steel plates и steam, которые уже прямо использует pack-layer."
+    ],
+    "excluded_dynamic_scope": [
+      "Полный набор динамически зарегистрированных GTCEu ore, raw, crushed, dust, tiny/small dust, nugget, ingot, plate, block и fluid форм всех материалов.",
+      "GTCEu-формы стартовых веществ, которые не встречаются в текущих pack-тегах, скриптах или извлечённых статических ресурсах."
+    ],
+    "excluded_known_scope": [
+      "Контейнерные, декоративные и машинные производные формы, которые не являются веществом или обязательным M2-междоменным интерфейсом.",
+      "Любые формы будущих NuclearCraft, HBM, city и space компонентов до установки точного CurseForge-файла."
+    ],
+    "exclusion_reason_ru": "GTCEu создаёт значительную часть material forms динамически: языковой ключ доказывает вещество, но не полный runtime registry. Угадывание ID исказило бы канонизацию и нарушило запрет пользователя на запуск игры Codex.",
+    "required_owner_dump_ru": "Владелец экспортирует runtime registry/JEI-список GTCEu форм для стартовых веществ и передаёт его в следующем сообщении; после diff Codex расширяет реестр и закрывает 1:1-конверсии.",
+    "required_gate_ref": "industrial_frontier:gate/forms/gtceu_dynamic_forms"
+  },
+  "forms": [
+    {
+      "form_id": "industrial_frontier:form/create/zinc_ore",
+      "substance_ref": "industrial_frontier:substance/zinc",
+     "registry_id": "create:zinc_ore",
+      "canonical_term_ru": "цинковая руда Create",
+      "availability": "INSTALLED",
+      "status": "DISABLED_DUPLICATE",
+      "form_kind": "ORE",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": ["forge:ores/zinc"],
+      "input_policy": "DISABLED",
+      "output_policy": "NO_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_zinc_tags", "industrial_frontier:evidence/forms/create_worldgen_disabled"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/create_worldgen_closed"]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/deepslate_zinc_ore",
+      "substance_ref": "industrial_frontier:substance/zinc",
+     "registry_id": "create:deepslate_zinc_ore",
+      "canonical_term_ru": "глубинная цинковая руда Create",
+      "availability": "INSTALLED",
+      "status": "DISABLED_DUPLICATE",
+      "form_kind": "ORE",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": ["forge:ores/zinc"],
+      "input_policy": "DISABLED",
+      "output_policy": "NO_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_zinc_tags", "industrial_frontier:evidence/forms/create_worldgen_disabled"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/create_worldgen_closed"]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/raw_zinc",
+      "substance_ref": "industrial_frontier:substance/zinc",
+     "registry_id": "create:raw_zinc",
+      "canonical_term_ru": "необработанный цинк Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "RAW_MATERIAL",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": ["forge:raw_materials/zinc"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "INPUT_ONLY",
+      "conversion": {
+        "mode": "GATED_AUDIT",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_zinc_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/gtceu_dynamic_forms"]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/zinc_ingot",
+      "substance_ref": "industrial_frontier:substance/zinc",
+     "registry_id": "create:zinc_ingot",
+      "canonical_term_ru": "цинковый слиток Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": ["forge:ingots/zinc"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "INPUT_ONLY",
+      "conversion": {
+        "mode": "ONE_TO_ONE_NO_PROFIT",
+        "target_form_ref": "industrial_frontier:form/gtceu/zinc_ingot",
+        "input_units": 1,
+        "output_units": 1,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_zinc_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/brass_ingot",
+      "substance_ref": "industrial_frontier:substance/brass",
+     "registry_id": "create:brass_ingot",
+      "canonical_term_ru": "латунный слиток Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": ["forge:ingots/brass"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "INPUT_ONLY",
+      "conversion": {
+        "mode": "GATED_AUDIT",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_brass_tags", "industrial_frontier:evidence/forms/create_brass_recipe"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/brass_sheet",
+      "substance_ref": "industrial_frontier:substance/brass",
+     "registry_id": "create:brass_sheet",
+      "canonical_term_ru": "латунный лист Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "PLATE",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": ["forge:plates/brass"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "GATED_AUDIT",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_brass_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/ae2/certus_quartz_crystal",
+      "substance_ref": "industrial_frontier:substance/certus_quartz",
+     "registry_id": "ae2:certus_quartz_crystal",
+      "canonical_term_ru": "кристалл истинного кварца",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "CRYSTAL",
+      "physical_state": "SOLID",
+      "purity_class": "DOMAIN_SPECIALIZED",
+      "owner_domain_ref": "industrial_frontier:domain/digital_factory",
+      "forge_tags": ["forge:gems/certus_quartz"],
+      "input_policy": "DOMAIN_SPECIALIZED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/ae2_certus_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/ae2_progression"]
+    },
+    {
+      "form_id": "industrial_frontier:form/ae2/charged_certus_quartz_crystal",
+      "substance_ref": "industrial_frontier:substance/certus_quartz",
+     "registry_id": "ae2:charged_certus_quartz_crystal",
+      "canonical_term_ru": "заряженный кристалл истинного кварца",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "CHARGED_CRYSTAL",
+      "physical_state": "SOLID",
+      "purity_class": "DOMAIN_SPECIALIZED",
+      "owner_domain_ref": "industrial_frontier:domain/digital_factory",
+      "forge_tags": ["forge:gems/certus_quartz"],
+      "input_policy": "DOMAIN_SPECIALIZED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/ae2_certus_tags", "industrial_frontier:evidence/forms/ae2_charger_recipe"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/ae2_progression"]
+    },
+    {
+      "form_id": "industrial_frontier:form/ae2/certus_quartz_dust",
+      "substance_ref": "industrial_frontier:substance/certus_quartz",
+     "registry_id": "ae2:certus_quartz_dust",
+      "canonical_term_ru": "пыль истинного кварца",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "DUST",
+      "physical_state": "SOLID",
+      "purity_class": "DOMAIN_SPECIALIZED",
+      "owner_domain_ref": "industrial_frontier:domain/digital_factory",
+      "forge_tags": ["forge:dusts/certus_quartz"],
+      "input_policy": "DOMAIN_SPECIALIZED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/ae2_certus_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/ae2_progression"]
+    },
+    {
+      "form_id": "industrial_frontier:form/ae2/fluix_crystal",
+      "substance_ref": "industrial_frontier:substance/fluix",
+     "registry_id": "ae2:fluix_crystal",
+      "canonical_term_ru": "кристалл флюикса",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "CRYSTAL",
+      "physical_state": "SOLID",
+      "purity_class": "DOMAIN_SPECIALIZED",
+      "owner_domain_ref": "industrial_frontier:domain/digital_factory",
+      "forge_tags": ["forge:gems/fluix"],
+      "input_policy": "DOMAIN_SPECIALIZED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/ae2_fluix_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/ae2_progression"]
+    },
+    {
+      "form_id": "industrial_frontier:form/ae2/fluix_dust",
+      "substance_ref": "industrial_frontier:substance/fluix",
+     "registry_id": "ae2:fluix_dust",
+      "canonical_term_ru": "пыль флюикса",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "DUST",
+      "physical_state": "SOLID",
+      "purity_class": "DOMAIN_SPECIALIZED",
+      "owner_domain_ref": "industrial_frontier:domain/digital_factory",
+      "forge_tags": ["forge:dusts/fluix"],
+      "input_policy": "DOMAIN_SPECIALIZED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": ["industrial_frontier:evidence/forms/ae2_fluix_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/installed_static", "industrial_frontier:gate/forms/ae2_progression"]
+    },
+    {
+      "form_id": "industrial_frontier:form/gtceu/zinc_ingot",
+      "substance_ref": "industrial_frontier:substance/zinc",
+     "registry_id": "gtceu:zinc_ingot",
+      "canonical_term_ru": "цинковый слиток GTCEu",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:ingots/zinc", "industrial_frontier:materials/zinc_ingots"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_process_script", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/gtceu/brass_ingot",
+      "substance_ref": "industrial_frontier:substance/brass",
+     "registry_id": "gtceu:brass_ingot",
+      "canonical_term_ru": "латунный слиток GTCEu",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:ingots/brass"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_process_script"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/iron_ingot",
+      "substance_ref": "industrial_frontier:substance/iron",
+     "registry_id": "minecraft:iron_ingot",
+      "canonical_term_ru": "железный слиток",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:ingots/iron", "industrial_frontier:materials/iron_ingots"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/iron_nugget",
+      "substance_ref": "industrial_frontier:substance/iron",
+     "registry_id": "minecraft:iron_nugget",
+      "canonical_term_ru": "железный самородок",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "NUGGET",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:nuggets/iron", "industrial_frontier:materials/iron_nuggets"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/gtceu/iron_plate",
+      "substance_ref": "industrial_frontier:substance/iron",
+     "registry_id": "gtceu:iron_plate",
+      "canonical_term_ru": "железная пластина GTCEu",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "PLATE",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:plates/iron", "industrial_frontier:materials/iron_plates"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/copper_ingot",
+      "substance_ref": "industrial_frontier:substance/copper",
+     "registry_id": "minecraft:copper_ingot",
+      "canonical_term_ru": "медный слиток",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:ingots/copper", "industrial_frontier:materials/copper_ingots"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/gtceu/copper_plate",
+      "substance_ref": "industrial_frontier:substance/copper",
+     "registry_id": "gtceu:copper_plate",
+      "canonical_term_ru": "медная пластина GTCEu",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "PLATE",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:plates/copper", "industrial_frontier:materials/copper_plates"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/gold_ingot",
+      "substance_ref": "industrial_frontier:substance/gold",
+     "registry_id": "minecraft:gold_ingot",
+      "canonical_term_ru": "золотой слиток",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:ingots/gold"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/gtceu/steel_ingot",
+      "substance_ref": "industrial_frontier:substance/steel",
+     "registry_id": "gtceu:steel_ingot",
+      "canonical_term_ru": "стальной слиток GTCEu",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "INGOT",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:ingots/steel", "industrial_frontier:materials/steel_ingots"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/gtceu/steel_plate",
+      "substance_ref": "industrial_frontier:substance/steel",
+     "registry_id": "gtceu:steel_plate",
+      "canonical_term_ru": "стальная пластина GTCEu",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "PLATE",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:plates/steel", "industrial_frontier:materials/steel_plates"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/redstone_dust",
+      "substance_ref": "industrial_frontier:substance/redstone",
+     "registry_id": "minecraft:redstone",
+      "canonical_term_ru": "пыль редстоуна",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "DUST",
+      "physical_state": "SOLID",
+      "purity_class": "DOMAIN_SPECIALIZED",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["forge:dusts/redstone", "industrial_frontier:materials/redstone_dusts"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/clay_ball",
+      "substance_ref": "industrial_frontier:substance/clay",
+     "registry_id": "minecraft:clay_ball",
+      "canonical_term_ru": "комок глины",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "RAW_MATERIAL",
+      "physical_state": "MIXTURE",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": ["industrial_frontier:materials/clay_balls"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_pack_tags", "industrial_frontier:evidence/forms/m1_clay_recipe"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/clay_block",
+      "substance_ref": "industrial_frontier:substance/clay",
+     "registry_id": "minecraft:clay",
+      "canonical_term_ru": "блок глины",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "BLOCK",
+      "physical_state": "MIXTURE",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m1_clay_recipe"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/water",
+      "substance_ref": "industrial_frontier:substance/raw_water",
+     "registry_id": "minecraft:water",
+      "canonical_term_ru": "неочищенная вода",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "FLUID",
+      "physical_state": "LIQUID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["industrial_frontier:materials/water"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/gtceu/steam",
+      "substance_ref": "industrial_frontier:substance/steam",
+     "registry_id": "gtceu:steam",
+      "canonical_term_ru": "технический пар GTCEu",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "GAS",
+      "physical_state": "GAS",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": ["industrial_frontier:materials/steam"],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "CANONICAL_DOMAIN_OUTPUT",
+      "conversion": { "mode": "NONE", "target_form_ref": null, "input_units": null, "output_units": null, "material_gain_forbidden": true },
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_exact_core_audit", "industrial_frontier:evidence/forms/m2_pack_tags"],
+      "gate_refs": ["industrial_frontier:gate/forms/runtime_pack_test"]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/iron_sheet",
+      "substance_ref": "industrial_frontier:substance/iron",
+     "registry_id": "create:iron_sheet",
+      "canonical_term_ru": "железный лист Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "PLATE",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": [
+        "forge:plates/iron"
+      ],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/create_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/copper_sheet",
+      "substance_ref": "industrial_frontier:substance/copper",
+     "registry_id": "create:copper_sheet",
+      "canonical_term_ru": "медный лист Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "PLATE",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": [
+        "forge:plates/copper"
+      ],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/create_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/copper_nugget",
+      "substance_ref": "industrial_frontier:substance/copper",
+     "registry_id": "create:copper_nugget",
+      "canonical_term_ru": "медный самородок Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "NUGGET",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": [
+        "forge:nuggets/copper"
+      ],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/create_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/zinc_nugget",
+      "substance_ref": "industrial_frontier:substance/zinc",
+     "registry_id": "create:zinc_nugget",
+      "canonical_term_ru": "цинковый самородок Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "NUGGET",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": [
+        "forge:nuggets/zinc"
+      ],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/create_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/create/golden_sheet",
+      "substance_ref": "industrial_frontier:substance/gold",
+     "registry_id": "create:golden_sheet",
+      "canonical_term_ru": "золотой лист Create",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "PLATE",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "forge_tags": [
+        "forge:plates/gold"
+      ],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/create_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/raw_iron",
+      "substance_ref": "industrial_frontier:substance/iron",
+     "registry_id": "minecraft:raw_iron",
+      "canonical_term_ru": "необработанное железо",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "RAW_MATERIAL",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "INPUT_ONLY",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/raw_iron_block",
+      "substance_ref": "industrial_frontier:substance/iron",
+     "registry_id": "minecraft:raw_iron_block",
+      "canonical_term_ru": "блок необработанного железа",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "BLOCK",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/iron_block",
+      "substance_ref": "industrial_frontier:substance/iron",
+     "registry_id": "minecraft:iron_block",
+      "canonical_term_ru": "железный блок",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "BLOCK",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/raw_copper",
+      "substance_ref": "industrial_frontier:substance/copper",
+     "registry_id": "minecraft:raw_copper",
+      "canonical_term_ru": "необработанная медь",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "RAW_MATERIAL",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "INPUT_ONLY",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/raw_copper_block",
+      "substance_ref": "industrial_frontier:substance/copper",
+     "registry_id": "minecraft:raw_copper_block",
+      "canonical_term_ru": "блок необработанной меди",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "BLOCK",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/copper_block",
+      "substance_ref": "industrial_frontier:substance/copper",
+     "registry_id": "minecraft:copper_block",
+      "canonical_term_ru": "медный блок",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "BLOCK",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/raw_gold",
+      "substance_ref": "industrial_frontier:substance/gold",
+     "registry_id": "minecraft:raw_gold",
+      "canonical_term_ru": "необработанное золото",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "RAW_MATERIAL",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "INPUT_ONLY",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/raw_gold_block",
+      "substance_ref": "industrial_frontier:substance/gold",
+     "registry_id": "minecraft:raw_gold_block",
+      "canonical_term_ru": "блок необработанного золота",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "BLOCK",
+      "physical_state": "SOLID",
+      "purity_class": "RAW",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/gold_block",
+      "substance_ref": "industrial_frontier:substance/gold",
+     "registry_id": "minecraft:gold_block",
+      "canonical_term_ru": "золотой блок",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "BLOCK",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [],
+      "input_policy": "EXACT_ID_ONLY",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    },
+    {
+      "form_id": "industrial_frontier:form/minecraft/gold_nugget",
+      "substance_ref": "industrial_frontier:substance/gold",
+     "registry_id": "minecraft:gold_nugget",
+      "canonical_term_ru": "золотой самородок",
+      "availability": "INSTALLED",
+      "status": "ACTIVE_INSTALLED",
+      "form_kind": "NUGGET",
+      "physical_state": "SOLID",
+      "purity_class": "TECHNICAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "forge_tags": [
+        "forge:nuggets/gold"
+      ],
+      "input_policy": "TAG_ACCEPTED",
+      "output_policy": "PRESERVE_VENDOR_OUTPUT",
+      "conversion": {
+        "mode": "NONE",
+        "target_form_ref": null,
+        "input_units": null,
+        "output_units": null,
+        "material_gain_forbidden": true
+      },
+      "evidence_refs": [
+        "industrial_frontier:evidence/forms/vanilla_core_models"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/forms/installed_static"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "industrial_frontier:gate/forms/installed_static",
+      "status": "CLOSED_STATIC",
+      "requirement_ru": "Каждый registry_id и Forge-тег в стартовом срезе должен существовать в установленном JAR.",
+      "owner": "CODEX",
+      "blocks_runtime_claim": false,
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_zinc_tags", "industrial_frontier:evidence/forms/create_brass_tags", "industrial_frontier:evidence/forms/create_core_models", "industrial_frontier:evidence/forms/vanilla_core_models", "industrial_frontier:evidence/forms/ae2_certus_tags", "industrial_frontier:evidence/forms/ae2_fluix_tags"]
+    },
+    {
+      "gate_id": "industrial_frontier:gate/forms/create_worldgen_closed",
+      "status": "CLOSED_STATIC",
+      "requirement_ru": "Create-руды остаются зарегистрированными предметами, но не генерируются в мире.",
+      "owner": "CODEX",
+      "blocks_runtime_claim": false,
+      "evidence_refs": ["industrial_frontier:evidence/forms/create_worldgen_disabled"]
+    },
+    {
+      "gate_id": "industrial_frontier:gate/forms/gtceu_dynamic_forms",
+      "status": "OPEN_USER_TEST",
+      "requirement_ru": "Владелец предоставляет runtime registry/JEI dump динамически зарегистрированных GTCEu-форм перед расширением 1:1-конверсий и заменой неиспользуемых выходов.",
+      "owner": "PACK_OWNER",
+      "blocks_runtime_claim": true,
+      "evidence_refs": ["industrial_frontier:evidence/forms/gtceu_material_keys"]
+    },
+    {
+      "gate_id": "industrial_frontier:gate/forms/runtime_pack_test",
+      "status": "OPEN_USER_TEST",
+      "requirement_ru": "Владелец проверяет разрешение pack-тегов, канонические GTCEu-выходы и удаление stock-рецептов в JEI/машинах.",
+      "owner": "PACK_OWNER",
+      "blocks_runtime_claim": true,
+      "evidence_refs": ["industrial_frontier:evidence/forms/m2_process_script", "industrial_frontier:evidence/forms/m2_pack_tags"]
+    },
+    {
+      "gate_id": "industrial_frontier:gate/forms/ae2_progression",
+      "status": "OPEN_IMPLEMENTATION",
+      "requirement_ru": "Формы существуют, но их P5-доступ, рецепты и автоматизация должны быть введены отдельным контентным изменением.",
+      "owner": "CODEX",
+      "blocks_runtime_claim": true,
+      "evidence_refs": ["industrial_frontier:evidence/forms/ae2_certus_tags", "industrial_frontier:evidence/forms/ae2_fluix_tags"]
+    }
+  ],
+  "source_evidence": [
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/create_zinc_tags",
+      "type": "VENDOR_DATA",
+      "path": "mods/create-1.20.1-6.0.8.jar!/data/forge/tags/items",
+      "locator": "ores/zinc.json, raw_materials/zinc.json, ingots/zinc.json",
+      "observed": "Exact Create zinc form IDs are declared in Forge item tags.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/create_brass_tags",
+      "type": "VENDOR_DATA",
+      "path": "mods/create-1.20.1-6.0.8.jar!/data/forge/tags/items",
+      "locator": "ingots/brass.json and plates/brass.json",
+      "observed": "Create declares create:brass_ingot and create:brass_sheet in Forge tags.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/create_brass_recipe",
+      "type": "VENDOR_DATA",
+      "path": "mods/create-1.20.1-6.0.8.jar!/data/create/recipes/mixing/brass_ingot.json",
+      "locator": "results[0]",
+      "observed": "The installed recipe outputs two create:brass_ingot.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/create_core_models",
+      "type": "JAR_INTERNAL_PATH",
+      "path": "mods/create-1.20.1-6.0.8.jar!/assets/create/models/item",
+      "locator": "iron_sheet.json, copper_sheet.json, copper_nugget.json, zinc_nugget.json and golden_sheet.json",
+      "observed": "The installed exact-version Create JAR contains all five declared core-metal sheet/nugget item models; corresponding Forge tags were also inspected.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/vanilla_core_models",
+      "type": "AUTHOR_DECISION",
+      "path": "authoring/m2/minecraft_1_20_1_core_forms_evidence.json",
+      "locator": "declared_item_models and source_sha256",
+      "observed": "A root-local immutable snapshot records the ten declared vanilla raw/storage/nugget item models extracted read-only from the installed Minecraft 1.20.1 client JAR.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/create_worldgen_disabled",
+      "type": "CONFIG_VALUE",
+      "path": "config/create-common.toml",
+      "locator": "worldgen.disableWorldGen",
+      "observed": "disableWorldGen = true.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/gtceu_material_keys",
+      "type": "VENDOR_LANGUAGE_KEY",
+      "path": "mods/gtceu-1.20.1-7.5.3.jar!/assets/gtceu/lang/en_us.json",
+      "locator": "material.gtceu.zinc and material.gtceu.brass",
+      "observed": "GTCEu confirms both material concepts, while exact dynamic form IDs remain to be extracted before policy enforcement.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/ae2_certus_tags",
+      "type": "VENDOR_DATA",
+      "path": "mods/appliedenergistics2-forge-15.4.10.jar!/data/forge/tags/items",
+      "locator": "gems/certus_quartz.json and dusts/certus_quartz.json",
+      "observed": "Exact AE2 certus crystal, charged crystal and dust IDs are declared.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/ae2_charger_recipe",
+      "type": "VENDOR_DATA",
+      "path": "mods/appliedenergistics2-forge-15.4.10.jar!/data/ae2/recipes/charger/charged_certus_quartz_crystal.json",
+      "locator": "recipe input and output",
+      "observed": "The AE2 charger recipe produces the charged certus quartz crystal form.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/m2_process_script",
+      "type": "AUTHOR_DECISION",
+      "path": "kubejs/server_scripts/30_integrations/m2_process_ownership.js",
+      "locator": "Create removals and industrial_frontier:m2/create/brass_from_copper_zinc",
+      "observed": "The runtime script removes parallel Create processing and outputs gtceu:brass_ingot at 3 Cu + 1 Zn to 4 brass.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/m2_pack_tags",
+      "type": "AUTHOR_DECISION",
+      "path": "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags",
+      "locator": "items/materials and fluids/materials",
+      "observed": "Pack tags exist for iron, copper, zinc, steel, redstone, clay, water and steam and point to installed Forge tags or exact IDs.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/m2_exact_core_audit",
+      "type": "JAR_INTERNAL_PATH",
+      "path": "mods/gtceu-1.20.1-7.5.3.jar!/assets/gtceu/lang/en_us.json",
+      "locator": "material and exact item-name keys used by the M2 core-form audit",
+      "observed": "The GTCEu core material names used by the pack layer are present in the installed exact-version JAR; vanilla and fluid IDs are additionally anchored by authored pack tags, while runtime resolution remains an owner gate.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/m1_clay_recipe",
+      "type": "AUTHOR_DECISION",
+      "path": "kubejs/server_scripts/00_core/recipes/m1_create_integration.js",
+      "locator": "industrial_frontier:m1/create/batch_clay_block",
+      "observed": "The installed pack recipe consumes four minecraft:clay_ball and outputs minecraft:clay.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/forms/ae2_fluix_tags",
+      "type": "VENDOR_DATA",
+      "path": "mods/appliedenergistics2-forge-15.4.10.jar!/data/forge/tags/items",
+      "locator": "gems/fluix.json and dusts/fluix.json",
+      "observed": "Exact AE2 fluix crystal and dust IDs are declared.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    }
+  ]
+}

@@ -1,0 +1,1243 @@
+﻿{
+    "schema_version":  2,
+    "build_id":  "IF-M1-0001",
+    "generated_at":  "2026-08-02T00:25:44.6298211Z",
+    "total_missing_ru_keys":  0,
+    "total_empty_ru_values":  0,
+    "total_replacement_characters":  0,
+    "total_placeholder_mismatches":  0,
+    "total_allowed_placeholder_exceptions":  1,
+    "total_unknown_overlay_keys":  0,
+    "unused_format_exceptions":  [
+
+                                 ],
+    "release_gate_met":  true,
+    "namespaces":  [
+                       {
+                           "namespace":  "ae2",
+                           "en_us_keys":  1003,
+                           "ru_ru_keys_after_overlay":  1017,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "alexsmobs",
+                           "en_us_keys":  1076,
+                           "ru_ru_keys_after_overlay":  1077,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "aquaculture",
+                           "en_us_keys":  279,
+                           "ru_ru_keys_after_overlay":  279,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "bettercaves",
+                           "en_us_keys":  5,
+                           "ru_ru_keys_after_overlay":  5,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betterdeserttemples",
+                           "en_us_keys":  7,
+                           "ru_ru_keys_after_overlay":  7,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betterdungeons",
+                           "en_us_keys":  86,
+                           "ru_ru_keys_after_overlay":  86,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betterendisland",
+                           "en_us_keys":  5,
+                           "ru_ru_keys_after_overlay":  5,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betterfortresses",
+                           "en_us_keys":  4,
+                           "ru_ru_keys_after_overlay":  4,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betterjungletemples",
+                           "en_us_keys":  11,
+                           "ru_ru_keys_after_overlay":  11,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betteroceanmonuments",
+                           "en_us_keys":  4,
+                           "ru_ru_keys_after_overlay":  4,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betterstrongholds",
+                           "en_us_keys":  18,
+                           "ru_ru_keys_after_overlay":  18,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "betterwitchhuts",
+                           "en_us_keys":  4,
+                           "ru_ru_keys_after_overlay":  4,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "carryon",
+                           "en_us_keys":  12,
+                           "ru_ru_keys_after_overlay":  12,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "citadel",
+                           "en_us_keys":  24,
+                           "ru_ru_keys_after_overlay":  24,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "create",
+                           "en_us_keys":  3646,
+                           "ru_ru_keys_after_overlay":  3646,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+                                                                  {
+                                                                      "key":  "create.schedule.condition.time_of_day.digital_format",
+                                                                      "en_tokens":  "%1$s|%3$s|%4$s",
+                                                                      "ru_tokens":  "%2$s|%3$s",
+                                                                      "reason":  "Russian uses the 24-hour clock without AM/PM. The installed Create JAR ships the same safe argument selection in de_de and fr_fr, confirming that the formatter supplies both 12-hour and 24-hour arguments."
+                                                                  }
+                                                              ],
+                           "allowed_placeholder_exception_count":  1,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "effortlessbuilding",
+                           "en_us_keys":  108,
+                           "ru_ru_keys_after_overlay":  110,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "embeddium",
+                           "en_us_keys":  7,
+                           "ru_ru_keys_after_overlay":  7,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "ftbfiltersystem",
+                           "en_us_keys":  60,
+                           "ru_ru_keys_after_overlay":  60,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "ftblibrary",
+                           "en_us_keys":  99,
+                           "ru_ru_keys_after_overlay":  99,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "ftbquests",
+                           "en_us_keys":  584,
+                           "ru_ru_keys_after_overlay":  616,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "ftbteams",
+                           "en_us_keys":  90,
+                           "ru_ru_keys_after_overlay":  90,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "ftbxmodcompat",
+                           "en_us_keys":  0,
+                           "ru_ru_keys_after_overlay":  0,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "gravestone",
+                           "en_us_keys":  33,
+                           "ru_ru_keys_after_overlay":  33,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "gtceu",
+                           "en_us_keys":  5921,
+                           "ru_ru_keys_after_overlay":  5988,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "guideme",
+                           "en_us_keys":  36,
+                           "ru_ru_keys_after_overlay":  36,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "industrial_frontier",
+                           "en_us_keys":  78,
+                           "ru_ru_keys_after_overlay":  78,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "jade",
+                           "en_us_keys":  282,
+                           "ru_ru_keys_after_overlay":  282,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "jei",
+                           "en_us_keys":  132,
+                           "ru_ru_keys_after_overlay":  132,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "jeresources",
+                           "en_us_keys":  144,
+                           "ru_ru_keys_after_overlay":  144,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "modernui",
+                           "en_us_keys":  197,
+                           "ru_ru_keys_after_overlay":  197,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "questsadditions",
+                           "en_us_keys":  57,
+                           "ru_ru_keys_after_overlay":  57,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "sereneseasons",
+                           "en_us_keys":  36,
+                           "ru_ru_keys_after_overlay":  36,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "sodium",
+                           "en_us_keys":  65,
+                           "ru_ru_keys_after_overlay":  65,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "sodiumdynamiclights",
+                           "en_us_keys":  34,
+                           "ru_ru_keys_after_overlay":  36,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "xaerobetterpvp",
+                           "en_us_keys":  78,
+                           "ru_ru_keys_after_overlay":  78,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "xaerominimap",
+                           "en_us_keys":  646,
+                           "ru_ru_keys_after_overlay":  646,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       },
+                       {
+                           "namespace":  "xaeroworldmap",
+                           "en_us_keys":  317,
+                           "ru_ru_keys_after_overlay":  317,
+                           "missing_ru_keys":  [
+
+                                               ],
+                           "missing_count":  0,
+                           "coverage_percent":  100,
+                           "empty_ru_keys":  [
+
+                                             ],
+                           "empty_count":  0,
+                           "replacement_character_keys":  [
+
+                                                          ],
+                           "replacement_character_count":  0,
+                           "placeholder_mismatches":  [
+
+                                                      ],
+                           "placeholder_mismatch_count":  0,
+                           "allowed_placeholder_exceptions":  [
+
+                                                              ],
+                           "allowed_placeholder_exception_count":  0,
+                           "overlay_unknown_keys":  [
+
+                                                    ],
+                           "overlay_unknown_count":  0,
+                           "parse_errors":  [
+
+                                            ]
+                       }
+                   ]
+}

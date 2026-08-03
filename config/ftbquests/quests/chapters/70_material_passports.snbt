@@ -1,0 +1,283 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "70_material_passports"
+	group: "1000000000000003"
+	icon: "minecraft:written_book"
+	id: "2070000000000001"
+	order_index: 70
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{industrial_frontier.quest.passports.intro.desc.1}"
+				"{industrial_frontier.quest.passports.intro.desc.2}"
+				"{industrial_frontier.quest.passports.intro.desc.3}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3070000000000001"
+			optional: true
+			shape: "gear"
+			size: 2.0d
+			subtitle: "{industrial_frontier.quest.passports.intro.subtitle}"
+			tags: ["academy", "materials"]
+			tasks: [{
+				id: "4070000000000001"
+				title: "{industrial_frontier.quest.passports.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.passports.intro.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3070000000000001"]
+			description: [
+				"{industrial_frontier.quest.passports.entity_form_id.desc.1}"
+				"{industrial_frontier.quest.passports.entity_form_id.desc.2}"
+				"{industrial_frontier.quest.passports.entity_form_id.desc.3}"
+				"{industrial_frontier.quest.passports.entity_form_id.desc.4}"
+			]
+			icon: "minecraft:iron_ingot"
+			id: "3070000000000002"
+			optional: true
+			subtitle: "{industrial_frontier.quest.passports.entity_form_id.subtitle}"
+			tags: ["academy", "materials"]
+			tasks: [{
+				count: 1L
+				id: "4070000000000002"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_ingots)"
+					}
+				}
+				title: "{industrial_frontier.quest.passports.entity_form_id.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.passports.entity_form_id.title}"
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3070000000000001"]
+			description: [
+				"{industrial_frontier.quest.passports.anatomy.desc.1}"
+				"{industrial_frontier.quest.passports.anatomy.desc.2}"
+				"{industrial_frontier.quest.passports.anatomy.desc.3}"
+				"{industrial_frontier.quest.passports.anatomy.desc.4}"
+				"{industrial_frontier.quest.passports.anatomy.desc.5}"
+			]
+			icon: "minecraft:paper"
+			id: "3070000000000003"
+			optional: true
+			shape: "circle"
+			subtitle: "{industrial_frontier.quest.passports.anatomy.subtitle}"
+			tags: ["academy", "materials"]
+			tasks: [{
+				id: "4070000000000003"
+				title: "{industrial_frontier.quest.passports.anatomy.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.passports.anatomy.title}"
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3070000000000003"]
+			description: [
+				"{industrial_frontier.quest.passports.worldgen_owner.desc.1}"
+				"{industrial_frontier.quest.passports.worldgen_owner.desc.2}"
+				"{industrial_frontier.quest.passports.worldgen_owner.desc.3}"
+				"{industrial_frontier.quest.passports.worldgen_owner.desc.4}"
+			]
+			icon: "minecraft:raw_iron"
+			id: "3070000000000004"
+			optional: true
+			subtitle: "{industrial_frontier.quest.passports.worldgen_owner.subtitle}"
+			tags: ["academy", "worldgen"]
+			tasks: [{
+				id: "4070000000000004"
+				title: "{industrial_frontier.quest.passports.worldgen_owner.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.passports.worldgen_owner.title}"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3070000000000002"]
+			description: [
+				"{industrial_frontier.quest.passports.accepted_inputs.desc.1}"
+				"{industrial_frontier.quest.passports.accepted_inputs.desc.2}"
+				"{industrial_frontier.quest.passports.accepted_inputs.desc.3}"
+				"{industrial_frontier.quest.passports.accepted_inputs.desc.4}"
+			]
+			icon: "minecraft:iron_nugget"
+			id: "3070000000000005"
+			optional: true
+			subtitle: "{industrial_frontier.quest.passports.accepted_inputs.subtitle}"
+			tags: ["academy", "materials"]
+			tasks: [{
+				count: 1L
+				id: "4070000000000005"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_nuggets)"
+					}
+				}
+				title: "{industrial_frontier.quest.passports.accepted_inputs.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.passports.accepted_inputs.title}"
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"3070000000000004"
+				"3070000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.passports.create_gt_contract.desc.1}"
+				"{industrial_frontier.quest.passports.create_gt_contract.desc.2}"
+				"{industrial_frontier.quest.passports.create_gt_contract.desc.3}"
+				"{industrial_frontier.quest.passports.create_gt_contract.desc.4}"
+				"{industrial_frontier.quest.passports.create_gt_contract.desc.5}"
+			]
+			icon: "create:andesite_alloy"
+			id: "3070000000000006"
+			optional: true
+			shape: "gear"
+			size: 1.5d
+			subtitle: "{industrial_frontier.quest.passports.create_gt_contract.subtitle}"
+			tags: ["academy", "domains"]
+			tasks: [{
+				count: 1L
+				id: "4070000000000006"
+				item: {
+					Count: 1
+					id: "create:andesite_alloy"
+				}
+				title: "{industrial_frontier.quest.passports.create_gt_contract.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.passports.create_gt_contract.title}"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3070000000000003"
+				"3070000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.passports.specialized_forms.desc.1}"
+				"{industrial_frontier.quest.passports.specialized_forms.desc.2}"
+				"{industrial_frontier.quest.passports.specialized_forms.desc.3}"
+				"{industrial_frontier.quest.passports.specialized_forms.desc.4}"
+			]
+			icon: "minecraft:glass_bottle"
+			id: "3070000000000007"
+			optional: true
+			shape: "circle"
+			subtitle: "{industrial_frontier.quest.passports.specialized_forms.subtitle}"
+			tags: ["academy", "chemistry"]
+			tasks: [{
+				id: "4070000000000007"
+				title: "{industrial_frontier.quest.passports.specialized_forms.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.passports.specialized_forms.title}"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"3070000000000005"
+				"3070000000000007"
+			]
+			description: [
+				"{industrial_frontier.quest.passports.safe_equivalence.desc.1}"
+				"{industrial_frontier.quest.passports.safe_equivalence.desc.2}"
+				"{industrial_frontier.quest.passports.safe_equivalence.desc.3}"
+				"{industrial_frontier.quest.passports.safe_equivalence.desc.4}"
+			]
+			icon: "create:iron_sheet"
+			id: "3070000000000008"
+			optional: true
+			subtitle: "{industrial_frontier.quest.passports.safe_equivalence.subtitle}"
+			tags: ["academy", "materials"]
+			tasks: [{
+				count: 1L
+				id: "4070000000000008"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_plates)"
+					}
+				}
+				title: "{industrial_frontier.quest.passports.safe_equivalence.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.passports.safe_equivalence.title}"
+			x: 9.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"3070000000000006"
+				"3070000000000008"
+			]
+			description: [
+				"{industrial_frontier.quest.passports.bypass_audit.desc.1}"
+				"{industrial_frontier.quest.passports.bypass_audit.desc.2}"
+				"{industrial_frontier.quest.passports.bypass_audit.desc.3}"
+				"{industrial_frontier.quest.passports.bypass_audit.desc.4}"
+				"{industrial_frontier.quest.passports.bypass_audit.desc.5}"
+			]
+			icon: "minecraft:comparator"
+			id: "3070000000000009"
+			optional: true
+			subtitle: "{industrial_frontier.quest.passports.bypass_audit.subtitle}"
+			tags: ["academy", "diagnostics"]
+			tasks: [{
+				id: "4070000000000009"
+				title: "{industrial_frontier.quest.passports.bypass_audit.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.passports.bypass_audit.title}"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3070000000000009"]
+			description: [
+				"{industrial_frontier.quest.passports.signoff.desc.1}"
+				"{industrial_frontier.quest.passports.signoff.desc.2}"
+				"{industrial_frontier.quest.passports.signoff.desc.3}"
+			]
+			icon: "minecraft:knowledge_book"
+			id: "307000000000000A"
+			optional: true
+			shape: "diamond"
+			size: 2.0d
+			subtitle: "{industrial_frontier.quest.passports.signoff.subtitle}"
+			tags: ["academy", "materials"]
+			tasks: [{
+				id: "407000000000000A"
+				title: "{industrial_frontier.quest.passports.signoff.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.passports.signoff.title}"
+			x: 15.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.passports.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.passports.title}"
+}

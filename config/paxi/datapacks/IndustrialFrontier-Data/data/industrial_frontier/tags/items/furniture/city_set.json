@@ -1,0 +1,18 @@
+{
+  "__comment": "Городской мебельный набор. Контракт на квартал принимает категорию, а не конкретную модель стула: игрок обставляет здание тем, что производит его линия. Комплект набирается партиями через механические сборщики или ME-автосборку — вручную повторять один крафт сорок раз не требуется.",
+  "replace": false,
+  "values": [
+    "handcrafted:oak_chair",
+    "handcrafted:oak_table",
+    "handcrafted:oak_bench",
+    "handcrafted:oak_shelf",
+    "handcrafted:oak_drawer",
+    "handcrafted:oak_counter",
+    "handcrafted:spruce_chair",
+    "handcrafted:spruce_table",
+    "handcrafted:spruce_bench",
+    "handcrafted:spruce_shelf",
+    "handcrafted:spruce_drawer",
+    "handcrafted:spruce_counter"
+  ]
+}

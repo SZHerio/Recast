@@ -1,0 +1,17 @@
+{
+  "__comment": "То же самое: biomesoplenty:endbloom отсутствует в установленной версии BOP. Рецепт выключен условием, а не удалён: если мод обновится и предмет появится, достаточно убрать этот файл.",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stone"
+  }
+}

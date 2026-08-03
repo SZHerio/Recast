@@ -1,0 +1,17 @@
+{
+  "__comment": "Agricultural Enhancements ссылается на собственный предмет agriculturalenhancements:farmer_wrench, которого нет в реестре. Рецепт выключен условием, а не удалён: если мод обновится и предмет появится, достаточно убрать этот файл.",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stone"
+  }
+}

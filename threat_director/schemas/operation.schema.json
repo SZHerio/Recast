@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/threat/operation.schema.json",
+  "title": "Operation definition/instance envelope",
+  "type": "object",
+  "required": ["schema_version", "definition_id", "instance_uuid", "target_team_uuid", "state", "min_epoch", "max_epoch", "objective", "cooldown_ticks"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "definition_id": { "type": "string", "pattern": "^industrial_frontier:operation/[a-z0-9_./-]+$" },
+    "instance_uuid": { "type": "string", "format": "uuid" },
+    "target_team_uuid": { "type": "string", "format": "uuid" },
+    "state": { "enum": ["PLANNED", "RECON", "WARNED", "COVERT", "NEGOTIATION_WINDOW", "PREPARATION", "ACTIVE", "RESOLVED_SUCCESS", "RESOLVED_FAILURE", "ABORTED", "RECOVERY", "COOLDOWN", "CLOSED"] },
+    "min_epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+    "max_epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+    "objective": { "type": "object" },
+    "cooldown_ticks": { "type": "integer", "minimum": 0 },
+    "last_transition": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

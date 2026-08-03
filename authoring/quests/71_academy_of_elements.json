@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.elements",
+  "engine_id": "2071000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.elements.intro",
+      "engine_id": "3071000000000001",
+      "purpose": "A reference, not a required chapter",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.purity",
+      "engine_id": "3071000000000002",
+      "purpose": "Six classes, not good and bad",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.carbon",
+      "engine_id": "3071000000000003",
+      "purpose": "Fuel, reductant and polymer feedstock",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.sulfur",
+      "engine_id": "3071000000000004",
+      "purpose": "The acid everyone needs",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.nitrogen",
+      "engine_id": "3071000000000005",
+      "purpose": "Air becomes food and explosives",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.chlorine",
+      "engine_id": "3071000000000006",
+      "purpose": "Three products you cannot decline",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.water",
+      "engine_id": "3071000000000007",
+      "purpose": "Three classes and mandatory effluent",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.silicon",
+      "engine_id": "3071000000000008",
+      "purpose": "Where purity becomes critical",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.nuclear",
+      "engine_id": "3071000000000009",
+      "purpose": "The one chain that must close",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.elements.index",
+      "engine_id": "3071000000000010",
+      "purpose": "Nine fields that answer everything",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

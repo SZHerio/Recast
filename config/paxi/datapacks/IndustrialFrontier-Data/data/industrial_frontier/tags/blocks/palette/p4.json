@@ -1,0 +1,16 @@
+{
+  "__comment": "Палитра P4: химический город. Моющиеся поверхности, бетон и плитка вместо голого металла — так выглядит район, где работают с реагентами.",
+  "replace": false,
+  "values": [
+    "minecraft:white_concrete",
+    "minecraft:light_gray_concrete",
+    "minecraft:cyan_terracotta",
+    "minecraft:quartz_bricks",
+    "minecraft:polished_deepslate",
+    "minecraft:light_blue_stained_glass",
+    "create:copper_tiles",
+    "create:copper_shingles",
+    "createdeco:copper_catwalk",
+    "createdeco:copper_support"
+  ]
+}

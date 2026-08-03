@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p5",
+  "engine_id": "2015000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p5.intro",
+      "engine_id": "3015000000000001",
+      "purpose": "What changes in the fifth epoch",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p5.bulk_processing",
+      "engine_id": "3015000000000002",
+      "purpose": "One owner of multiplication",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p5.ae2_entry",
+      "engine_id": "3015000000000003",
+      "purpose": "Storage, not autocrafting",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p5.ae2_channels",
+      "engine_id": "3015000000000004",
+      "purpose": "The first failure everyone meets",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p5.ae2_patterns",
+      "engine_id": "3015000000000005",
+      "purpose": "The network learns what goes where",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p5.ae2_autocraft",
+      "engine_id": "3015000000000006",
+      "purpose": "HV, not P5",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p5.ae2_recovery",
+      "engine_id": "3015000000000007",
+      "purpose": "Fault tolerance step by step",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p5.freight_rail",
+      "engine_id": "3015000000000008",
+      "purpose": "Create and Steam 'n' Rails",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p5.water_route",
+      "engine_id": "3015000000000009",
+      "purpose": "Tug, barge, dock",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p5.transit_line",
+      "engine_id": "3015000000000010",
+      "purpose": "MTR carries people, not crates",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p5.last_mile",
+      "engine_id": "3015000000000011",
+      "purpose": "From the station to the door",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p5.reserve",
+      "engine_id": "3015000000000012",
+      "purpose": "A store that survives an outage",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p5.contracts",
+      "engine_id": "3015000000000013",
+      "purpose": "Flow and closure instead of a one-off delivery",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p5.balance",
+      "engine_id": "3015000000000014",
+      "purpose": "Why you need both",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

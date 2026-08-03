@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "namespace": "industrial_frontier",
+  "registry_id": "industrial_frontier:threat_director/operations",
+  "scope_ru": "Определения плановых операций. Операция не является внезапной бесконечной волной: у неё есть конкретная цель, окно переговоров, ограничение по времени и обязательное восстановление. База игрока не разрушается необратимо, и офлайн-рейдов нет.",
+  "lifecycle": ["PLANNED", "RECON", "WARNED", "COVERT", "NEGOTIATION_WINDOW", "PREPARATION", "ACTIVE", "RESOLVED_SUCCESS", "RESOLVED_FAILURE", "ABORTED", "RECOVERY", "COOLDOWN", "CLOSED"],
+  "lifecycle_rules_ru": [
+    "Переход возможен только на следующее состояние или в ABORTED.",
+    "ACTIVE недостижим, минуя окно переговоров: игрок обязан получить возможность договориться.",
+    "После любого исхода обязательны RECOVERY и COOLDOWN — повторная операция не начинается сразу.",
+    "Состояние восстанавливается из сохранённых данных без двойной награды и без второго рейда."
+  ],
+  "operations": [
+    {
+      "definition_id": "industrial_frontier:operation/survey",
+      "title_ru": "Разведка района",
+      "min_epoch": 0,
+      "max_epoch": 3,
+      "objective_ru": "Фракция изучает ваш район: отмечает маршруты, склады и подходы. Ущерба нет.",
+      "warning_ru": "У границы замечена группа с инструментами съёмки.",
+      "negotiation_ru": "Можно пропустить их открыто, выкупить данные или выдворить.",
+      "outcome_ru": "Открытый пропуск повышает уважение, выдворение снижает его без вражды.",
+      "cooldown_ticks": 72000,
+      "reputation_delta": { "success": 4, "failure": -4 }
+    },
+    {
+      "definition_id": "industrial_frontier:operation/trade_convoy",
+      "title_ru": "Торговый караван",
+      "min_epoch": 1,
+      "max_epoch": 6,
+      "objective_ru": "Караван просит проход и охрану до соседнего узла.",
+      "warning_ru": "Караван встал у ваших ворот и ждёт ответа.",
+      "negotiation_ru": "Можно сопроводить, пропустить без охраны или отказать.",
+      "outcome_ru": "Успешное сопровождение открывает торговый каталог фракции.",
+      "cooldown_ticks": 96000,
+      "reputation_delta": { "success": 8, "failure": -6 }
+    },
+    {
+      "definition_id": "industrial_frontier:operation/utility_demand",
+      "title_ru": "Требование по коммунальному узлу",
+      "min_epoch": 4,
+      "max_epoch": 9,
+      "objective_ru": "Фракция требует долю воды, энергии или продовольствия с вашего узла.",
+      "warning_ru": "Прислан ультиматум с указанием объёма и срока.",
+      "negotiation_ru": "Можно поставить требуемое, предложить замену, оспорить объём или отказать.",
+      "outcome_ru": "Поставка закрывает вопрос и даёт договор. Отказ ведёт к блокаде, но не к разрушению узла.",
+      "cooldown_ticks": 120000,
+      "reputation_delta": { "success": 10, "failure": -12 }
+    },
+    {
+      "definition_id": "industrial_frontier:operation/blockade",
+      "title_ru": "Блокада маршрута",
+      "min_epoch": 5,
+      "max_epoch": 9,
+      "objective_ru": "Перекрывается конкретный транспортный маршрут: поезда и баржи не проходят.",
+      "warning_ru": "На маршруте выставлен пост с требованием пошлины.",
+      "negotiation_ru": "Можно заплатить, найти обход, снять блокаду силой или заключить договор.",
+      "outcome_ru": "Блокада снимается в любом случае; необратимых потерь инфраструктуры нет.",
+      "cooldown_ticks": 144000,
+      "reputation_delta": { "success": 12, "failure": -15 }
+    },
+    {
+      "definition_id": "industrial_frontier:operation/sabotage",
+      "title_ru": "Промышленный саботаж",
+      "min_epoch": 6,
+      "max_epoch": 9,
+      "objective_ru": "Цель — остановить одну производственную линию, а не снести базу.",
+      "warning_ru": "Разведка сообщает о подготовке диверсии на конкретном участке.",
+      "negotiation_ru": "Можно усилить охрану участка, перенести производство или выдать зачинщиков.",
+      "outcome_ru": "При успехе противника линия останавливается на время и требует ремонта. Блоки не уничтожаются безвозвратно.",
+      "cooldown_ticks": 168000,
+      "reputation_delta": { "success": 15, "failure": -20 }
+    }
+  ]
+}

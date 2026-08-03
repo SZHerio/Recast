@@ -1,0 +1,346 @@
+{
+  "key": "p5",
+  "file": "15_p5_regional_logistics",
+  "chapter_id": "2015000000000001",
+  "group_id": "1000000000000004",
+  "icon": "create:track",
+  "order": 6,
+  "tag": "mainline",
+  "optional": false,
+  "xp": 60,
+  "title_ru": "15 — P5. Региональная логистика",
+  "title_en": "15 — P5. Regional logistics",
+  "sub_ru": "Районы перестают быть островами",
+  "sub_en": "Districts stop being islands",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "create:track", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Район перестал быть точкой",
+        "subtitle": "Что меняется в пятой эпохе",
+        "desc": [
+          "До сих пор всё помещалось в один взгляд: печь рядом с шахтой, кухня рядом с полем, склад в двух шагах. Пятая эпоха ломает эту компактность — руда в одном месте, химия в другом, город в третьем.",
+          "Значит, появляется расстояние. А расстояние — это не декорация: его нужно возить, охранять и оплачивать. Здесь строится четыре слоя перевозки, и каждый отвечает за своё.",
+          "Магистраль везёт груз. Пассажирская линия везёт людей. Вода везёт тяжёлое и наливное. Последняя миля довозит до двери. Ни один слой не подменяет другой — это и есть смысл главы."
+        ],
+        "task": "Понять, зачем эпохе четыре разных транспорта"
+      },
+      "en": {
+        "title": "The district is no longer a dot",
+        "subtitle": "What changes in the fifth epoch",
+        "desc": [
+          "Until now everything fitted into one glance: the furnace next to the mine, the kitchen next to the field, the store two steps away. The fifth epoch breaks that compactness — ore in one place, chemistry in another, the city in a third.",
+          "So distance appears. And distance is not decoration: it has to be carried, guarded and paid for. Four transport layers are built here, and each answers for its own job.",
+          "The mainline carries freight. The transit line carries people. Water carries the heavy and the liquid. The last mile carries to the door. No layer replaces another — that is the point of this chapter."
+        ],
+        "task": "Understand why the epoch needs four different transports"
+      }
+    },
+    {
+      "slug": "bulk_processing", "x": 3, "y": -3, "icon": "minecraft:raw_iron", "deps": ["intro"],
+      "ru": {
+        "title": "Переработка становится линией",
+        "subtitle": "Один владелец умножения",
+        "desc": [
+          "Массовая переработка — это не «дробилка побольше». Это решение о том, кто в сборке имеет право получить из одной руды больше металла, чем в ней было по виду.",
+          "Такой владелец один — GregTech. Только его цепочка различает дроблёное, промытое и очищенное, возвращает побочные минералы и объясняет, откуда взялся прирост.",
+          "Поэтому рудная ветка дробилки и дуговой печи Immersive Engineering снята: 67 рецептов выдавали удвоенный металл параллельной лестницей. Всё остальное у IE осталось — переплавка лома, сплавы, пресс, лесопилка, экскаватор. Механический мост даёт дробильные колёса Create, и он честный: строго один к одному, без прироста."
+        ],
+        "task": "Понять, почему умножение руды принадлежит одному моду"
+      },
+      "en": {
+        "title": "Processing becomes a line",
+        "subtitle": "One owner of multiplication",
+        "desc": [
+          "Mass processing is not a bigger crusher. It is a decision about who in this pack may get more metal out of an ore than it visibly contained.",
+          "There is one such owner: GregTech. Only its chain separates crushed, washed and purified, returns by-product minerals and explains where the gain came from.",
+          "So the ore branch of the Immersive Engineering crusher and arc furnace is gone: 67 recipes handed out doubled metal on a parallel ladder. Everything else in IE stayed — scrap melting, alloys, the press, the sawmill, the excavator. The mechanical bridge is Create's crushing wheels, and it is honest: strictly one to one, no gain."
+        ],
+        "task": "Understand why ore multiplication belongs to one mod"
+      }
+    },
+    {
+      "slug": "ae2_entry", "x": 6, "y": -3, "icon": "ae2:energy_acceptor", "deps": ["bulk_processing"],
+      "item": "ae2:energy_acceptor",
+      "ru": {
+        "title": "Первая ME-сеть",
+        "subtitle": "Хранение, а не автосборка",
+        "desc": [
+          "Цифровая фабрика открывается тремя блоками: зарядник даёт заряженный кварц, пресс печатает процессоры, приёмник энергии впускает ток в сеть. Все три стоят стали и электроники MV — раньше их собрать нечем.",
+          "Сначала вы получаете только хранение и терминал. Это уже много: сундуки перестают быть лабиринтом, поиск предмета занимает секунду.",
+          "Автосборку сеть пока не умеет. Так задумано: если бы всё пришло сразу, поезда и трубы обесценились бы в тот же вечер."
+        ],
+        "task": "Собрать приёмник энергии ME"
+      },
+      "en": {
+        "title": "The first ME network",
+        "subtitle": "Storage, not autocrafting",
+        "desc": [
+          "The digital factory opens with three blocks: the charger makes charged quartz, the inscriber prints processors, the energy acceptor lets current into the network. All three cost steel and MV electronics — there is nothing to build them from earlier.",
+          "At first you only get storage and a terminal. That is already a lot: chests stop being a maze and finding an item takes a second.",
+          "The network cannot craft for you yet. That is deliberate: if everything arrived at once, trains and pipes would lose their value the same evening."
+        ],
+        "task": "Build an ME energy acceptor"
+      }
+    },
+    {
+      "slug": "ae2_channels", "x": 9, "y": -4.5, "icon": "ae2:controller", "deps": ["ae2_entry"],
+      "ru": {
+        "title": "Каналы: почему сеть отказала",
+        "subtitle": "Первая поломка, которую все проходят",
+        "desc": [
+          "Кабель ME несёт не бесконечно много подключений. Обычный кабель тянет восемь каналов, плотный — тридцать два, и каждое устройство занимает один канал по всему пути до контроллера.",
+          "Отсюда типичная первая авария: сеть работала, вы добавили девятое устройство — и половина погасла. Не сломалось ничего, просто кончились каналы на этом отрезке.",
+          "Лечится двумя способами: контроллером, от которого расходятся отдельные ветки, и плотным кабелем на магистрали. Правило простое — считайте каналы на самом узком месте, а не на всей сети сразу."
+        ],
+        "task": "Понять, как считаются каналы"
+      },
+      "en": {
+        "title": "Channels: why the network went dark",
+        "subtitle": "The first failure everyone meets",
+        "desc": [
+          "An ME cable does not carry unlimited connections. A normal cable carries eight channels, a dense one thirty-two, and every device occupies one channel along the whole path back to the controller.",
+          "Hence the classic first outage: the network worked, you added a ninth device, and half of it went dark. Nothing broke — that segment simply ran out of channels.",
+          "There are two cures: a controller with separate branches leaving it, and dense cable on the trunk. The rule is simple — count channels at the narrowest point, not across the whole network at once."
+        ],
+        "task": "Understand how channels are counted"
+      }
+    },
+    {
+      "slug": "ae2_patterns", "x": 12, "y": -4.5, "icon": "ae2:pattern_provider", "deps": ["ae2_channels"],
+      "item": "ae2:pattern_provider",
+      "ru": {
+        "title": "Шаблоны и приоритеты",
+        "subtitle": "Сеть узнаёт, что и куда",
+        "desc": [
+          "Шаблон — это записанный рецепт: что положить, куда отправить, что ждать обратно. Поставщик шаблонов держит его и выдаёт задание машине, когда работа появилась.",
+          "Приоритет решает, куда сеть кладёт результат. У ячейки, отведённой под металл, приоритет выше — тогда металл не расползается по общим дискам, а лежит там, где вы его ищете.",
+          "Тот же приоритет спасает от переполнения: дайте самой дешёвой массовке отдельную ячейку с низким приоритетом, и она не съест дорогое место."
+        ],
+        "task": "Собрать поставщик шаблонов"
+      },
+      "en": {
+        "title": "Patterns and priorities",
+        "subtitle": "The network learns what goes where",
+        "desc": [
+          "A pattern is a written-down recipe: what to put in, where to send it, what to expect back. The pattern provider holds it and hands the job to a machine when work appears.",
+          "Priority decides where the network puts a result. A cell reserved for metal gets a higher priority, so metal does not spread across shared disks but sits where you look for it.",
+          "The same priority saves you from overflow: give the cheapest bulk item its own low-priority cell and it will not eat the expensive space."
+        ],
+        "task": "Build a pattern provider"
+      }
+    },
+    {
+      "slug": "ae2_autocraft", "x": 15, "y": -4.5, "icon": "ae2:crafting_unit", "deps": ["ae2_patterns"],
+      "item": "ae2:crafting_unit",
+      "ru": {
+        "title": "Автосборка приходит позже",
+        "subtitle": "HV, а не P5",
+        "desc": [
+          "Процессор крафта — это момент, когда сеть начинает собирать вместо вас. Он стоит датчика HV, то есть целую эпоху после того, как вы получили хранение.",
+          "Разрыв сделан намеренно. Между «вижу всё одним списком» и «система делает всё сама» лежит настоящая дистанция, и её проходят инфраструктурой, а не одним рецептом.",
+          "Ускоритель, который позволяет вести несколько сборок сразу, стоит ещё эпоху — EV. Без него автосборка работает, просто по одному заданию за раз."
+        ],
+        "task": "Собрать процессор крафта"
+      },
+      "en": {
+        "title": "Autocrafting comes later",
+        "subtitle": "HV, not P5",
+        "desc": [
+          "The crafting unit is the moment the network starts assembling instead of you. It costs an HV sensor — a whole epoch after you got storage.",
+          "The gap is deliberate. Between seeing everything in one list and having the system do everything lies real distance, and you cross it with infrastructure, not with a single recipe.",
+          "The accelerator that lets several jobs run at once costs another epoch — EV. Without it autocrafting still works, just one job at a time."
+        ],
+        "task": "Build a crafting unit"
+      }
+    },
+    {
+      "slug": "ae2_recovery", "x": 18, "y": -4.5, "icon": "ae2:drive", "deps": ["ae2_autocraft"],
+      "ru": {
+        "title": "Когда сеть встала",
+        "subtitle": "Отказоустойчивость по шагам",
+        "desc": [
+          "Сеть ME гаснет по трём причинам, и все три чинятся разбором, а не переустановкой. Первое — кончилась энергия: смотрите приёмник и буфер, а не кабели.",
+          "Второе — кончились каналы: считайте устройства на узком отрезке. Третье — заклинило сборку: задание ждёт предмет, которого нет ни в сети, ни в шаблоне, и стоит вечно.",
+          "Отсюда правило проектирования: держите физический буфер у критичных машин. Если ME встала, линия должна доработать смену на своём запасе, а не остановиться целиком."
+        ],
+        "task": "Знать три причины отказа сети"
+      },
+      "en": {
+        "title": "When the network stalls",
+        "subtitle": "Fault tolerance step by step",
+        "desc": [
+          "An ME network goes down for three reasons, and all three are fixed by diagnosis, not reinstallation. First — it ran out of power: look at the acceptor and the buffer, not at the cables.",
+          "Second — it ran out of channels: count the devices on the narrow segment. Third — a craft is jammed: a job is waiting for an item that exists neither in the network nor in the pattern, and it waits forever.",
+          "Hence a design rule: keep a physical buffer at critical machines. If ME stalls, the line should finish its shift on its own stock instead of stopping outright."
+        ],
+        "task": "Know the three causes of a network outage"
+      }
+    },
+    {
+      "slug": "freight_rail", "x": 6, "y": 0, "icon": "create:track", "deps": ["intro"],
+      "item": "create:track",
+      "ru": {
+        "title": "Грузовая магистраль",
+        "subtitle": "Create и Steam «n» Rails",
+        "desc": [
+          "Груз между районами возят поезда. Путь, сигнал, станция и расписание — это отдельная инженерная задача: где разъезд, где буфер, что делать, когда два состава просят один участок.",
+          "Магистраль строится один раз и служит долго, поэтому рельсы стоит производить серией, а не выкладывать поштучно.",
+          "Вторая рельсовая система из Little Logistics снята намеренно: три параллельные железные дороги — это три перевода, три набора рецептов и одна и та же задача."
+        ],
+        "task": "Изготовить путь Create"
+      },
+      "en": {
+        "title": "The freight mainline",
+        "subtitle": "Create and Steam 'n' Rails",
+        "desc": [
+          "Freight between districts moves by train. Track, signal, station and schedule are a separate engineering problem: where the passing loop goes, where the buffer sits, what happens when two trains ask for one section.",
+          "A mainline is built once and serves for a long time, so rails are worth producing in series rather than laying one at a time.",
+          "The second railway from Little Logistics was removed on purpose: three parallel railways mean three translations, three recipe sets and one and the same job."
+        ],
+        "task": "Craft a Create track"
+      }
+    },
+    {
+      "slug": "water_route", "x": 9, "y": 1.5, "icon": "littlelogistics:barge", "deps": ["freight_rail"],
+      "item": "littlelogistics:barge",
+      "ru": {
+        "title": "Водное плечо",
+        "subtitle": "Буксир, баржа, причал",
+        "desc": [
+          "Река и побережье — готовая магистраль, которую не надо строить. Буксир тянет состав барж по направляющим, причал грузит и разгружает.",
+          "Вода выигрывает там, где груз тяжёлый, дешёвый и не срочный: щебень, руда, наливное. Проигрывает в скорости и в том, что маршрут задан географией.",
+          "Поэтому вода не конкурирует с рельсом, а дополняет его: порт — это узел, где одно плечо переходит в другое."
+        ],
+        "task": "Изготовить баржу"
+      },
+      "en": {
+        "title": "The water leg",
+        "subtitle": "Tug, barge, dock",
+        "desc": [
+          "A river and a coastline are a ready-made trunk route you do not have to build. A tug pulls a string of barges along guide rails; the dock loads and unloads.",
+          "Water wins where cargo is heavy, cheap and not urgent: gravel, ore, liquids. It loses on speed and on the fact that geography chooses the route.",
+          "So water does not compete with rail, it completes it: a port is the node where one leg becomes another."
+        ],
+        "task": "Craft a barge"
+      }
+    },
+    {
+      "slug": "transit_line", "x": 6, "y": 3, "icon": "mtr:rail", "deps": ["intro"],
+      "item": "mtr:rail",
+      "ru": {
+        "title": "Пассажирская линия",
+        "subtitle": "MTR возит людей, а не ящики",
+        "desc": [
+          "Город без пассажирского транспорта — это склад с жильцами. Линия MTR связывает жилой район, промзону и вокзал расписанием, а не случайной пробежкой.",
+          "Вход в систему стоит стали и электроники MV. Штатно узел пути собирался из железа и брёвен — то есть метро можно было построить в первый день, до города, до электричества и до самого понятия района.",
+          "Пассажирская сеть ничего не возит из груза. Это не ограничение мода, а разделение ролей: смешать людей и ящики значит потерять смысл обоих."
+        ],
+        "task": "Изготовить узел пути MTR"
+      },
+      "en": {
+        "title": "The transit line",
+        "subtitle": "MTR carries people, not crates",
+        "desc": [
+          "A city without passenger transport is a warehouse with residents. An MTR line ties the housing district, the industrial zone and the terminal together with a timetable instead of a random sprint.",
+          "Entry to the system costs steel and MV electronics. By default the rail node was made of iron and logs — meaning a metro could be built on day one, before the city, before electricity and before the very idea of a district.",
+          "The passenger network carries no freight. That is not a mod limitation but a division of roles: mixing people and crates loses the point of both."
+        ],
+        "task": "Craft an MTR rail node"
+      }
+    },
+    {
+      "slug": "last_mile", "x": 9, "y": 4.5, "icon": "create:brown_toolbox", "deps": ["transit_line"],
+      "ru": {
+        "title": "Последняя миля",
+        "subtitle": "От станции до двери",
+        "desc": [
+          "Между станцией и конкретной машиной всегда остаётся отрезок, который поезд не проедет. Это последняя миля, и она съедает больше времени, чем кажется.",
+          "Здесь работают воронки, ленты, трубы, машины и полевой комплект — ящик инструментов, который уезжает вместе с бригадой на стройку линии.",
+          "Правило то же, что и наверху: не тащите магистральное решение в район. Поезд ради двадцати блоков — это дорого и медленно."
+        ],
+        "task": "Понять, где заканчивается магистраль"
+      },
+      "en": {
+        "title": "The last mile",
+        "subtitle": "From the station to the door",
+        "desc": [
+          "Between the station and a particular machine there is always a stretch a train will not cover. That is the last mile, and it eats more time than it looks like.",
+          "Funnels, belts, pipes, vehicles and the field kit work here — the toolbox that travels with the crew to the line under construction.",
+          "The rule is the same as above: do not drag a trunk-route solution into a district. A train for twenty blocks is expensive and slow."
+        ],
+        "task": "Understand where the mainline ends"
+      }
+    },
+    {
+      "slug": "reserve", "x": 12, "y": 1.5, "icon": "create:item_vault", "deps": ["water_route", "last_mile"],
+      "item": "create:item_vault",
+      "ru": {
+        "title": "Резерв и возвратная тара",
+        "subtitle": "Склад, который переживает перебой",
+        "desc": [
+          "Склад пятой эпохи держит не «всё подряд», а запас на случай, когда линия встанет: смена работы без подвоза. Это и есть резерв длительного хранения.",
+          "Пищевая часть возвращается в цикл: ящик овощей раскрывается ровно в девять единиц, столько же, сколько в него вошло. Тара, которую нельзя вернуть, в городской контракт не принимается.",
+          "Проверьте себя простым вопросом: если магистраль встанет на сутки, город доживёт или остановится вместе с ней?"
+        ],
+        "task": "Собрать хранилище Create"
+      },
+      "en": {
+        "title": "Reserve and returnable packaging",
+        "subtitle": "A store that survives an outage",
+        "desc": [
+          "A fifth-epoch warehouse does not hold everything — it holds enough for the moment the line stops: one shift of work without deliveries. That is the long-term reserve.",
+          "The food part returns to the cycle: a vegetable crate opens back into exactly nine units, the same number that went in. Packaging you cannot return is not accepted into a city contract.",
+          "Check yourself with a simple question: if the mainline stops for a day, does the city survive or stop with it?"
+        ],
+        "task": "Build a Create item vault"
+      }
+    },
+    {
+      "slug": "contracts", "x": 15, "y": 1.5, "icon": "minecraft:writable_book", "deps": ["reserve"],
+      "ru": {
+        "title": "Обязательства",
+        "subtitle": "Поток и замкнутость вместо разовой сдачи",
+        "desc": [
+          "Региональные контракты отличаются от муниципальных одним: они проверяют не партию, а способность держать поток. Сдать один раз недостаточно.",
+          "Обязательство по потоку требует заявленной производительности и резерва на случай остановки. Ручное пополнение не засчитывается — поток держит производство, а не игрок.",
+          "Обязательство по замкнутости требует того же потока без свободного сброса: тара возвращается, побочные продукты принимаются, загрязнение района не растёт. Команда «/if_regional_contracts» показывает состав и награду заранее."
+        ],
+        "task": "Разобрать два новых класса контрактов"
+      },
+      "en": {
+        "title": "Pledges",
+        "subtitle": "Flow and closure instead of a one-off delivery",
+        "desc": [
+          "Regional contracts differ from municipal ones in one way: they test not a batch but the ability to hold a flow. Delivering once is not enough.",
+          "The throughput pledge asks for a declared rate and a reserve in case of a stop. Manual topping-up does not count — production holds the flow, not the player.",
+          "The closure pledge asks for the same flow with nothing dumped: packaging comes back, by-products are accepted, district pollution does not grow. The command /if_regional_contracts shows the terms and the reward in advance."
+        ],
+        "task": "Work through the two new contract classes"
+      }
+    },
+    {
+      "slug": "balance", "x": 18, "y": 1.5, "icon": "create:railway_casing", "deps": ["contracts", "ae2_recovery"],
+      "ru": {
+        "title": "Поезда против ME",
+        "subtitle": "Почему нужно и то и другое",
+        "desc": [
+          "Честный вопрос эпохи: если сеть ME умеет доставать что угодно откуда угодно, зачем вообще поезда? Ответ в границах, а не в предпочтениях.",
+          "ME убирает рутину поиска и учёта. Она не создаёт материал, не пересекает расстояние бесплатно и гаснет вместе с энергией. Поезд возит массу дёшево, работает без сети и виден со стороны.",
+          "Поэтому в этой сборке ME открывается только хранением, автосборка отложена на эпоху, а контракты требуют физического резерва. Цель — чтобы к финалу у вас были и терминал, и магистраль, а не терминал вместо магистрали."
+        ],
+        "task": "Сформулировать, где заканчивается ME и начинается перевозка"
+      },
+      "en": {
+        "title": "Trains versus ME",
+        "subtitle": "Why you need both",
+        "desc": [
+          "The honest question of the epoch: if an ME network can pull anything from anywhere, why keep trains at all? The answer is in the limits, not in preference.",
+          "ME removes the drudgery of searching and counting. It does not create material, does not cross distance for free, and goes dark together with the power. A train moves mass cheaply, works without a network and is visible from outside.",
+          "That is why ME here opens with storage only, autocrafting is held back an epoch, and contracts demand a physical reserve. The goal is that by the end you have both a terminal and a mainline — not a terminal instead of one."
+        ],
+        "task": "State where ME ends and haulage begins"
+      }
+    }
+  ]
+}

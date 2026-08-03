@@ -1,0 +1,222 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "45_diplomacy_security"
+	group: "1000000000000005"
+	icon: "minecraft:shield"
+	id: "2045000000000001"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{industrial_frontier.quest.diplomacy.intro.desc.1}"
+				"{industrial_frontier.quest.diplomacy.intro.desc.2}"
+				"{industrial_frontier.quest.diplomacy.intro.desc.3}"
+			]
+			icon: "minecraft:shield"
+			id: "3045000000000001"
+			rewards: [{
+				id: "5045000000000001"
+				type: "xp"
+				xp: 25
+			}]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "{industrial_frontier.quest.diplomacy.intro.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000001"
+				title: "{industrial_frontier.quest.diplomacy.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.intro.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3045000000000001"]
+			description: [
+				"{industrial_frontier.quest.diplomacy.epoch.desc.1}"
+				"{industrial_frontier.quest.diplomacy.epoch.desc.2}"
+				"{industrial_frontier.quest.diplomacy.epoch.desc.3}"
+			]
+			icon: "minecraft:clock"
+			id: "3045000000000002"
+			rewards: [{
+				id: "5045000000000002"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "{industrial_frontier.quest.diplomacy.epoch.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000002"
+				title: "{industrial_frontier.quest.diplomacy.epoch.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.epoch.title}"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3045000000000002"]
+			description: [
+				"{industrial_frontier.quest.diplomacy.reputation.desc.1}"
+				"{industrial_frontier.quest.diplomacy.reputation.desc.2}"
+				"{industrial_frontier.quest.diplomacy.reputation.desc.3}"
+			]
+			icon: "minecraft:paper"
+			id: "3045000000000003"
+			rewards: [{
+				id: "5045000000000003"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "{industrial_frontier.quest.diplomacy.reputation.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000003"
+				title: "{industrial_frontier.quest.diplomacy.reputation.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.reputation.title}"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3045000000000002"]
+			description: [
+				"{industrial_frontier.quest.diplomacy.affiliation.desc.1}"
+				"{industrial_frontier.quest.diplomacy.affiliation.desc.2}"
+				"{industrial_frontier.quest.diplomacy.affiliation.desc.3}"
+			]
+			icon: "minecraft:player_head"
+			id: "3045000000000004"
+			rewards: [{
+				id: "5045000000000004"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "{industrial_frontier.quest.diplomacy.affiliation.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000004"
+				title: "{industrial_frontier.quest.diplomacy.affiliation.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.affiliation.title}"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3045000000000003"
+				"3045000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.diplomacy.operation.desc.1}"
+				"{industrial_frontier.quest.diplomacy.operation.desc.2}"
+				"{industrial_frontier.quest.diplomacy.operation.desc.3}"
+			]
+			icon: "minecraft:spyglass"
+			id: "3045000000000005"
+			rewards: [{
+				id: "5045000000000005"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "{industrial_frontier.quest.diplomacy.operation.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000005"
+				title: "{industrial_frontier.quest.diplomacy.operation.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.operation.title}"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3045000000000005"]
+			description: [
+				"{industrial_frontier.quest.diplomacy.treaty.desc.1}"
+				"{industrial_frontier.quest.diplomacy.treaty.desc.2}"
+				"{industrial_frontier.quest.diplomacy.treaty.desc.3}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3045000000000006"
+			rewards: [{
+				id: "5045000000000006"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "{industrial_frontier.quest.diplomacy.treaty.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000006"
+				title: "{industrial_frontier.quest.diplomacy.treaty.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.treaty.title}"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3045000000000005"]
+			description: [
+				"{industrial_frontier.quest.diplomacy.loot.desc.1}"
+				"{industrial_frontier.quest.diplomacy.loot.desc.2}"
+				"{industrial_frontier.quest.diplomacy.loot.desc.3}"
+			]
+			icon: "minecraft:chest"
+			id: "3045000000000007"
+			rewards: [{
+				id: "5045000000000007"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "{industrial_frontier.quest.diplomacy.loot.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000007"
+				title: "{industrial_frontier.quest.diplomacy.loot.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.loot.title}"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3045000000000006"
+				"3045000000000007"
+			]
+			description: [
+				"{industrial_frontier.quest.diplomacy.recovery.desc.1}"
+				"{industrial_frontier.quest.diplomacy.recovery.desc.2}"
+				"{industrial_frontier.quest.diplomacy.recovery.desc.3}"
+			]
+			icon: "minecraft:golden_apple"
+			id: "3045000000000008"
+			rewards: [{
+				id: "5045000000000008"
+				type: "xp"
+				xp: 25
+			}]
+			shape: "diamond"
+			subtitle: "{industrial_frontier.quest.diplomacy.recovery.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4045000000000008"
+				title: "{industrial_frontier.quest.diplomacy.recovery.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.diplomacy.recovery.title}"
+			x: 15.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.diplomacy.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.diplomacy.title}"
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/m2_common.schema.json",
+  "title": "Recast M2 common definitions",
+  "$defs": {
+    "industrialFrontierId": {
+      "type": "string",
+      "pattern": "^industrial_frontier:[a-z0-9_./-]+$"
+    },
+    "minecraftId": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "epoch": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9
+    },
+    "nullableEpoch": {
+      "anyOf": [
+        { "$ref": "#/$defs/epoch" },
+        { "type": "null" }
+      ]
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gate_id",
+        "status",
+        "requirement_ru",
+        "owner",
+        "blocks_runtime_claim",
+        "evidence_refs"
+      ],
+      "properties": {
+        "gate_id": { "$ref": "#/$defs/industrialFrontierId" },
+        "status": {
+          "enum": [
+            "CLOSED_STATIC",
+            "OPEN_STATIC_AUDIT",
+            "OPEN_IMPLEMENTATION",
+            "OPEN_USER_TEST",
+            "BLOCKED_NOT_INSTALLED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "requirement_ru": { "type": "string", "minLength": 1 },
+        "owner": { "enum": ["CODEX", "PACK_OWNER", "SHARED", "EXTERNAL_RELEASE"] },
+        "blocks_runtime_claim": { "type": "boolean" },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/industrialFrontierId" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "sourceEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "type",
+        "path",
+        "locator",
+        "observed",
+        "verified_on",
+        "static_only"
+      ],
+      "properties": {
+        "evidence_id": { "$ref": "#/$defs/industrialFrontierId" },
+        "type": {
+          "enum": [
+            "INSTALLED_JAR",
+            "JAR_INTERNAL_PATH",
+            "CONFIG_VALUE",
+            "VENDOR_DATA",
+            "VENDOR_LANGUAGE_KEY",
+            "DESIGN_DOCUMENT",
+            "AUTHOR_DECISION"
+          ]
+        },
+        "path": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 },
+        "observed": { "type": "string", "minLength": 1 },
+        "verified_on": { "type": "string", "format": "date" },
+        "static_only": { "const": true }
+      }
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/industrialFrontierId" },
+      "uniqueItems": true
+    },
+    "gateRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/industrialFrontierId" },
+      "uniqueItems": true
+    }
+  }
+}

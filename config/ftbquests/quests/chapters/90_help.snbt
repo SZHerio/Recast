@@ -1,0 +1,156 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "90_help"
+	group: "1000000000000002"
+	icon: "minecraft:recovery_compass"
+	id: "2090000000000001"
+	order_index: 90
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{industrial_frontier.quest.help.index.desc.1}"
+				"{industrial_frontier.quest.help.index.desc.2}"
+			]
+			icon: "minecraft:recovery_compass"
+			id: "3090000000000001"
+			optional: true
+			shape: "gear"
+			size: 2.0d
+			tags: ["help"]
+			tasks: [{
+				id: "4090000000000001"
+				title: "{industrial_frontier.quest.help.read_task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.help.index.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3090000000000001"]
+			description: [
+				"{industrial_frontier.quest.help.jei.desc.1}"
+				"{industrial_frontier.quest.help.jei.desc.2}"
+				"{industrial_frontier.quest.help.jei.desc.3}"
+			]
+			icon: "minecraft:knowledge_book"
+			id: "3090000000000002"
+			optional: true
+			tags: ["help"]
+			tasks: [{
+				id: "4090000000000002"
+				title: "{industrial_frontier.quest.help.read_task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.help.jei.title}"
+			x: -3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3090000000000001"]
+			description: [
+				"{industrial_frontier.quest.help.not_counted.desc.1}"
+				"{industrial_frontier.quest.help.not_counted.desc.2}"
+				"{industrial_frontier.quest.help.not_counted.desc.3}"
+			]
+			icon: "minecraft:clock"
+			id: "3090000000000003"
+			optional: true
+			tags: ["help"]
+			tasks: [{
+				id: "4090000000000003"
+				title: "{industrial_frontier.quest.help.read_task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.help.not_counted.title}"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3090000000000001"]
+			description: [
+				"{industrial_frontier.quest.help.team.desc.1}"
+				"{industrial_frontier.quest.help.team.desc.2}"
+			]
+			icon: "minecraft:player_head"
+			id: "3090000000000004"
+			optional: true
+			tags: ["help"]
+			tasks: [{
+				id: "4090000000000004"
+				title: "{industrial_frontier.quest.help.read_task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.help.team.title}"
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3090000000000001"]
+			description: [
+				"{industrial_frontier.quest.help.latest_log.desc.1}"
+				"{industrial_frontier.quest.help.latest_log.desc.2}"
+				"{industrial_frontier.quest.help.latest_log.desc.3}"
+			]
+			icon: "minecraft:paper"
+			id: "3090000000000005"
+			optional: true
+			tags: ["help"]
+			tasks: [{
+				id: "4090000000000005"
+				title: "{industrial_frontier.quest.help.read_task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.help.latest_log.title}"
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3090000000000005"]
+			description: [
+				"{industrial_frontier.quest.help.report.desc.1}"
+				"{industrial_frontier.quest.help.report.desc.2}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3090000000000006"
+			optional: true
+			tags: ["help"]
+			tasks: [{
+				id: "4090000000000006"
+				title: "{industrial_frontier.quest.help.read_task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.help.report.title}"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"3090000000000003"
+				"3090000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.help.recovery.desc.1}"
+				"{industrial_frontier.quest.help.recovery.desc.2}"
+				"{industrial_frontier.quest.help.recovery.desc.3}"
+			]
+			icon: "minecraft:barrier"
+			id: "3090000000000007"
+			optional: true
+			shape: "diamond"
+			tags: ["help"]
+			tasks: [{
+				id: "4090000000000007"
+				title: "{industrial_frontier.quest.help.read_task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.help.recovery.title}"
+			x: 3.0d
+			y: 3.0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.help.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.help.title}"
+}

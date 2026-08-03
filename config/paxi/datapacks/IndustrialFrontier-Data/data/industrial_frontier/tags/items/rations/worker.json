@@ -1,0 +1,22 @@
+{
+  "__comment": "Рабочий рацион P2–P4: сытные блюда котелка, поддерживают долгую смену.",
+  "replace": false,
+  "values": [
+    "farmersdelight:beef_stew",
+    "farmersdelight:chicken_soup",
+    "farmersdelight:vegetable_soup",
+    "farmersdelight:fish_stew",
+    "farmersdelight:noodle_soup",
+    "farmersdelight:pumpkin_soup",
+    "farmersdelight:onion_soup",
+    "farmersdelight:baked_cod_stew",
+    "farmersdelight:mushroom_rice",
+    "farmersdelight:fried_rice",
+    "farmersdelight:vegetable_noodles",
+    "farmersdelight:pasta_with_meatballs",
+    "farmersdelight:pasta_with_mutton_chop",
+    "farmersdelight:ratatouille",
+    "farmersdelight:shepherds_pie",
+    "farmersdelight:dumplings"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/stable_ids.schema.json",
+  "title": "Recast stable ID registry",
+  "type": "object",
+  "required": ["schema_version", "namespace", "ids", "resource_ids"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "namespace": { "const": "industrial_frontier" },
+    "ids": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^[0-9A-F]{16}$" }
+    },
+    "resource_ids": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^industrial_frontier:[a-z0-9_./-]+$" }
+    }
+  }
+}

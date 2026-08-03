@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/m2_energy_networks.schema.json",
+  "title": "Recast M2 energy networks and converters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "namespace",
+    "registry_id",
+    "status",
+    "scope_ru",
+    "networks",
+    "converters",
+    "physical_bridges",
+    "forbidden_links",
+    "gates",
+    "source_evidence"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "namespace": { "const": "industrial_frontier" },
+    "registry_id": { "const": "industrial_frontier:m2/energy_networks" },
+    "status": { "const": "STATIC_COMPLETE_USER_GATE_PENDING" },
+    "scope_ru": { "type": "string", "minLength": 1 },
+    "networks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "network_id",
+          "status",
+          "unit_symbol",
+          "owner_domain_ref",
+          "installed_mod_ids",
+          "boundary_ru",
+          "endpoint_examples",
+          "evidence_refs",
+          "gate_refs"
+        ],
+        "properties": {
+          "network_id": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy/[a-z0-9_/-]+$"
+          },
+          "status": { "enum": ["ACTIVE_INSTALLED", "ACTIVE_PLATFORM_API", "ACTIVE_CONTRACTUAL_CARRIER", "GATED_NOT_INSTALLED"] },
+          "unit_symbol": { "type": ["string", "null"], "minLength": 1 },
+          "owner_domain_ref": { "$ref": "m2_common.schema.json#/$defs/industrialFrontierId" },
+          "installed_mod_ids": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-z0-9_.-]+$" },
+            "uniqueItems": true
+          },
+          "boundary_ru": { "type": "string", "minLength": 1 },
+          "endpoint_examples": {
+            "type": "array",
+            "items": { "$ref": "m2_common.schema.json#/$defs/minecraftId" },
+            "uniqueItems": true
+          },
+          "evidence_refs": { "$ref": "m2_common.schema.json#/$defs/evidenceRefs" },
+          "gate_refs": { "$ref": "m2_common.schema.json#/$defs/gateRefs" }
+        }
+      }
+    },
+    "converters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "converter_id",
+          "status",
+          "source_network_ref",
+          "target_network_ref",
+          "direction",
+          "input_units",
+          "output_units",
+          "max_rate",
+          "reverse_path_allowed",
+          "implementation_refs",
+          "cycle_audit",
+          "evidence_refs",
+          "gate_refs"
+        ],
+        "properties": {
+          "converter_id": {
+            "type": "string",
+            "pattern": "^industrial_frontier:converter/[a-z0-9_/-]+$"
+          },
+          "status": { "enum": ["ACTIVE_CONFIGURED", "DISABLED_BY_CONFIG", "GATED_NOT_INSTALLED"] },
+          "source_network_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy/[a-z0-9_/-]+$"
+          },
+          "target_network_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy/[a-z0-9_/-]+$"
+          },
+          "direction": { "const": "ONE_WAY" },
+          "input_units": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+          "output_units": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+          "max_rate": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+          "reverse_path_allowed": { "const": false },
+          "implementation_refs": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          },
+          "cycle_audit": { "enum": ["STATIC_CLOSED", "USER_TEST_REQUIRED", "BLOCKED_NOT_INSTALLED"] },
+          "evidence_refs": { "$ref": "m2_common.schema.json#/$defs/evidenceRefs" },
+          "gate_refs": { "$ref": "m2_common.schema.json#/$defs/gateRefs" }
+        }
+      }
+    },
+    "physical_bridges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "bridge_id",
+          "status",
+          "source_network_ref",
+          "target_network_ref",
+          "direction",
+          "physical_basis_ru",
+          "resource_input_refs",
+          "resource_output_refs",
+          "implementation_refs",
+          "reverse_path_allowed",
+          "evidence_refs",
+          "gate_refs"
+        ],
+        "properties": {
+          "bridge_id": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy_bridge/[a-z0-9_/-]+$"
+          },
+          "status": { "enum": ["ACTIVE_CONTRACTUAL", "ACTIVE_VENDOR_USER_GATE"] },
+          "source_network_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy/[a-z0-9_/-]+$"
+          },
+          "target_network_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy/[a-z0-9_/-]+$"
+          },
+          "direction": { "const": "ONE_WAY" },
+          "physical_basis_ru": { "type": "string", "minLength": 1 },
+          "resource_input_refs": {
+            "type": "array",
+            "items": { "$ref": "m2_common.schema.json#/$defs/industrialFrontierId" },
+            "uniqueItems": true
+          },
+          "resource_output_refs": {
+            "type": "array",
+            "items": { "$ref": "m2_common.schema.json#/$defs/industrialFrontierId" },
+            "uniqueItems": true
+          },
+          "implementation_refs": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          },
+          "reverse_path_allowed": { "const": false },
+          "evidence_refs": { "$ref": "m2_common.schema.json#/$defs/evidenceRefs" },
+          "gate_refs": { "$ref": "m2_common.schema.json#/$defs/gateRefs" }
+        }
+      }
+    },
+    "forbidden_links": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["link_id", "source_network_ref", "target_network_ref", "reason_ru", "status"],
+        "properties": {
+          "link_id": { "$ref": "m2_common.schema.json#/$defs/industrialFrontierId" },
+          "source_network_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy/[a-z0-9_/-]+$"
+          },
+          "target_network_ref": {
+            "type": "string",
+            "pattern": "^industrial_frontier:energy/[a-z0-9_/-]+$"
+          },
+          "reason_ru": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["FORBIDDEN", "GATED_NOT_INSTALLED"] }
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "m2_common.schema.json#/$defs/gate" }
+    },
+    "source_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "m2_common.schema.json#/$defs/sourceEvidence" }
+    }
+  }
+}

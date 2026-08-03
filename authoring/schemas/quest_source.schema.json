@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/quest_source.schema.json",
+  "title": "Quest chapter design trace",
+  "type": "object",
+  "required": ["schema_version", "chapter_alias", "engine_id", "compiled_path", "quests"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "chapter_alias": { "type": "string", "pattern": "^if\\.chapter\\." },
+    "engine_id": { "type": "string", "pattern": "^[0-9A-F]{16}$" },
+    "compiled_path": { "type": "string" },
+    "quests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["alias", "engine_id", "purpose", "teaching_sections"],
+        "properties": {
+          "alias": { "type": "string", "pattern": "^if\\.quest\\." },
+          "engine_id": { "type": "string", "pattern": "^[0-9A-F]{16}$" },
+          "purpose": { "type": "string", "minLength": 1 },
+          "teaching_sections": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "grind_class": { "enum": ["NONE", "GREEN", "EXPLAIN", "REWORK"] }
+        }
+      }
+    }
+  }
+}

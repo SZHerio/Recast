@@ -1,0 +1,16 @@
+{
+  "__comment": "Палитра P3: промышленная стандартизация. Район выглядит как производство, а не как жильё.",
+  "replace": false,
+  "values": [
+    "createdeco:industrial_iron_sheet_metal",
+    "createdeco:brass_sheet_metal",
+    "createdeco:brass_catwalk",
+    "minecraft:polished_andesite",
+    "minecraft:smooth_stone_slab",
+    "minecraft:iron_trapdoor",
+    "minecraft:chain",
+    "create:railway_casing",
+    "create:industrial_iron_block",
+    "minecraft:tinted_glass"
+  ]
+}

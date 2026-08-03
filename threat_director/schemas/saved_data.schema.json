@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/threat/saved_data.schema.json",
+  "title": "Threat Director SavedData",
+  "type": "object",
+  "required": ["schema_version", "world_id", "build_id", "definitions_hash", "teams", "players"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "world_id": { "type": "string", "format": "uuid" },
+    "build_id": { "type": "string", "pattern": "^IF-M[0-9]+-[0-9]{4}$" },
+    "definitions_hash": { "type": "string", "pattern": "^[A-Fa-f0-9]{64}$" },
+    "teams": {
+      "type": "object",
+      "propertyNames": { "format": "uuid" },
+      "additionalProperties": { "$ref": "epoch.schema.json#/$defs/teamState" }
+    },
+    "players": {
+      "type": "object",
+      "propertyNames": { "format": "uuid" },
+      "additionalProperties": {
+        "type": "object",
+        "required": ["team_uuid", "epoch_floor_guard", "personal_facts"],
+        "properties": {
+          "team_uuid": { "type": "string", "format": "uuid" },
+          "epoch_floor_guard": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "personal_facts": { "type": "object", "additionalProperties": { "type": ["boolean", "integer", "string"] } }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

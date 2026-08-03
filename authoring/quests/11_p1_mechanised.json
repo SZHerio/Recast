@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p1",
+  "engine_id": "2011000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p1.intro",
+      "engine_id": "3011000000000001",
+      "purpose": "Rotation is a resource",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p1.andesite",
+      "engine_id": "3011000000000002",
+      "purpose": "Your first genuinely cross-mod material",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p1.rotation",
+      "engine_id": "3011000000000003",
+      "purpose": "How to read a mechanical line",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p1.power",
+      "engine_id": "3011000000000004",
+      "purpose": "Water is more reliable than it looks",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p1.stress",
+      "engine_id": "3011000000000005",
+      "purpose": "Read the instruments, do not guess",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p1.mill",
+      "engine_id": "3011000000000006",
+      "purpose": "Milling without electricity",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p1.press",
+      "engine_id": "3011000000000007",
+      "purpose": "One operation, two domains",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p1.line",
+      "engine_id": "3011000000000008",
+      "purpose": "Buffer, bottleneck, backup",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p1.exit",
+      "engine_id": "3011000000000009",
+      "purpose": "Mechanics alone is no longer enough",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

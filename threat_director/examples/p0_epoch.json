@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "team_uuid": "00000000-0000-0000-0000-000000000001",
+  "tech_epoch": 0,
+  "label": "P0 — Выживание и разведка",
+  "allowed_base_tiers": [0],
+  "allowed_loadout_classes": ["improvised_melee", "simple_bow", "tool_weapon"],
+  "forbidden_loadout_classes": ["automatic_firearm", "guided_weapon", "energy_weapon"],
+  "note": "Illustrative definition trace only; not loaded by the game at M1."
+}

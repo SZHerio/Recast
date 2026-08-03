@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "type": "sandbox_ping",
+  "definition_id": "industrial_frontier:sandbox/easy_npc_engineer",
+  "nonce": "00000000-0000-0000-0000-000000000002",
+  "actor_uuid": "00000000-0000-0000-0000-000000000003",
+  "team_uuid": "00000000-0000-0000-0000-000000000001",
+  "build_id": "IF-M1-0001",
+  "payload": {
+    "expected_epoch": 0,
+    "side_effect": "NONE"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "build_id": "IF-M1-0001",
+  "source_jar": "appliedenergistics2-forge-15.4.10.jar",
+  "entries": [
+    {
+      "id": "ae2.channels.x3_dense_capacity",
+      "page": "ae2-mechanics/channels.md",
+      "source_contains": "24 on normal cable, 92 on dense cable",
+      "ru_contains": "24 канала в обычном кабеле, 96 в плотном",
+      "numeric_source": "92",
+      "numeric_ru": "96",
+      "reason": "Режим x3 утраивает базовые 32 канала плотного кабеля: 32 × 3 = 96; значение 92 в исходной Markdown-странице является арифметической опечаткой."
+    },
+    {
+      "id": "ae2.processor_automation.inscriber_count",
+      "page": "example-setups/processor-automation.md",
+      "source_contains": "Quartz Fiber powers all 3 inscribers",
+      "ru_contains": "Кварцевое волокно питает все пять вырезателей",
+      "numeric_source": null,
+      "numeric_ru": null,
+      "reason": "Импортируемая сцена processor_automation.snbt содержит пять блоков ae2:inscriber: один для кремния, три для печатных схем и один для финальной сборки процессоров."
+    }
+  ]
+}

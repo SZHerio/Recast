@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/threat/contract.schema.json",
+  "title": "Contract definition",
+  "type": "object",
+  "required": ["schema_version", "id", "issuer_faction", "min_epoch", "max_epoch", "requirements", "deadline_policy", "outcomes"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "id": { "type": "string", "pattern": "^industrial_frontier:contract/[a-z0-9_./-]+$" },
+    "issuer_faction": { "type": "string" },
+    "min_epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+    "max_epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+    "requirements": { "type": "array", "items": { "type": "object" } },
+    "deadline_policy": { "enum": ["NONE", "ACTIVE_PLAY_TIME", "OPERATION_WINDOW"] },
+    "outcomes": { "type": "object", "required": ["success", "failure", "abandon"] }
+  }
+}

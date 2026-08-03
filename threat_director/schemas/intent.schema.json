@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/threat/intent.schema.json",
+  "title": "Validated Threat Director intent",
+  "type": "object",
+  "required": ["schema_version", "type", "definition_id", "nonce", "actor_uuid", "team_uuid", "build_id"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "type": { "enum": ["sandbox_ping", "accept_contract", "decline_contract", "deliver_contract_resource", "report_operation_outcome", "dialogue_choice", "request_treaty", "advance_epoch", "admin_repair"] },
+    "definition_id": { "type": "string", "pattern": "^industrial_frontier:[a-z0-9_./-]+$" },
+    "nonce": { "type": "string", "format": "uuid" },
+    "actor_uuid": { "type": "string", "format": "uuid" },
+    "team_uuid": { "type": "string", "format": "uuid" },
+    "build_id": { "type": "string", "pattern": "^IF-M[0-9]+-[0-9]{4}$" },
+    "payload": { "type": "object", "maxProperties": 16 }
+  },
+  "additionalProperties": false
+}

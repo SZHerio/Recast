@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "reason": "Translated headings produce Russian automatic slugs. English cross-page fragments remain stable through explicit GuideME <a name=... /> anchors.",
+  "pages": [
+    {
+      "path": "ae2-mechanics/channels.md",
+      "anchors": ["channel-routing"]
+    },
+    {
+      "path": "ae2-mechanics/import-export-storage.md",
+      "anchors": ["storage-priority"]
+    },
+    {
+      "path": "items-blocks-machines/cables.md",
+      "anchors": ["dense-cable", "smart-cable"]
+    },
+    {
+      "path": "items-blocks-machines/crafting_cpu_multiblock.md",
+      "anchors": ["crafting-storage"]
+    },
+    {
+      "path": "items-blocks-machines/interface.md",
+      "anchors": ["special-interactions"]
+    }
+  ]
+}

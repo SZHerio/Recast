@@ -1,0 +1,282 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "71_academy_of_elements"
+	group: "1000000000000003"
+	icon: "minecraft:brewing_stand"
+	id: "2071000000000001"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{industrial_frontier.quest.elements.intro.desc.1}"
+				"{industrial_frontier.quest.elements.intro.desc.2}"
+				"{industrial_frontier.quest.elements.intro.desc.3}"
+			]
+			icon: "minecraft:brewing_stand"
+			id: "3071000000000001"
+			optional: true
+			rewards: [{
+				id: "5071000000000001"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "{industrial_frontier.quest.elements.intro.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000001"
+				title: "{industrial_frontier.quest.elements.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.intro.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3071000000000001"]
+			description: [
+				"{industrial_frontier.quest.elements.purity.desc.1}"
+				"{industrial_frontier.quest.elements.purity.desc.2}"
+				"{industrial_frontier.quest.elements.purity.desc.3}"
+			]
+			icon: "minecraft:glass_bottle"
+			id: "3071000000000002"
+			optional: true
+			rewards: [{
+				id: "5071000000000002"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.purity.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000002"
+				title: "{industrial_frontier.quest.elements.purity.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.purity.title}"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3071000000000002"]
+			description: [
+				"{industrial_frontier.quest.elements.carbon.desc.1}"
+				"{industrial_frontier.quest.elements.carbon.desc.2}"
+				"{industrial_frontier.quest.elements.carbon.desc.3}"
+			]
+			icon: "minecraft:coal"
+			id: "3071000000000003"
+			optional: true
+			rewards: [{
+				id: "5071000000000003"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.carbon.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000003"
+				title: "{industrial_frontier.quest.elements.carbon.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.carbon.title}"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3071000000000002"]
+			description: [
+				"{industrial_frontier.quest.elements.sulfur.desc.1}"
+				"{industrial_frontier.quest.elements.sulfur.desc.2}"
+				"{industrial_frontier.quest.elements.sulfur.desc.3}"
+			]
+			icon: "minecraft:gunpowder"
+			id: "3071000000000004"
+			optional: true
+			rewards: [{
+				id: "5071000000000004"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.sulfur.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000004"
+				title: "{industrial_frontier.quest.elements.sulfur.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.sulfur.title}"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3071000000000003"]
+			description: [
+				"{industrial_frontier.quest.elements.nitrogen.desc.1}"
+				"{industrial_frontier.quest.elements.nitrogen.desc.2}"
+				"{industrial_frontier.quest.elements.nitrogen.desc.3}"
+			]
+			icon: "minecraft:bone_meal"
+			id: "3071000000000005"
+			optional: true
+			rewards: [{
+				id: "5071000000000005"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.nitrogen.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000005"
+				title: "{industrial_frontier.quest.elements.nitrogen.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.nitrogen.title}"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3071000000000004"]
+			description: [
+				"{industrial_frontier.quest.elements.chlorine.desc.1}"
+				"{industrial_frontier.quest.elements.chlorine.desc.2}"
+				"{industrial_frontier.quest.elements.chlorine.desc.3}"
+			]
+			icon: "minecraft:blue_ice"
+			id: "3071000000000006"
+			optional: true
+			rewards: [{
+				id: "5071000000000006"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.chlorine.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000006"
+				title: "{industrial_frontier.quest.elements.chlorine.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.chlorine.title}"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3071000000000005"
+				"3071000000000006"
+			]
+			description: [
+				"{industrial_frontier.quest.elements.water.desc.1}"
+				"{industrial_frontier.quest.elements.water.desc.2}"
+				"{industrial_frontier.quest.elements.water.desc.3}"
+			]
+			icon: "minecraft:water_bucket"
+			id: "3071000000000007"
+			optional: true
+			rewards: [{
+				id: "5071000000000007"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.water.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000007"
+				title: "{industrial_frontier.quest.elements.water.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.water.title}"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3071000000000007"]
+			description: [
+				"{industrial_frontier.quest.elements.silicon.desc.1}"
+				"{industrial_frontier.quest.elements.silicon.desc.2}"
+				"{industrial_frontier.quest.elements.silicon.desc.3}"
+			]
+			icon: "minecraft:redstone"
+			id: "3071000000000008"
+			optional: true
+			rewards: [{
+				id: "5071000000000008"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.silicon.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000008"
+				title: "{industrial_frontier.quest.elements.silicon.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.silicon.title}"
+			x: 15.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3071000000000007"]
+			description: [
+				"{industrial_frontier.quest.elements.nuclear.desc.1}"
+				"{industrial_frontier.quest.elements.nuclear.desc.2}"
+				"{industrial_frontier.quest.elements.nuclear.desc.3}"
+			]
+			icon: "minecraft:lava_bucket"
+			id: "3071000000000009"
+			optional: true
+			rewards: [{
+				id: "5071000000000009"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "{industrial_frontier.quest.elements.nuclear.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000009"
+				title: "{industrial_frontier.quest.elements.nuclear.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.nuclear.title}"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3071000000000008"
+				"3071000000000009"
+			]
+			description: [
+				"{industrial_frontier.quest.elements.index.desc.1}"
+				"{industrial_frontier.quest.elements.index.desc.2}"
+				"{industrial_frontier.quest.elements.index.desc.3}"
+			]
+			icon: "minecraft:book"
+			id: "3071000000000010"
+			optional: true
+			rewards: [{
+				id: "5071000000000010"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "diamond"
+			subtitle: "{industrial_frontier.quest.elements.index.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4071000000000010"
+				title: "{industrial_frontier.quest.elements.index.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.elements.index.title}"
+			x: 18.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.elements.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.elements.title}"
+}

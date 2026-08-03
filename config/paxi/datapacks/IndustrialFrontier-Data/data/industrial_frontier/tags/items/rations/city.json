@@ -1,0 +1,18 @@
+{
+  "__comment": "Городской рацион P4+: блюда с мясом и выпечкой, требуют налаженной кухни.",
+  "replace": false,
+  "values": [
+    "farmersdelight:roast_chicken",
+    "farmersdelight:honey_glazed_ham",
+    "farmersdelight:roasted_mutton_chops",
+    "farmersdelight:grilled_salmon",
+    "farmersdelight:bacon_and_eggs",
+    "farmersdelight:squid_ink_pasta",
+    "farmersdelight:bacon_sandwich",
+    "farmersdelight:chicken_sandwich",
+    "farmersdelight:egg_sandwich",
+    "farmersdelight:mutton_wrap",
+    "farmersdelight:cod_roll",
+    "farmersdelight:salmon_roll"
+  ]
+}
