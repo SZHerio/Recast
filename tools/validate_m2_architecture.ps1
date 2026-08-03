@@ -2536,13 +2536,15 @@ else {
     }
 }
 
-# Future nuclear/HBM/city/space domains are architectural placeholders only.
+# Domains whose wave has not arrived are architectural placeholders only. The
+# list shrinks as milestones land: civil nuclear left it in M6, and the
+# strategic-nuclear and planetary-spaceflight domains left it in M7, when each
+# gained passports, an epoch gate, recipes and a chapter. A domain must never be
+# dropped from here without that work — the point is that "installed" and
+# "integrated" stay different words.
 if ($null -ne $domainRegistry) {
     $requiredFutureDomainIds = @(
-        'industrial_frontier:domain/civil_nuclear_industry',
-        'industrial_frontier:domain/strategic_nuclear_program',
-        'industrial_frontier:domain/living_city',
-        'industrial_frontier:domain/planetary_spaceflight'
+        'industrial_frontier:domain/living_city'
     )
     foreach ($futureDomainId in $requiredFutureDomainIds) {
         $domain = Find-ObjectById -Items (Get-PropertyValue -Object $domainRegistry -Name 'domains') -IdField 'domain_id' -Id $futureDomainId
@@ -2585,10 +2587,15 @@ if ($null -eq $energyRegistry) {
     Add-ValidationError 'Missing industrial_frontier:m2/energy_networks registry.'
 }
 else {
+    # The HBM network opened with its own wave in M7 and now names its unit and
+    # its mod. The converter did not: HE stays closed on itself, so the pack
+    # keeps exactly one direction of energy conversion — the EU to FE export.
+    # An HBM bridge would let a strategic reactor feed the city grid and quietly
+    # undo the whole energy constitution.
     $hbmNetwork = Find-ObjectById -Items (Get-PropertyValue -Object $energyRegistry -Name 'networks') -IdField 'network_id' -Id 'industrial_frontier:energy/hbm_reserved'
     $hbmConverter = Find-ObjectById -Items (Get-PropertyValue -Object $energyRegistry -Name 'converters') -IdField 'converter_id' -Id 'industrial_frontier:converter/future_hbm_to_fe'
-    if ($null -eq $hbmNetwork -or [string](Get-PropertyValue -Object $hbmNetwork -Name 'status') -ne 'GATED_NOT_INSTALLED' -or @(Get-PropertyValue -Object $hbmNetwork -Name 'installed_mod_ids').Count -ne 0) {
-        Add-ValidationError 'HBM energy network must exist only as GATED_NOT_INSTALLED with no installed mod IDs.'
+    if ($null -eq $hbmNetwork -or [string](Get-PropertyValue -Object $hbmNetwork -Name 'status') -ne 'ACTIVE_INSTALLED' -or @(Get-PropertyValue -Object $hbmNetwork -Name 'installed_mod_ids') -notcontains 'hbm_ntm_rebirth') {
+        Add-ValidationError 'HBM energy network must be ACTIVE_INSTALLED and name hbm_ntm_rebirth after the M7 wave.'
     }
     if ($null -eq $hbmConverter -or [string](Get-PropertyValue -Object $hbmConverter -Name 'status') -ne 'GATED_NOT_INSTALLED' -or @(Get-PropertyValue -Object $hbmConverter -Name 'implementation_refs').Count -ne 0) {
         Add-ValidationError 'Future HBM -> FE converter must be GATED_NOT_INSTALLED with no implementation IDs.'
@@ -2720,17 +2727,32 @@ else {
     }
 }
 
-# Future worldgen and bypass placeholders remain blocked.
+# Atomic and planetary worldgen were decided in M7 and must stay decided. The
+# rule is unchanged since M0 — GregTech owns ore generation — so the check moved
+# from "still blocked" to "named an owner and named who was disabled".
 $worldgenInfo = $documentsByRegistryId['industrial_frontier:m2/worldgen_ownership']
 $worldgenRegistry = if ($null -eq $worldgenInfo) { $null } else { $worldgenInfo.document }
 if ($null -eq $worldgenRegistry) {
     Add-ValidationError 'Missing industrial_frontier:m2/worldgen_ownership registry.'
 }
 else {
-    foreach ($futureWorldgenId in @('industrial_frontier:worldgen/future_atomic_feedstocks', 'industrial_frontier:worldgen/future_planetary_resources')) {
-        $decision = Find-ObjectById -Items (Get-PropertyValue -Object $worldgenRegistry -Name 'ownership_decisions') -IdField 'decision_id' -Id $futureWorldgenId
-        if ($null -eq $decision -or [string](Get-PropertyValue -Object $decision -Name 'status') -ne 'GATED_NOT_INSTALLED') {
-            Add-ValidationError "Future worldgen '$futureWorldgenId' must be GATED_NOT_INSTALLED."
+    foreach ($decidedWorldgen in @(
+        @{ id = 'industrial_frontier:worldgen/future_atomic_feedstocks'; status = 'DISABLED_DUPLICATE'; disabled = @('nuclearcraft', 'hbm_ntm_rebirth') },
+        @{ id = 'industrial_frontier:worldgen/future_planetary_resources'; status = 'PRESERVED_UNIQUE'; disabled = @('creatingspace') }
+    )) {
+        $decision = Find-ObjectById -Items (Get-PropertyValue -Object $worldgenRegistry -Name 'ownership_decisions') -IdField 'decision_id' -Id $decidedWorldgen.id
+        if ($null -eq $decision) {
+            Add-ValidationError "Missing worldgen decision '$($decidedWorldgen.id)'."
+            continue
+        }
+        if ([string](Get-PropertyValue -Object $decision -Name 'status') -ne $decidedWorldgen.status) {
+            Add-ValidationError "Worldgen decision '$($decidedWorldgen.id)' must be $($decidedWorldgen.status) after the M7 wave."
+        }
+        $disabledProviders = @(Get-PropertyValue -Object $decision -Name 'disabled_provider_mod_ids')
+        foreach ($expectedProvider in $decidedWorldgen.disabled) {
+            if ($disabledProviders -notcontains $expectedProvider) {
+                Add-ValidationError "Worldgen decision '$($decidedWorldgen.id)' no longer records $expectedProvider as a disabled provider."
+            }
         }
     }
 }
@@ -2742,8 +2764,8 @@ if ($null -eq $bypassRegistry) {
 }
 else {
     $futureBypass = Find-ObjectById -Items (Get-PropertyValue -Object $bypassRegistry -Name 'decisions') -IdField 'bypass_id' -Id 'industrial_frontier:bypass/future_nuclear_hbm_cycles'
-    if ($null -eq $futureBypass -or [string](Get-PropertyValue -Object $futureBypass -Name 'status') -ne 'GATED_NOT_INSTALLED') {
-        Add-ValidationError 'Future NuclearCraft/HBM bypass entry must be GATED_NOT_INSTALLED.'
+    if ($null -eq $futureBypass -or [string](Get-PropertyValue -Object $futureBypass -Name 'status') -ne 'CLOSED_STATIC') {
+        Add-ValidationError 'The NuclearCraft/HBM bypass entry must be CLOSED_STATIC after the M7 wave.'
     }
     foreach ($decision in @(Get-PropertyValue -Object $bypassRegistry -Name 'decisions')) {
         $status = [string](Get-PropertyValue -Object $decision -Name 'status')
@@ -2807,6 +2829,20 @@ if (Test-Path -LiteralPath $deviationPath -PathType Leaf) {
     }
 }
 
+$ownershipRegistry = $documentsByRegistryId['industrial_frontier:m2/domain_process_ownership']
+$civilNuclearDomainStatus = 'UNKNOWN'
+$strategicNuclearDomainStatus = 'UNKNOWN'
+if ($null -ne $ownershipRegistry) {
+    $civilNuclearDomain = Find-ObjectById -Items (Get-PropertyValue -Object $ownershipRegistry.document -Name 'domains') -IdField 'domain_id' -Id 'industrial_frontier:domain/civil_nuclear_industry'
+    if ($null -ne $civilNuclearDomain) {
+        $civilNuclearDomainStatus = [string](Get-PropertyValue -Object $civilNuclearDomain -Name 'status')
+    }
+    $strategicNuclearDomain = Find-ObjectById -Items (Get-PropertyValue -Object $ownershipRegistry.document -Name 'domains') -IdField 'domain_id' -Id 'industrial_frontier:domain/strategic_nuclear_program'
+    if ($null -ne $strategicNuclearDomain) {
+        $strategicNuclearDomainStatus = [string](Get-PropertyValue -Object $strategicNuclearDomain -Name 'status')
+    }
+}
+
 $modsDirectory = Join-Path $rootPath 'mods'
 if (Test-Path -LiteralPath $modsDirectory -PathType Container) {
     foreach ($modFile in Get-ChildItem -LiteralPath $modsDirectory -File) {
@@ -2814,12 +2850,28 @@ if (Test-Path -LiteralPath $modsDirectory -PathType Container) {
         if ($modFile.Name -match '(?i)mekanism|industrial[ _-]?foregoing') {
             Add-ValidationError "Forbidden technology mod is installed: $($modFile.Name)"
         }
-        if ($modFile.Name -match '(?i)nuclear[ _-]?craft|(^|[._-])hbm([._-]|$)|(^|[._-])ntm([._-]|$)') {
-            if ($acceptedDeviationFiles.ContainsKey($modFile.Name)) {
+        # A nuclear mod stops being "future" the moment its domain is declared
+        # installed. Reading that from the architecture beats hardcoding a
+        # filename list here: when the M6 wave arrived, exactly one registry
+        # line changed and this check followed it.
+        if ($modFile.Name -match '(?i)nuclear[ _-]?craft') {
+            if ($civilNuclearDomainStatus -ne 'ACTIVE_INSTALLED' -and -not $acceptedDeviationFiles.ContainsKey($modFile.Name)) {
+                Add-ValidationError "Civil nuclear mod is installed while its domain is still $civilNuclearDomainStatus`: $($modFile.Name)"
+            }
+            elseif ($civilNuclearDomainStatus -ne 'ACTIVE_INSTALLED') {
                 Add-ValidationWarning "Accepted deviation $($acceptedDeviationFiles[$modFile.Name]): $($modFile.Name) is installed ahead of its gated integration stage."
             }
-            else {
-                Add-ValidationError "Future nuclear/HBM mod is installed before its gated integration stage: $($modFile.Name)"
+        }
+        # The strategic port follows the same rule as the civil one: it stops
+        # being "future" when its domain is declared installed. Before M7 this
+        # branch could only be silenced by an accepted deviation; now the
+        # architecture answers for it, and the deviation list is empty again.
+        elseif ($modFile.Name -match '(?i)(^|[._-])hbm([._-]|$)|(^|[._-])ntm([._-]|$)') {
+            if ($strategicNuclearDomainStatus -ne 'ACTIVE_INSTALLED' -and -not $acceptedDeviationFiles.ContainsKey($modFile.Name)) {
+                Add-ValidationError "Strategic nuclear mod is installed while its domain is still $strategicNuclearDomainStatus`: $($modFile.Name)"
+            }
+            elseif ($strategicNuclearDomainStatus -ne 'ACTIVE_INSTALLED') {
+                Add-ValidationWarning "Accepted deviation $($acceptedDeviationFiles[$modFile.Name]): $($modFile.Name) is installed ahead of its gated integration stage."
             }
         }
     }

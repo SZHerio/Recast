@@ -1,0 +1,511 @@
+{
+  "key": "p7",
+  "file": "17_p7_strategic_space",
+  "chapter_id": "2017000000000001",
+  "group_id": "1000000000000004",
+  "icon": "gcyr:launch_pad",
+  "order": 8,
+  "tag": "mainline",
+  "optional": false,
+  "xp": 80,
+  "title_ru": "17 — P7. Стратегия и космос",
+  "title_en": "17 — P7. Strategy and space",
+  "sub_ru": "Две программы, одна металлургия",
+  "sub_en": "Two programmes, one metallurgy",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "gcyr:launch_pad", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Седьмая эпоха",
+        "subtitle": "Две программы, которые нельзя вести одновременно",
+        "desc": [
+          "До сих пор каждая эпоха добавляла отрасль. Седьмая добавляет выбор: стратегическую программу и космическую. Обе стоят титана, вольфрамовой стали и электроники EV — то есть конкурируют за одну металлургию.",
+          "Вести их параллельно на одной линии не выйдет. Это не ограничение, а суть эпохи: до сих пор узким местом была технология, теперь им становится мощность производства.",
+          "Глава разделена на две ветви. Верхняя — стратегический домен: сборочный цех, РБМК, переработка и то, чем эта эпоха отличается от шестой. Нижняя — космос: материалы, топливо, космодром, запуск и планеты. Порядок между ветвями свободный."
+        ],
+        "task": "Понять, за что конкурируют две программы"
+      },
+      "en": {
+        "title": "The seventh epoch",
+        "subtitle": "Two programmes you cannot run at once",
+        "desc": [
+          "Every epoch so far added an industry. The seventh adds a choice: the strategic programme and the space programme. Both cost titanium, tungsten steel and EV electronics — that is, they compete for the same metallurgy.",
+          "Running them in parallel on one line will not work. That is not a restriction but the point of the epoch: until now the bottleneck was technology, now it becomes production capacity.",
+          "The chapter splits into two branches. The upper one is the strategic domain: assembly shop, RBMK, reprocessing and whatever makes this epoch different from the sixth. The lower one is space: materials, fuel, spaceport, launch and planets. The order between branches is yours."
+        ],
+        "task": "Understand what the two programmes compete for"
+      }
+    },
+    {
+      "slug": "hbm_entry", "x": 3, "y": -3, "icon": "hbm_ntm_rebirth:machine_assembly_machine",
+      "deps": ["intro"], "item": "hbm_ntm_rebirth:machine_assembly_machine",
+      "ru": {
+        "title": "Вход в стратегический домен",
+        "subtitle": "Сборочная машина, которой в моде не существовало",
+        "desc": [
+          "У стратегического домена не было входа вовсе. Сборочная машина в нём производится только сборочной машиной, а из неё собираются пресс, шреддер, химзавод, центрифуга и переработка — из 704 блоков рецепт имели 145.",
+          "Здесь она получила первый в своей истории рецепт: титановые пластины, катушка, мотор, манипулятор и корпус машины уровня EV. Это седьмая эпоха и ничто раньше.",
+          "Вместе с ней перенесены две наковальни — вторая половина того же входа: через них идут печи, дукты и кабели домена. Остальные 2357 рецептов не тронуты. Закрыв вход, закрываешь домен целиком."
+        ],
+        "task": "Собрать сборочную машину"
+      },
+      "en": {
+        "title": "Entering the strategic domain",
+        "subtitle": "An assembly machine the mod never had",
+        "desc": [
+          "The strategic domain had no entrance at all. Its assembly machine is produced only by an assembly machine, and everything else — press, shredder, chemical plant, centrifuge, reprocessing — is built from it. Of 704 blocks only 145 had any recipe.",
+          "Here it gets the first recipe in its history: titanium plates, a coil, a motor, a robot arm and an EV machine hull. That is the seventh epoch and nothing earlier.",
+          "Both anvils moved with it — they are the other half of the same entrance, carrying the domain's furnaces, ducts and cables. The remaining 2357 recipes are untouched. Close the entrance and you close the domain."
+        ],
+        "task": "Build the assembly machine"
+      }
+    },
+    {
+      "slug": "protected_zone", "x": 6, "y": -3, "icon": "hbm_ntm_rebirth:steel_scaffold", "deps": ["hbm_entry"],
+      "ru": {
+        "title": "Защищённая зона",
+        "subtitle": "Где вообще можно ставить такое",
+        "desc": [
+          "Реактор шестой эпохи наказывал за небрежность потерей района. Седьмая наказывает отношениями: у стратегического объекта есть соседи, и они видят, что вы строите.",
+          "Пять требований: объект стоит за границей жилой и продовольственной застройки, вход один и известен, резервная линия рассчитана на остановку основной, сырьё и отходы хранятся раздельно и вне цеха, стратегические материалы считаются поштучно.",
+          "Недостача здесь — не потеря ресурса, а событие. Полный регламент доступен командой /if_strategic_zone."
+        ],
+        "task": "Вынести стратегический объект за границу жилой застройки"
+      },
+      "en": {
+        "title": "The protected zone",
+        "subtitle": "Where such a thing may stand at all",
+        "desc": [
+          "The sixth epoch's reactor punished carelessness with the loss of a district. The seventh punishes with relationships: a strategic site has neighbours, and they can see what you are building.",
+          "Five requirements: the site stands outside housing and food districts, there is one known entrance, the backup line is sized for a full outage of the main one, feedstock and waste are stored apart and outside the shop, strategic materials are counted piece by piece.",
+          "A shortfall here is not a lost resource but an event. The full standing order is available via /if_strategic_zone."
+        ],
+        "task": "Move the strategic site outside the housing boundary"
+      }
+    },
+    {
+      "slug": "rbmk", "x": 9, "y": -4.5, "icon": "hbm_ntm_rebirth:rbmk_console", "deps": ["protected_zone"],
+      "item": "hbm_ntm_rebirth:rbmk_console",
+      "ru": {
+        "title": "РБМК",
+        "subtitle": "Реактор, который разгоняется быстрее, чем вы дойдёте",
+        "desc": [
+          "Это второй тип реактора в сборке, и он устроен иначе, чем гражданский. Канальная схема из 62 сборочных рецептов собирается вручную колонна за колонной, и её поведение зависит от того, что вы поставили в каждую ячейку.",
+          "Главное отличие — скорость. Стержни поднимаются ступенями с паузой на измерение, а дистанционное управление ставится до первого пуска, а не после первого урока.",
+          "Кнопка останова доступна физически и продублирована снаружи зоны. После останова остаётся остаточное тепло: теплоотвод продолжает работать, даже когда реакция прекращена."
+        ],
+        "task": "Собрать консоль РБМК"
+      },
+      "en": {
+        "title": "The RBMK",
+        "subtitle": "A reactor that runs away faster than you can walk",
+        "desc": [
+          "This is the second reactor type in the pack, and it is built differently from the civil one. The channel design — 62 assembly recipes — is put together by hand, column by column, and its behaviour depends on what you placed in each cell.",
+          "The key difference is speed. Rods are raised in steps with a pause to measure, and the remote console is installed before the first startup, not after the first lesson.",
+          "The stop button is physically reachable and duplicated outside the zone. After a shutdown decay heat remains: cooling keeps running even when the reaction has stopped."
+        ],
+        "task": "Build the RBMK console"
+      }
+    },
+    {
+      "slug": "purex", "x": 9, "y": -1.5, "icon": "hbm_ntm_rebirth:machine_purex", "deps": ["protected_zone"],
+      "ru": {
+        "title": "Переработка и отходы",
+        "subtitle": "Азотная кислота, керосин и то, что остаётся",
+        "desc": [
+          "Пурекс-линия из 55 рецептов извлекает из облучённого топлива то, что ещё годно: плутоний, нептуний, технеций и остатки урана. Работает она на азотной кислоте и керосине — горючем и едком одновременно.",
+          "Поэтому линия отделяется от энергоблока, а протечка гасится до того, как дойдёт до нагретого оборудования. Это не осторожность вообще, а конкретное свойство реагентов.",
+          "Ядерные отходы — продукт, а не мусор. У них есть доза, они учтены единой радиационной моделью и лежат в отдельном хранилище. Выбросить их в мир нельзя: они останутся там, где выброшены."
+        ],
+        "task": "Отвести хранилище под отходы до первой переработки"
+      },
+      "en": {
+        "title": "Reprocessing and waste",
+        "subtitle": "Nitric acid, kerosene and what is left over",
+        "desc": [
+          "The PUREX line — 55 recipes — pulls out of irradiated fuel whatever is still useful: plutonium, neptunium, technetium and leftover uranium. It runs on nitric acid and kerosene, flammable and corrosive at once.",
+          "So the line is separated from the power block, and a leak is contained before it reaches hot equipment. This is not caution in general but a specific property of the reagents.",
+          "Nuclear waste is a product, not rubbish. It carries a dose, it is counted by the single radiation model, and it lives in its own store. You cannot throw it into the world: it stays where it is thrown."
+        ],
+        "task": "Set aside a waste store before the first reprocessing run"
+      }
+    },
+    {
+      "slug": "radiation_model", "x": 12, "y": -6, "icon": "hbm_ntm_rebirth:ingot_plutonium", "deps": ["purex"],
+      "ru": {
+        "title": "Один счётчик",
+        "subtitle": "Две модели дозы — это не глубина, а неисправность",
+        "desc": [
+          "Стратегический домен везёт собственную радиацию: чанковое заражение, заражение сущностей, радиацию кратера и отдельный слой загрязнения со своим счётчиком Гейгера и детектором.",
+          "В сборке она выключена. Дозу, экранирование бронёй и дезактивацию считает атомная модель шестой эпохи — та же самая, с которой вы уже работали на станции. Приборы тоже остались её: второй счётчик снят.",
+          "Материалы стратегического домена внесены в её списки: плутоний, нептуний, полоний, уран и отходы имеют дозу и опасны в кармане, а не только в реакторе. Шкала одна, аптечка одна, правила те же."
+        ],
+        "task": "Проверить дозу стратегического материала своим дозиметром"
+      },
+      "en": {
+        "title": "One counter",
+        "subtitle": "Two dose models are not depth, they are a fault",
+        "desc": [
+          "The strategic domain ships its own radiation: chunk contamination, entity contamination, crater fallout and a separate pollution layer with its own Geiger counter and detector.",
+          "In this pack it is switched off. Dose, armour shielding and decontamination are handled by the sixth-epoch nuclear model — the very one you already used at the station. The instruments stay with it too: the second counter is removed.",
+          "The strategic domain's materials were added to its lists: plutonium, neptunium, polonium, uranium and waste carry a dose and are dangerous in your pocket, not only in a reactor. One scale, one remedy, the same rules."
+        ],
+        "task": "Check a strategic material's dose with your own dosimeter"
+      }
+    },
+    {
+      "slug": "strategic_charge", "x": 12, "y": -3, "icon": "hbm_ntm_rebirth:nuke_gadget",
+      "deps": ["rbmk", "purex"],
+      "ru": {
+        "title": "Стратегический заряд",
+        "subtitle": "Единственное, чего нет больше нигде",
+        "desc": [
+          "Заряд сохранён в сборке сознательно. Без него у этого домена не остаётся собственной роли рядом с гражданской атомной энергетикой, и седьмая эпоха превращается во вторую шестую.",
+          "Вместе с ним действуют четыре правила. Заряд не является коротким путём: расчистка местности, добыча и снос базы фракции вместо операции запрещены — они отменяют окно переговоров и путь восстановления, которые есть у каждой операции.",
+          "Фракции его не выдают ни через лут, ни через торговлю, ни как награду. Применение видят все шесть сразу, а не только цель. И общее правило сборки действует и здесь: ответ обратим, ваша база не теряется навсегда. Полный список — /if_strategic_rules.",
+          "Заодно объяснение тому, чего вы не найдёте в этом моде. Стрелковое оружие, броня, боеприпасы и станки под них здесь не собираются: это была вторая оружейная система рядом с уже принятой, причём дешевле — обычный верстак против стального верстака второй эпохи. Огнестрел остаётся у своего владельца, артиллерия у своего. Заряд — не оружие ближнего боя и не заменяет ни то, ни другое."
+        ],
+        "task": "Прочитать правила применения до того, как заряд собран"
+      },
+      "en": {
+        "title": "The strategic charge",
+        "subtitle": "The one thing that exists nowhere else",
+        "desc": [
+          "The charge was kept deliberately. Without it this domain has no role of its own beside civil nuclear power, and the seventh epoch becomes a second sixth.",
+          "Four rules come with it. The charge is not a shortcut: clearing terrain, mining and levelling a faction base instead of running an operation are forbidden — they cancel the negotiation window and the recovery path that every operation has.",
+          "Factions never hand it over, not as loot, not as trade, not as a reward. Using it is seen by all six at once, not only by the target. And the pack's general rule holds here too: the response is reversible, your base is not lost forever. Full list: /if_strategic_rules.",
+          "This also explains what you will not find in this mod. Its firearms, armour, ammunition and the benches for them are not craftable here: that was a second weapon system beside the one already chosen, and a cheaper one — a plain crafting table against the second-epoch steel bench. Small arms stay with their owner, artillery with its own. The charge is not a sidearm and replaces neither."
+        ],
+        "task": "Read the rules of use before the charge is assembled"
+      }
+    },
+    {
+      "slug": "domain_links", "x": 15, "y": -3, "icon": "hbm_ntm_rebirth:anvil_iron", "deps": ["strategic_charge"],
+      "ru": {
+        "title": "Связи домена",
+        "subtitle": "Почему это не отдельный остров",
+        "desc": [
+          "Графит, бор, бериллий, цирконий, литий, свинец и уран лежат в общих тегах с гражданской атомной отраслью: слиток одного домена принимается машиной другого без переходника. Гражданский цикл остаётся у одного мода, стратегический слой — у другого, и ни один не переписывает физику другого.",
+          "Сталь, медь, титан, вольфрам и алюминий приходят из металлургии: на них держатся 107 рецептов пластин и 51 рецепт слитков внутри домена. Обратно он отдаёт то, чего у металлургии нет — продукты переработки и реакторные изотопы.",
+          "С городом связь через вход: электроника EV — это его энергетика и производство. С космосом — через титан и вольфрамовую сталь: из них собираются и этот домен, и корпус ракеты. Поэтому обе программы приходится планировать вместе."
+        ],
+        "task": "Провести материал из гражданского цикла в стратегический"
+      },
+      "en": {
+        "title": "The domain's links",
+        "subtitle": "Why this is not a separate island",
+        "desc": [
+          "Graphite, boron, beryllium, zirconium, lithium, lead and uranium sit in tags shared with the civil nuclear industry: an ingot from one domain is accepted by the other's machine with no adapter. The civil cycle stays with one mod, the strategic layer with the other, and neither rewrites the other's physics.",
+          "Steel, copper, titanium, tungsten and aluminium come from metallurgy: 107 plate recipes and 51 ingot recipes inside the domain rest on them. In return it gives what metallurgy has not — reprocessing products and reactor isotopes.",
+          "The link to the city is the entrance itself: EV electronics means its power and production. The link to space is titanium and tungsten steel: both this domain and a rocket hull are built from them. That is why the two programmes must be planned together."
+        ],
+        "task": "Carry one material from the civil cycle into the strategic one"
+      }
+    },
+    {
+      "slug": "clearances", "x": 18, "y": -4.5, "icon": "gcyr:id_chip", "deps": ["domain_links"],
+      "ru": {
+        "title": "Допуски",
+        "subtitle": "Кого пускать на объект",
+        "desc": [
+          "До седьмой эпохи у вас не было объекта, на который имело бы смысл кого-то пускать или не пускать. Теперь есть, и допуск становится инструментом отношений.",
+          "Четыре уровня. Без допуска фракция не знает планировки и работает по периметру. Сопровождаемый — представитель проходит с провожатым, уважение растёт, операции смягчаются. Рабочий — инженеры фракции работают на объекте: быстрее ремонт и новые торговые позиции, но фракция узнаёт планировку.",
+          "Отозванный допуск сам по себе не вражда. Но фракция запоминает и то, что видела, и то, как её выставили. Подробности — /if_late_bases."
+        ],
+        "task": "Выбрать, какой фракции дать рабочий допуск"
+      },
+      "en": {
+        "title": "Clearances",
+        "subtitle": "Who is let onto the site",
+        "desc": [
+          "Before the seventh epoch you had no site worth letting anyone into or keeping anyone out of. Now you do, and clearance becomes a tool of relationships.",
+          "Four levels. No clearance: the faction does not know the layout and works the perimeter. Escorted: a representative enters with a guide, respect grows, operations soften. Working: the faction's engineers work on site — faster repairs and new trade positions, but they learn the layout.",
+          "A revoked clearance is not hostility in itself. But the faction remembers both what it saw and how it was shown out. Details: /if_late_bases."
+        ],
+        "task": "Decide which faction gets a working clearance"
+      }
+    },
+    {
+      "slug": "counterintel", "x": 21, "y": -3, "icon": "gcyr:rocket_scanner", "deps": ["clearances"],
+      "ru": {
+        "title": "Контрразведка космодрома",
+        "subtitle": "Отбирают не груз, а знание",
+        "desc": [
+          "К седьмой эпохе у вас есть то, чего нельзя просто отобрать: программа. Космодром и сборочный цех ценны не содержимым, а тем, что умеют повторять.",
+          "Поэтому операции этой эпохи направлены на сведения, доступ и точность. Контрразведка ищет расчёты, маршруты и расписание пусков; высокоточное изъятие берёт один конкретный узел, а не цех; спор о допуске стоит репутации, а не имущества.",
+          "У каждой есть окно переговоров и восстановление. Открытая публикация расписания снимает интерес заранее: секрет ценен, пока он секрет. Полный список — /if_late_operations."
+        ],
+        "task": "Решить, что из программы остаётся закрытым"
+      },
+      "en": {
+        "title": "Spaceport counterintelligence",
+        "subtitle": "What they take is knowledge, not cargo",
+        "desc": [
+          "By the seventh epoch you own something that cannot simply be taken: a programme. The spaceport and the assembly shop are valuable for what they can repeat, not for what they contain.",
+          "So this epoch's operations aim at information, access and precision. Counterintelligence hunts for calculations, routes and the launch schedule; a precision extraction takes one specific unit, not the shop; a clearance dispute costs reputation, not property.",
+          "Each has a negotiation window and a recovery path. Publishing the schedule openly removes the interest in advance: a secret is valuable while it is a secret. Full list: /if_late_operations."
+        ],
+        "task": "Decide what part of the programme stays closed"
+      }
+    },
+    {
+      "slug": "rocket_materials", "x": 3, "y": 3, "icon": "gcyr:heat_shielding_fabric", "deps": ["intro"],
+      "item": "gcyr:space_fabric",
+      "ru": {
+        "title": "Материалы ракеты",
+        "subtitle": "Сталь тут не помогает",
+        "desc": [
+          "Ракета начинается не с двигателя, а с материалов, которых до сих пор не требовалось. Полиимид, параарамид, стеклопластик и лёгкие сплавы — это класс, а не один предмет.",
+          "Композит не заменяется сталью того же веса: он отвечает за то, чего сталь не умеет — держать нагрев обшивки и не проводить тепло внутрь. Обратной замены тоже нет: несущий шпангоут из ткани не сделаешь.",
+          "Всё это синтезируется из продуктов нефтехимии четвёртой эпохи. Космос не приносит новую химию — он предъявляет счёт той, что вы уже построили."
+        ],
+        "task": "Получить космическую ткань"
+      },
+      "en": {
+        "title": "Rocket materials",
+        "subtitle": "Steel does not help here",
+        "desc": [
+          "A rocket starts not with an engine but with materials nothing has required so far. Polyimide, para-aramid, fibreglass and light alloys are a class, not a single item.",
+          "A composite does not substitute for steel of the same weight: it does what steel cannot — hold skin heating and not conduct that heat inward. The reverse substitution fails too: you will not make a load-bearing frame out of fabric.",
+          "All of it is synthesised from fourth-epoch petrochemistry. Space brings no new chemistry — it presents the bill for the chemistry you already built."
+        ],
+        "task": "Obtain space fabric"
+      }
+    },
+    {
+      "slug": "rocket_fuel", "x": 6, "y": 1.5, "icon": "gcyr:basic_fuel_tank", "deps": ["rocket_materials"],
+      "ru": {
+        "title": "Топливо и окислитель",
+        "subtitle": "Два бака, а не один",
+        "desc": [
+          "Ракетное топливо — не «горючее вообще». Это отдельный продукт химии, и заправить ступень соляркой нельзя: у него своя жидкость, своё хранение и своя производительность, которая определяет частоту запусков сильнее, чем размер бака.",
+          "Окислитель — сжиженный кислород. В вакууме гореть нечему, поэтому криогенная линия обязательна, а не удобна. Она же делает космодром производством, а не площадкой.",
+          "Испарившийся кислород возвращается в атмосферу и в этом смысле безвреден. Потеря здесь энергетическая: сжижать заново придётся за полную цену."
+        ],
+        "task": "Наладить производство ракетного топлива"
+      },
+      "en": {
+        "title": "Fuel and oxidiser",
+        "subtitle": "Two tanks, not one",
+        "desc": [
+          "Rocket fuel is not \"combustibles in general\". It is a distinct chemical product, and you cannot fill a stage with diesel: it has its own fluid, its own storage and its own throughput, which sets launch frequency far more than tank size does.",
+          "The oxidiser is liquefied oxygen. In vacuum there is nothing to burn with, so the cryogenic line is mandatory, not convenient. It is also what makes a spaceport a production site rather than a pad.",
+          "Boiled-off oxygen returns to the atmosphere and is harmless in that sense. The loss here is energetic: liquefying it again costs full price."
+        ],
+        "task": "Set up rocket fuel production"
+      }
+    },
+    {
+      "slug": "rocket_electronics", "x": 6, "y": 4.5, "icon": "gcyr:id_chip", "deps": ["rocket_materials"],
+      "item": "gcyr:id_chip",
+      "ru": {
+        "title": "Электроника и навигация",
+        "subtitle": "Пункт назначения — это данные",
+        "desc": [
+          "Ракета не выбирает, куда лететь. Выбираете вы, и выбор записывается на чип идентификации до старта. Без действительного чипа старта не будет — это требование самой техники, а не условность.",
+          "Туда же записывается точка возврата. Ракета, улетевшая без сохранённой площадки, вернётся не туда, откуда стартовала, и это выяснится в самый неудачный момент.",
+          "Сканер и телеметрия проверяют собранную ступень до пуска: тир узлов, объём топлива и соответствие цели. Всё, что можно узнать на земле, узнаётся на земле."
+        ],
+        "task": "Собрать чип идентификации"
+      },
+      "en": {
+        "title": "Electronics and navigation",
+        "subtitle": "A destination is data",
+        "desc": [
+          "The rocket does not choose where to fly. You do, and the choice is written to an identification chip before launch. Without a valid chip there is no launch — that is the hardware's requirement, not a convention.",
+          "The return point goes on the same chip. A rocket that left without a saved pad comes back somewhere other than where it started, and you find that out at the worst possible moment.",
+          "The scanner and telemetry check the assembled stage before ignition: tier of the parts, fuel volume and match to the destination. Everything that can be learned on the ground is learned on the ground."
+        ],
+        "task": "Build the identification chip"
+      }
+    },
+    {
+      "slug": "spaceport", "x": 9, "y": 3, "icon": "gcyr:launch_pad", "deps": ["rocket_fuel", "rocket_electronics"],
+      "item": "gcyr:launch_pad",
+      "ru": {
+        "title": "Космодром",
+        "subtitle": "Городской мегапроект, а не площадка",
+        "desc": [
+          "Космодром — контракт того же класса, что городская АЭС. Шесть требований: стартовый стол с зоной отчуждения, топливный узел, кислородная линия с буфером на полный полёт, сборочный цех ступеней, энергетический ввод с резервом и пункт управления с сохранённой точкой возврата.",
+          "Контракт не выдаётся, пока стартовый стол стоит в жилой зоне или пока топливо носят вёдрами. Космодром без зоны отчуждения и без линии — это не космодром, а костёр.",
+          "Награда не предмет: город получает космический порт, и орбита с планетами становятся частью его логистики. Состав контракта — /if_spaceport_contract."
+        ],
+        "task": "Построить стартовый стол"
+      },
+      "en": {
+        "title": "The spaceport",
+        "subtitle": "A city megaproject, not a pad",
+        "desc": [
+          "The spaceport is a contract of the same class as the city nuclear plant. Six requirements: a launch table with an exclusion zone, a fuel node, an oxygen line buffered for a full flight, a stage assembly shop, a power feed with reserve, and a control point holding the saved return position.",
+          "The contract is not issued while the launch table stands in a housing district or while fuel is carried by the bucket. A spaceport without an exclusion zone and without a line is not a spaceport, it is a bonfire.",
+          "The reward is not an item: the city gains a space port, and orbit and planets become part of its logistics. Contract details: /if_spaceport_contract."
+        ],
+        "task": "Build the launch pad"
+      }
+    },
+    {
+      "slug": "suit_oxygen", "x": 12, "y": 1.5, "icon": "gcyr:space_helmet", "deps": ["spaceport"],
+      "item": "gcyr:space_helmet",
+      "ru": {
+        "title": "Скафандр и кислород",
+        "subtitle": "Один газ на две задачи",
+        "desc": [
+          "Кислород в этой сборке существует дважды и приходит из одной линии: как окислитель для двигателя и как воздух для человека. Это один и тот же газ и одно и то же производство — экономить на буфере нельзя ни для того, ни для другого.",
+          "Скафандр требует полного комплекта и запаса. Апгрейды ставятся до полёта: теплозащита для Венеры и Меркурия, изоляция для Луны. По прибытии ставить будет некогда и нечем.",
+          "Распылитель кислорода поддерживает обитаемый объём и требует питания. Запас на отказ подачи обязателен: восстанавливать линию в скафандре без кислорода уже поздно."
+        ],
+        "task": "Собрать шлем скафандра"
+      },
+      "en": {
+        "title": "Suit and oxygen",
+        "subtitle": "One gas, two jobs",
+        "desc": [
+          "Oxygen exists twice in this pack and comes from one line: as the engine's oxidiser and as a human's air. Same gas, same production — you cannot save on the buffer for either.",
+          "The suit needs the full set and a reserve. Upgrades go on before the flight: heat shielding for Venus and Mercury, insulation for the Moon. On arrival there will be neither time nor means.",
+          "The oxygen spreader holds a habitable volume and needs power. A reserve against supply failure is mandatory: repairing the line in a suit with no oxygen is already too late."
+        ],
+        "task": "Build the space helmet"
+      }
+    },
+    {
+      "slug": "first_launch", "x": 12, "y": 4.5, "icon": "gcyr:basic_rocket_motor", "deps": ["spaceport"],
+      "ru": {
+        "title": "Первый запуск",
+        "subtitle": "Шесть проверок, и ни одну нельзя пропустить",
+        "desc": [
+          "Пункт назначения записан на чип. Тир ракеты соответствует цели: Луна — первый, Марс, Меркурий и Венера — второй, Проксима b — третий. Мотор ниже требуемого не компенсируется ни топливом, ни числом баков.",
+          "Бак заправлен по расчёту на цель, а не «сколько влезло»: недолив виден до старта — техника называет требуемый и фактический объём. Скафандр и кислород в комплекте, апгрейд под среду поставлен.",
+          "Точка возврата сохранена. Полный порядок — /if_launch_checklist. Он не меняется: сначала расчёт и проверка, потом старт."
+        ],
+        "task": "Пройти все шесть проверок и запустить ракету"
+      },
+      "en": {
+        "title": "The first launch",
+        "subtitle": "Six checks, none of them skippable",
+        "desc": [
+          "The destination is written to the chip. The rocket's tier matches the target: the Moon is tier one, Mars, Mercury and Venus tier two, Proxima b tier three. A motor below the requirement is not offset by fuel or by tank count.",
+          "The tank is filled by calculation for the target, not \"as much as fits\": a shortfall shows before launch — the craft states the required and actual volume. Suit and oxygen are complete, the environmental upgrade is fitted.",
+          "The return point is saved. Full order: /if_launch_checklist. It does not change: calculation and checks first, ignition after."
+        ],
+        "task": "Pass all six checks and launch"
+      }
+    },
+    {
+      "slug": "sealing_base", "x": 15, "y": 3, "icon": "gcyr:airlock_door", "deps": ["suit_oxygen", "first_launch"],
+      "item": "creatingspace:oxygen_sealer",
+      "ru": {
+        "title": "Внеземная база",
+        "subtitle": "Герметичность проверяется по границе",
+        "desc": [
+          "Обитаемый контур замыкается полностью, вход — через шлюз. Одна незакрытая клетка в потолке стравливает объём целиком: герметичность здесь не бонус, а условие. Проверяется она по границе, а не по площади.",
+          "Солнечная мощность зависит от планеты и известна заранее: Меркурий даёт вдвое больше Земли, Венера — вдвое меньше. Проектировать надо под худший случай, а не под средний.",
+          "На горячих планетах проблема не в добыче тепла, а в его сбросе; на холодных — наоборот. Один и тот же чертёж базы не работает и там, и там. Полный список требований — /if_offworld_base."
+        ],
+        "task": "Замкнуть первый герметичный объём"
+      },
+      "en": {
+        "title": "The off-world base",
+        "subtitle": "Sealing is checked along the boundary",
+        "desc": [
+          "The habitable loop closes completely, entry through an airlock. One unsealed cell in the ceiling vents the whole volume: sealing here is not a bonus but a condition. It is checked along the boundary, not by area.",
+          "Solar power depends on the planet and is known in advance: Mercury gives twice Earth's, Venus half. Design for the worst case, not the average.",
+          "On hot planets the problem is not collecting heat but rejecting it; on cold ones the opposite. The same base blueprint does not work in both. Full requirements: /if_offworld_base."
+        ],
+        "task": "Close your first sealed volume"
+      }
+    },
+    {
+      "slug": "return_flow", "x": 18, "y": 3, "icon": "gcyr:space_station_package", "deps": ["sealing_base"],
+      "ru": {
+        "title": "Возврат ресурсов",
+        "subtitle": "Пока он ручной, планета не считается освоенной",
+        "desc": [
+          "Правило сборки о массовом компоненте действует и здесь: планетарный материал считается введённым в экономику только когда его возврат идёт без вашего участия в каждом рейсе.",
+          "Четыре шага. Первый рейс ручной — он нужен, чтобы понять объём, а не чтобы стать нормой. Второй: добыча складывается в накопитель на планете, а не в инвентарь. Третий: регулярный рейс с автоматической погрузкой и сохранённой точкой возврата. Четвёртый: на Земле планетарное сырьё идёт на общий склад по тем же правилам, что и земное.",
+          "Пока возврат ручной, планетарное сырьё не входит ни в один обязательный рецепт. Космос не имеет права стать самой скучной шахтой в игре."
+        ],
+        "task": "Сделать возврат с планеты регулярным без ручной погрузки"
+      },
+      "en": {
+        "title": "Resource return",
+        "subtitle": "While it is manual, the planet is not settled",
+        "desc": [
+          "The pack's rule about mass components applies here too: a planetary material counts as part of the economy only when its return runs without you on every trip.",
+          "Four steps. The first trip is manual — it exists to learn the volume, not to become the norm. Second: mined material goes into a buffer on the planet, not into your inventory. Third: a regular run with automatic loading and a saved return point. Fourth: on Earth planetary feedstock enters the common store under the same rules as terrestrial.",
+          "While the return is manual, planetary feedstock enters no mandatory recipe. Space is not allowed to become the dullest mine in the game."
+        ],
+        "task": "Make planetary return regular without manual loading"
+      }
+    },
+    {
+      "slug": "planetary", "x": 21, "y": 3, "icon": "gcyr:mars_marker", "deps": ["return_flow"],
+      "ru": {
+        "title": "Что даёт каждая планета",
+        "subtitle": "И чего каждая стоит",
+        "desc": [
+          "Луна: боксит и гравитация 1,63 против земных 9,81 — стартовать отсюда дешевле. Платить приходится полным отсутствием атмосферы и 113 кельвинами.",
+          "Марс — самая богатая планета программы: медь, железо, никель, цинк, вольфрамат и редкозем; атмосфера есть, кислорода в ней нет, год длится 687 суток. Это база, а не вылазка. Меркурий даёт ртуть и лучшее солнце в системе при 440 кельвинах. Венера — серу и вольфрамотитанат при 737 и почти земной гравитации, из-за которой взлёт оттуда дороже всего.",
+          "Проксима b — единственный пункт с кислородом и земной гравитацией, и он же третий тир: конец седьмой эпохи, а не её середина. Сводка — /if_planetary_processes."
+        ],
+        "task": "Выбрать планету под конкретную нехватку производства"
+      },
+      "en": {
+        "title": "What each planet gives",
+        "subtitle": "And what each one costs",
+        "desc": [
+          "The Moon: bauxite and gravity of 1.63 against Earth's 9.81 — launching from here is cheaper. You pay with no atmosphere at all and 113 kelvin.",
+          "Mars is the richest planet of the programme: copper, iron, nickel, zinc, tungstate and rare earths; there is an atmosphere, but no oxygen in it, and the year lasts 687 days. That is a base, not an excursion. Mercury gives mercury ore and the best sunlight in the system at 440 kelvin. Venus gives sulphur and tungstotitanate at 737 and near-Earth gravity, which makes launching from it the most expensive.",
+          "Proxima b is the only destination with oxygen and Earth gravity, and also tier three: the end of the seventh epoch, not its middle. Summary: /if_planetary_processes."
+        ],
+        "task": "Pick a planet against a specific production shortage"
+      }
+    },
+    {
+      "slug": "deep_path", "x": 15, "y": 6, "icon": "creatingspace:rocket_engineer_table", "deps": ["first_launch"],
+      "item": "creatingspace:rocket_engineer_table",
+      "ru": {
+        "title": "Глубокий путь",
+        "subtitle": "Спроектировать двигатель самому",
+        "desc": [
+          "Короткий путь — три тира готового мотора: собрал, заправил, полетел. Он полностью достаточен и ведёт на все планеты программы.",
+          "Глубокий путь — конструктор двигателя: камера сгорания, форсуночная головка, турбонасос, сопло. Здесь двигатель проектируют, а не покупают, и 97 последовательных сборок — это часы работы, а не один рецепт.",
+          "Он ведёт на околоземную орбиту и к станции: планетами владеет короткий путь, орбитой — глубокий. Это добровольная ветвь. Не открывать её — законное решение, а не пропуск содержимого."
+        ],
+        "task": "Собрать стол проектирования двигателя"
+      },
+      "en": {
+        "title": "The deep path",
+        "subtitle": "Design the engine yourself",
+        "desc": [
+          "The short path is three tiers of ready-made motor: build it, fuel it, fly. It is entirely sufficient and reaches every planet in the programme.",
+          "The deep path is the engine designer: combustion chamber, injector head, turbopump, nozzle. Here an engine is designed, not bought, and 97 sequenced assemblies are hours of work rather than one recipe.",
+          "It leads to low Earth orbit and the station: planets belong to the short path, orbit to the deep one. This branch is voluntary. Not opening it is a legitimate decision, not skipped content."
+        ],
+        "task": "Build the engine designer table"
+      }
+    },
+    {
+      "slug": "emergency", "x": 18, "y": 0, "icon": "gcyr:insulating_fabric", "deps": ["sealing_base"],
+      "ru": {
+        "title": "Когда пошло не так",
+        "subtitle": "Три отказа, которые стоят жизни",
+        "desc": [
+          "Кончился кислород. Отказало питание распылителя. Разгерметизировался объём. У каждого есть дешёвое предупреждение — запас, резервная линия, шлюз — и дорогое последствие.",
+          "Общее у всех трёх одно: их нельзя починить в тот момент, когда они случились. Их чинят заранее, при проектировании, и это единственная разница между базой и могилой.",
+          "Четвёртый сценарий земной: ракета вернулась не туда. Он не смертелен, но стоит рейса, и лечится строкой на чипе перед стартом."
+        ],
+        "task": "Заложить запас на все три отказа до вылета"
+      },
+      "en": {
+        "title": "When it goes wrong",
+        "subtitle": "Three failures that cost a life",
+        "desc": [
+          "Oxygen ran out. The spreader lost power. The volume lost its seal. Each has a cheap warning — a reserve, a backup line, an airlock — and an expensive consequence.",
+          "All three share one thing: they cannot be fixed at the moment they happen. They are fixed in advance, at design time, and that is the only difference between a base and a grave.",
+          "The fourth scenario is terrestrial: the rocket came back to the wrong place. It is not lethal, but it costs a trip, and it is cured by one line on the chip before launch."
+        ],
+        "task": "Provide a reserve against all three failures before departure"
+      }
+    }
+  ]
+}

@@ -278,6 +278,200 @@ if ($null -ne $m5Trace) {
     }
 }
 
+# M6 opens the civil nuclear domain. The mod was installed since the M4 wave but
+# had no gate at all: its first machine cost lead and a piston, so the whole
+# atomic industry was reachable in P1. The checks below make that regression
+# loud if the gate is ever weakened.
+$m6TracePath = Join-Path $rootPath 'authoring\trace\m6_trace.json'
+$m6Trace = Read-JsonObject $m6TracePath
+$m6ChapterFiles = @('16_p6_nuclear')
+if ($null -ne $m6Trace) {
+    if ([int]$m6Trace.schema_version -ne 2) { Add-LintError 'm6_trace.json must use schema_version 2.' }
+    if ([string]$m6Trace.build_id -ne 'IF-M6-0001') { Add-LintError 'm6_trace.json must identify IF-M6-0001.' }
+    $m6FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
+    $m6FeaturesById = @{}
+    foreach ($feature in @($m6Trace.features)) {
+        $featureId = [string]$feature.id
+        if ([string]::IsNullOrWhiteSpace($featureId)) { Add-LintError 'M6 trace feature has an empty ID.'; continue }
+        if (-not $m6FeatureIds.Add($featureId)) { Add-LintError "Duplicate M6 trace feature ID: $featureId" }
+        $m6FeaturesById[$featureId] = $feature
+        foreach ($relativeFile in @($feature.files)) {
+            $artifactPath = Join-Path $rootPath (([string]$relativeFile) -replace '/', '\')
+            if (-not (Test-Path -LiteralPath $artifactPath)) { Add-LintError "M6 trace artifact does not exist: $relativeFile ($featureId)" }
+        }
+    }
+
+    $m6QuestCount = 0
+    foreach ($chapterFile in $m6ChapterFiles) {
+        $chapterSource = Read-JsonObject (Join-Path $rootPath "authoring\quests\$chapterFile.json")
+        if ($null -eq $chapterSource) { continue }
+        $m6QuestCount += @($chapterSource.quests).Count
+        if (-not (Test-Path -LiteralPath (Join-Path $rootPath "config\ftbquests\quests\chapters\$chapterFile.snbt") -PathType Leaf)) {
+            Add-LintError "Missing compiled M6 chapter: $chapterFile.snbt"
+        }
+        if ([bool]$chapterSource.optional) { Add-LintError "M6 chapter must not be optional: $chapterFile" }
+    }
+    if ($m6FeaturesById.ContainsKey('m6.questbook') -and
+        $m6QuestCount -ne [int]$m6FeaturesById['m6.questbook'].artifact_count) {
+        Add-LintError "M6 trace quest count mismatch: trace=$($m6FeaturesById['m6.questbook'].artifact_count), source=$m6QuestCount"
+    }
+
+    $nuclearGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m6_nuclear_epoch_gate.js'
+    if (Test-Path -LiteralPath $nuclearGatePath -PathType Leaf) {
+        $nuclearGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $nuclearGatePath
+        # The two entry machines are the whole lock. If either stops being
+        # rebuilt on HV GregTech parts, the domain silently reopens in P1.
+        foreach ($requiredRoute in @('nuclearcraft:manufactory', 'nuclearcraft:alloy_smelter', 'nuclearcraft:fission_reactor_controller')) {
+            if ($nuclearGateText -notmatch [regex]::Escape($requiredRoute)) {
+                Add-LintError "M6 nuclear gate no longer handles $requiredRoute."
+            }
+        }
+        foreach ($requiredComponent in @('gtceu:steel_plate', 'gtceu:hv_machine_hull', 'gtceu:hv_electric_motor')) {
+            if ($nuclearGateText -notmatch [regex]::Escape($requiredComponent)) {
+                Add-LintError "M6 nuclear gate no longer prices the domain entry in $requiredComponent."
+            }
+        }
+        $deferredCount = @([regex]::Matches($nuclearGateText, "'nuclearcraft:[a-z_]+'") | ForEach-Object { $_.Value } | Sort-Object -Unique).Count
+        if ($m6FeaturesById.ContainsKey('m6.epoch_gate')) {
+            $expected = [int]$m6FeaturesById['m6.epoch_gate'].artifact_count + [int]$m6FeaturesById['m6.epoch_gate'].removed_count
+            # Three rebuilt entries plus eight deferred controllers, and the two
+            # casing parts the controller recipe still names.
+            if ($deferredCount -lt $expected) {
+                Add-LintError "M6 nuclear gate names $deferredCount NuclearCraft IDs, fewer than the $expected the trace claims."
+            }
+        }
+    }
+}
+
+# M7 opens the strategic and aerospace epoch. Two regressions are worth making
+# loud here, because both were real conditions of the installed JARs rather than
+# hypotheticals: the HBM machine domain had no entrance at all, and the whole
+# Creating Space stack was reachable in the first epoch for six wooden slabs.
+$m7TracePath = Join-Path $rootPath 'authoring\trace\m7_trace.json'
+$m7Trace = Read-JsonObject $m7TracePath
+$m7ChapterFiles = @('17_p7_strategic_space')
+if ($null -ne $m7Trace) {
+    if ([int]$m7Trace.schema_version -ne 2) { Add-LintError 'm7_trace.json must use schema_version 2.' }
+    if ([string]$m7Trace.build_id -ne 'IF-M7-0001') { Add-LintError 'm7_trace.json must identify IF-M7-0001.' }
+    $m7FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
+    $m7FeaturesById = @{}
+    foreach ($feature in @($m7Trace.features)) {
+        $featureId = [string]$feature.id
+        if ([string]::IsNullOrWhiteSpace($featureId)) { Add-LintError 'M7 trace feature has an empty ID.'; continue }
+        if (-not $m7FeatureIds.Add($featureId)) { Add-LintError "Duplicate M7 trace feature ID: $featureId" }
+        $m7FeaturesById[$featureId] = $feature
+        foreach ($relativeFile in @($feature.files)) {
+            $artifactPath = Join-Path $rootPath (([string]$relativeFile) -replace '/', '\')
+            if (-not (Test-Path -LiteralPath $artifactPath)) { Add-LintError "M7 trace artifact does not exist: $relativeFile ($featureId)" }
+        }
+    }
+
+    $m7QuestCount = 0
+    foreach ($chapterFile in $m7ChapterFiles) {
+        $chapterSource = Read-JsonObject (Join-Path $rootPath "authoring\quests\$chapterFile.json")
+        if ($null -eq $chapterSource) { continue }
+        $m7QuestCount += @($chapterSource.quests).Count
+        if (-not (Test-Path -LiteralPath (Join-Path $rootPath "config\ftbquests\quests\chapters\$chapterFile.snbt") -PathType Leaf)) {
+            Add-LintError "Missing compiled M7 chapter: $chapterFile.snbt"
+        }
+        if ([bool]$chapterSource.optional) { Add-LintError "M7 chapter must not be optional: $chapterFile" }
+    }
+    if ($m7FeaturesById.ContainsKey('m7.questbook') -and
+        $m7QuestCount -ne [int]$m7FeaturesById['m7.questbook'].artifact_count) {
+        Add-LintError "M7 trace quest count mismatch: trace=$($m7FeaturesById['m7.questbook'].artifact_count), source=$m7QuestCount"
+    }
+
+    # The strategic gate is the only entrance the HBM machine domain has: its
+    # assembly machine is produced solely by an assembly machine, so if this
+    # recipe disappears the domain becomes unreachable again rather than early.
+    $strategicGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m7_strategic_epoch_gate.js'
+    if (Test-Path -LiteralPath $strategicGatePath -PathType Leaf) {
+        $strategicGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $strategicGatePath
+        foreach ($requiredRoute in @('hbm_ntm_rebirth:machine_assembly_machine', 'hbm_ntm_rebirth:anvil_iron', 'hbm_ntm_rebirth:anvil_lead')) {
+            if ($strategicGateText -notmatch [regex]::Escape($requiredRoute)) {
+                Add-LintError "M7 strategic gate no longer handles $requiredRoute."
+            }
+        }
+        foreach ($requiredComponent in @('gtceu:titanium_plate', 'gtceu:tungsten_steel_plate', 'gtceu:ev_machine_hull')) {
+            if ($strategicGateText -notmatch [regex]::Escape($requiredComponent)) {
+                Add-LintError "M7 strategic gate no longer prices the domain entry in $requiredComponent."
+            }
+        }
+        # The weapon layer removal is an owner decision, not a stylistic one:
+        # 367 recipes and three stations duplicated TaCZ and Epic Knights from a
+        # plain crafting table.
+        #
+        # Removal by path pattern is a registered exception to the pack rule
+        # "remove by exact ID verified against the JAR"
+        # (industrial_frontier:bypass/pattern_recipe_removal). Its price is the
+        # count assertion: a mod update changes the set silently, and without
+        # the expected number the report would come from a player rather than
+        # from a check. So the pairs themselves are what gets linted.
+        foreach ($removedFolder in @(
+            @{ folder = 'weapon'; expected = 121 },
+            @{ folder = 'armor'; expected = 112 },
+            @{ folder = 'ammo_press'; expected = 89 },
+            @{ folder = 'armor_modules'; expected = 45 }
+        )) {
+            $assertion = "ifRemoveFolder(event, '$($removedFolder.folder)', $($removedFolder.expected))"
+            if (-not $strategicGateText.Contains($assertion)) {
+                Add-LintError "M7 strategic gate no longer asserts the recipe count for hbm_ntm_rebirth:$($removedFolder.folder)/ (expected $($removedFolder.expected))."
+            }
+        }
+        # The two stations whose own recipes survive their folder's removal.
+        foreach ($removedStation in @('hbm_ntm_rebirth:machines/ammo_press', 'hbm_ntm_rebirth:machines/armor_table')) {
+            if ($strategicGateText -notmatch [regex]::Escape($removedStation)) {
+                Add-LintError "M7 strategic gate no longer removes $removedStation."
+            }
+        }
+    }
+
+    # The space gate closes the other half: without it the engine designer costs
+    # six wooden slabs and smooth stone, i.e. the first epoch.
+    $spaceGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m7_space_epoch_gate.js'
+    if (Test-Path -LiteralPath $spaceGatePath -PathType Leaf) {
+        $spaceGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $spaceGatePath
+        foreach ($requiredRoute in @(
+            'creatingspace:rocket_engineer_table', 'creatingspace:rocket_controls',
+            'creatingspace:rocket_casing', 'creatingspace:oxygen_sealer',
+            'creatingspace:air_liquefier', 'creatingspace:mechanical_electrolyzer',
+            'creatingspace:cryogenic_tank', 'creatingspace:rocket_generator'
+        )) {
+            if ($spaceGateText -notmatch [regex]::Escape($requiredRoute)) {
+                Add-LintError "M7 space gate no longer handles $requiredRoute."
+            }
+        }
+    }
+
+    # Destinations belong to GCYR. If the Creating Space route graph regains an
+    # edge to a planet, the pack silently owns two Marses again.
+    $orbitRoutePath = Join-Path $rootPath 'config\paxi\datapacks\IndustrialFrontier-Data\data\creatingspace\creatingspace\rocket_accessible_dimension\earth_orbit.json'
+    $orbitRoute = Read-JsonObject $orbitRoutePath
+    if ($null -eq $orbitRoute) {
+        Add-LintError 'Missing Creating Space orbit route override.'
+    }
+    else {
+        $adjacentNames = @($orbitRoute.adjacentDimensions.PSObject.Properties.Name)
+        if ($adjacentNames.Count -ne 1 -or $adjacentNames[0] -ne 'minecraft:overworld') {
+            Add-LintError "Creating Space low orbit must lead back to the overworld only; found: $($adjacentNames -join ', ')"
+        }
+    }
+
+    # One radiation model. Both switches are the whole decision.
+    $hbmConfigPath = Join-Path $rootPath 'config\hbm_ntm_rebirth-common.toml'
+    if (-not (Test-Path -LiteralPath $hbmConfigPath -PathType Leaf)) {
+        Add-LintError 'Missing HBM common config: the second radiation model would come back on first launch.'
+    }
+    else {
+        $hbmConfigText = Get-Content -Raw -Encoding UTF8 -LiteralPath $hbmConfigPath
+        foreach ($requiredSwitch in @('enableContamination', 'enableChunkRads')) {
+            if ($hbmConfigText -notmatch ('(?m)^\s*{0}\s*=\s*false\s*$' -f [regex]::Escape($requiredSwitch))) {
+                Add-LintError "HBM config must keep $requiredSwitch = false: the pack has exactly one radiation model."
+            }
+        }
+    }
+}
+
 # The municipal water tail must stay closed: every declared sewage product needs
 # a passport, otherwise the loop drains into an undeclared substance again.
 $waterSubstancePath = Join-Path $rootPath 'docs\registries\m2_substance_passports.json'
@@ -312,7 +506,7 @@ if (Test-Path -LiteralPath $chapterGroupsPath -PathType Leaf) {
     if ($chapterGroupsText -notmatch '1000000000000004') {
         Add-LintError 'Main-line chapter group 1000000000000004 is not declared in chapter_groups.snbt.'
     }
-    foreach ($chapterFile in @($m3ChapterFiles + $m4ChapterFiles + $m5ChapterFiles)) {
+    foreach ($chapterFile in @($m3ChapterFiles + $m4ChapterFiles + $m5ChapterFiles + $m6ChapterFiles + $m7ChapterFiles)) {
         $compiled = Join-Path $rootPath "config\ftbquests\quests\chapters\$chapterFile.snbt"
         if (-not (Test-Path -LiteralPath $compiled -PathType Leaf)) { continue }
         $compiledText = Get-Content -Raw -Encoding UTF8 -LiteralPath $compiled

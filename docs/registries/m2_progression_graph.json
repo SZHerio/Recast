@@ -434,15 +434,22 @@
         "industrial_frontier:contract/chemistry_to_civil_nuclear"
       ],
       "required_substance_refs": [
-        "industrial_frontier:substance/uranium",
-        "industrial_frontier:substance/thorium",
-        "industrial_frontier:substance/uranium_concentrate",
-        "industrial_frontier:substance/reactor_fuel",
-        "industrial_frontier:substance/spent_fuel",
-        "industrial_frontier:substance/fission_products",
+        "industrial_frontier:substance/beryllium",
+        "industrial_frontier:substance/boron",
         "industrial_frontier:substance/coolant",
         "industrial_frontier:substance/decontamination_agent",
-        "industrial_frontier:substance/specialized_propellant"
+        "industrial_frontier:substance/fission_products",
+        "industrial_frontier:substance/fluorite",
+        "industrial_frontier:substance/graphite",
+        "industrial_frontier:substance/lithium",
+        "industrial_frontier:substance/reactor_fuel",
+        "industrial_frontier:substance/reactor_isotopes",
+        "industrial_frontier:substance/specialized_propellant",
+        "industrial_frontier:substance/spent_fuel",
+        "industrial_frontier:substance/thorium",
+        "industrial_frontier:substance/uranium",
+        "industrial_frontier:substance/uranium_concentrate",
+        "industrial_frontier:substance/zirconium"
       ],
       "infrastructure_refs": [
         "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
@@ -1650,7 +1657,7 @@
       "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=oxygen/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=oxygen/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2070,7 +2077,7 @@
       "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=plutonium/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=plutonium/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2085,7 +2092,7 @@
       "to_ref": "industrial_frontier:process/future/strategic_materials",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=plutonium/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=plutonium/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2115,7 +2122,7 @@
       "to_ref": "industrial_frontier:process/future/rocket_and_planetary_logistics",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=rocket_fuel/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=rocket_fuel/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2130,7 +2137,7 @@
       "to_ref": "industrial_frontier:process/future/rocket_and_planetary_logistics",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=oxidizer/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=oxidizer/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2145,7 +2152,7 @@
       "to_ref": "industrial_frontier:process/future/rocket_and_planetary_logistics",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=aerospace_composite/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=aerospace_composite/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2359,7 +2366,7 @@
       "to_ref": "industrial_frontier:epoch/p4",
       "relation": "PROCESS_ENABLES_EPOCH",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=oxygen/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=oxygen/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2419,7 +2426,7 @@
       "to_ref": "industrial_frontier:epoch/p7",
       "relation": "PROCESS_ENABLES_EPOCH",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=plutonium/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=plutonium/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -2434,7 +2441,7 @@
       "to_ref": "industrial_frontier:epoch/p7",
       "relation": "PROCESS_ENABLES_EPOCH",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=rocket_fuel/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=rocket_fuel/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -4322,6 +4329,244 @@
       "gate_refs": [
         "industrial_frontier:gate/progression/dependency_static",
         "industrial_frontier:gate/progression/future_domains"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0246",
+      "from_ref": "industrial_frontier:substance/lithium",
+      "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=lithium/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0247",
+      "from_ref": "industrial_frontier:substance/lithium",
+      "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=lithium/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0248",
+      "from_ref": "industrial_frontier:substance/boron",
+      "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=boron/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0249",
+      "from_ref": "industrial_frontier:substance/boron",
+      "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=boron/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0250",
+      "from_ref": "industrial_frontier:substance/graphite",
+      "to_ref": "industrial_frontier:process/gtceu/foundational_feedstock_preparation",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=graphite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0251",
+      "from_ref": "industrial_frontier:substance/graphite",
+      "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=graphite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0252",
+      "from_ref": "industrial_frontier:substance/fluorite",
+      "to_ref": "industrial_frontier:process/gtceu/geological_ore_veins",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=fluorite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0253",
+      "from_ref": "industrial_frontier:substance/fluorite",
+      "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=fluorite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0254",
+      "from_ref": "industrial_frontier:substance/zirconium",
+      "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=zirconium/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0255",
+      "from_ref": "industrial_frontier:substance/zirconium",
+      "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=zirconium/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0256",
+      "from_ref": "industrial_frontier:substance/beryllium",
+      "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=beryllium/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0257",
+      "from_ref": "industrial_frontier:substance/beryllium",
+      "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=beryllium/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0258",
+      "from_ref": "industrial_frontier:substance/reactor_isotopes",
+      "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "STATIC_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=reactor_isotopes/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0259",
+      "from_ref": "industrial_frontier:substance/rocket_fuel",
+      "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=rocket_fuel/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0260",
+      "from_ref": "industrial_frontier:substance/oxidizer",
+      "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=oxidizer/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0261",
+      "from_ref": "industrial_frontier:substance/oxygen",
+      "to_ref": "industrial_frontier:process/future/rocket_and_planetary_logistics",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=oxygen/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0262",
+      "from_ref": "industrial_frontier:substance/aerospace_composite",
+      "to_ref": "industrial_frontier:process/gtceu/precision_metallurgy",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=aerospace_composite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
       ]
     }
   ],

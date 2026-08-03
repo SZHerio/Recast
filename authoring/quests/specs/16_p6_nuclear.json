@@ -1,0 +1,350 @@
+{
+  "key": "p6",
+  "file": "16_p6_nuclear",
+  "chapter_id": "2016000000000001",
+  "group_id": "1000000000000004",
+  "icon": "nuclearcraft:fission_reactor_controller",
+  "order": 7,
+  "tag": "mainline",
+  "optional": false,
+  "xp": 70,
+  "title_ru": "16 — P6. Атомная индустрия",
+  "title_en": "16 — P6. Nuclear industry",
+  "sub_ru": "Энергия, которая наказывает за небрежность",
+  "sub_en": "Power that punishes carelessness",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "nuclearcraft:fission_reactor_controller", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Энергия перестаёт быть проблемой",
+        "subtitle": "И начинает быть ответственностью",
+        "desc": [
+          "До сих пор энергию добывали: жгли уголь, крутили турбины, тянули кабели. Её всегда не хватало, и это было понятное, привычное ограничение.",
+          "Реактор снимает это ограничение целиком. Одна станция закрывает базовую нагрузку города и всех отраслей сразу — и взамен приносит первую машину в сборке, которая наказывает за небрежность не потерей ресурсов, а потерей района.",
+          "Поэтому глава устроена не как «построй и включи». Сначала вещества, потом очистка, потом измерение и защита, и только потом пуск. Порядок здесь важнее скорости."
+        ],
+        "task": "Понять, чем реактор отличается от генератора"
+      },
+      "en": {
+        "title": "Power stops being the problem",
+        "subtitle": "And starts being a responsibility",
+        "desc": [
+          "Until now power was mined: burn coal, spin turbines, run cable. There was never enough, and that was a clear, familiar limit.",
+          "A reactor removes that limit entirely. One station covers the base load of the city and every industry at once — and in exchange brings the first machine in this pack that punishes carelessness with the loss of a district rather than the loss of resources.",
+          "So this chapter is not build-and-switch-on. First the substances, then purification, then measurement and shielding, and only then startup. Order matters more than speed here."
+        ],
+        "task": "Understand how a reactor differs from a generator"
+      }
+    },
+    {
+      "slug": "materials", "x": 3, "y": -3, "icon": "nuclearcraft:graphite_block", "deps": ["intro"],
+      "item": "nuclearcraft:graphite_block",
+      "ru": {
+        "title": "Шесть новых веществ",
+        "subtitle": "И ни одно из них не топливо",
+        "desc": [
+          "Атомная отрасль держится не на уране. Она держится на материалах, которые управляют реакцией: графит замедляет нейтроны, бор их поглощает, бериллий отражает, цирконий держит топливо в оболочке, литий и флюорит несут тепло.",
+          "Уран без них — просто тяжёлый металл. Именно поэтому паспорта этих шести веществ заведены раньше, чем открыт реактор.",
+          "Графит — первая точка, где ранняя металлургия напрямую питает атомную отрасль: он делается из углерода коксовой линии второй эпохи, а не добывается. Реакторная чистота отличается от технической, и обычный угольный блок замедлителем не станет."
+        ],
+        "task": "Получить графитовый блок"
+      },
+      "en": {
+        "title": "Six new substances",
+        "subtitle": "And none of them is fuel",
+        "desc": [
+          "The nuclear industry does not rest on uranium. It rests on the materials that control the reaction: graphite slows neutrons, boron absorbs them, beryllium reflects them, zirconium holds the fuel in cladding, lithium and fluorite carry the heat.",
+          "Without them uranium is just a heavy metal. That is exactly why passports for these six substances were written before the reactor was opened.",
+          "Graphite is the first point where early metallurgy feeds the nuclear industry directly: it is made from the carbon of the second-epoch coke line, not mined. Reactor purity differs from technical, and an ordinary coal block will not become a moderator."
+        ],
+        "task": "Obtain a graphite block"
+      }
+    },
+    {
+      "slug": "entry", "x": 6, "y": -3, "icon": "nuclearcraft:manufactory", "deps": ["materials"],
+      "item": "nuclearcraft:manufactory",
+      "ru": {
+        "title": "Первая машина домена",
+        "subtitle": "Вход стоит стали и электроники HV",
+        "desc": [
+          "Штатно первая машина NuclearCraft стоит свинца, кремня и поршня — то есть вся атомная промышленность открывалась бы в первую эпоху, до стали, до электричества и до города.",
+          "Здесь она стоит стальных пластин, катушки напряжения, электромотора и корпуса машины уровня HV. Это шестая эпоха и ничто раньше.",
+          "Замок стоит ровно на двух машинах — этой и сплавной печи. Всё остальное в моде собирается уже из них, поэтому 4331 рецепт трогать не пришлось: закрыв вход, закрываешь домен целиком."
+        ],
+        "task": "Собрать переработчик NuclearCraft"
+      },
+      "en": {
+        "title": "The domain's first machine",
+        "subtitle": "Entry costs steel and HV electronics",
+        "desc": [
+          "By default the first NuclearCraft machine costs lead, flint and a piston — meaning the whole nuclear industry would open in the first epoch, before steel, before electricity and before the city.",
+          "Here it costs steel plates, a voltage coil, an electric motor and an HV machine hull. That is the sixth epoch and nothing earlier.",
+          "The lock sits on exactly two machines — this one and the alloy smelter. Everything else in the mod is built from them, so all 4331 recipes were left alone: close the entrance and you close the domain."
+        ],
+        "task": "Build the NuclearCraft manufactory"
+      }
+    },
+    {
+      "slug": "alloys", "x": 9, "y": -3, "icon": "nuclearcraft:alloy_smelter", "deps": ["entry"],
+      "item": "nuclearcraft:alloy_smelter",
+      "ru": {
+        "title": "Сплавы отрасли",
+        "subtitle": "Ферробор, прочный сплав и оболочка",
+        "desc": [
+          "Вторая машина входа делает то, ради чего атомной отрасли нужна своя металлургия: сплавы, которые держат нейтронный поток, температуру и давление одновременно.",
+          "Ферробор поглощает и держит форму. Прочный сплав идёт в корпуса. Цирконий становится оболочкой твэла — и заменить его на дешёвый металл нельзя, иначе исчезает весь смысл подготовки топлива.",
+          "С этого момента домен самодостаточен по конструкционным материалам и больше не зависит от чужих деталей."
+        ],
+        "task": "Собрать сплавную печь"
+      },
+      "en": {
+        "title": "The industry's alloys",
+        "subtitle": "Ferroboron, tough alloy and cladding",
+        "desc": [
+          "The second entry machine does what makes a dedicated metallurgy necessary: alloys that hold neutron flux, temperature and pressure at the same time.",
+          "Ferroboron absorbs and keeps its shape. Tough alloy goes into casings. Zirconium becomes fuel cladding — and swapping it for a cheap metal is not allowed, or the whole point of fuel preparation disappears.",
+          "From here the domain is self-sufficient in structural materials and no longer depends on borrowed parts."
+        ],
+        "task": "Build the alloy smelter"
+      }
+    },
+    {
+      "slug": "purification", "x": 12, "y": -4.5, "icon": "minecraft:bucket", "deps": ["alloys"],
+      "ru": {
+        "title": "Очистка и конверсия",
+        "subtitle": "Руда — ещё не топливо",
+        "desc": [
+          "Между урановой рудой и тем, что можно загрузить в реактор, лежит вся химия четвёртой эпохи: выщелачивание, осаждение, очистка и перевод в соединение, пригодное для разделения.",
+          "Это не формальность. На каждой ступени часть массы уходит в хвосты, и хвосты никуда не исчезают — их учитывают так же, как стоки водной линии.",
+          "Практический вывод тот же, что в Академии элементов: не берите чистоту выше, чем требует следующая ступень. Лишняя очистка — потраченная энергия и лишний отход."
+        ],
+        "task": "Проследить путь от руды до соединения"
+      },
+      "en": {
+        "title": "Purification and conversion",
+        "subtitle": "Ore is not yet fuel",
+        "desc": [
+          "Between uranium ore and something you can load into a reactor lies the whole chemistry of the fourth epoch: leaching, precipitation, purification and conversion into a compound fit for separation.",
+          "This is not a formality. At every step part of the mass leaves as tailings, and tailings do not vanish — they are accounted for exactly like the effluent of the water line.",
+          "The practical conclusion is the same as in the Academy of Elements: never take purity higher than the next step requires. Extra refining is spent energy and extra waste."
+        ],
+        "task": "Follow the route from ore to compound"
+      }
+    },
+    {
+      "slug": "enrichment", "x": 15, "y": -4.5, "icon": "nuclearcraft:centrifuge", "deps": ["purification"],
+      "item": "nuclearcraft:centrifuge",
+      "ru": {
+        "title": "Обогащение",
+        "subtitle": "Разделение по массе, а не по химии",
+        "desc": [
+          "Изотопы одного элемента химически неразличимы — их нельзя развести реакцией. Разделяет их только масса, и разница составляет доли процента.",
+          "Отсюда центрифуга и отсюда же цена вопроса: обогащение стоит энергии несопоставимо больше, чем любая предыдущая ступень очистки.",
+          "И отсюда же обеднённый остаток. Он не мусор: у него своя роль в защите и в поздних сплавах, поэтому в отвал он не идёт."
+        ],
+        "task": "Собрать центрифугу"
+      },
+      "en": {
+        "title": "Enrichment",
+        "subtitle": "Separation by mass, not by chemistry",
+        "desc": [
+          "Isotopes of one element are chemically identical — no reaction will separate them. Only mass will, and the difference is a fraction of a percent.",
+          "Hence the centrifuge, and hence the price: enrichment costs incomparably more energy than any earlier purification step.",
+          "And hence the depleted remainder. It is not rubbish: it has its own role in shielding and in late alloys, so it does not go to the dump."
+        ],
+        "task": "Build the centrifuge"
+      }
+    },
+    {
+      "slug": "fuel", "x": 18, "y": -4.5, "icon": "nuclearcraft:fission_reactor_solid_fuel_cell", "deps": ["enrichment"],
+      "item": "nuclearcraft:fission_reactor_solid_fuel_cell",
+      "ru": {
+        "title": "Изготовление топлива",
+        "subtitle": "Таблетка, оболочка, сборка",
+        "desc": [
+          "Обогащённый материал прессуется в таблетки, таблетки набираются в циркониевую оболочку, оболочка становится топливной ячейкой. Каждая ступень существует ради одного: чтобы продукты деления остались внутри.",
+          "Первую загрузку разрешено собрать вручную — ровно один раз, чтобы понять устройство. Дальше это делает линия: собирать вручную по десятку сборок под каждую перегрузку сборка не заставляет.",
+          "Готовая ячейка уже опасна. С этого момента дозиметр перестаёт быть формальностью."
+        ],
+        "task": "Изготовить топливную ячейку"
+      },
+      "en": {
+        "title": "Fuel fabrication",
+        "subtitle": "Pellet, cladding, assembly",
+        "desc": [
+          "Enriched material is pressed into pellets, pellets are stacked into zirconium cladding, the cladding becomes a fuel cell. Every step exists for one reason: to keep fission products inside.",
+          "The first load may be assembled by hand — exactly once, to understand how it works. After that a line does it: this pack will not make you hand-build a dozen assemblies for every refuelling.",
+          "A finished cell is already dangerous. From this point the dosimeter stops being a formality."
+        ],
+        "task": "Fabricate a fuel cell"
+      }
+    },
+    {
+      "slug": "dosimetry", "x": 12, "y": 0, "icon": "nuclearcraft:geiger_counter", "deps": ["alloys"],
+      "item": "nuclearcraft:geiger_counter",
+      "ru": {
+        "title": "Измерение и защита",
+        "subtitle": "Единственное чувство, которого у человека нет",
+        "desc": [
+          "Радиацию нельзя увидеть, услышать или почувствовать вовремя. Первый признак ошибки — цифра на приборе, а не самочувствие. Поэтому счётчик собирается до реактора, а не после.",
+          "Защита складывается из трёх вещей: расстояние, время и преграда. Свинец и бетон работают всегда, костюм — только пока цел.",
+          "Команда «/if_nuclear_safety» держит весь регламент: измерение, защита, хранение, аварийный останов и дезактивация. Он не про осторожность вообще, а про конкретные механики этого мода."
+        ],
+        "task": "Собрать счётчик Гейгера"
+      },
+      "en": {
+        "title": "Measurement and shielding",
+        "subtitle": "The one sense humans do not have",
+        "desc": [
+          "Radiation cannot be seen, heard or felt in time. The first sign of a mistake is a number on an instrument, not how you feel. That is why the counter is built before the reactor, not after.",
+          "Shielding is three things: distance, time and a barrier. Lead and concrete always work; a suit works only while it is intact.",
+          "The command /if_nuclear_safety holds the whole procedure: measurement, shielding, storage, emergency shutdown and decontamination. It is not about caution in general but about this mod's actual mechanics."
+        ],
+        "task": "Build a Geiger counter"
+      }
+    },
+    {
+      "slug": "reactor", "x": 15, "y": 0, "icon": "nuclearcraft:fission_reactor_controller", "deps": ["fuel", "dosimetry"],
+      "item": "nuclearcraft:fission_reactor_controller",
+      "ru": {
+        "title": "Первый безопасный реактор",
+        "subtitle": "Теплоотвод проектируется раньше пуска",
+        "desc": [
+          "Реактор — это не блок, а сборка: корпус, топливные ячейки, замедлитель, поглотители и теплоотвод. Работает он тогда, когда выделяемое тепло меньше отводимого, и ни минутой дольше.",
+          "Поэтому теплоотвод считают до пуска, а не добавляют, когда температура пошла вверх. Запас по температуре — это и есть разница между станцией и аварией.",
+          "Первый реактор строится вручную по этой главе. Дальше повторное строительство одинаковых мультиблоков автоматизирует Multi Builder Tool — заставлять выкладывать сотню блоков руками во второй и третий раз сборка не будет."
+        ],
+        "task": "Собрать контроллер реактора деления"
+      },
+      "en": {
+        "title": "The first safe reactor",
+        "subtitle": "Heat removal is designed before startup",
+        "desc": [
+          "A reactor is not a block but an assembly: casing, fuel cells, moderator, absorbers and heat removal. It runs while the heat produced stays below the heat removed, and not a minute longer.",
+          "So heat removal is calculated before startup, not added once the temperature climbs. Thermal margin is exactly the difference between a power station and an accident.",
+          "The first reactor is built by hand from this chapter. After that the Multi Builder Tool automates rebuilding identical multiblocks — this pack will not make you place a hundred blocks by hand a second and third time."
+        ],
+        "task": "Build the fission reactor controller"
+      }
+    },
+    {
+      "slug": "heat_loop", "x": 18, "y": 0, "icon": "nuclearcraft:heat_exchanger", "deps": ["reactor"],
+      "item": "nuclearcraft:heat_exchanger",
+      "ru": {
+        "title": "Замкнутый тепловой контур",
+        "subtitle": "Теплоноситель ходит по кругу",
+        "desc": [
+          "Реактор не производит электричество. Он производит тепло, и всё остальное — способ это тепло донести до турбины, не потеряв и не выпустив наружу.",
+          "Контур замкнут: теплоноситель забирает тепло, теплообменник передаёт его воде, вода становится паром, пар отдаёт энергию турбине и конденсируется обратно. Свободного сброса теплоносителя в сборке нет — ни в реку, ни в воздух.",
+          "Отсюда и требование городского контракта: станция, сбрасывающая тепло наружу, городу не сдаётся."
+        ],
+        "task": "Собрать теплообменник"
+      },
+      "en": {
+        "title": "The closed heat loop",
+        "subtitle": "Coolant travels in a circle",
+        "desc": [
+          "A reactor does not produce electricity. It produces heat, and everything else is a way to carry that heat to a turbine without losing it or letting it out.",
+          "The loop is closed: coolant takes the heat, the exchanger passes it to water, water becomes steam, steam gives its energy to the turbine and condenses back. There is no free coolant discharge in this pack — not into a river, not into the air.",
+          "Hence the city contract's requirement: a station that dumps heat outside is not accepted by the city."
+        ],
+        "task": "Build the heat exchanger"
+      }
+    },
+    {
+      "slug": "turbine", "x": 21, "y": 0, "icon": "nuclearcraft:turbine_controller", "deps": ["heat_loop"],
+      "item": "nuclearcraft:turbine_controller",
+      "ru": {
+        "title": "Пар в электричество",
+        "subtitle": "Знакомая машина на новом масштабе",
+        "desc": [
+          "Турбина знакома со второй эпохи: пар давит на лопатки, вал крутится, обмотка даёт ток. Меняется только масштаб — и то, что источник пара теперь нельзя просто выключить.",
+          "Длина ротора, материал лопаток и обмотка определяют, сколько энергии удастся снять с того же пара. Это инженерная задача с измеримым ответом, а не украшение.",
+          "Здесь замыкается вся цепочка эпохи: руда, очистка, обогащение, топливо, тепло, пар, ток."
+        ],
+        "task": "Собрать контроллер турбины"
+      },
+      "en": {
+        "title": "Steam into electricity",
+        "subtitle": "A familiar machine at a new scale",
+        "desc": [
+          "The turbine has been familiar since the second epoch: steam pushes the blades, the shaft spins, the coil gives current. Only the scale changes — and the fact that the steam source can no longer simply be switched off.",
+          "Rotor length, blade material and coil decide how much energy you take from the same steam. That is an engineering problem with a measurable answer, not decoration.",
+          "Here the whole chain of the epoch closes: ore, purification, enrichment, fuel, heat, steam, current."
+        ],
+        "task": "Build the turbine controller"
+      }
+    },
+    {
+      "slug": "spent_fuel", "x": 18, "y": 3, "icon": "nuclearcraft:fuel_reprocessor", "deps": ["reactor"],
+      "item": "nuclearcraft:fuel_reprocessor",
+      "ru": {
+        "title": "Выдержка и переработка ОЯТ",
+        "subtitle": "Топливо не заканчивается, оно меняется",
+        "desc": [
+          "Отработавшая сборка не пустая. В ней осталось делящееся вещество, накопились продукты деления и появились новые элементы, которых в природе почти нет.",
+          "Сначала выдержка: свежевыгруженное топливо слишком активно, чтобы с ним работать, и должно отстояться. Потом переработка возвращает годное в цикл, а остальное отправляет в долговременное хранение.",
+          "Это и есть замыкание цикла. Без него станция работает, но превращается в склад проблем — а городской контракт требует хранилище выдержки на территории."
+        ],
+        "task": "Собрать переработчик топлива"
+      },
+      "en": {
+        "title": "Cooling and reprocessing spent fuel",
+        "subtitle": "Fuel does not run out, it changes",
+        "desc": [
+          "A spent assembly is not empty. Fissile material remains, fission products have accumulated, and new elements have appeared that barely exist in nature.",
+          "First the cooling pond: freshly unloaded fuel is too active to handle and must stand. Then reprocessing returns what is usable to the cycle and sends the rest to long-term storage.",
+          "This is what closing the cycle means. Without it the station still runs but becomes a warehouse of problems — and the city contract demands a cooling store on site."
+        ],
+        "task": "Build the fuel reprocessor"
+      }
+    },
+    {
+      "slug": "isotopes", "x": 21, "y": 3, "icon": "nuclearcraft:isotope_separator", "deps": ["spent_fuel"],
+      "item": "nuclearcraft:isotope_separator",
+      "ru": {
+        "title": "Разделение изотопов",
+        "subtitle": "То, что можно получить только реактором",
+        "desc": [
+          "Изотопы не добываются. Они получаются облучением мишеней в работающем реакторе и разделением — то есть существуют только у того, кто держит станцию.",
+          "Это единственный законный путь к нескольким поздним материалам, и обойти его нельзя: фракции не продают обязательные топливные изотопы, торговый обход закрыт.",
+          "Излишек сверх собственных нужд виден внешнему миру. Что из этого следует — в главе про операции."
+        ],
+        "task": "Собрать разделитель изотопов"
+      },
+      "en": {
+        "title": "Isotope separation",
+        "subtitle": "What only a reactor can give you",
+        "desc": [
+          "Isotopes are not mined. They come from irradiating targets in a running reactor and separating the result — meaning only whoever keeps a station has them.",
+          "This is the only legitimate route to several late materials, and it cannot be bypassed: factions do not sell mandatory fuel isotopes, that trade route is closed.",
+          "A surplus beyond your own needs is visible to the outside world. What follows from that is in the operations chapter."
+        ],
+        "task": "Build the isotope separator"
+      }
+    },
+    {
+      "slug": "city_plant", "x": 24, "y": 1.5, "icon": "minecraft:writable_book", "deps": ["turbine", "isotopes"],
+      "ru": {
+        "title": "Городская АЭС",
+        "subtitle": "Междоменный мегапроект",
+        "desc": [
+          "Станция сдаётся городу, когда закрыт контур: реактор с запасом по температуре, теплообменник, турбина, конденсация, хранилище выдержки, резервное питание собственных нужд и радиационный контроль по периметру.",
+          "Награда — не предмет. Базовая нагрузка города переходит на станцию, и энергия перестаёт быть узким местом для всех остальных отраслей сразу.",
+          "Состав, награду и условие отказа показывает «/if_nuclear_contract». Условие отказа простое: станция, сбрасывающая тепло или ОЯТ наружу, городу не сдаётся."
+        ],
+        "task": "Разобрать состав контракта на станцию"
+      },
+      "en": {
+        "title": "The city power station",
+        "subtitle": "A cross-domain megaproject",
+        "desc": [
+          "The station is handed to the city when the loop is closed: a reactor with thermal margin, an exchanger, a turbine, condensation, a cooling store, backup power for its own needs and radiation monitoring around the perimeter.",
+          "The reward is not an item. The city's base load moves to the station, and power stops being the bottleneck for every other industry at once.",
+          "The command /if_nuclear_contract shows the terms, the reward and the refusal condition. The refusal is simple: a station that dumps heat or spent fuel outside is not accepted."
+        ],
+        "task": "Work through the station contract"
+      }
+    }
+  ]
+}

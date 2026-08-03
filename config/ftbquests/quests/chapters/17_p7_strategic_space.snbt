@@ -1,0 +1,582 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "17_p7_strategic_space"
+	group: "1000000000000004"
+	icon: "gcyr:launch_pad"
+	id: "2017000000000001"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{industrial_frontier.quest.p7.intro.desc.1}"
+				"{industrial_frontier.quest.p7.intro.desc.2}"
+				"{industrial_frontier.quest.p7.intro.desc.3}"
+			]
+			icon: "gcyr:launch_pad"
+			id: "3017000000000001"
+			rewards: [{
+				id: "5017000000000001"
+				type: "xp"
+				xp: 80
+			}]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "{industrial_frontier.quest.p7.intro.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000001"
+				title: "{industrial_frontier.quest.p7.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.intro.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3017000000000001"]
+			description: [
+				"{industrial_frontier.quest.p7.hbm_entry.desc.1}"
+				"{industrial_frontier.quest.p7.hbm_entry.desc.2}"
+				"{industrial_frontier.quest.p7.hbm_entry.desc.3}"
+			]
+			icon: "hbm_ntm_rebirth:machine_assembly_machine"
+			id: "3017000000000002"
+			rewards: [{
+				id: "5017000000000002"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.hbm_entry.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000002"
+				item: {
+					Count: 1
+					id: "hbm_ntm_rebirth:machine_assembly_machine"
+				}
+				title: "{industrial_frontier.quest.p7.hbm_entry.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.hbm_entry.title}"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3017000000000002"]
+			description: [
+				"{industrial_frontier.quest.p7.protected_zone.desc.1}"
+				"{industrial_frontier.quest.p7.protected_zone.desc.2}"
+				"{industrial_frontier.quest.p7.protected_zone.desc.3}"
+			]
+			icon: "hbm_ntm_rebirth:steel_scaffold"
+			id: "3017000000000003"
+			rewards: [{
+				id: "5017000000000003"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.protected_zone.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000003"
+				title: "{industrial_frontier.quest.p7.protected_zone.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.protected_zone.title}"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3017000000000003"]
+			description: [
+				"{industrial_frontier.quest.p7.rbmk.desc.1}"
+				"{industrial_frontier.quest.p7.rbmk.desc.2}"
+				"{industrial_frontier.quest.p7.rbmk.desc.3}"
+			]
+			icon: "hbm_ntm_rebirth:rbmk_console"
+			id: "3017000000000004"
+			rewards: [{
+				id: "5017000000000004"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.rbmk.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000004"
+				item: {
+					Count: 1
+					id: "hbm_ntm_rebirth:rbmk_console"
+				}
+				title: "{industrial_frontier.quest.p7.rbmk.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.rbmk.title}"
+			x: 9.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3017000000000003"]
+			description: [
+				"{industrial_frontier.quest.p7.purex.desc.1}"
+				"{industrial_frontier.quest.p7.purex.desc.2}"
+				"{industrial_frontier.quest.p7.purex.desc.3}"
+			]
+			icon: "hbm_ntm_rebirth:machine_purex"
+			id: "3017000000000005"
+			rewards: [{
+				id: "5017000000000005"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.purex.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000005"
+				title: "{industrial_frontier.quest.p7.purex.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.purex.title}"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3017000000000005"]
+			description: [
+				"{industrial_frontier.quest.p7.radiation_model.desc.1}"
+				"{industrial_frontier.quest.p7.radiation_model.desc.2}"
+				"{industrial_frontier.quest.p7.radiation_model.desc.3}"
+			]
+			icon: "hbm_ntm_rebirth:ingot_plutonium"
+			id: "3017000000000006"
+			rewards: [{
+				id: "5017000000000006"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.radiation_model.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000006"
+				title: "{industrial_frontier.quest.p7.radiation_model.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.radiation_model.title}"
+			x: 12.0d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"3017000000000004"
+				"3017000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.p7.strategic_charge.desc.1}"
+				"{industrial_frontier.quest.p7.strategic_charge.desc.2}"
+				"{industrial_frontier.quest.p7.strategic_charge.desc.3}"
+				"{industrial_frontier.quest.p7.strategic_charge.desc.4}"
+			]
+			icon: "hbm_ntm_rebirth:nuke_gadget"
+			id: "3017000000000007"
+			rewards: [{
+				id: "5017000000000007"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.strategic_charge.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000007"
+				title: "{industrial_frontier.quest.p7.strategic_charge.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.strategic_charge.title}"
+			x: 12.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3017000000000007"]
+			description: [
+				"{industrial_frontier.quest.p7.domain_links.desc.1}"
+				"{industrial_frontier.quest.p7.domain_links.desc.2}"
+				"{industrial_frontier.quest.p7.domain_links.desc.3}"
+			]
+			icon: "hbm_ntm_rebirth:anvil_iron"
+			id: "3017000000000008"
+			rewards: [{
+				id: "5017000000000008"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.domain_links.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000008"
+				title: "{industrial_frontier.quest.p7.domain_links.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.domain_links.title}"
+			x: 15.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3017000000000008"]
+			description: [
+				"{industrial_frontier.quest.p7.clearances.desc.1}"
+				"{industrial_frontier.quest.p7.clearances.desc.2}"
+				"{industrial_frontier.quest.p7.clearances.desc.3}"
+			]
+			icon: "gcyr:id_chip"
+			id: "3017000000000009"
+			rewards: [{
+				id: "5017000000000009"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.clearances.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000009"
+				title: "{industrial_frontier.quest.p7.clearances.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.clearances.title}"
+			x: 18.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3017000000000009"]
+			description: [
+				"{industrial_frontier.quest.p7.counterintel.desc.1}"
+				"{industrial_frontier.quest.p7.counterintel.desc.2}"
+				"{industrial_frontier.quest.p7.counterintel.desc.3}"
+			]
+			icon: "gcyr:rocket_scanner"
+			id: "3017000000000010"
+			rewards: [{
+				id: "5017000000000010"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.counterintel.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000010"
+				title: "{industrial_frontier.quest.p7.counterintel.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.counterintel.title}"
+			x: 21.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3017000000000001"]
+			description: [
+				"{industrial_frontier.quest.p7.rocket_materials.desc.1}"
+				"{industrial_frontier.quest.p7.rocket_materials.desc.2}"
+				"{industrial_frontier.quest.p7.rocket_materials.desc.3}"
+			]
+			icon: "gcyr:heat_shielding_fabric"
+			id: "3017000000000011"
+			rewards: [{
+				id: "5017000000000011"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.rocket_materials.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000011"
+				item: {
+					Count: 1
+					id: "gcyr:space_fabric"
+				}
+				title: "{industrial_frontier.quest.p7.rocket_materials.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.rocket_materials.title}"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3017000000000011"]
+			description: [
+				"{industrial_frontier.quest.p7.rocket_fuel.desc.1}"
+				"{industrial_frontier.quest.p7.rocket_fuel.desc.2}"
+				"{industrial_frontier.quest.p7.rocket_fuel.desc.3}"
+			]
+			icon: "gcyr:basic_fuel_tank"
+			id: "3017000000000012"
+			rewards: [{
+				id: "5017000000000012"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.rocket_fuel.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000012"
+				title: "{industrial_frontier.quest.p7.rocket_fuel.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.rocket_fuel.title}"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3017000000000011"]
+			description: [
+				"{industrial_frontier.quest.p7.rocket_electronics.desc.1}"
+				"{industrial_frontier.quest.p7.rocket_electronics.desc.2}"
+				"{industrial_frontier.quest.p7.rocket_electronics.desc.3}"
+			]
+			icon: "gcyr:id_chip"
+			id: "3017000000000013"
+			rewards: [{
+				id: "5017000000000013"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.rocket_electronics.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000013"
+				item: {
+					Count: 1
+					id: "gcyr:id_chip"
+				}
+				title: "{industrial_frontier.quest.p7.rocket_electronics.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.rocket_electronics.title}"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"3017000000000012"
+				"3017000000000013"
+			]
+			description: [
+				"{industrial_frontier.quest.p7.spaceport.desc.1}"
+				"{industrial_frontier.quest.p7.spaceport.desc.2}"
+				"{industrial_frontier.quest.p7.spaceport.desc.3}"
+			]
+			icon: "gcyr:launch_pad"
+			id: "3017000000000014"
+			rewards: [{
+				id: "5017000000000014"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.spaceport.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000014"
+				item: {
+					Count: 1
+					id: "gcyr:launch_pad"
+				}
+				title: "{industrial_frontier.quest.p7.spaceport.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.spaceport.title}"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3017000000000014"]
+			description: [
+				"{industrial_frontier.quest.p7.suit_oxygen.desc.1}"
+				"{industrial_frontier.quest.p7.suit_oxygen.desc.2}"
+				"{industrial_frontier.quest.p7.suit_oxygen.desc.3}"
+			]
+			icon: "gcyr:space_helmet"
+			id: "3017000000000015"
+			rewards: [{
+				id: "5017000000000015"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.suit_oxygen.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000015"
+				item: {
+					Count: 1
+					id: "gcyr:space_helmet"
+				}
+				title: "{industrial_frontier.quest.p7.suit_oxygen.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.suit_oxygen.title}"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3017000000000014"]
+			description: [
+				"{industrial_frontier.quest.p7.first_launch.desc.1}"
+				"{industrial_frontier.quest.p7.first_launch.desc.2}"
+				"{industrial_frontier.quest.p7.first_launch.desc.3}"
+			]
+			icon: "gcyr:basic_rocket_motor"
+			id: "3017000000000016"
+			rewards: [{
+				id: "5017000000000016"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.first_launch.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000016"
+				title: "{industrial_frontier.quest.p7.first_launch.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.first_launch.title}"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"3017000000000015"
+				"3017000000000016"
+			]
+			description: [
+				"{industrial_frontier.quest.p7.sealing_base.desc.1}"
+				"{industrial_frontier.quest.p7.sealing_base.desc.2}"
+				"{industrial_frontier.quest.p7.sealing_base.desc.3}"
+			]
+			icon: "gcyr:airlock_door"
+			id: "3017000000000017"
+			rewards: [{
+				id: "5017000000000017"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.sealing_base.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000017"
+				item: {
+					Count: 1
+					id: "creatingspace:oxygen_sealer"
+				}
+				title: "{industrial_frontier.quest.p7.sealing_base.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.sealing_base.title}"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3017000000000017"]
+			description: [
+				"{industrial_frontier.quest.p7.return_flow.desc.1}"
+				"{industrial_frontier.quest.p7.return_flow.desc.2}"
+				"{industrial_frontier.quest.p7.return_flow.desc.3}"
+			]
+			icon: "gcyr:space_station_package"
+			id: "3017000000000018"
+			rewards: [{
+				id: "5017000000000018"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.return_flow.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000018"
+				title: "{industrial_frontier.quest.p7.return_flow.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.return_flow.title}"
+			x: 18.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3017000000000018"]
+			description: [
+				"{industrial_frontier.quest.p7.planetary.desc.1}"
+				"{industrial_frontier.quest.p7.planetary.desc.2}"
+				"{industrial_frontier.quest.p7.planetary.desc.3}"
+			]
+			icon: "gcyr:mars_marker"
+			id: "3017000000000019"
+			rewards: [{
+				id: "5017000000000019"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.planetary.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000019"
+				title: "{industrial_frontier.quest.p7.planetary.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.planetary.title}"
+			x: 21.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3017000000000016"]
+			description: [
+				"{industrial_frontier.quest.p7.deep_path.desc.1}"
+				"{industrial_frontier.quest.p7.deep_path.desc.2}"
+				"{industrial_frontier.quest.p7.deep_path.desc.3}"
+			]
+			icon: "creatingspace:rocket_engineer_table"
+			id: "3017000000000020"
+			rewards: [{
+				id: "5017000000000020"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.deep_path.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000020"
+				item: {
+					Count: 1
+					id: "creatingspace:rocket_engineer_table"
+				}
+				title: "{industrial_frontier.quest.p7.deep_path.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.p7.deep_path.title}"
+			x: 15.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3017000000000017"]
+			description: [
+				"{industrial_frontier.quest.p7.emergency.desc.1}"
+				"{industrial_frontier.quest.p7.emergency.desc.2}"
+				"{industrial_frontier.quest.p7.emergency.desc.3}"
+			]
+			icon: "gcyr:insulating_fabric"
+			id: "3017000000000021"
+			rewards: [{
+				id: "5017000000000021"
+				type: "xp"
+				xp: 80
+			}]
+			subtitle: "{industrial_frontier.quest.p7.emergency.subtitle}"
+			tags: ["mainline"]
+			tasks: [{
+				id: "4017000000000021"
+				title: "{industrial_frontier.quest.p7.emergency.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.p7.emergency.title}"
+			x: 18.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.p7.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.p7.title}"
+}

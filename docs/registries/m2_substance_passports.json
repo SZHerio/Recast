@@ -262,7 +262,7 @@
     },
     {
       "substance_id": "industrial_frontier:substance/uranium",
-      "status": "GATED_FUTURE_DOMAIN",
+      "status": "ACTIVE_INSTALLED",
       "kind": "ELEMENT",
       "name_ru": "Уран",
       "name_en": "Uranium",
@@ -280,8 +280,8 @@
       "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
       "first_epoch": 6,
       "automation": {
-        "first_automatic_epoch": null,
-        "mass_epoch": null
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
       },
       "renewability": "NONRENEWABLE",
       "form_refs": [],
@@ -293,8 +293,8 @@
         },
         {
           "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
-          "status": "GATED_NOT_INSTALLED",
-          "purpose_ru": "Будущие реакторные формы и топливный цикл."
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет очисткой, обогащением, изготовлением топлива и переработкой ОЯТ."
         },
         {
           "domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
@@ -315,7 +315,8 @@
       "canonical_output_policy_ru": "До nuclear install каноничны только подтверждённые GTCEu-формы; реакторные и HBM-формы отсутствуют и будут выбраны после diff.",
       "evidence_refs": [
         "industrial_frontier:evidence/substance/gtceu_uranium",
-        "industrial_frontier:evidence/substance/federation_atomic"
+        "industrial_frontier:evidence/substance/federation_atomic",
+        "industrial_frontier:evidence/substance/nuclearcraft_fuel_cycle"
       ],
       "gate_refs": [
         "industrial_frontier:gate/substance/future_atomic"
@@ -323,7 +324,7 @@
     },
     {
       "substance_id": "industrial_frontier:substance/thorium",
-      "status": "GATED_FUTURE_DOMAIN",
+      "status": "ACTIVE_INSTALLED",
       "kind": "ELEMENT",
       "name_ru": "Торий",
       "name_en": "Thorium",
@@ -341,8 +342,8 @@
       "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
       "first_epoch": 6,
       "automation": {
-        "first_automatic_epoch": null,
-        "mass_epoch": null
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
       },
       "renewability": "NONRENEWABLE",
       "form_refs": [],
@@ -354,8 +355,8 @@
         },
         {
           "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
-          "status": "GATED_NOT_INSTALLED",
-          "purpose_ru": "Будущий альтернативный топливный цикл."
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет очисткой, обогащением, изготовлением топлива и переработкой ОЯТ."
         }
       ],
       "byproduct_refs": [],
@@ -371,7 +372,8 @@
       "canonical_output_policy_ru": "GTCEu остаётся каноническим источником базового вещества; атомные формы выбираются только после установки и проверки мода.",
       "evidence_refs": [
         "industrial_frontier:evidence/substance/gtceu_thorium",
-        "industrial_frontier:evidence/substance/federation_atomic"
+        "industrial_frontier:evidence/substance/federation_atomic",
+        "industrial_frontier:evidence/substance/nuclearcraft_fuel_cycle"
       ],
       "gate_refs": [
         "industrial_frontier:gate/substance/future_atomic"
@@ -826,6 +828,665 @@
       "gate_refs": [
         "industrial_frontier:gate/substance/runtime_pack_test"
       ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/lithium",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "ELEMENT",
+      "name_ru": "Литий",
+      "name_en": "Lithium",
+      "formula": "Li",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "RAW",
+        "TECHNICAL",
+        "CHEMICAL",
+        "REACTOR"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
+      },
+      "renewability": "NONRENEWABLE",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech подтверждает сам материал и его химическую подготовку."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет топливным циклом, реакторами и тепловым контуром."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "литий",
+      "source_strategy_ru": "Литий приходит из общей геологии GregTech и рассолов; собственная генерация NuclearCraft отключена датапаком вместе с остальными 24 источниками руды.",
+      "process_route_ru": "Руда или рассол → концентрат → соль лития → теплоноситель жидкосолевого реактора и охладитель контура.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle"
+      ],
+      "recipe_policy_ru": "Литий не является топливом. Его реакторная роль — соль-носитель и охладитель, поэтому прямых переходов «литий → энергия» не существует.",
+      "waste_policy_ru": "Отработанная соль возвращается в переработку контура, а не сливается: свободного сброса теплоносителя в сборке нет.",
+      "canonical_output_policy_ru": "Каноничны формы GregTech для металла и NuclearCraft для реакторных солей; дубли между ними не заводятся.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_materials"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/boron",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "ELEMENT",
+      "name_ru": "Бор",
+      "name_en": "Boron",
+      "formula": "B",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "RAW",
+        "TECHNICAL",
+        "CHEMICAL",
+        "REACTOR"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
+      },
+      "renewability": "NONRENEWABLE",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech подтверждает сам материал и его химическую подготовку."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет топливным циклом, реакторами и тепловым контуром."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "бор",
+      "source_strategy_ru": "Бор берётся из общей геологии и боратов GregTech; отдельная генерация не вводится.",
+      "process_route_ru": "Руда → бура и борная кислота → карбид бора → поглотитель нейтронов, стержни управления и теплоотвод.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle"
+      ],
+      "recipe_policy_ru": "Бор — управляющий материал, а не источник энергии. Реактор без поглотителя обязан быть неуправляемым, поэтому дешёвых замен стержням не вводится.",
+      "waste_policy_ru": "Отработанные поглотители накапливают активность и идут в то же хранение, что и ОЯТ.",
+      "canonical_output_policy_ru": "Металлический бор и его соединения каноничны в формах GregTech, реакторные детали — в формах NuclearCraft.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_materials"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/graphite",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "ELEMENT",
+      "name_ru": "Графит",
+      "name_en": "Graphite",
+      "formula": "C",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "TECHNICAL",
+        "CHEMICAL",
+        "REACTOR"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech подтверждает сам материал и его химическую подготовку."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет топливным циклом, реакторами и тепловым контуром."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "графит",
+      "source_strategy_ru": "Графит производится из углеродного сырья коксовой линии P2, а не добывается: это первая точка, где ранняя металлургия напрямую питает атомную отрасль.",
+      "process_route_ru": "Кокс и углерод → очистка → графитовый блок реакторной чистоты → замедлитель нейтронов.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/foundational_feedstock_preparation",
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle"
+      ],
+      "recipe_policy_ru": "Реакторная чистота графита отличается от технической: замедлитель нельзя собрать из обычного угольного блока, иначе исчезает смысл очистки.",
+      "waste_policy_ru": "Облучённый графит становится радиоактивным отходом и не возвращается в обычную металлургию.",
+      "canonical_output_policy_ru": "Технический графит каноничен в формах GregTech, реакторный блок — в формах NuclearCraft.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_materials"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/fluorite",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "MINERAL",
+      "name_ru": "Флюорит",
+      "name_en": "Fluorite",
+      "formula": "CaF2",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "RAW",
+        "TECHNICAL",
+        "CHEMICAL"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
+      },
+      "renewability": "NONRENEWABLE",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech подтверждает сам материал и его химическую подготовку."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет топливным циклом, реакторами и тепловым контуром."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "флюорит",
+      "source_strategy_ru": "Флюорит принадлежит геологии GregTech и уже участвует в хлор-фторной химии P4; атомная отрасль становится его вторым потребителем, а не вторым источником.",
+      "process_route_ru": "Руда → плавиковый шпат → фтороводород и фториды → соли жидкосолевого реактора и травление.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/geological_ore_veins",
+        "industrial_frontier:process/gtceu/industrial_chemistry"
+      ],
+      "recipe_policy_ru": "Фтор опасен и остаётся химическим маршрутом: прямого перехода «руда → реакторная соль» не существует.",
+      "waste_policy_ru": "Фторидные стоки нейтрализуются известью в водной линии P4 и не сбрасываются.",
+      "canonical_output_policy_ru": "Каноничны формы GregTech; охладители NuclearCraft на флюорите — специализированная деталь, а не второй материал.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_materials"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/zirconium",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "ELEMENT",
+      "name_ru": "Цирконий",
+      "name_en": "Zirconium",
+      "formula": "Zr",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "RAW",
+        "TECHNICAL",
+        "CHEMICAL",
+        "REACTOR"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
+      },
+      "renewability": "NONRENEWABLE",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech подтверждает сам материал и его химическую подготовку."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет топливным циклом, реакторами и тепловым контуром."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "цирконий",
+      "source_strategy_ru": "Цирконий выделяется из циркона общей геологии; собственная генерация NuclearCraft отключена.",
+      "process_route_ru": "Руда → тетрахлорид → губка → оболочка твэла.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle"
+      ],
+      "recipe_policy_ru": "Оболочка твэла обязана быть циркониевой: замена на дешёвый металл сняла бы весь смысл подготовки топлива.",
+      "waste_policy_ru": "Оболочки отработавших сборок идут в переработку ОЯТ вместе с топливом.",
+      "canonical_output_policy_ru": "Металл каноничен в формах GregTech, топливная ячейка — в форме NuclearCraft.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_fuel_cycle"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/beryllium",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "ELEMENT",
+      "name_ru": "Бериллий",
+      "name_en": "Beryllium",
+      "formula": "Be",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "RAW",
+        "TECHNICAL",
+        "CHEMICAL",
+        "REACTOR"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
+      },
+      "renewability": "NONRENEWABLE",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech подтверждает сам материал и его химическую подготовку."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет топливным циклом, реакторами и тепловым контуром."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
+          "status": "GATED_NOT_INSTALLED",
+          "purpose_ru": "Стратегические применения открываются только в M7 вместе с выбранным HBM-портом."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "бериллий",
+      "source_strategy_ru": "Бериллий берётся из берилла общей геологии; отдельная атомная генерация не вводится.",
+      "process_route_ru": "Берилл → оксид → металл → отражатель нейтронов и обмотка турбины.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle"
+      ],
+      "recipe_policy_ru": "Бериллий токсичен и дорог: он остаётся материалом отражателя и точной обмотки, а не общим конструкционным металлом.",
+      "waste_policy_ru": "Пыль бериллия считается опасной и не попадает в обычные строительные цепочки.",
+      "canonical_output_policy_ru": "Каноничны формы GregTech; детали отражателя — формы NuclearCraft.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_materials"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/reactor_isotopes",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "MIXTURE",
+      "name_ru": "Реакторные изотопы",
+      "name_en": "Reactor isotopes",
+      "formula": null,
+      "formula_status": "NOT_APPLICABLE",
+      "physical_states": [
+        "SOLID",
+        "MIXTURE"
+      ],
+      "purity_classes": [
+        "REACTOR",
+        "DOMAIN_SPECIALIZED"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 6
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "NuclearCraft: Neoteric владеет топливным циклом, реакторами и тепловым контуром."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech подтверждает сам материал и его химическую подготовку."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
+          "status": "GATED_NOT_INSTALLED",
+          "purpose_ru": "Стратегические применения открываются только в M7 вместе с выбранным HBM-портом."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "реакторные изотопы",
+      "source_strategy_ru": "Изотопы не добываются. Они получаются облучением мишеней в работающем реакторе и разделением на центрифуге — то есть существуют только у того, кто держит реактор.",
+      "process_route_ru": "Мишень → облучение в реакторе → выдержка → разделение изотопов → продукт и остаточная активность.",
+      "process_refs": [
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle"
+      ],
+      "recipe_policy_ru": "Изотопы — единственный законный путь к нескольким поздним материалам. Торговый обход у Nuclear Scientist закрыт: фракции не продают обязательные топливные изотопы.",
+      "waste_policy_ru": "Остаточная активность после разделения возвращается в выдержку, а не исчезает.",
+      "canonical_output_policy_ru": "Каноничны формы NuclearCraft; изотопы других доменов связываются тегами, а не дублируются новыми предметами.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_fuel_cycle"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/rocket_fuel",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "MIXTURE",
+      "name_ru": "Ракетное топливо",
+      "name_en": "Rocket Fuel",
+      "formula": null,
+      "formula_status": "UNVERIFIED",
+      "physical_states": [
+        "LIQUID"
+      ],
+      "purity_classes": [
+        "AEROSPACE",
+        "DOMAIN_SPECIALIZED"
+      ],
+      "world_origin_decision_ref": null,
+      "first_epoch": 7,
+      "automation": {
+        "first_automatic_epoch": 7,
+        "mass_epoch": 8
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Топливо расходуется запуском: это единственный потребитель, который сжигает его безвозвратно."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "GregTech владеет синтезом и остаётся единственным производителем."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "ракетное топливо",
+      "source_strategy_ru": "Топливо производится химией GregTech и принимается ракетой по тегу gcyr:vehicle_fuels. Отдельного «ракетного» месторождения не существует: это продукт нефтехимии и азотной линии, а не находка.",
+      "process_route_ru": "Углеводородная фракция и азотная линия P4 → синтез компонентов → смешение до ракетной кондиции → защищённое хранение → заправка на площадке.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/rocket_and_planetary_logistics"
+      ],
+      "recipe_policy_ru": "Ракетное топливо не совпадает с дизельным и общим fuel-тегом: заправить ступень соляркой нельзя. Это отдельная жидкость с отдельной инфраструктурой хранения.",
+      "waste_policy_ru": "Некондиционная партия и промывка возвращаются в химию как сырьё низкого класса, а не сбрасываются. Испарение при хранении — плата за неправильно спроектированный бак, а не бесплатная потеря.",
+      "canonical_output_policy_ru": "Каноническая форма одна — жидкость GregTech. GCYR принимает её тегом и не заводит собственного топлива.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_space"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/oxidizer",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "COMPOUND",
+      "name_ru": "Окислитель",
+      "name_en": "Oxidizer",
+      "formula": "O2",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "LIQUID",
+        "GAS"
+      ],
+      "purity_classes": [
+        "CHEMICAL",
+        "AEROSPACE"
+      ],
+      "world_origin_decision_ref": null,
+      "first_epoch": 7,
+      "automation": {
+        "first_automatic_epoch": 7,
+        "mass_epoch": 8
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Ступень сжигает окислитель вместе с топливом; без него тяги нет ни при каком двигателе."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Разделение воздуха и электролиз принадлежат химии."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "окислитель",
+      "source_strategy_ru": "Окислитель — сжиженный кислород. Он приходит из той же линии, что и дыхательный: разделение воздуха или электролиз воды. Разные только класс чистоты и температура хранения.",
+      "process_route_ru": "Воздух или вода → разделение/электролиз → сжижение → криогенное хранение → подача в ступень.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/rocket_and_planetary_logistics"
+      ],
+      "recipe_policy_ru": "Окислитель нельзя заменить воздухом: в вакууме гореть нечему. Это делает криогенную линию обязательной частью космодрома, а не удобством.",
+      "waste_policy_ru": "Испарившийся кислород возвращается в атмосферу и в этом смысле безвреден. Потеря считается энергетической: заново сжижать придётся за полную цену.",
+      "canonical_output_policy_ru": "Каноническая форма — жидкий кислород GregTech. Газообразный кислород остаётся отдельным веществом дыхательного контура.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_space"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/oxygen",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "ELEMENT",
+      "name_ru": "Кислород",
+      "name_en": "Oxygen",
+      "formula": "O2",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "GAS",
+        "LIQUID"
+      ],
+      "purity_classes": [
+        "TECHNICAL",
+        "CHEMICAL",
+        "AEROSPACE"
+      ],
+      "world_origin_decision_ref": null,
+      "first_epoch": 4,
+      "automation": {
+        "first_automatic_epoch": 4,
+        "mass_epoch": 4
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Обитаемый объём и скафандр — постоянные потребители; без них планета остаётся недоступной."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Производство газа принадлежит химии и работает задолго до космоса."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "кислород",
+      "source_strategy_ru": "Кислород в сборке существует дважды и приходит из одной линии: как окислитель для двигателя и как воздух для человека. Экономить на буфере нельзя ни для того, ни для другого.",
+      "process_route_ru": "Разделение воздуха или электролиз воды → компрессия → буфер → распылитель обитаемого объёма либо криогенное сжижение для ступени.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/rocket_and_planetary_logistics"
+      ],
+      "recipe_policy_ru": "Дыхательный кислород требует непрерывной подачи и питания распылителя. Запас на отказ линии обязателен: восстанавливать её в скафандре без кислорода уже поздно.",
+      "waste_policy_ru": "Утечка из негерметичного объёма — не потеря ресурса, а отказ конструкции. Она не компенсируется увеличением производства.",
+      "canonical_output_policy_ru": "Каноническая газовая форма — кислород GregTech; жизнеобеспечение GCYR и герметизация Creating Space потребляют его, не заводя собственного газа.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_space"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/aerospace_composite",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "MIXTURE",
+      "name_ru": "Аэрокосмический композит",
+      "name_en": "Aerospace Composite",
+      "formula": null,
+      "formula_status": "NOT_APPLICABLE",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "AEROSPACE",
+        "DOMAIN_SPECIALIZED"
+      ],
+      "world_origin_decision_ref": null,
+      "first_epoch": 7,
+      "automation": {
+        "first_automatic_epoch": 7,
+        "mass_epoch": 8
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Корпус, теплозащита и изоляция скафандра держатся на этом классе материалов."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Мономеры и лёгкие сплавы приходят из химии и металлургии."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "аэрокосмический композит",
+      "source_strategy_ru": "Аэрокосмический композит — не один материал, а класс: полиимид, параарамид, стеклопластик и лёгкие сплавы. GCYR производит их собственной химической линией из продуктов нефтехимии P4.",
+      "process_route_ru": "Ароматика и полимеры P4 → синтез мономеров → полимеризация → плёнка, ткань или лист → узел корпуса, теплозащита или изоляция.",
+      "process_refs": [
+        "industrial_frontier:process/gtceu/precision_metallurgy",
+        "industrial_frontier:process/future/rocket_and_planetary_logistics"
+      ],
+      "recipe_policy_ru": "Композит не заменяется сталью того же веса: он отвечает за то, чего сталь не умеет — держать нагрев обшивки и не проводить тепло внутрь. Обратной замены тоже нет.",
+      "waste_policy_ru": "Обрезь и брак полимеризации не переплавляются обратно в исходный мономер: возврат ограничен и всегда с потерей класса.",
+      "canonical_output_policy_ru": "Канонические формы принадлежат GCYR: каптон, параарамид, стеклопластик и бисаллой. Дублирующего композита сборка не заводит.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_space"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/plutonium",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "ELEMENT",
+      "name_ru": "Плутоний",
+      "name_en": "Plutonium",
+      "formula": "Pu",
+      "formula_status": "KNOWN",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "REACTOR",
+        "DOMAIN_SPECIALIZED"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 6,
+      "automation": {
+        "first_automatic_epoch": 6,
+        "mass_epoch": 7
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Гражданский цикл производит плутоний как продукт облучения и возвращает часть в МОКС-топливо."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Стратегический домен — второй и последний потребитель; именно здесь плутоний перестаёт быть топливом."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "плутоний",
+      "source_strategy_ru": "Плутоний не добывается. Он появляется в облучённом топливе и извлекается переработкой — это единственный путь, и он проходит через реактор шестой эпохи.",
+      "process_route_ru": "Облучение уранового топлива → выдержка ОЯТ → переработка (пурекс у HBM, разделение у NuclearCraft) → реакторный или оружейный класс.",
+      "process_refs": [
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+        "industrial_frontier:process/future/strategic_materials"
+      ],
+      "recipe_policy_ru": "Класс плутония определяет применение: реакторный идёт в МОКС-топливо, выделенный — в стратегический домен. Свободного перехода между классами нет.",
+      "waste_policy_ru": "Плутоний имеет дозу и учтён в единой радиационной модели NuclearCraft: он опасен в кармане, а не только в реакторе. Хранение отдельное и поштучное.",
+      "canonical_output_policy_ru": "Формы принадлежат двум доменам сразу: реакторный плутоний каноничен у NuclearCraft, продукты пурекса — у HBM. Третьего производителя сборка не заводит.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/nuclearcraft_fuel_cycle"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
     }
   ],
   "planned_substances": [
@@ -1165,102 +1826,6 @@
       "waste_policy_ru": "Потоки учитываются раздельно: Маточный рассол и нерастворимый осадок направляются в очистку воды или контролируемую утилизацию. Выброс или удаление без описанного приёмника запрещены.",
       "recycle_policy_ru": "Возврат допускается только явным рецептом с измеримыми потерями; самозамкнутый положительный цикл и удвоение канонической формы запрещены.",
       "canonical_output_policy_ru": "Утвердить раздельные RAW, TECHNICAL и CHEMICAL формы; внешние теги использовать только как входной интерфейс.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/planned_chemistry"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [],
-        "blocked_contract_refs": [],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/planned_chemistry_architecture",
-          "industrial_frontier:evidence/substance/mandatory_physical_audit"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
-      "substance_id": "industrial_frontier:substance/oxygen",
-      "group": "P4_INDUSTRIAL_CHEMISTRY",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "Кислород",
-      "name_en": "Oxygen",
-      "russian_term": "кислород",
-      "kind": "ELEMENT",
-      "formula": "O2",
-      "formula_status": "KNOWN",
-      "physical_states": [
-        "GAS"
-      ],
-      "purity_classes": [
-        "TECHNICAL",
-        "CHEMICAL"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 4,
-      "automation": {
-        "first_automatic_epoch": 4,
-        "mass_epoch": 4
-      },
-      "renewability": "UNRESOLVED",
-      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
-      "secondary_owner_domain_refs": [],
-      "form_refs": [],
-      "forms_policy_ru": "До закрытия exit-contract form_refs остаётся пустым: формы назначаются только после overlap-аудита, с одним каноническим выходом на форму и без vendor/runtime ID в проектном слое.",
-      "source_strategy_ru": "Получать разделением воздуха или электролизом подготовленной воды с явной оплатой энергии.",
-      "process_route_ru": "Подготовка сырья → разделение → осушка и очистка → буфер технического либо химического кислорода.",
-      "process_refs": [
-        "industrial_frontier:process/gtceu/industrial_chemistry"
-      ],
-      "recipe_policy_ru": "Производство только в химическом домене; кислород не создаётся пассивно и не конвертируется обратно с энергетической прибылью.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/industrial_chemistry_metallurgy",
-        "industrial_frontier:domain/civil_nuclear_industry",
-        "industrial_frontier:domain/planetary_spaceflight"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «кислород» только в утверждённой междоменной производственной цепочке."
-        },
-        {
-          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «кислород» только в утверждённой междоменной производственной цепочке."
-        },
-        {
-          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «кислород» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Азотсодержащий остаточный газ, влага и продувка учитываются как сопутствующие потоки, а не исчезают бесплатно."
-      ],
-      "waste_policy_ru": "Потоки учитываются раздельно: Азотсодержащий остаточный газ, влага и продувка учитываются как сопутствующие потоки, а не исчезают бесплатно. Выброс или удаление без описанного приёмника запрещены.",
-      "recycle_policy_ru": "Возврат допускается только явным рецептом с измеримыми потерями; самозамкнутый положительный цикл и удвоение канонической формы запрещены.",
-      "canonical_output_policy_ru": "Одна каноническая fluid/gas-форма на класс чистоты после exact owner-dump; баллоны и иные контейнеры являются упаковкой, не новой сущностью.",
       "evidence_refs": [
         "industrial_frontier:evidence/substance/planned_chemistry_architecture"
       ],
@@ -3442,99 +4007,6 @@
       }
     },
     {
-      "substance_id": "industrial_frontier:substance/plutonium",
-      "group": "P6_NUCLEAR",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "Плутоний",
-      "name_en": "Plutonium",
-      "russian_term": "плутоний",
-      "kind": "ELEMENT",
-      "formula": "Pu",
-      "formula_status": "KNOWN",
-      "physical_states": [
-        "SOLID"
-      ],
-      "purity_classes": [
-        "REACTOR",
-        "DOMAIN_SPECIALIZED"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 6,
-      "automation": {
-        "first_automatic_epoch": 6,
-        "mass_epoch": 7
-      },
-      "renewability": "UNRESOLVED",
-      "owner_domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
-      "secondary_owner_domain_refs": [
-        "industrial_frontier:domain/strategic_nuclear_program"
-      ],
-      "form_refs": [],
-      "forms_policy_ru": "До закрытия exit-contract form_refs остаётся пустым: формы назначаются только после overlap-аудита, с одним каноническим выходом на форму и без vendor/runtime ID в проектном слое.",
-      "source_strategy_ru": "Получать только из контролируемого облучения и переработки реакторного топлива после открытия соответствующей гражданской технологии.",
-      "process_route_ru": "Облучение → выдержка → химическое разделение → очистка и защищённое хранение.",
-      "process_refs": [
-        "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
-        "industrial_frontier:process/future/strategic_materials"
-      ],
-      "recipe_policy_ru": "Выход ограничен материальным составом spent fuel; прямое получение из урана или universal-isotope машины запрещено.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/civil_nuclear_industry",
-        "industrial_frontier:domain/strategic_nuclear_program"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «плутоний» только в утверждённой междоменной производственной цепочке."
-        },
-        {
-          "domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «плутоний» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Высокоактивный рафинат, загрязнённые реагенты и защитные материалы требуют отдельного обращения."
-      ],
-      "waste_policy_ru": "Потоки учитываются раздельно: Высокоактивный рафинат, загрязнённые реагенты и защитные материалы требуют отдельного обращения. Выброс или удаление без описанного приёмника запрещены.",
-      "recycle_policy_ru": "Возврат допускается только явным рецептом с измеримыми потерями; самозамкнутый положительный цикл и удвоение канонической формы запрещены.",
-      "canonical_output_policy_ru": "REACTOR и стратегически специализированная формы разделены контрактом; exact IDs и коэффициенты блокированы до установки HBM/NuclearCraft.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/federation_atomic"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/future_atomic"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [],
-        "blocked_contract_refs": [],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/federation_atomic",
-          "industrial_frontier:evidence/substance/mandatory_physical_audit"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
       "substance_id": "industrial_frontier:substance/coolant",
       "group": "P6_NUCLEAR",
       "status": "GATED_CONCEPTUAL",
@@ -3607,274 +4079,6 @@
         "approval_state": "BLOCKED_PENDING_EVIDENCE",
         "required_evidence_refs": [
           "industrial_frontier:evidence/substance/federation_atomic",
-          "industrial_frontier:evidence/substance/mandatory_physical_audit"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
-      "substance_id": "industrial_frontier:substance/rocket_fuel",
-      "group": "P7_AEROSPACE",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "Ракетное топливо",
-      "name_en": "Rocket Fuel",
-      "russian_term": "ракетное топливо",
-      "kind": "MIXTURE",
-      "formula": null,
-      "formula_status": "UNVERIFIED",
-      "physical_states": [
-        "MIXTURE"
-      ],
-      "purity_classes": [
-        "AEROSPACE",
-        "DOMAIN_SPECIALIZED"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 7,
-      "automation": {
-        "first_automatic_epoch": 7,
-        "mass_epoch": 8
-      },
-      "renewability": "UNRESOLVED",
-      "owner_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-      "secondary_owner_domain_refs": [
-        "industrial_frontier:domain/industrial_chemistry_metallurgy"
-      ],
-      "form_refs": [],
-      "forms_policy_ru": "До закрытия exit-contract form_refs остаётся пустым: формы назначаются только после overlap-аудита, с одним каноническим выходом на форму и без vendor/runtime ID в проектном слое.",
-      "source_strategy_ru": "Собирать из очищенных химических компонентов P4–P6 после установки выбранного космического стека.",
-      "process_route_ru": "Подготовка компонентов → синтез/смешение → очистка аэрокосмического класса → защищённое хранение и заправка.",
-      "process_refs": [
-        "industrial_frontier:process/future/rocket_and_planetary_logistics"
-      ],
-      "recipe_policy_ru": "Топливо не совпадает с обычным diesel/fuel-тегом, требует отдельной инфраструктуры P7 и не возвращается из тяги.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/planetary_spaceflight"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «ракетное топливо» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Некондиционное топливо, промывная жидкость и испарившийся/сброшенный газ требуют безопасной обработки."
-      ],
-      "waste_policy_ru": "Потоки учитываются раздельно: Некондиционное топливо, промывная жидкость и испарившийся/сброшенный газ требуют безопасной обработки. Выброс или удаление без описанного приёмника запрещены.",
-      "recycle_policy_ru": "Возврат допускается только явным рецептом с измеримыми потерями; самозамкнутый положительный цикл и удвоение канонической формы запрещены.",
-      "canonical_output_policy_ru": "Одна AEROSPACE fluid-форма после exact-file space audit; до этого runtime ID и коэффициент тяги отсутствуют.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/federation_space"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/future_space"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [],
-        "blocked_contract_refs": [],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/federation_space",
-          "industrial_frontier:evidence/substance/mandatory_physical_audit"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
-      "substance_id": "industrial_frontier:substance/oxidizer",
-      "group": "P7_AEROSPACE",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "Окислитель",
-      "name_en": "Oxidizer",
-      "russian_term": "окислитель",
-      "kind": "MIXTURE",
-      "formula": null,
-      "formula_status": "UNVERIFIED",
-      "physical_states": [
-        "MIXTURE"
-      ],
-      "purity_classes": [
-        "AEROSPACE",
-        "DOMAIN_SPECIALIZED"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 7,
-      "automation": {
-        "first_automatic_epoch": 7,
-        "mass_epoch": 8
-      },
-      "renewability": "UNRESOLVED",
-      "owner_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-      "secondary_owner_domain_refs": [
-        "industrial_frontier:domain/industrial_chemistry_metallurgy"
-      ],
-      "form_refs": [],
-      "forms_policy_ru": "До закрытия exit-contract form_refs остаётся пустым: формы назначаются только после overlap-аудита, с одним каноническим выходом на форму и без vendor/runtime ID в проектном слое.",
-      "source_strategy_ru": "Получать из очищенного кислорода или другого утверждённого окислителя только после выбора космической технологии.",
-      "process_route_ru": "Производство химического прекурсора → очистка/сжижение при необходимости → хранение → заправка.",
-      "process_refs": [
-        "industrial_frontier:process/future/rocket_and_planetary_logistics"
-      ],
-      "recipe_policy_ru": "Окислитель является отдельным массовым расходом запуска; воздух или обычный oxygen-tag не заменяет аэрокосмический класс без подготовки.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/planetary_spaceflight"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «окислитель» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Продувочный газ, boil-off и некондиционный окислитель учитываются как потери/потоки безопасности."
-      ],
-      "waste_policy_ru": "Потоки учитываются раздельно: Продувочный газ, boil-off и некондиционный окислитель учитываются как потери/потоки безопасности. Выброс или удаление без описанного приёмника запрещены.",
-      "recycle_policy_ru": "Возврат допускается только явным рецептом с измеримыми потерями; самозамкнутый положительный цикл и удвоение канонической формы запрещены.",
-      "canonical_output_policy_ru": "Одна AEROSPACE fluid-форма на выбранную пару топлива; exact ID остаётся gated до установки space stack.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/federation_space"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/future_space"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [],
-        "blocked_contract_refs": [],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/federation_space",
-          "industrial_frontier:evidence/substance/mandatory_physical_audit"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
-      "substance_id": "industrial_frontier:substance/aerospace_composite",
-      "group": "P7_AEROSPACE",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "Аэрокосмический композит",
-      "name_en": "Aerospace Composite",
-      "russian_term": "аэрокосмический композит",
-      "kind": "MIXTURE",
-      "formula": null,
-      "formula_status": "NOT_APPLICABLE",
-      "physical_states": [
-        "SOLID"
-      ],
-      "purity_classes": [
-        "AEROSPACE",
-        "DOMAIN_SPECIALIZED"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 7,
-      "automation": {
-        "first_automatic_epoch": 7,
-        "mass_epoch": 8
-      },
-      "renewability": "UNRESOLVED",
-      "owner_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-      "secondary_owner_domain_refs": [
-        "industrial_frontier:domain/industrial_chemistry_metallurgy"
-      ],
-      "form_refs": [],
-      "forms_policy_ru": "До закрытия exit-contract form_refs остаётся пустым: формы назначаются только после overlap-аудита, с одним каноническим выходом на форму и без vendor/runtime ID в проектном слое.",
-      "source_strategy_ru": "Производить из очищенных металлов, полимерной матрицы и армирующего материала зрелой промышленности.",
-      "process_route_ru": "Подготовка волокна/матрицы → укладка и формование → отверждение/термообработка → неразрушающий контроль.",
-      "process_refs": [
-        "industrial_frontier:process/future/rocket_and_planetary_logistics"
-      ],
-      "recipe_policy_ru": "Композит не крафтится из произвольных plate/plastic-тегов; формы и инструменты возвращаются, обрезь не даёт положительный цикл.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/planetary_spaceflight",
-        "industrial_frontier:domain/civil_heavy_industry"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «аэрокосмический композит» только в утверждённой междоменной производственной цепочке."
-        },
-        {
-          "domain_ref": "industrial_frontier:domain/civil_heavy_industry",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «аэрокосмический композит» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Обрезь композита, отработанная смола, защитная плёнка и бракованные панели учитываются как трудно перерабатываемые отходы."
-      ],
-      "waste_policy_ru": "Потоки учитываются раздельно: Обрезь композита, отработанная смола, защитная плёнка и бракованные панели учитываются как трудно перерабатываемые отходы. Выброс или удаление без описанного приёмника запрещены.",
-      "recycle_policy_ru": "Возврат допускается только явным рецептом с измеримыми потерями; самозамкнутый положительный цикл и удвоение канонической формы запрещены.",
-      "canonical_output_policy_ru": "Одна AEROSPACE material-форма и нормированные панели после выбора exact модов; никакого runtime item ID до установки.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/federation_space"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/future_space"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [
-          "material.aerospace_composite"
-        ],
-        "blocked_contract_refs": [
-          "m2_extended_domains:material.aerospace_composite"
-        ],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/federation_space",
           "industrial_frontier:evidence/substance/mandatory_physical_audit"
         ],
         "criteria_ru": [
@@ -8251,12 +8455,13 @@
     },
     {
       "gate_id": "industrial_frontier:gate/substance/future_atomic",
-      "status": "BLOCKED_NOT_INSTALLED",
-      "requirement_ru": "Не добавлять NuclearCraft/HBM-формы или ID до установки exact CurseForge-файла и полного статического overlap-аудита.",
+      "status": "CLOSED_STATIC",
+      "requirement_ru": "Закрыт в M6: NuclearCraft: Neoteric 1.2.33 установлен и разобран статически. Ядерные вещества перестали быть будущим доменом — у них есть владелец процессов, маршрут и потребители.",
       "owner": "SHARED",
-      "blocks_runtime_claim": true,
+      "blocks_runtime_claim": false,
       "evidence_refs": [
-        "industrial_frontier:evidence/substance/federation_atomic"
+        "industrial_frontier:evidence/substance/federation_atomic",
+        "industrial_frontier:evidence/substance/nuclearcraft_fuel_cycle"
       ]
     },
     {
@@ -8450,6 +8655,24 @@
       "locator": "concept_registry plus mandatory construction, food and non-PROHIBITED combat positional bindings",
       "observed": "Static closure audit resolves 65 direct/transitive material and chemistry concepts, separates physical passports from process/assembly categories and records all epoch bindings.",
       "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/substance/nuclearcraft_materials",
+      "type": "VENDOR_DATA",
+      "path": "mods/NuclearCraft-1.20.1-1.2.33.jar!/data/nuclearcraft/recipes/graphite_block.json",
+      "locator": "nuclearcraft_blocks recipe group",
+      "observed": "NuclearCraft 1.2.33 registers block, ingot and nugget forms for the nuclear feedstock family — uranium, thorium, lithium, boron, graphite, beryllium and zirconium among them — in 1311 items and 271 blocks.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/substance/nuclearcraft_fuel_cycle",
+      "type": "VENDOR_DATA",
+      "path": "mods/NuclearCraft-1.20.1-1.2.33.jar!/data/nuclearcraft/recipes/fission_reactor_controller.json",
+      "locator": "nuclearcraft_fission recipe group",
+      "observed": "A full civil fuel cycle ships as data: 110 fission controller recipes, 57 fuel reprocessor, 33 isotope separator, 35 decay chamber, 28 molten salt controller, plus 12 fission_fuel and 46 heat_sink definitions.",
+      "verified_on": "2026-08-03",
       "static_only": true
     }
   ]

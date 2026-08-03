@@ -11,10 +11,18 @@
       "status": "ACTIVE_CONFIGURED",
       "world_impact": true,
       "canonical_owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
-      "canonical_owner_mod_ids": ["gtceu"],
-      "disabled_provider_mod_ids": ["create"],
+      "canonical_owner_mod_ids": [
+        "gtceu"
+      ],
+      "disabled_provider_mod_ids": [
+        "create"
+      ],
       "future_provider_labels": [],
-      "scope_dimensions": ["minecraft:overworld", "minecraft:the_nether", "minecraft:the_end"],
+      "scope_dimensions": [
+        "minecraft:overworld",
+        "minecraft:the_nether",
+        "minecraft:the_end"
+      ],
       "decision_ru": "GTCEu является единственным действующим владельцем общей рудной геологии; новый поставщик допускается только для уникального паспортизованного ресурса.",
       "implementation_checks": [
         {
@@ -30,8 +38,14 @@
           "status": "STATIC_CONFIRMED"
         }
       ],
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/gtceu_config", "industrial_frontier:evidence/worldgen/create_config", "industrial_frontier:evidence/worldgen/master_decision"],
-      "gate_refs": ["industrial_frontier:gate/worldgen/config_static"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/gtceu_config",
+        "industrial_frontier:evidence/worldgen/create_config",
+        "industrial_frontier:evidence/worldgen/master_decision"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/worldgen/config_static"
+      ]
     },
     {
       "decision_id": "industrial_frontier:worldgen/vanilla_ores_suppressed",
@@ -39,10 +53,16 @@
       "status": "DISABLED_DUPLICATE",
       "world_impact": true,
       "canonical_owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
-      "canonical_owner_mod_ids": ["gtceu"],
-      "disabled_provider_mod_ids": ["minecraft"],
+      "canonical_owner_mod_ids": [
+        "gtceu"
+      ],
+      "disabled_provider_mod_ids": [
+        "minecraft"
+      ],
       "future_provider_labels": [],
-      "scope_dimensions": ["minecraft:overworld"],
+      "scope_dimensions": [
+        "minecraft:overworld"
+      ],
       "decision_ru": "Обычные и крупные ванильные рудные жилы подавляются, чтобы сырьё входило через единую GTCEu-геологию.",
       "implementation_checks": [
         {
@@ -58,8 +78,12 @@
           "status": "STATIC_CONFIRMED"
         }
       ],
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/gtceu_config"],
-      "gate_refs": ["industrial_frontier:gate/worldgen/config_static"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/gtceu_config"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/worldgen/config_static"
+      ]
     },
     {
       "decision_id": "industrial_frontier:worldgen/zinc_canonical_gtceu",
@@ -67,10 +91,16 @@
       "status": "DISABLED_DUPLICATE",
       "world_impact": true,
       "canonical_owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
-      "canonical_owner_mod_ids": ["gtceu"],
-      "disabled_provider_mod_ids": ["create"],
+      "canonical_owner_mod_ids": [
+        "gtceu"
+      ],
+      "disabled_provider_mod_ids": [
+        "create"
+      ],
       "future_provider_labels": [],
-      "scope_dimensions": ["minecraft:overworld"],
+      "scope_dimensions": [
+        "minecraft:overworld"
+      ],
       "decision_ru": "Create:zinc_ore и deepslate_zinc_ore остаются зарегистрированными формами совместимости, но не являются источником мира; цинк поступает через GTCEu-геологию.",
       "implementation_checks": [
         {
@@ -80,8 +110,14 @@
           "status": "STATIC_CONFIRMED"
         }
       ],
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/create_config", "industrial_frontier:evidence/worldgen/create_zinc_tag", "industrial_frontier:evidence/worldgen/master_decision"],
-      "gate_refs": ["industrial_frontier:gate/worldgen/config_static"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/create_config",
+        "industrial_frontier:evidence/worldgen/create_zinc_tag",
+        "industrial_frontier:evidence/worldgen/master_decision"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/worldgen/config_static"
+      ]
     },
     {
       "decision_id": "industrial_frontier:worldgen/ae2_meteorites",
@@ -89,10 +125,14 @@
       "status": "PRESERVED_UNIQUE",
       "world_impact": true,
       "canonical_owner_domain_ref": "industrial_frontier:domain/digital_factory",
-      "canonical_owner_mod_ids": ["ae2"],
+      "canonical_owner_mod_ids": [
+        "ae2"
+      ],
       "disabled_provider_mod_ids": [],
       "future_provider_labels": [],
-      "scope_dimensions": ["biomes in #ae2:has_meteorites"],
+      "scope_dimensions": [
+        "biomes in #ae2:has_meteorites"
+      ],
       "decision_ru": "AE2-метеориты сохраняются как уникальная структура обучения/доступа, а не как второй общий владелец земной рудной геологии.",
       "implementation_checks": [
         {
@@ -102,8 +142,13 @@
           "status": "STATIC_CONFIRMED"
         }
       ],
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/ae2_meteorite_structure"],
-      "gate_refs": ["industrial_frontier:gate/worldgen/config_static", "industrial_frontier:gate/worldgen/owner_visual_test"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/ae2_meteorite_structure"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/worldgen/config_static",
+        "industrial_frontier:gate/worldgen/owner_visual_test"
+      ]
     },
     {
       "decision_id": "industrial_frontier:worldgen/certus_sources",
@@ -111,10 +156,17 @@
       "status": "STATIC_POLICY_DECIDED_USER_TEST_PENDING",
       "world_impact": true,
       "canonical_owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
-      "canonical_owner_mod_ids": ["gtceu"],
+      "canonical_owner_mod_ids": [
+        "gtceu"
+      ],
       "disabled_provider_mod_ids": [],
-      "future_provider_labels": ["AE2 budding certus as a controlled renewable route"],
-      "scope_dimensions": ["minecraft:overworld", "biomes in #ae2:has_meteorites"],
+      "future_provider_labels": [
+        "AE2 budding certus as a controlled renewable route"
+      ],
+      "scope_dimensions": [
+        "minecraft:overworld",
+        "biomes in #ae2:has_meteorites"
+      ],
       "decision_ru": "GTCEu-жила, AE2-метеориты и возобновляемое выращивание сохраняются; семь входных AE2-рецептов блокируют практическое открытие цифрового домена до P5, а частоту источников проверяет владелец.",
       "implementation_checks": [
         {
@@ -130,52 +182,83 @@
           "status": "STATIC_CONFIRMED"
         }
       ],
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/gtceu_certus", "industrial_frontier:evidence/worldgen/ae2_certus_growth", "industrial_frontier:evidence/worldgen/ae2_meteorite_structure"],
-      "gate_refs": ["industrial_frontier:gate/worldgen/certus_overlap"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/gtceu_certus",
+        "industrial_frontier:evidence/worldgen/ae2_certus_growth",
+        "industrial_frontier:evidence/worldgen/ae2_meteorite_structure"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/worldgen/certus_overlap"
+      ]
     },
     {
       "decision_id": "industrial_frontier:worldgen/future_atomic_feedstocks",
       "resource_class": "ATOMIC_FEEDSTOCK_ORES",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "DISABLED_DUPLICATE",
       "world_impact": true,
       "canonical_owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
-      "canonical_owner_mod_ids": ["gtceu"],
-      "disabled_provider_mod_ids": [],
-      "future_provider_labels": ["NuclearCraft: Neoteric", "one selected HBM port"],
-      "scope_dimensions": ["minecraft:overworld"],
-      "decision_ru": "Текущая GTCEu-геология остаётся источником истины; будущие атомные моды не включают урановую, ториевую, литиевую или борную генерацию до passport/worldgen diff.",
+      "canonical_owner_mod_ids": [
+        "gtceu"
+      ],
+      "disabled_provider_mod_ids": [
+        "nuclearcraft",
+        "hbm_ntm_rebirth"
+      ],
+      "future_provider_labels": [],
+      "scope_dimensions": [
+        "minecraft:overworld"
+      ],
+      "decision_ru": "Геология остаётся у GregTech. Рудная генерация NuclearCraft перекрыта датапаком целиком — 24 из 24 модификаторов биома; у HBM-NTM Rebirth перекрыты все три, которыми порт раскладывает надмирье, Нижний мир и Край.",
       "implementation_checks": [
         {
-          "path": "future exact CurseForge JARs",
-          "key_or_resource": "worldgen configuration and data resources",
-          "expected": "not installed; no runtime ID asserted",
-          "status": "GATED_NOT_INSTALLED"
+          "path": "config/paxi/datapacks/IndustrialFrontier-Data/data",
+          "key_or_resource": "nuclearcraft/forge/biome_modifier (24) и hbm_ntm_rebirth/forge/biome_modifier (3)",
+          "expected": "forge:none for every ore modifier of both atomic mods",
+          "status": "STATIC_CONFIRMED"
         }
       ],
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/federation_future"],
-      "gate_refs": ["industrial_frontier:gate/worldgen/future_atomic"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/federation_future"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/worldgen/future_atomic"
+      ]
     },
     {
       "decision_id": "industrial_frontier:worldgen/future_planetary_resources",
       "resource_class": "PLANETARY_RESOURCES",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "PRESERVED_UNIQUE",
       "world_impact": true,
       "canonical_owner_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-      "canonical_owner_mod_ids": [],
-      "disabled_provider_mod_ids": [],
-      "future_provider_labels": ["Creating Space", "Ad Astra", "compatibility datapack"],
-      "scope_dimensions": ["future planetary dimensions not installed"],
-      "decision_ru": "Планетарная руда разрешается только как новый элемент, эффективный поздний маршрут или крупномасштабная альтернатива; точные владельцы и ID пока отсутствуют.",
+      "canonical_owner_mod_ids": [
+        "gcyr"
+      ],
+      "disabled_provider_mod_ids": [
+        "creatingspace"
+      ],
+      "future_provider_labels": [],
+      "scope_dimensions": [
+        "gcyr:luna",
+        "gcyr:mars",
+        "gcyr:mercury",
+        "gcyr:venus",
+        "gcyr:proxima_centauri_b"
+      ],
+      "decision_ru": "Планетарные жилы принадлежат GCYR и генерируются механизмом GregTech, то есть тем же владельцем, что и земные: боксит на Луне, медь, железо, никель, цинк, вольфрамат и редкозем на Марсе, ртуть на Меркурии, сера и вольфрамотитанат на Венере. Никелевая жила Creating Space в надмирье отключена, его планетарные измерения остаются в реестре, но недостижимы ракетой.",
       "implementation_checks": [
         {
-          "path": "future exact CurseForge JARs",
-          "key_or_resource": "dimension and worldgen resources",
-          "expected": "not installed; no runtime ID asserted",
-          "status": "GATED_NOT_INSTALLED"
+          "path": "config/paxi/datapacks/IndustrialFrontier-Data/data/creatingspace",
+          "key_or_resource": "forge/biome_modifier/add_nickel_overworld_ore.json и creatingspace/rocket_accessible_dimension",
+          "expected": "forge:none for the overworld nickel vein; rocket routes reduced to Earth and low orbit",
+          "status": "STATIC_CONFIRMED"
         }
       ],
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/federation_future"],
-      "gate_refs": ["industrial_frontier:gate/worldgen/future_space"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/federation_future"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/worldgen/future_space"
+      ]
     }
   ],
   "gates": [
@@ -185,7 +268,11 @@
       "requirement_ru": "Сверить активные конфигурационные ключи GTCEu/Create и наличие AE2-структуры без запуска мира.",
       "owner": "CODEX",
       "blocks_runtime_claim": false,
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/gtceu_config", "industrial_frontier:evidence/worldgen/create_config", "industrial_frontier:evidence/worldgen/ae2_meteorite_structure"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/gtceu_config",
+        "industrial_frontier:evidence/worldgen/create_config",
+        "industrial_frontier:evidence/worldgen/ae2_meteorite_structure"
+      ]
     },
     {
       "gate_id": "industrial_frontier:gate/worldgen/owner_visual_test",
@@ -193,7 +280,9 @@
       "requirement_ru": "Владелец подтверждает доступность и корректность AE2-метеоритов в одноразовом тестовом мире.",
       "owner": "PACK_OWNER",
       "blocks_runtime_claim": true,
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/ae2_meteorite_structure"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/ae2_meteorite_structure"
+      ]
     },
     {
       "gate_id": "industrial_frontier:gate/worldgen/certus_overlap",
@@ -201,23 +290,30 @@
       "requirement_ru": "Владелец проверяет частоту GTCEu-жилы, AE2-метеоритов и выращивания; изменение частоты выполняется только если тест покажет раннюю экономическую утечку.",
       "owner": "PACK_OWNER",
       "blocks_runtime_claim": true,
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/gtceu_certus", "industrial_frontier:evidence/worldgen/ae2_certus_growth"]
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/gtceu_certus",
+        "industrial_frontier:evidence/worldgen/ae2_certus_growth"
+      ]
     },
     {
       "gate_id": "industrial_frontier:gate/worldgen/future_atomic",
-      "status": "BLOCKED_NOT_INSTALLED",
-      "requirement_ru": "После установки exact NuclearCraft/HBM-файла отключить все необъяснённые дубли атомного сырья до создания мира.",
-      "owner": "SHARED",
-      "blocks_runtime_claim": true,
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/federation_future"]
+      "status": "CLOSED_STATIC",
+      "requirement_ru": "Дубли атомного сырья отключены до создания мира: обе рудные генерации атомных модов перекрыты датапаком.",
+      "owner": "CODEX",
+      "blocks_runtime_claim": false,
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/federation_future"
+      ]
     },
     {
       "gate_id": "industrial_frontier:gate/worldgen/future_space",
-      "status": "BLOCKED_NOT_INSTALLED",
-      "requirement_ru": "Установить выбранный космический стек, извлечь worldgen и назначить владельца каждой планетарной сущности до открытия измерений.",
-      "owner": "SHARED",
-      "blocks_runtime_claim": true,
-      "evidence_refs": ["industrial_frontier:evidence/worldgen/federation_future"]
+      "status": "CLOSED_STATIC",
+      "requirement_ru": "Планетарные ресурсы принадлежат одному владельцу: жилы GCYR сохранены, никель Creating Space в надмирье снят.",
+      "owner": "CODEX",
+      "blocks_runtime_claim": false,
+      "evidence_refs": [
+        "industrial_frontier:evidence/worldgen/federation_future"
+      ]
     }
   ],
   "source_evidence": [

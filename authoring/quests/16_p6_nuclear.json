@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p6",
+  "engine_id": "2016000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p6.intro",
+      "engine_id": "3016000000000001",
+      "purpose": "And starts being a responsibility",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p6.materials",
+      "engine_id": "3016000000000002",
+      "purpose": "And none of them is fuel",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.entry",
+      "engine_id": "3016000000000003",
+      "purpose": "Entry costs steel and HV electronics",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.alloys",
+      "engine_id": "3016000000000004",
+      "purpose": "Ferroboron, tough alloy and cladding",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.purification",
+      "engine_id": "3016000000000005",
+      "purpose": "Ore is not yet fuel",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p6.enrichment",
+      "engine_id": "3016000000000006",
+      "purpose": "Separation by mass, not by chemistry",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.fuel",
+      "engine_id": "3016000000000007",
+      "purpose": "Pellet, cladding, assembly",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.dosimetry",
+      "engine_id": "3016000000000008",
+      "purpose": "The one sense humans do not have",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.reactor",
+      "engine_id": "3016000000000009",
+      "purpose": "Heat removal is designed before startup",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.heat_loop",
+      "engine_id": "3016000000000010",
+      "purpose": "Coolant travels in a circle",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.turbine",
+      "engine_id": "3016000000000011",
+      "purpose": "A familiar machine at a new scale",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.spent_fuel",
+      "engine_id": "3016000000000012",
+      "purpose": "Fuel does not run out, it changes",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.isotopes",
+      "engine_id": "3016000000000013",
+      "purpose": "What only a reactor can give you",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p6.city_plant",
+      "engine_id": "3016000000000014",
+      "purpose": "A cross-domain megaproject",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

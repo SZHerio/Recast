@@ -13997,6 +13997,64 @@
       "rationale": "Ценность базы должна быть содержательной, не превращая исследование мира в обход прогрессии.",
       "enforcement_owner": "threat_director",
       "owner_state": "GATED_NOT_INSTALLED"
+    },
+    {
+      "leak_id": "strategic_charge_from_world",
+      "severity": "BLOCKER",
+      "minimum_allowed_epoch": "NEVER",
+      "applies_to": [
+        "quest_reward",
+        "npc_loadout",
+        "trade",
+        "loot",
+        "structure"
+      ],
+      "scope_factions": [
+        "all"
+      ],
+      "affected_base_levels": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6"
+      ],
+      "prohibited_content": "Ядерный заряд, его боевая часть, шахтная пусковая и станция сборки ракет как награда, товар, лут или содержимое чужой базы.",
+      "detection_rule": "Любой источник выдачи стратегического заряда или его боевой части вне собственной производственной цепочки игрока считается утечкой независимо от эпохи и репутации.",
+      "remediation": "Оставить чертёж, повреждённый корпус, сведения о программе или образец материала без работоспособного изделия.",
+      "rationale": "Стратегический заряд сохранён в сборке как результат собственной программы игрока. Полученный из чужих рук, он перестаёт быть решением и становится находкой.",
+      "enforcement_owner": "threat_director",
+      "owner_state": "GATED_NOT_INSTALLED"
+    },
+    {
+      "leak_id": "strategic_charge_as_shortcut",
+      "severity": "BLOCKER",
+      "minimum_allowed_epoch": "NEVER",
+      "applies_to": [
+        "operation",
+        "recipe",
+        "material_conversion"
+      ],
+      "scope_factions": [
+        "all"
+      ],
+      "affected_base_levels": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6"
+      ],
+      "prohibited_content": "Применение стратегического заряда как средства расчистки местности, добычи ресурса или сноса базы фракции вместо операции.",
+      "detection_rule": "Заряд, приводящий к получению материала, освобождению площадки или устранению цели, которая имеет штатный путь операции, считается коротким путём.",
+      "remediation": "Вернуть задачу в штатный путь: карьер и взрывные работы для площадки, операция с окном переговоров для базы фракции.",
+      "rationale": "Каждая операция сборки имеет окно переговоров и путь восстановления. Заряд, применённый как инструмент, отменяет оба и обесценивает весь внешний мир.",
+      "enforcement_owner": "threat_director",
+      "owner_state": "GATED_NOT_INSTALLED"
     }
   ],
   "release_gates": [

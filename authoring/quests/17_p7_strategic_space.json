@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p7",
+  "engine_id": "2017000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p7.intro",
+      "engine_id": "3017000000000001",
+      "purpose": "Two programmes you cannot run at once",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.hbm_entry",
+      "engine_id": "3017000000000002",
+      "purpose": "An assembly machine the mod never had",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.protected_zone",
+      "engine_id": "3017000000000003",
+      "purpose": "Where such a thing may stand at all",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.rbmk",
+      "engine_id": "3017000000000004",
+      "purpose": "A reactor that runs away faster than you can walk",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.purex",
+      "engine_id": "3017000000000005",
+      "purpose": "Nitric acid, kerosene and what is left over",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.radiation_model",
+      "engine_id": "3017000000000006",
+      "purpose": "Two dose models are not depth, they are a fault",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.strategic_charge",
+      "engine_id": "3017000000000007",
+      "purpose": "The one thing that exists nowhere else",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.domain_links",
+      "engine_id": "3017000000000008",
+      "purpose": "Why this is not a separate island",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.clearances",
+      "engine_id": "3017000000000009",
+      "purpose": "Who is let onto the site",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.counterintel",
+      "engine_id": "3017000000000010",
+      "purpose": "What they take is knowledge, not cargo",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.rocket_materials",
+      "engine_id": "3017000000000011",
+      "purpose": "Steel does not help here",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.rocket_fuel",
+      "engine_id": "3017000000000012",
+      "purpose": "Two tanks, not one",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.rocket_electronics",
+      "engine_id": "3017000000000013",
+      "purpose": "A destination is data",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.spaceport",
+      "engine_id": "3017000000000014",
+      "purpose": "A city megaproject, not a pad",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.suit_oxygen",
+      "engine_id": "3017000000000015",
+      "purpose": "One gas, two jobs",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.first_launch",
+      "engine_id": "3017000000000016",
+      "purpose": "Six checks, none of them skippable",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.sealing_base",
+      "engine_id": "3017000000000017",
+      "purpose": "Sealing is checked along the boundary",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.return_flow",
+      "engine_id": "3017000000000018",
+      "purpose": "While it is manual, the planet is not settled",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.planetary",
+      "engine_id": "3017000000000019",
+      "purpose": "And what each one costs",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p7.deep_path",
+      "engine_id": "3017000000000020",
+      "purpose": "Design the engine yourself",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p7.emergency",
+      "engine_id": "3017000000000021",
+      "purpose": "Three failures that cost a life",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

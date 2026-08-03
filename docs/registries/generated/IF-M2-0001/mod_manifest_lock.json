@@ -1,12 +1,12 @@
 ﻿{
     "schema_version":  2,
     "build_id":  "IF-M2-0001",
-    "generated_at":  "2026-08-03T08:32:49.9129827Z",
+    "generated_at":  "2026-08-03T22:08:25.8429128Z",
     "platform":  {
                      "minecraft":  "1.20.1",
                      "forge":  "47.4.22"
                  },
-    "jar_count":  114,
+    "jar_count":  115,
     "curseforge_provenance_complete":  true,
     "owner_registered_exception_count":  1,
     "owner_registered_exception_files":  [
@@ -23,22 +23,6 @@
                                      ],
     "expected_hash_mismatch_count":  0,
     "entries":  [
-                    {
-                        "file_name":  "ad_astra-forge-1.20.1-1.15.20.jar",
-                        "size":  7508861,
-                        "sha256":  "99E274894AF7C3B01622A74775A9960B5857B35951888414E733F8C2EC683F26",
-                        "curseforge":  {
-                                           "provenance":  "curseforge_app_metadata",
-                                           "project_id":  635042,
-                                           "file_id":  6262032,
-                                           "download_url":  "https://edge.forgecdn.net/files/6262/32/ad_astra-forge-1.20.1-1.15.20.jar",
-                                           "expected_sha256":  null,
-                                           "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "537ac3e358a97efd7b03648a9bfd7b11f1ae7ff7",
-                                           "actual_hash":  "537AC3E358A97EFD7B03648A9BFD7B11F1AE7FF7",
-                                           "hash_matches":  true
-                                       }
-                    },
                     {
                         "file_name":  "AdChimneys-1.20.1-10.1.31.0-build.2268.jar",
                         "size":  349577,
@@ -776,6 +760,22 @@
                                        }
                     },
                     {
+                        "file_name":  "gcyr-1.20.1-0.2.9.jar",
+                        "size":  1720922,
+                        "sha256":  "86538EEFC0B7BD2FB030AD658ECBEEDF4E500E2CA0DBDB45A7F73614FD58C94C",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_app_metadata",
+                                           "project_id":  922713,
+                                           "file_id":  8349382,
+                                           "download_url":  "https://edge.forgecdn.net/files/8349/382/gcyr-1.20.1-0.2.9.jar",
+                                           "expected_sha256":  null,
+                                           "expected_hash_algorithm":  "SHA1",
+                                           "expected_hash":  "125cd2874493c92432637933effb0efc0bbc46a5",
+                                           "actual_hash":  "125CD2874493C92432637933EFFB0EFC0BBC46A5",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
                         "file_name":  "GlitchCore-forge-1.20.1-0.0.1.1.jar",
                         "size":  87550,
                         "sha256":  "E42A8B513DA08A910C133CAEAFAD9FC2FCC22FDAAA2EB3E2516E9112A5A0DB61",
@@ -888,18 +888,18 @@
                                        }
                     },
                     {
-                        "file_name":  "hbm_m-0.2.0-alpha+1.20.1-forge.jar",
-                        "size":  36421159,
-                        "sha256":  "3D23BF52EACDEA630D0D25C28180938A019A256D76566E939E1272A070A52BF5",
+                        "file_name":  "hbm_ntm_rebirth-0.4.1beta.jar",
+                        "size":  74579632,
+                        "sha256":  "9971A9A8C431DCCF30562D6AB53821C04029A9D81DB46368417A5CCF030E04C1",
                         "curseforge":  {
                                            "provenance":  "curseforge_app_metadata",
-                                           "project_id":  1319588,
-                                           "file_id":  8230649,
-                                           "download_url":  "https://edge.forgecdn.net/files/8230/649/hbm_m-0.2.0-alpha%2b1.20.1-forge.jar",
+                                           "project_id":  1566557,
+                                           "file_id":  8339756,
+                                           "download_url":  "https://edge.forgecdn.net/files/8339/756/hbm_ntm_rebirth-0.4.1beta.jar",
                                            "expected_sha256":  null,
                                            "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "5fcd588d21ab9b1c32763619f8dd6937d54c07aa",
-                                           "actual_hash":  "5FCD588D21AB9B1C32763619F8DD6937D54C07AA",
+                                           "expected_hash":  "b32c3b27e0a6fb878440b614a955409344a721af",
+                                           "actual_hash":  "B32C3B27E0A6FB878440B614A955409344A721AF",
                                            "hash_matches":  true
                                        }
                     },
@@ -1224,18 +1224,34 @@
                                        }
                     },
                     {
-                        "file_name":  "NuclearCraft-1.20.1-1.2.32.jar",
-                        "size":  30744230,
-                        "sha256":  "46324F1783D1CE706B45307D7F3491EBAD7B8AED139CCB643CC42043188D1044",
+                        "file_name":  "MultiBuilderTool-1.20.1-1.0.27.jar",
+                        "size":  426277,
+                        "sha256":  "DFACE6E2EFE6B19CA3A9C49218560B75F3F50481C9776BCC3AD6BA109884E798",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_app_metadata",
+                                           "project_id":  827020,
+                                           "file_id":  8499284,
+                                           "download_url":  "https://edge.forgecdn.net/files/8499/284/MultiBuilderTool-1.20.1-1.0.27.jar",
+                                           "expected_sha256":  null,
+                                           "expected_hash_algorithm":  "SHA1",
+                                           "expected_hash":  "07967425ee023cf03681541c7a3067eb7833a443",
+                                           "actual_hash":  "07967425EE023CF03681541C7A3067EB7833A443",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
+                        "file_name":  "NuclearCraft-1.20.1-1.2.33.jar",
+                        "size":  30745675,
+                        "sha256":  "41E80FCFDDF6FEE890B99992DF7B2E3F66C80C574A45FAF1CF70D1E5FAC59456",
                         "curseforge":  {
                                            "provenance":  "curseforge_app_metadata",
                                            "project_id":  840010,
-                                           "file_id":  8508829,
-                                           "download_url":  "https://edge.forgecdn.net/files/8508/829/NuclearCraft-1.20.1-1.2.32.jar",
+                                           "file_id":  8564186,
+                                           "download_url":  "https://edge.forgecdn.net/files/8564/186/NuclearCraft-1.20.1-1.2.33.jar",
                                            "expected_sha256":  null,
                                            "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "3c726975ee7ecc23e278451571ad5a99ee7ce680",
-                                           "actual_hash":  "3C726975EE7ECC23E278451571AD5A99EE7CE680",
+                                           "expected_hash":  "9f0205edf2b0835b260bc2592ab32f70547acaa5",
+                                           "actual_hash":  "9F0205EDF2B0835B260BC2592AB32F70547ACAA5",
                                            "hash_matches":  true
                                        }
                     },

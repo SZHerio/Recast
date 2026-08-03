@@ -11,8 +11,8 @@
       "schema_path": "authoring/schemas/m2_substance_passports.schema.json",
       "status": "STATIC_COMPLETE_USER_GATE_PENDING",
       "counts": {
-        "passports": 14,
-        "planned_substances": 78
+        "passports": 26,
+        "planned_substances": 73
       }
     },
     {
@@ -65,7 +65,7 @@
       "schema_path": "authoring/schemas/m2_bypass_decisions.schema.json",
       "status": "STATIC_COMPLETE_USER_GATE_PENDING",
       "counts": {
-        "decisions": 32
+        "decisions": 42
       }
     },
     {
@@ -75,7 +75,7 @@
       "status": "STATIC_COMPLETE_USER_GATE_PENDING",
       "counts": {
         "nodes": 10,
-        "dependency_edges": 238,
+        "dependency_edges": 255,
         "component_requirement_edges": 45,
         "edges": 9,
         "production_edges": 112,
@@ -99,7 +99,7 @@
         "faction_epoch_rows": 60,
         "role_slots": 401,
         "role_bindings": 401,
-        "prohibited_leaks": 22,
+        "prohibited_leaks": 24,
         "release_gates": 8,
         "furniture_categories": 9,
         "crop_passports": 6,

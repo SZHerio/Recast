@@ -1,13 +1,8 @@
 ﻿{
     "schema_version":  1,
     "build_id":  "IF-M2-0001",
-    "generated_at":  "2026-08-03T08:32:49.9189889Z",
+    "generated_at":  "2026-08-03T22:08:25.8479173Z",
     "providers":  [
-                      {
-                          "mod_id":  "ad_astra",
-                          "version":  "1.15.20",
-                          "origin":  "ad_astra-forge-1.20.1-1.15.20.jar"
-                      },
                       {
                           "mod_id":  "adchimneys",
                           "version":  "10.1.31.0",
@@ -294,6 +289,11 @@
                           "origin":  "fusion-1.3.12-forge-mc1.20.1.jar"
                       },
                       {
+                          "mod_id":  "gcyr",
+                          "version":  "0.2.9",
+                          "origin":  "gcyr-1.20.1-0.2.9.jar"
+                      },
+                      {
                           "mod_id":  "glitchcore",
                           "version":  "0.0.1.1",
                           "origin":  "GlitchCore-forge-1.20.1-0.0.1.1.jar"
@@ -324,9 +324,9 @@
                           "origin":  "handcrafted-forge-1.20.1-3.0.6.jar"
                       },
                       {
-                          "mod_id":  "hbm_m",
-                          "version":  "0.2.0-alpha",
-                          "origin":  "hbm_m-0.2.0-alpha+1.20.1-forge.jar"
+                          "mod_id":  "hbm_ntm_rebirth",
+                          "version":  "0.4.1beta",
+                          "origin":  "hbm_ntm_rebirth-0.4.1beta.jar"
                       },
                       {
                           "mod_id":  "immersiveengineering",
@@ -414,6 +414,11 @@
                           "origin":  "epic-knights-1.20.1-forge-10.11.jar"
                       },
                       {
+                          "mod_id":  "mbtool",
+                          "version":  "1.0.27",
+                          "origin":  "MultiBuilderTool-1.20.1-1.0.27.jar"
+                      },
+                      {
                           "mod_id":  "melody",
                           "version":  "1.0.2",
                           "origin":  "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar"
@@ -460,8 +465,8 @@
                       },
                       {
                           "mod_id":  "nuclearcraft",
-                          "version":  "1.2.32",
-                          "origin":  "NuclearCraft-1.20.1-1.2.32.jar"
+                          "version":  "1.2.33",
+                          "origin":  "NuclearCraft-1.20.1-1.2.33.jar"
                       },
                       {
                           "mod_id":  "octolib",
@@ -631,56 +636,6 @@
                   ],
     "mandatory_checks":  [
                              {
-                                 "owner_mod_id":  "ad_astra",
-                                 "dependency_mod_id":  "botarium",
-                                 "required_range":  "[2.3.0,)",
-                                 "actual_version":  "2.3.4",
-                                 "status":  "SATISFIED",
-                                 "origin":  "ad_astra-forge-1.20.1-1.15.20.jar",
-                                 "provider_origin":  "botarium-forge-1.20.1-2.3.4.jar",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ad_astra",
-                                 "dependency_mod_id":  "forge",
-                                 "required_range":  "[47,)",
-                                 "actual_version":  "47.4.22",
-                                 "status":  "SATISFIED",
-                                 "origin":  "ad_astra-forge-1.20.1-1.15.20.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ad_astra",
-                                 "dependency_mod_id":  "minecraft",
-                                 "required_range":  "[1.20.1,)",
-                                 "actual_version":  "1.20.1",
-                                 "status":  "SATISFIED",
-                                 "origin":  "ad_astra-forge-1.20.1-1.15.20.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ad_astra",
-                                 "dependency_mod_id":  "resourcefulconfig",
-                                 "required_range":  "[2.1.0,)",
-                                 "actual_version":  "2.1.3",
-                                 "status":  "SATISFIED",
-                                 "origin":  "ad_astra-forge-1.20.1-1.15.20.jar",
-                                 "provider_origin":  "resourcefulconfig-forge-1.20.1-2.1.3.jar",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ad_astra",
-                                 "dependency_mod_id":  "resourcefullib",
-                                 "required_range":  "[2.1.23,)",
-                                 "actual_version":  "2.1.29",
-                                 "status":  "SATISFIED",
-                                 "origin":  "ad_astra-forge-1.20.1-1.15.20.jar",
-                                 "provider_origin":  "resourcefullib-forge-1.20.1-2.1.29.jar",
-                                 "reason":  "interval"
-                             },
-                             {
                                  "owner_mod_id":  "adchimneys",
                                  "dependency_mod_id":  "forgeendertech",
                                  "required_range":  "[11.1.10.0,)",
@@ -846,27 +801,7 @@
                                  "required_range":  "[46,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "hbm_m-0.2.0-alpha+1.20.1-forge.jar!/META-INF/jarjar/architectury-forge-9.2.14.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "architectury",
-                                 "dependency_mod_id":  "forge",
-                                 "required_range":  "[46,)",
-                                 "actual_version":  "47.4.22",
-                                 "status":  "SATISFIED",
                                  "origin":  "architectury-9.2.14-forge.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "architectury",
-                                 "dependency_mod_id":  "minecraft",
-                                 "required_range":  "[1.20,)",
-                                 "actual_version":  "1.20.1",
-                                 "status":  "SATISFIED",
-                                 "origin":  "hbm_m-0.2.0-alpha+1.20.1-forge.jar!/META-INF/jarjar/architectury-forge-9.2.14.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -1766,27 +1701,17 @@
                                  "required_range":  "[47.0.0,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
                                  "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "flywheel",
-                                 "dependency_mod_id":  "forge",
-                                 "required_range":  "[47.0.0,)",
-                                 "actual_version":  "47.4.22",
-                                 "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "flywheel",
-                                 "dependency_mod_id":  "forge",
-                                 "required_range":  "[47.0.0,)",
-                                 "actual_version":  "47.4.22",
-                                 "status":  "SATISFIED",
-                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -1806,7 +1731,17 @@
                                  "required_range":  "[47.0.0,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -1836,7 +1771,17 @@
                                  "required_range":  "[1.20.1,1.20.2)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -1856,17 +1801,7 @@
                                  "required_range":  "[1.20.1,1.20.2)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "flywheel",
-                                 "dependency_mod_id":  "minecraft",
-                                 "required_range":  "[1.20.1,1.20.2)",
-                                 "actual_version":  "1.20.1",
-                                 "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -2151,6 +2086,26 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "gcyr",
+                                 "dependency_mod_id":  "gtceu",
+                                 "required_range":  "[7.5.1,)",
+                                 "actual_version":  "7.5.3",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gcyr-1.20.1-0.2.9.jar",
+                                 "provider_origin":  "gtceu-1.20.1-7.5.3.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gcyr",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "1.20.1",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gcyr-1.20.1-0.2.9.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "recommended 1.20.1"
+                             },
+                             {
                                  "owner_mod_id":  "glitchcore",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[47.3.0,)",
@@ -2291,32 +2246,22 @@
                                  "reason":  "interval"
                              },
                              {
-                                 "owner_mod_id":  "hbm_m",
-                                 "dependency_mod_id":  "architectury",
-                                 "required_range":  "[9.2.14,)",
-                                 "actual_version":  "9.2.14",
+                                 "owner_mod_id":  "hbm_ntm_rebirth",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "hbm_m-0.2.0-alpha+1.20.1-forge.jar",
-                                 "provider_origin":  "architectury-9.2.14-forge.jar",
+                                 "origin":  "hbm_ntm_rebirth-0.4.1beta.jar",
+                                 "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
                              {
-                                 "owner_mod_id":  "hbm_m",
-                                 "dependency_mod_id":  "cloth_config",
-                                 "required_range":  "[11.1.136,)",
-                                 "actual_version":  "11.1.136",
-                                 "status":  "SATISFIED",
-                                 "origin":  "hbm_m-0.2.0-alpha+1.20.1-forge.jar",
-                                 "provider_origin":  "cloth-config-11.1.136-forge.jar",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "hbm_m",
+                                 "owner_mod_id":  "hbm_ntm_rebirth",
                                  "dependency_mod_id":  "minecraft",
                                  "required_range":  "[1.20.1,1.21)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "hbm_m-0.2.0-alpha+1.20.1-forge.jar",
+                                 "origin":  "hbm_ntm_rebirth-0.4.1beta.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -2681,6 +2626,26 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "mbtool",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[43.3.10,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "MultiBuilderTool-1.20.1-1.0.27.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "mbtool",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "MultiBuilderTool-1.20.1-1.0.27.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "melody",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[47.1.47,)",
@@ -2846,7 +2811,7 @@
                                  "required_range":  "[43.3.10,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -2856,7 +2821,7 @@
                                  "required_range":  "[1.20.1,)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -2966,16 +2931,6 @@
                                  "required_range":  "[1.0.0,2.0)",
                                  "actual_version":  "1.0.6-beta-266",
                                  "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
-                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ponder",
-                                 "dependency_mod_id":  "flywheel",
-                                 "required_range":  "[1.0.0,2.0)",
-                                 "actual_version":  "1.0.6-beta-266",
-                                 "status":  "SATISFIED",
                                  "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
                                  "reason":  "interval"
@@ -2986,7 +2941,7 @@
                                  "required_range":  "[1.0.0,2.0)",
                                  "actual_version":  "1.0.6-beta-266",
                                  "status":  "SATISFIED",
-                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
                                  "reason":  "interval"
                              },
@@ -2996,7 +2951,17 @@
                                  "required_range":  "[1.0.0,2.0)",
                                  "actual_version":  "1.0.6-beta-266",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
                                  "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
                                  "reason":  "interval"
                              },
@@ -3006,17 +2971,7 @@
                                  "required_range":  "[47,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ponder",
-                                 "dependency_mod_id":  "forge",
-                                 "required_range":  "[47,)",
-                                 "actual_version":  "47.4.22",
-                                 "status":  "SATISFIED",
-                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3036,17 +2991,17 @@
                                  "required_range":  "[47,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
                              {
                                  "owner_mod_id":  "ponder",
-                                 "dependency_mod_id":  "minecraft",
-                                 "required_range":  "[1.20.1, 1.21)",
-                                 "actual_version":  "1.20.1",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3066,7 +3021,7 @@
                                  "required_range":  "[1.20.1, 1.21)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.32.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3076,7 +3031,17 @@
                                  "required_range":  "[1.20.1, 1.21)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1, 1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3546,7 +3511,7 @@
                                  "required_range":  "[1.20, 1.20.1]",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3556,7 +3521,7 @@
                                  "required_range":  "[1.20, 1.20.1]",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },

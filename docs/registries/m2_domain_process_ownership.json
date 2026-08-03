@@ -473,20 +473,20 @@
     },
     {
       "domain_id": "industrial_frontier:domain/civil_nuclear_industry",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_INSTALLED",
       "title_ru": "Гражданская атомная индустрия",
       "title_en": "Civil Nuclear Industry",
-      "installed_mod_ids": [],
-      "planned_owner_labels": [
-        "NuclearCraft: Neoteric"
+      "installed_mod_ids": [
+        "nuclearcraft"
       ],
-      "sovereign_role_ru": "Будущие топливные циклы, реакторная физика, теплообмен, турбины и обращение с ОЯТ.",
-      "forbidden_role_ru": "До установки и аудита не владеет ни одним действующим ID, рецептом, worldgen или энергетической сетью.",
+      "planned_owner_labels": [],
+      "sovereign_role_ru": "Топливные циклы, реакторная физика, теплообмен, турбины и обращение с ОЯТ. Владелец один: реакторную физику не имитируют машины других доменов.",
+      "forbidden_role_ru": "Не владеет геологией: собственная генерация руд отключена датапаком. Не выдаёт готовое топливо в обход очистки и обогащения и не заводит вторую радиационную модель.",
       "processes": [
         {
           "process_id": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
-          "status": "GATED_NOT_INSTALLED",
-          "ownership": "RESERVED_FUTURE",
+          "status": "ACTIVE_VENDOR",
+          "ownership": "PRIMARY",
           "purpose_ru": "Полный гражданский топливный цикл после отдельного exact-file и overlap-gate.",
           "io_semantics": "COVERAGE_ONLY_NOT_RECIPE",
           "input_refs": [
@@ -513,7 +513,7 @@
               "industrial_frontier:pathway/future/civil_nuclear_cycle"
             ]
           },
-          "implementation_ru": "Только архитектурный placeholder; мод отсутствует."
+          "implementation_ru": "Цикл поставляется данными мода и разобран статически: 110 рецептов реактора деления, 57 переработки топлива, 33 разделения изотопов, 35 камеры распада, 28 жидкосолевого контура, 12 определений топлива и 46 теплоотводов. Сборка задаёт вход в домен, эпоху и обучение, а не переписывает физику."
         }
       ],
       "evidence_refs": [
@@ -525,20 +525,20 @@
     },
     {
       "domain_id": "industrial_frontier:domain/strategic_nuclear_program",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_INSTALLED",
       "title_ru": "Стратегическая атомная программа",
       "title_en": "Strategic Nuclear Program",
-      "installed_mod_ids": [],
-      "planned_owner_labels": [
-        "One selected HBM port"
+      "installed_mod_ids": [
+        "hbm_ntm_rebirth"
       ],
-      "sovereign_role_ru": "Будущая особо опасная химия, специальные материалы, защищённые объекты и стратегические технологии.",
-      "forbidden_role_ru": "Не получает действующих ID или worldgen до выбора одного порта и прохождения release-gate.",
+      "planned_owner_labels": [],
+      "sovereign_role_ru": "РБМК, пурекс-переработка, специальные материалы, защищённые объекты и единственный в сборке стратегический заряд. Гражданскую энергетику не дублирует: деление для города остаётся у NuclearCraft.",
+      "forbidden_role_ru": "Не заводит второй радиационной модели, второго счётчика дозы и второй экологии: они выключены конфигом. Не владеет стрелковым оружием и бронёй — этот слой снят рецептами. Не выдаёт стратегический заряд через лут, торговлю или награду.",
       "processes": [
         {
           "process_id": "industrial_frontier:process/future/strategic_materials",
-          "status": "GATED_NOT_INSTALLED",
-          "ownership": "RESERVED_FUTURE",
+          "status": "ACTIVE_VENDOR",
+          "ownership": "PRIMARY",
           "purpose_ru": "Опасные и экзотические процессы, не дублирующие гражданский атомный контур.",
           "io_semantics": "COVERAGE_ONLY_NOT_RECIPE",
           "input_refs": [
@@ -555,7 +555,7 @@
               "industrial_frontier:pathway/future/strategic_demand"
             ]
           },
-          "implementation_ru": "Только архитектурный placeholder; порт не выбран и не установлен."
+          "implementation_ru": "Домен поставляется HBM-NTM Rebirth и разобран статически: 2360 рецептов, 62 сборки РБМК и 55 рецептов пурекса. Вход в него создан сборкой впервые — в моде сборочная машина производится только сама собой, поэтому домен был физически недостижим. Три рецепта входа стоят титана и электроники EV."
         }
       ],
       "evidence_refs": [
@@ -613,22 +613,21 @@
     },
     {
       "domain_id": "industrial_frontier:domain/planetary_spaceflight",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_INSTALLED",
       "title_ru": "Планетарная космонавтика",
       "title_en": "Planetary Spaceflight",
-      "installed_mod_ids": [],
-      "planned_owner_labels": [
-        "Creating Space",
-        "Ad Astra",
-        "Compatibility datapack"
+      "installed_mod_ids": [
+        "gcyr",
+        "creatingspace"
       ],
-      "sovereign_role_ru": "Будущие ракеты, запуск, планеты, атмосферы, жизнеобеспечение и колонии с регулярной логистикой.",
-      "forbidden_role_ru": "Не добавляет планетарные ресурсы, измерения или игровые ID до dependency/worldgen/user gates.",
+      "planned_owner_labels": [],
+      "sovereign_role_ru": "Ракеты, запуск, планеты, жизнеобеспечение и внеземные базы. Пунктами назначения владеет GCYR, околоземной орбитой и станцией — Creating Space; двух карт планет сборка не держит.",
+      "forbidden_role_ru": "Не владеет геологией надмирья: никелевая жила Creating Space отключена датапаком. Не открывается раньше седьмой эпохи и не заводит второго кислорода или второго ракетного топлива.",
       "processes": [
         {
           "process_id": "industrial_frontier:process/future/rocket_and_planetary_logistics",
-          "status": "GATED_NOT_INSTALLED",
-          "ownership": "RESERVED_FUTURE",
+          "status": "ACTIVE_VENDOR",
+          "ownership": "PRIMARY",
           "purpose_ru": "Физически объяснимый запуск и постоянный межпланетный грузопоток.",
           "io_semantics": "COVERAGE_ONLY_NOT_RECIPE",
           "input_refs": [
@@ -649,7 +648,7 @@
               "industrial_frontier:pathway/future/space_launch_and_colony"
             ]
           },
-          "implementation_ru": "Только архитектурный placeholder; космический стек отсутствует."
+          "implementation_ru": "Запуск, планеты и жизнеобеспечение поставляются модами и разобраны статически: GCYR даёт шесть пунктов назначения и три тира ракеты на лестнице GregTech, Creating Space — конструктор двигателя, химию газов и околоземную орбиту. Сборка задаёт эпоху входа восемью рецептами, маршруты — датапаком, обучение — главой книги, и не переписывает полётную модель."
         }
       ],
       "evidence_refs": [
@@ -2452,7 +2451,7 @@
     },
     {
       "contract_id": "industrial_frontier:contract/civil_nuclear_to_strategic_nuclear",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_PACK",
       "source_domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
       "target_domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
       "direction": "ONE_WAY",
@@ -2473,7 +2472,7 @@
     },
     {
       "contract_id": "industrial_frontier:contract/city_life_support_to_space",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_PACK",
       "source_domain_ref": "industrial_frontier:domain/living_city",
       "target_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
       "direction": "ONE_WAY",
@@ -2494,7 +2493,7 @@
     },
     {
       "contract_id": "industrial_frontier:contract/mature_industry_to_space",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_PACK",
       "source_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
       "target_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
       "direction": "ONE_WAY",

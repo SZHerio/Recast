@@ -1,6 +1,6 @@
 ﻿# Generated static audit - IF-M2-0001
 
-- JAR files: 114
+- JAR files: 115
 - Unknown CurseForge provenance: 0
 - Owner-registered non-CurseForge exceptions: 1
 - Stale owner exceptions without an installed file: 0
@@ -9,10 +9,10 @@
 - Mandatory dependency failures: 0
 - Mandatory dependency ranges requiring manual review: 0
 - Mandatory dependency advisories Forge does not enforce: 1
-- Missing Russian keys after current overlay: 9942
-- Empty Russian values: 2
+- Missing Russian keys after current overlay: 14087
+- Empty Russian values: 1
 - Replacement-character values: 0
-- Placeholder mismatches: 23
+- Placeholder mismatches: 21
 - Allowed placeholder exceptions: 1
 - Unused format exceptions: 0
 - Unknown overlay keys: 0

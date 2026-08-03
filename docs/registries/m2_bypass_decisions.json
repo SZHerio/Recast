@@ -649,9 +649,9 @@
     {
       "bypass_id": "industrial_frontier:bypass/future_nuclear_hbm_cycles",
       "category": "MACHINE",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "CLOSED_STATIC",
       "risk_ru": "Будущие NuclearCraft/HBM-процессы могут добавить удвоение сырья, бесплатные изотопы, энергию или universal-переработку.",
-      "decision_ru": "Ни один маршрут, ID или коэффициент не разрешается до exact-file установки и полного статического diff рецептов/worldgen/энергии.",
+      "decision_ru": "Волна пришла. Оба мода установлены и разобраны статически: рудная генерация обоих отключена датапаком, вход в каждый домен перенесён на свою эпоху, удвоения сырья нет — ни один рецепт шреддера или кристаллизатора HBM не принимает руду и не принимает необработанный материал. Энергия HBM осталась замкнутой на себя: конвертера в EU и FE не заведено.",
       "source_refs": [
         "industrial_frontier:domain/civil_nuclear_industry",
         "industrial_frontier:domain/strategic_nuclear_program"
@@ -662,24 +662,28 @@
         "industrial_frontier:energy/hbm_reserved"
       ],
       "enforcement": {
-        "mode": "GATE_ONLY",
-        "implementation_refs": [],
-        "expected_state_ru": "Моды отсутствуют; все runtime-утверждения заблокированы."
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m6_nuclear_epoch_gate.js",
+          "kubejs/server_scripts/10_progression/m7_strategic_epoch_gate.js"
+        ],
+        "expected_state_ru": "Оба атомных домена имеют эпохальный вход, отключённую генерацию руд и раздельные энергетические единицы; будущий конвертер HBM → FE остаётся невыполненным намеренно."
       },
       "profit_check": {
-        "material_gain": "UNKNOWN",
-        "energy_cycle": "UNKNOWN",
-        "static_result": "BLOCKED_NOT_INSTALLED"
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
       },
       "related_decision_refs": [
         "industrial_frontier:worldgen/future_atomic_feedstocks",
         "industrial_frontier:converter/future_hbm_to_fe"
       ],
       "evidence_refs": [
-        "industrial_frontier:evidence/bypass/federation_future"
+        "industrial_frontier:evidence/bypass/hbm_unreachable_assembler",
+        "industrial_frontier:evidence/bypass/m7_gate_scripts"
       ],
       "gate_refs": [
-        "industrial_frontier:gate/bypass/future_mods"
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
       ]
     },
     {
@@ -1203,6 +1207,400 @@
         "industrial_frontier:gate/bypass/material_overlap",
         "industrial_frontier:gate/bypass/runtime_recipe_test"
       ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/nuclearcraft_pre_p6_entry",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Первая машина NuclearCraft стоит свинца, кремня, поршня и красной пыли. Весь гражданский атомный домен — 4331 рецепт, топливный цикл, реакторы и турбины — открывался в первую эпоху, до стали, электричества и города.",
+      "decision_ru": "Замок поставлен на двух машинах входа: переработчик и сплавная печь получили цену уровня HV. Только они превращают сырьё в собственные детали мода, всё остальное собирается уже из них, поэтому 4331 рецепт трогать не пришлось. Третьим перенесён контроллер реактора деления — он обозначает рубеж цепной реакции.",
+      "source_refs": [
+        "nuclearcraft:manufactory",
+        "nuclearcraft:alloy_smelter",
+        "nuclearcraft:fission_reactor_controller"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/civil_nuclear_industry",
+        "industrial_frontier:epoch/p6"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m6_nuclear_epoch_gate.js"
+        ],
+        "expected_state_ru": "Три штатных ID удалены; замены стоят gtceu:steel_plate, gtceu:hv_voltage_coil, gtceu:hv_electric_motor, gtceu:hv_sensor, gtceu:hv_machine_hull и gtceu:hv_robot_arm."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:domain/civil_nuclear_industry",
+        "industrial_frontier:epoch/p6"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/nuclearcraft_vanilla_tier_entry",
+        "industrial_frontier:evidence/bypass/m6_nuclear_gate_script"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/nuclearcraft_late_installations",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "NuclearCraft содержит не только деление: в нём есть синтез, линейные и кольцевые ускорители, камера мишеней и кугельблиц — управляемая чёрная дыра. Открыть их вместе с первой АЭС значило бы отдать содержимое трёх эпох за один рубеж.",
+      "decision_ru": "Удалены восемь контроллеров поздних установок. Детали, обмотки и охладители оставлены в JEI намеренно: игрок видит, что впереди, и понимает, что это отложено, а не запрещено. Возврат — в M7 для стратегического комплекса и в M8 для поздней энергетики.",
+      "source_refs": [
+        "nuclearcraft:fusion_core",
+        "nuclearcraft:ring_accelerator_controller",
+        "nuclearcraft:target_chamber_controller",
+        "nuclearcraft:quantum_transformer"
+      ],
+      "target_refs": [
+        "industrial_frontier:epoch/p7",
+        "industrial_frontier:epoch/p8"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m6_nuclear_epoch_gate.js"
+        ],
+        "expected_state_ru": "Восемь ID контроллеров удалены; ни один рецепт деления, теплообмена, турбины и переработки ОЯТ не тронут."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:domain/civil_nuclear_industry"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/nuclearcraft_late_tiers",
+        "industrial_frontier:evidence/bypass/m6_nuclear_gate_script"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/deas_fission_excluded",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Dea's Fission даёт второй реактор деления на мультиблоках GregTech с собственными топливами, теплоносителями и изотопной химией. Рядом с NuclearCraft это второй владелец одного домена.",
+      "decision_ru": "Мод исключён и не устанавливается. Правило сборки записано заранее: один владелец деления и синтеза в гражданской энергетике, и им остаётся NuclearCraft. Условие входа для Dea's Fission было «только с уникальной ролью после overlap-аудита» — уникальной роли не нашлось: очистка, обогащение, топливо, теплоноситель, выдержка и разделение изотопов уже принадлежат NuclearCraft и реализованы им целиком. Дополнительный довод — статус Beta.",
+      "source_refs": [
+        "deafission"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/civil_nuclear_industry",
+        "industrial_frontier:epoch/p6"
+      ],
+      "enforcement": {
+        "mode": "GATE_ONLY",
+        "implementation_refs": [
+          "docs/CURSEFORGE_CHEMISTRY_AUDIT.md",
+          "docs/GLOBAL_TECH_CITY_CURSEFORGE_AUDIT.md"
+        ],
+        "expected_state_ru": "Файл deafission-*.jar отсутствует в mods/. Решение пересматривается только если владелец захочет исследовательский реактор как отдельную ступень до промышленной АЭС."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:domain/civil_nuclear_industry"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/single_fission_owner"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/static_config"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/hbm_domain_without_entry",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Домен машин HBM недостижим: сборочная машина производится только сама собой, а из неё собираются пресс, шреддер, химзавод, центрифуга и пурекс. Из 704 блоков рецепт имеют 145, и другого пути к сборочной машине в JAR нет. Одновременно наковальня стоит девяти слитков железа и открывает 52 рецепта собственной металлургии мода в первой эпохе.",
+      "decision_ru": "Вход в домен создан сборкой впервые и сразу на своей эпохе. Три рецепта: две наковальни и сборочная машина, все на титане, вольфрамовой стали и электронике EV. Остальные 2357 рецептов мода не тронуты — закрыв вход, закрываешь домен целиком.",
+      "source_refs": [
+        "hbm_ntm_rebirth:machines/anvil_iron",
+        "hbm_ntm_rebirth:machines/anvil_lead",
+        "hbm_ntm_rebirth:machine_assembly_machine"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/strategic_nuclear_program",
+        "industrial_frontier:epoch/p7"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m7_strategic_epoch_gate.js"
+        ],
+        "expected_state_ru": "Две наковальни переписаны, сборочная машина получила первый в своей истории рецепт; цена назначена в gtceu:titanium_plate, gtceu:tungsten_steel_plate, gtceu:ev_machine_hull, gtceu:ev_voltage_coil, gtceu:ev_electric_motor и gtceu:ev_robot_arm."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:domain/strategic_nuclear_program",
+        "industrial_frontier:epoch/p7"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/hbm_unreachable_assembler",
+        "industrial_frontier:evidence/bypass/m7_gate_scripts"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/hbm_parallel_weapon_stack",
+      "category": "RECIPE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "HBM везёт 121 рецепт стрелкового оружия и 112 брони, и все они собираются в обычном верстаке. Это вторая оружейная система рядом с TaCZ и Epic Knights, причём более дешёвая: верстак против стального верстака P2 и эпохальных замков. Снятие одних стволов оставило бы за собой мёртвую ветку: 89 рецептов боеприпасов, 45 модулей брони, три станции и 14 рецептов боезапаса в сборочной машине вели бы в никуда, но занимали бы место в JEI.",
+      "decision_ru": "Оружейный слой снят целиком решением владельца от 3 августа 2026 — 367 рецептов и три станции. Условие снятия проверено обходом графа, а не на глаз: ядерная ветка, которую владелец сохраняет, не проходит ни через патронный пресс, ни через оружейный или бронетехнический стол. Её 72 предмета — заряды, шахтные пусковые, станция сборки ракет и боевые части — собираются сборочной машиной, солидификатором, шреддером, пурексом, химзаводом, прессом и камерой облучения. Боевые роли остаются за стеком Better Combat + Epic Knights + TaCZ + Create Big Cannons.",
+      "source_refs": [
+        "hbm_ntm_rebirth:weapon/",
+        "hbm_ntm_rebirth:armor/",
+        "hbm_ntm_rebirth:ammo_press/",
+        "hbm_ntm_rebirth:armor_modules/",
+        "hbm_ntm_rebirth:machines/ammo_press",
+        "hbm_ntm_rebirth:machines/armor_table"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/strategic_nuclear_program",
+        "industrial_frontier:epoch/p7"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m7_strategic_epoch_gate.js"
+        ],
+        "expected_state_ru": "Четыре папки рецептов удалены по префиксу пути с проверкой числа: 121, 112, 89 и 45. Дополнительно сняты две станции явными ID и 14 рецептов боезапаса в сборочной машине, которые пережили бы удаление папок: крупный калибр, реактивные снаряды РСЗО, химические артиллерийские снаряды и урановый сердечник ядерного снаряда. Третья станция снята вместе с папкой weapon/, потому что её собственный рецепт лежит там же."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:domain/strategic_nuclear_program"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/hbm_weapon_layer",
+        "industrial_frontier:evidence/bypass/hbm_nuclear_branch_independent",
+        "industrial_frontier:evidence/bypass/m7_gate_scripts"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/hbm_second_radiation_model",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "HBM везёт собственную радиацию: чанковое заражение, заражение сущностей, радиацию кратера и отдельный слой загрязнения с собственным детектором и счётчиком Гейгера. Рядом с моделью NuclearCraft это второй счётчик, вторая шкала и второй набор защиты про одно и то же место.",
+      "decision_ru": "Единой моделью дозы решением владельца остаётся NuclearCraft. Собственная радиация HBM выключена тремя переключателями, загрязнение — четвёртым по правилу «одна роль — один владелец» из M4. Материалы HBM внесены в items_radiation NuclearCraft, счётчик Гейгера и детектор загрязнения HBM сняты рецептами.",
+      "source_refs": [
+        "hbm_ntm_rebirth:tools/pollution_detector",
+        "hbm_ntm_rebirth:tools/ore_density_scanner",
+        "hbm_ntm_rebirth:tools/oil_detector",
+        "hbm_ntm_rebirth:tools/geiger_counter_from_block",
+        "hbm_ntm_rebirth:blocks/geiger"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/strategic_nuclear_program",
+        "industrial_frontier:domain/civil_nuclear_industry"
+      ],
+      "enforcement": {
+        "mode": "CONFIG",
+        "implementation_refs": [
+          "config/hbm_ntm_rebirth-common.toml",
+          "config/NuclearCraft/radiation.toml",
+          "kubejs/server_scripts/10_progression/m7_strategic_epoch_gate.js"
+        ],
+        "expected_state_ru": "enableContamination, enableChunkRads, enableCraterBiomeRadiation и enablePollution равны false; в items_radiation NuclearCraft добавлены 10 материалов HBM; сняты три прибора-дубля и обе половины замкнутого цикла счётчика Гейгера, у которого в JAR предмет делается только из блока, а блок — только из предмета."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:domain/civil_nuclear_industry"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/hbm_radiation_config",
+        "industrial_frontier:evidence/bypass/m7_gate_scripts"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/static_config"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/creating_space_pre_p7_launch",
+      "category": "RECIPE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Стол проектирования двигателя Creating Space стоит шести досок и гладкого камня, корпус — алюминия и кобальта, управление и герметизатор — механизмов Create. Космос открывался в первой эпохе: до стали, до электричества, до города и до атомной программы.",
+      "decision_ru": "Восемь узлов входа перенесены за титан и электронику EV. Конструктор двигателя, 97 последовательных сборок и вся химия газов не тронуты: меняется момент, когда игрок к ним подходит, а не глубина пути. Характер мода сохранён — в каждом рецепте остаётся механизм Create.",
+      "source_refs": [
+        "creatingspace:rocket_engineer_table",
+        "creatingspace:rocket_controls",
+        "creatingspace:rocket_casing",
+        "creatingspace:oxygen_sealer",
+        "creatingspace:air_liquefier",
+        "creatingspace:mechanical_electrolyzer",
+        "creatingspace:cryogenic_tank",
+        "creatingspace:rocket_generator"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/planetary_spaceflight",
+        "industrial_frontier:epoch/p7"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m7_space_epoch_gate.js"
+        ],
+        "expected_state_ru": "Восемь штатных ID удалены; замены стоят gtceu:titanium_plate, gtceu:aluminium_plate, gtceu:polytetrafluoroethylene_plate, gtceu:ev_sensor, gtceu:ev_emitter, gtceu:ev_electric_pump, gtceu:ev_voltage_coil и gtceu:ev_machine_hull."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:domain/planetary_spaceflight",
+        "industrial_frontier:epoch/p7"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/creating_space_early_entry",
+        "industrial_frontier:evidence/bypass/m7_gate_scripts"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/duplicate_planet_destinations",
+      "category": "WORLDGEN",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "GCYR и Creating Space объявляют собственные Луну, Марс и Венеру. Это разные измерения с одинаковыми именами, разной геологией и разными правилами выживания; датапака совместимости для этой пары не существует. Игрок мог бы пройти планету дважды и получить её ресурсы из двух несвязанных источников.",
+      "decision_ru": "Пунктами назначения владеет GCYR — решение владельца от 3 августа 2026. Маршруты ракеты Creating Space сведены датапаком к паре «Земля ↔ околоземная орбита»: она отвечает за орбиту и станцию. Планетарные измерения Creating Space остаются в реестре, но недостижимы; ни один его рецепт не удалён.",
+      "source_refs": [
+        "creatingspace:the_moon",
+        "creatingspace:mars",
+        "creatingspace:venus"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/planetary_spaceflight",
+        "industrial_frontier:worldgen/future_planetary_resources"
+      ],
+      "enforcement": {
+        "mode": "CONFIG",
+        "implementation_refs": [
+          "config/paxi/datapacks/IndustrialFrontier-Data/data/creatingspace/creatingspace/rocket_accessible_dimension/earth_orbit.json",
+          "config/paxi/datapacks/IndustrialFrontier-Data/data/minecraft/creatingspace/rocket_accessible_dimension/overworld.json"
+        ],
+        "expected_state_ru": "Граф маршрутов Creating Space содержит ровно два ребра: надмирье → околоземная орбита и обратно. Планетарные жилы GCYR сохранены полностью."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:worldgen/future_planetary_resources"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/duplicate_planet_registries"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/static_config"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/creating_space_overworld_nickel",
+      "category": "WORLDGEN",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Creating Space добавляет никелевую жилу во все биомы надмирья собственным модификатором. Это второй владелец рудной генерации рядом с GregTech и дешёвый обход его геологии.",
+      "decision_ru": "Модификатор перекрыт датапаком. Лунный модификатор мода не трогается: он работает в измерении, до которого его ракета больше не летает.",
+      "source_refs": [
+        "creatingspace:overworld_nickel_ore"
+      ],
+      "target_refs": [
+        "industrial_frontier:worldgen/gtceu_geological_ores",
+        "industrial_frontier:worldgen/future_planetary_resources"
+      ],
+      "enforcement": {
+        "mode": "CONFIG",
+        "implementation_refs": [
+          "config/paxi/datapacks/IndustrialFrontier-Data/data/creatingspace/forge/biome_modifier/add_nickel_overworld_ore.json"
+        ],
+        "expected_state_ru": "add_nickel_overworld_ore перекрыт значением forge:none; GregTech остаётся единственным владельцем рудной генерации надмирья."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:worldgen/gtceu_geological_ores"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/duplicate_planet_registries"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/static_config"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/pattern_recipe_removal",
+      "category": "RECIPE",
+      "status": "ACCEPTED_LIMITED",
+      "risk_ru": "Все удаления рецептов в сборке адресуют точный ID, сверенный с JAR. Удаление по шаблону пути нарушает это правило: набор рецептов под шаблоном не зафиксирован, и обновление мода изменит его молча. Ошибка такого рода выглядит как тишина — рецепты просто остаются, и узнать об этом можно только в игре.",
+      "decision_ru": "Исключение принято для четырёх папок оружейного слоя HBM: выписывать 367 идентификаторов вручную нереально, а папка рецептов у этого мода и есть граница его собственного слоя. Плата за исключение — обязательная сверка с числом из JAR при каждой загрузке: 121, 112, 89 и 45. Расхождение печатается в лог как ошибка с указанием фактического и ожидаемого числа. Исключение не распространяется на другие моды и другие папки.",
+      "source_refs": [
+        "hbm_ntm_rebirth:weapon/",
+        "hbm_ntm_rebirth:armor/",
+        "hbm_ntm_rebirth:ammo_press/",
+        "hbm_ntm_rebirth:armor_modules/"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/strategic_nuclear_program",
+        "industrial_frontier:epoch/p7"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m7_strategic_epoch_gate.js",
+          "tools/lint_content.ps1"
+        ],
+        "expected_state_ru": "Функция ifRemoveFolder удаляет по шаблону, сверяет результат с ожидаемым числом и печатает ошибку при расхождении; отказ самого фильтра перехватывается и тоже сообщается. Линтер проверяет, что все четыре пары «папка + число» остались в скрипте."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:bypass/hbm_parallel_weapon_stack"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/hbm_weapon_layer",
+        "industrial_frontier:evidence/bypass/m7_gate_scripts"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
     }
   ],
   "gates": [
@@ -1469,7 +1867,7 @@
     {
       "evidence_id": "industrial_frontier:evidence/bypass/nuclearcraft_ae2_assembler",
       "type": "VENDOR_DATA",
-      "path": "mods/NuclearCraft-1.20.1-1.2.32.jar!/data/nuclearcraft/recipes/assembler/ae2_calculation_processor.json",
+      "path": "mods/NuclearCraft-1.20.1-1.2.33.jar!/data/nuclearcraft/recipes/assembler/ae2_calculation_processor.json",
       "locator": "forge:conditional -> nuclearcraft:assembler",
       "observed": "NuclearCraft ships assembler recipes for all three AE2 processors from the same printed plates, bypassing the AE2 inscriber press. Two sibling files cover the engineering and logic processors.",
       "verified_on": "2026-08-03",
@@ -1588,7 +1986,106 @@
       "type": "AUTHOR_DECISION",
       "path": "kubejs/exported/gtceu_item_census.json",
       "locator": "tags -> forge:ingots/steel",
-      "observed": "Live registry census taken on 2026-08-03 lists seven members of forge:ingots/steel: ad_astra, createbigcannons, gtceu, hbm_m, immersiveengineering, magistuarmory and nuclearcraft steel ingots. The tag is shared, so Immersive Engineering steel and GregTech steel are the same material to every recipe.",
+      "observed": "Live registry census taken on 2026-08-03 listed seven members of forge:ingots/steel: ad_astra, createbigcannons, gtceu, hbm_m, immersiveengineering, magistuarmory and nuclearcraft steel ingots. Two of those mods were removed later the same day (ad_astra in the M7 space decision, hbm_m when the HBM port was chosen), which narrows the tag but does not change the conclusion: Immersive Engineering steel and GregTech steel are still the same material to every recipe.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/nuclearcraft_vanilla_tier_entry",
+      "type": "VENDOR_DATA",
+      "path": "mods/NuclearCraft-1.20.1-1.2.33.jar!/data/nuclearcraft/recipes/manufactory.json",
+      "locator": "key F flint, L forge:ingots/lead, P minecraft:piston",
+      "observed": "The first NuclearCraft processing machine costs lead, flint, a piston and redstone dust, so the entire civil nuclear domain was reachable in the first epoch.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/nuclearcraft_late_tiers",
+      "type": "VENDOR_DATA",
+      "path": "mods/NuclearCraft-1.20.1-1.2.33.jar!/data/nuclearcraft/recipes/fusion_core.json",
+      "locator": "recipe groups nuclearcraft_fusion, nuclearcraft_accelerator, nuclearcraft_kugelblitz, nuclearcraft_target_chamber",
+      "observed": "Beyond fission the mod ships fusion, linear and ring accelerators, a target chamber and a kugelblitz chamber: 47 accelerator, 12 target chamber, 8 kugelblitz and 4 fusion recipes that belong to later epochs.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/single_fission_owner",
+      "type": "DESIGN_DOCUMENT",
+      "path": "docs/GLOBAL_TECH_CITY_CURSEFORGE_AUDIT.md",
+      "locator": "Один владелец деления/синтеза в гражданской энергетике",
+      "observed": "The pack rule predates the milestone: NuclearCraft stays the base of civil fission and fusion, and competing owners are not added.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/m6_nuclear_gate_script",
+      "type": "AUTHOR_DECISION",
+      "path": "kubejs/server_scripts/10_progression/m6_nuclear_epoch_gate.js",
+      "locator": "ServerEvents.recipes",
+      "observed": "Authored M6 gate: three entry recipes rebuilt on HV GregTech components, eight late-installation controllers removed until their own epochs.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/hbm_unreachable_assembler",
+      "type": "VENDOR_DATA",
+      "path": "mods/hbm_ntm_rebirth-0.4.1beta.jar!/data/hbm_ntm_rebirth/recipes/assembly_machine/assembler.json",
+      "locator": "type hbm_ntm_rebirth:assembly_machine, output_items machine_assembly_machine",
+      "observed": "The assembly machine is produced only by an assembly machine: its single recipe needs hbm_ntm_rebirth:motor and circuit_analog, both made by machines that are themselves assembled. Of 704 blocks only 145 have any recipe, and no other route to the assembler exists in the JAR, so the whole machine domain was unreachable in survival.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/hbm_weapon_layer",
+      "type": "VENDOR_DATA",
+      "path": "mods/hbm_ntm_rebirth-0.4.1beta.jar!/data/hbm_ntm_rebirth/recipes",
+      "locator": "folders weapon/ and armor/",
+      "observed": "121 weapon and 112 armour recipes, all minecraft:crafting_shaped or crafting_shapeless, i.e. a plain crafting table. The two folders are almost isolated: the only output consumed elsewhere is an artillery shell, which is itself ammunition.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/hbm_radiation_config",
+      "type": "VENDOR_DATA",
+      "path": "mods/hbm_ntm_rebirth-0.4.1beta.jar!/com/hbm/ntm/config/RadiationConfig.class",
+      "locator": "constant pool: push(\"radiation\") ... enableContamination, enableChunkRads; push(\"pollution\"); push(\"hazards\")",
+      "observed": "The port ships a complete second radiation model — chunk radiation, entity contamination, crater fallout — plus its own pollution layer, declared as top-level sections of hbm_ntm_rebirth-common.toml.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/creating_space_early_entry",
+      "type": "VENDOR_DATA",
+      "path": "mods/creatingspace-1.20.1-1.7.13.jar!/data/creatingspace/recipes",
+      "locator": "rocket_engineer_table.json, rocket_controls.json, rocket_casing.json, oxygen_sealer.json",
+      "observed": "The engine designer table costs six wooden slabs and smooth stone; controls, casing, liquefier, electrolyzer and sealer cost Create brass and copper. The whole space stack was reachable in the first epoch, before steel and electricity.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/duplicate_planet_registries",
+      "type": "VENDOR_DATA",
+      "path": "mods/gcyr-1.20.1-0.2.9.jar!/data/gcyr/gcyr/planets",
+      "locator": "planet definitions in GCYR; route graph in creatingspace-1.20.1-1.7.13.jar!/data/creatingspace/creatingspace/rocket_accessible_dimension",
+      "observed": "GCYR declares Luna, Mars, Mercury, Venus and Proxima b with rocket tiers 1 to 3; Creating Space declares its own the_moon, mars and venus plus three orbits with a delta-V route graph. The two sets of worlds share names but are different dimensions, and no compatibility datapack exists for this pair.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/m7_gate_scripts",
+      "type": "AUTHOR_DECISION",
+      "path": "kubejs/server_scripts/10_progression/m7_strategic_epoch_gate.js",
+      "locator": "ServerEvents.recipes",
+      "observed": "Authored M7 gates: three HBM entry recipes on EV GregTech components, the weapon and armour folders removed, four duplicated instruments removed, eight Creating Space entry recipes rebuilt on titanium and EV components.",
+      "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/hbm_nuclear_branch_independent",
+      "type": "VENDOR_DATA",
+      "path": "mods/hbm_ntm_rebirth-0.4.1beta.jar!/data/hbm_ntm_rebirth/recipes",
+      "locator": "transitive closure of nuke_*, det_nuke, struct_launcher, launch_pad*, missile_*, mp_warhead_*, machine_missile_assembly",
+      "observed": "Walking the nuclear branch from its 31 roots reaches 72 items and uses only these recipe types: assembly_machine (32), solidifier (27), crafting_shaped/shapeless (12), shredder (6), purex (6), chemical_plant (5), fuel_pool (2), crystallizer, press and exposure_chamber (1 each). It never uses the ammo press, the weapon table, the armour table or the armour-modules folder, so removing the weapon layer leaves the branch intact.",
       "verified_on": "2026-08-03",
       "static_only": true
     }

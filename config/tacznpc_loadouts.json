@@ -80,6 +80,33 @@
       }
     ]
   },
+  "if_zemlemer_p7": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:mk14",
+    "secondary": "%tacz:p320",
+    "helmet": "minecraft:diamond_helmet",
+    "chestplate": "minecraft:diamond_chestplate",
+    "leggings": "minecraft:diamond_leggings",
+    "boots": "minecraft:diamond_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
   "if_meridian_p2": {
     "aligned": [
       "players"
@@ -147,6 +174,33 @@
     "chestplate": "minecraft:iron_chestplate",
     "leggings": "minecraft:iron_leggings",
     "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_meridian_p7": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:hk416d",
+    "secondary": "%tacz:hk_mk23",
+    "helmet": "minecraft:diamond_helmet",
+    "chestplate": "minecraft:diamond_chestplate",
+    "leggings": "minecraft:diamond_leggings",
+    "boots": "minecraft:diamond_boots",
     "dropChances": {
       "mainhand": 0.15,
       "offhand": 0.1,
@@ -242,6 +296,33 @@
       }
     ]
   },
+  "if_free_caravans_p7": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:p90",
+    "secondary": "%tacz:deagle",
+    "helmet": "minecraft:diamond_helmet",
+    "chestplate": "minecraft:diamond_chestplate",
+    "leggings": "minecraft:diamond_leggings",
+    "boots": "minecraft:diamond_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
   "if_helios_p2": {
     "aligned": [
       "players"
@@ -309,6 +390,33 @@
     "chestplate": "minecraft:iron_chestplate",
     "leggings": "minecraft:iron_leggings",
     "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_helios_p7": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:qbz_191",
+    "secondary": "%tacz:p320",
+    "helmet": "minecraft:diamond_helmet",
+    "chestplate": "minecraft:diamond_chestplate",
+    "leggings": "minecraft:diamond_leggings",
+    "boots": "minecraft:diamond_boots",
     "dropChances": {
       "mainhand": 0.15,
       "offhand": 0.1,
@@ -404,6 +512,33 @@
       }
     ]
   },
+  "if_ash_root_p7": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:scar_h",
+    "secondary": "%tacz:m1911",
+    "helmet": "minecraft:diamond_helmet",
+    "chestplate": "minecraft:diamond_chestplate",
+    "leggings": "minecraft:diamond_leggings",
+    "boots": "minecraft:diamond_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
   "if_scar_p2": {
     "aligned": [
       "players"
@@ -471,6 +606,33 @@
     "chestplate": "minecraft:iron_chestplate",
     "leggings": "minecraft:iron_leggings",
     "boots": "minecraft:iron_boots",
+    "dropChances": {
+      "mainhand": 0.15,
+      "offhand": 0.1,
+      "head": 0.1,
+      "chest": 0.1,
+      "legs": 0.1,
+      "feet": 0.1
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
+  },
+  "if_scar_p7": {
+    "aligned": [
+      "players"
+    ],
+    "opposed": [
+      "illagers"
+    ],
+    "primary": "%tacz:m249",
+    "secondary": "%tacz:taurus500",
+    "helmet": "minecraft:diamond_helmet",
+    "chestplate": "minecraft:diamond_chestplate",
+    "leggings": "minecraft:diamond_leggings",
+    "boots": "minecraft:diamond_boots",
     "dropChances": {
       "mainhand": 0.15,
       "offhand": 0.1,
