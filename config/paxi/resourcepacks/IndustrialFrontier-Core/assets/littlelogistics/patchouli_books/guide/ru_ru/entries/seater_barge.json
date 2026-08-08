@@ -1,0 +1,18 @@
+{
+  "name": "Пассажирская баржа",
+  "icon": "littlelogistics:seater_barge",
+  "category": "littlelogistics:vessels",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:seater_barge",
+      "scale": 0.6,
+      "offset": 0.5,
+      "text": "Простая баржа с местом для одного игрока."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:seater_barge"
+    }
+  ]
+}

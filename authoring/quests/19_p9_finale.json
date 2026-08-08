@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p9",
+  "engine_id": "2019000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p9.intro",
+      "engine_id": "3019000000000001",
+      "purpose": "Финал проверяет, способна ли вся построенная вами цивилизация стоять сама.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p9.swarm_line",
+      "engine_id": "3019000000000002",
+      "purpose": "Показывает, что один спутник ещё не система.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p9.swarm_upkeep",
+      "engine_id": "3019000000000003",
+      "purpose": "Объясняет износ, обслуживание и то, почему поздним системам нужен уход.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p9.colony_life",
+      "engine_id": "3019000000000004",
+      "purpose": "Показывает, что колония на одном снабжении ещё не автономна.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p9.colony_industry",
+      "engine_id": "3019000000000005",
+      "purpose": "Показывает, что в финале нужны местное производство и своя энергия.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p9.quantum",
+      "engine_id": "3019000000000006",
+      "purpose": "Отмечает последнюю машину ветки ускорителя и зачем она нужна.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p9.closed_loop",
+      "engine_id": "3019000000000007",
+      "purpose": "Показывает финал как замкнутый цикл производства, логистики и восстановления.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p9.resolution",
+      "engine_id": "3019000000000008",
+      "purpose": "Показывает конец как четыре честных ответа на одну задачу масштаба цивилизации.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

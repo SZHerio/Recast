@@ -1,0 +1,159 @@
+{
+	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
+	default_quest_shape: "square"
+	filename: "73_marathon_choices"
+	group: "1000000000000003"
+	icon: "minecraft:comparator"
+	id: "2073000000000001"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			hide_until_deps_complete: true
+			dependencies: ["3013000000000009"]
+			description: [
+				"{industrial_frontier.quest.marathon.intro.desc.1}"
+				"{industrial_frontier.quest.marathon.intro.desc.2}"
+				"{industrial_frontier.quest.marathon.intro.desc.3}"
+			]
+			icon: "minecraft:comparator"
+			id: "3073000000000001"
+			optional: true
+			subtitle: "{industrial_frontier.quest.marathon.intro.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4073000000000001"
+				title: "{industrial_frontier.quest.marathon.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.marathon.intro.title}"
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["3073000000000001"]
+			description: [
+				"{industrial_frontier.quest.marathon.energy.desc.1}"
+				"{industrial_frontier.quest.marathon.energy.desc.2}"
+				"{industrial_frontier.quest.marathon.energy.desc.3}"
+				"{industrial_frontier.quest.marathon.energy.desc.4}"
+			]
+			icon: "gtceu:gas_large_turbine"
+			id: "3073000000000002"
+			optional: true
+			subtitle: "{industrial_frontier.quest.marathon.energy.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4073000000000002"
+				title: "{industrial_frontier.quest.marathon.energy.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.marathon.energy.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
+		}
+		{
+			dependencies: ["3073000000000002"]
+			description: [
+				"{industrial_frontier.quest.marathon.logistics.desc.1}"
+				"{industrial_frontier.quest.marathon.logistics.desc.2}"
+				"{industrial_frontier.quest.marathon.logistics.desc.3}"
+				"{industrial_frontier.quest.marathon.logistics.desc.4}"
+			]
+			icon: "create:train_door"
+			id: "3073000000000003"
+			optional: true
+			subtitle: "{industrial_frontier.quest.marathon.logistics.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4073000000000003"
+				title: "{industrial_frontier.quest.marathon.logistics.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.marathon.logistics.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
+		}
+		{
+			dependencies: ["3073000000000001"]
+			description: [
+				"{industrial_frontier.quest.marathon.nuclear.desc.1}"
+				"{industrial_frontier.quest.marathon.nuclear.desc.2}"
+				"{industrial_frontier.quest.marathon.nuclear.desc.3}"
+			]
+			icon: "nuclearcraft:fission_reactor_controller"
+			id: "3073000000000004"
+			optional: true
+			subtitle: "{industrial_frontier.quest.marathon.nuclear.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4073000000000004"
+				title: "{industrial_frontier.quest.marathon.nuclear.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.marathon.nuclear.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
+		}
+		{
+			dependencies: ["3073000000000004"]
+			description: [
+				"{industrial_frontier.quest.marathon.space.desc.1}"
+				"{industrial_frontier.quest.marathon.space.desc.2}"
+				"{industrial_frontier.quest.marathon.space.desc.3}"
+			]
+			icon: "gcyr:basic_rocket_motor"
+			id: "3073000000000005"
+			optional: true
+			subtitle: "{industrial_frontier.quest.marathon.space.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4073000000000005"
+				title: "{industrial_frontier.quest.marathon.space.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.marathon.space.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"3073000000000003"
+				"3073000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.marathon.finale.desc.1}"
+				"{industrial_frontier.quest.marathon.finale.desc.2}"
+				"{industrial_frontier.quest.marathon.finale.desc.3}"
+			]
+			icon: "gcyr:dyson_system_controller"
+			id: "3073000000000006"
+			optional: true
+			subtitle: "{industrial_frontier.quest.marathon.finale.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4073000000000006"
+				title: "{industrial_frontier.quest.marathon.finale.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.marathon.finale.title}"
+			shape: "diamond"
+			size: 1.5d
+			x: 6d
+			y: 0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.marathon.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.marathon.title}"
+}

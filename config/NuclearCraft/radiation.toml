@@ -19,13 +19,6 @@
 	#List of items what cleans player radiation when used (pRad). Format: item_id|radiation
 	radiation_removal_items = ["minecraft:golden_carrot|10000000", "minecraft:golden_apple|100000000", "minecraft:enchanted_golden_apple|2500000000", "nuclearcraft:dominos|250000000", "nuclearcraft:moresmore|2500000000", "nuclearcraft:evenmoresmore|1000000000", "nuclearcraft:radaway|50000000000"]
 	#List of items what have radiation (pRad). Format: item_id|radiation
-	#Recast: 10 записей hbm_ntm_rebirth добавлены решением владельца от 3 августа 2026.
-	#У сборки один счётчик дозы, и он здесь. Собственная радиационная модель HBM
-	#выключена в config/hbm_ntm_rebirth-common.toml, поэтому его материалы обязаны
-	#попасть в этот список: иначе плутоний в кармане перестал бы значить что-либо.
-	#Шкала выровнена по уже существующим записям, а не назначена заново: полоний и
-	#ядерные отходы приравнены к полониевой пеллете (4 млн), плутоний — к
-	#плутониевой (2,5 млн), уран заметно ниже как наименее активный из ряда.
 	items_radiation = ["nuclearcraft:spaxelhoe_thorium|50000", "mekanism:pellet_polonium|4000000", "mekanism:pellet_plutonium|2500000", "mekanism:reprocessed_fissile_fragment|1800000", "hbm_ntm_rebirth:ingot_uranium|300000", "hbm_ntm_rebirth:powder_uranium|300000", "hbm_ntm_rebirth:ingot_u235|900000", "hbm_ntm_rebirth:ingot_u233|1200000", "hbm_ntm_rebirth:ingot_neptunium|1500000", "hbm_ntm_rebirth:ingot_plutonium|2500000", "hbm_ntm_rebirth:powder_plutonium|2500000", "hbm_ntm_rebirth:ingot_polonium|4000000", "hbm_ntm_rebirth:nuclear_waste|4000000", "hbm_ntm_rebirth:nuclear_waste_tiny|450000"]
 	#List of armor items and default shielding lvl. Format: item_id|radiation
 	armor_shielding = ["mekanism:hazmat_mask|3", "mekanism:hazmat_gown|5", "mekanism:hazmat_pants|4", "mekanism:hazmat_boots|3", "mekanism:mekasuit_helmet|5", "mekanism:mekasuit_bodyarmor|5", "mekanism:mekasuit_pants|5", "mekanism:mekasuit_boots|5", "nuclearcraft:hazmat_mask|3", "nuclearcraft:hazmat_chest|5", "nuclearcraft:hazmat_pants|4", "nuclearcraft:hazmat_boots|3", "nuclearcraft:hev_helmet|5", "nuclearcraft:hev_chest|7", "nuclearcraft:hev_pants|6", "nuclearcraft:hev_boots|5"]

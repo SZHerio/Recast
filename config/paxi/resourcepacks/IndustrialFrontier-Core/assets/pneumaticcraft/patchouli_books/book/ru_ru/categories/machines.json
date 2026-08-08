@@ -1,0 +1,6 @@
+{
+  "name": "Машины",
+  "description": "Машины и другие полезные устройства, многим из которых для работы требуется $(l:base_concepts/pressure)давление/$.",
+  "icon": "pneumaticcraft:vortex_tube",
+  "sortnum": 5
+}

@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "policy": "An exception is allowed only when the installed code supplies every referenced argument and the different placeholder set is required by natural Russian formatting. Signatures are pinned so an upstream change reopens the gate.",
+  "policy": "Исключение допустимо только тогда, когда установленный код передаёт все нужные аргументы и иной набор плейсхолдеров необходим для естественного русского оформления. Подписи закреплены, чтобы любое изменение upstream снова открыло gate.",
   "exceptions": [
     {
       "namespace": "create",
       "key": "create.schedule.condition.time_of_day.digital_format",
       "en_tokens": "%1$s|%3$s|%4$s",
       "ru_tokens": "%2$s|%3$s",
-      "reason": "Russian uses the 24-hour clock without AM/PM. The installed Create JAR ships the same safe argument selection in de_de and fr_fr, confirming that the formatter supplies both 12-hour and 24-hour arguments."
+      "reason": "В русском используется 24-часовой формат без AM/PM. В установленном Create JAR тот же безопасный выбор аргументов есть в de_de и fr_fr, что подтверждает передачу formatter и 12-часовых, и 24-часовых аргументов."
     }
   ]
 }

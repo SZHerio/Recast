@@ -1,0 +1,18 @@
+{
+  "command.gtceu.cape.take.success.single": "Снято %s плащей у %s",
+  "gtceu.fluid.temperature": "§cТемпература: %s",
+  "gtceu.gui.content.chance_base": "Базовый шанс: %s%%",
+  "gtceu.gui.content.chance_tier_boost_minus": "Бонус к шансу: -%s%% за уровень",
+  "gtceu.gui.content.chance_tier_boost_plus": "Бонус к шансу: +%s%% за уровень",
+  "gtceu.machine.fisher.requirement": "Требуется квадрат воды размером %d×%d непосредственно под машиной.",
+  "gtceu.machine.power_substation.tooltip.4": "Пассивная потеря на каждый блок конденсатора ограничена значением §f%d kEU/t§7.",
+  "gtceu.multiblock.batch_enabled": "- множитель %dx за пакетную обработку",
+  "gtceu.multiblock.energy_consumption": "Энергопотребление: %s EU/t (%s)",
+  "gtceu.multiblock.hpca.computation": "Предоставляет: %s",
+  "gtceu.multiblock.large_boiler.description": "Большой котёл — многоблочная установка, вырабатывающая пар из воды и источника энергии. В качестве топлива подходит любое твёрдое топливо со временем горения либо дизельное или полужидкое топливо. Мощность можно снижать шагами по 5%%, уменьшая выработку пара и расход топлива.",
+  "gtceu.multiblock.large_chemical_reactor.description": "Большой химический реактор проводит реакции со 100%%-й энергетической эффективностью. При разгоне скорость и энергопотребление увеличиваются в 4 раза. Для структуры требуется ровно один блок купроникелевой катушки, установленный рядом с корпусом трубы из ПТФЭ в центре.",
+  "metaitem.cover.digital.wireless.tooltip.3": "§aПривязка: §f%s",
+  "metaitem.generic.electric_item.tooltip": "%d/%d EU — уровень %s",
+  "recipe.condition.dimension.tooltip": "Измерение: %s",
+  "recipe.condition.eu_to_start.tooltip": "EU для запуска: %d%s"
+}

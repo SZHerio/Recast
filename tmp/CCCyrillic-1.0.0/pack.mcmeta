@@ -1,0 +1,10 @@
+﻿{
+  "pack": {
+    "description": "Cyrillic CC:Tweaked font resource pack by sashafiesta",
+    "pack_format": 15,
+    "supported_formats": [
+      15,
+      1000
+    ]
+  }
+}

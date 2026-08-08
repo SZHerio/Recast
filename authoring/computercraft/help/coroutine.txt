@@ -1,0 +1,2 @@
+coroutine — стандартный API Lua 5.1.
+Подробнее: http://www.lua.org/manual/5.1/

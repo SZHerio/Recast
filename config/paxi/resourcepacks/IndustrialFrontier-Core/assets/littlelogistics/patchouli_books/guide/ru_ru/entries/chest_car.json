@@ -1,0 +1,19 @@
+{
+  "name": "Вагон с сундуком",
+  "icon": "littlelogistics:chest_car",
+  "category": "littlelogistics:trains",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:chest_car",
+      "scale": 0.6,
+      "offset": 0.5,
+      "text": "Простой грузовой вагон для предметов, похожий на вагонетку с сундуком."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:chest_car",
+      "text": "Для взаимодействия с воронками вагон должен стоять у погрузочного пути и быть частью поезда."
+    }
+  ]
+}

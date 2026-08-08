@@ -1,0 +1,30 @@
+{
+  "name": "Модуль термостата",
+  "icon": "pneumaticcraft:thermostat_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Модуль измеряет температуру блока перед собой и, если она выше заданного порога, передаёт сигнал редстоуна по выбранному каналу. Для вывода сигнала используйте $(l:tubes/redstone_module)модуль редстоуна/$ в режиме выхода."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:module_expansion_card",
+      "text": "После установки $(l:tubes/module_expansion_card)платы расширения модуля/$ открывается расширенный интерфейс с подробной настройкой $(#f00)сигнала редстоуна/$. По умолчанию можно задать порог: ниже него сигнал будет выключен, а выше — включён на полную силу, или наоборот. Переключатель $(bold)«Расширенная настройка»/$ даёт ещё больше возможностей (см. далее)."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/thermostat_gui.png"
+      ],
+      "text": "$(italic)<0°C = редстоун 0, >1000°C = редстоун 15, 0–1000°C = интерполяция (например, 200°C = редстоун 3)/$",
+      "anchor": "img"
+    },
+    {
+      "type": "crafting",
+      "text": "Создание модуля термостата",
+      "recipe": "pneumaticcraft:thermostat_module"
+    }
+  ]
+}

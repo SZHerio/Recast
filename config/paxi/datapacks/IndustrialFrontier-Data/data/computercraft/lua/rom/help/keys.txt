@@ -1,0 +1,9 @@
+API keys содержит константы всех кодов клавиш, которые может вернуть событие "key":
+
+ѕример использовани€:
+local sEvent, nKey = os.pullEvent()
+if sEvent == "key" and nKey == keys.enter then
+   -- ¬ыполнить действие
+end
+
+ѕолный список приведЄн на странице https://www.minecraft.wiki/w/Key_codes и в исходном коде.

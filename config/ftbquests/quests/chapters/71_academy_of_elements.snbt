@@ -1,5 +1,6 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "71_academy_of_elements"
 	group: "1000000000000003"
@@ -9,6 +10,8 @@
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3010000000000008"]
 			description: [
 				"{industrial_frontier.quest.elements.intro.desc.1}"
 				"{industrial_frontier.quest.elements.intro.desc.2}"
@@ -17,13 +20,6 @@
 			icon: "minecraft:brewing_stand"
 			id: "3071000000000001"
 			optional: true
-			rewards: [{
-				id: "5071000000000001"
-				type: "xp"
-				xp: 20
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.elements.intro.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -32,8 +28,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3071000000000001"]
@@ -42,14 +40,9 @@
 				"{industrial_frontier.quest.elements.purity.desc.2}"
 				"{industrial_frontier.quest.elements.purity.desc.3}"
 			]
-			icon: "minecraft:glass_bottle"
+			icon: "industrial_frontier:textures/gui/icons/process/gtceu/air_separation.png"
 			id: "3071000000000002"
 			optional: true
-			rewards: [{
-				id: "5071000000000002"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.purity.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -58,8 +51,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.purity.title}"
-			x: 3.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 0d
 		}
 		{
 			dependencies: ["3071000000000002"]
@@ -71,11 +66,6 @@
 			icon: "minecraft:coal"
 			id: "3071000000000003"
 			optional: true
-			rewards: [{
-				id: "5071000000000003"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.carbon.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -84,8 +74,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.carbon.title}"
-			x: 6.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: ["3071000000000002"]
@@ -97,11 +89,6 @@
 			icon: "minecraft:gunpowder"
 			id: "3071000000000004"
 			optional: true
-			rewards: [{
-				id: "5071000000000004"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.sulfur.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -110,8 +97,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.sulfur.title}"
-			x: 6.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
 			dependencies: ["3071000000000003"]
@@ -123,11 +112,6 @@
 			icon: "minecraft:bone_meal"
 			id: "3071000000000005"
 			optional: true
-			rewards: [{
-				id: "5071000000000005"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.nitrogen.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -136,8 +120,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.nitrogen.title}"
-			x: 9.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: -1d
 		}
 		{
 			dependencies: ["3071000000000004"]
@@ -146,14 +132,9 @@
 				"{industrial_frontier.quest.elements.chlorine.desc.2}"
 				"{industrial_frontier.quest.elements.chlorine.desc.3}"
 			]
-			icon: "minecraft:blue_ice"
+			icon: "industrial_frontier:textures/gui/icons/process/gtceu/hydrochloric_acid.png"
 			id: "3071000000000006"
 			optional: true
-			rewards: [{
-				id: "5071000000000006"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.chlorine.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -162,8 +143,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.chlorine.title}"
-			x: 9.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 1d
 		}
 		{
 			dependencies: [
@@ -178,11 +161,6 @@
 			icon: "minecraft:water_bucket"
 			id: "3071000000000007"
 			optional: true
-			rewards: [{
-				id: "5071000000000007"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.water.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -191,8 +169,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.water.title}"
-			x: 12.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 0d
 		}
 		{
 			dependencies: ["3071000000000007"]
@@ -204,11 +184,6 @@
 			icon: "minecraft:redstone"
 			id: "3071000000000008"
 			optional: true
-			rewards: [{
-				id: "5071000000000008"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.silicon.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -217,8 +192,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.silicon.title}"
-			x: 15.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: -1d
 		}
 		{
 			dependencies: ["3071000000000007"]
@@ -230,11 +207,6 @@
 			icon: "minecraft:lava_bucket"
 			id: "3071000000000009"
 			optional: true
-			rewards: [{
-				id: "5071000000000009"
-				type: "xp"
-				xp: 20
-			}]
 			subtitle: "{industrial_frontier.quest.elements.nuclear.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -243,8 +215,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.nuclear.title}"
-			x: 15.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: 1d
 		}
 		{
 			dependencies: [
@@ -259,12 +233,6 @@
 			icon: "minecraft:book"
 			id: "3071000000000010"
 			optional: true
-			rewards: [{
-				id: "5071000000000010"
-				type: "xp"
-				xp: 20
-			}]
-			shape: "diamond"
 			subtitle: "{industrial_frontier.quest.elements.index.subtitle}"
 			tags: ["academy"]
 			tasks: [{
@@ -273,8 +241,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.elements.index.title}"
-			x: 18.0d
-			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 12d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.elements.subtitle}"]

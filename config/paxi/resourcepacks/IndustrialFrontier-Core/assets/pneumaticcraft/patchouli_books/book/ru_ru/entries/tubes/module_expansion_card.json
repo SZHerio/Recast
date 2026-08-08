@@ -1,0 +1,17 @@
+{
+  "name": "Плата расширения модуля",
+  "icon": "pneumaticcraft:module_expansion_card",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Плата расширения модуля/$ — подключаемая плата, которая улучшает возможности $(l:tubes/tube_modules)трубных модулей/$ разными способами. Чтобы установить её, щёлкните $(thing)ПКМ/$ платой по модулю.$(p)Подробности об эффекте улучшения приведены на страницах соответствующих модулей."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание платы расширения модуля",
+      "recipe": "pneumaticcraft:module_expansion_card"
+    }
+  ]
+}

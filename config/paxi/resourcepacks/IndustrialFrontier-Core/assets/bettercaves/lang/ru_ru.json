@@ -1,0 +1,7 @@
+{
+  "text.autoconfig.bettercaves-fabric-1_20_1.option.general.liquidRegions": "Области жидкости",
+  "text.autoconfig.bettercaves-fabric-1_20_1.option.general.liquidRegions.liquidAltitude": "Высота жидкости",
+  "text.autoconfig.bettercaves-fabric-1_20_1.option.general.liquidRegions.liquidRegionSize": "Размер области жидкости",
+  "text.autoconfig.bettercaves-fabric-1_20_1.option.general.liquidRegions.waterRegionSpawnChance": "Вероятность появления водной области",
+  "text.autoconfig.bettercaves-fabric-1_20_1.title": "Улучшенные пещеры YUNG'а"
+}

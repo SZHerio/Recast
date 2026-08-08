@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.local/schemas/quest_content_coverage.schema.json",
+  "title": "Industrial Frontier quest content coverage",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_id",
+    "generated_from",
+    "expected_counts",
+    "inventory_delta",
+    "ru_authoring_policy",
+    "jars"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "registry_id": { "const": "industrial_frontier:quest_content_coverage/qr2" },
+    "generated_from": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mods_directory", "instance_manifest", "compiled_chapters"],
+      "properties": {
+        "mods_directory": { "const": "mods" },
+        "instance_manifest": { "const": "minecraftinstance.json" },
+        "compiled_chapters": { "const": "config/ftbquests/quests/chapters" }
+      }
+    },
+    "expected_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["all_jars", "content_gameplay", "authoring_runtime", "library_dependency", "client_optimization"],
+      "properties": {
+        "all_jars": { "const": 134 },
+        "content_gameplay": { "const": 81 },
+        "authoring_runtime": { "const": 19 },
+        "library_dependency": { "const": 26 },
+        "client_optimization": { "const": 8 }
+      }
+    },
+    "inventory_delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["baseline_active_jars", "current_active_jars", "post_baseline_additions"],
+      "properties": {
+        "baseline_active_jars": { "const": 133 },
+        "current_active_jars": { "const": 134 },
+        "post_baseline_additions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "uniqueItems": true,
+          "items": { "const": "ftb-essentials-forge-2001.2.4.jar" }
+        }
+      }
+    },
+    "ru_authoring_policy": { "$ref": "#/$defs/ruPolicy" },
+    "jars": {
+      "type": "array",
+      "minItems": 134,
+      "maxItems": 134,
+      "items": { "$ref": "#/$defs/jar" }
+    }
+  },
+  "$defs": {
+    "epoch": { "enum": ["P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9"] },
+    "ruPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_language",
+        "human_authored_required",
+        "machine_translation_forbidden",
+        "placeholders_forbidden",
+        "style_requirement"
+      ],
+      "properties": {
+        "primary_language": { "const": "ru_ru" },
+        "human_authored_required": { "const": true },
+        "machine_translation_forbidden": { "const": true },
+        "placeholders_forbidden": { "const": true },
+        "style_requirement": { "type": "string", "minLength": 20 }
+      }
+    },
+    "ruCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_language",
+        "status",
+        "human_authoring_required",
+        "machine_translation_forbidden",
+        "placeholders_forbidden",
+        "minimum_scope",
+        "editorial_checks",
+        "ru_ready"
+      ],
+      "properties": {
+        "primary_language": { "const": "ru_ru" },
+        "status": {
+          "enum": ["FULL_REAUTHOR_REQUIRED", "REVIEW_AND_EXPAND_REQUIRED", "NOT_APPLICABLE", "APPROVED_HUMAN_COPY"]
+        },
+        "human_authoring_required": { "type": "boolean" },
+        "machine_translation_forbidden": { "const": true },
+        "placeholders_forbidden": { "const": true },
+        "minimum_scope": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 3 }
+        },
+        "editorial_checks": { "$ref": "#/$defs/editorialChecks" },
+        "ru_ready": { "type": "boolean" }
+      }
+    },
+    "editorialChecks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"],
+      "properties": {
+        "RU_PRIMARY_DRAFTED": { "type": "boolean" },
+        "RU_TECH_CHECKED": { "type": "boolean" },
+        "RU_STYLE_REVIEWED": { "type": "boolean" },
+        "RU_FLOW_REVIEWED": { "type": "boolean" }
+      }
+    },
+    "coverageContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary_ru", "minimum_topics_ru", "verification_ru", "integration_ru"],
+      "properties": {
+        "summary_ru": { "type": "string", "minLength": 8 },
+        "minimum_topics_ru": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 3 }
+        },
+        "verification_ru": { "type": "string", "minLength": 8 },
+        "integration_ru": { "type": "string", "minLength": 8 }
+      }
+    },
+    "jar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jar",
+        "name",
+        "modids",
+        "category",
+        "role",
+        "home_chapter",
+        "epochs",
+        "coverage_contract",
+        "current_quest_ref_count",
+        "status",
+        "ru_copy_coverage"
+      ],
+      "properties": {
+        "jar": { "type": "string", "pattern": "\\.jar$" },
+        "snapshot_status": { "enum": ["QR0_BASELINE", "POST_BASELINE_ADDITION"] },
+        "name": { "type": "string", "minLength": 1 },
+        "modids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+        },
+        "category": {
+          "enum": ["CONTENT_GAMEPLAY", "AUTHORING_RUNTIME", "LIBRARY_DEPENDENCY", "CLIENT_OPTIMIZATION"]
+        },
+        "role": {
+          "enum": ["MANDATORY_BACKBONE", "MANDATORY_INTEGRATION", "OPTIONAL_SYSTEM", "ATMOSPHERIC_WORLD", "INSTRUMENTAL_NO_QUEST"]
+        },
+        "home_chapter": { "type": ["string", "null"] },
+        "epochs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/epoch" }
+        },
+        "coverage_contract": { "$ref": "#/$defs/coverageContract" },
+        "current_quest_ref_count": { "type": "integer", "minimum": 0 },
+        "status": { "enum": ["UNQUESTED", "NARRATIVE_ONLY", "PARTIAL", "NO_QUEST_REQUIRED"] },
+        "ru_copy_coverage": { "$ref": "#/$defs/ruCoverage" }
+      }
+    }
+  }
+}

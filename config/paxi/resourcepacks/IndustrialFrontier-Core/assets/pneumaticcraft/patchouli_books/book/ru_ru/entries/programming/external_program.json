@@ -1,0 +1,23 @@
+{
+  "name": "Виджет «Внешняя программа»",
+  "icon": "pneumaticcraft:textures/progwidgets/external_program_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Этот виджет ищет все инвентари в указанной $(l:programming/area)Области/$ и последовательно проверяет каждый их слот. Найдя $(l:tools/drone)дрона/$ или $(l:components/network_components#network_api)Сетевой API/$, он запускает сохранённую на предмете программу.$(p)После завершения программы $(item)дрон/$ переходит к следующему слоту и/или инвентарю."
+    },
+    {
+      "type": "text",
+      "text": "Виджет удобен для отладки программ $(item)дронов/$, поскольку $(l:programming/programmer)Программаторы/$ тоже считаются инвентарями. Запишите в $(item)дрона/$ виджет $(thing)Внешняя программа/$, задайте область только из $(item)Программатора/$ и разместите дрона в мире.$(p)Теперь положите в Программатор $(item)дрона/$ или $(item)Сетевой API/$ и создайте программу. После нажатия кнопки $(thing)⟶ (экспорт)/$ в $(item)Программаторе/$ размещённый $(item)дрон/$ немедленно выполнит её."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/external_program_piece.png"
+      ],
+      "text": "$(italic)Программоцепция/$"
+    }
+  ]
+}

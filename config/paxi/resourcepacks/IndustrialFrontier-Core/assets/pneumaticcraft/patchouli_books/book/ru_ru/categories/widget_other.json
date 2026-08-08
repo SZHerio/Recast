@@ -1,0 +1,7 @@
+{
+  "name": "Другие виджеты",
+  "description": "Виджеты, которые не относятся ни к одной другой категории.",
+  "icon": "pneumaticcraft:textures/progwidgets/comment_piece.png",
+  "parent": "pneumaticcraft:programming",
+  "sortnum": 4
+}

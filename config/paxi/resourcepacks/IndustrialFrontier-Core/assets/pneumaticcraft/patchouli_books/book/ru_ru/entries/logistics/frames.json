@@ -1,0 +1,55 @@
+{
+  "name": "Логистические рамки",
+  "icon": "pneumaticcraft:logistics_frame_passive_provider",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)Логистические рамки/$ — это устанавливаемые на инвентари и резервуары устройства, которые включают их в $(thing)логистическую систему/$.$(p)Установленную рамку можно настроить $(thing)правой кнопкой мыши/$ с $(l:tools/logistics_configurator)логистическим пневмоключом/$ и снять, нажав $(thing)Shift + ПКМ/$ тем же инструментом. Рамку в виде предмета также можно настроить обычным щелчком ПКМ."
+    },
+    {
+      "type": "text",
+      "text": "Для рамок доступны следующие настройки:$(li)Все рамки поддерживают $(thing)фильтрацию/$ входящих и исходящих предметов или жидкостей. См. также $(l:tools/tag_filter)фильтры тегов/$.$(li)На боковой вкладке $(thing)«Фильтр»/$ можно указать, учитывать ли $(thing)NBT предмета/$ и $(thing)ID мода/$, а также выбрать режим белого списка (по умолчанию) или чёрного списка."
+    },
+    {
+      "type": "text",
+      "text": "$(li)Для $(l:logistics/frames#requester)рамок запроса/$ на вкладке $(thing)«Минимальный объём заказа»/$ задаётся наименьшая партия предметов или жидкости, переносимая за один раз. Это не даёт дронам постоянно летать с почти пустым грузом.$(li)Любую рамку можно сделать $(thing)невидимой/$ для игроков, которые не держат в руке логистический предмет — рамку или пневмоключ. Щелчки ЛКМ по невидимой рамке передаются блоку под ней."
+    },
+    {
+      "type": "crafting",
+      "anchor": "active_provider",
+      "title": "Активная рамка поставщика",
+      "recipe": "pneumaticcraft:logistics_frame_active_provider",
+      "text": "$(item)Активная рамка поставщика/$ передаёт предметы и жидкости $(l:logistics/frames#requester)рамкам запроса/$, $(l:logistics/frames#storage)рамкам хранения/$ и $(l:logistics/frames#default_storage)рамкам хранения по умолчанию/$."
+    },
+    {
+      "type": "crafting",
+      "anchor": "passive_provider",
+      "title": "Пассивная рамка поставщика",
+      "recipe": "pneumaticcraft:logistics_frame_passive_provider",
+      "text": "$(item)Пассивная рамка поставщика/$ передаёт предметы и жидкости только $(l:logistics/frames#requester)рамкам запроса/$."
+    },
+    {
+      "type": "crafting",
+      "anchor": "storage",
+      "title": "Рамка хранения",
+      "recipe": "pneumaticcraft:logistics_frame_storage",
+      "text": "$(item)Рамки хранения/$ принимают предметы и жидкости от $(l:logistics/frames#active_provider)активных рамок поставщика/$ и передают предметы $(l:logistics/frames#requester)рамкам запроса/$."
+    },
+    {
+      "type": "crafting",
+      "anchor": "default_storage",
+      "title": "Рамка хранения по умолчанию",
+      "recipe": "pneumaticcraft:logistics_frame_default_storage",
+      "text": "$(item)Рамки хранения по умолчанию/$ принимают предметы и жидкости от $(l:logistics/frames#active_provider)активных рамок поставщика/$ и передают ресурсы $(l:logistics/frames#requester)рамкам запроса/$ и $(l:logistics/frames#storage)обычным рамкам хранения/$. Их приоритет ниже, поэтому при наличии свободного места сначала всегда используются обычные рамки хранения."
+    },
+    {
+      "type": "crafting",
+      "anchor": "requester",
+      "title": "Рамка запроса",
+      "recipe": "pneumaticcraft:logistics_frame_requester",
+      "text": "$(item)Рамки запроса/$ могут запрашивать предметы и жидкости из любого инвентаря с рамкой. В интерфейсе рамки задайте, какой запас каждого предмета или жидкости она должна стараться $(thing)поддерживать/$."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Монитор — периферийное устройство CraftOS. Введите "help peripheral", чтобы узнать, как подключаться к периферийным устройствам через API peripheral. Когда монитор подключён, peripheral.getType() возвращает "monitor". Обёрнутый монитор можно передать в term.redirect(), чтобы направить на него весь вывод терминала.
+
+Методы монитора:
+write( text )
+blit( text, textColor, backgroundColor )
+clear()
+clearLine()
+getCursorPos()
+setCursorPos( x, y )
+setCursorBlink( blink )
+isColor()
+setTextColor( color )
+setBackgroundColor( color )
+getTextColor()
+getBackgroundColor()
+getSize()
+scroll( n )
+setPaletteColor( color, r, g, b )
+getPaletteColor( color )
+
+События монитора:
+"monitor_touch" — игрок коснулся продвинутого монитора. Аргументы: name, x, y
+"monitor_resize" — размер монитора изменился. Аргумент — имя монитора.

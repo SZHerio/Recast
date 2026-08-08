@@ -1,0 +1,5 @@
+{
+  "name": "Предметы",
+  "description": "Видеоинструкции по использованию предметов доступны в $(l:https://littlelogistics.murad.dev)онлайн-руководстве$().",
+  "icon": "littlelogistics:tug_route"
+}

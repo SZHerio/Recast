@@ -1,0 +1,20 @@
+{
+  "description.jei.debug.formatting.1": "Проверка подстановки форматирования: %s.",
+  "description.jei.debug.formatting.2": "Проверка подстановки форматирования: %s %s.",
+  "description.jei.debug.formatting.3": "%s (вложенный)",
+  "description.jei.wooden.door.1": "Деревянные двери не позволяют монстрам проникнуть в здание.\nПроверка предложений.",
+  "description.jei.wooden.door.2": "Нажмите на дверь, чтобы открыть или закрыть её.",
+  "description.jei.wooden.door.3": "Деревянные двери можно открывать и закрывать сигналом редстоуна.",
+  "gui.jei.category.recipe.crashed": "Этот рецепт вызвал ошибку. Подробности записаны в журнале клиента.",
+  "gui.jei.category.tagInformation": "Теги: %s",
+  "gui.jei.category.tagInformation.block": "Теги блоков",
+  "gui.jei.category.tagInformation.fluid": "Теги жидкостей",
+  "gui.jei.category.tagInformation.item": "Теги предметов",
+  "jei.alias.panda.spawn.egg": "под угрозой исчезновения",
+  "jei.tooltip.item.search.aliases": "Поисковые названия:",
+  "jei.tooltip.liquid.flowing": "%s (течёт)",
+  "jei.tooltip.lookupHistory.disable": "Скрыть историю просмотров JEI",
+  "jei.tooltip.lookupHistory.enable": "Показать историю просмотров JEI",
+  "jei.tooltip.lookupHistory.usage": "Показывает список ингредиентов, по которым недавно искали рецепты.",
+  "jei.tooltip.show.all.recipes.hotkey": "Нажмите «%s», чтобы показать все рецепты."
+}

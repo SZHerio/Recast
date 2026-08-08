@@ -1,0 +1,19 @@
+{
+  "name": "Баржа с сундуком",
+  "icon": "littlelogistics:barge",
+  "category": "littlelogistics:vessels",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:barge",
+      "scale": 0.6,
+      "offset": 0.5,
+      "text": "Простая грузовая баржа для предметов, похожая на вагонетку с сундуком."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:barge",
+      "text": "Для взаимодействия с воронками баржа должна быть пришвартована и включена в буксирный состав."
+    }
+  ]
+}

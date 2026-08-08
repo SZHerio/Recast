@@ -1,0 +1,18 @@
+{
+  "name": "Сборочные программы",
+  "icon": "pneumaticcraft:assembly_program_laser",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)Сборочные программы/$ устанавливаются в $(l:manufacturing/assembly_system)сборочный контроллер/$ и указывают ему, какую операцию выполнять. Создать их нельзя: программы продают $(thing)жители-механики/$, а заказать их можно через $(l:tools/amadron_tablet)планшет Amadron/$."
+    },
+    {
+      "type": "spotlight",
+      "title": "Бур и лазер",
+      "item": "pneumaticcraft:assembly_program_drill_laser",
+      "text": "$(item)Сборочная программа «Бур и лазер»/$ устроена немного иначе. Она не выполняет отдельно рецепты для бура и лазера, а позволяет одной программой обрабатывать двухэтапные рецепты, в которых нужны $(italic)и/$ сверление, и лазерная резка — например, при создании $(l:tubes/pressure_tubes#advanced)продвинутых напорных труб/$."
+    }
+  ]
+}

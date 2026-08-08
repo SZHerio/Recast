@@ -1,0 +1,6 @@
+{
+  "name": "Трубы и модули",
+  "description": "Напорные трубы служат для передачи сжатого воздуха в $(pncr).",
+  "icon": "pneumaticcraft:pressure_tube",
+  "sortnum": 2
+}

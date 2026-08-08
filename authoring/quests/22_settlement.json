@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.settlement",
+  "engine_id": "2022000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/22_settlement.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.settlement.intro",
+      "engine_id": "3022000000000001",
+      "purpose": "Показывает поселения как автоматизацию работы, которую игрок не всегда может делать сам.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.settlement.townhall",
+      "engine_id": "3022000000000002",
+      "purpose": "Объясняет, почему ратуша — опорная точка для всех следующих шагов поселения.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.settlement.builder",
+      "engine_id": "3022000000000003",
+      "purpose": "Показывает строителя как ворота для расширения, а не просто удобного NPC.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.settlement.supply",
+      "engine_id": "3022000000000004",
+      "purpose": "Показывает, что колонию нужно снабжать постоянно, чтобы она работала.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.settlement.guards",
+      "engine_id": "3022000000000005",
+      "purpose": "Показывает оборону как часть логистики поселения, а не отдельную боёвку.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

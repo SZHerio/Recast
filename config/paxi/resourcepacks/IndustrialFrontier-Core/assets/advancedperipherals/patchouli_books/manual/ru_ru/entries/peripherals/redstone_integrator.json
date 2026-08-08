@@ -1,0 +1,30 @@
+{
+  "name": "Интегратор редстоуна",
+  "icon": "advancedperipherals:redstone_integrator",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Интегратор редстоуна позволяет управлять сигналами редстоуна тем же кодом, который используется на компьютере.$(p)Он особенно полезен, когда сигналы нужно выводить с большего числа сторон, чем доступно обычному компьютеру.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/redstone_integrator/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:redstone_integrator"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:redstone_integrator"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите интегратор редстоуна к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.storage",
+  "engine_id": "2020000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.storage.intro",
+      "engine_id": "3020000000000001",
+      "purpose": "Показывает, что порядок на складе — это базовая система, а не просто аккуратность.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.storage.connector",
+      "engine_id": "3020000000000002",
+      "purpose": "Показывает, как один соединитель превращает разрозненные ящики в единую сеть.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.storage.terminal",
+      "engine_id": "3020000000000003",
+      "purpose": "Показывает терминал как первый настоящий инструмент поиска по складу.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.storage.cables",
+      "engine_id": "3020000000000004",
+      "purpose": "Объясняет, что склад может быть удалённым и всё равно ощущаться рядом.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.storage.crafting",
+      "engine_id": "3020000000000005",
+      "purpose": "Открывает крафт только в правильный момент прогрессии.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.storage.level",
+      "engine_id": "3020000000000006",
+      "purpose": "Вводит контроль уровня как первый настоящий цикл автоматизации склада.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.storage.handover",
+      "engine_id": "3020000000000007",
+      "purpose": "Объясняет, что AE2 расширяет базу, а не заменяет старый склад.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

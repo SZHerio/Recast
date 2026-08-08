@@ -1,0 +1,555 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/qr3_p0_p3",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.start.welcome",
+      "old_engine_id": "3000000000000001",
+      "new_alias": "if.quest.v2.onboarding.welcome",
+      "new_engine_id": "3000000000000001",
+      "policy": "carry",
+      "reason": "Смысл приветствия сохранён; ранее завершённое чтение не требуется повторять.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/00_start_here.json",
+        "authoring/questbook_v2/00_onboarding.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.start.reading_the_book",
+      "old_engine_id": "3000000000000002",
+      "new_alias": "if.quest.v2.onboarding.reading",
+      "new_engine_id": "3000000000000002",
+      "policy": "carry",
+      "reason": "Правила чтения квестбука сохранены и только уточнены редакционно.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/00_start_here.json",
+        "authoring/questbook_v2/00_onboarding.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.start.jei",
+      "old_engine_id": "3000000000000003",
+      "new_alias": "if.quest.v2.onboarding.jei",
+      "new_engine_id": "3000000000000003",
+      "policy": "carry",
+      "reason": "Навык поиска рецептов и применений в JEI остался тем же.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/00_start_here.json",
+        "authoring/questbook_v2/00_onboarding.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.start.team",
+      "old_engine_id": "3000000000000004",
+      "new_alias": "if.quest.v2.onboarding.team",
+      "new_engine_id": "3000000000000004",
+      "policy": "carry",
+      "reason": "Различие командного и личного прогресса сохранило прежний смысл.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/00_start_here.json",
+        "authoring/questbook_v2/00_onboarding.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.start.wood_tag",
+      "old_engine_id": "3000000000000005",
+      "new_alias": "if.quest.v2.p0.logs",
+      "new_engine_id": "3A10000000000001",
+      "policy": "review",
+      "reason": "Добыча древесины перенесена из введения в P0 и требует новой предметной проверки.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/00_start_here.json",
+        "authoring/questbook_v2/00_onboarding.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.start.bulk_chest",
+      "old_engine_id": "3000000000000006",
+      "new_alias": "if.quest.v2.p1.bulk_storage",
+      "new_engine_id": "3000000000000006",
+      "policy": "carry",
+      "reason": "Пакетный рецепт сундуков сохранён без изменения результата и перенесён в подходящую эпоху.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/00_start_here.json",
+        "authoring/questbook_v2/00_onboarding.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.start.next",
+      "old_engine_id": "3000000000000007",
+      "new_alias": "if.quest.v2.onboarding.help",
+      "new_engine_id": "3A00000000000002",
+      "policy": "review",
+      "reason": "Старый общий переход заменён справочным узлом; его следует прочитать заново.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/00_start_here.json",
+        "authoring/questbook_v2/00_onboarding.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.brief",
+      "old_engine_id": "3010000000000001",
+      "new_alias": "if.quest.v2.p0.brief",
+      "new_engine_id": "3010000000000001",
+      "policy": "carry",
+      "reason": "Экспедиционный бриф сохранил назначение и получил более подробные пояснения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.seasons",
+      "old_engine_id": "3010000000000002",
+      "new_alias": "if.quest.v2.p0.seasons",
+      "new_engine_id": "3010000000000002",
+      "policy": "carry",
+      "reason": "Знание сезонных рисков осталось прежней учебной целью.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.camp",
+      "old_engine_id": "3010000000000003",
+      "new_alias": "if.quest.v2.p0.crafting_table",
+      "new_engine_id": "3010000000000003",
+      "policy": "carry",
+      "reason": "Старое задание лагеря проверяло верстак; теперь это действие выделено и логично расположено.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.food",
+      "old_engine_id": "3010000000000004",
+      "new_alias": "if.quest.v2.p0.food_ready",
+      "new_engine_id": "3010000000000004",
+      "policy": "carry",
+      "reason": "Способность подготовить пищу сохранена, а допустимые рационы расширены без наказания старых миров.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.map",
+      "old_engine_id": "3010000000000005",
+      "new_alias": "if.quest.v2.p0.map",
+      "new_engine_id": "3010000000000005",
+      "policy": "carry",
+      "reason": "Учебная цель безопасной разведки и ориентирования сохранена.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.prospect",
+      "old_engine_id": "3010000000000006",
+      "new_alias": "if.quest.v2.p0.prospect",
+      "new_engine_id": "3010000000000006",
+      "policy": "carry",
+      "reason": "Разведка железосодержащего сырья сохранена, но больше не привязана к одной руде.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.loss",
+      "old_engine_id": "3010000000000007",
+      "new_alias": "if.quest.v2.p0.loss",
+      "new_engine_id": "3010000000000007",
+      "policy": "carry",
+      "reason": "Правила возврата после потери и подготовки вылазки сохранили смысл.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p0.exit",
+      "old_engine_id": "3010000000000008",
+      "new_alias": "if.quest.v2.p0.commissioning",
+      "new_engine_id": "3010000000000008",
+      "policy": "carry",
+      "reason": "Старое завершение P0 уже подтверждало готовность лагеря; существующий прогресс сохраняется.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/questbook_v2/10_p0.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.intro",
+      "old_engine_id": "3011000000000001",
+      "new_alias": "if.quest.v2.p1.intro",
+      "new_engine_id": "3011000000000001",
+      "policy": "carry",
+      "reason": "Введение во вращение, скорость и нагрузку сохранило учебную цель.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.andesite",
+      "old_engine_id": "3011000000000002",
+      "new_alias": "if.quest.v2.p1.andesite_alloy",
+      "new_engine_id": "3011000000000002",
+      "policy": "carry",
+      "reason": "Получение андезитового сплава осталось тем же материальным рубежом.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.rotation",
+      "old_engine_id": "3011000000000003",
+      "new_alias": "if.quest.v2.p1.rotation",
+      "new_engine_id": "3011000000000003",
+      "policy": "carry",
+      "reason": "Базовая передача вращения сохранила прежнее назначение.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.power",
+      "old_engine_id": "3011000000000004",
+      "new_alias": "if.quest.v2.p1.power",
+      "new_engine_id": "3011000000000004",
+      "policy": "carry",
+      "reason": "Источник механической мощности остался тем же функциональным рубежом, теперь допускает воду или ветер.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.stress",
+      "old_engine_id": "3011000000000005",
+      "new_alias": "if.quest.v2.p1.stress",
+      "new_engine_id": "3011000000000005",
+      "policy": "carry",
+      "reason": "Контроль нагрузки сети сохранил прежнюю цель и получил проверку взаимодействия.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.mill",
+      "old_engine_id": "3011000000000006",
+      "new_alias": "if.quest.v2.p1.mill",
+      "new_engine_id": "3011000000000006",
+      "policy": "carry",
+      "reason": "Мельница остаётся первым рабочим узлом переработки Create.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.press",
+      "old_engine_id": "3011000000000007",
+      "new_alias": "if.quest.v2.p1.press",
+      "new_engine_id": "3011000000000007",
+      "policy": "carry",
+      "reason": "Механический пресс сохранил назначение рабочего узла формования.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.line",
+      "old_engine_id": "3011000000000008",
+      "new_alias": "if.quest.v2.p1.line",
+      "new_engine_id": "3011000000000008",
+      "policy": "carry",
+      "reason": "Сборка первой механической линии сохранила смысл; новые проверки уточняют работу узлов.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p1.exit",
+      "old_engine_id": "3011000000000009",
+      "new_alias": "if.quest.v2.p1.commissioning",
+      "new_engine_id": "3011000000000009",
+      "policy": "carry",
+      "reason": "Старое завершение P1 уже означало готовую механическую линию.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/questbook_v2/11_p1.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.intro",
+      "old_engine_id": "3012000000000001",
+      "new_alias": "if.quest.v2.p2.intro",
+      "new_engine_id": "3012000000000001",
+      "policy": "carry",
+      "reason": "Введение в паровой и металлургический потоки P2 сохранило смысл.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.carbon",
+      "old_engine_id": "3012000000000002",
+      "new_alias": "if.quest.v2.p2.carbon_feedstock",
+      "new_engine_id": "3012000000000002",
+      "policy": "carry",
+      "reason": "Углеродное сырьё остаётся входом коксования, а допустимый набор теперь сформулирован явно.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.boiler",
+      "old_engine_id": "3012000000000003",
+      "new_alias": "if.quest.v2.p2.steam_ready",
+      "new_engine_id": "3012000000000003",
+      "policy": "carry",
+      "reason": "Получение рабочего пара сохранило цель, но позволяет выбрать подходящий котёл.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.steam_machine",
+      "old_engine_id": "3012000000000004",
+      "new_alias": "if.quest.v2.p2.steam_machine",
+      "new_engine_id": "3012000000000004",
+      "policy": "carry",
+      "reason": "Первая паровая машина сохранила прежнее назначение переработки.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.steel",
+      "old_engine_id": "3012000000000005",
+      "new_alias": "if.quest.v2.p2.steel",
+      "new_engine_id": "3012000000000005",
+      "policy": "carry",
+      "reason": "Получение первой стали осталось основным металлургическим рубежом.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.plates",
+      "old_engine_id": "3012000000000006",
+      "new_alias": "if.quest.v2.p2.plates",
+      "new_engine_id": "3012000000000006",
+      "policy": "carry",
+      "reason": "Изготовление железных пластин сохранило прежний результат.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.brass",
+      "old_engine_id": "3012000000000007",
+      "new_alias": "if.quest.v2.p2.brass",
+      "new_engine_id": "3012000000000007",
+      "policy": "carry",
+      "reason": "Латунь сохранила роль межмодового продукта P2.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.ore_route",
+      "old_engine_id": "3012000000000008",
+      "new_alias": "if.quest.v2.p2.ore_policy",
+      "new_engine_id": "3012000000000008",
+      "policy": "carry",
+      "reason": "Правило владельца рудного маршрута сохранило исходное назначение.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p2.exit",
+      "old_engine_id": "3012000000000009",
+      "new_alias": "if.quest.v2.p2.commissioning",
+      "new_engine_id": "3012000000000009",
+      "policy": "carry",
+      "reason": "Старое завершение P2 уже подтверждало готовность парового цеха.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.intro",
+      "old_engine_id": "3013000000000001",
+      "new_alias": "if.quest.v2.p3.intro",
+      "new_engine_id": "3013000000000001",
+      "policy": "carry",
+      "reason": "Введение в напряжение, ток и запас энергии сохранило смысл.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.generator",
+      "old_engine_id": "3013000000000002",
+      "new_alias": "if.quest.v2.p3.generator",
+      "new_engine_id": "3013000000000002",
+      "policy": "carry",
+      "reason": "Паровая турбина LV сохранила роль первого источника EU.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.cable",
+      "old_engine_id": "3013000000000003",
+      "new_alias": "if.quest.v2.p3.cable",
+      "new_engine_id": "3013000000000003",
+      "policy": "carry",
+      "reason": "Оловянный кабель остаётся первым проводником сети LV.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.buffer",
+      "old_engine_id": "3013000000000004",
+      "new_alias": "if.quest.v2.p3.buffer",
+      "new_engine_id": "3013000000000004",
+      "policy": "carry",
+      "reason": "Аккумуляторный буфер сохранил роль узла запаса и диагностики.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.signal",
+      "old_engine_id": "3013000000000005",
+      "new_alias": "if.quest.v2.p3.signal",
+      "new_engine_id": "3013000000000005",
+      "policy": "carry",
+      "reason": "Редстоун сохранил роль обязательного материала ранней электроники.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.machine",
+      "old_engine_id": "3013000000000006",
+      "new_alias": "if.quest.v2.p3.first_machine",
+      "new_engine_id": "3013000000000006",
+      "policy": "carry",
+      "reason": "Первая машина LV сохранила прежний технологический рубеж.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.bridge",
+      "old_engine_id": "3013000000000007",
+      "new_alias": "if.quest.v2.p3.bridge",
+      "new_engine_id": "3013000000000007",
+      "policy": "carry",
+      "reason": "Правило одностороннего моста EU в FE сохранило учебную цель.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.line",
+      "old_engine_id": "3013000000000008",
+      "new_alias": "if.quest.v2.p3.line",
+      "new_engine_id": "3013000000000008",
+      "policy": "carry",
+      "reason": "Полная сеть LV сохранила назначение итоговой производственной линии.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p3.exit",
+      "old_engine_id": "3013000000000009",
+      "new_alias": "if.quest.v2.p3.commissioning",
+      "new_engine_id": "3013000000000009",
+      "policy": "carry",
+      "reason": "Старое завершение P3 уже означало готовый электрический цех.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json"
+      ]
+    }
+  ]
+}

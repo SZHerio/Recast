@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Условие дрона: существо»",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_drone_entity_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Это виджет $(l:programming/conditions)условия/$.$(p)Виджет $(thing)Условие дрона: существо/$ проверяет сущность, которую сейчас переносит этот $(l:tools/drone)дрон/$. Чтобы проверять только определённых существ, можно подключить виджет $(l:programming/text)Текст/$ с $(l:base_concepts/entity_filter)Фильтром существ/$. Без виджета $(thing)Текст/$ условие истинно при переноске $(italic)любой/$ сущности."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_drone_entity_piece.png"
+      ],
+      "text": "$(italic)Виджет «Условие дрона: существо»/$"
+    }
+  ]
+}

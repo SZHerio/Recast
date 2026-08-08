@@ -1,0 +1,17 @@
+{
+  "sodium.dynamiclights.options.blockentities": "Динамическое освещение блоков-сущностей",
+  "sodium.dynamiclights.options.blockentities.desc": "Если включено, блоки-сущности создают динамическое освещение.",
+  "sodium.dynamiclights.options.creeper": "Качество освещения криперов",
+  "sodium.dynamiclights.options.creeper.desc": "Определяет частоту обновления освещения криперов.",
+  "sodium.dynamiclights.options.entities": "Динамическое освещение сущностей",
+  "sodium.dynamiclights.options.entities.desc": "Если включено, сущности, например мобы и выброшенные предметы, создают динамическое освещение.",
+  "sodium.dynamiclights.options.mode": "Режим качества",
+  "sodium.dynamiclights.options.mode.desc": "Определяет частоту обновления динамических источников света.",
+  "sodium.dynamiclights.options.page": "Динамическое освещение",
+  "sodium.dynamiclights.options.self": "Освещение от предметов в руках",
+  "sodium.dynamiclights.options.self.desc": "Включает динамическое освещение от первого лица. Рекомендуется отключить его, если шейдеры создают собственное динамическое освещение.",
+  "sodium.dynamiclights.options.tnt": "Качество освещения динамита",
+  "sodium.dynamiclights.options.tnt.desc": "Определяет частоту обновления освещения динамита.",
+  "sodium.dynamiclights.options.underwater": "Гасить под водой",
+  "sodium.dynamiclights.options.underwater.desc": "Включает проверку чувствительных к воде источников света. Некоторые предметы перестанут излучать свет при погружении в воду."
+}

@@ -1,0 +1,406 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = title_screen
+  render_custom_elements_behind_vanilla = false
+  is_enabled = true
+  randommode = false
+  randomgroup = recast_title
+  randomonlyfirsttime = false
+  layout_index = 0
+  custom_menu_title = Recast
+}
+
+customization {
+  action = autoscale
+  basewidth = 854
+  baseheight = 480
+}
+
+menu_background {
+  image_path = [source:local]/config/fancymenu/assets/menu/base.png
+  slide = false
+  repeat_texture = false
+  background_type = image
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = true
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/menu/mid.png
+  repeat_texture = false
+  nine_slice_texture = false
+  enable_parallax = true
+  invert_parallax = false
+  parallax_intensity_x = 0.18
+  parallax_intensity_y = 0.10
+  element_type = image
+  instance_identifier = recast_title_midground
+  anchor_point = top-left
+  x = -24
+  y = -16
+  width = 902
+  height = 512
+  stay_on_screen = false
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/menu/near.png
+  repeat_texture = false
+  nine_slice_texture = false
+  enable_parallax = true
+  invert_parallax = false
+  parallax_intensity_x = 0.30
+  parallax_intensity_y = 0.16
+  element_type = image
+  instance_identifier = recast_title_foreground
+  anchor_point = top-left
+  x = -28
+  y = -18
+  width = 910
+  height = 516
+  stay_on_screen = false
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/ui/panel.png
+  repeat_texture = false
+  nine_slice_texture = true
+  nine_slice_texture_border_x = 12
+  nine_slice_texture_border_y = 12
+  element_type = image
+  instance_identifier = recast_title_panel
+  anchor_point = top-left
+  x = 16
+  y = 16
+  width = 294
+  height = 450
+  stay_on_screen = true
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/logo.png
+  repeat_texture = false
+  nine_slice_texture = false
+  element_type = image
+  instance_identifier = recast_title_logo
+  anchor_point = top-left
+  x = 28
+  y = 27
+  width = 258
+  height = 86
+  stay_on_screen = true
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.menu.tagline"}}
+  source_mode = direct
+  shadow = true
+  case_mode = upper
+  enable_scrolling = false
+  auto_line_wrapping = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_title_tagline
+  anchor_point = top-left
+  x = 34
+  y = 118
+  width = 240
+  height = 14
+  stay_on_screen = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_singleplayer_actions
+  [executable_block:recast_singleplayer_actions][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.singleplayer"}}
+  navigatable = true
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_singleplayer_button
+  anchor_point = top-left
+  x = 34
+  y = 140
+  width = 226
+  height = 24
+  stay_on_screen = true
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_multiplayer_actions
+  [executable_block:recast_multiplayer_actions][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.multiplayer"}}
+  navigatable = true
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_multiplayer_button
+  anchor_point = top-left
+  x = 34
+  y = 168
+  width = 226
+  height = 24
+  stay_on_screen = true
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_mods_actions
+  [executable_block:recast_mods_actions][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.mods"}}
+  navigatable = true
+  element_type = vanilla_button
+  instance_identifier = forge_titlescreen_mods_button
+  anchor_point = top-left
+  x = 34
+  y = 196
+  width = 226
+  height = 24
+  stay_on_screen = true
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_options_actions
+  [executable_block:recast_options_actions][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.options"}}
+  navigatable = true
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_options_button
+  anchor_point = top-left
+  x = 34
+  y = 224
+  width = 226
+  height = 24
+  stay_on_screen = true
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_quit_actions
+  [executable_block:recast_quit_actions][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.quit"}}
+  navigatable = true
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_quit_button
+  anchor_point = top-left
+  x = 34
+  y = 252
+  width = 226
+  height = 24
+  stay_on_screen = true
+  is_hidden = false
+}
+
+element {
+  button_element_executable_block_identifier = recast_guide_actions
+  [executable_action_instance:recast_guide_open][action_type:opengui] = recast.guide
+  [executable_block:recast_guide_actions][type:generic] = [executables:recast_guide_open;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.guide"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_guide_button
+  anchor_point = top-left
+  x = 34
+  y = 286
+  width = 109
+  height = 24
+  stay_on_screen = true
+}
+
+element {
+  button_element_executable_block_identifier = recast_credits_actions
+  [executable_action_instance:recast_credits_open][action_type:opengui] = recast.credits
+  [executable_block:recast_credits_actions][type:generic] = [executables:recast_credits_open;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.credits"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_credits_button
+  anchor_point = top-left
+  x = 151
+  y = 286
+  width = 109
+  height = 24
+  stay_on_screen = true
+}
+
+element {
+  button_element_executable_block_identifier = recast_changelog_actions
+  [executable_action_instance:recast_changelog_open][action_type:opengui] = recast.changelog
+  [executable_block:recast_changelog_actions][type:generic] = [executables:recast_changelog_open;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  label_shadow = false
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.changelog"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_changelog_button
+  anchor_point = top-left
+  x = 34
+  y = 314
+  width = 226
+  height = 24
+  stay_on_screen = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_language_actions
+  [executable_block:recast_language_actions][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/icon_button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/icon_button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/icon_button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  navigatable = true
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_language_button
+  anchor_point = top-left
+  x = 34
+  y = 346
+  width = 24
+  height = 24
+  stay_on_screen = true
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_accessibility_actions
+  [executable_block:recast_accessibility_actions][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/icon_button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/icon_button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/icon_button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 6
+  nine_slice_border_y = 6
+  navigatable = true
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_accessibility_button
+  anchor_point = top-left
+  x = 62
+  y = 346
+  width = 24
+  height = 24
+  stay_on_screen = true
+  is_hidden = false
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.menu.service_hint"}}
+  source_mode = direct
+  shadow = true
+  auto_line_wrapping = false
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_service_hint
+  anchor_point = top-left
+  x = 94
+  y = 353
+  width = 172
+  height = 12
+  stay_on_screen = true
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.menu.build"}}
+  source_mode = direct
+  shadow = true
+  auto_line_wrapping = false
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_build_label
+  anchor_point = top-left
+  x = 34
+  y = 442
+  width = 250
+  height = 12
+  stay_on_screen = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_realms_actions
+  [executable_block:recast_realms_actions][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_realms_button
+  is_hidden = true
+}
+
+deep_element {
+  element_type = title_screen_logo
+  instance_identifier = vanilla_logo
+  is_hidden = true
+}
+
+deep_element {
+  element_type = title_screen_branding
+  instance_identifier = vanilla_branding
+  is_hidden = false
+}
+
+deep_element {
+  element_type = title_screen_splash
+  instance_identifier = vanilla_splash
+  is_hidden = true
+}

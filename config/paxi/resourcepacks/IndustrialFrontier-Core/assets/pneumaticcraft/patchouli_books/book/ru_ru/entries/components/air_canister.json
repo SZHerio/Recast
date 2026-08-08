@@ -1,0 +1,17 @@
+{
+  "name": "Воздушная канистра",
+  "icon": "pneumaticcraft:air_canister",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Воздушная канистра/$ — компонент для создания любых $(l:base_concepts/pressure)пневматических/$ предметов и инструментов. Её также можно наполнять и опустошать на $(l:machines/charging_station)станции заправки/$. $(item)Воздушная канистра/$ имеет объём 3000mL и выдерживает давление до 10 бар: взорваться она не может.$(p)Любой пневматический предмет, созданный с $(item)Воздушной канистрой/$, сохранит находившийся в ней воздух."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание воздушной канистры",
+      "recipe": "pneumaticcraft:air_canister"
+    }
+  ]
+}

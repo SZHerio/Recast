@@ -1,0 +1,19 @@
+{
+  "name": "Электрический локомотив",
+  "icon": "littlelogistics:energy_locomotive",
+  "category": "littlelogistics:trains",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:energy_locomotive",
+      "scale": 0.4,
+      "offset": 0.5,
+      "text": "Локомотив работает на Forge Energy и заряжается у $(l:vessel_charger)зарядной станции$() во время стоянки."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:energy_locomotive",
+      "text": "В локомотиве есть дополнительная ячейка для заряженного предмета. Она пригодится, если энергия закончится посреди маршрута."
+    }
+  ]
+}

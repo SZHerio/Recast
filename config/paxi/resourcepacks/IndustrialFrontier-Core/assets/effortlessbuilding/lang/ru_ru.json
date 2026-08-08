@@ -1,0 +1,22 @@
+{
+  "effortlessbuilding.commands.powerlevel": "[Effortless Building] Уровень строительства игрока %s: %s",
+  "effortlessbuilding.commands.powerlevel.success": "[Effortless Building] Для игрока %s установлен уровень строительства %s",
+  "item.effortlessbuilding.building_techniques_book": "Справочник строительных приёмов",
+  "item.effortlessbuilding.building_techniques_book.desc": "Содержит строительные приёмы, которые помогают строить быстрее.",
+  "item.effortlessbuilding.elastic_hand": "Эластичная рука",
+  "item.effortlessbuilding.elastic_hand.desc": "Позволяет устанавливать блоки на большем расстоянии.",
+  "item.effortlessbuilding.muscles": "Мышцы",
+  "item.effortlessbuilding.muscles.desc": "Позволяет устанавливать несколько блоков одновременно.",
+  "key.effortlessbuilding.disable_build_mode_toggle.desc": "Переключить: отключено ↔ предыдущий режим строительства",
+  "key.effortlessbuilding.max_blocks_per_axis": "Максимум блоков по каждой оси",
+  "key.effortlessbuilding.max_blocks_placed_at_once": "Максимум блоков за одно действие",
+  "key.effortlessbuilding.max_mirror_radius": "Максимальный радиус кругового отражения",
+  "key.effortlessbuilding.next_power_level": "Следующий уровень строительства",
+  "key.effortlessbuilding.next_power_level_how": "Повышайте уровень, находя улучшения в сокровищницах и других структурах.",
+  "key.effortlessbuilding.placement_reach": "Дальность установки блоков",
+  "key.effortlessbuilding.power_level": "Уровень строительства",
+  "key.effortlessbuilding.previous_build_mode.desc": "Включить предыдущий режим строительства",
+  "key.effortlessbuilding.require_previous_reach_upgrades": "Сначала используйте предыдущие улучшения.",
+  "key.effortlessbuilding.upgrade_power_level": "Щёлкните ПКМ, чтобы навсегда повысить уровень строительства на 1.",
+  "key.effortlessbuilding.use_reach_upgrade": "Используйте, чтобы повысить уровень строительства до %s."
+}

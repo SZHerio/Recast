@@ -1,0 +1,22 @@
+{
+  "name": "Vortex Cannon",
+  "icon": "pneumaticcraft:vortex_cannon",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Vortex Cannon/$ — оружие, стреляющее $(thing)вихрями/$: устойчивыми потоками вращающегося воздуха с малым трением.$(p)Порывом можно оттолкнуть врага, сдвинуть животное, вырвать растения и листву или подстричь подходящее существо."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:vortex_cannon",
+      "text": "Чем выше давление в $(item)Vortex Cannon/$, тем сильнее удар и больше дальность.$(p)Можно попасть и в собственный вихрь — удобный способ быстро переместиться. Но помните: от урона при падении он не защищает!"
+    },
+    {
+      "type": "crafting",
+      "text": "Создание Vortex Cannon",
+      "recipe": "pneumaticcraft:vortex_cannon"
+    }
+  ]
+}

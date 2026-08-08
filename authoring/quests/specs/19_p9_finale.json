@@ -1,0 +1,203 @@
+{
+  "key": "p9",
+  "file": "19_p9_finale",
+  "chapter_id": "2019000000000001",
+  "group_id": "1000000000000004",
+  "icon": "industrial_frontier:textures/gui/icons/epochs/p9.png",
+  "order": 10,
+  "tag": "mainline",
+  "optional": false,
+  "xp": 100,
+  "title_ru": "19 — P9. Финал",
+  "title_en": "19 — P9. The finale",
+  "sub_ru": "Два способа закончить и ни одного правильного",
+  "sub_en": "Two ways to finish and no right one",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "gcyr:dyson_system_controller", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Девятая эпоха",
+        "subtitle": "Финал проверяет цивилизацию, а не сундук",
+        "desc": [
+          "Сборка заканчивается не предметом. Ни один дорогой слиток, ни одна редкая машина не считаются финалом — их можно получить и забыть, а цивилизация так не проверяется.",
+          "Финалов два, и они проверяют разное. Сфера Дайсона — про масштаб: её нельзя построить в одиночку и нельзя бросить, она требует потока и обслуживания. Колония на Проксиме b — про автономность: она обязана жить, когда Земля перестанет присылать корабли.",
+          "Строить можно оба, любой один или ни одного. Это два разных финала, а не две половины одного, и ни один не закрывает доступ к другому."
+        ],
+        "task": "Выбрать, чем вы закончите"
+      },
+      "en": {
+        "title": "The ninth epoch",
+        "subtitle": "The finale tests a civilisation, not a chest",
+        "desc": [
+          "The pack does not end with an item. No expensive ingot and no rare machine counts as a finale — you can obtain one and forget it, and a civilisation is not tested that way.",
+          "There are two finales and they test different things. The Dyson swarm is about scale: it cannot be built alone and cannot be abandoned, it demands flow and maintenance. The colony on Proxima b is about autonomy: it must survive when Earth stops sending ships.",
+          "You may build both, either one, or neither. These are two different finales, not two halves of one, and neither closes the other off."
+        ],
+        "task": "Decide how you will finish"
+      }
+    },
+    {
+      "slug": "swarm_line", "x": 3, "y": -3, "icon": "gcyr:dyson_swarm_satellite", "deps": ["intro"],
+      "item": "gcyr:dyson_swarm_satellite",
+      "ru": {
+        "title": "Рой начинается с линии",
+        "subtitle": "Один спутник ничего не значит",
+        "desc": [
+          "Сфера Дайсона — это не постройка, а поток. Спутники роя нужны сотнями, и делать их поштучно бессмысленно: пока вы соберёте десятый вручную, первый успеет устареть.",
+          "Поэтому первый шаг — не спутник, а линия, которая их производит. Сырьё, сборка, вывод на орбиту: три участка, каждый из которых должен работать без вас.",
+          "Ручной запуск допустим ровно один раз — тот, на котором вы проверяете, что схема вообще работает."
+        ],
+        "task": "Собрать первый спутник роя"
+      },
+      "en": {
+        "title": "The swarm starts with a line",
+        "subtitle": "One satellite means nothing",
+        "desc": [
+          "A Dyson swarm is not a structure but a flow. Swarm satellites are needed by the hundred, and making them one at a time is pointless: by the time you hand-build the tenth, the first is obsolete.",
+          "So the first step is not a satellite but the line that produces them. Feedstock, assembly, launch: three sections, each of which must run without you.",
+          "A manual launch is allowed exactly once — the one where you check that the scheme works at all."
+        ],
+        "task": "Build the first swarm satellite"
+      }
+    },
+    {
+      "slug": "swarm_upkeep", "x": 6, "y": -3, "icon": "gcyr:dyson_sphere_maintenance_port", "deps": ["swarm_line"],
+      "ru": {
+        "title": "Сферу нельзя бросить",
+        "subtitle": "Она изнашивается",
+        "desc": [
+          "Законченная сфера — не памятник. Она изнашивается и требует обслуживания, а брошенная разрушается. Это единственная постройка в сборке, которая наказывает за то, что вы про неё забыли.",
+          "Значит вместе с производственной линией нужна ремонтная. И резерв на случай, когда рой просядет: город, который питается только от сферы, гаснет вместе с ней.",
+          "Такова цена самого большого источника энергии в игре. Она честная: бесконечная энергия без обязательств — это не финал, а читерский режим."
+        ],
+        "task": "Наладить обслуживание роя и резерв на случай просадки"
+      },
+      "en": {
+        "title": "The swarm cannot be abandoned",
+        "subtitle": "It wears out",
+        "desc": [
+          "A finished sphere is not a monument. It wears out and needs maintenance, and abandoned it decays. This is the only structure in the pack that punishes you for forgetting about it.",
+          "So alongside the production line you need a repair line. And a reserve for when the swarm dips: a city fed only by the sphere goes dark with it.",
+          "That is the price of the largest power source in the game. It is a fair one: unlimited power without obligations is not a finale, it is a cheat mode."
+        ],
+        "task": "Set up swarm maintenance and a reserve against dips"
+      }
+    },
+    {
+      "slug": "colony_life", "x": 3, "y": 3, "icon": "gcyr:proxima_centauri_b_grassy_turf", "deps": ["intro"],
+      "ru": {
+        "title": "Колония дышит сама",
+        "subtitle": "Поселение на снабжении — это склад с людьми",
+        "desc": [
+          "Проксима b — единственный пункт назначения с кислородом и земной гравитацией. Это делает её пригодной для жизни и одновременно самой обманчивой целью: кажется, что там можно просто поселиться.",
+          "Колония считается колонией, когда воздух, вода и пища производятся на месте. Разовая доставка оборудования — да. Регулярная доставка еды — нет: это уже не колония, а склад с людьми на другом конце маршрута.",
+          "Проверка та же, что и у сети: перестаньте летать туда на игровой месяц. Колония, которая это переживёт, состоялась."
+        ],
+        "task": "Замкнуть жизнеобеспечение колонии на месте"
+      },
+      "en": {
+        "title": "The colony breathes on its own",
+        "subtitle": "A settlement on supply is a warehouse with people",
+        "desc": [
+          "Proxima b is the only destination with oxygen and Earth-like gravity. That makes it liveable and, at the same time, the most deceptive target: it looks like you could just move in.",
+          "A colony counts as a colony when air, water and food are produced on site. A one-off delivery of equipment, yes. Regular food deliveries, no: that is not a colony but a warehouse with people at the far end of a route.",
+          "The test is the same as for the network: stop flying there for an in-game month. A colony that survives that has happened."
+        ],
+        "task": "Close the colony's life support on site"
+      }
+    },
+    {
+      "slug": "colony_industry", "x": 6, "y": 3, "icon": "industrial_frontier:textures/gui/icons/process/future/space_launch_and_colony.png", "deps": ["colony_life"],
+      "ru": {
+        "title": "Колония чинит себя",
+        "subtitle": "Своё производство, своя энергетика",
+        "desc": [
+          "Жизнеобеспечение — половина дела. Вторая половина в том, чтобы колония могла воспроизвести то, из чего построена: заменить сломанное, расширить построенное, не дожидаясь корабля.",
+          "Своя энергетика обязательна и не должна зависеть от земной сети. Проксима — другая звёздная система; никакой луч оттуда не дотянется.",
+          "Это самый сложный экзамен сборки: чтобы его сдать, нужно повторить на чужой планете почти всю цепочку, которую вы строили на Земле восемь эпох."
+        ],
+        "task": "Наладить местное производство и энергетику"
+      },
+      "en": {
+        "title": "The colony repairs itself",
+        "subtitle": "Its own production, its own power",
+        "desc": [
+          "Life support is half the job. The other half is that the colony can reproduce what it is built from: replace what breaks, extend what stands, without waiting for a ship.",
+          "Its own power is mandatory and must not depend on Earth's grid. Proxima is another star system; no beam reaches that far.",
+          "This is the pack's hardest exam: to pass it you must rebuild on an alien planet nearly the whole chain you spent eight epochs building on Earth."
+        ],
+        "task": "Set up local production and power"
+      }
+    },
+    {
+      "slug": "quantum", "x": 9, "y": 0, "icon": "nuclearcraft:quantum_transformer", "deps": ["swarm_upkeep", "colony_industry"],
+      "item": "nuclearcraft:quantum_transformer",
+      "ru": {
+        "title": "Энергия в вещество",
+        "subtitle": "Последняя машина ускорительной ветки",
+        "desc": [
+          "Квантовый трансформатор делает то, ради чего строился весь ускорительный комплекс: превращает энергию в материю. Он стоит дороже всего остального в ветке и открывается последним.",
+          "Смысл его в том, что с этого момента энергия становится сырьём. Всё, чего не хватает, можно сделать — если есть чем платить.",
+          "Именно поэтому он стоит в девятой эпохе, а не раньше: до сферы или колонии платить нечем."
+        ],
+        "task": "Собрать квантовый трансформатор"
+      },
+      "en": {
+        "title": "Power into matter",
+        "subtitle": "The last machine of the accelerator branch",
+        "desc": [
+          "The quantum transformer does what the whole accelerator complex was built for: it turns energy into matter. It costs more than anything else in the branch and unlocks last.",
+          "Its point is that from now on power becomes feedstock. Anything you lack can be made — if you have the means to pay.",
+          "Which is exactly why it sits in the ninth epoch and not earlier: before the sphere or the colony there is nothing to pay with."
+        ],
+        "task": "Build the quantum transformer"
+      }
+    },
+    {
+      "slug": "closed_loop", "x": 12, "y": 0, "icon": "hbm_ntm_rebirth:icf_controller", "deps": ["quantum"],
+      "ru": {
+        "title": "Замыкание",
+        "subtitle": "Цепочка, которая не заканчивается",
+        "desc": [
+          "К этому моменту у вас есть всё, чтобы производство перестало потреблять невозобновляемое: энергия от звезды, материалы с планет, вода и воздух в замкнутом контуре, отходы, возвращающиеся в цикл.",
+          "Это и есть устойчивая цивилизация из критерия готовности сборки. Не один дорогой предмет, а цепочка, у которой нет конца, где что-то безвозвратно кончается.",
+          "Проверить её просто: найдите в своём производстве место, где ресурс приходит из мира и не возвращается. Если такого места не осталось — вы закончили."
+        ],
+        "task": "Найти последнее невозобновляемое место в своём производстве"
+      },
+      "en": {
+        "title": "Closing the loop",
+        "subtitle": "A chain that does not end",
+        "desc": [
+          "By now you have everything needed for production to stop consuming the non-renewable: power from a star, materials from planets, water and air in a closed loop, waste returning to the cycle.",
+          "This is the sustainable civilisation from the pack's definition of done. Not one expensive item but a chain with no point where something runs out for good.",
+          "Checking it is simple: find the place in your production where a resource comes from the world and never returns. If no such place is left, you are finished."
+        ],
+        "task": "Find the last non-renewable point in your production"
+      }
+    },
+    {
+      "slug": "resolution", "x": 15, "y": 0, "icon": "gcyr:keycard", "deps": ["closed_loop"],
+      "ru": {
+        "title": "Чей это мегапроект",
+        "subtitle": "Четыре ответа, ни одного неправильного",
+        "desc": [
+          "Мегапроект нельзя отобрать: он слишком велик, чтобы его унести, и слишком заметен, чтобы спрятать. Поэтому вокруг него возникает политика, а не грабёж, и фракции задают вопрос прямо.",
+          "Единоличное владение даёт максимум отдачи и максимум внимания. Консорциум меняет часть отдачи на спокойный тыл. Открытый доступ делит всё на шестерых, но прекращает операции против объекта. Опека отдаёт управление одной фракции и оставляет вам право вето.",
+          "Ни один вариант не закрывает доступ к содержимому игры и ни один не считается правильным. Развязка меняет то, как живёт регион, — и это последнее решение сборки. Полный список — /if_endgame_resolutions."
+        ],
+        "task": "Выбрать развязку"
+      },
+      "en": {
+        "title": "Whose megaproject is it",
+        "subtitle": "Four answers, none of them wrong",
+        "desc": [
+          "A megaproject cannot be taken: it is too large to carry off and too visible to hide. So politics grows around it rather than robbery, and the factions ask the question outright.",
+          "Sole ownership gives maximum return and maximum attention. A consortium trades part of the return for a quiet rear. Open access splits everything six ways but ends operations against the site. Guardianship hands control to one faction and leaves you a veto.",
+          "No option closes off game content and none counts as correct. The resolution changes how the region lives — and it is the pack's last decision. Full list: /if_endgame_resolutions."
+        ],
+        "task": "Choose a resolution"
+      }
+    }
+  ]
+}

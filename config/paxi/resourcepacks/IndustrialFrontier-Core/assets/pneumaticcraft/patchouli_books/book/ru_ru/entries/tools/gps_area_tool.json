@@ -1,0 +1,21 @@
+{
+  "name": "GPS-маркер области",
+  "icon": "pneumaticcraft:gps_area_tool",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:plastic",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)GPS-маркер области/$ — расширенная версия $(l:tools/gps_tool)GPS-маркера/$, сохраняющая $(italic)две/$ координаты мира. Щёлкните $(thing)ЛКМ/$ по блоку или воздуху, чтобы изменить первую координату, и $(thing)ПКМ/$ — вторую. Щелчок в воздухе $(thing)правой/$ или $(thing)левой кнопкой/$ открывает настройку соответствующей точки. Кроме того, можно менять $(thing)тип области/$ и просматривать разные варианты её формы."
+    },
+    {
+      "type": "text",
+      "text": "$(item)GPS-маркер области/$ поддерживает $(l:programming/variables#global)глобальные переменные/$, как и обычный $(l:tools/gps_tool#variables)GPS-маркер/$.$(p)В $(l:programming/programmer)Программаторе/$ щёлкните $(thing)ЛКМ/$ по фону рабочей области, держа $(item)GPS-маркер области/$, чтобы создать новый элемент $(l:programming/area)«Область»/$, либо щёлкните $(thing)ЛКМ/$ по существующему элементу $(l:programming/area)«Область»/$, чтобы перезаписать его."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание GPS-маркера области",
+      "recipe": "pneumaticcraft:gps_area_tool"
+    }
+  ]
+}

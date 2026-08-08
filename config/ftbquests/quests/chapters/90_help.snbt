@@ -16,8 +16,6 @@
 			icon: "minecraft:recovery_compass"
 			id: "3090000000000001"
 			optional: true
-			shape: "gear"
-			size: 2.0d
 			tags: ["help"]
 			tasks: [{
 				id: "4090000000000001"
@@ -25,8 +23,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.help.index.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3090000000000001"]
@@ -45,8 +45,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.help.jei.title}"
-			x: -3.0d
-			y: -2.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 2d
+			y: -3d
 		}
 		{
 			dependencies: ["3090000000000001"]
@@ -65,8 +67,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.help.not_counted.title}"
-			x: 0.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
 		}
 		{
 			dependencies: ["3090000000000001"]
@@ -84,8 +88,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.help.team.title}"
-			x: 3.0d
-			y: -2.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
 		}
 		{
 			dependencies: ["3090000000000001"]
@@ -104,8 +110,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.help.latest_log.title}"
-			x: -2.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 3d
 		}
 		{
 			dependencies: ["3090000000000005"]
@@ -123,8 +131,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.help.report.title}"
-			x: 0.0d
-			y: 5.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: [
@@ -139,7 +149,6 @@
 			icon: "minecraft:barrier"
 			id: "3090000000000007"
 			optional: true
-			shape: "diamond"
 			tags: ["help"]
 			tasks: [{
 				id: "4090000000000007"
@@ -147,8 +156,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.help.recovery.title}"
-			x: 3.0d
-			y: 3.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.help.subtitle}"]

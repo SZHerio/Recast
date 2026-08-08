@@ -1,0 +1,8 @@
+{
+  "category.car": "Автомобили",
+  "gui.car_temperature_farenheit": "%s °F",
+  "itemGroup.car": "Автомобили",
+  "itemGroup.car_parts": "Автозапчасти",
+  "message.no_reciepe": "Нет подходящего рецепта",
+  "message.parts.too_many_license_plates": "Слишком много номерных знаков"
+}

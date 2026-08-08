@@ -1,0 +1,45 @@
+{
+  "name": "Боевой дрон",
+  "icon": "pneumaticcraft:guard_drone",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Боевой дрон/$ — специализированная непрограммируемая разновидность $(l:tools/drone)дрона/$. Запустите его вплотную к блоку с инвентарём: он возьмёт оттуда один предмет как оружие и будет атаковать им существ в зоне действия."
+    },
+    {
+      "type": "spotlight",
+      "title": "Автоматическая зарядка",
+      "item": "pneumaticcraft:charging_station",
+      "text": "Как и любым другим дронам, этим устройствам для работы требуется $(l:base_concepts/pressure)давление/$. При нехватке воздуха они сами ищут $(l:tools/drone#charging)зарядную станцию с улучшением раздатчика/$."
+    },
+    {
+      "type": "text",
+      "title": "Дальность",
+      "text": "$(thing)Боевой дрон/$ атакует враждебных существ в пределах 16 блоков по горизонтали от точки запуска, 8 блоков вверх и 5 блоков вниз.$(p)Вертикальная область меньше, чтобы дрон не обнаруживал существ глубоко в пещерах и не телепортировался к ним, впустую расходуя воздух и внезапно исчезая из виду."
+    },
+    {
+      "type": "spotlight",
+      "title": "Оружие",
+      "item": "minecraft:netherite_sword",
+      "text": "$(thing)Боевой дрон/$ возьмёт первый попавшийся предмет, поэтому положите в инвентарь подходящее оружие ближнего боя. Если оно сломается, а замены не окажется, дрон продолжит сражаться без оружия — крайне неэффективно."
+    },
+    {
+      "type": "spotlight",
+      "title": "Дальний бой",
+      "item": "pneumaticcraft:minigun_upgrade",
+      "text": "Вместо обычного оружия дрону можно установить $(l:base_concepts/upgrades#minigun)Minigun Upgrade/$; тогда положите в инвентарь $(l:tools/minigun_ammo)Minigun Ammo/$."
+    },
+    {
+      "type": "entity",
+      "entity": "pneumaticcraft:guard_drone",
+      "offset": -0.3
+    },
+    {
+      "type": "crafting",
+      "text": "Создание боевого дрона",
+      "recipe": "pneumaticcraft:guard_drone"
+    }
+  ]
+}

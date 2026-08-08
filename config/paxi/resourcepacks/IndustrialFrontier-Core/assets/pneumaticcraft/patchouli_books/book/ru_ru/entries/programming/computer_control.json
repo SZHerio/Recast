@@ -1,0 +1,20 @@
+{
+  "name": "Виджет «Управление с компьютера»",
+  "icon": "pneumaticcraft:textures/progwidgets/computer_control_piece.png",
+  "category": "pneumaticcraft:widget_other",
+  "flag": "|mod:computercraft,mod:opencomputers",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Виджет $(thing)Управление с компьютера/$ позволяет управлять $(l:tools/drone)дронами/$ через компьютеры $(thing)ComputerCraft/$ или $(thing)OpenComputers/$. Подробнее об этом см. в разделе $(l:machines/drone_interface)Интерфейс дронов/$."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/computer_control_piece.png"
+      ],
+      "text": "$(italic)Где мой разум?/$"
+    }
+  ]
+}

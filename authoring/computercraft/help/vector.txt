@@ -1,0 +1,17 @@
+Функции API трёхмерных векторов:
+vector.new( x,y,z )
+
+У векторов, возвращаемых vector.new(), есть следующие поля и методы:
+vector.x
+vector.y
+vector.z
+vector:add( vector )
+vector:sub( vector )
+vector:mul( number )
+vector:dot( vector )
+vector:cross( vector )
+vector:length()
+vector:normalize()
+vector:round()
+vector:tostring()
+К векторам также можно применять операторы +, - и *.

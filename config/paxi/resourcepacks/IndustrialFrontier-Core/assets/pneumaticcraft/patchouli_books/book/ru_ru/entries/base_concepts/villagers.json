@@ -1,0 +1,17 @@
+{
+  "name": "Деревенские механики",
+  "icon": "minecraft:emerald",
+  "category": "pneumaticcraft:base_concepts",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Ходят слухи об одном $(thing)деревенском жителе/$, который торгует любопытными компонентами $(pncr). Поговаривают, он попал в аварию с $(l:manufacturing/pressure_chamber)Барокамерой/$... Как бы то ни было, теперь он предпочитает сидеть в собственном доме, который встречается в деревнях. А если такого дома поблизости нет, безработного жителя может заинтересовать $(l:machines/charging_station)Станция заправки/$..."
+    },
+    {
+      "type": "entity",
+      "name": "Механик",
+      "entity": "minecraft:villager{VillagerData:{profession:'pneumaticcraft:mechanic'}}",
+      "text": "$(italic)Не поклонник $(l:tools/amadron_tablet)Amadron/$."
+    }
+  ]
+}

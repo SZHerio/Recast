@@ -1,0 +1,180 @@
+{
+  "key": "defence",
+  "file": "21_defence_gear",
+  "chapter_id": "2021000000000001",
+  "group_id": "1000000000000003",
+  "icon": "tacz:gun_smith_table",
+  "order": 11,
+  "tag": "academy",
+  "optional": true,
+  "title_ru": "Оборона и снаряжение",
+  "title_en": "Defence and gear",
+  "sub_ru": "Чем воюют в этой сборке и почему именно так",
+  "sub_en": "How fighting works here, and why",
+  "quests": [
+    {
+      "slug": "intro",
+      "x": 0,
+      "y": 0,
+      "icon": "minecraft:shield",
+      "deps": [],
+      "ru": {
+        "title": "Лестница снаряжения",
+        "subtitle": "Оружие приходит вместе с промышленностью, а не раньше",
+        "desc": [
+          "В сборке есть три разных боевых мода, и это не свалка: у каждого своя ступень. Ближний бой и доспехи работают с первого дня, огнестрел появляется после пороховой химии, а тяжёлое вооружение — уже за пределами ручного боя.",
+          "Правило одно и оно жёсткое: снаряжение не опережает производство. Нельзя найти в сундуке то, что вы ещё не умеете делать, — именно поэтому лут чужих построек в сборке понижен, а не оставлен как есть.",
+          "Из этого следует практический вывод. Ваша боевая сила растёт вместе с заводом. Если вы застряли в бою, ответ почти всегда в производстве, а не в поиске сундука получше."
+        ],
+        "task": "Прочитать про лестницу снаряжения"
+      },
+      "en": {
+        "title": "The gear ladder",
+        "subtitle": "Weapons arrive with industry, not before it",
+        "desc": [
+          "The pack ships three separate combat mods, and that is not a pile: each holds its own rung. Melee and armour work from day one, firearms appear after powder chemistry, heavy weapons sit beyond hand-held fighting entirely.",
+          "One rule, strictly held: gear never outruns production. You cannot find in a chest what you cannot yet build — which is why loot in other people's structures was stepped down rather than left alone.",
+          "The practical consequence: your fighting strength grows with your factory. If combat has you stuck, the answer is almost always in production, not in hunting for a better chest."
+        ],
+        "task": "Read about the gear ladder"
+      }
+    },
+    {
+      "slug": "melee",
+      "x": 3,
+      "y": -1.5,
+      "icon": "magistuarmory:iron_bastardsword",
+      "deps": ["intro"],
+      "ru": {
+        "title": "Ближний бой: направление важнее кликов",
+        "subtitle": "Better Combat меняет саму механику удара",
+        "desc": [
+          "Удар перестал быть щелчком по цели. У оружия появилась зона поражения: топор бьёт по дуге и задевает нескольких, копьё достаёт дальше, но только вперёд, кинжал быстр и слаб.",
+          "Значит, работает позиция. Стоять в толпе с копьём — ошибка, отступать с топором в коридор — тоже. Оружие выбирается под ситуацию, а не по числу урона в подсказке.",
+          "Доспехи из набора рыцарей дают настоящую защиту ранней эпохи и стоят соответствующе. Это честный обмен: вы вкладываете металл, который могли пустить на станок."
+        ],
+        "task": "Освоить ближний бой"
+      },
+      "en": {
+        "title": "Melee: facing matters more than clicking",
+        "subtitle": "Better Combat changes the swing itself",
+        "desc": [
+          "A hit is no longer a click on a target. Weapons have a reach shape: an axe sweeps an arc and catches several foes, a spear reaches further but only ahead, a dagger is fast and weak.",
+          "So position matters. Standing in a crowd with a spear is a mistake; backing into a corridor with an axe is another. You pick the weapon for the situation, not for the damage number in the tooltip.",
+          "Knight armour gives real early protection and costs accordingly. That is a fair trade: you spend metal that could have gone into a machine."
+        ],
+        "task": "Learn the melee system"
+      }
+    },
+    {
+      "slug": "firearms",
+      "x": 3,
+      "y": 1.5,
+      "icon": "tacz:ammo",
+      "deps": ["intro"],
+      "ru": {
+        "title": "Огнестрел и его цена",
+        "subtitle": "Патрон — это расходник производства",
+        "desc": [
+          "Огнестрельное оружие не выдаётся раньше пороховой химии — это записанный запрет сборки, и он действует на рецепты, награды, торговлю и лут одинаково.",
+          "Главное отличие от меча: у ствола есть себестоимость выстрела. Патроны надо производить, а значит, у вас появляется ещё одна линия снабжения, которая может встать в неудачный момент.",
+          "Поэтому огнестрел здесь — не замена ближнему бою, а инструмент для другой задачи. Меч ничего не стоит после ковки, ствол требует завода за спиной."
+        ],
+        "task": "Разобраться в цене выстрела"
+      },
+      "en": {
+        "title": "Firearms and their price",
+        "subtitle": "A cartridge is a production consumable",
+        "desc": [
+          "Firearms are never handed out before powder chemistry — that is a written pack ban, and it applies to recipes, quest rewards, trade and loot alike.",
+          "The key difference from a sword: a gun has a cost per shot. Ammunition must be produced, which means one more supply line that can fail at the worst moment.",
+          "So firearms here do not replace melee, they answer a different question. A sword costs nothing once forged; a gun needs a factory behind it."
+        ],
+        "task": "Understand the cost of a shot"
+      }
+    },
+    {
+      "slug": "structures",
+      "x": 6,
+      "y": -1.5,
+      "icon": "minecraft:filled_map",
+      "deps": ["melee"],
+      "ru": {
+        "title": "Мир вокруг заселён",
+        "subtitle": "Около четырёхсот построек, и не все дружелюбны",
+        "desc": [
+          "В сборке пять модов структур: деревни и городки под биомы, переработанные ванильные постройки, руины, башни и подземелья. Мир перестал быть пустым полем между вашей базой и шахтой.",
+          "Это не только декорация. Постройки — источник ранних материалов, ориентир на карте и место, где можно встретить чужой отряд. Разведка перестала быть бессмысленной.",
+          "Отдельно стоит знать: лут в них проверен и понижен под лестницу снаряжения. Незеритовое стало алмазным, алмазное — железным, а элитры, тотемы и зачарованные яблоки сняты совсем. Найденное больше не отменяет производство."
+        ],
+        "task": "Найти постройку и осмотреть её"
+      },
+      "en": {
+        "title": "The world around you is inhabited",
+        "subtitle": "Some four hundred structures, and not all are friendly",
+        "desc": [
+          "Five structure mods ship here: biome-fitting villages and towns, reworked vanilla builds, ruins, towers and dungeons. The world is no longer empty field between your base and your mine.",
+          "This is not only scenery. Structures are a source of early materials, a landmark on the map and a place where you can meet somebody else's squad. Scouting stopped being pointless.",
+          "Worth knowing separately: their loot was audited and stepped down to match the gear ladder. Netherite became diamond, diamond became iron, and elytra, totems and enchanted apples were removed outright. What you find no longer cancels what you build."
+        ],
+        "task": "Find a structure and search it"
+      }
+    },
+    {
+      "slug": "cannons",
+      "x": 6,
+      "y": 1.5,
+      "icon": "createbigcannons:cast_iron_cannon_barrel",
+      "deps": ["firearms"],
+      "ru": {
+        "title": "Когда ручного оружия мало",
+        "subtitle": "Артиллерия — это сооружение, а не предмет",
+        "desc": [
+          "Крупнокалиберное оружие в сборке собирается из блоков: ствол, казённая часть, лафет, боеприпас и способ его подать. Это стройка, а не крафт.",
+          "Отсюда и роль: артиллерия защищает место. Она не ходит с вами, требует расчёта и подготовки позиции, зато решает задачи, которые ручному оружию не по силам.",
+          "Порох, металл и точность обработки — всё это к тому моменту у вас уже должно производиться серийно. Пушка проверяет не храбрость, а завод."
+        ],
+        "task": "Изучить принцип орудия"
+      },
+      "en": {
+        "title": "When hand weapons are not enough",
+        "subtitle": "Artillery is a structure, not an item",
+        "desc": [
+          "Large-calibre weapons here are assembled from blocks: barrel, breech, carriage, shell and a way to feed it. That is construction, not crafting.",
+          "Hence the role: artillery defends a place. It does not travel with you, it demands planning and a prepared position, but it solves problems hand weapons cannot.",
+          "Powder, metal and machining precision must already be in serial production by then. A cannon tests your factory, not your courage."
+        ],
+        "task": "Study how a gun works"
+      }
+    },
+    {
+      "slug": "discipline",
+      "x": 9,
+      "y": 0,
+      "icon": "minecraft:iron_chestplate",
+      "deps": ["structures", "cannons"],
+      "ru": {
+        "title": "Дисциплина боя",
+        "subtitle": "Четыре правила, которые дешевле выучить заранее",
+        "desc": [
+          "Первое: смерть здесь — логистическая потеря, а не мгновенный откат. Вещи остаются на месте гибели, и путь обратно может оказаться дольше самого боя.",
+          "Второе: не носите на разведку то, чего не готовы лишиться. Комплект «на выход» и комплект «на работу» — разные комплекты.",
+          "Третье: у любой операции фракции есть предупреждение и окно переговоров. Бой — это последний вариант, а не единственный.",
+          "Четвёртое: чинить дешевле, чем делать заново. Ремонт заложен в цену снаряжения намеренно."
+        ],
+        "task": "Принять правила боя"
+      },
+      "en": {
+        "title": "Combat discipline",
+        "subtitle": "Four rules that are cheaper learned in advance",
+        "desc": [
+          "First: death here is a logistics loss, not an instant rollback. Your things stay where you fell, and the walk back can outlast the fight.",
+          "Second: do not carry on a scouting run what you are not ready to lose. A field kit and a work kit are different kits.",
+          "Third: every faction operation comes with a warning and a negotiation window. Fighting is the last option, not the only one.",
+          "Fourth: repairing is cheaper than rebuilding. That is priced into gear on purpose."
+        ],
+        "task": "Adopt the combat rules"
+      }
+    }
+  ]
+}

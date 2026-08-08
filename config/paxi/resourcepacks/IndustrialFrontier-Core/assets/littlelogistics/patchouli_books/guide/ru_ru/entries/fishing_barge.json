@@ -1,0 +1,19 @@
+{
+  "name": "Рыболовная баржа",
+  "icon": "littlelogistics:fishing_barge",
+  "category": "littlelogistics:vessels",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:fishing_barge",
+      "scale": 0.6,
+      "offset": 0.5,
+      "text": "Автоматически ловит рыбу и использует обычную таблицу добычи удочки."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:fishing_barge",
+      "text": "Сети раскрываются только в открытой воде. Прокладывайте длинные маршруты по океану, чтобы избежать штрафов за «мелководье» и «чрезмерный вылов». Прицепите сзади баржу с сундуком: у самой рыболовной баржи нет инвентаря."
+    }
+  ]
+}

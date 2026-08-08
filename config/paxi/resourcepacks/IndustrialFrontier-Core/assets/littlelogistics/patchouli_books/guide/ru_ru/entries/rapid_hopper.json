@@ -1,0 +1,12 @@
+{
+  "name": "Быстрая воронка",
+  "icon": "littlelogistics:rapid_hopper",
+  "category": "littlelogistics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:rapid_hopper",
+      "text": "Работает как обычная воронка, но гораздо быстрее!"
+    }
+  ]
+}

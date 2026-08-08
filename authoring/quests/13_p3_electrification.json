@@ -8,63 +8,63 @@
     {
       "alias": "if.quest.p3.intro",
       "engine_id": "3013000000000001",
-      "purpose": "Three quantities you must not confuse",
+      "purpose": "Разделяет три величины, которые в электрической системе нельзя путать.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p3.generator",
       "engine_id": "3013000000000002",
-      "purpose": "Steam and fuel become kilowatts",
+      "purpose": "Показывает, как пар и топливо становятся рабочей энергией.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p3.cable",
       "engine_id": "3013000000000003",
-      "purpose": "A wire is a rated part too",
+      "purpose": "Учит, что провод — это тоже деталь с ограничениями, а не бесплатный соединитель.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p3.buffer",
       "engine_id": "3013000000000004",
-      "purpose": "\"Available\" and \"enough\" are not the same",
+      "purpose": "Объясняет разницу между наличием энергии и её достаточностью.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p3.signal",
       "engine_id": "3013000000000005",
-      "purpose": "And only after that a material",
+      "purpose": "Показывает, что сигналы и материалы — это два разных уровня планирования.",
       "task_kind": "tag",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p3.machine",
       "engine_id": "3013000000000006",
-      "purpose": "Casing, class and sides",
+      "purpose": "Учит корпусам, классу напряжения и настройке сторон.",
       "task_kind": "tag",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p3.bridge",
       "engine_id": "3013000000000007",
-      "purpose": "Energy must not travel in a circle",
+      "purpose": "Объясняет, почему путь энергии должен быть прямым и контролируемым.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p3.line",
       "engine_id": "3013000000000008",
-      "purpose": "An end-to-end route without hands",
+      "purpose": "Закрывает главу цепочкой, где производство уже идёт без рук.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p3.exit",
       "engine_id": "3013000000000009",
-      "purpose": "What you can do now and what comes next",
+      "purpose": "Подводит итог тому, что уже можно автоматизировать до перехода к химии.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

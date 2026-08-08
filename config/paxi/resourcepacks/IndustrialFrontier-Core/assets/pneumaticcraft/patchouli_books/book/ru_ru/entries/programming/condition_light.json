@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Условие: освещение»",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_light_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Это виджет $(l:programming/conditions)условия/$.$(p)Виджет $(thing)Условие: освещение/$ позволяет удалённо проверить, соответствует ли уровень освещения блока или блоков из подключённого виджета $(l:programming/area)Область/$ заданному порогу."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_light_piece.png"
+      ],
+      "text": "$(italic)Виджет «Условие: освещение»/$"
+    }
+  ]
+}

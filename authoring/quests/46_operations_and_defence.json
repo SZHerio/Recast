@@ -8,42 +8,42 @@
     {
       "alias": "if.quest.ops.intro",
       "engine_id": "3046000000000001",
-      "purpose": "Why pressure starts in the fifth epoch",
+      "purpose": "Почему давление начинается в пятой эпохе",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.ops.squads",
       "engine_id": "3046000000000002",
-      "purpose": "Faction, epoch, role — and nothing else",
+      "purpose": "Фракция, эпоха, роль — и ничего лишнего",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.ops.ordnance",
       "engine_id": "3046000000000003",
-      "purpose": "Split by destructiveness",
+      "purpose": "Разделение по разрушительности",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.ops.operations",
       "engine_id": "3046000000000004",
-      "purpose": "What exactly is at stake",
+      "purpose": "Что именно поставлено на кон",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.ops.treaties",
       "engine_id": "3046000000000005",
-      "purpose": "It has a price, a term and a consequence",
+      "purpose": "У него есть цена, срок и последствия",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.ops.recovery",
       "engine_id": "3046000000000006",
-      "purpose": "Recovery is written down in advance",
+      "purpose": "Восстановление прописывается заранее",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

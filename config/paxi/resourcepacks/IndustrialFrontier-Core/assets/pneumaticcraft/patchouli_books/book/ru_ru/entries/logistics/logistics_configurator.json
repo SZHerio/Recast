@@ -1,0 +1,22 @@
+{
+  "name": "Логистический пневмоключ",
+  "icon": "pneumaticcraft:logistics_configurator",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Логистический пневмоключ/$ предназначен прежде всего для настройки $(l:logistics/overview)логистической системы/$.$(p)Щёлкните им $(thing)ПКМ/$ по любой $(l:logistics/frames)логистической рамке/$, чтобы открыть настройки фильтров.$(p)Нажмите $(thing)Shift + ПКМ/$, чтобы снять рамку с инвентаря."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:logistics_configurator",
+      "text": "С помощью $(item)логистического пневмоключа/$ можно также снимать — нажатием $(thing)Shift + ПКМ/$ — другие устанавливаемые устройства, например $(l:semiblocks/transfer_gadget)передающий модуль/$ и $(l:semiblocks/crop_support)опору для растений/$."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание логистического пневмоключа",
+      "recipe": "pneumaticcraft:logistics_configurator"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "gui.computercraft.config.http.proxy": "Прокси-сервер",
+  "gui.computercraft.config.http.proxy.tooltip": "Направляет HTTP-запросы и запросы веб-сокетов через прокси-сервер. Действует только на HTTP-правила, у которых параметр \"use_proxy\" имеет значение true (по умолчанию выключено).\nЕсли прокси-сервер требует авторизации, создайте рядом с файлом \"computercraft-server.toml\" файл \"computercraft-proxy.pw\". Запишите в него имя пользователя и пароль через двоеточие, например \"myuser:mypassword\". Для прокси-серверов SOCKS4 достаточно имени пользователя.",
+  "gui.computercraft.config.peripheral.modem_range": "Радиус действия модема (обычно)",
+  "gui.computercraft.config.peripheral.modem_range.tooltip": "Радиус действия беспроводных модемов на небольшой высоте в ясную погоду, в метрах.",
+  "gui.computercraft.config.peripheral.modem_range_during_storm": "Радиус действия модема (плохая погода)",
+  "gui.computercraft.config.peripheral.modem_range_during_storm.tooltip": "Радиус действия беспроводных модемов на небольшой высоте во время грозы, в метрах.",
+  "commands.computercraft.generic.no": "Н",
+  "commands.computercraft.generic.yes": "Д"
+}

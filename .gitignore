@@ -36,10 +36,10 @@ screenshots/
 local/
 patchouli_data.json
 rhino.local.properties
-options.txt
+/options.txt
 servers.dat
 usernamecache.json.bak
 
 # --- Клиентские папки, не относящиеся к сборке ---
-resourcepacks/
+/resourcepacks/
 shaderpacks/

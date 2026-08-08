@@ -1,0 +1,12 @@
+{
+  "name": "Жидкостная воронка",
+  "icon": "littlelogistics:fluid_hopper",
+  "category": "littlelogistics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:fluid_hopper",
+      "text": "Это аналог обычной воронки для жидкостей. Она принимает жидкость сверху и выводит через боковые стороны; заполнить её также можно ведром по щелчку правой кнопкой мыши. Подходит для загрузки и разгрузки судов и вагонов."
+    }
+  ]
+}

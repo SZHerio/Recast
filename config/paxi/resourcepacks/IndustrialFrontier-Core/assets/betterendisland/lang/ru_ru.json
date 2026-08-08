@@ -1,0 +1,7 @@
+{
+  "text.autoconfig.betterendisland-fabric-1_20.option.general.resummonedDragonDropsEgg": "Повторно призванный дракон оставляет яйцо",
+  "text.autoconfig.betterendisland-fabric-1_20.option.general.resummonedDragonDropsEgg.@Tooltip": "Определяет, будет ли дракон Края оставлять яйцо после каждой победы над ним",
+  "text.autoconfig.betterendisland-fabric-1_20.option.general.useVanillaSpawnPlatform": "Создавать ванильную обсидиановую платформу",
+  "text.autoconfig.betterendisland-fabric-1_20.option.general.useVanillaSpawnPlatform.@Tooltip": "Определяет, должна ли в Крае создаваться ванильная обсидиановая платформа вместо обновлённой",
+  "text.autoconfig.betterendisland-fabric-1_20.title": "Улучшенный остров Края YUNG'а"
+}

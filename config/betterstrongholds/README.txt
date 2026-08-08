@@ -1,8 +1,8 @@
-This directory is for a few additional options for YUNG's Better Strongholds.
-Options provided may vary by version.
-This directory contains subdirectories for supported versions. The first time you run Better Strongholds, a version subdirectory will be created if that version supports advanced options.
-For example, the first time you use Better Strongholds for MC 1.16 on Forge, the 'forge-1_16' subdirectory will be created in this folder.
-If no subdirectory for your version is created, then that version probably does not support the additional options.
+В этом каталоге находятся дополнительные настройки для YUNG's Better Strongholds.
+Набор доступных настроек зависит от версии.
+В этом каталоге есть подкаталоги для поддерживаемых версий. При первом запуске Better Strongholds для версии с расширенными настройками будет создан подкаталог этой версии.
+Например, при первом использовании Better Strongholds для MC 1.16 на Forge в этой папке будет создан подкаталог 'forge-1_16'.
+Если для вашей версии подкаталог не создаётся, значит, скорее всего, эта версия не поддерживает дополнительные настройки.
 
-NOTE -- MOST OPTIONS CAN BE FOUND IN A CONFIG FILE OUTSIDE THIS FOLDER!
-For example, on Forge 1.16 the file is 'betterstrongholds-forge-1_16.toml'.
+ПРИМЕЧАНИЕ — БОЛЬШИНСТВО НАСТРОЕК НАХОДИТСЯ В ФАЙЛЕ КОНФИГУРАЦИИ ВНЕ ЭТОЙ ПАПКИ!
+Например, в Forge 1.16 это файл 'betterstrongholds-forge-1_16.toml'.

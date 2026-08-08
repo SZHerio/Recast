@@ -1,0 +1,34 @@
+{
+  "name": "Трубные модули",
+  "icon": "minecraft:book",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "priority": "true",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)Трубные модули/$ — компоненты, которые устанавливаются сбоку $(l:tubes/pressure_tubes)напорной трубы/$ либо встраиваются в неё как $(thing)проходные/$.$(p)Чтобы снять установленный модуль, нажмите по нему $(thing)Shift + ПКМ/$ с $(l:tools/pneumatic_wrench)пневмоключом/$ в руке."
+    },
+    {
+      "anchor": "inline",
+      "type": "text",
+      "title": "Проходные модули",
+      "text": "$(thing)Проходные модули/$ устанавливаются по особым правилам:$(li)На одной напорной трубе может быть только один проходной модуль.$(li)На трубу с проходным модулем нельзя устанавливать другие модули.$(li)Труба с проходным модулем может иметь соединения только с двух его торцов.$(li)Проходной модуль можно установить $(italic)только/$ на открытый конец напорной трубы."
+    },
+    {
+      "type": "relations",
+      "entries": [
+        "pneumaticcraft:tubes/safety_module",
+        "pneumaticcraft:tubes/pressure_gauge_module",
+        "pneumaticcraft:tubes/flow_detector_module",
+        "pneumaticcraft:tubes/air_grate_module",
+        "pneumaticcraft:tubes/regulator_module",
+        "pneumaticcraft:tubes/charging_module",
+        "pneumaticcraft:tubes/logistics_module",
+        "pneumaticcraft:tubes/redstone_module",
+        "pneumaticcraft:tubes/thermostat_module",
+        "pneumaticcraft:tubes/vacuum_module"
+      ]
+    }
+  ]
+}

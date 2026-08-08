@@ -1,0 +1,12 @@
+{
+  "name": "Датчик транспорта",
+  "icon": "littlelogistics:vessel_detector",
+  "category": "littlelogistics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:vessel_detector",
+      "text": "Выдаёт сигнал редстоуна, когда в указанном направлении на расстоянии до 3 блоков находится судно. Между датчиком и судном должна быть прямая полоса воды."
+    }
+  ]
+}

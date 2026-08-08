@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.defence",
+  "engine_id": "2021000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/21_defence_gear.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.defence.intro",
+      "engine_id": "3021000000000001",
+      "purpose": "Оружие приходит вместе с индустрией, а не раньше неё",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.defence.melee",
+      "engine_id": "3021000000000002",
+      "purpose": "Боевая система меняет сам удар на более живой и точный.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.defence.firearms",
+      "engine_id": "3021000000000003",
+      "purpose": "Патрон — это расходник производства",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.defence.structures",
+      "engine_id": "3021000000000004",
+      "purpose": "Среди четырёх сотен структур не все дружелюбны",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.defence.cannons",
+      "engine_id": "3021000000000005",
+      "purpose": "Артиллерия — это структура, а не предмет",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.defence.discipline",
+      "engine_id": "3021000000000006",
+      "purpose": "Четыре правила, которые дешевле выучить заранее",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

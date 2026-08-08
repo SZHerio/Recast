@@ -1,0 +1,11 @@
+{
+  "name": "Слиток сжатого железа",
+  "icon": "pneumaticcraft:ingot_iron_compressed",
+  "category": "pneumaticcraft:components",
+  "pages": [
+    {
+      "type": "text",
+      "text": "См. раздел $(l:base_concepts/basic_materials#compressed_iron_ingot)«Основные материалы»/$."
+    }
+  ]
+}

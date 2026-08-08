@@ -1601,6 +1601,119 @@
       "gate_refs": [
         "industrial_frontier:gate/bypass/runtime_recipe_test"
       ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/three_fusion_owners",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Термоядерный синтез умеют три установленных мода. Реактор GregTech даёт плазму и редкие материалы, ядро NuclearCraft — энергию из дейтерия и трития, торус и лазерная установка HBM — энергию и материалы одновременно. Три лестницы к одному результату означают три прохождения одного и того же и делают две из них бессмысленными.",
+      "decision_ru": "Решение владельца от 4 августа 2026: синтез разведён на две роли. Реактор GregTech остаётся станком материалов и работает частью производственной линии. Лазерная установка HBM становится главной электростанцией финала. Ядро синтеза NuclearCraft не возвращается из отложенных в M6 установок — это третья копия, и она снимается.",
+      "source_refs": [
+        "nuclearcraft:fusion_core"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/civil_nuclear_industry",
+        "industrial_frontier:epoch/p8"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m6_nuclear_epoch_gate.js",
+          "kubejs/server_scripts/10_progression/m8_late_epoch_gate.js"
+        ],
+        "expected_state_ru": "Ядро синтеза NuclearCraft остаётся удалённым в M6 и не пересоздаётся в M8; реактор GregTech и плазменная ветка HBM не тронуты ни одним рецептом."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:bypass/nuclearcraft_late_installations"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/three_fusion_ladders",
+        "industrial_frontier:evidence/bypass/m8_gate_script"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/accelerator_return_p8",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Шестая эпоха отложила восемь установок NuclearCraft до их собственных эпох. Отложенное легко превращается в забытое: без явного возврата ускорительный комплекс остался бы недоступен навсегда, а его продукты — веществами без источника.",
+      "decision_ru": "Семь установок возвращены рецептами восьмой эпохи. Каждая получила узел GregTech уровня IV или выше, чтобы рубеж был виден в самом рецепте, как у всех входов в домены начиная с пятой эпохи. Собственные материалы установок — экстремальный сплав, нейтрониевая рама, пространственная смесь — и так делают их поздними, поэтому цена не завышалась, а обозначалась.",
+      "source_refs": [
+        "nuclearcraft:linear_accelerator_controller",
+        "nuclearcraft:ring_accelerator_controller",
+        "nuclearcraft:beam_diverter_controller",
+        "nuclearcraft:target_chamber_controller",
+        "nuclearcraft:collision_chamber_controller",
+        "nuclearcraft:chamber_terminal",
+        "nuclearcraft:quantum_transformer"
+      ],
+      "target_refs": [
+        "industrial_frontier:epoch/p8",
+        "industrial_frontier:epoch/p9"
+      ],
+      "enforcement": {
+        "mode": "RECIPE_POLICY",
+        "implementation_refs": [
+          "kubejs/server_scripts/10_progression/m8_late_epoch_gate.js"
+        ],
+        "expected_state_ru": "Семь рецептов выданы заново с узлами gtceu:iv_sensor, gtceu:iv_emitter, gtceu:iv_robot_arm, gtceu:iv_field_generator, gtceu:luv_field_generator и gtceu:zpm_field_generator; восьмая установка — ядро синтеза — не возвращается."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:bypass/nuclearcraft_late_installations"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/m8_gate_script"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
+    },
+    {
+      "bypass_id": "industrial_frontier:bypass/hbm_fusion_ladder_intact",
+      "category": "MACHINE",
+      "status": "CLOSED_STATIC",
+      "risk_ru": "Термоядерная ветка HBM могла оказаться доступной сразу после входа в домен седьмой эпохи: её плазменная печь делается в сборочной машине, а вся лазерная установка — в плазменной печи.",
+      "decision_ru": "Ворота не ставятся, и это проверено разбором. Плазменная печь требует сверхпроводящей проволоки BSCCO и висмоидных схем, турбина — проволоки из шрабидия и квантовых схем: лестница уже внутри мода и совпадает с лестницей сборки. Второй замок поверх неё был бы дублем — тот же вывод, что по GCYR в M7.",
+      "source_refs": [
+        "hbm_ntm_rebirth:fusion_plasma_forge",
+        "hbm_ntm_rebirth:fusion_torus",
+        "hbm_ntm_rebirth:icf_controller"
+      ],
+      "target_refs": [
+        "industrial_frontier:domain/strategic_nuclear_program",
+        "industrial_frontier:epoch/p9"
+      ],
+      "enforcement": {
+        "mode": "GATE_ONLY",
+        "implementation_refs": [],
+        "expected_state_ru": "Ни один рецепт термоядерной ветки HBM не изменён и не удалён: её эпоха задана собственными материалами мода."
+      },
+      "profit_check": {
+        "material_gain": "NONE_EXPECTED",
+        "energy_cycle": "NOT_APPLICABLE",
+        "static_result": "PASS"
+      },
+      "related_decision_refs": [
+        "industrial_frontier:bypass/three_fusion_owners"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/bypass/hbm_fusion_superconductors"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/bypass/runtime_recipe_test"
+      ]
     }
   ],
   "gates": [
@@ -2087,6 +2200,33 @@
       "locator": "transitive closure of nuke_*, det_nuke, struct_launcher, launch_pad*, missile_*, mp_warhead_*, machine_missile_assembly",
       "observed": "Walking the nuclear branch from its 31 roots reaches 72 items and uses only these recipe types: assembly_machine (32), solidifier (27), crafting_shaped/shapeless (12), shredder (6), purex (6), chemical_plant (5), fuel_pool (2), crystallizer, press and exposure_chamber (1 each). It never uses the ammo press, the weapon table, the armour table or the armour-modules folder, so removing the weapon layer leaves the branch intact.",
       "verified_on": "2026-08-03",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/three_fusion_ladders",
+      "type": "VENDOR_DATA",
+      "path": "mods/NuclearCraft-1.20.1-1.2.33.jar!/data/nuclearcraft/recipes/fusion_core.json",
+      "locator": "fusion owners across the installed modlist",
+      "observed": "Three installed mods ship fusion: GregTech has fusion_casing MK1-3, fusion_coil and luv_fusion_reactor with 16 plasma fluids; NuclearCraft has fusion_core; HBM ships fusion_torus, klystron, MHD turbine and a full inertial-confinement branch. Three ladders to one outcome.",
+      "verified_on": "2026-08-04",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/hbm_fusion_superconductors",
+      "type": "VENDOR_DATA",
+      "path": "mods/hbm_ntm_rebirth-0.4.1beta.jar!/data/hbm_ntm_rebirth/recipes/assembly_machine/fusion_plasma_forge.json",
+      "locator": "plasma forge, klystron and MHD turbine assembly recipes",
+      "observed": "The plasma forge needs 32 dense BSCCO superconductor wires and 4 bismoid circuits; the klystron needs 8 more BSCCO wires; the MHD turbine needs 64 dense schrabidium wires and 4 quantum circuits. The branch is already late by its own materials.",
+      "verified_on": "2026-08-04",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/bypass/m8_gate_script",
+      "type": "AUTHOR_DECISION",
+      "path": "kubejs/server_scripts/10_progression/m8_late_epoch_gate.js",
+      "locator": "ServerEvents.recipes",
+      "observed": "Authored M8 gate: seven accelerator installations returned with IV-and-above GregTech nodes, the eighth (fusion core) deliberately not returned.",
+      "verified_on": "2026-08-04",
       "static_only": true
     }
   ]

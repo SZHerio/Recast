@@ -6,65 +6,65 @@
   "optional": false,
   "quests": [
     {
-      "alias": "if.quest.p1.intro",
+      "alias": "if.quest.p1.rotation",
       "engine_id": "3011000000000001",
-      "purpose": "Rotation is a resource",
+      "purpose": "Вводит вращение как первый механический ресурс и чистый переход от выживания к индустрии.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
-      "alias": "if.quest.p1.andesite",
+      "alias": "if.quest.p1.alloy",
       "engine_id": "3011000000000002",
-      "purpose": "Your first genuinely cross-mod material",
+      "purpose": "Показывает первый межмодовый материал как основу всей механической линии.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
-      "alias": "if.quest.p1.rotation",
+      "alias": "if.quest.p1.line",
       "engine_id": "3011000000000003",
-      "purpose": "How to read a mechanical line",
-      "task_kind": "item",
-      "grind_class": "GREEN"
+      "purpose": "Учит читать механическую линию от входа к выходу.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p1.power",
       "engine_id": "3011000000000004",
-      "purpose": "Water is more reliable than it looks",
-      "task_kind": "item",
-      "grind_class": "GREEN"
+      "purpose": "Объясняет, что ранняя энергия держится на надёжном движении, а не на цифре.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p1.stress",
       "engine_id": "3011000000000005",
-      "purpose": "Read the instruments, do not guess",
-      "task_kind": "item",
-      "grind_class": "GREEN"
+      "purpose": "Учит смотреть на стресс как на измерение, а не гадать.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
     },
     {
-      "alias": "if.quest.p1.mill",
+      "alias": "if.quest.p1.machine",
       "engine_id": "3011000000000006",
-      "purpose": "Milling without electricity",
+      "purpose": "Показывает одну механическую машину, которая уже делает настоящую обработку до электричества.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p1.press",
       "engine_id": "3011000000000007",
-      "purpose": "One operation, two domains",
+      "purpose": "Объясняет пресс как общий узел для нескольких производств.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
-      "alias": "if.quest.p1.line",
+      "alias": "if.quest.p1.buffer",
       "engine_id": "3011000000000008",
-      "purpose": "Buffer, bottleneck, backup",
-      "task_kind": "item",
-      "grind_class": "GREEN"
+      "purpose": "Учит буферу, узкому месту и запасной линии как одному уроку по построению цепочки.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p1.exit",
       "engine_id": "3011000000000009",
-      "purpose": "Mechanics alone is no longer enough",
+      "purpose": "Закрывает механическую главу и ведёт к паровой металлургии.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

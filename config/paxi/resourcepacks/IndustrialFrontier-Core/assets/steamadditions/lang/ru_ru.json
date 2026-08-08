@@ -1,0 +1,6 @@
+{
+  "block.steamadditions.steam_foundry": "Паровая литейная",
+  "block.steamadditions.steam_foundry.tooltip": "Не путайте её с многоплавильной печью",
+  "block.steamadditions.steam_separator": "Паровой сепаратор",
+  "block.steamadditions.steam_separator.tooltip": "Позволяет извлечь максимум пользы из пыли."
+}

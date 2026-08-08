@@ -1,5 +1,6 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "46_operations_and_defence"
 	group: "1000000000000005"
@@ -9,6 +10,8 @@
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3015000000000014"]
 			description: [
 				"{industrial_frontier.quest.ops.intro.desc.1}"
 				"{industrial_frontier.quest.ops.intro.desc.2}"
@@ -16,13 +19,6 @@
 			]
 			icon: "minecraft:shield"
 			id: "3046000000000001"
-			rewards: [{
-				id: "5046000000000001"
-				type: "xp"
-				xp: 60
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.ops.intro.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -31,8 +27,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.ops.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3046000000000001"]
@@ -43,11 +41,6 @@
 			]
 			icon: "minecraft:iron_helmet"
 			id: "3046000000000002"
-			rewards: [{
-				id: "5046000000000002"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.ops.squads.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -56,8 +49,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.ops.squads.title}"
-			x: 3.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
 		}
 		{
 			dependencies: ["3046000000000002"]
@@ -68,11 +63,6 @@
 			]
 			icon: "createbigcannons:solid_shot"
 			id: "3046000000000003"
-			rewards: [{
-				id: "5046000000000003"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.ops.ordnance.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -81,8 +71,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.ops.ordnance.title}"
-			x: 6.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: ["3046000000000001"]
@@ -93,11 +85,6 @@
 			]
 			icon: "minecraft:crossbow"
 			id: "3046000000000004"
-			rewards: [{
-				id: "5046000000000004"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.ops.operations.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -106,8 +93,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.ops.operations.title}"
-			x: 3.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
 		}
 		{
 			dependencies: ["3046000000000004"]
@@ -118,11 +107,6 @@
 			]
 			icon: "minecraft:written_book"
 			id: "3046000000000005"
-			rewards: [{
-				id: "5046000000000005"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.ops.treaties.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -131,8 +115,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.ops.treaties.title}"
-			x: 6.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
 			dependencies: [
@@ -146,11 +132,6 @@
 			]
 			icon: "minecraft:golden_apple"
 			id: "3046000000000006"
-			rewards: [{
-				id: "5046000000000006"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.ops.recovery.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -159,8 +140,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.ops.recovery.title}"
-			x: 9.0d
-			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 6d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.ops.subtitle}"]

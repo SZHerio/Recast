@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Режим ожидания»",
+  "icon": "pneumaticcraft:textures/progwidgets/standby_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "При выполнении этого виджета $(l:tools/drone)дрон/$ выключит винты и упадёт с неба. Так можно экономить $(l:base_concepts/pressure)воздух/$: в режиме ожидания дрон его совсем не расходует.$(p)Однако $(thing)дрон/$ продолжает выполнять другие виджеты. Как только программа потребует от него реальной работы, $(thing)дрон/$ снова включит винты."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/standby_piece.png"
+      ],
+      "text": "$(italic)Спящая красавица/$"
+    }
+  ]
+}

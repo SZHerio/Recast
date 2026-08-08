@@ -1,0 +1,134 @@
+{
+	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
+	default_quest_shape: "square"
+	filename: "22_settlement"
+	group: "1000000000000003"
+	icon: "minecolonies:blockhuttownhall"
+	id: "2022000000000001"
+	order_index: 12
+	quest_links: [ ]
+	quests: [
+		{
+			hide_until_deps_complete: true
+			dependencies: ["3013000000000009"]
+			description: [
+				"{industrial_frontier.quest.settlement.intro.desc.1}"
+				"{industrial_frontier.quest.settlement.intro.desc.2}"
+				"{industrial_frontier.quest.settlement.intro.desc.3}"
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "3022000000000001"
+			optional: true
+			subtitle: "{industrial_frontier.quest.settlement.intro.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4022000000000001"
+				title: "{industrial_frontier.quest.settlement.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.settlement.intro.title}"
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["3022000000000001"]
+			description: [
+				"{industrial_frontier.quest.settlement.townhall.desc.1}"
+				"{industrial_frontier.quest.settlement.townhall.desc.2}"
+				"{industrial_frontier.quest.settlement.townhall.desc.3}"
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "3022000000000002"
+			optional: true
+			subtitle: "{industrial_frontier.quest.settlement.townhall.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4022000000000002"
+				title: "{industrial_frontier.quest.settlement.townhall.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.settlement.townhall.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 0d
+		}
+		{
+			dependencies: ["3022000000000002"]
+			description: [
+				"{industrial_frontier.quest.settlement.builder.desc.1}"
+				"{industrial_frontier.quest.settlement.builder.desc.2}"
+				"{industrial_frontier.quest.settlement.builder.desc.3}"
+			]
+			icon: "minecolonies:blockhutbuilder"
+			id: "3022000000000003"
+			optional: true
+			subtitle: "{industrial_frontier.quest.settlement.builder.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4022000000000003"
+				title: "{industrial_frontier.quest.settlement.builder.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.settlement.builder.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
+		}
+		{
+			dependencies: ["3022000000000002"]
+			description: [
+				"{industrial_frontier.quest.settlement.supply.desc.1}"
+				"{industrial_frontier.quest.settlement.supply.desc.2}"
+				"{industrial_frontier.quest.settlement.supply.desc.3}"
+			]
+			icon: "minecraft:bread"
+			id: "3022000000000004"
+			optional: true
+			subtitle: "{industrial_frontier.quest.settlement.supply.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4022000000000004"
+				title: "{industrial_frontier.quest.settlement.supply.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.settlement.supply.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"3022000000000003"
+				"3022000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.settlement.guards.desc.1}"
+				"{industrial_frontier.quest.settlement.guards.desc.2}"
+				"{industrial_frontier.quest.settlement.guards.desc.3}"
+			]
+			icon: "minecraft:iron_helmet"
+			id: "3022000000000005"
+			optional: true
+			subtitle: "{industrial_frontier.quest.settlement.guards.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4022000000000005"
+				title: "{industrial_frontier.quest.settlement.guards.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.settlement.guards.title}"
+			shape: "diamond"
+			size: 1.5d
+			x: 6d
+			y: 0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.settlement.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.settlement.title}"
+}

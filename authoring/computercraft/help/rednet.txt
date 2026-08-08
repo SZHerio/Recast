@@ -1,0 +1,18 @@
+API rednet предоставляет простую модель компьютерной сети поверх модемов.
+
+Функции API rednet:
+rednet.open( side )
+rednet.close( [side] )
+rednet.isOpen( [side] )
+rednet.send( receiverID, message, [protocol] ) -- Отправить определённому компьютеру
+rednet.broadcast( message, [protocol] ) -- Отправить всем компьютерам
+rednet.receive( [protocol], [timeout] ) -- Возвращает: senderID, message, protocol
+rednet.host( protocol, hostname )
+rednet.unhost( protocol )
+rednet.lookup( protocol, [hostname] ) -- Возвращает: ID
+
+События API rednet:
+"rednet_message" — получено сообщение. Аргументы: senderID, message, protocol
+Введите "help events", чтобы узнать о системе событий.
+
+Rednet — не единственный способ использовать модемы для связи. Можно работать с модемом напрямую через API peripheral и слушать событие "modem_message": это даёт больше низкоуровневого контроля, но лишает удобных высокоуровневых возможностей сети.

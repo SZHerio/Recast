@@ -1,0 +1,1128 @@
+﻿{
+    "schema_version":  1,
+    "build_id":  "IF-M10-0001",
+    "generated_at":  "2026-08-08T14:18:20.5492633Z",
+    "default_text_page_count":  93,
+    "translated_ru_page_count":  93,
+    "missing_ru_page_count":  0,
+    "qa_failure_count":  0,
+    "release_gate_met":  true,
+    "pages":  [
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "alligator_snapping_turtle.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/alligator_snapping_turtle.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "anaconda.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/anaconda.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "anteater.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/anteater.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "bald_eagle.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/bald_eagle.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "banana_slug.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/banana_slug.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "bison.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/bison.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "blobfish.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/blobfish.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "blue_jay.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/blue_jay.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "bone_serpent.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/bone_serpent.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "bunfungus.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/bunfungus.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "cachalot_whale.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/cachalot_whale.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "caiman.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/caiman.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "capuchin_monkey.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/capuchin_monkey.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "catfish.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/catfish.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "cave_centipede.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/cave_centipede.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "cockroach.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/cockroach.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "comb_jelly.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/comb_jelly.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "cosmaw.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/cosmaw.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "cosmic_cod.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/cosmic_cod.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "crimson_mosquito.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/crimson_mosquito.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "crocodile.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/crocodile.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "crow.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/crow.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "devils_hole_pupfish.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/devils_hole_pupfish.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "dropbear.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/dropbear.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "elephant.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/elephant.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "emu.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/emu.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "endergrade.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/endergrade.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "enderiophage.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/enderiophage.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "farseer.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/farseer.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "flutter.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/flutter.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "fly.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/fly.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "flying_fish.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/flying_fish.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "frilled_shark.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/frilled_shark.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "froststalker.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/froststalker.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "gazelle.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/gazelle.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "gelada_monkey.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/gelada_monkey.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "giant_squid.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/giant_squid.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "gorilla.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/gorilla.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "grizzly_bear.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/grizzly_bear.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "guster.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/guster.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "hammerhead_shark.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/hammerhead_shark.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "hummingbird.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/hummingbird.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "jerboa.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/jerboa.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "kangaroo.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/kangaroo.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "komodo_dragon.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/komodo_dragon.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "laviathan.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/laviathan.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "leafcutter_ant.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/leafcutter_ant.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "lobster.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/lobster.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "maned_wolf.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/maned_wolf.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "mantis_shrimp.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/mantis_shrimp.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "mimic_octopus.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/mimic_octopus.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "mimicube.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/mimicube.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "moose.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/moose.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "mudskipper.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/mudskipper.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "mungus.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/mungus.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "murmur.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/murmur.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "orca.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/orca.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "platypus.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/platypus.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "potoo.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/potoo.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "raccoon.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/raccoon.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "rain_frog.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/rain_frog.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "rattlesnake.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/rattlesnake.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "rhinoceros.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/rhinoceros.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "roadrunner.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/roadrunner.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "rocky_roller.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/rocky_roller.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "root.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/root.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "sea_bear.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/sea_bear.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "seagull.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/seagull.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "seal.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/seal.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "shoebill.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/shoebill.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "skelewag.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/skelewag.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "skreecher.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/skreecher.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "skunk.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/skunk.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "snow_leopard.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/snow_leopard.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "soul_vulture.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/soul_vulture.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "spectre.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/spectre.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "straddler.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/straddler.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "stradpole.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/stradpole.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "sugar_glider.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/sugar_glider.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "sunbird.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/sunbird.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "tarantula_hawk.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/tarantula_hawk.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "tasmanian_devil.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/tasmanian_devil.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "terrapin.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/terrapin.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "tiger.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/tiger.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "toucan.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/toucan.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "triops.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/triops.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "tusklin.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/tusklin.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "underminer.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/underminer.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "void_worm.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/void_worm.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "warped_mosco.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/warped_mosco.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "alexsmobs",
+                      "book_root":  "animal_dictionary",
+                      "relative_page":  "warped_toad.txt",
+                      "source_jar":  "alexsmobs-1.22.9.jar",
+                      "expected_ru_overlay":  "assets/alexsmobs/book/animal_dictionary/ru_ru/warped_toad.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "citadel",
+                      "book_root":  "citadel_book",
+                      "relative_page":  "link_example.txt",
+                      "source_jar":  "citadel-2.6.3-1.20.1.jar",
+                      "expected_ru_overlay":  "assets/citadel/book/citadel_book/ru_ru/link_example.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  },
+                  {
+                      "namespace":  "citadel",
+                      "book_root":  "citadel_book",
+                      "relative_page":  "root.txt",
+                      "source_jar":  "citadel-2.6.3-1.20.1.jar",
+                      "expected_ru_overlay":  "assets/citadel/book/citadel_book/ru_ru/root.txt",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0
+                  }
+              ]
+}

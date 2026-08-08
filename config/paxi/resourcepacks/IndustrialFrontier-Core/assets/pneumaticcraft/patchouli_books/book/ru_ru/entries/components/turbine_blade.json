@@ -1,0 +1,16 @@
+{
+  "name": "Лопатка турбины",
+  "icon": "pneumaticcraft:turbine_blade",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Компонент для создания других устройств. Сам по себе не используется."
+    },
+    {
+      "type": "pneumaticcraft:pressure_chamber",
+      "recipe": "pneumaticcraft:pressure_chamber/turbine_blade"
+    }
+  ]
+}

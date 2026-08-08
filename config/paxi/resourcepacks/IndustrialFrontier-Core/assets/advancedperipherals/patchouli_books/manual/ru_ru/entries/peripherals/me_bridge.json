@@ -1,0 +1,30 @@
+{
+  "name": "МЭ-мост",
+  "icon": "advancedperipherals:me_bridge",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "МЭ-мост взаимодействует с Applied Energistics 2. Через него можно извлекать и создавать предметы, получать список содержимого сети и выполнять другие операции. МЭ-мост занимает один канал.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/me_bridge/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:me_bridge"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:me_bridge"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите МЭ-мост к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Карта памяти",
+  "icon": "advancedperipherals:memory_card",
+  "category": "advancedperipherals:items",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(9)$(l:items/ar_goggles)Очки дополненной реальности$(/l)$() можно использовать вместе с $(9)$(l:peripherals/inventory_manager)менеджером инвентаря$(/l)$() для работы с инвентарём игрока.$(p)Возьмите карту памяти в руку и щёлкните правой кнопкой мыши, чтобы привязать её к себе.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/items/ar_goggles/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:memory_card"
+    }
+  ]
+}

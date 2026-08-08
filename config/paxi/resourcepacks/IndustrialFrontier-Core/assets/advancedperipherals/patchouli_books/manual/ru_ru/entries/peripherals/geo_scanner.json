@@ -1,0 +1,30 @@
+{
+  "name": "Геосканер",
+  "icon": "advancedperipherals:geo_scanner",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Геосканер сообщает сведения о ближайших блоках и о чанке, в котором установлен. Между сканированиями действует задержка — учитывайте её в программе.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/geo_scanner/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:geo_scanner"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:geo_scanner"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите геосканер к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}

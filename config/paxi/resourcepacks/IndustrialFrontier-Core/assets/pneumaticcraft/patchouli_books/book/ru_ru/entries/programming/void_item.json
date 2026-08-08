@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Уничтожить предметы»",
+  "icon": "pneumaticcraft:textures/progwidgets/void_item_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Этот виджет немедленно и безвозвратно уничтожает предметы в инвентаре дрона — будьте осторожны! Настоятельно рекомендуется использовать его вместе с $(l:programming/item_filter)Фильтром предметов/$: тогда будут уничтожены только разрешённые фильтром предметы.$(p)Виджет завершится, когда в инвентаре $(item)дрона/$ не останется подходящих предметов."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/void_item_piece.png"
+      ],
+      "text": "$(italic)Всё равно не пригодилось бы/$"
+    }
+  ]
+}

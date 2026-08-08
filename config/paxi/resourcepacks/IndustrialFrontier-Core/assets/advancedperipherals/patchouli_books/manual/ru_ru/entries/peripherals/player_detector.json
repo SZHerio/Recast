@@ -1,0 +1,30 @@
+{
+  "name": "Детектор игроков",
+  "icon": "advancedperipherals:player_detector",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Детектор игроков обнаруживает игроков в заданном радиусе. Он также распознаёт игрока, который взаимодействует с самим блоком.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/player_detector/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:player_detector"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:player_detector"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите детектор игроков к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}

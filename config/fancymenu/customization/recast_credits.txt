@@ -1,0 +1,105 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = recast.credits
+  render_custom_elements_behind_vanilla = false
+  is_enabled = true
+  randommode = false
+  randomgroup = recast_service
+  randomonlyfirsttime = false
+  layout_index = 0
+  custom_menu_title = Recast
+}
+
+customization {
+  action = autoscale
+  basewidth = 854
+  baseheight = 480
+}
+
+menu_background {
+  image_path = [source:local]/config/fancymenu/assets/background.png
+  slide = false
+  repeat_texture = false
+  background_type = image
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = true
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/ui/panel.png
+  repeat_texture = false
+  nine_slice_texture = true
+  nine_slice_texture_border_x = 12
+  nine_slice_texture_border_y = 12
+  element_type = image
+  instance_identifier = recast_credits_panel
+  anchor_point = mid-centered
+  x = -330
+  y = -218
+  width = 660
+  height = 436
+  stay_on_screen = true
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.screen.credits.body"}}
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  enable_scrolling = true
+  auto_line_wrapping = true
+  remove_html_breaks = true
+  parse_markdown = true
+  element_type = text_v2
+  instance_identifier = recast_credits_text
+  anchor_point = mid-centered
+  x = -300
+  y = -186
+  width = 600
+  height = 318
+  stay_on_screen = true
+}
+
+element {
+  button_element_executable_block_identifier = recast_licenses_actions
+  [executable_action_instance:recast_licenses_open][action_type:opengui] = recast.licenses
+  [executable_block:recast_licenses_actions][type:generic] = [executables:recast_licenses_open;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.licenses"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_licenses_button
+  anchor_point = mid-centered
+  x = -224
+  y = 178
+  width = 220
+  height = 22
+  stay_on_screen = true
+}
+
+element {
+  button_element_executable_block_identifier = recast_credits_back_actions
+  [executable_action_instance:recast_credits_back][action_type:back_to_last_screen] =
+  [executable_block:recast_credits_back_actions][type:generic] = [executables:recast_credits_back;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.back"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_credits_back_button
+  anchor_point = mid-centered
+  x = 4
+  y = 178
+  width = 220
+  height = 22
+  stay_on_screen = true
+}

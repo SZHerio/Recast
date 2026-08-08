@@ -1,0 +1,17 @@
+{
+  "name": "Жидкостный компрессор",
+  "icon": "pneumaticcraft:liquid_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Жидкостный компрессор/$ — простой генератор $(l:base_concepts/pressure)сжатого воздуха/$, сжигающий жидкое топливо. Список подходящих жидкостей и их эффективность приведены на вкладке $(bold)«Доступное топливо»/$ в интерфейсе компрессора. В списке есть и высокотемпературные жидкости, например лава."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание $(item)жидкостного компрессора/$",
+      "recipe": "pneumaticcraft:liquid_compressor"
+    }
+  ]
+}

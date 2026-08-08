@@ -1,0 +1,246 @@
+{
+  "$schema": "../../authoring/schemas/quest_acceptance_sets.schema.json",
+  "schema_version": 1,
+  "registry_id": "industrial_frontier:quest/acceptance_sets",
+  "status": "STATIC_IDS_CONFIRMED_USER_RUNTIME_PENDING",
+  "policy_ru": "Квест проверяет освоенную способность, а не случайно выбранный автором вариант предмета. Источник сырья и готовый продукт всегда считаются разными результатами. Равноценные варианты объединяются только после проверки их назначения и доступности в нужной эпохе.",
+  "editorial_policy_ru": "Название набора не показывается игроку вместо объяснения. Текст квеста человеческим языком называет цель, перечисляет подходящие варианты, объясняет различия и сообщает, куда пойдёт результат.",
+  "sets": [
+    {
+      "set_id": "industrial_frontier:quest_set/p0/logs",
+      "title_ru": "Древесина для первого укрытия",
+      "capability_ru": "Добыть любое обычное бревно, пригодное для ручной обработки.",
+      "epoch": 0,
+      "semantic_role": "SOURCE",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:materials/wood_logs",
+      "values": [
+        "#minecraft:logs"
+      ],
+      "excluded": [],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/wood_logs.json"
+      ],
+      "runtime_gate": "USER_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p0/planks",
+      "title_ru": "Доски для ручного ремесла",
+      "capability_ru": "Получить доски из любой обычной породы дерева и открыть путь к верстаку.",
+      "epoch": 0,
+      "semantic_role": "PRODUCT",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:materials/wood_planks",
+      "values": [
+        "#minecraft:planks"
+      ],
+      "excluded": [],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/wood_planks.json"
+      ],
+      "runtime_gate": "USER_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p0/field_ration",
+      "title_ru": "Походная еда",
+      "capability_ru": "Подготовить простую готовую еду для разведочного выхода; хлеб не является единственным правильным выбором.",
+      "epoch": 0,
+      "semantic_role": "CONSUMABLE_CAPABILITY",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:rations/field",
+      "values": [
+        "minecraft:bread",
+        "minecraft:cooked_beef",
+        "minecraft:cooked_porkchop",
+        "minecraft:cooked_chicken",
+        "minecraft:cooked_mutton",
+        "minecraft:cooked_cod",
+        "minecraft:cooked_salmon",
+        "minecraft:baked_potato",
+        "farmersdelight:cooked_chicken_cuts",
+        "farmersdelight:cooked_bacon",
+        "farmersdelight:cooked_mutton_chops",
+        "farmersdelight:cooked_cod_slice",
+        "farmersdelight:cooked_salmon_slice",
+        "farmersdelight:fried_egg",
+        "farmersdelight:cooked_rice",
+        "farmersdelight:mixed_salad"
+      ],
+      "excluded": [
+        {
+          "value": "#forge:foods",
+          "reason_ru": "Слишком широкая категория: она принимает сырые ингредиенты и еду, непригодную для понятного походного запаса."
+        }
+      ],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+      ],
+      "runtime_gate": "USER_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p0/iron_source",
+      "title_ru": "Железосодержащее сырьё",
+      "capability_ru": "Найти один из ранних минералов, из которого доступна первая партия железа. Этот результат подтверждает разведку, но ещё не получение металла.",
+      "epoch": 0,
+      "semantic_role": "SOURCE",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:quest_sources/early_iron",
+      "values": [
+        "minecraft:raw_iron",
+        "gtceu:raw_yellow_limonite",
+        "gtceu:raw_magnetite",
+        "gtceu:raw_basaltic_mineral_sand",
+        "gtceu:raw_granitic_mineral_sand",
+        "gtceu:raw_pyrite",
+        "gtceu:raw_goethite",
+        "gtceu:raw_hematite"
+      ],
+      "excluded": [
+        {
+          "value": "#forge:raw_materials/iron",
+          "reason_ru": "Общий тег не описывает все минералы GTCEu, которые в этой сборке дают раннее железо."
+        },
+        {
+          "value": "gtceu:iron_dust",
+          "reason_ru": "Пыль — уже переработанный продукт, поэтому она не доказывает поиск месторождения."
+        }
+      ],
+      "evidence_refs": [
+        "kubejs/exported/gtceu_item_census.json",
+        "https://github.com/GregTechCEu/GregTech-Modern-Community-Pack/blob/main/config/ftbquests/quests/chapters/gtceu.snbt"
+      ],
+      "runtime_gate": "USER_RECIPE_AND_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p0/iron_product",
+      "title_ru": "Первая партия железа",
+      "capability_ru": "Получить готовый железный слиток из найденного сырья. Только этот набор подтверждает, что металл уже доступен для инструментов и деталей.",
+      "epoch": 0,
+      "semantic_role": "PRODUCT",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:materials/iron_ingots",
+      "values": [
+        "#forge:ingots/iron"
+      ],
+      "excluded": [
+        {
+          "value": "industrial_frontier:quest_sources/early_iron",
+          "reason_ru": "Сырьё и готовый металл — разные этапы работы; один не должен автоматически засчитывать другой."
+        }
+      ],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/iron_ingots.json"
+      ],
+      "runtime_gate": "USER_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p0/raw_water",
+      "title_ru": "Доступ к обычной воде",
+      "capability_ru": "Получить доступ к воде как к ресурсу лагеря; пригодность для питья и промышленная очистка проверяются отдельными задачами.",
+      "epoch": 0,
+      "semantic_role": "SOURCE",
+      "implementation": "FLUID_TAG",
+      "tag_id": "industrial_frontier:materials/water",
+      "values": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+      ],
+      "excluded": [
+        {
+          "value": "#forge:water",
+          "reason_ru": "До проверки содержимого общего тега квест использует узкий pack-owned список и не смешивает воду с технологическими растворами."
+        }
+      ],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/fluids/materials/water.json"
+      ],
+      "runtime_gate": "USER_FLUID_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p4/agricultural_fertilizer",
+      "title_ru": "Удобрение для автоматизированного земледелия",
+      "capability_ru": "Передать химическое удобрение GTCEu в систему питания почвы Agricultural Enhancements без отдельного дублирующего рецепта.",
+      "epoch": 4,
+      "semantic_role": "PRODUCT",
+      "implementation": "ITEM_TAG",
+      "tag_id": "forge:fertilizer",
+      "values": [
+        "gtceu:fertilizer"
+      ],
+      "excluded": [
+        {
+          "value": "minecraft:bone_meal",
+          "reason_ru": "Костная мука остаётся ранним локальным удобрением, но не подтверждает работу городской азотно-фосфатной химии."
+        }
+      ],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/forge/tags/items/fertilizer.json",
+        "mods/agriculturalenhancements-FORGE-1.20.1-0.3.3.jar!data/agriculturalenhancements/recipes/fert_tag_fertilizer.json",
+        "kubejs/exported/gtceu_item_census.json"
+      ],
+      "runtime_gate": "USER_RECIPE_AND_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p1/mechanical_power_source",
+      "title_ru": "Источник вращения первой фабрики",
+      "capability_ru": "Выбрать водяной или ветряной привод Create и получить вращение до первой обязательной механической обработки.",
+      "epoch": 1,
+      "semantic_role": "UTILITY",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:quest_components/mechanical_power_source",
+      "values": [
+        "create:water_wheel",
+        "create:large_water_wheel",
+        "create:windmill_bearing"
+      ],
+      "excluded": [
+        {
+          "value": "create:creative_motor",
+          "reason_ru": "Творческий двигатель не является достижимым производственным маршрутом и полностью отменяет урок нагрузки."
+        }
+      ],
+      "evidence_refs": [
+        "mods/create-1.20.1-6.0.8.jar",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#QR4"
+      ],
+      "runtime_gate": "USER_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p2/coking_feedstock",
+      "title_ru": "Угольное сырьё для коксовой линии",
+      "capability_ru": "Получить обычный уголь или сырой уголь GTCEu, который можно подготовить к коксованию; древесный уголь остаётся топливом, но не закрывает этот технологический маршрут.",
+      "epoch": 2,
+      "semantic_role": "SOURCE",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:quest_sources/coking_feedstock",
+      "values": [
+        "minecraft:coal",
+        "gtceu:raw_coal"
+      ],
+      "excluded": [
+        {
+          "value": "minecraft:charcoal",
+          "reason_ru": "Древесный уголь пригоден как раннее топливо, но не подтверждает освоение месторождения и сырьевой ветви кокса."
+        },
+        {
+          "value": "gtceu:coke_gem",
+          "reason_ru": "Кокс является продуктом следующего процесса, а не исходным сырьём."
+        }
+      ],
+      "evidence_refs": [
+        "kubejs/exported/gtceu_item_census.json",
+        "config/gtceu.yaml"
+      ],
+      "runtime_gate": "USER_RECIPE_AND_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    }
+  ]
+}

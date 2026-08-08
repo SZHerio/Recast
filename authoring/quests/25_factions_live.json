@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.factions",
+  "engine_id": "2025000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/25_factions_live.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.factions.intro",
+      "engine_id": "3025000000000001",
+      "purpose": "Показывает фракции как живую систему состояния, а не текстовую побочную главу.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.factions.bases",
+      "engine_id": "3025000000000002",
+      "purpose": "Показывает, что базы фракций существуют в мире и требуют реального подхода.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.factions.talks",
+      "engine_id": "3025000000000003",
+      "purpose": "Показывает условия диалогов как способ, которым система открывает или скрывает выбор.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.factions.reputation",
+      "engine_id": "3025000000000004",
+      "purpose": "Объясняет репутацию через названные причины и явные последствия.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.factions.treaties",
+      "engine_id": "3025000000000005",
+      "purpose": "Объясняет договоры как реальные обязательства с провалом, а не как лор.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.factions.operations",
+      "engine_id": "3025000000000006",
+      "purpose": "Показывает ход операции: предупреждение, окно переговоров и действие отряда.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

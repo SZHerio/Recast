@@ -1,0 +1,23 @@
+{
+  "name": "Виджет «Условие: сущности»",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_entity_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Это виджет $(l:programming/conditions)условия/$.$(p)Виджет $(thing)Условие: сущности/$ подсчитывает сущности в подключённом виджете $(l:programming/area)Область/$. Их можно отбирать необязательным виджетом $(l:programming/text)Текст/$, используемым как $(l:base_concepts/entity_filter)Фильтр существ/$."
+    },
+    {
+      "type": "text",
+      "text": "Учтите: все подключённые к этому виджету виджеты $(l:programming/area)Область/$ должны иметь форму $(thing)Параллелепипед/$ — другие формы напрямую не поддерживаются. Однако более сложные области можно составлять с помощью белого и чёрного списков."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_entity_piece.png"
+      ],
+      "text": "$(italic)Виджет «Условие: сущности»/$"
+    }
+  ]
+}

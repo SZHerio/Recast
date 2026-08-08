@@ -3,7 +3,7 @@
   "file": "16_p6_nuclear",
   "chapter_id": "2016000000000001",
   "group_id": "1000000000000004",
-  "icon": "nuclearcraft:fission_reactor_controller",
+  "icon": "industrial_frontier:textures/gui/icons/epochs/p6.png",
   "order": 7,
   "tag": "mainline",
   "optional": false,
@@ -109,7 +109,7 @@
       }
     },
     {
-      "slug": "purification", "x": 12, "y": -4.5, "icon": "minecraft:bucket", "deps": ["alloys"],
+      "slug": "purification", "x": 12, "y": -4.5, "icon": "industrial_frontier:textures/gui/icons/process/gtceu/uranium_preparation.png", "deps": ["alloys"],
       "ru": {
         "title": "Очистка и конверсия",
         "subtitle": "Руда — ещё не топливо",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "slug": "city_plant", "x": 24, "y": 1.5, "icon": "minecraft:writable_book", "deps": ["turbine", "isotopes"],
+      "slug": "city_plant", "x": 24, "y": 1.5, "icon": "industrial_frontier:textures/gui/icons/process/future/civil_nuclear_cycle.png", "deps": ["turbine", "isotopes"],
       "ru": {
         "title": "Городская АЭС",
         "subtitle": "Междоменный мегапроект",

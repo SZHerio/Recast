@@ -4157,7 +4157,7 @@
       "to_ref": "industrial_frontier:process/future/strategic_materials",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=environment_resistant_coating/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=environment_resistant_coating/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -4172,7 +4172,7 @@
       "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=environment_resistant_coating/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=environment_resistant_coating/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -4187,7 +4187,7 @@
       "to_ref": "industrial_frontier:process/future/strategic_materials",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=interplanetary_composite/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=interplanetary_composite/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -4202,7 +4202,7 @@
       "to_ref": "industrial_frontier:process/future/strategic_materials",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=strategic_energetic_composition/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=strategic_energetic_composition/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -4217,7 +4217,7 @@
       "to_ref": "industrial_frontier:process/gtceu/industrial_chemistry",
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
-      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/planned_substances?substance_id=strategic_energetic_composition/recipe_policy_ru",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=strategic_energetic_composition/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],
@@ -4562,6 +4562,62 @@
       "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
       "status": "GATED_BINDING",
       "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=aerospace_composite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0263",
+      "from_ref": "industrial_frontier:substance/environment_resistant_coating",
+      "to_ref": "industrial_frontier:process/future/rocket_and_planetary_logistics",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=environment_resistant_coating/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0264",
+      "from_ref": "industrial_frontier:substance/interplanetary_composite",
+      "to_ref": "industrial_frontier:process/gtceu/precision_metallurgy",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=interplanetary_composite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0265",
+      "from_ref": "industrial_frontier:substance/interplanetary_composite",
+      "to_ref": "industrial_frontier:process/future/rocket_and_planetary_logistics",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=interplanetary_composite/recipe_policy_ru",
+      "evidence_refs": [
+        "industrial_frontier:evidence/progression/dependency_dag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/progression/dependency_static"
+      ]
+    },
+    {
+      "dependency_id": "industrial_frontier:dependency/e0266",
+      "from_ref": "industrial_frontier:substance/strategic_energetic_composition",
+      "to_ref": "industrial_frontier:process/future/civil_nuclear_fuel_cycle",
+      "relation": "SUBSTANCE_GOVERNED_BY_PROCESS",
+      "status": "GATED_BINDING",
+      "recipe_policy_pointer": "docs/registries/m2_substance_passports.json#/passports?substance_id=strategic_energetic_composition/recipe_policy_ru",
       "evidence_refs": [
         "industrial_frontier:evidence/progression/dependency_dag"
       ],

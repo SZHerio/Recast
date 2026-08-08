@@ -1,0 +1,22 @@
+{
+  "name": "Зарядный модуль",
+  "icon": "pneumaticcraft:charging_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Зарядный модуль заряжает или разряжает работающие на давлении предметы в инвентаре, на который направлен. Это может быть, например, сундук с пневматическими инструментами или $(l:components/air_canister)воздушными баллонами/$ для передачи воздуха на большое расстояние — в том числе через эндер-хранилище.$(p)Если направить модуль на $(l:machines/aerial_interface)воздушный интерфейс/$, он сможет заряжать предметы прямо в инвентаре игрока."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:module_expansion_card",
+      "text": "$(l:tubes/module_expansion_card)Плата расширения модуля/$ увеличивает скорость зарядного модуля с 10 мл/тик до 100 мл/тик для каждого предмета."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание зарядного модуля",
+      "recipe": "pneumaticcraft:charging_module"
+    }
+  ]
+}

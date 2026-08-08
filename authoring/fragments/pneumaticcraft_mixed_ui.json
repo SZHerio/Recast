@@ -1,0 +1,16 @@
+{
+  "pneumaticcraft.gui.entityFilter.helpText": "§a§nФильтр сущностей\n\n§e@player§f: игроки\n§e@mob§f: враждебные мобы\n§e@animal§f: животные\n§e@animal(age=adult)§f: взрослые животные\n§e@animal(age=baby)§f: детёныши\n§e@animal(breedable=yes)§f: животные, готовые к размножению\n§e@player(holding=minecraft:stick)§f: игроки с палкой в руке\n§e@player(holding!=minecraft:stick)§f: игроки без палки в руке\n§e@minecart§f: вагонетки\n§e@boat§f: лодки\n§e@living§f: все живые существа\n§e@item§f: выброшенные предметы\n§e@drone§f: дроны\n§e@orb§f: сферы опыта\n§e@mob(mod=minecraft)§f: только мобы из Minecraft\n§eCreeper§f: криперы\n§e’MineMaarten’§f: существо с именем MineMaarten\n§ec*§f: любое существо, чьё имя начинается с «C» (например, Creeper или Cow)\n§e*pig*§f: любое существо, в имени которого есть «pig» (например, Pig или Zombified Piglin)\n§ecreeper;zombie§f: криперы или зомби\n§e!@player§f: все, кроме игроков\n§e!creeper;zombie§f: все, кроме криперов и зомби\n\n• Регистр букв не учитывается\n• Знак «!» в начале фильтра меняет условие на противоположное\n• Несколько вариантов в одном фильтре разделяются точкой с запятой «;» и работают по условию «ИЛИ»",
+  "pneumaticcraft.gui.tab.info.item.armor.chest.dispenserUpgrade": "§0Если установлено хотя бы одно улучшение раздатчика, вы можете запускать предметы и блоки из второй руки: нажмите и отпустите клавишу запуска (по умолчанию Ctrl + C).\n\n• Некоторые предметы и блоки обрабатываются особым образом и выпускаются как сущности — примерно как из раздатчика.\n• Остальные предметы запускаются как выброшенные предметы.\n• Остальные блоки превращаются в падающие блоки и при столкновении пытаются установиться в мире.\n\nЧтобы увеличить дальность запуска, установите до четырёх улучшений раздатчика.",
+  "pneumaticcraft.igwtab.entry.cc_integration": "Интеграция с ComputerCraft и OpenComputers",
+  "block.pneumaticcraft.thermopneumatic_processing_plant": "Термопневматическая перерабатывающая установка",
+  "item.pneumaticcraft.sourdough": "Тесто на закваске",
+  "item.pneumaticcraft.sourdough_bread": "Хлеб на закваске",
+  "item.pneumaticcraft.bandage": "Бинт",
+  "entity.pneumaticcraft.heat_frame": "Тепловая рамка",
+  "item.pneumaticcraft.heat_frame": "Тепловая рамка",
+  "entity.pneumaticcraft.transfer_gadget": "Передающий модуль",
+  "item.pneumaticcraft.transfer_gadget": "Передающий модуль",
+  "block.pneumaticcraft.pressurized_spawner": "Пневматический спаунер",
+  "item.pneumaticcraft.raw_salmon_tempura": "Сырая темпура с лососем",
+  "item.pneumaticcraft.salmon_tempura": "Темпура с лососем"
+}

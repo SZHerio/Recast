@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.marathon",
+  "engine_id": "2073000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/73_marathon_choices.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.marathon.intro",
+      "engine_id": "3073000000000001",
+      "purpose": "Справочник для сравнения, а не линия прогресса",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.marathon.energy",
+      "engine_id": "3073000000000002",
+      "purpose": "Пар, дизель, газ или изотоп",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.marathon.logistics",
+      "engine_id": "3073000000000003",
+      "purpose": "Поезда, баржи, трубы или сеть",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.marathon.nuclear",
+      "engine_id": "3073000000000004",
+      "purpose": "Гражданский или канальный тип",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.marathon.space",
+      "engine_id": "3073000000000005",
+      "purpose": "Готовый мотор или свой двигатель",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.marathon.finale",
+      "engine_id": "3073000000000006",
+      "purpose": "Сфера или колония",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

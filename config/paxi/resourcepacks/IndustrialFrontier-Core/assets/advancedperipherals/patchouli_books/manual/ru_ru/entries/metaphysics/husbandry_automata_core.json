@@ -1,0 +1,20 @@
+{
+  "name": "Ядро животноводческого автомата",
+  "icon": "advancedperipherals:husbandry_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "advancement": "advancedperipherals:weak_automata_core",
+  "pages": [
+    {
+      "type": "spotlight",
+      "title": "Ядро животноводческого автомата",
+      "item": "advancedperipherals:husbandry_automata_core",
+      "text": "Поглотив 3 кур, 3 коров и 3 овец, ядро слабого автомата превратится в ядро животноводческого автомата.$(p)Эта душа не только сильнее исходной, но и, похоже, умеет взаимодействовать с животными."
+    },
+    {
+      "type": "link",
+      "text": "Помимо возможностей ядра слабого автомата, это ядро позволяет взаимодействовать с животными и даже переносить их внутри себя.$(p)Будьте внимательны: если черепаху сломать, находящееся внутри животное исчезнет.",
+      "url": "https://docs.intelligence-modding.de/metaphysics/husbandry_automata/",
+      "link_text": "Документация API"
+    }
+  ]
+}

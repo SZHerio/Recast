@@ -4,12 +4,12 @@
   "engine_id": "2090000000000001",
   "compiled_path": "config/ftbquests/quests/chapters/90_help.snbt",
   "quests": [
-    { "alias": "if.quest.help.index", "engine_id": "3090000000000001", "purpose": "Route a problem to the correct diagnostic layer.", "teaching_sections": ["triage", "safe_order"], "grind_class": "NONE" },
-    { "alias": "if.quest.help.jei", "engine_id": "3090000000000002", "purpose": "Diagnose missing JEI recipes.", "teaching_sections": ["search", "process_category", "log"], "grind_class": "NONE" },
-    { "alias": "if.quest.help.not_counted", "engine_id": "3090000000000003", "purpose": "Diagnose quest detection without hiding the defect.", "teaching_sections": ["task_semantics", "refresh", "evidence"], "grind_class": "NONE" },
-    { "alias": "if.quest.help.team", "engine_id": "3090000000000004", "purpose": "Diagnose shared progress and team membership.", "teaching_sections": ["membership", "report_fields"], "grind_class": "NONE" },
-    { "alias": "if.quest.help.latest_log", "engine_id": "3090000000000005", "purpose": "Collect the correct complete log safely.", "teaching_sections": ["location", "context", "privacy"], "grind_class": "NONE" },
-    { "alias": "if.quest.help.report", "engine_id": "3090000000000006", "purpose": "Produce a reproducible issue report.", "teaching_sections": ["required_evidence", "example"], "grind_class": "NONE" },
-    { "alias": "if.quest.help.recovery", "engine_id": "3090000000000007", "purpose": "Define a narrow auditable administrative recovery procedure.", "teaching_sections": ["precondition", "least_change", "audit_record"], "grind_class": "NONE" }
+    { "alias": "if.quest.help.index", "engine_id": "3090000000000001", "purpose": "Перенаправляет проблему в нужный диагностический слой.", "teaching_sections": ["triage", "safe_order"], "grind_class": "NONE" },
+    { "alias": "if.quest.help.jei", "engine_id": "3090000000000002", "purpose": "Помогает найти, почему не видно рецепты JEI.", "teaching_sections": ["search", "process_category", "log"], "grind_class": "NONE" },
+    { "alias": "if.quest.help.not_counted", "engine_id": "3090000000000003", "purpose": "Разбирает, почему квест не засчитывается, не пряча проблему.", "teaching_sections": ["task_semantics", "refresh", "evidence"], "grind_class": "NONE" },
+    { "alias": "if.quest.help.team", "engine_id": "3090000000000004", "purpose": "Разбирает общий прогресс и состав команды.", "teaching_sections": ["membership", "report_fields"], "grind_class": "NONE" },
+    { "alias": "if.quest.help.latest_log", "engine_id": "3090000000000005", "purpose": "Безопасно собирает нужный полный журнал.", "teaching_sections": ["location", "context", "privacy"], "grind_class": "NONE" },
+    { "alias": "if.quest.help.report", "engine_id": "3090000000000006", "purpose": "Составляет воспроизводимый отчёт об ошибке.", "teaching_sections": ["required_evidence", "example"], "grind_class": "NONE" },
+    { "alias": "if.quest.help.recovery", "engine_id": "3090000000000007", "purpose": "Задаёт узкую и проверяемую процедуру админского восстановления.", "teaching_sections": ["precondition", "least_change", "audit_record"], "grind_class": "NONE" }
   ]
 }

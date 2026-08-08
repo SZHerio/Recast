@@ -8,147 +8,147 @@
     {
       "alias": "if.quest.p7.intro",
       "engine_id": "3017000000000001",
-      "purpose": "Two programmes you cannot run at once",
+      "purpose": "Вводит две программы, которые нужно вести отдельно.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.hbm_entry",
       "engine_id": "3017000000000002",
-      "purpose": "An assembly machine the mod never had",
+      "purpose": "Чётко объясняет вход в HBM-путь.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.protected_zone",
       "engine_id": "3017000000000003",
-      "purpose": "Where such a thing may stand at all",
+      "purpose": "Показывает, где стратегическая инфраструктура вообще может стоять.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.rbmk",
       "engine_id": "3017000000000004",
-      "purpose": "A reactor that runs away faster than you can walk",
+      "purpose": "Объясняет, почему этому типу реактора нужны жёсткие ограничения.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.purex",
       "engine_id": "3017000000000005",
-      "purpose": "Nitric acid, kerosene and what is left over",
+      "purpose": "Объясняет цепочку химического разделения простыми словами.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.radiation_model",
       "engine_id": "3017000000000006",
-      "purpose": "Two dose models are not depth, they are a fault",
+      "purpose": "Показывает, что две модели дозы — это дефект, а не глубина.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.strategic_charge",
       "engine_id": "3017000000000007",
-      "purpose": "The one thing that exists nowhere else",
+      "purpose": "Отмечает уникальный стратегический заряд главы.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.domain_links",
       "engine_id": "3017000000000008",
-      "purpose": "Why this is not a separate island",
+      "purpose": "Связывает этот домен с остальной сборкой.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.clearances",
       "engine_id": "3017000000000009",
-      "purpose": "Who is let onto the site",
+      "purpose": "Показывает, кого пускают на объект и почему.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.counterintel",
       "engine_id": "3017000000000010",
-      "purpose": "What they take is knowledge, not cargo",
+      "purpose": "Объясняет контрразведку как контроль знаний, а не груза.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.rocket_materials",
       "engine_id": "3017000000000011",
-      "purpose": "Steel does not help here",
+      "purpose": "Показывает, что обычной стали для ракет мало.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.rocket_fuel",
       "engine_id": "3017000000000012",
-      "purpose": "Two tanks, not one",
+      "purpose": "Учит, что топливо здесь требует двух баков.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.rocket_electronics",
       "engine_id": "3017000000000013",
-      "purpose": "A destination is data",
+      "purpose": "Показывает, что цель запуска — это ещё и задача данных.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.spaceport",
       "engine_id": "3017000000000014",
-      "purpose": "A city megaproject, not a pad",
+      "purpose": "Показывает космопорт как городской мегапроект, а не просто площадку.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.suit_oxygen",
       "engine_id": "3017000000000015",
-      "purpose": "One gas, two jobs",
+      "purpose": "Показывает кислород и как жизнеобеспечение, и как инженерный ресурс.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.first_launch",
       "engine_id": "3017000000000016",
-      "purpose": "Six checks, none of them skippable",
+      "purpose": "Делает первый запуск полным чек-листом.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.sealing_base",
       "engine_id": "3017000000000017",
-      "purpose": "Sealing is checked along the boundary",
+      "purpose": "Показывает герметизацию как проверку по границе.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.return_flow",
       "engine_id": "3017000000000018",
-      "purpose": "While it is manual, the planet is not settled",
+      "purpose": "Показывает, что ручной возврат ещё не делает планету освоенной.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.planetary",
       "engine_id": "3017000000000019",
-      "purpose": "And what each one costs",
+      "purpose": "Суммирует цену каждого планетарного шага.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p7.deep_path",
       "engine_id": "3017000000000020",
-      "purpose": "Design the engine yourself",
+      "purpose": "Открывает путь тем, кто хочет сам собрать движок.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p7.emergency",
       "engine_id": "3017000000000021",
-      "purpose": "Three failures that cost a life",
+      "purpose": "Показывает три ошибки, которые могут стоить жизни.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

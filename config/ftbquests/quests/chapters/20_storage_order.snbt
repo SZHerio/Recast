@@ -1,0 +1,188 @@
+{
+	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
+	default_quest_shape: "square"
+	filename: "20_storage_order"
+	group: "1000000000000003"
+	icon: "toms_storage:ts.storage_terminal"
+	id: "2020000000000001"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			hide_until_deps_complete: true
+			dependencies: ["3012000000000009"]
+			description: [
+				"{industrial_frontier.quest.storage.intro.desc.1}"
+				"{industrial_frontier.quest.storage.intro.desc.2}"
+				"{industrial_frontier.quest.storage.intro.desc.3}"
+			]
+			icon: "minecraft:chest"
+			id: "3020000000000001"
+			optional: true
+			subtitle: "{industrial_frontier.quest.storage.intro.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4020000000000001"
+				title: "{industrial_frontier.quest.storage.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.storage.intro.title}"
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["3020000000000001"]
+			description: [
+				"{industrial_frontier.quest.storage.connector.desc.1}"
+				"{industrial_frontier.quest.storage.connector.desc.2}"
+				"{industrial_frontier.quest.storage.connector.desc.3}"
+			]
+			icon: "toms_storage:ts.inventory_connector"
+			id: "3020000000000002"
+			optional: true
+			subtitle: "{industrial_frontier.quest.storage.connector.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4020000000000002"
+				item: {
+					Count: 1
+					id: "toms_storage:ts.inventory_connector"
+				}
+				title: "{industrial_frontier.quest.storage.connector.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.storage.connector.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 0d
+		}
+		{
+			dependencies: ["3020000000000002"]
+			description: [
+				"{industrial_frontier.quest.storage.terminal.desc.1}"
+				"{industrial_frontier.quest.storage.terminal.desc.2}"
+				"{industrial_frontier.quest.storage.terminal.desc.3}"
+			]
+			icon: "toms_storage:ts.storage_terminal"
+			id: "3020000000000003"
+			optional: true
+			subtitle: "{industrial_frontier.quest.storage.terminal.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4020000000000003"
+				item: {
+					Count: 1
+					id: "toms_storage:ts.storage_terminal"
+				}
+				title: "{industrial_frontier.quest.storage.terminal.task}"
+				type: "item"
+			}]
+			title: "{industrial_frontier.quest.storage.terminal.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 0d
+		}
+		{
+			dependencies: ["3020000000000003"]
+			description: [
+				"{industrial_frontier.quest.storage.cables.desc.1}"
+				"{industrial_frontier.quest.storage.cables.desc.2}"
+				"{industrial_frontier.quest.storage.cables.desc.3}"
+			]
+			icon: "toms_storage:ts.inventory_cable"
+			id: "3020000000000004"
+			optional: true
+			subtitle: "{industrial_frontier.quest.storage.cables.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4020000000000004"
+				title: "{industrial_frontier.quest.storage.cables.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.storage.cables.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: -1d
+		}
+		{
+			dependencies: ["3020000000000003"]
+			description: [
+				"{industrial_frontier.quest.storage.crafting.desc.1}"
+				"{industrial_frontier.quest.storage.crafting.desc.2}"
+				"{industrial_frontier.quest.storage.crafting.desc.3}"
+			]
+			icon: "toms_storage:ts.crafting_terminal"
+			id: "3020000000000005"
+			optional: true
+			subtitle: "{industrial_frontier.quest.storage.crafting.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4020000000000005"
+				title: "{industrial_frontier.quest.storage.crafting.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.storage.crafting.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"3020000000000004"
+				"3020000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.storage.level.desc.1}"
+				"{industrial_frontier.quest.storage.level.desc.2}"
+				"{industrial_frontier.quest.storage.level.desc.3}"
+			]
+			icon: "toms_storage:ts.level_emitter"
+			id: "3020000000000006"
+			optional: true
+			subtitle: "{industrial_frontier.quest.storage.level.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4020000000000006"
+				title: "{industrial_frontier.quest.storage.level.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.storage.level.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 0d
+		}
+		{
+			dependencies: ["3020000000000006"]
+			description: [
+				"{industrial_frontier.quest.storage.handover.desc.1}"
+				"{industrial_frontier.quest.storage.handover.desc.2}"
+				"{industrial_frontier.quest.storage.handover.desc.3}"
+			]
+			icon: "ae2:controller"
+			id: "3020000000000007"
+			optional: true
+			subtitle: "{industrial_frontier.quest.storage.handover.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4020000000000007"
+				title: "{industrial_frontier.quest.storage.handover.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.storage.handover.title}"
+			shape: "diamond"
+			size: 1.5d
+			x: 10d
+			y: 0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.storage.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.storage.title}"
+}

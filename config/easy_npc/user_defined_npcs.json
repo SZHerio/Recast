@@ -2,19 +2,19 @@
   "user_defined_npcs": [
     {
       "id": "example_villager",
-      "name": "Villager NPC",
+      "name": "NPC-житель",
       "base_entity_type": "minecraft:villager",
       "width": 0.6,
       "height": 1.95,
-      "description": "An example NPC based on villager"
+      "description": "Пример NPC на основе жителя"
     },
     {
       "id": "example_zombie",
-      "name": "Zombie NPC",
+      "name": "NPC-зомби",
       "base_entity_type": "minecraft:zombie",
       "width": 0.6,
       "height": 1.95,
-      "description": "An example NPC based on zombie"
+      "description": "Пример NPC на основе зомби"
     }
   ]
 }

@@ -1,0 +1,1065 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.storage",
+    "engine_id": "2020000000000001",
+    "filename": "20_storage_order",
+    "group": {
+      "alias": "if.group.v2.systems",
+      "engine_id": "1000000000000020",
+      "title_ru": "Производственные системы"
+    },
+    "order": 20,
+    "icon": "toms_storage:ts.storage_terminal",
+    "epoch": "SYSTEMS",
+    "tags": [
+      "storage",
+      "logistics",
+      "toms_storage"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "Хранение и порядок",
+      "subtitle": "От связанных сундуков до склада, который показывает запасы, помогает собирать предметы и подаёт сигнал производству",
+      "description": [
+        "Склад — часть фабрики. Если сырьё нельзя быстро найти, линия простаивает так же, как при нехватке энергии или транспорта.",
+        "Ветка начинается после стали, а затем развивается вместе с кампанией. Сначала вы объедините обычные контейнеры, позже добавите удалённые участки, сборку из запасов и контроль уровня."
+      ]
+    },
+    "editorial": {
+      "voice": "Практичный заведующий складом, который объясняет связь между планировкой, поиском и непрерывной работой фабрики.",
+      "tone_rules": [
+        "Каждый новый блок объяснять через конкретную складскую проблему.",
+        "Всегда отделять хранение, ручную сборку и автоматическое производство.",
+        "После настройки давать простой способ проверить границы сети."
+      ],
+      "avoid": [
+        "Не выдавать удобный интерфейс за автоматическую логистику.",
+        "Не требовать дорогую цифровую сеть, пока обычные контейнеры ещё справляются.",
+        "Не просить строить декоративный склад без рабочего доступа и понятных зон."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.storage.intro",
+      "engine_id": "3020000000000001",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:chest",
+      "tags": [
+        "storage",
+        "planning"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.commissioning",
+            "reason": "Стальной складской инструмент появляется после освоения паровой металлургии.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.intro.read",
+          "engine_id": "4020000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте три правила рабочего склада.",
+            "help": "Здесь галочка подтверждает только знакомство с устройством ветки."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Склад — это тоже машина",
+        "lead_ru": "Десятки сундуков перестают быть дешёвыми, когда поиск одной детали останавливает всю смену.",
+        "purpose_ru": "Рабочий склад выполняет три задачи: принимает поток без затора, показывает остатки и быстро отдаёт нужное. Автоматическая сборка появится позднее; сейчас цель проще — перестать обходить контейнеры вручную.",
+        "steps_ru": [
+          "Выделите рядом несколько контейнеров для сырья, деталей и готовой продукции.",
+          "Оставьте место для связующего блока и терминала со стороны рабочего прохода.",
+          "Не смешивайте вход производственной линии с её выходом в одном неразмеченном контейнере."
+        ],
+        "success_ru": "У склада есть понятные зоны, свободный проход и место для первой общей точки доступа.",
+        "diagnostics_ru": [
+          "Если один сундук принимает всё подряд, сначала разделите хотя бы сырьё и готовые детали.",
+          "Если к контейнерам нельзя подойти без обхода машин, перенесите точку доступа до расширения склада."
+        ],
+        "next_ru": "Следующий шаг объединит соседние контейнеры, не заменяя их новым дорогим хранилищем.",
+        "task_text_ru": "Разберитесь, какие задачи решает рабочий склад."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вводный узел связывает склад с простоем фабрики и не требует преждевременный предмет."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены естественность текста, связь со сталью P2 и подготовка места для следующих двух блоков."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "toms_storage",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Планирование не требует создавать лишние контейнеры ради отметки."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.connector",
+      "engine_id": "3020000000000002",
+      "epoch": "SYSTEMS",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "toms_storage:ts.inventory_connector",
+      "tags": [
+        "storage",
+        "network",
+        "toms_storage"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.intro",
+            "reason": "Связующий блок ставится в заранее выбранную складскую зону.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.connector.item",
+          "engine_id": "4020000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один связующий блок инвентарей.",
+            "help": "Блок должен остаться у вас для сборки учебного склада."
+          },
+          "item": {
+            "id": "toms_storage:ts.inventory_connector",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.storage.connector.place",
+          "engine_id": "4A20000000000002",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите связующий блок рядом с контейнерами.",
+            "help": "Хотя бы один сундук должен касаться блока или непрерывной цепочки подключённых контейнеров."
+          },
+          "place": {
+            "block": "toms_storage:ts.inventory_connector",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Один учёт для нескольких сундуков",
+        "lead_ru": "Связующий блок не переносит предметы: он даёт одной системе доступ к соседним инвентарям.",
+        "purpose_ru": "Контейнеры остаются обычными и сохраняют свою вместимость. В сеть входит непрерывная группа блоков, которая касается связующего блока; любой разрыв исключает всё, что лежит за ним.",
+        "steps_ru": [
+          "Изготовьте связующий блок инвентарей и поставьте его у края складской группы.",
+          "Разместите рядом два или три обычных контейнера так, чтобы между ними не было разрыва.",
+          "Положите разные предметы в крайние контейнеры: это поможет проверить сеть через терминал."
+        ],
+        "success_ru": "Связующий блок установлен, а все учебные контейнеры образуют одну непрерывную группу.",
+        "diagnostics_ru": [
+          "Если дальний сундук позже не появится в списке, проверьте каждый контакт от него до связующего блока.",
+          "Если блок не удаётся изготовить, сверяйте рецепт в JEI: сборка намеренно требует материалов стальной эпохи."
+        ],
+        "next_ru": "Теперь нужен терминал, который покажет объединённые запасы одним списком.",
+        "task_text_ru": "Изготовьте и установите связующий блок инвентарей."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Предмет и установка проверяются отдельно; текст не приписывает блоку транспортировку."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены точный ID, модель непрерывного подключения и соответствие двух действий задачам."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.inventory_connector",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.inventory_connector.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Для обучения достаточно одного блока, который сразу остаётся частью полезного склада."
+      },
+      "layout": {
+        "x": 3,
+        "y": 0,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.terminal",
+      "engine_id": "3020000000000003",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "toms_storage:ts.storage_terminal",
+      "tags": [
+        "storage",
+        "terminal",
+        "toms_storage"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.connector",
+            "reason": "Терминалу нужна уже собранная группа доступных инвентарей.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.terminal.item",
+          "engine_id": "4020000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите терминал хранения.",
+            "help": "Терминал является точкой доступа и не заменяет сами контейнеры."
+          },
+          "item": {
+            "id": "toms_storage:ts.storage_terminal",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.storage.terminal.use",
+          "engine_id": "4A20000000000003",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте установленный терминал хранения.",
+            "help": "Если окно пусто, сначала проверьте связь терминала со связующим блоком."
+          },
+          "use": {
+            "block": "toms_storage:ts.storage_terminal",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Весь склад одним списком",
+        "lead_ru": "Терминал заменяет перебор сундуков поиском, но ничего не производит и не переносит сам.",
+        "purpose_ru": "Поставленный рядом с сетью терминал показывает содержимое подключённых контейнеров. Через него можно забрать или положить предмет, не открывая каждый сундук отдельно.",
+        "steps_ru": [
+          "Изготовьте терминал хранения и установите его в рабочем проходе рядом с подключённой сетью.",
+          "Откройте терминал и найдите предметы, заранее разложенные по двум разным контейнерам.",
+          "Заберите один предмет через общий список, затем верните его обратно."
+        ],
+        "success_ru": "Терминал показывает запасы из нескольких контейнеров, а поиск находит нужную учебную позицию.",
+        "diagnostics_ru": [
+          "Если виден только один контейнер, ищите разрыв между ним и остальной группой.",
+          "Если терминал открывается пустым, проверьте его положение относительно связующего блока и кабельной сети.",
+          "Если предмет не находится по полному названию, попробуйте короткую часть слова и очистите лишний фильтр."
+        ],
+        "next_ru": "После проверки общего списка склад можно разделить на помещения, не теряя единую точку доступа.",
+        "task_text_ru": "Получите терминал и откройте общий список склада."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Задачи подтверждают наличие терминала и первое взаимодействие, а текст ограничивает его роль поиском и ручным доступом."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены точный блок, естественная последовательность и отсутствие ложного обещания автоматизации."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.storage_terminal",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.storage_terminal.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один терминал сразу становится постоянной рабочей точкой склада."
+      },
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.cables",
+      "engine_id": "3020000000000004",
+      "epoch": "SYSTEMS",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "toms_storage:ts.inventory_cable",
+      "tags": [
+        "storage",
+        "cables",
+        "layout"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.terminal",
+            "reason": "Удалённый участок проверяется через уже работающий общий терминал.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.cables.item",
+          "engine_id": "4020000000000004",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите восемь кабелей инвентаря.",
+            "help": "Этого достаточно для короткого учебного ответвления между двумя зонами склада."
+          },
+          "item": {
+            "id": "toms_storage:ts.inventory_cable",
+            "count": 8,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.storage.cables.place",
+          "engine_id": "4A20000000000004",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите хотя бы один кабель инвентаря.",
+            "help": "Продолжите линию до удалённого контейнера и не оставляйте разрывов."
+          },
+          "place": {
+            "block": "toms_storage:ts.inventory_cable",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Удалённая зона склада",
+        "lead_ru": "Кабель позволяет убрать шумное или опасное сырьё из мастерской и сохранить общий поиск.",
+        "purpose_ru": "Кабель продолжает складскую сеть на расстоянии. На дальнем конце подключается отдельная группа контейнеров, поэтому планировка больше не обязана складывать руду, химию и рабочий стол в одну комнату.",
+        "steps_ru": [
+          "Изготовьте восемь кабелей и выберите короткий путь до отдельного контейнера.",
+          "Проложите непрерывную линию от основной сети к новой складской зоне.",
+          "Положите в удалённый контейнер заметный предмет и найдите его через прежний терминал."
+        ],
+        "success_ru": "Предмет из удалённой зоны виден в общем списке, а основная точка доступа осталась на рабочем месте.",
+        "diagnostics_ru": [
+          "Если удалённый предмет не виден, пройдите кабель от начала до конца и найдите разрыв или неверный соединитель.",
+          "Если сеть получилась слишком длинной, перенесите контейнер или поставьте промежуточный складской узел вместо бесконечной линии."
+        ],
+        "next_ru": "В P3 к этой же сети добавится терминал, который собирает предметы прямо из складских запасов.",
+        "task_text_ru": "Получите кабели и начните удалённое складское ответвление."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Количество ограничено коротким полезным ответвлением; реальная установка проверяется отдельно."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены точный ID кабеля, размер учебной партии и переход от единой комнаты к зональному складу."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.inventory_cable",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.inventory_cable.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 8,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "rationale_ru": "Восемь кабелей сразу уходят в короткое рабочее ответвление и не требуют запасать лишнюю стопку."
+      },
+      "layout": {
+        "x": 9,
+        "y": -2,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.crafting",
+      "engine_id": "3020000000000005",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "toms_storage:ts.crafting_terminal",
+      "tags": [
+        "storage",
+        "crafting",
+        "p3"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.terminal",
+            "reason": "Терминал сборки расширяет уже проверенный общий доступ к складу.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.commissioning",
+            "reason": "Сборка из большого общего запаса открывается после электрификации P3.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.crafting.item",
+          "engine_id": "4020000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите терминал сборки.",
+            "help": "Он берёт доступные ингредиенты из подключённых контейнеров, но не запускает рецепт сам."
+          },
+          "item": {
+            "id": "toms_storage:ts.crafting_terminal",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.storage.crafting.use",
+          "engine_id": "4A20000000000005",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте установленный терминал сборки.",
+            "help": "Проверьте, что в сетке доступны ингредиенты из подключённого склада."
+          },
+          "use": {
+            "block": "toms_storage:ts.crafting_terminal",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сборка из общих запасов",
+        "lead_ru": "Терминал сборки убирает перекладывание ингредиентов, но решение и нажатие всё ещё остаются за вами.",
+        "purpose_ru": "Этот терминал соединяет общий список склада с обычной сеткой изготовления. Он ускоряет повторяющуюся ручную сборку, но не хранит шаблоны и не выполняет заказ без участия игрока.",
+        "steps_ru": [
+          "Изготовьте терминал сборки и подключите его к существующей складской сети.",
+          "Положите ингредиенты простого рецепта в разные подключённые контейнеры.",
+          "Откройте терминал и соберите один полезный предмет, не перекладывая ингредиенты в свой инвентарь заранее."
+        ],
+        "success_ru": "Сетка сборки видит складские ингредиенты, а готовый предмет получен через терминал.",
+        "diagnostics_ru": [
+          "Если ингредиенты не видны, сначала найдите их через обычный терминал хранения.",
+          "Если часть рецепта отсутствует, проверьте удалённую зону и цепочку кабеля.",
+          "Если ожидалась автоматическая партия, помните: шаблоны и заказы появятся только в AE2."
+        ],
+        "next_ru": "Теперь склад можно использовать как источник для производства по уровню запасов.",
+        "task_text_ru": "Получите и откройте терминал сборки."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст последовательно отличает ручную сборку из запасов от будущего автокрафта AE2."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены эпоха открытия, точный ID, первое взаимодействие и граница возможностей терминала."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.crafting_terminal",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.crafting_terminal.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один терминал заменяет повторное перекладывание ингредиентов и остаётся рабочим блоком."
+      },
+      "layout": {
+        "x": 9,
+        "y": 2,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.level",
+      "engine_id": "3020000000000006",
+      "epoch": "SYSTEMS",
+      "role": "automation",
+      "requirement": "required",
+      "icon": "toms_storage:ts.level_emitter",
+      "tags": [
+        "storage",
+        "redstone",
+        "stock_control"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.cables",
+            "reason": "Контроль запаса должен видеть и основной, и удалённый участок склада.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.storage.crafting",
+            "reason": "Перед автоматическим сигналом игрок осваивает единый доступ к складским ингредиентам.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.level.item",
+          "engine_id": "4020000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один эмиттер уровня.",
+            "help": "Он сравнивает количество выбранного предмета с заданным порогом."
+          },
+          "item": {
+            "id": "toms_storage:ts.level_emitter",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.storage.level.place",
+          "engine_id": "4A20000000000006",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите эмиттер уровня у складской сети.",
+            "help": "Выберите недорогой расходник и порог, который легко проверить вручную."
+          },
+          "place": {
+            "block": "toms_storage:ts.level_emitter",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Производство по уровню запаса",
+        "lead_ru": "Эмиттер превращает количество на складе в сигнал: мало — линия работает, достаточно — останавливается.",
+        "purpose_ru": "Это первый контур производства по потребности. Он не создаёт предметы сам, а сообщает редстоуном, пересёк ли выбранный запас заданную границу.",
+        "steps_ru": [
+          "Изготовьте эмиттер уровня, подключите его к складской сети и выберите простой расходный предмет.",
+          "Задайте небольшой порог и выведите сигнал на лампу или безопасный вход производственного узла.",
+          "Уберите часть запаса ниже порога, затем верните предметы и сравните оба состояния сигнала."
+        ],
+        "success_ru": "Сигнал меняется при переходе через порог и может безопасно разрешать или останавливать производство.",
+        "diagnostics_ru": [
+          "Если сигнал не меняется, проверьте выбранный предмет, режим сравнения и видимость контейнера в терминале.",
+          "Если линия работает в обратную сторону, инвертируйте редстоун-сигнал один раз, а не меняйте два соседних условия.",
+          "Если машина часто включается и выключается, увеличьте запас или добавьте промежуточный буфер."
+        ],
+        "next_ru": "В P5 этот принцип станет частью регионального резерва, а AE2 добавит шаблоны и автоматические заказы.",
+        "task_text_ru": "Получите и установите эмиттер уровня."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Установка проверяется, а фактическое переключение описано как короткая пользовательская приёмка с безопасной лампой."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены причинность сигнала, безопасный учебный выход и переход к региональной логистике P5."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.level_emitter",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.level_emitter.json"
+          ]
+        },
+        {
+          "kind": "process",
+          "id": "stock-threshold-control",
+          "evidence": [
+            "authoring/quests/specs/20_storage_order.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один эмиттер и два изменения запаса полностью показывают принцип без повторяемого гринда."
+      },
+      "layout": {
+        "x": 12,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.handover",
+      "engine_id": "3020000000000007",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "ae2:controller",
+      "tags": [
+        "storage",
+        "ae2",
+        "architecture"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.level",
+            "reason": "Граница между системами понятна после освоения контроля обычного склада.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p5.ae2_storage",
+            "reason": "Сравнивать архитектуры имеет смысл после появления первого цифрового хранилища.",
+            "evidence": [
+              "authoring/questbook_v2/15_p5.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.handover.read",
+          "engine_id": "4020000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте схему разделения двух складов.",
+            "help": "Галочка отмечает архитектурную памятку; переносить все предметы ради неё не нужно."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Обычный склад и ME-сеть",
+        "lead_ru": "AE2 не делает прежний склад бесполезным: две системы выгодно обслуживают разные потоки.",
+        "purpose_ru": "Обычные контейнеры дёшевы, наглядны и хорошо подходят для массового сырья, топлива и временного мусора. ME-сеть сильна там, где нужны компактные ячейки, доставка машинам, шаблоны и автоматические заказы.",
+        "steps_ru": [
+          "Оставьте массовое сырьё и большие буферы в обычных контейнерах.",
+          "Перенесите в ME-сеть детали, которые участвуют в шаблонах и часто нужны разным производствам.",
+          "Связывайте системы через ограниченные входы и выходы, чтобы один случайный предмет не заполнил цифровое хранилище."
+        ],
+        "success_ru": "У каждой системы есть понятная роль, а дорогие ячейки не расходуются на бесконтрольный вал сырья.",
+        "diagnostics_ru": [
+          "Если ME-ячейки быстро заполняются, найдите массовый материал без отдельного внешнего буфера.",
+          "Если предмет постоянно приходится переносить вручную, решите, является ли он сырьём или участником автоматического заказа."
+        ],
+        "next_ru": "Вернитесь в P5 и продолжите настройку шаблонов, каналов и восстановления ME-сети.",
+        "task_text_ru": "Разберите роли обычного склада и ME-сети.",
+        "optional_note_ru": "Это архитектурная памятка; она не входит в ввод P5 в строй."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Сравнение дано после первого AE2-хранилища и не требует разрушать рабочий склад."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены роли систем, естественный переход назад в P5 и отсутствие обязательного массового переноса."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "toms_storage",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "ae2",
+          "evidence": [
+            "docs/registries/quest_content_coverage.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Архитектурная памятка предотвращает бессмысленный массовый перенос предметов."
+      },
+      "layout": {
+        "x": 15,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.5
+      }
+    }
+  ]
+}

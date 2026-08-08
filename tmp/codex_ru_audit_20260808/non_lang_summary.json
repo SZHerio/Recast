@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "root": "C:/Users/SZHerio/curseforge/minecraft/Instances/main1.20",
+  "rows": 430,
+  "status_counts": {
+    "missing_ru_file": 318,
+    "literal_english_metadata": 4,
+    "missing_ru_corpus": 100,
+    "english_or_broken_markup_in_ru": 2,
+    "english_in_ru": 6
+  },
+  "corpora": {
+    "Advanced Peripherals Patchouli": {
+      "rows": 26,
+      "ascii_word_tokens": 1620
+    },
+    "ComputerCraft ROM help": {
+      "rows": 99,
+      "ascii_word_tokens": 25025
+    },
+    "Immersive Engineering manual": {
+      "rows": 11,
+      "ascii_word_tokens": 2156
+    },
+    "Immersive Engineering manual residue": {
+      "rows": 2,
+      "ascii_word_tokens": 5
+    },
+    "Immersive Petroleum manual residue": {
+      "rows": 3,
+      "ascii_word_tokens": 16
+    },
+    "Lightman's Currency ComputerCraft help": {
+      "rows": 1,
+      "ascii_word_tokens": 148
+    },
+    "Lightman's Currency Patchouli": {
+      "rows": 17,
+      "ascii_word_tokens": 1523
+    },
+    "Little Logistics Patchouli": {
+      "rows": 32,
+      "ascii_word_tokens": 1349
+    },
+    "NuclearCraft Patchouli residue": {
+      "rows": 3,
+      "ascii_word_tokens": 9
+    },
+    "PneumaticCraft Patchouli": {
+      "rows": 236,
+      "ascii_word_tokens": 41704
+    }
+  },
+  "parse_errors": [],
+  "verified_covered_guides": {
+    "ae2_guideme": {
+      "english_pages": 119,
+      "russian_pages": 119,
+      "source": "Paxi"
+    },
+    "nuclearcraft_guideme": {
+      "english_pages": 52,
+      "russian_pages": 52,
+      "source": "mod JAR"
+    }
+  },
+  "notes": [
+    "The CSV retains whole visible fragments so future human translation has sentence and page context.",
+    "Mod and weapon names occurring inside prose are context markers and must remain unchanged during translation.",
+    "No generated Russian translations are included."
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.local/schemas/quest_rebuild_baseline.schema.json",
+  "title": "Industrial Frontier quest rebuild baseline",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_id",
+    "generated_from",
+    "expected_counts",
+    "content_snapshot",
+    "ru_authoring_policy",
+    "chapters",
+    "quests"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "registry_id": { "const": "industrial_frontier:quest_rebuild_baseline/qr0" },
+    "generated_from": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["compiled_chapters", "authoring_quests", "stable_ids", "design_registries"],
+      "properties": {
+        "compiled_chapters": { "const": "config/ftbquests/quests/chapters" },
+        "authoring_quests": { "const": "authoring/quests" },
+        "stable_ids": { "const": "docs/registries/stable_ids.json" },
+        "design_registries": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "expected_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chapters", "quests"],
+      "properties": {
+        "chapters": { "const": 24 },
+        "quests": { "const": 214 }
+      }
+    },
+    "content_snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["active_jars", "snapshot_kind"],
+      "properties": {
+        "active_jars": { "const": 133 },
+        "snapshot_kind": { "const": "HISTORICAL_PRE_QR2_DELTA" }
+      }
+    },
+    "ru_authoring_policy": { "$ref": "#/$defs/ruPolicy" },
+    "chapters": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": { "$ref": "#/$defs/chapter" }
+    },
+    "quests": {
+      "type": "array",
+      "minItems": 214,
+      "maxItems": 214,
+      "items": { "$ref": "#/$defs/quest" }
+    }
+  },
+  "$defs": {
+    "chapterEngineId": { "type": "string", "pattern": "^2[0-9A-F]{15}$" },
+    "questEngineId": { "type": "string", "pattern": "^3[0-9A-F]{15}$" },
+    "alias": { "type": "string", "pattern": "^if\\.(chapter|quest)\\.[a-z0-9_.]+$" },
+    "ruPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_language",
+        "human_authored_required",
+        "machine_translation_forbidden",
+        "placeholders_forbidden",
+        "style_requirement"
+      ],
+      "properties": {
+        "primary_language": { "const": "ru_ru" },
+        "human_authored_required": { "const": true },
+        "machine_translation_forbidden": { "const": true },
+        "placeholders_forbidden": { "const": true },
+        "style_requirement": { "type": "string", "minLength": 20 }
+      }
+    },
+    "ruCopy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_language",
+        "status",
+        "human_authoring_required",
+        "machine_translation_forbidden",
+        "placeholders_forbidden",
+        "editorial_checks",
+        "ru_ready"
+      ],
+      "properties": {
+        "primary_language": { "const": "ru_ru" },
+        "status": {
+          "enum": [
+            "EXISTING_COPY_REVIEW_REQUIRED",
+            "FULL_REAUTHOR_REQUIRED",
+            "REFERENCE_REWRITE_REQUIRED",
+            "APPROVED_HUMAN_COPY"
+          ]
+        },
+        "human_authoring_required": { "const": true },
+        "machine_translation_forbidden": { "const": true },
+        "placeholders_forbidden": { "const": true },
+        "editorial_checks": { "$ref": "#/$defs/editorialChecks" },
+        "ru_ready": { "type": "boolean" }
+      }
+    },
+    "editorialChecks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"],
+      "properties": {
+        "RU_PRIMARY_DRAFTED": { "type": "boolean" },
+        "RU_TECH_CHECKED": { "type": "boolean" },
+        "RU_STYLE_REVIEWED": { "type": "boolean" },
+        "RU_FLOW_REVIEWED": { "type": "boolean" }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chapter_file",
+        "chapter_alias",
+        "engine_id",
+        "authoring_optional",
+        "quest_count"
+      ],
+      "properties": {
+        "chapter_file": { "type": "string", "pattern": "^[0-9]{2}_[a-z0-9_]+$" },
+        "chapter_alias": { "$ref": "#/$defs/alias" },
+        "engine_id": { "$ref": "#/$defs/chapterEngineId" },
+        "authoring_optional": { "type": "boolean" },
+        "quest_count": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "defect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "severity", "detail"],
+      "properties": {
+        "code": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]+$" },
+        "severity": { "enum": ["INFO", "LOW", "MEDIUM", "HIGH", "CRITICAL"] },
+        "detail": { "type": "string", "minLength": 8 }
+      }
+    },
+    "quest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "chapter_file",
+        "chapter_alias",
+        "alias",
+        "engine_id",
+        "purpose_ru",
+        "authoring_task_kind",
+        "task_type",
+        "tags",
+        "dependency_engine_ids",
+        "dependency_aliases",
+        "required",
+        "mainline",
+        "optional",
+        "disposition",
+        "defects",
+        "ru_copy"
+      ],
+      "properties": {
+        "chapter_file": { "type": "string", "pattern": "^[0-9]{2}_[a-z0-9_]+$" },
+        "chapter_alias": { "$ref": "#/$defs/alias" },
+        "alias": { "type": "string", "pattern": "^if\\.quest\\.[a-z0-9_.]+$" },
+        "engine_id": { "$ref": "#/$defs/questEngineId" },
+        "purpose_ru": { "type": "string", "minLength": 8 },
+        "authoring_task_kind": { "type": ["string", "null"] },
+        "task_type": { "enum": ["checkmark", "dimension", "item"] },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "dependency_engine_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/questEngineId" }
+        },
+        "dependency_aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^if\\.quest\\.[a-z0-9_.]+$" }
+        },
+        "required": { "type": "boolean" },
+        "mainline": { "type": "boolean" },
+        "optional": { "type": "boolean" },
+        "disposition": {
+          "enum": ["KEEP_MEANING", "REWRITE", "SPLIT", "MERGE", "REMOVE_TO_REFERENCE"]
+        },
+        "defects": { "type": "array", "items": { "$ref": "#/$defs/defect" } },
+        "ru_copy": { "$ref": "#/$defs/ruCopy" }
+      }
+    }
+  }
+}

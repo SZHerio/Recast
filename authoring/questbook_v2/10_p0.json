@@ -1,0 +1,2411 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.p0",
+    "engine_id": "2010000000000001",
+    "filename": "10_p0",
+    "group": {
+      "alias": "if.group.v2.mainline",
+      "engine_id": "1000000000000004",
+      "title_ru": "Главная линия"
+    },
+    "order": 10,
+    "icon": "industrial_frontier:textures/gui/icons/epochs/p0.png",
+    "epoch": "P0",
+    "tags": [
+      "mainline",
+      "expedition",
+      "survival"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "P0 — Экспедиция",
+      "subtitle": "Рабочее место, безопасный лагерь, ранняя еда и честная разведка железного сырья",
+      "description": [
+        "P0 переводит игрока от чтения к действиям. Сначала появляются брёвна, доски и верстак; затем лагерь получает тепло, еду и ориентиры.",
+        "Железная ветвь не требует одного заранее выбранного минерала. Достаточно найти любой локально подтверждённый железосодержащий источник, после чего отдельный квест проверит готовый слиток."
+      ]
+    },
+    "editorial": {
+      "voice": "Полевой инженер-наставник: спокойно, конкретно и с уважением к выбору места и маршрута.",
+      "tone_rules": [
+        "Опасность и сезонное ограничение называть до действия.",
+        "Альтернативные источники показывать отдельными путями с понятным объединением.",
+        "Просить только небольшой полезный запас, который сразу расходуется на инфраструктуру."
+      ],
+      "avoid": [
+        "Не заставлять искать конкретную породу дерева или один вид железной руды.",
+        "Не выдавать случайный поиск за сложность.",
+        "Не обещать построенный объект, если proof видит только предметы."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.p0.brief",
+      "engine_id": "3010000000000001",
+      "epoch": "P0",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:map",
+      "tags": [
+        "mainline",
+        "briefing"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.help",
+            "reason": "Практика начинается только после знакомства с инструментами диагностики и помощи.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md#7-целевая-архитектура-глав"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.brief.read",
+          "engine_id": "4010000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте задачи экспедиции и подтвердите начало P0.",
+            "help": "В этой главе все обязательные ветви снова сходятся в одном ромбе перехода."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "План первой экспедиции",
+        "lead_ru": "Наша цель — не пережить одну ночь, а выбрать место, с которого удобно развивать фабрику и город.",
+        "purpose_ru": "Глава проверяет четыре результата: рабочий лагерь, устойчивый источник еды, ориентирование и первую железную цепочку от минерала до слитка.",
+        "steps_ru": [
+          "Прочитайте список результатов и оцените ближайшее безопасное место для временного лагеря.",
+          "Не стройте окончательный завод до разведки воды, пространства и рудных жил."
+        ],
+        "success_ru": "Вы знаете четыре обязательных результата P0 и готовы начать с древесины, а не с преждевременной капитальной стройки.",
+        "diagnostics_ru": [
+          "Если маршрут кажется длинным, следуйте центральной линии: пищевые и рудные альтернативы объединяются после одного выбранного пути."
+        ],
+        "next_ru": "Перед заготовкой материалов прочитайте, как сезон меняет безопасность и сроки полевых работ.",
+        "task_text_ru": "Прочитайте задачи экспедиции и подтвердите начало P0."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Брифинг перечисляет наблюдаемые результаты главы и не заменяет их сюжетной формулировкой."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Финальная потоковая отметка будет поставлена после сборки всех ветвей P0."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+          "evidence": [
+            "План определяет назначение главы P0 и переход к P1."
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_progression_graph.json",
+          "evidence": [
+            "Эпоха P0 требует лагерную и геологическую инфраструктуру. "
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Брифинг не добавляет ресурсной проверки."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.seasons",
+      "engine_id": "3010000000000002",
+      "epoch": "P0",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:clock",
+      "tags": [
+        "mainline",
+        "environment"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.brief",
+            "reason": "Полевые действия планируются после брифинга и до выбора постоянного места.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.seasons.read",
+          "engine_id": "4010000000000002",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте сезонные риски и подтвердите выбранный безопасный темп экспедиции.",
+            "help": "Сезон не блокирует главу: он меняет приоритет укрытия, еды и поездок."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сезон задаёт темп",
+        "lead_ru": "Погода меняет цену ошибки, но не превращает календарь в ожидание у костра.",
+        "purpose_ru": "Сезонная информация нужна для порядка работ: при ухудшении условий сначала готовятся укрытие, тепло и запас еды, а дальняя разведка переносится на безопасное окно.",
+        "steps_ru": [
+          "Оцените текущий сезон и погоду до дальней вылазки.",
+          "При неблагоприятных условиях сначала завершите короткую лагерную ветвь и только затем уходите к рудным жилам."
+        ],
+        "success_ru": "Вы выбрали темп работ и понимаете, какой запас нужен до дальней разведки.",
+        "diagnostics_ru": [
+          "Если сезонный интерфейс непонятен, проверьте его подсказку и календарь, не ориентируйтесь только на цвет неба.",
+          "Если условия опасны, работайте рядом с лагерем: обязательная глава не требует немедленной дальней поездки."
+        ],
+        "next_ru": "Теперь заготовим универсальные брёвна для досок и первого рабочего места.",
+        "task_text_ru": "Прочитайте сезонные риски и подтвердите безопасный план работ."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст не придумывает конкретные температурные пороги, которых локальная статика не подтверждает."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Механика описана на уровне безопасного планирования без неподтверждённых чисел."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/MASTER_DESIGN_DOCUMENT.md",
+          "evidence": [
+            "Мастер-документ включает погоду и сезонность как вспомогательную систему опыта. "
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "seasonal-field-planning",
+          "evidence": [
+            "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Сезон меняет решение, но не создаёт обязательного ожидания."
+      },
+      "layout": {
+        "x": 2,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.logs",
+      "engine_id": "3A10000000000001",
+      "epoch": "P0",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "minecraft:oak_log",
+      "tags": [
+        "mainline",
+        "materials"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.seasons",
+            "reason": "Древесина — первый безопасный материал после оценки условий экспедиции.",
+            "evidence": [
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/wood_logs.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.logs.items",
+          "engine_id": "4A10000000000001",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте при себе восемь брёвен из принятого тегом набора.",
+            "help": "Подходит любая порода из списка задачи; смешанная партия тоже считается."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/wood_logs",
+            "count": 8
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Восемь любых брёвен",
+        "lead_ru": "Порода дерева не должна диктовать место старта, поэтому задача принимает функциональную категорию.",
+        "purpose_ru": "Восемь брёвен дают рабочий запас на доски и первые лагерные предметы. Проверка через тег сохраняет совместимость разных пород и модов.",
+        "steps_ru": [
+          "Срубите доступные деревья и соберите восемь брёвен из списка задачи.",
+          "Сохраните партию в основном инвентаре: проверка её не расходует."
+        ],
+        "success_ru": "В инвентаре лежат восемь принятых брёвен, и можно переходить к изготовлению досок.",
+        "diagnostics_ru": [
+          "Если похожее бревно не считается, сравните его теги в JEI с тегом, указанным задачей."
+        ],
+        "next_ru": "Часть брёвен превратим в доски — отдельную форму материала для ручных рецептов.",
+        "task_text_ru": "Имейте при себе восемь брёвен из принятого тегом набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Первый материальный квест показывает тег как игровую свободу, а не как внутреннюю реализацию."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег подтверждён локальным datapack."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/wood_logs",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/wood_logs.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "kubejs/exported/gtceu_item_census.json",
+          "evidence": [
+            "Локальный census подтверждает предметный набор ранней цепочки. "
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 8,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Одна короткая партия древесины сразу идёт на полезные предметы лагеря."
+      },
+      "layout": {
+        "x": 4,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.planks",
+      "engine_id": "3A10000000000002",
+      "epoch": "P0",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "minecraft:oak_planks",
+      "tags": [
+        "mainline",
+        "material_forms"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.logs",
+            "reason": "Доски являются следующей формой уже добытой древесины и входом верстака.",
+            "evidence": [
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/wood_planks.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.planks.items",
+          "engine_id": "4A10000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите не меньше восьми досок из принятого тегом набора.",
+            "help": "Подходит любая порода из списка; задача не требует превращать в доски всю древесину."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/wood_planks",
+            "count": 8
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Брёвна становятся досками",
+        "lead_ru": "Источник и форма материала — разные ступени: сейчас древесина становится пригодной для ручного крафта.",
+        "purpose_ru": "Отдельная проверка досок учит читать производственную цепочку по формам. Позже то же различие будет важно для руды, пыли, слитка и пластины.",
+        "steps_ru": [
+          "Откройте рецепт досок для выбранной породы и переработайте часть брёвен.",
+          "Оставьте не меньше восьми досок в основном инвентаре."
+        ],
+        "success_ru": "Задача видит восемь подходящих досок, а оставшиеся брёвна можно сохранить для других лагерных рецептов.",
+        "diagnostics_ru": [
+          "Если доски не считаются, проверьте их принадлежность к локальному тегу древесных досок."
+        ],
+        "next_ru": "Четыре доски пойдут на верстак — первое рабочее средство цепочки.",
+        "task_text_ru": "Получите не меньше восьми досок из принятого тегом набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Узел вводит различие источника и формы до аналогичной железной развилки."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег подтверждён локальным datapack; количество оставляет запас без обязательного полного крафта."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/wood_planks",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/wood_planks.json"
+          ]
+        },
+        {
+          "kind": "process",
+          "id": "wood-log-to-planks",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 8,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Одна учебная партия показывает смену формы и сразу обеспечивает верстак."
+      },
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.crafting_table",
+      "engine_id": "3010000000000003",
+      "epoch": "P0",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "minecraft:crafting_table",
+      "tags": [
+        "mainline",
+        "workstation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.planks",
+            "reason": "Верстак создаётся из досок и должен предшествовать всем рецептам в сетке 3×3.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.crafting_table.item",
+          "engine_id": "4010000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Соберите и сохраните один верстак.",
+            "help": "Если задача не обновилась, подберите установленный блок и положите его в основной инвентарь."
+          },
+          "item": {
+            "id": "minecraft:crafting_table",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p0.crafting_table.use",
+          "engine_id": "4A10000000000014",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите верстак и откройте его рабочую сетку.",
+            "help": "Нужно взаимодействовать с установленным верстаком, а не только носить предмет в инвентаре."
+          },
+          "use": {
+            "block": "minecraft:crafting_table",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первое рабочее место",
+        "lead_ru": "Верстак открывает сетку 3×3 и появляется раньше любого изделия, которому она нужна.",
+        "purpose_ru": "Порядок от материала к рабочему средству, а затем к изделию остаётся правилом всей сборки. Здесь он показан на самом простом примере.",
+        "steps_ru": [
+          "Сложите четыре подходящие доски в сетке инвентаря.",
+          "Поставьте готовый верстак и откройте его рабочую сетку 3×3."
+        ],
+        "success_ru": "Верстак получен, установлен и открыт; обе функциональные проверки завершены.",
+        "diagnostics_ru": [
+          "Если условие не обновилось, подберите установленный верстак: предметная задача не видит блок в мире.",
+          "Если рецепта нет, сверьте в JEI, что используете доски, а не брёвна или декоративную обшивку."
+        ],
+        "next_ru": "К верстаку добавим печь и костёр — минимальный комплект тёплого рабочего лагеря.",
+        "task_text_ru": "Получите один верстак, установите его и откройте рабочую сетку."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Смысл существующей предметной задачи сохранён, но узел поставлен после досок и до лагерных изделий."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Предмет и старый engine ID сохранены; поток изменён в соответствии с QR3."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "prerequisites",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "minecraft:crafting_table",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p0.planks",
+          "evidence": [
+            "Верстак следует после подтверждённой формы древесины. "
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "minecraft:crafting_table",
+          "evidence": [
+            "authoring/schemas/quest_source_v2.schema.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Один верстак — полезный инструмент, а не расходный пропуск."
+      },
+      "layout": {
+        "x": 8,
+        "y": 0,
+        "shape": "square",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.camp_kit",
+      "engine_id": "3A10000000000003",
+      "epoch": "P0",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "minecraft:white_bed",
+      "tags": [
+        "mainline",
+        "camp"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.crafting_table",
+            "reason": "Лагерные изделия собираются только после появления рабочего места.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.camp_kit.bed_place",
+          "engine_id": "4A10000000000015",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите одну кровать любого принятого вида.",
+            "help": "Подходит блок из ванильного тега кроватей; цвет не важен."
+          },
+          "place": {
+            "block_tag": "minecraft:beds",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p0.camp_kit.bed_use",
+          "engine_id": "4A10000000000016",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Взаимодействуйте с установленной кроватью.",
+            "help": "Проверяется использование блока; успешный сон может зависеть от времени и безопасности."
+          },
+          "use": {
+            "block_tag": "minecraft:beds",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p0.camp_kit.furnace_place",
+          "engine_id": "4A10000000000017",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите одну обычную печь.",
+            "help": "Проверяется точный блок обычной печи, а не предмет в инвентаре."
+          },
+          "place": {
+            "block": "minecraft:furnace",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p0.camp_kit.furnace_use",
+          "engine_id": "4A10000000000018",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте интерфейс установленной печи.",
+            "help": "Если условие не обновилось, взаимодействуйте именно с обычной печью."
+          },
+          "use": {
+            "block": "minecraft:furnace",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сон и первая обработка",
+        "lead_ru": "Кровать закрепляет безопасную точку отдыха, а печь открывает готовку и простую переплавку.",
+        "purpose_ru": "Функциональный лагерный комплект проверяется действием: блоки нужно установить и открыть. Это надёжнее, чем формально носить их в инвентаре.",
+        "steps_ru": [
+          "Соберите и установите кровать любого принятого вида, затем взаимодействуйте с ней.",
+          "Соберите обычную печь, установите рядом с рабочим местом и откройте её интерфейс."
+        ],
+        "success_ru": "Кровать и печь установлены и использованы; у лагеря есть точка отдыха и доступ к ранней обработке.",
+        "diagnostics_ru": [
+          "Если кровать не позволяет спать, проверьте время и безопасность; для задания достаточно взаимодействия, успешный пропуск ночи не требуется.",
+          "Если печь не считается, убедитесь, что это обычная печь, а не коптильня, плавильная печь или декоративный блок."
+        ],
+        "next_ru": "От работающего лагеря одновременно откроются еда, ориентирование и геологическая разведка.",
+        "task_text_ru": "Установите и используйте одну кровать и одну обычную печь."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Функциональные place/use-proof заменяют прежнюю проверку предметов и не обещают геометрию укрытия."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Блок, тег и типы place/use сверены со schema v2; runtime-проверка остаётся владельцу."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block_tag",
+          "id": "minecraft:beds",
+          "evidence": [
+            "authoring/schemas/quest_source_v2.schema.json"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "minecraft:furnace",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_grind_budget.json",
+          "evidence": [
+            "Лагерный комплект относится к цепочке field_camp."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 2,
+        "expected_runs": 2,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Два предмета имеют разные функции и остаются частью действующего лагеря."
+      },
+      "layout": {
+        "x": 10,
+        "y": 0,
+        "shape": "rsquare",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.food_crop",
+      "engine_id": "3A10000000000004",
+      "epoch": "P0",
+      "role": "acquisition",
+      "requirement": "optional",
+      "icon": "minecraft:bread",
+      "tags": [
+        "choice",
+        "food",
+        "crop_route"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.camp_kit",
+            "reason": "Пищевой маршрут выбирается после появления безопасной точки обработки и готовки.",
+            "evidence": [
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.food_crop.bread",
+          "engine_id": "4A10000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте при себе четыре хлеба.",
+            "help": "Это один из трёх равноправных ранних маршрутов еды."
+          },
+          "item": {
+            "id": "minecraft:bread",
+            "count": 4,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Полевой хлеб",
+        "lead_ru": "Растительная пища удобна там, где вы уже нашли зерно или готовы заложить небольшую грядку.",
+        "purpose_ru": "Четыре хлеба дают предсказуемый ранний запас без охоты. В дальнейшем земледелие станет устойчивым источником рациона для поселения.",
+        "steps_ru": [
+          "Получите пшеницу доступным способом и приготовьте четыре хлеба по рецепту JEI."
+        ],
+        "success_ru": "В инвентаре лежат четыре хлеба, и узел выбора еды может открыть общий итог.",
+        "diagnostics_ru": [
+          "Если зерно пока недоступно, не ждите урожай ради квеста: выберите мясной или картофельный маршрут."
+        ],
+        "next_ru": "Завершение этого пути откроет общий узел раннего снабжения.",
+        "task_text_ru": "Имейте при себе четыре хлеба.",
+        "optional_note_ru": "Достаточно одного пищевого пути. Выбирайте хлеб, только если зерно уже доступно или подходит вашему плану лагеря."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Ветка предлагает земледелие как выбор, а не заставляет ждать первый урожай."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Предмет подтверждён локальным census и тегом полевых рационов."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "minecraft:bread",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:rations/field",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Небольшой полезный запас без обязательного ожидания фермы."
+      },
+      "layout": {
+        "x": 12,
+        "y": -3,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.food_hunt",
+      "engine_id": "3A10000000000005",
+      "epoch": "P0",
+      "role": "acquisition",
+      "requirement": "optional",
+      "icon": "minecraft:cooked_beef",
+      "tags": [
+        "choice",
+        "food",
+        "hunting_route"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.camp_kit",
+            "reason": "Готовое мясо требует безопасной обработки после подготовки лагерного комплекта.",
+            "evidence": [
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.food_hunt.beef",
+          "engine_id": "4A10000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте при себе четыре жареные говядины.",
+            "help": "Это один из трёх равноправных ранних маршрутов еды."
+          },
+          "item": {
+            "id": "minecraft:cooked_beef",
+            "count": 4,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Пища после охоты",
+        "lead_ru": "Мясной путь быстро закрывает запас еды, если поблизости уже есть подходящие животные.",
+        "purpose_ru": "Готовая пища позволяет продолжить разведку без ожидания урожая. Маршрут полезен как временное снабжение, но не требует превращать окрестности в пустую охотничью зону.",
+        "steps_ru": [
+          "Добудьте сырое мясо доступным способом и приготовьте четыре порции говядины на печи или костре."
+        ],
+        "success_ru": "В инвентаре лежат четыре готовые порции, и узел выбора еды может открыть общий итог.",
+        "diagnostics_ru": [
+          "Если подходящих животных мало, сохраните их для разведения и выберите хлебный или картофельный путь."
+        ],
+        "next_ru": "Завершение этого пути откроет общий узел раннего снабжения.",
+        "task_text_ru": "Имейте при себе четыре жареные говядины.",
+        "optional_note_ru": "Достаточно одного пищевого пути. Охота подходит для быстрой экспедиции, но не обязательна при дефиците животных."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Ветка даёт быстрый маршрут и прямо предупреждает о сохранении будущего поголовья."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Предмет подтверждён локальным census и тегом полевых рационов."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "minecraft:cooked_beef",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:rations/field",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Четыре порции — короткая страховочная партия, а не обязательная массовая охота."
+      },
+      "layout": {
+        "x": 12,
+        "y": -1,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.food_root",
+      "engine_id": "3A10000000000006",
+      "epoch": "P0",
+      "role": "acquisition",
+      "requirement": "optional",
+      "icon": "minecraft:baked_potato",
+      "tags": [
+        "choice",
+        "food",
+        "foraging_route"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.camp_kit",
+            "reason": "Картофельный маршрут использует уже подготовленную точку готовки лагеря.",
+            "evidence": [
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.food_root.potato",
+          "engine_id": "4A10000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте при себе четыре печёных картофеля.",
+            "help": "Это один из трёх равноправных ранних маршрутов еды."
+          },
+          "item": {
+            "id": "minecraft:baked_potato",
+            "count": 4,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Печёный корнеплод",
+        "lead_ru": "Картофельный путь связывает найденную пищу с будущей простой фермой без отдельной цепочки зерна.",
+        "purpose_ru": "Печёный картофель закрывает раннее снабжение и оставляет очевидный посадочный материал. Это удобный компромисс между немедленной едой и будущим земледелием.",
+        "steps_ru": [
+          "Найдите или вырастите картофель и приготовьте четыре штуки в доступной лагерной установке."
+        ],
+        "success_ru": "В инвентаре лежат четыре печёных картофеля, и узел выбора еды может открыть общий итог.",
+        "diagnostics_ru": [
+          "Если картофель не найден, не превращайте поиск деревни в обязательный гринд: выберите хлебный или мясной путь."
+        ],
+        "next_ru": "Завершение этого пути откроет общий узел раннего снабжения.",
+        "task_text_ru": "Имейте при себе четыре печёных картофеля.",
+        "optional_note_ru": "Достаточно одного пищевого пути. Картофель выбирайте, если источник уже найден и подходит для будущей грядки."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Ветка не превращает случайный поиск поселения в обязательное условие."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Предмет подтверждён локальным census и тегом полевых рационов."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "minecraft:baked_potato",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:rations/field",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Небольшая партия закрывает экспедиционную потребность и не требует массовой фермы."
+      },
+      "layout": {
+        "x": 12,
+        "y": 1,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.food_ready",
+      "engine_id": "3010000000000004",
+      "epoch": "P0",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "minecraft:bread",
+      "tags": [
+        "mainline",
+        "choice_join",
+        "food"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.camp_kit",
+            "reason": "Готовый полевой рацион проверяется после появления функциональной точки сна и обработки.",
+            "evidence": [
+              "docs/registries/quest_acceptance_sets.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.food_ready.ration",
+          "engine_id": "4A10000000000008",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте при себе один готовый полевой рацион из принятого набора.",
+            "help": "Подойдут хлеб, готовое мясо, печёный картофель и другие перечисленные блюда; сырые ингредиенты не считаются."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:rations/field",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Походная еда готова",
+        "lead_ru": "Лагерю нужен один подходящий готовый рацион, а не обязательное повторение трёх способов добычи еды.",
+        "purpose_ru": "Единый тег принимает хлеб, приготовленное мясо, печёный картофель и поддержанные блюда Farmer’s Delight. Сырые продукты исключены, потому что не доказывают готовое снабжение.",
+        "steps_ru": [
+          "Приготовьте любой один продукт из списка задачи удобным доступным способом.",
+          "Положите готовый рацион в основной инвентарь; предмет при зачёте не расходуется."
+        ],
+        "success_ru": "В инвентаре есть один принятый готовый рацион, и пищевой результат P0 засчитан без прохождения всех учебных ветвей.",
+        "diagnostics_ru": [
+          "Если похожая еда не считается, сравните её с полным списком тега в условии задачи.",
+          "Сырое мясо, пшеница и обычный картофель не подходят: требуется готовая пища."
+        ],
+        "next_ru": "Пищевое снабжение готово; параллельно завершите карту и железную цепочку.",
+        "task_text_ru": "Имейте при себе один готовый полевой рацион из принятого набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Главный пищевой proof проверяет реальный готовый рацион, а три учебных маршрута остаются полностью необязательными."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег и полный allowlist сверены с quest_acceptance_sets и локальным datapack."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:rations/field",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/rations/field.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/quest_acceptance_sets.json",
+          "evidence": [
+            "Набор field_ration отделяет готовую еду от сырых ингредиентов."
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/GRIND_POLICY.md",
+          "evidence": [
+            "Разнообразие еды поощряется без нескольких обязательных шкал."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/field_camp",
+        "rationale_ru": "Для результата достаточно одной полезной партии по выбранному маршруту."
+      },
+      "layout": {
+        "x": 14,
+        "y": -1,
+        "shape": "hexagon",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.map",
+      "engine_id": "3010000000000005",
+      "epoch": "P0",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:filled_map",
+      "tags": [
+        "mainline",
+        "navigation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.camp_kit",
+            "reason": "Маршрут разведки планируется от уже подготовленной безопасной точки возврата.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.map.read",
+          "engine_id": "4010000000000005",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Наметьте ориентиры вокруг лагеря и подтвердите план разведки.",
+            "help": "Галочка подтверждает планирование; она не утверждает посещение места, которое система не проверяет."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Карта — часть инженерии",
+        "lead_ru": "Дорога, вода, свободная площадка и путь к жиле влияют на фабрику не меньше первого рецепта.",
+        "purpose_ru": "Раннее картирование снижает число переносов базы и помогает отделить временный лагерь от будущей промышленной площадки.",
+        "steps_ru": [
+          "Отметьте лагерь и безопасный путь возврата доступным картографическим инструментом.",
+          "Наметьте воду, пространство под расширение и направление геологической разведки."
+        ],
+        "success_ru": "У вас есть понятный ориентир возврата и хотя бы одно направление для целевой разведки.",
+        "diagnostics_ru": [
+          "Если карта перегружена значками, оставьте только лагерь, опасность и ближайшую цель; остальное можно добавить после P0."
+        ],
+        "next_ru": "Перед вылазкой закрепим порядок восстановления после смерти или потери маршрута.",
+        "task_text_ru": "Наметьте ориентиры вокруг лагеря и подтвердите план разведки."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст не заявляет проверяемое посещение: текущий proof подтверждает только чтение и план."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Обещание точно сужено до checkmark-возможности текущего task-стека."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "expedition-waypoint-planning",
+          "evidence": [
+            "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+          "evidence": [
+            "Норматив запрещает обещать посещение при checkmark-proof. "
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Маршрут планируется один раз и не требует случайного исследования."
+      },
+      "layout": {
+        "x": 12,
+        "y": 3,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.loss",
+      "engine_id": "3010000000000007",
+      "epoch": "P0",
+      "role": "recovery",
+      "requirement": "required",
+      "icon": "minecraft:recovery_compass",
+      "tags": [
+        "mainline",
+        "recovery"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.map",
+            "reason": "Восстановление маршрута имеет смысл после фиксации точки лагеря и ориентиров.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.loss.read",
+          "engine_id": "4010000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте порядок возврата и подтвердите подготовку к дальней вылазке.",
+            "help": "Задача обучает восстановлению и не требует намеренно погибать."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Не терять прогресс",
+        "lead_ru": "Дальняя разведка начинается с маршрута возврата и небольшого резерва, а не с надежды на удачу.",
+        "purpose_ru": "План восстановления защищает первые инструменты и найденную жилу. Он сокращает повторный поиск, который не создаёт новых инженерных решений.",
+        "steps_ru": [
+          "Оставьте в лагере резерв простой еды, топлива и базовых материалов.",
+          "Перед вылазкой проверьте ориентир возврата и свободное место для найденного сырья."
+        ],
+        "success_ru": "У лагеря есть резерв, маршрут возврата известен, и потеря одной вылазки не обнуляет развитие.",
+        "diagnostics_ru": [
+          "Если вы потеряли направление, сначала вернитесь к последнему известному ориентиру; не переносите весь запас в новую случайную точку."
+        ],
+        "next_ru": "Теперь можно читать местную геологию и искать любой подходящий железосодержащий минерал.",
+        "task_text_ru": "Прочитайте порядок возврата и подтвердите подготовку к вылазке."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Recovery-квест снижает повторный гринд и не требует симулировать потерю предметов."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Порядок прочитан вместе с картографическим и геологическим узлами."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/GRIND_POLICY.md",
+          "evidence": [
+            "Повторный поиск после случайной потери не считается содержанием. "
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "expedition-recovery-plan",
+          "evidence": [
+            "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "План восстановления предотвращает повторный гринд вместо создания нового требования."
+      },
+      "layout": {
+        "x": 14,
+        "y": 3,
+        "shape": "circle",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.prospect",
+      "engine_id": "3010000000000006",
+      "epoch": "P0",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "industrial_frontier:textures/gui/icons/process/geology/ore_sources.png",
+      "tags": [
+        "mainline",
+        "geology"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.loss",
+            "reason": "Целевая геологическая вылазка начинается после карты и плана безопасного возврата.",
+            "evidence": [
+              "docs/registries/m2_grind_budget.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.prospect.read",
+          "engine_id": "4A10000000000009",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правила железной развилки и выберите минерал по фактической находке.",
+            "help": "Следующий узел требует один источник из списка, а не обязательно сырое ванильное железо."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Читать жилу, а не цвет",
+        "lead_ru": "Железная цепочка начинается не с одного предмета, а с семейства минералов с разными дальнейшими маршрутами.",
+        "purpose_ru": "Разведочный узел отделяет геологический источник от готового металла. Магнетит, гематит, лимонит и другие подтверждённые минералы принимает один общий набор.",
+        "steps_ru": [
+          "Используйте JER как подсказку и наблюдение жил как основной источник факта о местной GTCEu-геологии.",
+          "Найдите любой один минерал из следующего набора и откройте его фактический маршрут переработки в JEI."
+        ],
+        "success_ru": "Вы понимаете, что следующее задание примет любой минерал из утверждённого списка и не требует искать только ванильное сырое железо.",
+        "diagnostics_ru": [
+          "Если JER и наблюдаемая жила расходятся, доверяйте фактической GTCEu-жиле и рецептам JEI.",
+          "Если ни один источник не найден, расширяйте разведку целевыми маршрутами от лагеря, а не случайным туннелем без ориентиров."
+        ],
+        "next_ru": "Следующий узел примет один из восьми железосодержащих источников через общий проверенный тег.",
+        "task_text_ru": "Прочитайте правила железной развилки и выберите путь по фактической находке."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Старый узел разведки сохранён, а прежняя проверка только raw_iron заменена одним общим acceptance set."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Allowlist из восьми вариантов сверён с локальным datapack и реестром приёмки."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "process",
+          "id": "industrial_frontier:process/gtceu/geological_ore_veins",
+          "evidence": [
+            "docs/registries/m2_grind_budget.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "kubejs/exported/gtceu_item_census.json",
+          "evidence": [
+            "Census подтверждает точные item ID восьми железосодержащих входов. "
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 2,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/ore_prospecting",
+        "rationale_ru": "Нужна одна объяснённая геологическая цель без случайного поиска конкретного минерала."
+      },
+      "layout": {
+        "x": 16,
+        "y": 3,
+        "shape": "gear",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.iron_source",
+      "engine_id": "3A10000000000007",
+      "epoch": "P0",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "gtceu:raw_magnetite",
+      "tags": [
+        "mainline",
+        "geology",
+        "source_product_split"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.prospect",
+            "reason": "Сначала игрок узнаёт принцип геологического выбора, затем приносит любой подтверждённый источник.",
+            "evidence": [
+              "docs/registries/quest_acceptance_sets.json",
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_sources/early_iron.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.iron_source.item",
+          "engine_id": "4A1000000000000A",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте при себе один железосодержащий минерал из принятого набора.",
+            "help": "Подойдут сырое железо, жёлтый лимонит, магнетит, оба минеральных песка, пирит, гётит или гематит."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:quest_sources/early_iron",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Любой ранний источник железа",
+        "lead_ru": "Геология выбирает маршрут: квест принимает фактическую находку, а не один заранее назначенный предмет.",
+        "purpose_ru": "Общий тег объединяет восемь локально подтверждённых железосодержащих минералов. Он проверяет разведку источника и намеренно не принимает пыль или готовый металл.",
+        "steps_ru": [
+          "Добудьте один подходящий минерал: например, сырое железо, магнетит, гематит или лимонит.",
+          "Положите образец в основной инвентарь и откройте в JEI доступный путь до железного слитка."
+        ],
+        "success_ru": "Один предмет из полного списка допустимых минералов находится в инвентаре; разведка засчитана независимо от выбранной местной жилы.",
+        "diagnostics_ru": [
+          "Если образец не считается, проверьте его точную форму: пыль и блок сырья не входят в этот набор.",
+          "Если ранний путь выбранного минерала неудобен, используйте другой найденный источник; готовый металл проверяется отдельно."
+        ],
+        "next_ru": "Теперь превратите доступное сырьё в железный слиток и подтвердите именно продукт.",
+        "task_text_ru": "Имейте при себе один железосодержащий минерал из принятого набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Один item_tag заменяет дублирующие квесты и сохраняет полный локальный allowlist."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег и восемь значений сверены с quest_acceptance_sets и datapack."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:quest_sources/early_iron",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_sources/early_iron.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/quest_acceptance_sets.json",
+          "evidence": [
+            "Набор iron_source фиксирует восемь допустимых SOURCE-форм и исключает пыль."
+          ]
+        },
+        {
+          "kind": "process",
+          "id": "industrial_frontier:process/gtceu/geological_ore_veins",
+          "evidence": [
+            "docs/registries/m2_grind_budget.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/ore_prospecting",
+        "rationale_ru": "Один образец подтверждает местную жилу; конкретный минерал не превращается в квоту."
+      },
+      "layout": {
+        "x": 18,
+        "y": 3,
+        "shape": "hexagon",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.iron_product",
+      "engine_id": "3A10000000000008",
+      "epoch": "P0",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "minecraft:iron_ingot",
+      "tags": [
+        "mainline",
+        "materials",
+        "source_product_split"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.iron_source",
+            "reason": "Готовый металл проверяется только после подтверждения геологического источника.",
+            "evidence": [
+              "docs/registries/quest_acceptance_sets.json",
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/iron_ingots.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.iron_product.ingots",
+          "engine_id": "4A1000000000000B",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите четыре железных слитка из принятого набора.",
+            "help": "Проверяется готовый слиток, а не руда, сырой минерал или пыль; предметы не расходуются."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/iron_ingots",
+            "count": 4
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первая партия железа",
+        "lead_ru": "Месторождение найдено; теперь источник должен стать металлом, пригодным для инструментов и деталей.",
+        "purpose_ru": "Отдельная проверка готового продукта подтверждает реальную способность получать железо. Четыре слитка — небольшой рабочий запас, а не налог на ручную переплавку.",
+        "steps_ru": [
+          "Откройте в JEI маршрут выбранного железосодержащего минерала и подготовьте необходимое топливо или промежуточную обработку.",
+          "Получите четыре подходящих железных слитка и оставьте их в основном инвентаре."
+        ],
+        "success_ru": "В инвентаре находятся четыре готовых железных слитка, которые можно сразу использовать в первых механических деталях.",
+        "diagnostics_ru": [
+          "Если плавка не начинается, сначала сверьте форму входа и наличие топлива.",
+          "Если результат не считается, убедитесь, что это слиток из тега железных слитков, а не пыль, самородок или сплав."
+        ],
+        "next_ru": "Теперь превратите часть металла в полезный инструмент: железная кирка покажет, что цепочка от жилы до готового изделия действительно работает.",
+        "task_text_ru": "Получите четыре железных слитка из принятого набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Источник и продукт разделены, а продукт принимает совместимый тег железных слитков."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег продукта сверён с datapack и acceptance set; количество ограничено одной полезной партией."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/iron_ingots",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/iron_ingots.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/quest_acceptance_sets.json",
+          "evidence": [
+            "Набор iron_product отделяет готовый слиток от геологического источника."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 4,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/ore_prospecting",
+        "rationale_ru": "Четыре слитка являются полезным стартовым запасом и остаются у игрока."
+      },
+      "layout": {
+        "x": 20,
+        "y": 3,
+        "shape": "rsquare",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.iron_consumer",
+      "engine_id": "3A10000000000009",
+      "epoch": "P0",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:iron_pickaxe",
+      "tags": [
+        "mainline",
+        "materials",
+        "first_consumer"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.iron_product",
+            "reason": "Первый потребитель появляется только после подтверждения готовых железных слитков.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json",
+              "docs/registries/quest_acceptance_sets.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.iron_consumer.pickaxe",
+          "engine_id": "4A1000000000000C",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте одну железную кирку GTCEu.",
+            "help": "Задача принимает точный инструмент gtceu:iron_pickaxe и проверяет получение через крафт."
+          },
+          "item": {
+            "id": "gtceu:iron_pickaxe",
+            "count": 1,
+            "consume": false,
+            "only_from_crafting": true
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Железо идёт в работу",
+        "lead_ru": "Готовый слиток становится полезным только тогда, когда из него появляется первый рабочий инструмент.",
+        "purpose_ru": "Железная кирка замыкает цепочку «источник → металл → потребитель» и расширяет добывающие возможности следующей механической эпохи.",
+        "steps_ru": [
+          "Откройте рецепт железной кирки GTCEu и подготовьте требуемые рукоять и слитки.",
+          "Изготовьте одну кирку и оставьте её в основном инвентаре."
+        ],
+        "success_ru": "Железная кирка получена через крафт и готова к дальнейшей разведке и добыче.",
+        "diagnostics_ru": [
+          "Если обычная ванильная кирка не считается, используйте точный предмет GTCEu, показанный задачей.",
+          "Если рецепт отличается от привычного, следуйте локальному JEI и проверьте форму рукояти и инструмента."
+        ],
+        "next_ru": "Теперь лагерь может пройти итоговую функциональную приёмку и открыть механизацию P1.",
+        "task_text_ru": "Изготовьте одну железную кирку GTCEu."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Первый потребитель делает железную цепочку функциональной и использует локально подтверждённый точный ID."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "ID подтверждён item census; only_from_crafting отделяет изготовление от случайной находки."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:iron_pickaxe",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p0.iron_product",
+          "evidence": [
+            "Потребитель следует после отдельной проверки готового железа."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p0/ore_prospecting",
+        "rationale_ru": "Один долговечный инструмент сразу используется в следующей добыче."
+      },
+      "layout": {
+        "x": 22,
+        "y": 3,
+        "shape": "square",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.p0.commissioning",
+      "engine_id": "3010000000000008",
+      "epoch": "P0",
+      "role": "commissioning",
+      "requirement": "required",
+      "icon": "create:cogwheel",
+      "tags": [
+        "mainline",
+        "if_commissioning_p0"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.food_ready",
+            "reason": "Лагерь не переходит к механизации без подтверждённого готового рациона.",
+            "evidence": [
+              "docs/registries/quest_acceptance_sets.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p0.iron_consumer",
+            "reason": "Железная цепочка должна закончиться рабочим потребителем, а не складом слитков.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p0.exit.workbench_use",
+          "engine_id": "4A10000000000019",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте установленный верстак.",
+            "help": "Проверьте доступность рабочей сетки после завершения ветвей P0."
+          },
+          "use": {
+            "block": "minecraft:crafting_table",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p0.exit.furnace_use",
+          "engine_id": "4A1000000000001A",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте установленную обычную печь.",
+            "help": "Используйте minecraft:furnace, а не коптильню или плавильную печь."
+          },
+          "use": {
+            "block": "minecraft:furnace",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Лагерь готов к работе",
+        "lead_ru": "Лагерь работает, еда готова, железо стало инструментом, и экспедиция может перейти к механизации.",
+        "purpose_ru": "Итоговая приёмка подтверждает способность лагеря поддерживать следующий этап. Она повторно проверяет использование рабочих блоков, но не забирает инфраструктуру.",
+        "steps_ru": [
+          "Откройте установленный верстак и убедитесь, что рабочая сетка доступна.",
+          "Откройте установленную обычную печь после завершения пищевой и железной ветвей."
+        ],
+        "success_ru": "Верстак и печь повторно использованы после завершения ветвей; квестовый мост переводит команду из P0 в P1.",
+        "diagnostics_ru": [
+          "Если переход закрыт, проверьте готовый рацион и изготовленную железную кирку в двух входящих ветвях.",
+          "Если все условия выполнены, но эпоха не меняется, сохраните журнал и передайте его владельцу сборки для проверки квестового моста."
+        ],
+        "next_ru": "В P1 вращение, передача мощности и буферы превратят ручные операции в первую производственную линию.",
+        "task_text_ru": "После завершения ветвей откройте установленный верстак и обычную печь."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Единственная итоговая проверка P0 имеет два объективных use-proof и опирается на реализованный квестовый мост эпох."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Функциональные проверки и мост сверены со schema v2 и quest_commissioning_bridge.js."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "prerequisites",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p0.food_ready",
+          "evidence": [
+            "Функциональный конец пищевой ветви."
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p0.iron_consumer",
+          "evidence": [
+            "Функциональный конец железной цепочки source→product→consumer."
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "minecraft:crafting_table",
+          "evidence": [
+            "authoring/schemas/quest_source_v2.schema.json"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "minecraft:furnace",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/quest_epoch_bridge.json",
+          "evidence": [
+            "Реестр подтверждает командный переход P0→P1 через UUID команды."
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js",
+          "evidence": [
+            "Мост реализует переход эпохи; runtime имеет статус USER_PENDING."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Commissioning не добавляет ресурсы сверх уже проверенных рабочих результатов."
+      },
+      "layout": {
+        "x": 22,
+        "y": 1,
+        "shape": "diamond",
+        "size": 1.6
+      },
+      "commissioning": {
+        "epoch": "P0",
+        "advances_to": "P1",
+        "required_branch_ends": [
+          "if.quest.v2.p0.food_ready",
+          "if.quest.v2.p0.iron_consumer"
+        ],
+        "epoch_state_evidence": [
+          "docs/registries/quest_epoch_bridge.json",
+          "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js"
+        ]
+      }
+    }
+  ]
+}

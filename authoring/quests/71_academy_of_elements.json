@@ -8,70 +8,70 @@
     {
       "alias": "if.quest.elements.intro",
       "engine_id": "3071000000000001",
-      "purpose": "A reference, not a required chapter",
+      "purpose": "Справочник, а не обязательная глава",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.purity",
       "engine_id": "3071000000000002",
-      "purpose": "Six classes, not good and bad",
+      "purpose": "Шесть классов, а не добро и зло",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.carbon",
       "engine_id": "3071000000000003",
-      "purpose": "Fuel, reductant and polymer feedstock",
+      "purpose": "Топливо, восстановитель и полимерное сырьё",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.sulfur",
       "engine_id": "3071000000000004",
-      "purpose": "The acid everyone needs",
+      "purpose": "Кислота, которая нужна всем",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.nitrogen",
       "engine_id": "3071000000000005",
-      "purpose": "Air becomes food and explosives",
+      "purpose": "Воздух становится едой и взрывчаткой",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.chlorine",
       "engine_id": "3071000000000006",
-      "purpose": "Three products you cannot decline",
+      "purpose": "Три продукта, от которых не отказаться",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.water",
       "engine_id": "3071000000000007",
-      "purpose": "Three classes and mandatory effluent",
+      "purpose": "Три класса и обязательный сток",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.silicon",
       "engine_id": "3071000000000008",
-      "purpose": "Where purity becomes critical",
+      "purpose": "Где чистота становится критичной",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.nuclear",
       "engine_id": "3071000000000009",
-      "purpose": "The one chain that must close",
+      "purpose": "Единственная цепочка, которую нельзя оставлять открытой",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.elements.index",
       "engine_id": "3071000000000010",
-      "purpose": "Nine fields that answer everything",
+      "purpose": "Девять полей, которые отвечают на всё",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

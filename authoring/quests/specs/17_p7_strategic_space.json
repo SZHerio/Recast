@@ -3,7 +3,7 @@
   "file": "17_p7_strategic_space",
   "chapter_id": "2017000000000001",
   "group_id": "1000000000000004",
-  "icon": "gcyr:launch_pad",
+  "icon": "industrial_frontier:textures/gui/icons/epochs/p7.png",
   "order": 8,
   "tag": "mainline",
   "optional": false,
@@ -154,7 +154,7 @@
       }
     },
     {
-      "slug": "strategic_charge", "x": 12, "y": -3, "icon": "hbm_ntm_rebirth:nuke_gadget",
+      "slug": "strategic_charge", "x": 12, "y": -3, "icon": "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png",
       "deps": ["rbmk", "purex"],
       "ru": {
         "title": "Стратегический заряд",
@@ -249,7 +249,7 @@
       }
     },
     {
-      "slug": "rocket_materials", "x": 3, "y": 3, "icon": "gcyr:heat_shielding_fabric", "deps": ["intro"],
+      "slug": "rocket_materials", "x": 3, "y": 3, "icon": "industrial_frontier:textures/gui/icons/process/gtceu/rocket_materials.png", "deps": ["intro"],
       "item": "gcyr:space_fabric",
       "ru": {
         "title": "Материалы ракеты",

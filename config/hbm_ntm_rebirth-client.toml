@@ -1,0 +1,81 @@
+
+[hud]
+	#Legacy ClientConfig.GEIGER_OFFSET_HORIZONTAL: shifts the Geiger counter HUD to the right.
+	#Range: -10000 ~ 10000
+	geigerOffsetHorizontal = 0
+	#Legacy ClientConfig.GEIGER_OFFSET_VERTICAL: shifts the Geiger counter HUD upward.
+	#Range: -10000 ~ 10000
+	geigerOffsetVertical = 0
+	#Legacy ClientConfig.INFO_OFFSET_HORIZONTAL: shifts the client inform message overlay horizontally.
+	#Range: -10000 ~ 10000
+	infoOffsetHorizontal = 0
+	#Legacy ClientConfig.INFO_OFFSET_VERTICAL: shifts the client inform message overlay vertically.
+	#Range: -10000 ~ 10000
+	infoOffsetVertical = 0
+	#Legacy ClientConfig.INFO_POSITION: 0=upper left, 1=upper right, 2=right of crosshair, 3=left of crosshair.
+	#Range: 0 ~ 3
+	infoPosition = 0
+	#Legacy ClientConfig.TOOL_HUD_INDICATOR_X: shifts the active tool area ability HUD icon horizontally.
+	#Range: -10000 ~ 10000
+	toolHudIndicatorX = 0
+	#Legacy ClientConfig.TOOL_HUD_INDICATOR_Y: shifts the active tool area ability HUD icon vertically.
+	#Range: -10000 ~ 10000
+	toolHudIndicatorY = 0
+	#Legacy ClientConfig.NUKE_HUD_FLASH: enables the white nuclear explosion HUD flash.
+	nukeHudFlash = true
+	#Legacy ClientConfig.NUKE_HUD_SHAKE: enables the nuclear explosion HUD shake.
+	nukeHudShake = true
+	#Legacy GeneralConfig 1.22_enableCrosshairs: shows custom HBM crosshairs when an NTM gun is held.
+	enableCrosshairs = true
+	#Legacy ClientConfig.DODD_RBMK_DIAGNOSTIC: enables crosshair look overlays for migrated blocks, items, and entities.
+	legacyLookOverlay = true
+	#Modernized ClientConfig.SHOW_BLOCK_META_OVERLAY: shows registry id and BlockState properties for the block under the crosshair.
+	showBlockStateOverlay = false
+
+[animations]
+	#Legacy ClientConfig.GUN_ANIMATION_SPEED: divides legacy item/gun animation keyframe durations. Values above 1 play faster.
+	#Range: 0.001 ~ 100.0
+	gunAnimationSpeed = 1.0
+
+[effects]
+	#Enables the warp_world shader shockwave that follows nuclear shock fronts.
+	nukeWarpShockwave = true
+	#Multiplier for the warp_world nuclear shockwave distortion intensity.
+	#Range: 0.0 ~ 8.0
+	nukeWarpShockwaveIntensity = 1.75
+	#Horizontal sphere segments used by the warp_world nuclear shockwave mesh.
+	#Range: 12 ~ 96
+	nukeWarpShockwaveMeshSegments = 48
+	#Debug only: renders a visible wireframe over the nuclear warp shockwave to verify the API/render pass is firing.
+	debugNukeWarpShockwaveWireframe = false
+	#Legacy ClientConfig.COOLING_TOWER_PARTICLES: enables steam plume particles for active cooling towers.
+	coolingTowerParticles = true
+
+[rendering]
+	#Enables the source-backed safe OBJ GPU mesh cache for world renderers without shader packs. Hardware instancing/MDI still require their explicit experimental switches.
+	safeObjStaticBatching = true
+	#Modernized render pipeline: enables the experimental OBJ GPU backend once a real backend is available. CPU fallback remains authoritative.
+	experimentalGpuBackend = false
+	#Modernized render pipeline: enables static OBJ part instancing. Experimental; keep disabled by default until packaged-jar rendering is validated.
+	experimentalInstancing = false
+	#Modernized render pipeline: orphan the OBJ instancing instance VBO before uploading per-frame instance data to avoid driver stalls.
+	instanceVboOrphanBeforeUpload = true
+	#Modernized render pipeline: enables experimental multi-draw indirect batching for eligible instanced OBJ parts when the GPU supports it.
+	experimentalMdi = false
+	#Modernized render pipeline: enables experimental ray-cache occlusion culling for eligible visible machine block entity renderers.
+	experimentalOcclusionCulling = false
+	#Modernized render pipeline: enables the future Iris/Oculus ExtendedShader companion path once companion meshes are wired.
+	experimentalIrisExtendedShaderPath = false
+	#Disables experimental GPU/instancing paths while Iris/Oculus shader packs are active until a compatible companion path exists.
+	disableGpuBackendWithShaders = true
+
+[tooltips]
+	#Legacy ClientConfig.ITEM_TOOLTIP_SHOW_OREDICT: shows modern item tags in advanced item tooltips.
+	showItemTags = true
+	#Legacy ClientConfig.ITEM_TOOLTIP_SHOW_CUSTOM_NUKE: shows custom nuke stage contribution lines for items used by the custom nuke.
+	showCustomNukeTooltips = true
+
+[jei]
+	#Legacy ClientConfig.NEI_HIDE_SECRETS: hides secret blueprint-pool machine recipes from JEI display.
+	hideSecretRecipes = true
+

@@ -1,5 +1,6 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "45_diplomacy_security"
 	group: "1000000000000005"
@@ -9,6 +10,8 @@
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3012000000000009"]
 			description: [
 				"{industrial_frontier.quest.diplomacy.intro.desc.1}"
 				"{industrial_frontier.quest.diplomacy.intro.desc.2}"
@@ -16,13 +19,6 @@
 			]
 			icon: "minecraft:shield"
 			id: "3045000000000001"
-			rewards: [{
-				id: "5045000000000001"
-				type: "xp"
-				xp: 25
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.diplomacy.intro.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -31,8 +27,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3045000000000001"]
@@ -43,11 +41,6 @@
 			]
 			icon: "minecraft:clock"
 			id: "3045000000000002"
-			rewards: [{
-				id: "5045000000000002"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.diplomacy.epoch.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -56,8 +49,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.epoch.title}"
-			x: 3.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 0d
 		}
 		{
 			dependencies: ["3045000000000002"]
@@ -68,11 +63,6 @@
 			]
 			icon: "minecraft:paper"
 			id: "3045000000000003"
-			rewards: [{
-				id: "5045000000000003"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.diplomacy.reputation.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -81,8 +71,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.reputation.title}"
-			x: 6.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: ["3045000000000002"]
@@ -93,11 +85,6 @@
 			]
 			icon: "minecraft:player_head"
 			id: "3045000000000004"
-			rewards: [{
-				id: "5045000000000004"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.diplomacy.affiliation.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -106,8 +93,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.affiliation.title}"
-			x: 6.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
 			dependencies: [
@@ -121,11 +110,6 @@
 			]
 			icon: "minecraft:spyglass"
 			id: "3045000000000005"
-			rewards: [{
-				id: "5045000000000005"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.diplomacy.operation.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -134,8 +118,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.operation.title}"
-			x: 9.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 0d
 		}
 		{
 			dependencies: ["3045000000000005"]
@@ -146,11 +132,6 @@
 			]
 			icon: "minecraft:writable_book"
 			id: "3045000000000006"
-			rewards: [{
-				id: "5045000000000006"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.diplomacy.treaty.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -159,8 +140,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.treaty.title}"
-			x: 12.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: -1d
 		}
 		{
 			dependencies: ["3045000000000005"]
@@ -171,11 +154,6 @@
 			]
 			icon: "minecraft:chest"
 			id: "3045000000000007"
-			rewards: [{
-				id: "5045000000000007"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.diplomacy.loot.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -184,8 +162,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.loot.title}"
-			x: 12.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 1d
 		}
 		{
 			dependencies: [
@@ -199,12 +179,6 @@
 			]
 			icon: "minecraft:golden_apple"
 			id: "3045000000000008"
-			rewards: [{
-				id: "5045000000000008"
-				type: "xp"
-				xp: 25
-			}]
-			shape: "diamond"
 			subtitle: "{industrial_frontier.quest.diplomacy.recovery.subtitle}"
 			tags: ["diplomacy"]
 			tasks: [{
@@ -213,8 +187,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.diplomacy.recovery.title}"
-			x: 15.0d
-			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 10d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.diplomacy.subtitle}"]

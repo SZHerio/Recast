@@ -1,0 +1,23 @@
+{
+  "text.configuration.error.character_value_empty": "Поле символа не может быть пустым!",
+  "text.configuration.error.nan": "Значение «%s» не является числом!",
+  "text.configuration.error.num_bounds": "Значение «%s» не входит в интервал <%s;%s>!",
+  "text.configuration.error.pattern_mismatch": "Значение «%s» не соответствует шаблону \\%s\\!",
+  "text.configuration.screen.color.alpha": "Альфа-канал: %s",
+  "text.configuration.screen.color.blue": "Синий: %s",
+  "text.configuration.screen.color.green": "Зелёный: %s",
+  "text.configuration.screen.color.red": "Красный: %s",
+  "text.configuration.screen.color_dialog": "Выбор цвета",
+  "text.configuration.screen.dialog.cancel": "Отмена",
+  "text.configuration.screen.dialog.confirm": "Подтвердить",
+  "text.configuration.screen.select_config": "Выберите конфигурацию",
+  "text.configuration.value.add_element": "Добавить элемент",
+  "text.configuration.value.back": "Назад",
+  "text.configuration.value.edit": "Изменить",
+  "text.configuration.value.false": "Нет",
+  "text.configuration.value.revert.changes": "Отменить изменения",
+  "text.configuration.value.revert.changes.dialog": "Отменить все внесённые изменения?",
+  "text.configuration.value.revert.default": "Восстановить значения по умолчанию",
+  "text.configuration.value.revert.default.dialog": "Восстановить все значения конфигурации по умолчанию?",
+  "text.configuration.value.true": "Да"
+}

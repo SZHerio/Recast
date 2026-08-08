@@ -1,0 +1,22 @@
+{
+  "name": "Air Cannon",
+  "icon": "pneumaticcraft:air_cannon",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Air Cannon/$ перебрасывает предметы по воздуху на значительное расстояние, используя $(l:base_concepts/pressure)сжатый воздух/$ как метательный заряд.$(p)Для наведения понадобится $(l:tools/gps_tool)GPS-маркер/$. После настройки $(item)Air Cannon/$ маркер можно извлечь и использовать повторно.$(p)$(#f00)Импульс редстоуна/$ заставляет устройство выстрелить."
+    },
+    {
+      "type": "text",
+      "title": "Улучшения",
+      "text": "С $(l:base_concepts/upgrades#dispenser)улучшением раздатчика/$ $(item)Air Cannon/$ работает как обычный $(item)раздатчик/$ для некоторых предметов, например TNT или огненных зарядов.$(p)С $(l:base_concepts/upgrades#entity_tracker)улучшением отслеживания существ/$ $(item)Air Cannon/$ перестаёт запускать предметы из инвентаря и вместо этого выстреливает ближайшим существом — в том числе вами!"
+    },
+    {
+      "type": "crafting",
+      "text": "Создание Air Cannon",
+      "recipe": "pneumaticcraft:air_cannon"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Набор улучшения умного сундука",
+  "icon": "pneumaticcraft:smart_chest_kit",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Набор улучшения умного сундука/$ превращает любой деревянный или $(l:machines/reinforced_chest)укреплённый сундук/$ в $(l:machines/smart_chest)умный сундук/$ прямо на месте и сохраняет его содержимое. Нажмите по подходящему сундуку $(thing)Shift + ПКМ/$ с набором в руке."
+    },
+    {
+      "type": "text",
+      "text": "$(p)Если улучшить $(item)укреплённый сундук/$, он вернётся в виде предмета. При улучшении $(item)деревянного сундука/$ исходный сундук также выпадет."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание набора улучшения умного сундука.$(p)Умный сундук для рецепта должен быть совершенно пуст и не настроен.",
+      "recipe": "pneumaticcraft:smart_chest_kit"
+    }
+  ]
+}

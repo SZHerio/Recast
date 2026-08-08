@@ -1,0 +1,4 @@
+Функции API parallel:
+parallel.waitForAny( function1, function2, ... )
+parallel.waitForAll( function1, function2, ... )
+Эти методы позволяют удобно выполнять несколько функций Lua одновременно.

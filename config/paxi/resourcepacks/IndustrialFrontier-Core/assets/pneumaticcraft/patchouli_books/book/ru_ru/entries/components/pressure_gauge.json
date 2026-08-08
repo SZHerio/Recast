@@ -1,0 +1,17 @@
+{
+  "name": "Датчик давления",
+  "icon": "pneumaticcraft:pressure_gauge",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Компонент для создания других устройств. Сам по себе не используется."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание датчика давления",
+      "recipe": "pneumaticcraft:pressure_gauge"
+    }
+  ]
+}

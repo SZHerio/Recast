@@ -1,0 +1,168 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = drippy_loading_overlay
+  render_custom_elements_behind_vanilla = false
+  is_enabled = true
+  randommode = true
+  randomgroup = recast_loading
+  randomonlyfirsttime = false
+  layout_index = 2
+}
+
+customization {
+  action = autoscale
+  basewidth = 854
+  baseheight = 480
+}
+
+menu_background {
+  image_path = [source:local]/config/fancymenu/assets/loading_launch.png
+  slide = false
+  repeat_texture = false
+  background_type = image
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = true
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/logo.png
+  repeat_texture = false
+  nine_slice_texture = false
+  element_type = image
+  instance_identifier = recast_loading_launch_logo
+  anchor_point = top-centered
+  x = -180
+  y = 20
+  width = 360
+  height = 135
+  stay_on_screen = true
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/ui/panel.png
+  repeat_texture = false
+  nine_slice_texture = true
+  nine_slice_texture_border_x = 12
+  nine_slice_texture_border_y = 12
+  element_type = image
+  instance_identifier = recast_loading_launch_panel
+  anchor_point = bottom-centered
+  x = -350
+  y = -148
+  width = 700
+  height = 128
+  stay_on_screen = true
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.loading.launch.title"}}
+  source_mode = direct
+  shadow = true
+  case_mode = upper
+  auto_line_wrapping = false
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_loading_launch_title
+  anchor_point = bottom-centered
+  x = -320
+  y = -132
+  width = 640
+  height = 14
+  stay_on_screen = true
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.loading.launch.tip"}}
+  source_mode = direct
+  shadow = true
+  auto_line_wrapping = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_loading_launch_tip
+  anchor_point = bottom-centered
+  x = -320
+  y = -108
+  width = 640
+  height = 32
+  stay_on_screen = true
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/ui/loading_frame.png
+  repeat_texture = false
+  nine_slice_texture = true
+  nine_slice_texture_border_x = 8
+  nine_slice_texture_border_y = 5
+  element_type = image
+  instance_identifier = recast_loading_launch_frame
+  anchor_point = bottom-centered
+  x = -324
+  y = -63
+  width = 648
+  height = 18
+  stay_on_screen = true
+}
+
+element {
+  color = #FFE8792B
+  element_type = drippy_vanilla_bar
+  instance_identifier = recast_loading_launch_bar
+  anchor_point = bottom-centered
+  x = -316
+  y = -58
+  width = 632
+  height = 8
+  stay_on_screen = true
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.loading.status"}}
+  source_mode = direct
+  shadow = true
+  auto_line_wrapping = false
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_loading_launch_status
+  anchor_point = bottom-centered
+  x = -316
+  y = -40
+  width = 260
+  height = 12
+  stay_on_screen = true
+}
+
+element {
+  source = {"placeholder":"game_loading_progress"}
+  source_mode = direct
+  shadow = true
+  auto_line_wrapping = false
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_loading_launch_percent
+  anchor_point = bottom-centered
+  x = 256
+  y = -40
+  width = 60
+  height = 12
+  stay_on_screen = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_loading_launch_mojang_actions
+  [executable_block:recast_loading_launch_mojang_actions][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = mojang_logo
+  is_hidden = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = recast_loading_launch_progress_actions
+  [executable_block:recast_loading_launch_progress_actions][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = progress_bar
+  is_hidden = true
+}

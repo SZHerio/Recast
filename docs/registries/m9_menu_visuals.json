@@ -1,0 +1,202 @@
+{
+  "$schema": "../../authoring/schemas/m9_menu_visuals.schema.json",
+  "schema_version": 1,
+  "registry_id": "industrial_frontier:m9/menu_visuals_v2",
+  "build_id": "IF-M10-MENU-0001",
+  "status": "IMPLEMENTED_STATIC_UNTESTED",
+  "no_game_launch": true,
+  "translation_scope": "EXCLUDED_NO_FILES_TOUCHED",
+  "implementation": {
+    "minecraft": "1.20.1",
+    "loader": "Forge 47.4.22",
+    "fancymenu": "3.9.9",
+    "parallax_position_multiplier": 0.1,
+    "layout_path": "config/fancymenu/customization/recast_title.txt",
+    "builder_path": "tools/build_menu_visuals.py",
+    "validator_path": "tools/validate_menu_visuals.ps1",
+    "reference_canvas": {
+      "width": 854,
+      "height": 480
+    }
+  },
+  "art_direction": {
+    "name_ru": "Обитаемый орбитальный индустриальный фронтир",
+    "narrative_order": [
+      "planned_city",
+      "chemical_industry",
+      "rail_and_power_logistics",
+      "space_programme"
+    ],
+    "palette": [
+      "#14181C",
+      "#1E252B",
+      "#4A9CC7",
+      "#E6E9EC",
+      "#E8792B",
+      "#FFB05C"
+    ],
+    "ui_safe_zone": "LEFT_34_PERCENT_DARK_LOW_DETAIL",
+    "forbidden_visuals": [
+      "embedded_localized_text",
+      "random_neon_cyberpunk",
+      "steampunk_brass_overload",
+      "post_apocalyptic_wasteland",
+      "recognizable_third_party_assets"
+    ]
+  },
+  "layers": [
+    {
+      "id": "base",
+      "source_path": "brand_source/menu_parallax_base_v2.png",
+      "runtime_path": "config/fancymenu/assets/menu/base.png",
+      "mode": "RGB",
+      "width": 2048,
+      "height": 1152,
+      "parallax": false,
+      "intensity_x": 0.0,
+      "intensity_y": 0.0,
+      "layout": {
+        "kind": "MENU_BACKGROUND"
+      }
+    },
+    {
+      "id": "mid",
+      "source_path": "brand_source/menu_parallax_mid_v2.png",
+      "runtime_path": "config/fancymenu/assets/menu/mid.png",
+      "mode": "RGBA",
+      "width": 2048,
+      "height": 1152,
+      "parallax": true,
+      "intensity_x": 0.18,
+      "intensity_y": 0.1,
+      "maximum_cursor_offset_x": 7.69,
+      "maximum_cursor_offset_y": 2.4,
+      "layout": {
+        "instance_identifier": "recast_title_midground",
+        "x": -24,
+        "y": -16,
+        "width": 902,
+        "height": 512,
+        "stay_on_screen": false,
+        "invert_parallax": false
+      }
+    },
+    {
+      "id": "near",
+      "source_path": "brand_source/menu_parallax_near_v2.png",
+      "runtime_path": "config/fancymenu/assets/menu/near.png",
+      "mode": "RGBA",
+      "width": 2048,
+      "height": 1152,
+      "parallax": true,
+      "intensity_x": 0.3,
+      "intensity_y": 0.16,
+      "maximum_cursor_offset_x": 12.81,
+      "maximum_cursor_offset_y": 3.84,
+      "layout": {
+        "instance_identifier": "recast_title_foreground",
+        "x": -28,
+        "y": -18,
+        "width": 910,
+        "height": 516,
+        "stay_on_screen": false,
+        "invert_parallax": false
+      }
+    }
+  ],
+  "ui": {
+    "logo": {
+      "source_path": "brand_source/title_lockup_v2.png",
+      "runtime_path": "config/fancymenu/assets/logo.png",
+      "width": 1536,
+      "height": 512,
+      "required_text": [
+        "MINECRAFT",
+        "RECAST"
+      ],
+      "parallax": false
+    },
+    "panel": {
+      "path": "config/fancymenu/assets/ui/panel.png",
+      "width": 96,
+      "height": 96,
+      "nine_slice_border_x": 12,
+      "nine_slice_border_y": 12
+    },
+    "large_buttons": {
+      "size": [
+        48,
+        24
+      ],
+      "nine_slice_border_x": 6,
+      "nine_slice_border_y": 6,
+      "states": [
+        "normal",
+        "hover",
+        "inactive"
+      ],
+      "hover_non_color_cue": "LEFT_CHEVRON_AND_LOWER_RAIL"
+    },
+    "compact_buttons": {
+      "size": [
+        24,
+        24
+      ],
+      "roles": [
+        "language",
+        "accessibility"
+      ],
+      "states": [
+        "normal",
+        "hover",
+        "inactive"
+      ]
+    },
+    "copyright_branding_visible": true,
+    "interactive_elements_have_parallax": false,
+    "build_label": {
+      "anchor_point": "top-left",
+      "x": 34,
+      "y": 442,
+      "inside_panel": true
+    }
+  },
+  "icon": {
+    "source_path": "brand_source/orbital_foundry_icon_v2.png",
+    "concept": "ORBITAL_FOUNDRY",
+    "runtime_sizes": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "pack_icon_path": "pack_icon.png",
+    "window_icon_paths": [
+      "config/fancymenu/assets/icon_16.png",
+      "config/fancymenu/assets/icon_32.png"
+    ]
+  },
+  "acceptance": {
+    "static_preview_path": "docs/visual_previews/recast_title_v2_center.png",
+    "static_cursor_extremes_preview_path": "docs/visual_previews/recast_title_v2_cursor_extremes.png",
+    "static_button_states_preview_path": "docs/visual_previews/recast_title_v2_button_states.png",
+    "required_runtime_checks": [
+      "cursor_motion_direction_and_amplitude",
+      "no_exposed_layer_edges",
+      "button_hover_alignment",
+      "keyboard_navigation",
+      "copyright_readability",
+      "gui_scale_1_2_3_4",
+      "aspect_ratio_4_3_16_10_16_9_21_9"
+    ],
+    "owner_runtime_test_required": true
+  },
+  "official_references": [
+    "https://docs.fancymenu.net/docs/en-US/parallax",
+    "https://docs.fancymenu.net/docs/en-US/menu-backgrounds",
+    "https://docs.fancymenu.net/docs/en-US/elements",
+    "https://docs.fancymenu.net/docs/en-US/nine-slicing-and-tiling",
+    "https://docs.fancymenu.net/docs/en-US/vanilla-elements"
+  ]
+}

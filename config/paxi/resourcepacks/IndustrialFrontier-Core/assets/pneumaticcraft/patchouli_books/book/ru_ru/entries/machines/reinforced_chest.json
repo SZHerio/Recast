@@ -1,0 +1,17 @@
+{
+  "name": "Укреплённый сундук",
+  "icon": "pneumaticcraft:reinforced_chest",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Укреплённый сундук/$ вмещает 36 стопок, обладает взрывоустойчивостью обсидиана и сохраняет содержимое после разрушения."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание укреплённого сундука",
+      "recipe": "pneumaticcraft:reinforced_chest"
+    }
+  ]
+}

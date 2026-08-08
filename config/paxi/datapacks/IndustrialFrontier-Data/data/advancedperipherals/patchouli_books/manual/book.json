@@ -1,0 +1,9 @@
+{
+  "name": "Advanced Peripherals",
+  "landing_text": "Это руководство знакомит с основными возможностями всех периферийных устройств мода.$(p)Дополнительные сведения приведены в $(9)$(l:https://docs.intelligence-modding.de/)официальной документации$(/l)$().",
+  "book_texture": "patchouli:textures/gui/book_blue.png",
+  "model": "advancedperipherals:book",
+  "creative_tab": "advancedperipheralstab",
+  "version": 1,
+  "use_resource_pack": true
+}

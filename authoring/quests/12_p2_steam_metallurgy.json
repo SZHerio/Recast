@@ -8,63 +8,63 @@
     {
       "alias": "if.quest.p2.intro",
       "engine_id": "3012000000000001",
-      "purpose": "Why the furnace stops being enough",
+      "purpose": "Объясняет, почему печи уже мало, когда сборка требует настоящей металлургии.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p2.carbon",
       "engine_id": "3012000000000002",
-      "purpose": "Coal here is not only fuel",
+      "purpose": "Показывает, что углерод — это не только топливо, но и материал.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p2.boiler",
       "engine_id": "3012000000000003",
-      "purpose": "Water, pressure and one irreversible mistake",
+      "purpose": "Вводит воду, давление и последствия плохой сборки.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p2.steam_machine",
       "engine_id": "3012000000000004",
-      "purpose": "Interface, sides and start-up",
+      "purpose": "Учит раскладке интерфейса, сторонам и порядку запуска.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p2.steel",
       "engine_id": "3012000000000005",
-      "purpose": "Your first alloy that vanilla does not have",
+      "purpose": "Вводит сталь как первый сплав, на котором потом держится вся сборка.",
       "task_kind": "tag",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p2.plates",
       "engine_id": "3012000000000006",
-      "purpose": "Two roads to one form",
+      "purpose": "Показывает два рабочих пути к одной форме.",
       "task_kind": "tag",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p2.brass",
       "engine_id": "3012000000000007",
-      "purpose": "Cu₃Zn, not \"roughly equal parts\"",
+      "purpose": "Даёт точный состав латуни, который нужно запомнить.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p2.ore_route",
       "engine_id": "3012000000000008",
-      "purpose": "Why the cheap route is closed",
+      "purpose": "Объясняет, почему дешёвый путь здесь намеренно закрыт.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p2.exit",
       "engine_id": "3012000000000009",
-      "purpose": "Steam hits a ceiling",
+      "purpose": "Закрывает паровую эпоху и показывает, зачем дальше нужно электричество.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

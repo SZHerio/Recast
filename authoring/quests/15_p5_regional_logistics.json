@@ -8,98 +8,98 @@
     {
       "alias": "if.quest.p5.intro",
       "engine_id": "3015000000000001",
-      "purpose": "What changes in the fifth epoch",
+      "purpose": "Объясняет, что меняется, когда логистика становится региональной системой.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p5.bulk_processing",
       "engine_id": "3015000000000002",
-      "purpose": "One owner of multiplication",
+      "purpose": "Держит умножение под одним управляемым узлом.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p5.ae2_entry",
       "engine_id": "3015000000000003",
-      "purpose": "Storage, not autocrafting",
+      "purpose": "Сначала вводит AE2 как склад, а не как магию автоматизации.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p5.ae2_channels",
       "engine_id": "3015000000000004",
-      "purpose": "The first failure everyone meets",
+      "purpose": "Показывает первую ошибку, с которой сталкивается каждый в AE2.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p5.ae2_patterns",
       "engine_id": "3015000000000005",
-      "purpose": "The network learns what goes where",
+      "purpose": "Показывает, как сеть учится, что и куда идти.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p5.ae2_autocraft",
       "engine_id": "3015000000000006",
-      "purpose": "HV, not P5",
+      "purpose": "Открывает автокрафт в правильный момент, не раньше.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p5.ae2_recovery",
       "engine_id": "3015000000000007",
-      "purpose": "Fault tolerance step by step",
+      "purpose": "Пошагово учит отказоустойчивости.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p5.freight_rail",
       "engine_id": "3015000000000008",
-      "purpose": "Create and Steam 'n' Rails",
+      "purpose": "Показывает рельсы как часть грузовой системы, а не как единственный ответ.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p5.water_route",
       "engine_id": "3015000000000009",
-      "purpose": "Tug, barge, dock",
+      "purpose": "Показывает водный транспорт как настоящий маршрут с точками погрузки.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p5.transit_line",
       "engine_id": "3015000000000010",
-      "purpose": "MTR carries people, not crates",
+      "purpose": "Объясняет транспорт как пассажирскую инфраструктуру, а не грузовую автоматизацию.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p5.last_mile",
       "engine_id": "3015000000000011",
-      "purpose": "From the station to the door",
+      "purpose": "Закрывает последний участок пути от станции до базы.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p5.reserve",
       "engine_id": "3015000000000012",
-      "purpose": "A store that survives an outage",
+      "purpose": "Показывает запас, который переживает отключение.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p5.contracts",
       "engine_id": "3015000000000013",
-      "purpose": "Flow and closure instead of a one-off delivery",
+      "purpose": "Показывает контракты как поток и завершение, а не разовую доставку.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p5.balance",
       "engine_id": "3015000000000014",
-      "purpose": "Why you need both",
+      "purpose": "Объясняет, почему нужны и склад, и транспорт.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

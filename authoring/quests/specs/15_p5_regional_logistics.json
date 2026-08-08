@@ -3,7 +3,7 @@
   "file": "15_p5_regional_logistics",
   "chapter_id": "2015000000000001",
   "group_id": "1000000000000004",
-  "icon": "create:track",
+  "icon": "industrial_frontier:textures/gui/icons/epochs/p5.png",
   "order": 6,
   "tag": "mainline",
   "optional": false,
@@ -60,7 +60,7 @@
       }
     },
     {
-      "slug": "ae2_entry", "x": 6, "y": -3, "icon": "ae2:energy_acceptor", "deps": ["bulk_processing"],
+      "slug": "ae2_entry", "x": 6, "y": -3, "icon": "industrial_frontier:textures/gui/icons/process/ae2/digital_material_entry.png", "deps": ["bulk_processing"],
       "item": "ae2:energy_acceptor",
       "ru": {
         "title": "Первая ME-сеть",

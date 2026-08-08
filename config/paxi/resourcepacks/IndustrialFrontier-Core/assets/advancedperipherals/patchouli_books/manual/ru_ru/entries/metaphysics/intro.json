@@ -1,0 +1,12 @@
+{
+  "name": "Введение",
+  "icon": "advancedperipherals:weak_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Этот мир скрывает от вас множество тайн. Вы чувствуете: даже простая черепаха способна стать могучим инструментом управления реальностью. Нужно лишь поместить внутрь нечто настоящее. Что-то вроде… души?"
+    }
+  ]
+}

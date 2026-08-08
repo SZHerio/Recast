@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "status": "DESIGN_ONLY_NON_EXECUTABLE",
-  "purpose": "A technical, non-story engineer used only to validate conditions, localisation, safe intent routing, and a deliberately non-profitable trade.",
+  "purpose": "Технический, не сюжетный инженер, используемый только для проверки условий, локализации, безопасной маршрутизации намерений и заведомо неприбыльной торговли.",
   "allowed_capabilities": [
-    "read the mirrored if_epoch value",
-    "open or point to the Help chapter",
-    "submit an idempotent industrial_frontier:sandbox_ping intent",
-    "offer one value-neutral diagnostic trade after the exact export format is known"
+    "считывать отражённое значение if_epoch",
+    "открывать или указывать на главу Help",
+    "отправлять идемпотентное намерение industrial_frontier:sandbox_ping",
+    "предлагать одну нейтральную диагностическую сделку после того, как станет известен точный формат экспорта"
   ],
   "forbidden_commands": [
     "/give",
@@ -19,12 +19,12 @@
     "arbitrary command strings from dialogue text"
   ],
   "activation_gate": [
-    "Install the exact CurseForge Easy NPC Core and Config UI pair selected for 1.20.1.",
-    "Owner exports one harmless NPC from the official GUI.",
-    "Codex audits the exact exported format and command surface.",
-    "Threat Director intent validation exists.",
-    "Russian strings and value-neutral trade pass user review."
+    "Установлены точные версии CurseForge Easy NPC Core и Config UI, выбранные для 1.20.1.",
+    "Владелец экспортирует одного безвредного NPC через официальный GUI.",
+    "Codex проверяет точный формат экспорта и поверхность команд.",
+    "Существует валидация намерений Threat Director.",
+    "Русские строки и нейтральная торговля проходят проверку пользователя."
   ],
   "story_dialogue": "NOT_AUTHORED_AT_M1",
-  "combat_ai": "NOT_ALLOWED; mass TaCZ combat belongs to TACZ: NPCs"
+  "combat_ai": "НЕ РАЗРЕШЕНО; массовые бои TaCZ относятся к TACZ: NPCs"
 }

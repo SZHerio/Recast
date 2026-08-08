@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Условие дрона: улучшения»",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_drone_upgrades_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Виджет $(thing)Условие дрона: улучшения/$ проверяет количество улучшений, установленных в этом $(l:tools/drone)дроне/$. Укажите нужные улучшения одним или несколькими подключёнными виджетами $(l:programming/item_filter)Фильтр предметов/$, настроенными на соответствующие предметы. Без фильтров подсчитываются все установленные улучшения любых типов."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_drone_upgrades_piece.png"
+      ],
+      "text": "$(italic)Виджет «Условие дрона: улучшения»/$"
+    }
+  ]
+}

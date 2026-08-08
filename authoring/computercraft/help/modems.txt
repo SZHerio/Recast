@@ -1,0 +1,12 @@
+Проводные и беспроводные модемы — периферийные устройства CraftOS. Введите "help peripheral", чтобы узнать, как подключаться к периферийным устройствам через API peripheral. Когда модем подключён, peripheral.getType() возвращает "modem".
+
+Методы модемов:
+open( channel )
+isOpen( channel )
+close( channel )
+closeAll()
+transmit( channel, replyChannel, message )
+isWireless()
+
+События модемов:
+"modem_message" — на открытом канале получено сообщение. Аргументы: name, channel, replyChannel, message, distance

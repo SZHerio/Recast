@@ -1,7 +1,7 @@
 ﻿{
     "schema_version":  1,
     "build_id":  "IF-M2-0001",
-    "generated_at":  "2026-08-03T22:08:25.8479173Z",
+    "generated_at":  "2026-08-04T20:42:59.5087670Z",
     "providers":  [
                       {
                           "mod_id":  "adchimneys",
@@ -139,6 +139,21 @@
                           "origin":  "carryon-forge-1.20.1-2.1.2.7.jar"
                       },
                       {
+                          "mod_id":  "cb_microblock",
+                          "version":  "3.3.0.159",
+                          "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar"
+                      },
+                      {
+                          "mod_id":  "cb_multipart",
+                          "version":  "3.3.0.159",
+                          "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar"
+                      },
+                      {
+                          "mod_id":  "cb_multipart_minecraft",
+                          "version":  "3.3.0.159",
+                          "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar"
+                      },
+                      {
                           "mod_id":  "citadel",
                           "version":  "2.6.3",
                           "origin":  "citadel-2.6.3-1.20.1.jar"
@@ -147,6 +162,11 @@
                           "mod_id":  "cloth_config",
                           "version":  "11.1.136",
                           "origin":  "cloth-config-11.1.136-forge.jar"
+                      },
+                      {
+                          "mod_id":  "codechickenlib",
+                          "version":  "4.4.0.528",
+                          "origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar"
                       },
                       {
                           "mod_id":  "computercraft",
@@ -187,6 +207,11 @@
                           "mod_id":  "creatingspace",
                           "version":  "1.20.1_1.7.13",
                           "origin":  "creatingspace-1.20.1-1.7.13.jar"
+                      },
+                      {
+                          "mod_id":  "cristellib",
+                          "version":  "1.1.6",
+                          "origin":  "cristellib-1.1.6-forge.jar"
                       },
                       {
                           "mod_id":  "domum_ornamentum",
@@ -314,6 +339,11 @@
                           "origin":  "gtec-1.20.1-0.2.2.jar"
                       },
                       {
+                          "mod_id":  "gtnn",
+                          "version":  "1.3.9",
+                          "origin":  "gtnn-1.20.1-1.3.9.jar"
+                      },
+                      {
                           "mod_id":  "guideme",
                           "version":  "20.1.15",
                           "origin":  "guideme-20.1.15.jar"
@@ -367,6 +397,11 @@
                           "mod_id":  "konkrete",
                           "version":  "1.8.0",
                           "origin":  "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar"
+                      },
+                      {
+                          "mod_id":  "kotlinforforge",
+                          "version":  "4.20.0",
+                          "origin":  "gtnn-1.20.1-1.3.9.jar!/META-INF/jarjar/kotlinforforge-4.20.0.jar!/META-INF/jarjar/kffmod-4.20.0.jar"
                       },
                       {
                           "mod_id":  "kubejs",
@@ -449,6 +484,11 @@
                           "origin":  "gtmoldraw-3.3.0.jar"
                       },
                       {
+                          "mod_id":  "moogs_structures",
+                          "version":  "3.0.2",
+                          "origin":  "moogs_structures-1.20-1.20.4-3.0.2-forge.jar"
+                      },
+                      {
                           "mod_id":  "moonlight",
                           "version":  "1.20-2.16.34",
                           "origin":  "moonlight-1.20-2.16.34-forge.jar"
@@ -484,6 +524,11 @@
                           "origin":  "Paxi-1.20-Forge-4.0.jar"
                       },
                       {
+                          "mod_id":  "philipsruins",
+                          "version":  "5.6",
+                          "origin":  "PhilipsRuins1.20.1-5.7.jar"
+                      },
+                      {
                           "mod_id":  "playeranimator",
                           "version":  "1.0.2-rc1+1.20",
                           "origin":  "player-animation-lib-forge-1.0.2-rc1+1.20.jar"
@@ -509,6 +554,31 @@
                           "origin":  "powergrid-mc1.20.1-0.5.5.1.jar"
                       },
                       {
+                          "mod_id":  "projectred_core",
+                          "version":  "4.21.0",
+                          "origin":  "ProjectRed-1.20.1-4.21.0-core.jar"
+                      },
+                      {
+                          "mod_id":  "projectred_fabrication",
+                          "version":  "4.21.0",
+                          "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar"
+                      },
+                      {
+                          "mod_id":  "projectred_illumination",
+                          "version":  "4.21.0",
+                          "origin":  "ProjectRed-1.20.1-4.21.0-illumination.jar"
+                      },
+                      {
+                          "mod_id":  "projectred_integration",
+                          "version":  "4.21.0",
+                          "origin":  "ProjectRed-1.20.1-4.21.0-integration.jar"
+                      },
+                      {
+                          "mod_id":  "projectred_transmission",
+                          "version":  "4.21.0",
+                          "origin":  "ProjectRed-1.20.1-4.21.0-transmission.jar"
+                      },
+                      {
                           "mod_id":  "questsadditions",
                           "version":  "1.4.7",
                           "origin":  "questsadditions-1.4.7.jar"
@@ -527,6 +597,11 @@
                           "mod_id":  "rechiseledcreate",
                           "version":  "1.1.1",
                           "origin":  "rechiseledcreate-1.1.1-forge-mc1.20.jar"
+                      },
+                      {
+                          "mod_id":  "repurposed_structures",
+                          "version":  "7.1.24+1.20.1-forge",
+                          "origin":  "repurposed_structures-7.1.24+1.20.1-forge.jar"
                       },
                       {
                           "mod_id":  "resourcefulconfig",
@@ -574,6 +649,11 @@
                           "origin":  "sodiumoptionsapi-forge-1.0.10-1.20.1.jar"
                       },
                       {
+                          "mod_id":  "steamadditions",
+                          "version":  "1.5.1",
+                          "origin":  "steamadditions-1.5.2.jar"
+                      },
+                      {
                           "mod_id":  "structurize",
                           "version":  "1.20.1-1.0.816",
                           "origin":  "structurize-1.20.1-1.0.816.jar"
@@ -594,6 +674,11 @@
                           "origin":  "supplementaries-1.20-3.1.43-forge.jar"
                       },
                       {
+                          "mod_id":  "t_and_t",
+                          "version":  "1.10.2",
+                          "origin":  "Towns-and-Towers-1.12-Fabric+Forge.jar"
+                      },
+                      {
                           "mod_id":  "tacz",
                           "version":  "1.1.8-hotfix",
                           "origin":  "tacz-1.20.1-1.1.8-hotfix.jar"
@@ -607,6 +692,11 @@
                           "mod_id":  "terrablender",
                           "version":  "3.0.1.10",
                           "origin":  "TerraBlender-forge-1.20.1-3.0.1.10.jar"
+                      },
+                      {
+                          "mod_id":  "toms_storage",
+                          "version":  "1.7.1",
+                          "origin":  "toms_storage-1.20-1.7.1.jar"
                       },
                       {
                           "mod_id":  "vapourware",
@@ -1256,6 +1346,116 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "cb_microblock",
+                                 "dependency_mod_id":  "cb_multipart",
+                                 "required_range":  "[3.3.0.159]",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "exact 3.3.0.159"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_microblock",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0,5.0.0)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_microblock",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_microblock",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_multipart",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0,5.0.0)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_multipart",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_multipart",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_multipart_minecraft",
+                                 "dependency_mod_id":  "cb_multipart",
+                                 "required_range":  "[3.3.0.159]",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "exact 3.3.0.159"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_multipart_minecraft",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0,5.0.0)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_multipart_minecraft",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "cb_multipart_minecraft",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
                                  "owner_mod_id":  "citadel",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[47.0.34,)",
@@ -1274,6 +1474,26 @@
                                  "origin":  "cloth-config-11.1.136-forge.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "codechickenlib",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "codechickenlib",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
                              },
                              {
                                  "owner_mod_id":  "computercraft",
@@ -1486,6 +1706,26 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "cristellib",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "cristellib-1.1.6-forge.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "cristellib",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "cristellib-1.1.6-forge.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "easy_npc",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[47.4.10,)",
@@ -1691,6 +1931,16 @@
                                  "required_range":  "[47.0.0,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
                                  "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-265.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
@@ -1701,27 +1951,7 @@
                                  "required_range":  "[47.0.0,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "flywheel",
-                                 "dependency_mod_id":  "forge",
-                                 "required_range":  "[47.0.0,)",
-                                 "actual_version":  "47.4.22",
-                                 "status":  "SATISFIED",
                                  "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "flywheel",
-                                 "dependency_mod_id":  "forge",
-                                 "required_range":  "[47.0.0,)",
-                                 "actual_version":  "47.4.22",
-                                 "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -1741,27 +1971,17 @@
                                  "required_range":  "[47.0.0,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
                              {
                                  "owner_mod_id":  "flywheel",
-                                 "dependency_mod_id":  "minecraft",
-                                 "required_range":  "[1.20.1,1.20.2)",
-                                 "actual_version":  "1.20.1",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.0.0,)",
+                                 "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-265.jar",
-                                 "provider_origin":  "platform",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "flywheel",
-                                 "dependency_mod_id":  "minecraft",
-                                 "required_range":  "[1.20.1,1.20.2)",
-                                 "actual_version":  "1.20.1",
-                                 "status":  "SATISFIED",
-                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -1802,6 +2022,26 @@
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
                                  "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.5.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-265.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "flywheel",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.20.2)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.0-215.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -2196,6 +2436,36 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "gtnn",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtnn-1.20.1-1.3.9.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gtnn",
+                                 "dependency_mod_id":  "gtceu",
+                                 "required_range":  "[1.4.1,)",
+                                 "actual_version":  "7.5.3",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtnn-1.20.1-1.3.9.jar",
+                                 "provider_origin":  "gtceu-1.20.1-7.5.3.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "gtnn",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtnn-1.20.1-1.3.9.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "guideme",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[47.1.0,)",
@@ -2412,6 +2682,16 @@
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
                                  "origin":  "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "kotlinforforge",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.19.3,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "gtnn-1.20.1-1.3.9.jar!/META-INF/jarjar/kotlinforforge-4.20.0.jar!/META-INF/jarjar/kffmod-4.20.0.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -2666,6 +2946,16 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "mes",
+                                 "dependency_mod_id":  "moogs_structures",
+                                 "required_range":  "[1.0.0,)",
+                                 "actual_version":  "3.0.2",
+                                 "status":  "SATISFIED",
+                                 "origin":  "MoogsEndStructures-1.20-2.0.3.jar",
+                                 "provider_origin":  "moogs_structures-1.20-1.20.4-3.0.2-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "minecolonies",
                                  "dependency_mod_id":  "blockui",
                                  "required_range":  "[1.20.1-1.0.190-snapshot, )",
@@ -2766,6 +3056,16 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "moogs_structures",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "moogs_structures-1.20-1.20.4-3.0.2-forge.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "moonlight",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[43.0.0,)",
@@ -2804,6 +3104,16 @@
                                  "origin":  "MTR-forge-4.0.5+1.20.1.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "mvs",
+                                 "dependency_mod_id":  "moogs_structures",
+                                 "required_range":  "[1.0.0,)",
+                                 "actual_version":  "3.0.2",
+                                 "status":  "SATISFIED",
+                                 "origin":  "MoogsVoyagerStructures-1.20-5.0.8.jar",
+                                 "provider_origin":  "moogs_structures-1.20-1.20.4-3.0.2-forge.jar",
+                                 "reason":  "interval"
                              },
                              {
                                  "owner_mod_id":  "nuclearcraft",
@@ -2906,6 +3216,26 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "philipsruins",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "PhilipsRuins1.20.1-5.7.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "philipsruins",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,1.21)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "PhilipsRuins1.20.1-5.7.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "playeranimator",
                                  "dependency_mod_id":  "minecraft",
                                  "required_range":  "[1.20,)",
@@ -2931,26 +3261,6 @@
                                  "required_range":  "[1.0.0,2.0)",
                                  "actual_version":  "1.0.6-beta-266",
                                  "status":  "SATISFIED",
-                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
-                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ponder",
-                                 "dependency_mod_id":  "flywheel",
-                                 "required_range":  "[1.0.0,2.0)",
-                                 "actual_version":  "1.0.6-beta-266",
-                                 "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
-                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
-                                 "reason":  "interval"
-                             },
-                             {
-                                 "owner_mod_id":  "ponder",
-                                 "dependency_mod_id":  "flywheel",
-                                 "required_range":  "[1.0.0,2.0)",
-                                 "actual_version":  "1.0.6-beta-266",
-                                 "status":  "SATISFIED",
                                  "origin":  "NuclearCraft-1.20.1-1.2.33.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
                                  "reason":  "interval"
@@ -2967,11 +3277,31 @@
                              },
                              {
                                  "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
+                                 "dependency_mod_id":  "flywheel",
+                                 "required_range":  "[1.0.0,2.0)",
+                                 "actual_version":  "1.0.6-beta-266",
+                                 "status":  "SATISFIED",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "provider_origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/flywheel-forge-1.20.1-1.0.6-beta-266.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "ponder",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[47,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -2981,7 +3311,7 @@
                                  "required_range":  "[47,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3001,7 +3331,7 @@
                                  "required_range":  "[47,)",
                                  "actual_version":  "47.4.22",
                                  "status":  "SATISFIED",
-                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "origin":  "effortlessbuilding-1.20.1-3.11.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3011,7 +3341,7 @@
                                  "required_range":  "[1.20.1, 1.21)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
+                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3031,7 +3361,7 @@
                                  "required_range":  "[1.20.1, 1.21)",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "create-1.20.1-6.0.8.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar",
+                                 "origin":  "ponderjs-1.20.1-2.1.0.jar!/META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3113,6 +3443,276 @@
                                  "status":  "SATISFIED",
                                  "origin":  "powergrid-mc1.20.1-0.5.5.1.jar",
                                  "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_core",
+                                 "dependency_mod_id":  "cb_multipart",
+                                 "required_range":  "[3.3.0.+,)",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_core",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0.+,)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_core",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_core",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_fabrication",
+                                 "dependency_mod_id":  "cb_multipart",
+                                 "required_range":  "[3.3.0.+,)",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_fabrication",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0.+,)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_fabrication",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_fabrication",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_fabrication",
+                                 "dependency_mod_id":  "projectred_core",
+                                 "required_range":  "[4.21.0,)",
+                                 "actual_version":  "4.21.0",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+                                 "provider_origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_fabrication",
+                                 "dependency_mod_id":  "projectred_integration",
+                                 "required_range":  "[4.21.0,)",
+                                 "actual_version":  "4.21.0",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+                                 "provider_origin":  "ProjectRed-1.20.1-4.21.0-integration.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_fabrication",
+                                 "dependency_mod_id":  "projectred_transmission",
+                                 "required_range":  "[4.21.0,)",
+                                 "actual_version":  "4.21.0",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+                                 "provider_origin":  "ProjectRed-1.20.1-4.21.0-transmission.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_illumination",
+                                 "dependency_mod_id":  "cb_microblock",
+                                 "required_range":  "[3.3.0.+,)",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-illumination.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_illumination",
+                                 "dependency_mod_id":  "cb_multipart",
+                                 "required_range":  "[3.3.0.+,)",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-illumination.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_illumination",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0.+,)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-illumination.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_illumination",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-illumination.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_illumination",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-illumination.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_illumination",
+                                 "dependency_mod_id":  "projectred_core",
+                                 "required_range":  "[4.21.0,)",
+                                 "actual_version":  "4.21.0",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-illumination.jar",
+                                 "provider_origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_integration",
+                                 "dependency_mod_id":  "cb_multipart",
+                                 "required_range":  "[3.3.0.+,)",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-integration.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_integration",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0.+,)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-integration.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_integration",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-integration.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_integration",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-integration.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_integration",
+                                 "dependency_mod_id":  "projectred_core",
+                                 "required_range":  "[4.21.0,)",
+                                 "actual_version":  "4.21.0",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-integration.jar",
+                                 "provider_origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_transmission",
+                                 "dependency_mod_id":  "cb_multipart",
+                                 "required_range":  "[3.3.0.+,)",
+                                 "actual_version":  "3.3.0.159",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-transmission.jar",
+                                 "provider_origin":  "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_transmission",
+                                 "dependency_mod_id":  "codechickenlib",
+                                 "required_range":  "[4.4.0.+,)",
+                                 "actual_version":  "4.4.0.528",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-transmission.jar",
+                                 "provider_origin":  "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_transmission",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[47.1.65,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-transmission.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_transmission",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1]",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-transmission.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "exact 1.20.1"
+                             },
+                             {
+                                 "owner_mod_id":  "projectred_transmission",
+                                 "dependency_mod_id":  "projectred_core",
+                                 "required_range":  "[4.21.0,)",
+                                 "actual_version":  "4.21.0",
+                                 "status":  "SATISFIED",
+                                 "origin":  "ProjectRed-1.20.1-4.21.0-transmission.jar",
+                                 "provider_origin":  "ProjectRed-1.20.1-4.21.0-core.jar",
                                  "reason":  "interval"
                              },
                              {
@@ -3366,6 +3966,26 @@
                                  "reason":  "exact 1.20.1"
                              },
                              {
+                                 "owner_mod_id":  "steamadditions",
+                                 "dependency_mod_id":  "gtceu",
+                                 "required_range":  "[7.1.4,)",
+                                 "actual_version":  "7.5.3",
+                                 "status":  "SATISFIED",
+                                 "origin":  "steamadditions-1.5.2.jar",
+                                 "provider_origin":  "gtceu-1.20.1-7.5.3.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "steamadditions",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20.1,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "steamadditions-1.5.2.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "structurize",
                                  "dependency_mod_id":  "blockui",
                                  "required_range":  "[1.20.1-0.0.98-ALPHA,)",
@@ -3456,6 +4076,36 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "t_and_t",
+                                 "dependency_mod_id":  "cristellib",
+                                 "required_range":  "[1.0.0,)",
+                                 "actual_version":  "1.1.6",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Towns-and-Towers-1.12-Fabric+Forge.jar",
+                                 "provider_origin":  "cristellib-1.1.6-forge.jar",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "t_and_t",
+                                 "dependency_mod_id":  "forge",
+                                 "required_range":  "[43,)",
+                                 "actual_version":  "47.4.22",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Towns-and-Towers-1.12-Fabric+Forge.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
+                                 "owner_mod_id":  "t_and_t",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.19.3,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "Towns-and-Towers-1.12-Fabric+Forge.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "tacz",
                                  "dependency_mod_id":  "forge",
                                  "required_range":  "[46,)",
@@ -3496,6 +4146,16 @@
                                  "reason":  "interval"
                              },
                              {
+                                 "owner_mod_id":  "toms_storage",
+                                 "dependency_mod_id":  "minecraft",
+                                 "required_range":  "[1.20,)",
+                                 "actual_version":  "1.20.1",
+                                 "status":  "SATISFIED",
+                                 "origin":  "toms_storage-1.20-1.7.1.jar",
+                                 "provider_origin":  "platform",
+                                 "reason":  "interval"
+                             },
+                             {
                                  "owner_mod_id":  "xaerobetterpvp",
                                  "dependency_mod_id":  "xaerolib",
                                  "required_range":  "[1.0,)",
@@ -3511,7 +4171,7 @@
                                  "required_range":  "[1.20, 1.20.1]",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },
@@ -3521,7 +4181,7 @@
                                  "required_range":  "[1.20, 1.20.1]",
                                  "actual_version":  "1.20.1",
                                  "status":  "SATISFIED",
-                                 "origin":  "xaeroworldmap-forge-1.20.1-1.44.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
+                                 "origin":  "xaerominimap-forge-1.20.1-26.4.2.jar!/META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar",
                                  "provider_origin":  "platform",
                                  "reason":  "interval"
                              },

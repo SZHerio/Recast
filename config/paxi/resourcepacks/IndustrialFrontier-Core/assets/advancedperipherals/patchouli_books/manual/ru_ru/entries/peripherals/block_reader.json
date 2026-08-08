@@ -1,0 +1,31 @@
+{
+  "name": "Считыватель блоков",
+  "icon": "advancedperipherals:block_reader",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Этот блок считывает данные стоящих перед ним блоков и блочных сущностей.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/block_reader/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:block_reader"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:block_reader",
+          "T": "minecraft:dirt"
+        },
+        "pattern": [
+          [
+            "0PT"
+          ]
+        ]
+      },
+      "text": "Подключите считыватель блоков к компьютеру и направьте его на нужный блок."
+    }
+  ]
+}

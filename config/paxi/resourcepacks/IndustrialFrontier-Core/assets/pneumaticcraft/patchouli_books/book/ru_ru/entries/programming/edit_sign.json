@@ -1,0 +1,24 @@
+{
+  "name": "Виджет «Изменить табличку»",
+  "icon": "pneumaticcraft:textures/progwidgets/edit_sign_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Этот виджет записывает на все $(item)таблички/$ и/или $(l:machines/aphorism_tile)Плитки с афоризмом/$ в подключённой $(l:programming/area)Области/$ текст из подключённых виджетов $(l:programming/text)Текст/$.$(p)Каждый подключённый виджет $(thing)Текст/$ задаёт одну строку; несколько виджетов $(thing)Текст/$ позволяют составить многострочную надпись."
+    },
+    {
+      "type": "text",
+      "title": "Переменные",
+      "text": "В надпись можно вставить значение $(l:programming/variables)переменной/$ с помощью записи $(thing)${<var_name>}/$. Например:$(p)  $(formula)Counter: ${counter}/$$(p)превратится в $(thing)Counter: 1, 2, 3/$, если переменной $(thing)counter/$ присвоено значение $(thing)x=1,y=2,z=3/$. Здесь также доступны $(l:programming/variables#special)специальные/$ и $(l:programming/variables#global)глобальные переменные/$."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/edit_sign_piece.png"
+      ],
+      "text": "$(italic)Виджет «Изменить табличку»/$"
+    }
+  ]
+}

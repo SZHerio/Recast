@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-08-08",
+  "purpose": "Windows-1251 glyph atlas for Russian CC:Tweaked terminal output",
+  "project": {
+    "name": "CCCyrillic",
+    "author": "sashafiesta",
+    "project_id": "HEeDeKB8",
+    "version": "1.0.0",
+    "version_id": "iynHVE5y",
+    "license": "MIT",
+    "project_url": "https://modrinth.com/resourcepack/cccyrillic",
+    "download_url": "https://cdn.modrinth.com/data/HEeDeKB8/versions/iynHVE5y/CCCyrillic.zip"
+  },
+  "source_archive": {
+    "filename": "CCCyrillic.zip",
+    "size": 8698,
+    "sha1": "bf74bae24460fff31e3e1e64c8a99f69da71e23c",
+    "sha512": "bc92df3d8e16ca58dbbee9e2bf8b7c2f80833a7104ac7f6014054aeaca94c68b242e82ba7348254af932064b5079141e00af5cc3a652bd760856ebc60d17332e"
+  },
+  "installed_asset": {
+    "path": "config/paxi/resourcepacks/IndustrialFrontier-Core/assets/computercraft/textures/gui/term_font.png",
+    "sha256": "db4c4a8ab49265f6e8e456f495800ea148b133b18a3242aabca30b98ab7f784f"
+  },
+  "license_notice": "docs/licenses/CCCyrillic-MIT.txt"
+}

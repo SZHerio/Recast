@@ -1,0 +1,10 @@
+{
+  "language": "Русский",
+  "language.region": "Россия",
+  "desc.immersiveengineering.info.bullet.flareColour": "Цвет сигнальной ракеты: ",
+  "desc.immersiveengineering.info.colour": "Цвет: ",
+  "desc.immersiveengineering.info.coresample.noTimestamp": "Образец взят в неизвестное время",
+  "entity.minecraft.villager.gunsmith": "Оружейник",
+  "entity.minecraft.villager.immersiveengineering:gunsmith": "Оружейник",
+  "ie.manual.entry.minerals_desc": "%1$s\nСостав: %2$s.\n\nПобочные породы:%3$s"
+}

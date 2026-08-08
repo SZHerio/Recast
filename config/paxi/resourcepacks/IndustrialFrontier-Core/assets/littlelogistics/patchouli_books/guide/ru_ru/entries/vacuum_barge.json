@@ -1,0 +1,19 @@
+{
+  "name": "Баржа-сборщик",
+  "icon": "littlelogistics:vacuum_barge",
+  "category": "littlelogistics:vessels",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:vacuum_barge",
+      "scale": 0.6,
+      "offset": 0.5,
+      "text": "Автоматически собирает предметы в некотором радиусе."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:vacuum_barge",
+      "text": "Прицепите сзади баржу с сундуком: у самой баржи-сборщика нет инвентаря."
+    }
+  ]
+}

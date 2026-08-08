@@ -1,0 +1,72 @@
+{
+  "name": "Minigun Ammo",
+  "icon": "pneumaticcraft:gun_ammo",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:minigun",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Боеприпасы Gun Ammo используются оружием $(l:tools/minigun)Minigun/$.$(p)Один боекомплект содержит до 1000 выстрелов — точное количество зависит от типа. Во время стрельбы из $(item)Minigun/$ боезапас постепенно расходуется. Остаток отображается в подсказке предмета, на полосе прочности и, когда оружие экипировано, в интерфейсе рядом с прицелом в центре экрана."
+    },
+    {
+      "type": "text",
+      "anchor": "magazine",
+      "text": "Для использования боеприпасы необходимо поместить в магазин $(item)Minigun/$: из инвентаря игрока они не расходуются. Нажмите $(thing)Shift + ПКМ/$ с $(item)Minigun/$, чтобы зарядить его.$(p)Сначала расходуются пронумерованные слоты 1–4 по порядку. Щелчок $(thing)средней кнопкой мыши/$ блокирует слот и заставляет $(item)Minigun/$ брать боеприпасы только оттуда — удобно при нескольких заряженных типах. Повторный щелчок $(thing)средней кнопкой мыши/$ снимает блокировку."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:gun_ammo",
+      "text": "Обычные $(item)Gun Ammo/$ не обладают особыми свойствами, зато один боекомплект содержит 1000 выстрелов.$(p)Кроме того, только их можно объединять с $(l:tools/minigun_ammo#potions)зельями/$ и наделять соответствующими эффектами."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:gun_ammo_incendiary",
+      "text": "$(item)Incendiary Minigun Ammo/$ содержат 500 выстрелов и поджигают поражённых существ.$(p)Они также могут поджечь блоки, поэтому соблюдайте осторожность!"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:gun_ammo_weighted",
+      "text": "$(item)Weighted Minigun Ammo/$ содержат 250 выстрелов и наносят очень высокий урон, но из-за тяжёлых пуль их дальность равна лишь 20% от обычной."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:gun_ammo_ap",
+      "text": "$(item)Armor-piercing Minigun Ammo/$ содержат 250 выстрелов. Их создание обходится недёшево, зато они наносят немного больше урона, чем обычные боеприпасы, и пробивают броню целей."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:gun_ammo_explosive",
+      "text": "$(item)Explosive Minigun Ammo/$ содержат 125 выстрелов. При попадании они могут вызвать небольшой, но мощный взрыв, способный ранить и стрелка. $(ttcolor)$(t:См. параметр 'B:explosiveAmmoTerrainDamage' в настройках)По умолчанию/$ взрывы не разрушают местность."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:gun_ammo_freezing",
+      "text": "$(item)Freezing Minigun Ammo/$ содержат 250 выстрелов. Они замедляют цели и могут заключить их в наносящее урон облако холода; это облако опасно и для стрелка.$(p)По огнестойким целям урон повышен, поэтому такие боеприпасы отлично подходят для сражений в $(#800)Незере/$."
+    },
+    {
+      "type": "text",
+      "title": "Боеприпасы с эффектами зелий",
+      "anchor": "potions",
+      "text": "Обычные боеприпасы можно объединить с любым $(item)зельем/$. После этого они перестают наносить физический урон, но могут наложить эффект зелья на цель.$(p)Подойдут и $(thing)взрывные/$ либо $(thing)туманные/$ зелья: они воздействуют по области, как обычно. Учтите, что со взрывным зельем боеприпасы расходуются в 3 раза, а с туманным — в 6 раз быстрее!"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:gun_ammo",
+      "recipe2": "pneumaticcraft:gun_ammo_incendiary"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:gun_ammo_weighted",
+      "recipe2": "pneumaticcraft:gun_ammo_ap"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:gun_ammo_explosive",
+      "recipe2": "pneumaticcraft:gun_ammo_freezing"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:gun_ammo_potion_crafting"
+    }
+  ]
+}

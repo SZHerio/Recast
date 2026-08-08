@@ -1,0 +1,4 @@
+﻿status,path,text,note
+excluded_brand,config/fancymenu/assets/logo.png,RECAST,"Название/бренд сборки; исключено из перевода"
+excluded_brand,config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/textures/gui/logo.png,RECAST,"Название/бренд сборки; точная копия первого логотипа; исключено из перевода"
+audit_summary,,,"Проверено 141 PNG (127 уникальных); кроме RECAST в двух копиях логотипа другого встроенного английского текста не найдено"

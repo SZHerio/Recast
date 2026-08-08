@@ -1,0 +1,12 @@
+{
+  "name": "Зарядная станция",
+  "icon": "littlelogistics:vessel_charger",
+  "category": "littlelogistics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:vessel_charger",
+      "text": "Заряжает $(l:energy_tug)электрический буксир$() и $(l:energy_locomotive)электрический локомотив$(). Подключите к станции любой кабель Forge Energy. Для судов поставьте её над причалом, а для поездов — рядом с погрузочным путём."
+    }
+  ]
+}

@@ -1,14 +1,17 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "17_p7_strategic_space"
 	group: "1000000000000004"
-	icon: "gcyr:launch_pad"
+	icon: "industrial_frontier:textures/gui/icons/epochs/p7.png"
 	id: "2017000000000001"
 	order_index: 8
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3016000000000014"]
 			description: [
 				"{industrial_frontier.quest.p7.intro.desc.1}"
 				"{industrial_frontier.quest.p7.intro.desc.2}"
@@ -16,13 +19,6 @@
 			]
 			icon: "gcyr:launch_pad"
 			id: "3017000000000001"
-			rewards: [{
-				id: "5017000000000001"
-				type: "xp"
-				xp: 80
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.p7.intro.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -31,8 +27,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3017000000000001"]
@@ -43,11 +41,6 @@
 			]
 			icon: "hbm_ntm_rebirth:machine_assembly_machine"
 			id: "3017000000000002"
-			rewards: [{
-				id: "5017000000000002"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.hbm_entry.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -60,8 +53,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.hbm_entry.title}"
-			x: 3.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
 		}
 		{
 			dependencies: ["3017000000000002"]
@@ -72,11 +67,6 @@
 			]
 			icon: "hbm_ntm_rebirth:steel_scaffold"
 			id: "3017000000000003"
-			rewards: [{
-				id: "5017000000000003"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.protected_zone.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -85,8 +75,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.protected_zone.title}"
-			x: 6.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -2d
 		}
 		{
 			dependencies: ["3017000000000003"]
@@ -97,11 +89,6 @@
 			]
 			icon: "hbm_ntm_rebirth:rbmk_console"
 			id: "3017000000000004"
-			rewards: [{
-				id: "5017000000000004"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.rbmk.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -114,8 +101,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.rbmk.title}"
-			x: 9.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: -2d
 		}
 		{
 			dependencies: ["3017000000000003"]
@@ -126,11 +115,6 @@
 			]
 			icon: "hbm_ntm_rebirth:machine_purex"
 			id: "3017000000000005"
-			rewards: [{
-				id: "5017000000000005"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.purex.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -139,8 +123,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.purex.title}"
-			x: 9.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 0d
 		}
 		{
 			dependencies: ["3017000000000005"]
@@ -151,11 +137,6 @@
 			]
 			icon: "hbm_ntm_rebirth:ingot_plutonium"
 			id: "3017000000000006"
-			rewards: [{
-				id: "5017000000000006"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.radiation_model.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -164,8 +145,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.radiation_model.title}"
-			x: 12.0d
-			y: -6.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 8d
+			y: -3d
 		}
 		{
 			dependencies: [
@@ -178,13 +161,8 @@
 				"{industrial_frontier.quest.p7.strategic_charge.desc.3}"
 				"{industrial_frontier.quest.p7.strategic_charge.desc.4}"
 			]
-			icon: "hbm_ntm_rebirth:nuke_gadget"
+			icon: "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png"
 			id: "3017000000000007"
-			rewards: [{
-				id: "5017000000000007"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.strategic_charge.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -193,8 +171,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.strategic_charge.title}"
-			x: 12.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: -1d
 		}
 		{
 			dependencies: ["3017000000000007"]
@@ -205,11 +185,6 @@
 			]
 			icon: "hbm_ntm_rebirth:anvil_iron"
 			id: "3017000000000008"
-			rewards: [{
-				id: "5017000000000008"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.domain_links.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -218,8 +193,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.domain_links.title}"
-			x: 15.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: -2d
 		}
 		{
 			dependencies: ["3017000000000008"]
@@ -230,11 +207,6 @@
 			]
 			icon: "gcyr:id_chip"
 			id: "3017000000000009"
-			rewards: [{
-				id: "5017000000000009"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.clearances.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -243,8 +215,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.clearances.title}"
-			x: 18.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 12d
+			y: -2d
 		}
 		{
 			dependencies: ["3017000000000009"]
@@ -255,11 +229,6 @@
 			]
 			icon: "gcyr:rocket_scanner"
 			id: "3017000000000010"
-			rewards: [{
-				id: "5017000000000010"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.counterintel.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -268,8 +237,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.counterintel.title}"
-			x: 21.0d
-			y: -3.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 14d
+			y: -1d
 		}
 		{
 			dependencies: ["3017000000000001"]
@@ -278,13 +249,8 @@
 				"{industrial_frontier.quest.p7.rocket_materials.desc.2}"
 				"{industrial_frontier.quest.p7.rocket_materials.desc.3}"
 			]
-			icon: "gcyr:heat_shielding_fabric"
+			icon: "industrial_frontier:textures/gui/icons/process/gtceu/rocket_materials.png"
 			id: "3017000000000011"
-			rewards: [{
-				id: "5017000000000011"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.rocket_materials.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -297,8 +263,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.rocket_materials.title}"
-			x: 3.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
 		}
 		{
 			dependencies: ["3017000000000011"]
@@ -309,11 +277,6 @@
 			]
 			icon: "gcyr:basic_fuel_tank"
 			id: "3017000000000012"
-			rewards: [{
-				id: "5017000000000012"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.rocket_fuel.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -322,8 +285,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.rocket_fuel.title}"
-			x: 6.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 0d
 		}
 		{
 			dependencies: ["3017000000000011"]
@@ -334,11 +299,6 @@
 			]
 			icon: "gcyr:id_chip"
 			id: "3017000000000013"
-			rewards: [{
-				id: "5017000000000013"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.rocket_electronics.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -351,8 +311,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.rocket_electronics.title}"
-			x: 6.0d
-			y: 4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 2d
 		}
 		{
 			dependencies: [
@@ -366,11 +328,6 @@
 			]
 			icon: "gcyr:launch_pad"
 			id: "3017000000000014"
-			rewards: [{
-				id: "5017000000000014"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.spaceport.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -383,8 +340,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.spaceport.title}"
-			x: 9.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 2d
 		}
 		{
 			dependencies: ["3017000000000014"]
@@ -395,11 +354,6 @@
 			]
 			icon: "gcyr:space_helmet"
 			id: "3017000000000015"
-			rewards: [{
-				id: "5017000000000015"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.suit_oxygen.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -412,8 +366,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.suit_oxygen.title}"
-			x: 12.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 1d
 		}
 		{
 			dependencies: ["3017000000000014"]
@@ -424,11 +380,6 @@
 			]
 			icon: "gcyr:basic_rocket_motor"
 			id: "3017000000000016"
-			rewards: [{
-				id: "5017000000000016"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.first_launch.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -437,8 +388,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.first_launch.title}"
-			x: 12.0d
-			y: 4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 3d
 		}
 		{
 			dependencies: [
@@ -452,11 +405,6 @@
 			]
 			icon: "gcyr:airlock_door"
 			id: "3017000000000017"
-			rewards: [{
-				id: "5017000000000017"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.sealing_base.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -469,8 +417,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.sealing_base.title}"
-			x: 15.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: 0d
 		}
 		{
 			dependencies: ["3017000000000017"]
@@ -481,11 +431,6 @@
 			]
 			icon: "gcyr:space_station_package"
 			id: "3017000000000018"
-			rewards: [{
-				id: "5017000000000018"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.return_flow.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -494,8 +439,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.return_flow.title}"
-			x: 18.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 12d
+			y: 0d
 		}
 		{
 			dependencies: ["3017000000000018"]
@@ -506,11 +453,6 @@
 			]
 			icon: "gcyr:mars_marker"
 			id: "3017000000000019"
-			rewards: [{
-				id: "5017000000000019"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.planetary.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -519,8 +461,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.planetary.title}"
-			x: 21.0d
-			y: 3.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 14d
+			y: 1d
 		}
 		{
 			dependencies: ["3017000000000016"]
@@ -531,11 +475,6 @@
 			]
 			icon: "creatingspace:rocket_engineer_table"
 			id: "3017000000000020"
-			rewards: [{
-				id: "5017000000000020"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.deep_path.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -548,8 +487,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p7.deep_path.title}"
-			x: 15.0d
-			y: 6.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 10d
+			y: 2d
 		}
 		{
 			dependencies: ["3017000000000017"]
@@ -560,11 +501,6 @@
 			]
 			icon: "gcyr:insulating_fabric"
 			id: "3017000000000021"
-			rewards: [{
-				id: "5017000000000021"
-				type: "xp"
-				xp: 80
-			}]
 			subtitle: "{industrial_frontier.quest.p7.emergency.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -573,8 +509,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p7.emergency.title}"
-			x: 18.0d
-			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 12d
+			y: 2d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.p7.subtitle}"]

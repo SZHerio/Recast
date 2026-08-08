@@ -1,0 +1,14 @@
+{
+  "argument.flywheel_backend.id.unknown": "Неизвестный модуль отрисовки «%s»",
+  "command.flywheel.backend.get": "Текущий модуль отрисовки Flywheel: «%s»",
+  "command.flywheel.backend.set": "Теперь Flywheel использует модуль отрисовки «%s»",
+  "command.flywheel.backend.set.unavailable": "Запрошенный модуль отрисовки «%s» недоступен",
+  "command.flywheel.limit_updates.get.off": "Ограничение обновлений сейчас отключено",
+  "command.flywheel.limit_updates.get.on": "Ограничение обновлений сейчас включено",
+  "command.flywheel.limit_updates.set.off": "Ограничение обновлений отключено",
+  "command.flywheel.limit_updates.set.on": "Ограничение обновлений включено",
+  "command.flywheel.use_light_directions.get.off": "Направления света не используются",
+  "command.flywheel.use_light_directions.get.on": "Направления света используются",
+  "command.flywheel.use_light_directions.set.off": "Использование направлений света отключено",
+  "command.flywheel.use_light_directions.set.on": "Использование направлений света включено"
+}

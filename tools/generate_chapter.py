@@ -39,7 +39,6 @@ def build(spec_path):
     for index, quest in enumerate(quests, 1):
         qid = ids[quest['slug']]
         tid = '4' + cid[1:4] + f'{index:012d}'
-        rid = '5' + cid[1:4] + f'{index:012d}'
         base = f'{NS}.{key}.{quest["slug"]}'
         ru[f'{base}.title'] = quest['ru']['title']
         en[f'{base}.title'] = quest['en']['title']
@@ -53,7 +52,6 @@ def build(spec_path):
         en[f'{base}.task'] = quest['en']['task']
         stable[f'if.quest.{key}.{quest["slug"]}'] = qid
         stable[f'if.task.{key}.{quest["slug"]}'] = tid
-        stable[f'if.reward.{key}.{quest["slug"]}'] = rid
 
         out.append('\t\t{')
         deps = quest.get('deps') or []
@@ -72,8 +70,9 @@ def build(spec_path):
         out.append(f'\t\t\tid: "{qid}"')
         if spec.get('optional'):
             out.append('\t\t\toptional: true')
-        out += ['\t\t\trewards: [{', f'\t\t\t\tid: "{rid}"', '\t\t\t\ttype: "xp"',
-                f'\t\t\t\txp: {spec.get("xp", 25)}', '\t\t\t}]']
+        # Наград у заданий нет по решению владельца от 4 августа 2026: книга
+        # объясняет и ведёт, а не платит за прохождение. Блок наград здесь не
+        # создаётся, иначе следующая генерация вернула бы то, что снято.
         if quest.get('shape'):
             out.append(f'\t\t\tshape: "{quest["shape"]}"')
         if quest.get('size'):

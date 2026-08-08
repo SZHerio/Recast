@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.mastery",
+  "engine_id": "2072000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.mastery.intro",
+      "engine_id": "3072000000000001",
+      "purpose": "Пособие по работе, а не линия прогресса",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.mastery.where_it_stopped",
+      "engine_id": "3072000000000002",
+      "purpose": "Ищите первый непустой буфер",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.mastery.reserve_math",
+      "engine_id": "3072000000000003",
+      "purpose": "Считайте размер по времени отклика, а не по пропускной способности",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.mastery.expand_without_rebuild",
+      "engine_id": "3072000000000004",
+      "purpose": "Сразу оставляйте место под второй ряд",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.mastery.boring_work",
+      "engine_id": "3072000000000005",
+      "purpose": "Если вы делаете это руками второй раз, автоматизируйте",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.mastery.power_discipline",
+      "engine_id": "3072000000000006",
+      "purpose": "Сбрасывайте нагрузку по важности, а не по порядку кабеля",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.mastery.handover",
+      "engine_id": "3072000000000007",
+      "purpose": "Через месяц вы этого уже не вспомните",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

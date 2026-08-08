@@ -1,0 +1,38 @@
+{
+  "name": "Производство биодизеля",
+  "icon": "minecraft:book",
+  "category": "pneumaticcraft:renewables",
+  "priority": "true",
+  "advancement": "pneumaticcraft:tp_plant",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Это краткое руководство по производству возобновляемого $(thing)биодизеля/$. Выполняйте указанные шаги, а подробности ищите на других страницах этого раздела. Некоторые из них откроются только после получения нужных достижений."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:yeast_culture_bucket",
+      "text": "Шаг 1а. Получите $(thing)дрожжевую культуру/$: смешайте грибы с водой в $(l:manufacturing/thermopneumatic_processing_plant)термопневматической перерабатывающей установке/$. Температуру установки нужно поддерживать в диапазоне от 30°C до 60°C. Насколько это сложно, зависит от биома и высоты."
+    },
+    {
+      "type": "spotlight",
+      "item": "minecraft:sugar",
+      "text": "Шаг 1б (необязательно). Получив хотя бы одно ведро дрожжевой культуры, вы сможете размножать её быстрее. Вылейте культуру в небольшой водоём, бросьте туда сахар, а затем вылейте ведро воды в соседний блок. Культура распространится в добавленную воду."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:ethanol_bucket",
+      "text": "Шаг 2. Получите $(thing)этанол/$, поместив $(thing)дрожжевую культуру/$ и $(thing)сахар/$ в $(l:manufacturing/thermopneumatic_processing_plant)термопневматическую перерабатывающую установку/$. Как и на шаге 1а, для реакции важна температура."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:vegetable_oil_bucket",
+      "text": "Шаг 3. Получите $(thing)растительное масло/$, выжав $(thing)семена/$ или $(thing)урожай/$ под небольшим давлением в $(l:manufacturing/thermopneumatic_processing_plant)термопневматической перерабатывающей установке/$."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:biodiesel_bucket",
+      "text": "Шаг 4. Смешайте $(thing)этанол/$ и $(thing)растительное масло/$ в $(l:manufacturing/fluid_mixer)смешивателе жидкостей/$. Поздравляем: возобновляемое топливо готово!"
+    }
+  ]
+}

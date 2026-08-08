@@ -35,7 +35,7 @@
       }
     },
     {
-      "slug": "purity", "x": 3, "y": 0, "icon": "minecraft:glass_bottle", "deps": ["intro"],
+      "slug": "purity", "x": 3, "y": 0, "icon": "industrial_frontier:textures/gui/icons/process/gtceu/air_separation.png", "deps": ["intro"],
       "ru": {
         "title": "Чистота — это ступень", "subtitle": "Шесть классов, а не «хорошо» и «плохо»",
         "desc": [
@@ -119,7 +119,7 @@
       }
     },
     {
-      "slug": "chlorine", "x": 9, "y": 1.5, "icon": "minecraft:blue_ice", "deps": ["sulfur"],
+      "slug": "chlorine", "x": 9, "y": 1.5, "icon": "industrial_frontier:textures/gui/icons/process/gtceu/hydrochloric_acid.png", "deps": ["sulfur"],
       "ru": {
         "title": "Хлор-щелочной цикл", "subtitle": "Три продукта, от которых нельзя отказаться",
         "desc": [

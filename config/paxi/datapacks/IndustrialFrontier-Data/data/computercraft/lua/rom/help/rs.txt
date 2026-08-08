@@ -1,0 +1,19 @@
+Функции API Redstone:
+rs.getSides( )
+rs.getInput( side )
+rs.setOutput( side, boolean )
+rs.getOutput( side )
+rs.getAnalogInput( side )
+rs.setAnalogOutput( side, number )
+rs.getAnalogOutput( side )
+
+Функции API Redstone для работы с многоканальными кабелями RedPower:
+rs.getBundledInput( side )
+rs.testBundledInput( side, color )
+rs.setBundledOutput( side, colors )
+rs.getBundledOutput( side )
+Введите "help bundled", чтобы увидеть примеры использования.
+
+События API redstone:
+"redstone" - состояние любого входа редстоуна изменилось. Используйте getInput() или getBundledInput(), чтобы проверить изменения
+Введите "help events", чтобы узнать о системе событий.

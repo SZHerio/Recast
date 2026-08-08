@@ -1,0 +1,40 @@
+Функции API файловой системы:
+fs.list( path )
+fs.find( wildcard )
+fs.exists( path )
+fs.isDir( path )
+fs.isReadOnly( path )
+fs.getDir( path )
+fs.getName( path )
+fs.getSize( path )
+fs.getDrive( path )
+fs.getFreeSpace( path )
+fs.makeDir( path )
+fs.move( path, path )
+fs.copy( path, path )
+fs.delete( path )
+fs.combine( path, localpath )
+fs.open( path, mode )
+fs.complete( path, location )
+Доступные режимы fs.open(): "r", "w", "a", "rb", "wb" и "ab".
+
+Функции файлов, открытых в режиме "r":
+readLine()
+readAll()
+close()
+read( number )
+
+Функции файлов, открытых в режиме "w" или "a":
+write( string )
+writeLine( string )
+flush()
+close()
+
+Функции файлов, открытых в режиме "rb":
+read()
+close()
+
+Функции файлов, открытых в режиме "wb" или "ab":
+write( byte )
+flush()
+close()

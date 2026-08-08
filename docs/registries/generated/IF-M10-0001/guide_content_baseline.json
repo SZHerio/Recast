@@ -1,0 +1,3137 @@
+﻿{
+    "schema_version":  2,
+    "build_id":  "IF-M10-0001",
+    "generated_at":  "2026-08-08T14:18:20.5492633Z",
+    "default_markdown_page_count":  223,
+    "translated_ru_page_count":  119,
+    "missing_ru_page_count":  104,
+    "qa_failure_count":  0,
+    "unused_content_corrections":  [
+
+                                   ],
+    "release_gate_met":  false,
+    "pages":  [
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/ae2-mechanics-index.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/ae2-mechanics-index.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/autocrafting.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/autocrafting.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/bytes-and-types.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/bytes-and-types.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/cable-subparts.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/cable-subparts.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/certus-growth.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/certus-growth.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/channels.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/channels.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/devices.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/devices.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/energy.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/energy.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/import-export-storage.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/import-export-storage.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/me-network-connections.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/me-network-connections.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/meteorites.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/meteorites.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/p2p-tunnels.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/p2p-tunnels.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/quantum-bridge.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/quantum-bridge.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/spatial-io.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/spatial-io.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "ae2-mechanics/subnetworks.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/ae2-mechanics/subnetworks.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/advanced-certus-farm.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/advanced-certus-farm.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/amethyst-farm.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/amethyst-farm.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/cell-dumper-filler.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/cell-dumper-filler.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/charger-automation.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/charger-automation.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/example-setups-index.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/example-setups-index.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/furnace-automation.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/furnace-automation.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/interface-autostocking.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/interface-autostocking.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/level-emitter-autostocking.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/level-emitter-autostocking.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/main-network.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/main-network.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/ore-fortuner.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/ore-fortuner.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/pipe-subnet.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/pipe-subnet.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/processor-automation.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/processor-automation.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/regulated-cobble-gen.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/regulated-cobble-gen.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/semiauto-certus-farm.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/semiauto-certus-farm.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/simple-certus-farm.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/simple-certus-farm.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/specialized-local-storage.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/specialized-local-storage.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "example-setups/throw-in-water-automation.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/example-setups/throw-in-water-automation.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "getting-started.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/getting-started.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "index.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/index.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/annihilation_plane.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/annihilation_plane.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/budding_certus.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/budding_certus.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/cable_anchor.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/cable_anchor.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/cables.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/cables.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/cell_workbench.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/cell_workbench.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/certus_quartz_crystal.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/certus_quartz_crystal.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/certus_quartz_crystal_charged.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/certus_quartz_crystal_charged.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/certus_quartz_dust.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/certus_quartz_dust.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/charged_staff.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/charged_staff.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/charger.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/charger.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/chest.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/chest.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/color_applicator.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/color_applicator.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/condenser.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/condenser.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/controller.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/controller.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/crafting_cpu_multiblock.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/crafting_cpu_multiblock.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/crank.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/crank.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/cutting_knives.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/cutting_knives.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/decorative_certus.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/decorative_certus.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/decorative_fluix.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/decorative_fluix.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/decorative_sky_stone.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/decorative_sky_stone.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/drive.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/drive.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/ender_dust.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/ender_dust.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/energy_acceptor.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/energy_acceptor.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/energy_cells.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/energy_cells.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/entropy_manipulator.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/entropy_manipulator.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/export_bus.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/export_bus.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/facades.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/facades.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/fluix_block.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/fluix_block.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/fluix_crystal.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/fluix_crystal.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/fluix_dust.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/fluix_dust.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/fluix_pearl.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/fluix_pearl.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/fluix_tools.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/fluix_tools.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/fluix_upgrade_smithing_template.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/fluix_upgrade_smithing_template.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/formation_annihilation_core.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/formation_annihilation_core.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/formation_plane.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/formation_plane.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/growth_accelerator.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/growth_accelerator.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/guide.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/guide.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/illuminated_panels.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/illuminated_panels.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/import_bus.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/import_bus.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/inscriber.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/inscriber.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/interface.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/interface.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/io_port.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/io_port.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/items-blocks-machines-index.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/items-blocks-machines-index.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/level_emitter.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/level_emitter.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/matter_ball.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/matter_ball.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/matter_cannon.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/matter_cannon.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/memory_card.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/memory_card.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/meteorite_compass.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/meteorite_compass.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/molecular_assembler.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/molecular_assembler.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/monitors.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/monitors.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/mysterious_cube.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/mysterious_cube.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/network_tool.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/network_tool.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/p2p_tunnels.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/p2p_tunnels.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/paintballs.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/paintballs.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/pattern_provider.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/pattern_provider.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/patterns.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/patterns.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/presses.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/presses.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/processors.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/processors.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/quantum_bridge.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/quantum_bridge.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/quartz_block.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/quartz_block.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/quartz_fiber.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/quartz_fiber.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/quartz_fixture.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/quartz_fixture.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/quartz_glass.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/quartz_glass.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/quartz_tools.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/quartz_tools.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/singularities.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/singularities.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/sky_dust.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/sky_dust.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/sky_stone.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/sky_stone.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/sky_stone_tank.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/sky_stone_tank.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/spatial_anchor.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/spatial_anchor.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/spatial_cells.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/spatial_cells.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/spatial_io_port.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/spatial_io_port.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/spatial_pylon.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/spatial_pylon.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/storage_bus.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/storage_bus.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/storage_cells.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/storage_cells.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/terminals.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/terminals.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/tiny_tnt.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/tiny_tnt.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/toggle_bus.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/toggle_bus.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/upgrade_cards.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/upgrade_cards.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/vibration_chamber.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/vibration_chamber.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/view_cell.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/view_cell.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/wireless_access_point.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/wireless_access_point.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/wireless_receiver.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/wireless_receiver.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/wireless_terminals.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/wireless_terminals.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "items-blocks-machines/wrench.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/items-blocks-machines/wrench.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "ae2",
+                      "guide_root":  "ae2guide",
+                      "relative_page":  "tips-and-tricks.md",
+                      "source_jar":  "appliedenergistics2-forge-15.4.10.jar",
+                      "expected_ru_overlay":  "assets/ae2/ae2guide/_ru_ru/tips-and-tricks.md",
+                      "translated":  true,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/anomalies.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/anomalies.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/anomalies/field-guide.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/anomalies/field-guide.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/anomalies/resonite.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/anomalies/resonite.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/anomalies/types.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/anomalies/types.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/computers.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/computers.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/computers/accelerator.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/computers/accelerator.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/computers/beam_diverter.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/computers/beam_diverter.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/computers/particle_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/computers/particle_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/index.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/index.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/hazmat.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/hazmat.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/hev.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/hev.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/multitool.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/multitool.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/qnp.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/qnp.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/radaway.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/radaway.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/radiation_shielding.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/radiation_shielding.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/radiation-detection.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/radiation-detection.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/items/rad-x.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/items/rad-x.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines/engineers_crafting_table.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines/engineers_crafting_table.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines/generators.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines/generators.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines/in_situ_leaching.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines/in_situ_leaching.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines/processors.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines/processors.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines/pump.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines/pump.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines/universal_pipe.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines/universal_pipe.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/machines/upgrades.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/machines/upgrades.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/accelerators.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/accelerators.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/accelerators/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/accelerators/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/accelerators/linear_accelerator.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/accelerators/linear_accelerator.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/accelerators/ring_accelerator.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/accelerators/ring_accelerator.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/fission.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/fission.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/fission/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/fission/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/fusion.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/fusion.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/fusion/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/fusion/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/heat_exchanger.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/heat_exchanger.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/heat_exchanger/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/heat_exchanger/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/kugelblitz.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/kugelblitz.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/kugelblitz/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/kugelblitz/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/molten_salt_reactor.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/molten_salt_reactor.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/molten_salt_reactor/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/molten_salt_reactor/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/collision_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/collision_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/decay_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/decay_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/target_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/particle_chambers/target_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/turbine.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/turbine.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/multiblocks/turbine/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/multiblocks/turbine/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/weapons.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/weapons.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/weapons/paxels.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/weapons/paxels.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/weapons/pu_239_bomb.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/weapons/pu_239_bomb.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/_ru_ru/guide/weapons/q36.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/_ru_ru/guide/weapons/q36.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/anomalies.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/anomalies.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/anomalies/field-guide.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/anomalies/field-guide.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/anomalies/resonite.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/anomalies/resonite.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/anomalies/types.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/anomalies/types.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/computers.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/computers.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/computers/accelerator.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/computers/accelerator.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/computers/beam_diverter.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/computers/beam_diverter.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/computers/particle_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/computers/particle_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/index.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/index.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/hazmat.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/hazmat.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/hev.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/hev.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/multitool.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/multitool.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/qnp.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/qnp.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/radaway.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/radaway.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/radiation_shielding.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/radiation_shielding.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/radiation-detection.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/radiation-detection.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/items/rad-x.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/items/rad-x.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines/engineers_crafting_table.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines/engineers_crafting_table.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines/generators.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines/generators.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines/in_situ_leaching.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines/in_situ_leaching.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines/processors.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines/processors.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines/pump.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines/pump.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines/universal_pipe.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines/universal_pipe.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/machines/upgrades.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/machines/upgrades.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/accelerators.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/accelerators.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/accelerators/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/accelerators/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/accelerators/linear_accelerator.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/accelerators/linear_accelerator.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/accelerators/ring_accelerator.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/accelerators/ring_accelerator.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/fission.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/fission.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/fission/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/fission/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/fusion.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/fusion.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/fusion/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/fusion/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/heat_exchanger.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/heat_exchanger.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/heat_exchanger/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/heat_exchanger/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/kugelblitz.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/kugelblitz.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/kugelblitz/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/kugelblitz/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/molten_salt_reactor.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/molten_salt_reactor.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/molten_salt_reactor/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/molten_salt_reactor/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/particle_chambers.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/particle_chambers.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/particle_chambers/collision_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/particle_chambers/collision_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/particle_chambers/decay_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/particle_chambers/decay_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/particle_chambers/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/particle_chambers/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/particle_chambers/target_chamber.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/particle_chambers/target_chamber.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/turbine.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/turbine.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/multiblocks/turbine/general.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/multiblocks/turbine/general.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/weapons.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/weapons.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/weapons/paxels.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/weapons/paxels.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/weapons/pu_239_bomb.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/weapons/pu_239_bomb.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  },
+                  {
+                      "namespace":  "nuclearcraft",
+                      "guide_root":  "guides",
+                      "relative_page":  "nuclearcraft/guide/weapons/q36.md",
+                      "source_jar":  "NuclearCraft-1.20.1-1.2.33.jar",
+                      "expected_ru_overlay":  "assets/nuclearcraft/guides/_ru_ru/nuclearcraft/guide/weapons/q36.md",
+                      "translated":  false,
+                      "qa_issues":  [
+
+                                    ],
+                      "qa_issue_count":  0,
+                      "numeric_source_signature":  null,
+                      "numeric_ru_signature":  null
+                  }
+              ]
+}

@@ -16,6 +16,10 @@ const IF_EPOCH_MIN = 0
 const IF_EPOCH_MAX = 9
 const IF_REP_MIN = -100
 const IF_REP_MAX = 100
+const IF_FTBQ_TEAM_DATA = Java.loadClass('dev.ftb.mods.ftbquests.quest.TeamData')
+const IF_NBT_STRING_TAG = Java.loadClass('net.minecraft.nbt.StringTag')
+const IF_UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+const IF_AUDIT_LIMIT = 256
 
 // Порог репутации — производная величина, а не отдельное хранимое состояние.
 function ifReputationTier(value) {
@@ -44,7 +48,54 @@ function ifState(server) {
   return state
 }
 
-function ifTeamState(server, teamId) {
+// Авторитетный ключ — UUID команды FTB Quests. Имя игрока допустимо только
+// как вход старого вызова: для находящегося в сети игрока оно немедленно
+// разрешается в командный UUID. Новые данные под username не создаются.
+function ifTeamIdForPlayer(player) {
+  if (!player) return 'server'
+  try {
+    const questData = IF_FTBQ_TEAM_DATA.get(player)
+    if (questData) return String(questData.getTeamId())
+  } catch (error) {
+    console.error(`[Recast][ThreatDirector] не удалось получить UUID команды FTB Quests: ${error}`)
+  }
+
+  // Аварийный UUID игрока не смешивается с username и остаётся стабильным.
+  // При исправной FTB Quests эта ветка никогда не должна использоваться.
+  return String(player.uuid)
+}
+
+function ifResolveTeamId(server, teamRef) {
+  if (!teamRef) return 'server'
+  if (typeof teamRef !== 'string') return ifTeamIdForPlayer(teamRef)
+  if (teamRef === 'server' || IF_UUID_PATTERN.test(teamRef)) return teamRef
+
+  const online = server.getPlayerList().getPlayerByName(teamRef)
+  if (online) return ifTeamIdForPlayer(online)
+
+  // Старые offline-вызовы читают прежний ключ, но не создают под ним новое
+  // командное состояние. Все штатные изменения происходят при online actor.
+  return `legacy:${teamRef}`
+}
+
+function ifMigrateLegacyTeamState(server, teamId, legacyName) {
+  if (!legacyName || legacyName === teamId) return
+  const teams = ifState(server).get('teams')
+  if (!teams.contains(teamId) && teams.contains(legacyName)) {
+    teams.put(teamId, teams.get(legacyName).copy())
+    ifAudit(server, teamId, `migrated legacy username state ${legacyName}`)
+  }
+}
+
+function ifTeamState(server, teamRef) {
+  const legacyName =
+    typeof teamRef === 'string' && teamRef !== 'server' && !IF_UUID_PATTERN.test(teamRef)
+      ? teamRef
+      : null
+  const teamId = ifResolveTeamId(server, teamRef)
+  if (legacyName && !teamId.startsWith('legacy:')) {
+    ifMigrateLegacyTeamState(server, teamId, legacyName)
+  }
   const teams = ifState(server).get('teams')
   if (!teams.contains(teamId)) {
     const fresh = {}
@@ -58,11 +109,20 @@ function ifTeamState(server, teamId) {
   return teams.get(teamId)
 }
 
+function ifTeamStateForPlayer(server, player) {
+  const teamId = ifTeamIdForPlayer(player)
+  ifMigrateLegacyTeamState(server, teamId, player ? player.username : null)
+  return ifTeamState(server, teamId)
+}
+
 // Журнал пишется всегда: изменение состояния без записи причины запрещено.
 function ifAudit(server, teamId, reason) {
   const state = ifState(server)
   if (!state.contains('audit')) state.put('audit', [])
   const line = `${teamId}|${reason}`
+  const audit = state.get('audit')
+  audit.add(IF_NBT_STRING_TAG.valueOf(line))
+  while (audit.size() > IF_AUDIT_LIMIT) audit.remove(0)
   console.info(`[Recast][ThreatDirector] ${line}`)
 }
 
@@ -89,8 +149,8 @@ ServerEvents.loaded((event) => {
 ServerEvents.customCommand('if_intent', (event) => {
   const server = event.server
   const player = event.player
-  const teamId = player ? player.username : 'server'
-  const team = ifTeamState(server, teamId)
+  const teamId = player ? ifTeamIdForPlayer(player) : 'server'
+  const team = player ? ifTeamStateForPlayer(server, player) : ifTeamState(server, teamId)
 
   const epoch = team.getInt('tech_epoch')
   const lines = [`Эпоха: P${epoch}`, `Принадлежность: ${team.getString('affiliation')}`]
@@ -104,22 +164,65 @@ ServerEvents.customCommand('if_intent', (event) => {
   ifAudit(server, teamId, 'sandbox_ping')
 })
 
-// Повышение эпохи — атомарная операция с записью причины. Возраст мира,
-// случайный лут и отдельный флаг табло её не повышают.
+// Recovery-переход вызывается только короткой операторской командой,
+// зарегистрированной через commandRegistry. Публичная ветка custom_command
+// намеренно ничего не меняет: иначе её можно было бы вызвать напрямую без OP.
 ServerEvents.customCommand('if_advance_epoch', (event) => {
-  const server = event.server
   const player = event.player
-  const teamId = player ? player.username : 'server'
+  if (player) {
+    player.tell('§cЭта служебная форма команды отключена. Для восстановления используйте операторскую /if_advance_epoch.')
+  }
+})
+
+// Атомарное изменение для commissioning-моста и административного recovery.
+// expectedCurrent защищает от пропуска эпохи и повторной обработки события.
+function ifSetEpochAfterCommissioning(server, teamId, completedEpoch, reason) {
   const team = ifTeamState(server, teamId)
+  const current = team.getInt('tech_epoch')
+
+  if (completedEpoch < IF_EPOCH_MIN || completedEpoch > IF_EPOCH_MAX) {
+    ifAudit(server, teamId, `commissioning rejected invalid P${completedEpoch}`)
+    return { changed: false, current: current, reason: 'INVALID_EPOCH' }
+  }
+
+  if (current < completedEpoch) {
+    ifAudit(server, teamId, `commissioning rejected out_of_order current=P${current} completed=P${completedEpoch}`)
+    return { changed: false, current: current, reason: 'OUT_OF_ORDER' }
+  }
+
+  if (current > completedEpoch) {
+    ifAudit(server, teamId, `commissioning ignored already_advanced current=P${current} completed=P${completedEpoch}`)
+    return { changed: false, current: current, reason: 'ALREADY_ADVANCED' }
+  }
+
+  if (completedEpoch === IF_EPOCH_MAX) {
+    if (!team.getBoolean('p9_commissioned')) {
+      team.putBoolean('p9_commissioned', true)
+      ifSyncMirrors(server, teamId, team)
+      ifAudit(server, teamId, `${reason}; commissioned P9 finale`)
+      return { changed: true, current: current, next: current, reason: 'P9_COMMISSIONED' }
+    }
+    return { changed: false, current: current, reason: 'ALREADY_COMMISSIONED' }
+  }
+
+  const next = completedEpoch + 1
+  team.putInt('tech_epoch', next)
+  ifSyncMirrors(server, teamId, team)
+  ifAudit(server, teamId, `${reason}; advance_epoch P${current} -> P${next}`)
+  return { changed: true, current: current, next: next, reason: 'ADVANCED' }
+}
+
+function ifAdminAdvanceEpoch(server, player, reason) {
+  if (!player) return 0
+  const teamId = ifTeamIdForPlayer(player)
+  const team = ifTeamStateForPlayer(server, player)
 
   const current = team.getInt('tech_epoch')
   if (current >= IF_EPOCH_MAX) {
-    if (player) player.tell(`Эпоха уже максимальна: P${current}`)
-    return
+    player.tell(`Эпоха уже максимальна: P${current}`)
+    return 0
   }
-  const next = ifClamp(current + 1, IF_EPOCH_MIN, IF_EPOCH_MAX)
-  team.putInt('tech_epoch', next)
-  ifSyncMirrors(server, teamId, team)
-  ifAudit(server, teamId, `advance_epoch P${current} -> P${next}`)
-  if (player) player.tell(`Эпоха повышена: P${current} → P${next}`)
-})
+  const result = ifSetEpochAfterCommissioning(server, teamId, current, `operator recovery: ${reason}`)
+  if (result.changed) player.tell(`§6Восстановление прогресса: P${current} → P${result.next}`)
+  return result.changed ? 1 : 0
+}

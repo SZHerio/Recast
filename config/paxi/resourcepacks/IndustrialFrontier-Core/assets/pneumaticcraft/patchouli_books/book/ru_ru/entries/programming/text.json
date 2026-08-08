@@ -1,0 +1,44 @@
+{
+  "name": "Виджет «Текст»",
+  "icon": "pneumaticcraft:textures/progwidgets/text_piece.png",
+  "category": "pneumaticcraft:widget_other",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Виджет $(thing)Текст/$ используется только как параметр других виджетов и передаёт им необходимые текстовые данные.$(p)На следующих страницах перечислены виджеты, которые его принимают."
+    },
+    {
+      "type": "relations",
+      "anchor": "entity_filter",
+      "title": "Как фильтр существ",
+      "entries": [
+        "pneumaticcraft:programming/entity_attack",
+        "pneumaticcraft:programming/entity_right_click",
+        "pneumaticcraft:programming/entity_import",
+        "pneumaticcraft:programming/entity_export",
+        "pneumaticcraft:programming/drone_condition_entity"
+      ],
+      "text": "Разместите виджет $(thing)Текст/$ $(italic)слева/$ от этих виджетов, чтобы создать фильтр чёрного списка."
+    },
+    {
+      "type": "relations",
+      "title": "Для других виджетов",
+      "entries": [
+        "pneumaticcraft:programming/edit_sign",
+        "pneumaticcraft:programming/rename",
+        "pneumaticcraft:programming/jump",
+        "pneumaticcraft:programming/label",
+        "pneumaticcraft:programming/wait",
+        "pneumaticcraft:programming/conditions"
+      ]
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/text_piece.png"
+      ],
+      "text": "$(italic)Виджет «Текст»/$"
+    }
+  ]
+}

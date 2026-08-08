@@ -1,0 +1,151 @@
+{
+  "key": "settlement",
+  "file": "22_settlement",
+  "chapter_id": "2022000000000001",
+  "group_id": "1000000000000003",
+  "icon": "minecolonies:blockhuttownhall",
+  "order": 12,
+  "tag": "academy",
+  "optional": true,
+  "title_ru": "Поселение и жители",
+  "title_en": "Settlement and residents",
+  "sub_ru": "Когда база перестаёт быть вашей одиночной стройкой",
+  "sub_en": "When the base stops being your solo build",
+  "quests": [
+    {
+      "slug": "intro",
+      "x": 0,
+      "y": 0,
+      "icon": "minecolonies:blockhuttownhall",
+      "deps": [],
+      "ru": {
+        "title": "Зачем сборке живой посёлок",
+        "subtitle": "Люди, которые работают, пока вас нет",
+        "desc": [
+          "Колония — это отдельная система: вы ставите ратушу, нанимаете строителя, и дальше жители сами строят, добывают, готовят и охраняют по вашему плану.",
+          "Для сборки это не украшение. Промышленность здесь описана как городская: коммунальные контракты, рационы, вода и жильё существуют потому, что кому-то нужно в этом жить. Колония даёт этому смысл.",
+          "Важно понимать цену. Жители требуют еды, жилья и времени на строительство. Это не бесплатная рабочая сила, а обмен: вы кормите посёлок, посёлок избавляет вас от рутины."
+        ],
+        "task": "Прочитать про колонию"
+      },
+      "en": {
+        "title": "Why the pack wants a living settlement",
+        "subtitle": "People who work while you are away",
+        "desc": [
+          "A colony is a separate system: you place a town hall, hire a builder, and from then on residents build, mine, cook and guard according to your plan.",
+          "This is not decoration here. The industry in this pack is described as urban: municipal contracts, rations, water and housing exist because somebody has to live in all of it. A colony gives that meaning.",
+          "Mind the price. Residents need food, housing and building time. This is not free labour but a trade: you feed the settlement, the settlement removes your drudgery."
+        ],
+        "task": "Read about the colony"
+      }
+    },
+    {
+      "slug": "townhall",
+      "x": 3,
+      "y": 0,
+      "icon": "minecolonies:blockhuttownhall",
+      "deps": ["intro"],
+      "ru": {
+        "title": "Ратуша и граница колонии",
+        "subtitle": "Первое здание задаёт всё остальное",
+        "desc": [
+          "Ратуша объявляет территорию колонии и служит пультом управления: список жителей, заказы, статистика и настройки живут в ней.",
+          "Место выбирается один раз и всерьёз. Вокруг должно остаться место под жильё, поля, склады и мастерские, а рядом — вода. Переносить колонию потом дорого и муторно.",
+          "Совет из практики: не ставьте ратушу вплотную к своему заводу. Шум, дым и краны жителям не мешают, но вам будет мешать чужая стройка посреди цеха."
+        ],
+        "task": "Поставить ратушу"
+      },
+      "en": {
+        "title": "The town hall and the colony border",
+        "subtitle": "The first building defines all the rest",
+        "desc": [
+          "The town hall declares colony territory and acts as the control panel: residents, orders, statistics and settings all live in it.",
+          "Pick the spot once and seriously. Leave room around it for housing, fields, stores and workshops, with water nearby. Moving a colony later is expensive and tedious.",
+          "A practical tip: do not place the hall flush against your factory. Noise and smoke will not bother the residents, but somebody else's construction site in the middle of your workshop will bother you."
+        ],
+        "task": "Place the town hall"
+      }
+    },
+    {
+      "slug": "builder",
+      "x": 6,
+      "y": -1.5,
+      "icon": "minecolonies:blockhutbuilder",
+      "deps": ["townhall"],
+      "ru": {
+        "title": "Строитель — первый и главный",
+        "subtitle": "Без него не появится ничего остального",
+        "desc": [
+          "Строитель возводит все остальные здания. Пока его нет, колония состоит из одной ратуши и не растёт.",
+          "Работает он по заявке: вы выбираете схему и место, он просит материалы и строит. Материалы придётся дать — колония не создаёт их из воздуха, и это принципиально.",
+          "Отсюда типичная ошибка первого дня: заказать пять зданий сразу. Строитель один, очередь длинная, а материалы уйдут на всё сразу и застрянут. Стройте по одному."
+        ],
+        "task": "Нанять строителя"
+      },
+      "en": {
+        "title": "The builder comes first",
+        "subtitle": "Nothing else appears without them",
+        "desc": [
+          "The builder erects every other building. Until you have one, the colony is a town hall and nothing more.",
+          "They work on request: you pick a blueprint and a spot, they ask for materials and build. You will have to supply those materials — a colony creates nothing from thin air, and that is the point.",
+          "Hence the classic day-one mistake: ordering five buildings at once. There is one builder, the queue is long, and your materials get locked into everything simultaneously. Build one at a time."
+        ],
+        "task": "Hire a builder"
+      }
+    },
+    {
+      "slug": "supply",
+      "x": 6,
+      "y": 1.5,
+      "icon": "minecraft:bread",
+      "deps": ["townhall"],
+      "ru": {
+        "title": "Еда, жильё и то, что кончается",
+        "subtitle": "Колония — это потребитель, а не только работник",
+        "desc": [
+          "Каждый житель ест и требует койку. Нет еды — люди уходят или перестают работать; нет жилья — новые не приходят.",
+          "Здесь стыкуются две части сборки. Пищевые цепочки, которые вы строите в четвёртой эпохе — поля, кухня, рационы — получают постоянного потребителя. Городской рацион перестаёт быть строчкой в контракте.",
+          "Правило простое: сначала поле и кухня, потом наём. Колония, растущая быстрее своего снабжения, разваливается сама."
+        ],
+        "task": "Наладить снабжение колонии"
+      },
+      "en": {
+        "title": "Food, housing and things that run out",
+        "subtitle": "A colony consumes as much as it works",
+        "desc": [
+          "Every resident eats and needs a bed. No food and people leave or stop working; no housing and no new ones arrive.",
+          "This is where two parts of the pack meet. The food chains you build in the fourth epoch — fields, kitchen, rations — gain a permanent consumer. The urban ration stops being a line in a contract.",
+          "The rule is simple: field and kitchen first, hiring second. A colony that grows faster than its supply falls apart on its own."
+        ],
+        "task": "Set up colony supply"
+      }
+    },
+    {
+      "slug": "guards",
+      "x": 9,
+      "y": 0,
+      "icon": "minecraft:iron_helmet",
+      "deps": ["builder", "supply"],
+      "ru": {
+        "title": "Стража и внешний мир",
+        "subtitle": "Посёлок — это то, что можно потерять",
+        "desc": [
+          "Казарма даёт колонии собственную стражу. Она патрулирует территорию и вступает в бой, когда к посёлку кто-то приходит.",
+          "Это прямо связано с фракциями. Операции направлены против вас, но живут в мире, где стоит ваш посёлок, а мирные жители — не бойцы. Стража решает, будет ли операция вопросом переговоров или вопросом потерь.",
+          "И обратная сторона: убитый мирный житель чужой фракции стоит вам восемнадцати пунктов отношения. Ваша стража тоже может начать драку, которой вы не хотели."
+        ],
+        "task": "Поставить казарму и нанять стражу"
+      },
+      "en": {
+        "title": "Guards and the outside world",
+        "subtitle": "A settlement is something you can lose",
+        "desc": [
+          "Barracks give the colony its own guards. They patrol the territory and fight whoever comes to the settlement.",
+          "This ties straight into factions. Operations target you, but they happen in a world where your settlement stands, and civilians are not fighters. Guards decide whether an operation becomes a negotiation or a loss.",
+          "The reverse also holds: killing another faction's civilian costs you eighteen points of standing. Your guards can start a fight you did not want."
+        ],
+        "task": "Build barracks and hire guards"
+      }
+    }
+  ]
+}

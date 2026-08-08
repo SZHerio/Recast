@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "policy": "Every third-party JAR added by the pack author must be downloaded from an exact CurseForge file page/CDN URL and recorded here or in minecraftinstance.json. Visibility in the CurseForge App is not required by the owner as of 2026-08-02.",
-  "build_id": "IF-M1-0001",
+  "policy": "Каждый сторонний JAR, добавленный автором сборки, должен быть скачан по точному URL страницы файла CurseForge/CDN и записан здесь или в minecraftinstance.json. Наличие в приложении CurseForge по состоянию на 2026-08-02 не требуется.",
+  "build_id": "IF-M10-0001",
   "files": [
     {
       "file_name": "citadel-2.6.3-1.20.1.jar",
@@ -11,7 +11,7 @@
       "download_url": "https://edge.forgecdn.net/files/7476/570/citadel-2.6.3-1.20.1.jar",
       "sha256": "56C7AB87348A5292583AAC787B6CF11B5193E77F02AF1D17EA75A96F8640B3CE",
       "release_type": "release",
-      "purpose": "Mandatory Alex's Mobs dependency; requires Citadel 2.6.0 or newer."
+      "purpose": "Обязательная зависимость Alex's Mobs; требует Citadel 2.6.0 или новее."
     },
     {
       "file_name": "jei-1.20.1-forge-15.20.0.134.jar",
@@ -21,7 +21,7 @@
       "download_url": "https://edge.forgecdn.net/files/8419/086/jei-1.20.1-forge-15.20.0.134.jar",
       "sha256": "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
       "release_type": "beta",
-      "purpose": "Compatibility floor for GTCEu 7.5.3, which declares JEI 15.20.0.115 or newer.",
+      "purpose": "Порог совместимости для GTCEu 7.5.3, который требует JEI 15.20.0.115 или новее.",
       "replaces": "jei-1.20.1-forge-15.20.0.112.jar"
     },
     {
@@ -32,7 +32,7 @@
       "download_url": "https://edge.forgecdn.net/files/8226/927/ftb-library-forge-2001.2.13.jar",
       "sha256": "41810281B65336265CAE2C88412022D02F2F0A3F28C66A06173D86F98ACF14A7",
       "release_type": "release",
-      "purpose": "FTB authoring stack library."
+      "purpose": "Библиотека для стека авторинга FTB."
     },
     {
       "file_name": "ftb-teams-forge-2001.3.2.jar",
@@ -42,7 +42,7 @@
       "download_url": "https://edge.forgecdn.net/files/7499/810/ftb-teams-forge-2001.3.2.jar",
       "sha256": "B1CB4D82EA9F137A87E12A7AAF3329619294B56F7D70337DFD557A76E10B6E07",
       "release_type": "release",
-      "purpose": "Team-owned quest progress and future Threat Director team identity."
+      "purpose": "Командно-ориентированный прогресс квестов и будущая командная идентичность Threat Director."
     },
     {
       "file_name": "ftb-quests-forge-2001.4.22.jar",
@@ -52,7 +52,7 @@
       "download_url": "https://edge.forgecdn.net/files/8078/538/ftb-quests-forge-2001.4.22.jar",
       "sha256": "9EA9D159A78A2724CFE0457B024680FDB52A2126EFF9CFA5280A30578F647A68",
       "release_type": "release",
-      "purpose": "Authoritative in-game guide and quest graph renderer."
+      "purpose": "Авторитетный внутриигровой гид и рендерер графа квестов."
     },
     {
       "file_name": "ftb-xmod-compat-forge-2.1.3.jar",
@@ -62,7 +62,7 @@
       "download_url": "https://edge.forgecdn.net/files/6402/486/ftb-xmod-compat-forge-2.1.3.jar",
       "sha256": "16A8EB9DE88D5C33D29CB076CC39DFB337B2C54348E1EF1EFE9DD60CF85E5F72",
       "release_type": "release",
-      "purpose": "Narrow FTB Quests integrations, including Filter System support."
+      "purpose": "Узкие интеграции FTB Quests, включая поддержку Filter System."
     },
     {
       "file_name": "ftb-filter-system-forge-20.0.1.jar",
@@ -72,7 +72,7 @@
       "download_url": "https://edge.forgecdn.net/files/6466/153/ftb-filter-system-forge-20.0.1.jar",
       "sha256": "FCB7B312A010986A868A6645E4E395B2635383A2387297C7C134AA4250959E24",
       "release_type": "release",
-      "purpose": "Tag-aware quest tasks without enumerating equivalent items."
+      "purpose": "Задачи квестов с учётом тегов без перечисления эквивалентных предметов."
     },
     {
       "file_name": "questsadditions-1.4.7.jar",
@@ -82,7 +82,7 @@
       "download_url": "https://edge.forgecdn.net/files/6004/490/questsadditions-1.4.7.jar",
       "sha256": "C0914E53B3545972F1B81511A00363D724DA209AF290A0FDA301836BC5B3F2BA",
       "release_type": "release",
-      "purpose": "Future place/structure tasks for functional city contracts; gated until a narrow user test."
+      "purpose": "Будущие задания на размещение/структуры для функциональных городских контрактов; заблокировано до узкого пользовательского теста."
     },
     {
       "file_name": "kubejs-create-forge-2001.3.0-build.8.jar",
@@ -92,7 +92,7 @@
       "download_url": "https://edge.forgecdn.net/files/6265/498/kubejs-create-forge-2001.3.0-build.8.jar",
       "sha256": "7ED3229677A98159BADD9250F8E9555B5E8F7F7B55981F1A99B11E30574BAFD4",
       "release_type": "release",
-      "purpose": "KubeJS ownership of Create recipe integration."
+      "purpose": "Ответственность KubeJS за интеграцию рецептов Create."
     },
     {
       "file_name": "lootjs-forge-1.20.1-2.13.1.jar",
@@ -102,7 +102,7 @@
       "download_url": "https://edge.forgecdn.net/files/7551/186/lootjs-forge-1.20.1-2.13.1.jar",
       "sha256": "C1672330605A691B8A91B3A4D252F2D3A280F252874F1FC5FDD7CAD07D13B719",
       "release_type": "release",
-      "purpose": "Single owner of future pack-authored loot changes."
+      "purpose": "Единственный владелец будущих изменений лута, авторизованных сборкой."
     },
     {
       "file_name": "Paxi-1.20-Forge-4.0.jar",
@@ -112,7 +112,7 @@
       "download_url": "https://edge.forgecdn.net/files/4749/994/Paxi-1.20-Forge-4.0.jar",
       "sha256": "DD18DD9696D099137B170076676E8411E3D8385AF15941F68472F21167266F1A",
       "release_type": "release",
-      "purpose": "Global delivery of the pack-owned datapack and Russian resource pack."
+      "purpose": "Глобальная доставка принадлежащего сборке datapack и русского ресурс-пака."
     },
     {
       "file_name": "bettercombat-forge-1.9.0+1.20.1.jar",
@@ -176,7 +176,7 @@
     },
     {
       "file_name": "create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar",
-      "project_id": 628194,
+      "project_id": 820977,
       "file_id": 8204836,
       "project_slug": "create-central-kitchen",
       "download_url": "https://edge.forgecdn.net/files/8204/836/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar",
@@ -206,7 +206,7 @@
     },
     {
       "file_name": "domum_ornamentum-1.20.1-1.0.303-snapshot-universal.jar",
-      "project_id": 446069,
+      "project_id": 527361,
       "file_id": 8338110,
       "project_slug": "domum-ornamentum",
       "download_url": "https://edge.forgecdn.net/files/8338/110/domum_ornamentum-1.20.1-1.0.303-snapshot-universal.jar",
@@ -216,13 +216,63 @@
     },
     {
       "file_name": "blockui-1.20.1-1.0.193.jar",
-      "project_id": 528052,
+      "project_id": 522992,
       "file_id": 7541343,
       "project_slug": "blockui",
       "download_url": "https://edge.forgecdn.net/files/7541/343/blockui-1.20.1-1.0.193.jar",
       "sha256": "0658AEA747CFAEA37171EA0794E420C4AC40E638B1D7DEC50D196086B80A4CB7",
       "release_type": "release",
-      "purpose": "Интерфейсная библиотека MineColonies и Structurize."
+      "purpose": "Визуальные интерфейсы для структуризированного строительства и связанных экранов."
+    },
+    {
+      "file_name": "toms_storage-1.20-1.7.1.jar",
+      "project_id": 378609,
+      "file_id": 6418133,
+      "project_slug": "toms-storage",
+      "download_url": "https://edge.forgecdn.net/files/6418/133/toms_storage-1.20-1.7.1.jar",
+      "sha256": "08552BE86F960111E501227707DC089C91B8A55F6C1BE09BAEE188338576FF9B",
+      "release_type": "release",
+      "purpose": "Ранний единый склад P2–P4: снижает ручную сортировку, но не заменяет AE2 и не открывает удалённую логистику раньше эпохи."
+    },
+    {
+      "file_name": "fancymenu_forge_3.9.9_MC_1.20.1.jar",
+      "project_id": 367706,
+      "file_id": 8544939,
+      "project_slug": "fancymenu",
+      "download_url": "https://edge.forgecdn.net/files/8544/939/fancymenu_forge_3.9.9_MC_1.20.1.jar",
+      "sha256": "686253F50D103E21CC04B8710AB9BA4BA788916AD852620040308F3F08512FAB",
+      "release_type": "release",
+      "purpose": "Главное меню, служебные экраны и единая тема интерфейса Recast в M9."
+    },
+    {
+      "file_name": "drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar",
+      "project_id": 511770,
+      "file_id": 8552902,
+      "project_slug": "drippy-loading-screen",
+      "download_url": "https://edge.forgecdn.net/files/8552/902/drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar",
+      "sha256": "3213B0A5AE3B487360BC2CAFD036A11F35C4E1465122E18E218968C0771DDC42",
+      "release_type": "release",
+      "purpose": "Загрузочные экраны M9; точная версия выбрана для совместной работы с установленным FancyMenu 3.9.9."
+    },
+    {
+      "file_name": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "project_id": 410295,
+      "file_id": 5028413,
+      "project_slug": "konkrete",
+      "download_url": "https://edge.forgecdn.net/files/5028/413/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "sha256": "E78686B92C3761EC26EB9D3C53EFDD3D6CA77981CBD3723995E1163B7103AE0B",
+      "release_type": "release",
+      "purpose": "Обязательная библиотека FancyMenu и Drippy Loading Screen."
+    },
+    {
+      "file_name": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+      "project_id": 938643,
+      "file_id": 5109692,
+      "project_slug": "melody",
+      "download_url": "https://edge.forgecdn.net/files/5109/692/melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+      "sha256": "933E2A7E79C4594F965F7F7D00B1F28A98EC2A180AD8F9F90310A266FE5CF5D8",
+      "release_type": "release",
+      "purpose": "Установленная мультимедийная библиотека FancyMenu; запись зафиксирована по текущим manifest.json и локальному JAR без подмены версии."
     }
   ],
   "owner_exceptions": [
@@ -232,7 +282,8 @@
       "version": "1.120.0",
       "sha256": "F3CDE5A1AA20CA6ACE802FED8250920D73C000E32A392F887B02315DFC678E90",
       "reason_ru": "CC: Tweaked прекратил публикацию на CurseForge: последняя доступная там forge-сборка — 1.113.1 (файл 5714507, сентябрь 2024). Advanced Peripherals 0.7.45r и новее требуют computercraft [1.116.1,), поэтому пара «новый AP + CurseForge-сборка CC» невозможна в принципе.",
-      "decision_ru": "Владелец принял решение установить forge-сборку 1.120.0 из стороннего источника. Это зарегистрированное исключение из правила CurseForge-only, а не его отмена: на все остальные моды правило действует без изменений.",
+      "decision_ru": "Исторически владелец разрешил установить forge-сборку 1.120.0 из стороннего источника. Более позднее и действующее требование — использовать версии модов только с CurseForge — отменяет пригодность этого исключения для релиза. M10 хранит запись ради происхождения и хэша, но считает её открытым нарушением source-policy.",
+      "m10_status": "OPEN_POLICY_VIOLATION",
       "alternative_ru": "Альтернатива без исключения — Advanced Peripherals 0.7.44r (файл 6623216), требующий computercraft [1.110.0,) и совместимый с CurseForge-сборкой 1.113.1. Сборка сохранена в backups/IF-M4-0001/mods на случай отката.",
       "decided_on": "2026-08-02"
     }

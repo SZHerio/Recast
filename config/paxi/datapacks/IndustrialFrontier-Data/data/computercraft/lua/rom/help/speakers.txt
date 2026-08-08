@@ -1,0 +1,9 @@
+Динамик - периферийное устройство CraftOS. Введите "help peripheral", чтобы узнать, как подключаться к периферийным устройствам через API peripheral. Когда динамик подключён, peripheral.getType() возвращает "speaker".
+
+Методы динамика:
+playSound( sResourceName, nVolume, nPitch )
+playNote( sInstrumentName, nVolume, nPitch )
+
+Имя ресурса совпадает с именем для команды /playsound, например "minecraft:entity.cow.ambient".
+Доступные инструменты: "harp", "bass", "snare", "hat" и "basedrum", а в Minecraft 1.12 и новее также "flute", "bell", "chime" и "guitar".
+Число тактов показывает, сколько раз нотный блок был настроен щелчком правой кнопки мыши.

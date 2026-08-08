@@ -1,0 +1,907 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.help",
+    "engine_id": "2090000000000001",
+    "filename": "90_help",
+    "group": {
+      "alias": "if.group.v2.help",
+      "engine_id": "1000000000000002",
+      "title_ru": "Помощь"
+    },
+    "order": 90,
+    "icon": "minecraft:recovery_compass",
+    "epoch": "REFERENCE",
+    "tags": [
+      "help",
+      "diagnostics",
+      "recovery"
+    ],
+    "hide_until_reached": false,
+    "text_ru": {
+      "title": "Помощь и восстановление",
+      "subtitle": "Как разобраться с рецептом, незасчитанным заданием или общим прогрессом и собрать полезный отчёт об ошибке",
+      "description": [
+        "Эта глава всегда доступна и ничего не открывает в основной кампании. Начните с памятки, выберите подходящую ветку и выполняйте проверки по порядку.",
+        "Команды восстановления оставлены на самый конец. Сначала нужно понять причину сбоя и убедиться, что команда игроков действительно выполнила условия эпохи."
+      ]
+    },
+    "editorial": {
+      "voice": "Спокойный технический помощник, который ведёт от простых проверок к редким случаям и не обвиняет игрока.",
+      "tone_rules": [
+        "Один шаг должен проверять одну возможную причину.",
+        "Пути к файлам и команды приводить точно, а риск объяснять до действия.",
+        "Если проблему нельзя доказать без игры, прямо просить наблюдение или журнал."
+      ],
+      "avoid": [
+        "Не советовать переустановку сборки первым шагом.",
+        "Не предлагать операторскую команду до проверки обычных причин.",
+        "Не обещать, что закрытие окна или повторный вход исправит повреждённый прогресс."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.help.index",
+      "engine_id": "3090000000000001",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:recovery_compass",
+      "tags": [
+        "help",
+        "triage"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": []
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.help.index.read",
+          "engine_id": "4090000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте порядок первичной проверки.",
+            "help": "Галочка отмечает только знакомство с памяткой и не меняет прогресс кампании."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "С чего начать",
+        "lead_ru": "Большинство непонятных ситуаций удаётся разобрать без переустановки и без операторских команд.",
+        "purpose_ru": "Сначала уточните, что именно не работает: рецепт не находится, предмет не засчитывается, общий прогресс не виден или игра сообщает об ошибке. От ответа зависит следующая проверка.",
+        "steps_ru": [
+          "Перечитайте формулировку задания и название требуемого предмета или действия.",
+          "Если вопрос связан с изготовлением, откройте ветку про JEI.",
+          "Если условие выполнено, но квест молчит, откройте ветку про незасчитанное задание.",
+          "Если проблема повторяется или сопровождается ошибкой, подготовьте журнал и короткое описание действий."
+        ],
+        "success_ru": "Вы выбрали одну конкретную ветку проверки и можете описать проблему одним предложением.",
+        "diagnostics_ru": [
+          "Если пока непонятно, где сбой, начните с JEI: так быстрее всего отделить отсутствие рецепта от ошибки квеста."
+        ],
+        "next_ru": "Перейдите к подходящей ветке ниже; выполнять остальные памятки заранее не требуется.",
+        "task_text_ru": "Ознакомьтесь с порядком первичной проверки.",
+        "optional_note_ru": "Справочная глава необязательна и не влияет на эпоху команды."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст написан как короткая развилка диагностики, без предположения о причине ошибки."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Формулировки проверены отдельно как авторский черновик, техническая памятка, естественный русский текст и вход в соседние ветви."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.diagnostics_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Памятка не требует предметов и не создаёт повторяемой работы."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.help.jei",
+      "engine_id": "3090000000000002",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:knowledge_book",
+      "tags": [
+        "help",
+        "jei",
+        "recipes"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.help.index",
+            "reason": "Поиск рецепта является одной из ветвей первичной проверки.",
+            "evidence": [
+              "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.help.jei.read",
+          "engine_id": "4090000000000002",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте памятку по поиску рецептов.",
+            "help": "Горячие клавиши могут отличаться, поэтому при необходимости проверьте их в настройках управления."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Рецепт не находится в JEI",
+        "lead_ru": "Пустой результат поиска ещё не означает, что предмет сломан или полностью недоступен.",
+        "purpose_ru": "JEI различает обычное изготовление и процессы машин. Некоторые предметы появляются только после открытия подходящей категории, а скрытые стадии могут намеренно закрывать слишком ранний рецепт.",
+        "steps_ru": [
+          "Очистите строку поиска и найдите предмет по части названия без служебных символов.",
+          "Откройте способы получения предмета и просмотрите все доступные вкладки, а не только верстак.",
+          "Проверьте, есть ли среди входов жидкость, энергия, давление или машина нужного уровня.",
+          "Сверьте эпоху команды с главой, в которой книга впервые предлагает этот предмет."
+        ],
+        "success_ru": "Вы нашли действующий способ получения либо точно установили, что рецепт пока закрыт развитием.",
+        "diagnostics_ru": [
+          "Если список категорий пуст, перезапустите поиск с коротким названием и снимите возможный фильтр мода.",
+          "Если рецепт виден, но машина его не принимает, сравните уровень машины, напряжение и точное состояние входов.",
+          "Если предмет вообще не отображается, приложите его точное имя или идентификатор к отчёту."
+        ],
+        "next_ru": "Если рецепт найден, вернитесь в предметную главу; если нет, соберите сведения по памятке об отчёте.",
+        "task_text_ru": "Разберите порядок поиска рецепта в JEI.",
+        "optional_note_ru": "Эта памятка нужна только при затруднении и не является условием основной кампании."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Советы не предполагают стандартную раскладку клавиш и различают рецепт от блокировки эпохой."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены последовательность поиска, точность терминов JEI и связь с дальнейшей диагностикой."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.diagnostics_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "jei",
+          "evidence": [
+            "docs/registries/quest_content_coverage.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка объясняет интерфейс и не требует изготовления предметов."
+      },
+      "layout": {
+        "x": 2,
+        "y": -3,
+        "shape": "diamond",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.help.not_counted",
+      "engine_id": "3090000000000003",
+      "epoch": "REFERENCE",
+      "role": "diagnostics",
+      "requirement": "optional",
+      "icon": "minecraft:clock",
+      "tags": [
+        "help",
+        "quests",
+        "diagnostics"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.help.index",
+            "reason": "Незасчитанное условие является отдельной ветвью первичной проверки.",
+            "evidence": [
+              "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.help.not_counted.read",
+          "engine_id": "4090000000000003",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте порядок проверки незасчитанного условия.",
+            "help": "Не применяйте команды восстановления, пока не сравните предмет, действие и зависимости квеста."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Условие выполнено, а квест молчит",
+        "lead_ru": "Чаще всего расходятся точный предмет, способ действия или прогресс команды, а не сама книга.",
+        "purpose_ru": "Задача может принимать целую группу равноценных предметов, требовать конкретный результат или ждать настоящего взаимодействия с блоком. Значок показывает тему, но точное условие всегда написано рядом с задачей.",
+        "steps_ru": [
+          "Откройте квест и прочитайте короткий текст непосредственно у незавершённой задачи.",
+          "Сравните название, количество и состояние предмета; положите его в обычный инвентарь персонажа.",
+          "Для установки или использования повторите именно указанное действие после открытия квеста.",
+          "Убедитесь, что все предыдущие обязательные узлы завершены той же командой."
+        ],
+        "success_ru": "Причина найдена либо вы можете назвать точный квест, задачу, предмет и выполненное действие.",
+        "diagnostics_ru": [
+          "Если предмет создан заранее, переложите его между ячейками инвентаря после открытия книги.",
+          "Если значок подходит, а предмет не принимается, проверьте точное название в подсказке задачи.",
+          "Если условие завершилось у одного участника, но не у другого, перейдите к памятке о команде."
+        ],
+        "next_ru": "При повторяемом сбое сохраните точные сведения и перейдите к подготовке отчёта.",
+        "task_text_ru": "Разберите безопасную проверку незасчитанного условия.",
+        "optional_note_ru": "Памятка не меняет квестовый прогресс и нужна только для диагностики."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст различает значок, точное условие, предметную задачу и наблюдаемое действие."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Порядок проверок идёт от текста задачи к предмету, действию и только затем к общему прогрессу."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.diagnostics_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "ftbquests",
+          "evidence": [
+            "mods/ftb-quests-forge-2001.4.22.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Диагностика не должна заставлять повторно производить дорогую партию."
+      },
+      "layout": {
+        "x": 2,
+        "y": -1,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.help.team",
+      "engine_id": "3090000000000004",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:player_head",
+      "tags": [
+        "help",
+        "team",
+        "progress"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.help.index",
+            "reason": "Общий прогресс команды проверяется после определения типа проблемы.",
+            "evidence": [
+              "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.help.team.read",
+          "engine_id": "4090000000000004",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте памятку об общем прогрессе.",
+            "help": "Состав команды и её квестовый прогресс связаны, поэтому смену команды нельзя считать безобидной настройкой."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Общий прогресс команды",
+        "lead_ru": "Эпоха и завершённые квесты принадлежат команде FTB Quests, а не имени отдельного персонажа.",
+        "purpose_ru": "Совместная книга позволяет строить одну фабрику на всех, но требует стабильного состава команды. Выход, вступление в другую команду или создание новой могут показать другой набор выполненных заданий.",
+        "steps_ru": [
+          "Сравните название команды у участников, которые видят разный прогресс.",
+          "Проверьте, кто завершал последний узел ввода эпохи в строй и состоял ли он тогда в этой команде.",
+          "Не меняйте состав команды во время проверки; сначала запишите текущее состояние и спорный квест."
+        ],
+        "success_ru": "Все участники видят одну команду и одинаково завершённый последний этап кампании.",
+        "diagnostics_ru": [
+          "Если игрок оказался вне команды, сначала выясните, когда это произошло, и не создавайте новую команду поверх старой.",
+          "Если название совпадает, а книга различается, подготовьте отчёт от обоих участников."
+        ],
+        "next_ru": "После проверки состава повторите действие из спорного квеста или передайте сведения администратору.",
+        "task_text_ru": "Разберите, кому принадлежит общий прогресс.",
+        "optional_note_ru": "Памятка полезна в совместной игре и не обязательна для одиночного прохождения."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Формулировки согласованы с UUID-командной моделью прогресса и не раскрывают служебное хранение данных."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Техническая модель команды объяснена через видимые игроку действия и последствия."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.diagnostics_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "ftb-quests-team-progress",
+          "evidence": [
+            "docs/registries/quest_epoch_bridge.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Проверка состава команды не требует ресурсов или повторного производства."
+      },
+      "layout": {
+        "x": 2,
+        "y": 1,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.help.latest_log",
+      "engine_id": "3090000000000005",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:paper",
+      "tags": [
+        "help",
+        "logs",
+        "privacy"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.help.index",
+            "reason": "Журнал нужен только после первичного описания повторяемой ошибки.",
+            "evidence": [
+              "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.help.latest_log.read",
+          "engine_id": "4090000000000005",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, как сохранить подходящий журнал.",
+            "help": "Не публикуйте файл, пока не проверите его на личные данные и адреса серверов."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Как найти нужный журнал",
+        "lead_ru": "Полный файл latest.log обычно полезнее фотографии одной красной строки.",
+        "purpose_ru": "Журнал сохраняет порядок загрузки, предупреждения и саму ошибку. Его нужно брать сразу после воспроизведения проблемы, иначе следующий запуск может заменить важный контекст.",
+        "steps_ru": [
+          "Повторите проблему один раз и после неё закройте игру обычным способом, если это возможно.",
+          "Откройте папку экземпляра, затем папку logs и найдите файл latest.log.",
+          "Скопируйте файл в отдельное место, чтобы следующий запуск его не изменил.",
+          "Перед отправкой проверьте строки с именами, путями, адресами серверов и другой личной информацией."
+        ],
+        "success_ru": "Сохранён полный журнал того запуска, в котором проблема была воспроизведена.",
+        "diagnostics_ru": [
+          "Если latest.log уже относится к другому запуску, посмотрите архивные файлы в той же папке и сверяйте время.",
+          "Если игра аварийно завершилась, приложите также подходящий файл из папки crash-reports."
+        ],
+        "next_ru": "Добавьте журнал к короткому воспроизводимому описанию из следующей памятки.",
+        "task_text_ru": "Научитесь сохранять журнал проблемного запуска.",
+        "optional_note_ru": "Журнал нужен только для сложной или повторяемой ошибки; заранее собирать его не требуется."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Путь и порядок сохранения журнала указаны без требования запускать игру в особом режиме."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Отдельно проверены точность пути, сохранение контекста и предупреждение о личных данных."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "logs/latest.log",
+          "evidence": [
+            "docs/M10_BUILD_TEST_PROTOCOL.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один сохранённый журнал заменяет повторные попытки угадать причину."
+      },
+      "layout": {
+        "x": 2,
+        "y": 3,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.help.report",
+      "engine_id": "3090000000000006",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:writable_book",
+      "tags": [
+        "help",
+        "report",
+        "diagnostics"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.help.not_counted",
+            "reason": "Перед отчётом нужно выполнить безопасные проверки самого условия.",
+            "evidence": [
+              "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.help.latest_log",
+            "reason": "Повторяемая техническая ошибка требует журнала подходящего запуска.",
+            "evidence": [
+              "docs/M10_BUILD_TEST_PROTOCOL.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.help.report.read",
+          "engine_id": "4090000000000006",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте состав полезного отчёта.",
+            "help": "Короткие точные шаги помогают больше, чем общее сообщение о том, что всё сломано."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Полезный отчёт об ошибке",
+        "lead_ru": "Хороший отчёт позволяет другому человеку повторить проблему и сравнить результат.",
+        "purpose_ru": "Для разбора нужны условия, короткая последовательность действий, ожидаемый результат и то, что произошло на самом деле. Версия сборки, режим игры и состав команды часто объясняют различия между двумя случаями.",
+        "steps_ru": [
+          "Запишите версию сборки, одиночную или сетевую игру и название спорного квеста.",
+          "Опишите минимальные действия от чистого состояния до ошибки, по одному действию на строку.",
+          "Отдельно укажите ожидаемый и фактический результат.",
+          "Приложите полный журнал проблемного запуска и снимок экрана, если он показывает важное состояние интерфейса."
+        ],
+        "success_ru": "Другой человек может повторить ваши действия без дополнительных догадок и увидеть тот же результат.",
+        "diagnostics_ru": [
+          "Если шагов слишком много, уберите действия, после удаления которых ошибка всё равно повторяется.",
+          "Если проблема появляется не всегда, укажите частоту и что менялось между удачной и неудачной попыткой."
+        ],
+        "next_ru": "Передайте отчёт вместе с файлами; не применяйте восстановление, пока причина остаётся неясной.",
+        "task_text_ru": "Ознакомьтесь со структурой воспроизводимого отчёта.",
+        "optional_note_ru": "Отчёт нужен только при реальной проблеме и не влияет на прохождение."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Шаблон ориентирован на воспроизводимость, а не на объём сообщения."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены полнота минимального отчёта, порядок действий и связь с журналом."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md",
+          "evidence": [
+            "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Короткий воспроизводимый отчёт уменьшает число повторных уточнений."
+      },
+      "layout": {
+        "x": 4,
+        "y": -1,
+        "shape": "diamond",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.help.recovery",
+      "engine_id": "3090000000000007",
+      "epoch": "REFERENCE",
+      "role": "recovery",
+      "requirement": "optional",
+      "icon": "minecraft:barrier",
+      "tags": [
+        "help",
+        "recovery",
+        "operator"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.help.team",
+            "reason": "Восстановление разрешено только после проверки правильной команды.",
+            "evidence": [
+              "docs/registries/quest_epoch_bridge.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.help.report",
+            "reason": "Перед изменением прогресса нужно сохранить исходное состояние и причину вмешательства.",
+            "evidence": [
+              "docs/QUEST_REBUILD_RUNTIME_PROTOCOL.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.help.recovery.read",
+          "engine_id": "4090000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте условия безопасного восстановления.",
+            "help": "Эта памятка не выдаёт права оператора и не выполняет команду автоматически."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Восстановление прогресса",
+        "lead_ru": "Операторская команда исправляет состояние команды, но не заменяет невыполненную производственную цепочку.",
+        "purpose_ru": "Восстановление допустимо, если команда действительно завершила ввод эпохи в строй, обычное событие не сработало и исходное состояние уже записано. Команда продвигает развитие только на один шаг.",
+        "steps_ru": [
+          "Сделайте резервную копию мира и сохраните отчёт с названием команды и последним завершённым этапом.",
+          "Убедитесь, что все обязательные ветви текущей эпохи выполнены и финальный квест завершён.",
+          "Попросите оператора выполнить /if_advance_epoch один раз от имени участника нужной команды.",
+          "Снова откройте книгу и проверьте только следующий этап; не повторяйте команду без новой проверки."
+        ],
+        "success_ru": "Команда перешла ровно к следующей эпохе, а её завершённые квесты и состав не изменились.",
+        "diagnostics_ru": [
+          "Если команда отклонена, не обходите проверку другой командой: сначала сверьте текущую эпоху и финальный квест.",
+          "Если переход уже произошёл, повторная команда не нужна.",
+          "Если изменился неверный прогресс, остановитесь и восстановите резервную копию до новых попыток."
+        ],
+        "next_ru": "После успешной проверки продолжайте с первой главой новой эпохи и сохраните запись о вмешательстве.",
+        "task_text_ru": "Ознакомьтесь с безопасным восстановлением одного перехода.",
+        "optional_note_ru": "В обычном прохождении этот квест не нужен; восстановление выполняет только оператор после проверки причины."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Памятка соответствует защищённой одношаговой команде и требует резервную копию до изменения."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Отдельно проверены предусловия, одношаговость команды, откат и понятность последствий."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "prerequisites",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:operator_epoch_recovery",
+          "evidence": [
+            "kubejs/server_scripts/00_core/if_commands.js",
+            "docs/registries/quest_epoch_bridge.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Восстановление не должно требовать повторного гринда уже принятой эпохи."
+      },
+      "layout": {
+        "x": 4,
+        "y": 1,
+        "shape": "diamond",
+        "size": 1.5
+      }
+    }
+  ]
+}

@@ -8,91 +8,91 @@
     {
       "alias": "if.quest.p4.intro",
       "engine_id": "3014000000000001",
-      "purpose": "Why P4 works differently",
+      "purpose": "Объясняет, почему химия здесь устроена как район города, а не одна линия.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.raw_water",
       "engine_id": "3014000000000002",
-      "purpose": "Three different waters in one world",
+      "purpose": "Показывает, что в одном мире может быть несколько полезных вод.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p4.treatment",
       "engine_id": "3014000000000003",
-      "purpose": "One input, three outputs",
+      "purpose": "Показывает, как один вход делится на несколько выходов.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.sewage",
       "engine_id": "3014000000000004",
-      "purpose": "Waste is feedstock for a neighbouring line",
+      "purpose": "Объясняет, что отходы могут стать сырьём для соседнего процесса.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.sulfur",
       "engine_id": "3014000000000005",
-      "purpose": "Your first acid line",
+      "purpose": "Вводит первую кислотную линию.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.nitrogen",
       "engine_id": "3014000000000006",
-      "purpose": "From air to fertiliser",
+      "purpose": "Превращает воздух в удобрение.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.chlorine",
       "engine_id": "3014000000000007",
-      "purpose": "One plant, three products",
+      "purpose": "Показывает завод с тремя продуктами как одну общую систему.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.fertiliser",
       "engine_id": "3014000000000008",
-      "purpose": "Chemistry meets the calendar",
+      "purpose": "Показывает, что химия должна идти вслед за сезонным спросом.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p4.kitchen_manual",
       "engine_id": "3014000000000009",
-      "purpose": "Understand the process first",
+      "purpose": "Сначала объясняет процесс вручную, потом уже автоматизацию.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p4.kitchen_batch",
       "engine_id": "3014000000000010",
-      "purpose": "The same kitchen, without hands",
+      "purpose": "Перестраивает ту же кухню в пакетный процесс.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.rations",
       "engine_id": "3014000000000011",
-      "purpose": "Variety instead of a mandatory menu",
+      "purpose": "Показывает разнообразие еды как задачу логистики, а не бонус.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.contract",
       "engine_id": "3014000000000012",
-      "purpose": "Demand you can plan for",
+      "purpose": "Показывает спрос как то, что можно планировать.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p4.exit",
       "engine_id": "3014000000000013",
-      "purpose": "The district outgrew its pipes",
+      "purpose": "Закрывает районную главу и ведёт к региональной логистике.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

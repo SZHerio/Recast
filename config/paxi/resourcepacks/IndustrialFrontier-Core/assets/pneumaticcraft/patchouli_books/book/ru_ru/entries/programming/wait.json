@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Ждать»",
+  "icon": "pneumaticcraft:textures/progwidgets/wait_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:tools/drone)Дрон/$ ничего не будет делать в течение заданного времени. Чтобы указать длительность, подключите виджет $(l:programming/text)Текст/$ и введите значение.$(p)Поддерживаются следующие форматы:$(li)$(thing)20/$ — ждать 1 секунду (20 тиков)$(li)$(thing)10s/$ — ждать 10 секунд$(li)$(thing)5m/$ — ждать 5 минут"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/wait_piece.png"
+      ],
+      "text": "$(italic)Годо/$"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Хранилище NBT",
+  "icon": "advancedperipherals:nbt_storage",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Хранилище NBT — специальный блок для записи и чтения произвольных данных. В основном он нужен для работы с идентификаторами.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/nbt_storage/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:nbt_storage"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:nbt_storage"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите хранилище NBT к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}

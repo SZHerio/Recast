@@ -1,0 +1,157 @@
+{
+	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
+	default_quest_shape: "square"
+	filename: "25_factions_live"
+	group: "1000000000000005"
+	icon: "minecraft:written_book"
+	id: "2025000000000001"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			hide_until_deps_complete: true
+			dependencies: ["3045000000000008"]
+			description: [
+				"{industrial_frontier.quest.factions.intro.desc.1}"
+				"{industrial_frontier.quest.factions.intro.desc.2}"
+				"{industrial_frontier.quest.factions.intro.desc.3}"
+			]
+			icon: "minecraft:compass"
+			id: "3025000000000001"
+			optional: true
+			subtitle: "{industrial_frontier.quest.factions.intro.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4025000000000001"
+				title: "{industrial_frontier.quest.factions.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.factions.intro.title}"
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.factions.bases.desc.1}"
+				"{industrial_frontier.quest.factions.bases.desc.2}"
+				"{industrial_frontier.quest.factions.bases.desc.3}"
+			]
+			icon: "minecraft:campfire"
+			id: "3025000000000002"
+			optional: true
+			subtitle: "{industrial_frontier.quest.factions.bases.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4025000000000002"
+				title: "{industrial_frontier.quest.factions.bases.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.factions.bases.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.factions.talks.desc.1}"
+				"{industrial_frontier.quest.factions.talks.desc.2}"
+				"{industrial_frontier.quest.factions.talks.desc.3}"
+			]
+			icon: "minecraft:paper"
+			id: "3025000000000003"
+			optional: true
+			subtitle: "{industrial_frontier.quest.factions.talks.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4025000000000003"
+				title: "{industrial_frontier.quest.factions.talks.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.factions.talks.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
+		}
+		{
+			dependencies: ["3025000000000002"]
+			description: [
+				"{industrial_frontier.quest.factions.reputation.desc.1}"
+				"{industrial_frontier.quest.factions.reputation.desc.2}"
+				"{industrial_frontier.quest.factions.reputation.desc.3}"
+			]
+			icon: "minecraft:emerald"
+			id: "3025000000000004"
+			optional: true
+			subtitle: "{industrial_frontier.quest.factions.reputation.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4025000000000004"
+				title: "{industrial_frontier.quest.factions.reputation.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.factions.reputation.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
+		}
+		{
+			dependencies: ["3025000000000003"]
+			description: [
+				"{industrial_frontier.quest.factions.treaties.desc.1}"
+				"{industrial_frontier.quest.factions.treaties.desc.2}"
+				"{industrial_frontier.quest.factions.treaties.desc.3}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3025000000000005"
+			optional: true
+			subtitle: "{industrial_frontier.quest.factions.treaties.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4025000000000005"
+				title: "{industrial_frontier.quest.factions.treaties.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.factions.treaties.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"3025000000000004"
+				"3025000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.factions.operations.desc.1}"
+				"{industrial_frontier.quest.factions.operations.desc.2}"
+				"{industrial_frontier.quest.factions.operations.desc.3}"
+			]
+			icon: "minecraft:bell"
+			id: "3025000000000006"
+			optional: true
+			subtitle: "{industrial_frontier.quest.factions.operations.subtitle}"
+			tags: ["diplomacy"]
+			tasks: [{
+				id: "4025000000000006"
+				title: "{industrial_frontier.quest.factions.operations.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.factions.operations.title}"
+			shape: "diamond"
+			size: 1.5d
+			x: 6d
+			y: 0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.factions.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.factions.title}"
+}

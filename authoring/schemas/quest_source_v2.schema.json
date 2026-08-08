@@ -1,0 +1,542 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/quest_source_v2.schema.json",
+  "title": "Industrial Frontier Quest Source v2 chapter",
+  "description": "Authoritative, Russian-first source for one staged FTB Quests chapter. Runtime files are generated separately.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_kind", "chapter", "quests"],
+  "properties": {
+    "schema_version": { "const": 2 },
+    "source_kind": { "const": "quest_chapter" },
+    "chapter": { "$ref": "#/$defs/chapter" },
+    "quests": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/quest" }
+    }
+  },
+  "$defs": {
+    "engineId": {
+      "type": "string",
+      "pattern": "^[0-9A-F]{16}$"
+    },
+    "groupId": {
+      "type": "string",
+      "pattern": "^1[0-9A-F]{15}$"
+    },
+    "chapterId": {
+      "type": "string",
+      "pattern": "^2[0-9A-F]{15}$"
+    },
+    "questId": {
+      "type": "string",
+      "pattern": "^3[0-9A-F]{15}$"
+    },
+    "proofId": {
+      "type": "string",
+      "pattern": "^4[0-9A-F]{15}$"
+    },
+    "resourceLocation": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "resourceOrTexture": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "resourceOrTag": {
+      "type": "string",
+      "pattern": "^#?[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "nonEmptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "epoch": {
+      "enum": ["ONBOARDING", "P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "REFERENCE", "SYSTEMS"]
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alias", "engine_id", "title_ru"],
+      "properties": {
+        "alias": { "type": "string", "pattern": "^if\\.group\\.v2\\.[a-z0-9_.-]+$" },
+        "engine_id": { "$ref": "#/$defs/groupId" },
+        "title_ru": { "type": "string", "minLength": 3, "maxLength": 100 }
+      }
+    },
+    "chapterTextRu": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "subtitle", "description"],
+      "properties": {
+        "title": { "type": "string", "minLength": 3, "maxLength": 120 },
+        "subtitle": { "type": "string", "minLength": 8, "maxLength": 220 },
+        "description": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": { "type": "string", "minLength": 20, "maxLength": 800 }
+        }
+      }
+    },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["voice", "tone_rules", "avoid"],
+      "properties": {
+        "voice": { "type": "string", "minLength": 5, "maxLength": 240 },
+        "tone_rules": { "$ref": "#/$defs/nonEmptyStrings" },
+        "avoid": { "$ref": "#/$defs/nonEmptyStrings" }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alias", "engine_id", "filename", "group", "order", "icon", "epoch", "text_ru", "editorial"],
+      "properties": {
+        "alias": { "type": "string", "pattern": "^if\\.chapter\\.v2\\.[a-z0-9_.-]+$" },
+        "engine_id": { "$ref": "#/$defs/chapterId" },
+        "filename": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$" },
+        "group": { "$ref": "#/$defs/group" },
+        "order": { "type": "integer", "minimum": -1000, "maximum": 10000 },
+        "icon": { "$ref": "#/$defs/resourceOrTexture" },
+        "epoch": { "$ref": "#/$defs/epoch" },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z0-9_.-]+$" }
+        },
+        "hide_until_reached": { "type": "boolean", "default": true },
+        "text_ru": { "$ref": "#/$defs/chapterTextRu" },
+        "editorial": { "$ref": "#/$defs/editorial" }
+      }
+    },
+    "authorship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_language", "origin", "machine_translation"],
+      "properties": {
+        "primary_language": { "const": "ru" },
+        "origin": { "const": "human_authored" },
+        "machine_translation": { "const": false },
+        "editorial_note": { "type": "string", "minLength": 3, "maxLength": 400 }
+      }
+    },
+    "questTextRu": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title_ru", "lead_ru", "purpose_ru", "steps_ru", "success_ru", "diagnostics_ru", "next_ru", "task_text_ru"],
+      "properties": {
+        "title_ru": { "type": "string", "minLength": 3, "maxLength": 120 },
+        "lead_ru": { "type": "string", "minLength": 12, "maxLength": 500 },
+        "purpose_ru": { "type": "string", "minLength": 20, "maxLength": 800 },
+        "steps_ru": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 12,
+          "items": { "type": "string", "minLength": 12, "maxLength": 800 }
+        },
+        "success_ru": { "type": "string", "minLength": 12, "maxLength": 600 },
+        "diagnostics_ru": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 6,
+          "items": { "type": "string", "minLength": 12, "maxLength": 700 }
+        },
+        "next_ru": { "type": "string", "minLength": 10, "maxLength": 500 },
+        "task_text_ru": { "type": "string", "minLength": 8, "maxLength": 400 },
+        "optional_note_ru": { "type": "string", "minLength": 15, "maxLength": 700 }
+      }
+    },
+    "editorialReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "marks"],
+      "properties": {
+        "state": {
+          "enum": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED", "RU_READY"]
+        },
+        "marks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]
+          }
+        },
+        "review_notes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 5, "maxLength": 500 }
+        }
+      }
+    },
+    "dependencyEdge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["quest", "reason", "evidence"],
+      "properties": {
+        "quest": { "type": "string", "pattern": "^if\\.quest\\.v2\\.[a-z0-9_.-]+$" },
+        "reason": { "type": "string", "minLength": 12, "maxLength": 500 },
+        "evidence": { "$ref": "#/$defs/nonEmptyStrings" }
+      }
+    },
+    "dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "edges"],
+      "properties": {
+        "mode": { "enum": ["ALL_OF", "ANY_OF"] },
+        "edges": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/dependencyEdge" }
+        }
+      }
+    },
+    "proofTextRu": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objective"],
+      "properties": {
+        "objective": { "type": "string", "minLength": 8, "maxLength": 400 },
+        "help": { "type": "string", "minLength": 10, "maxLength": 500 }
+      }
+    },
+    "itemPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "$ref": "#/$defs/resourceLocation" },
+        "count": { "type": "integer", "minimum": 1, "maximum": 2147483647 },
+        "nbt": { "type": "object" },
+        "match_nbt": { "type": "boolean" },
+        "weak_nbt_match": { "type": "boolean" },
+        "consume": { "type": "boolean", "const": false },
+        "only_from_crafting": { "type": "boolean" }
+      }
+    },
+    "tagPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "$ref": "#/$defs/resourceLocation" },
+        "count": { "type": "integer", "minimum": 1, "maximum": 2147483647 }
+      }
+    },
+    "fluidPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "amount"],
+      "properties": {
+        "id": { "$ref": "#/$defs/resourceLocation" },
+        "amount": { "type": "integer", "minimum": 1 },
+        "nbt": { "type": "object" }
+      }
+    },
+    "energyPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount"],
+      "properties": {
+        "amount": { "type": "integer", "minimum": 1 },
+        "max_input": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "locationPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dimension", "position", "size"],
+      "properties": {
+        "dimension": { "$ref": "#/$defs/resourceLocation" },
+        "ignore_dimension": { "type": "boolean", "default": false },
+        "position": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "integer" }
+        },
+        "size": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "killPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity", "count"],
+      "properties": {
+        "entity": { "$ref": "#/$defs/resourceLocation" },
+        "count": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "placePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count"],
+      "properties": {
+        "block": { "$ref": "#/$defs/resourceLocation" },
+        "block_tag": { "$ref": "#/$defs/resourceLocation" },
+        "count": { "type": "integer", "minimum": 1 },
+        "require_replace": { "type": "boolean", "default": false },
+        "replaced_block": { "$ref": "#/$defs/resourceLocation" }
+      },
+      "oneOf": [
+        { "required": ["block"], "not": { "required": ["block_tag"] } },
+        { "required": ["block_tag"], "not": { "required": ["block"] } }
+      ]
+    },
+    "usePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "item_interaction", "check_item"],
+      "properties": {
+        "block": { "$ref": "#/$defs/resourceLocation" },
+        "block_tag": { "$ref": "#/$defs/resourceLocation" },
+        "count": { "type": "integer", "minimum": 1 },
+        "item_interaction": { "type": "boolean" },
+        "check_item": { "type": "boolean" },
+        "item": { "$ref": "#/$defs/itemPayload" }
+      },
+      "oneOf": [
+        { "required": ["block"], "not": { "required": ["block_tag"] } },
+        { "required": ["block_tag"], "not": { "required": ["block"] } }
+      ]
+    },
+    "observationPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observe_type", "target", "timer"],
+      "properties": {
+        "observe_type": { "enum": ["BLOCK", "BLOCK_TAG", "BLOCK_STATE", "BLOCK_ENTITY", "BLOCK_ENTITY_TYPE", "ENTITY_TYPE", "ENTITY_TYPE_TAG"] },
+        "target": { "type": "string", "minLength": 3, "maxLength": 500 },
+        "timer": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "blocker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason", "evidence"],
+      "properties": {
+        "reason": { "type": "string", "minLength": 12, "maxLength": 700 },
+        "evidence": { "$ref": "#/$defs/nonEmptyStrings" }
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alias", "engine_id", "type", "status", "text_ru"],
+      "properties": {
+        "alias": { "type": "string", "pattern": "^if\\.task\\.v2\\.[a-z0-9_.-]+$" },
+        "engine_id": { "$ref": "#/$defs/proofId" },
+        "type": { "enum": ["item", "checkmark", "dimension", "fluid", "energy", "structure", "location", "biome", "kill", "stage", "place", "use", "observation"] },
+        "status": { "enum": ["verified", "blocked"] },
+        "text_ru": { "$ref": "#/$defs/proofTextRu" },
+        "optional_for_completion": { "type": "boolean", "const": false },
+        "item": { "$ref": "#/$defs/itemPayload" },
+        "item_tag": { "$ref": "#/$defs/tagPayload" },
+        "dimension": { "$ref": "#/$defs/resourceLocation" },
+        "fluid": { "$ref": "#/$defs/fluidPayload" },
+        "energy": { "$ref": "#/$defs/energyPayload" },
+        "structure": { "$ref": "#/$defs/resourceOrTag" },
+        "location": { "$ref": "#/$defs/locationPayload" },
+        "biome": { "$ref": "#/$defs/resourceOrTag" },
+        "kill": { "$ref": "#/$defs/killPayload" },
+        "stage": { "type": "string", "pattern": "^[a-z0-9_.:-]+$" },
+        "place": { "$ref": "#/$defs/placePayload" },
+        "use": { "$ref": "#/$defs/usePayload" },
+        "observation": { "$ref": "#/$defs/observationPayload" },
+        "blocker": { "$ref": "#/$defs/blocker" },
+        "intended_payload": { "type": "object" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "blocked" } }, "required": ["status"] },
+          "then": { "required": ["blocker"] },
+          "else": { "not": { "required": ["blocker"] } }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "item" } }, "required": ["status", "type"] },
+          "then": {
+            "oneOf": [
+              { "required": ["item"], "not": { "required": ["item_tag"] } },
+              { "required": ["item_tag"], "not": { "required": ["item"] } }
+            ]
+          }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "dimension" } }, "required": ["status", "type"] },
+          "then": { "required": ["dimension"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "fluid" } }, "required": ["status", "type"] },
+          "then": { "required": ["fluid"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "energy" } }, "required": ["status", "type"] },
+          "then": { "required": ["energy"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "structure" } }, "required": ["status", "type"] },
+          "then": { "required": ["structure"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "location" } }, "required": ["status", "type"] },
+          "then": { "required": ["location"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "biome" } }, "required": ["status", "type"] },
+          "then": { "required": ["biome"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "kill" } }, "required": ["status", "type"] },
+          "then": { "required": ["kill"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "stage" } }, "required": ["status", "type"] },
+          "then": { "required": ["stage"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "place" } }, "required": ["status", "type"] },
+          "then": { "required": ["place"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "use" } }, "required": ["status", "type"] },
+          "then": { "required": ["use"] }
+        },
+        {
+          "if": { "properties": { "status": { "const": "verified" }, "type": { "const": "observation" } }, "required": ["status", "type"] },
+          "then": { "required": ["observation"] }
+        }
+      ]
+    },
+    "teachingSection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "source_fields"],
+      "properties": {
+        "kind": { "enum": ["purpose", "prerequisites", "inputs", "setup", "operation", "output", "diagnostics", "automation", "downstream", "alternatives", "hazards", "recovery"] },
+        "source_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["text_ru.title_ru", "text_ru.lead_ru", "text_ru.purpose_ru", "text_ru.steps_ru", "text_ru.success_ru", "text_ru.diagnostics_ru", "text_ru.next_ru", "text_ru.task_text_ru", "text_ru.optional_note_ru"] }
+        }
+      }
+    },
+    "contentRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": { "enum": ["mod", "item", "item_tag", "block", "block_tag", "fluid", "fluid_tag", "entity", "biome", "structure", "dimension", "recipe", "process", "registry", "doc", "mechanic", "quest"] },
+        "id": { "type": "string", "minLength": 2, "maxLength": 500 },
+        "evidence": { "$ref": "#/$defs/nonEmptyStrings" }
+      }
+    },
+    "grind": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class", "automation_before_bulk"],
+      "properties": {
+        "class": { "enum": ["NONE", "TEACHING", "GREEN", "EXPLAIN", "REWORK"] },
+        "training_batch": { "type": "integer", "minimum": 0, "maximum": 64 },
+        "expected_runs": { "type": "integer", "minimum": 0, "maximum": 64 },
+        "automation_before_bulk": { "type": "boolean" },
+        "budget_ref": { "type": "string", "minLength": 3, "maxLength": 500 },
+        "rationale_ru": { "type": "string", "minLength": 12, "maxLength": 700 }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number", "minimum": -1000, "maximum": 1000 },
+        "y": { "type": "number", "minimum": -1000, "maximum": 1000 },
+        "shape": { "enum": ["square", "rsquare", "circle", "diamond", "gear", "hexagon", "octagon"] },
+        "size": { "type": "number", "exclusiveMinimum": 0, "maximum": 8 }
+      }
+    },
+    "commissioning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["epoch", "advances_to", "required_branch_ends", "epoch_state_evidence"],
+      "properties": {
+        "epoch": { "enum": ["P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9"] },
+        "advances_to": { "enum": ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "COMPLETE"] },
+        "required_branch_ends": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^if\\.quest\\.v2\\.[a-z0-9_.-]+$" }
+        },
+        "epoch_state_evidence": { "$ref": "#/$defs/nonEmptyStrings" }
+      }
+    },
+    "quest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alias", "engine_id", "epoch", "role", "requirement", "icon", "dependency", "proofs", "text_ru", "authorship", "editorial_review", "teaching_sections", "content_refs", "grind", "layout"],
+      "properties": {
+        "alias": { "type": "string", "pattern": "^if\\.quest\\.v2\\.[a-z0-9_.-]+$" },
+        "engine_id": { "$ref": "#/$defs/questId" },
+        "epoch": { "$ref": "#/$defs/epoch" },
+        "role": { "enum": ["onboarding", "knowledge", "acquisition", "transformation", "machine", "operation", "automation", "integration", "diagnostics", "commissioning", "optional_mastery", "recovery"] },
+        "requirement": { "enum": ["required", "optional"] },
+        "icon": { "$ref": "#/$defs/resourceOrTexture" },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z0-9_.-]+$" }
+        },
+        "dependency": { "$ref": "#/$defs/dependency" },
+        "proofs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/proof" }
+        },
+        "text_ru": { "$ref": "#/$defs/questTextRu" },
+        "authorship": { "$ref": "#/$defs/authorship" },
+        "editorial_review": { "$ref": "#/$defs/editorialReview" },
+        "editorial": { "$ref": "#/$defs/editorial" },
+        "teaching_sections": {
+          "type": "array",
+          "minItems": 3,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/teachingSection" }
+        },
+        "content_refs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/contentRef" }
+        },
+        "grind": { "$ref": "#/$defs/grind" },
+        "layout": { "$ref": "#/$defs/layout" },
+        "commissioning": { "$ref": "#/$defs/commissioning" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "role": { "const": "commissioning" } }, "required": ["role"] },
+          "then": { "required": ["commissioning"], "properties": { "requirement": { "const": "required" } } },
+          "else": { "not": { "required": ["commissioning"] } }
+        },
+        {
+          "if": { "properties": { "role": { "const": "optional_mastery" } }, "required": ["role"] },
+          "then": { "properties": { "requirement": { "const": "optional" } } }
+        },
+        {
+          "if": { "properties": { "requirement": { "const": "optional" } }, "required": ["requirement"] },
+          "then": { "properties": { "text_ru": { "required": ["optional_note_ru"] } } }
+        }
+      ]
+    }
+  }
+}

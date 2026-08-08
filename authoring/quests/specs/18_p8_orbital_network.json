@@ -1,0 +1,321 @@
+{
+  "key": "p8",
+  "file": "18_p8_orbital_network",
+  "chapter_id": "2018000000000001",
+  "group_id": "1000000000000004",
+  "icon": "industrial_frontier:textures/gui/icons/epochs/p8.png",
+  "order": 9,
+  "tag": "mainline",
+  "optional": false,
+  "xp": 90,
+  "title_ru": "18 — P8. Орбитальная сеть",
+  "title_en": "18 — P8. Orbital network",
+  "sub_ru": "Планеты становятся цехами одного завода",
+  "sub_en": "Planets become shops of one factory",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "gcyr:gps_satellite", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Восьмая эпоха",
+        "subtitle": "Дальше некуда лететь — пора связывать",
+        "desc": [
+          "Седьмая эпоха отвечала на вопрос «как туда добраться». Восьмая отвечает на другой: «зачем возвращаться». Планеты уже открыты, и каждая что-то умеет — но пока они живут порознь, всё это остаётся коллекцией мест, где вы были.",
+          "Сеть превращает их в один завод. Каждая планета делает то, что умеет только она, и отправляет результат дальше сама. Ваша работа здесь — не летать, а спроектировать так, чтобы летать не пришлось.",
+          "Вторая половина эпохи — над головой. Орбита перестаёт быть транзитом и начинает давать услуги: находить руду сверху, вести навигацию, передавать энергию вниз лучом."
+        ],
+        "task": "Понять, чем сеть отличается от набора баз"
+      },
+      "en": {
+        "title": "The eighth epoch",
+        "subtitle": "Nowhere left to fly — time to connect",
+        "desc": [
+          "The seventh epoch answered \"how do I get there\". The eighth answers a different question: \"why come back\". The planets are open and each one is good at something — but while they live apart, all of it stays a collection of places you have visited.",
+          "A network turns them into one factory. Each planet does what only it can and sends the result onward by itself. Your work here is not to fly but to design so that flying is no longer needed.",
+          "The other half of the epoch is overhead. Orbit stops being transit and starts providing services: finding ore from above, running navigation, beaming power down."
+        ],
+        "task": "Understand how a network differs from a set of bases"
+      }
+    },
+    {
+      "slug": "specialisation", "x": 3, "y": -3, "icon": "gcyr:proxima_centauri_b_turf", "deps": ["intro"],
+      "ru": {
+        "title": "Кто что делает",
+        "subtitle": "Возить обычное — признак ошибки",
+        "desc": [
+          "Луна даёт дешёвый старт: её гравитация вшестеро слабее земной, и вывод оттуда стоит несравнимо меньше. Марс — самая богатая планета программы. Меркурий — лучшее солнце в системе. Венера — серную химию при температуре, которая убивает всё незащищённое.",
+          "Планета включается в сеть только ради того, чего нет на Земле. Возить с Марса железо, когда железо есть под ногами, — это не масштаб, а ошибка в планировании.",
+          "Отсюда простое правило проверки: если убрать планету из цепочки и ничего не сломается — она в цепочке лишняя."
+        ],
+        "task": "Назначить каждой планете её роль"
+      },
+      "en": {
+        "title": "Who does what",
+        "subtitle": "Hauling the ordinary is a sign of error",
+        "desc": [
+          "The Moon gives a cheap launch: its gravity is six times weaker than Earth's, and lifting from there costs incomparably less. Mars is the richest planet of the programme. Mercury has the best sunlight in the system. Venus offers sulphur chemistry at a temperature that kills anything unprotected.",
+          "A planet joins the network only for what Earth does not have. Hauling iron from Mars while iron lies underfoot is not scale, it is a planning error.",
+          "Hence a simple test: if removing a planet from the chain breaks nothing, that planet does not belong in the chain."
+        ],
+        "task": "Assign each planet its role"
+      }
+    },
+    {
+      "slug": "flow", "x": 6, "y": -3, "icon": "gcyr:launch_pad", "deps": ["specialisation"],
+      "ru": {
+        "title": "Поток без вас",
+        "subtitle": "Рейс, который не ждёт вашего появления",
+        "desc": [
+          "Первый рейс всегда ручной — он нужен, чтобы понять объём. Второй уже не должен им быть: погрузка, полёт и разгрузка происходят по расписанию и без вашего присутствия.",
+          "Проверка простая. Уйдите из игры на игровую неделю и вернитесь. Если склады на обоих концах в том же состоянии, что и были, — сети нет, есть маршрут, который вы обслуживаете руками.",
+          "Буфер ставится на каждом плече. Он нужен не для запаса, а для диагностики: пока буфер полнеет, вы видите, что дальше по цепочке что-то встало."
+        ],
+        "task": "Сделать межпланетный рейс регулярным"
+      },
+      "en": {
+        "title": "Flow without you",
+        "subtitle": "A run that does not wait for you to show up",
+        "desc": [
+          "The first run is always manual — it exists to learn the volume. The second must not be: loading, flight and unloading happen on schedule and without your presence.",
+          "The test is simple. Leave for an in-game week and come back. If the stores at both ends are exactly as you left them, there is no network — there is a route you operate by hand.",
+          "A buffer goes on every leg. Not for reserve but for diagnosis: while the buffer fills, you can see that something further along has stopped."
+        ],
+        "task": "Make an interplanetary run regular"
+      }
+    },
+    {
+      "slug": "survey_satellite", "x": 3, "y": 3, "icon": "gcyr:ore_finder_satellite", "deps": ["intro"],
+      "item": "gcyr:ore_finder_satellite",
+      "ru": {
+        "title": "Разведка сверху",
+        "subtitle": "Спутник вместо ног",
+        "desc": [
+          "До сих пор залежи искали ногами и буром. Спутник видит их сверху — и разница не в удобстве, а в порядке величины: планета осматривается за один проход.",
+          "Плата — сам спутник, его вывод и энергия. На планете, где вы работаете постоянно, он окупается сразу. На планете, куда вы заглядываете раз в месяц, он не окупится никогда.",
+          "Это первый предмет эпохи, который ничего не производит. Он производит знание — и с этого момента таких будет всё больше."
+        ],
+        "task": "Собрать спутник поиска руды"
+      },
+      "en": {
+        "title": "Survey from above",
+        "subtitle": "A satellite instead of legs",
+        "desc": [
+          "Until now deposits were found on foot and by drill. A satellite sees them from above, and the difference is not convenience but an order of magnitude: a planet is surveyed in a single pass.",
+          "The price is the satellite, its launch and its power. On a planet you work daily it pays back immediately. On a planet you visit once a month it never will.",
+          "This is the first item of the epoch that produces nothing. It produces knowledge — and from here there will be more of those."
+        ],
+        "task": "Build the ore-finder satellite"
+      }
+    },
+    {
+      "slug": "navigation_grid", "x": 6, "y": 3, "icon": "gcyr:gps_satellite", "deps": ["survey_satellite"],
+      "item": "gcyr:gps_satellite",
+      "ru": {
+        "title": "Навигационная группировка",
+        "subtitle": "Один спутник — это одна точка",
+        "desc": [
+          "Маршруты перестают быть записью на чипе перед каждым стартом. Группировка знает, где что находится, и ракета получает курс сама.",
+          "Ключевое слово — группировка. Один спутник даёт одну точку и никакой навигации; сеть начинается там, где их достаточно, чтобы покрыть маршрут целиком.",
+          "Это то, что превращает межпланетные рейсы из события в рутину. Ровно то, что нужно: рутиной должна заниматься техника."
+        ],
+        "task": "Собрать спутник навигации"
+      },
+      "en": {
+        "title": "The navigation constellation",
+        "subtitle": "One satellite is one point",
+        "desc": [
+          "Routes stop being a note written to a chip before every launch. The constellation knows where things are, and the rocket takes its course by itself.",
+          "The key word is constellation. One satellite gives one point and no navigation; a network begins where there are enough of them to cover the whole route.",
+          "This is what turns interplanetary runs from an event into a routine. Which is exactly right: routine is what machinery is for."
+        ],
+        "task": "Build the navigation satellite"
+      }
+    },
+    {
+      "slug": "power_beam", "x": 9, "y": 3, "icon": "gcyr:beam_receiver", "deps": ["navigation_grid"],
+      "item": "gcyr:beam_receiver",
+      "ru": {
+        "title": "Энергия лучом",
+        "subtitle": "Электростанция там, где строить негде",
+        "desc": [
+          "Орбитальная станция собирает энергию и передаёт её вниз приёмнику. Полезно там, где солнце слабое, атмосфера непригодна, а места под станцию нет.",
+          "Потери при передаче есть всегда, и это честная цена: вы платите процентом за то, что электростанцию не нужно ставить на поверхности.",
+          "Уязвимость тоже честная. Луч работает, пока работает станция. Приёмник без станции — просто блок."
+        ],
+        "task": "Собрать приёмник луча"
+      },
+      "en": {
+        "title": "Power by beam",
+        "subtitle": "A power plant where there is nowhere to build one",
+        "desc": [
+          "An orbital station collects power and beams it down to a receiver. Useful where sunlight is weak, the atmosphere is hostile and there is no room for a plant.",
+          "Transmission losses are always there, and that is an honest price: you pay a percentage for not having to put the plant on the surface.",
+          "The vulnerability is honest too. The beam works while the station works. A receiver without a station is just a block."
+        ],
+        "task": "Build the beam receiver"
+      }
+    },
+    {
+      "slug": "elevator", "x": 12, "y": 3, "icon": "gcyr:space_elevator", "deps": ["power_beam"],
+      "ru": {
+        "title": "Космический лифт",
+        "subtitle": "Один раз построить, чтобы больше не платить за подъём",
+        "desc": [
+          "Каждый запуск стоит топлива. Лифт стоит один раз — и после этого канал «поверхность — орбита» работает без ракеты.",
+          "Строится он как мегапроект и окупается только при постоянном потоке. Если вы поднимаетесь на орбиту раз в неделю, дешевле летать.",
+          "Зато при постоянном потоке он меняет экономику всей программы: то, что раньше считалось «слишком тяжёлым, чтобы вывозить», становится обычным грузом."
+        ],
+        "task": "Решить, нужен ли вам лифт при вашем грузопотоке"
+      },
+      "en": {
+        "title": "The space elevator",
+        "subtitle": "Build once so you stop paying for the climb",
+        "desc": [
+          "Every launch costs fuel. The elevator costs once — and after that the surface-to-orbit channel works with no rocket at all.",
+          "It is built like a megaproject and pays back only under constant traffic. If you go up once a week, flying is cheaper.",
+          "But under constant traffic it changes the economics of the whole programme: what used to be \"too heavy to lift\" becomes ordinary cargo."
+        ],
+        "task": "Decide whether your traffic justifies an elevator"
+      }
+    },
+    {
+      "slug": "accelerator", "x": 9, "y": -4.5, "icon": "nuclearcraft:linear_accelerator_controller",
+      "deps": ["flow"], "item": "nuclearcraft:linear_accelerator_controller",
+      "ru": {
+        "title": "Ускоритель",
+        "subtitle": "То, что не рождается ни в печи, ни в реакторе",
+        "desc": [
+          "Шестая эпоха отложила эти установки «до своих эпох». Эпоха пришла. Линейный ускоритель разгоняет частицы, кольцевой делает то же по кругу и мощнее, отклонитель уводит луч в сторону.",
+          "Смысл всей ветки — в том, что она даёт вещества, которых не даёт ни одна печь и ни один реактор. Это не более быстрый способ получить известное, а единственный способ получить неизвестное.",
+          "Комплекс требует места, энергии и точности сборки. Собранный наполовину он не работает вовсе — здесь нет промежуточного результата."
+        ],
+        "task": "Собрать контроллер линейного ускорителя"
+      },
+      "en": {
+        "title": "The accelerator",
+        "subtitle": "What no furnace and no reactor will make",
+        "desc": [
+          "The sixth epoch deferred these installations \"until their own epochs\". The epoch has come. The linear accelerator drives particles, the ring does the same in a circle and harder, the diverter steers the beam aside.",
+          "The point of the whole branch is that it yields substances no furnace and no reactor can. It is not a faster way to get the known — it is the only way to get the unknown.",
+          "The complex needs space, power and precise assembly. Half-built it does not work at all: there is no intermediate result here."
+        ],
+        "task": "Build the linear accelerator controller"
+      }
+    },
+    {
+      "slug": "target_chamber", "x": 12, "y": -4.5, "icon": "nuclearcraft:target_chamber_controller",
+      "deps": ["accelerator"],
+      "ru": {
+        "title": "Камеры",
+        "subtitle": "Куда приходит луч",
+        "desc": [
+          "Камера мишеней принимает разогнанный луч и превращает его в вещество. Камера столкновений сводит два луча навстречу — это дороже, сложнее и даёт то, чего одна мишень не даст.",
+          "Терминал показывает, что происходит внутри. Без него комплекс работает вслепую, и узнать о неверной настройке можно только по отсутствию результата.",
+          "Это самая «лабораторная» часть сборки: здесь важнее точность, чем объём, и один правильно настроенный комплекс полезнее трёх кое-как собранных."
+        ],
+        "task": "Собрать камеру мишеней и терминал"
+      },
+      "en": {
+        "title": "The chambers",
+        "subtitle": "Where the beam arrives",
+        "desc": [
+          "The target chamber takes the accelerated beam and turns it into matter. The collision chamber brings two beams head-on — costlier, harder, and it yields what a single target cannot.",
+          "The terminal shows what is happening inside. Without it the complex runs blind, and a wrong setting shows up only as an absent result.",
+          "This is the most laboratory-like part of the pack: precision matters more than volume, and one correctly tuned complex beats three assembled carelessly."
+        ],
+        "task": "Build the target chamber and the terminal"
+      }
+    },
+    {
+      "slug": "fusion_split", "x": 15, "y": -3, "icon": "gtceu:luv_fusion_reactor", "deps": ["target_chamber"],
+      "ru": {
+        "title": "Два термояда, две задачи",
+        "subtitle": "Один делает материалы, другой — энергию",
+        "desc": [
+          "Синтезом в сборке владеют двое, и они не конкурируют. Реактор синтеза GregTech — станок: в нём получают материалы, которых нет больше нигде, и он работает как часть производственной линии.",
+          "Лазерная установка HBM — электростанция. Десятки блоков, выстроенных по чертежу, собственная плазменная печь для деталей и сверхпроводники в основе. Это главный источник энергии финала и самая большая постройка сборки.",
+          "Третьей копии синтеза нет намеренно: она бы означала третье прохождение того же самого. Ветку синтеза NuclearCraft вы в игре не найдёте, и это решение, а не пропуск."
+        ],
+        "task": "Выбрать, с чего начать: с материалов или с энергии"
+      },
+      "en": {
+        "title": "Two fusions, two jobs",
+        "subtitle": "One makes materials, the other makes power",
+        "desc": [
+          "Fusion in this pack has two owners and they do not compete. The GregTech fusion reactor is a machine tool: it yields materials that exist nowhere else, and it works as part of a production line.",
+          "The HBM laser installation is a power plant. Dozens of blocks laid out to a blueprint, its own plasma forge for the parts and superconductors at the core. This is the main power source of the finale and the largest structure in the pack.",
+          "There is deliberately no third fusion: it would mean walking the same path a third time. You will not find NuclearCraft's fusion branch in game, and that is a decision, not an omission."
+        ],
+        "task": "Choose where to start: materials or power"
+      }
+    },
+    {
+      "slug": "plasma_forge", "x": 15, "y": -6, "icon": "hbm_ntm_rebirth:fusion_plasma_forge", "deps": ["fusion_split"],
+      "ru": {
+        "title": "Плазменная печь",
+        "subtitle": "Дверь в самую большую постройку сборки",
+        "desc": [
+          "Всё, из чего собирается лазерная установка, делается здесь. Сама печь стоит сверхпроводящей проволоки и квантовых схем — то есть добраться до неё можно только через собственную цепочку сверхпроводников.",
+          "Никакого отдельного замка на ней сборка не ставит: мод уже сделал её поздней своими материалами. Это тот же случай, что и с космическим стеком в прошлой эпохе — где лестница есть, второй не строят.",
+          "Дальше начинается стройка по чертежу: корпус, лазерные порты, конденсаторы, турбонагнетатели. Собранная наполовину установка не даёт ничего."
+        ],
+        "task": "Собрать плазменную печь"
+      },
+      "en": {
+        "title": "The plasma forge",
+        "subtitle": "The door to the largest structure in the pack",
+        "desc": [
+          "Everything the laser installation is built from is made here. The forge itself costs superconducting wire and quantum circuits — meaning you can only reach it through your own superconductor chain.",
+          "The pack puts no separate lock on it: the mod already made it late through its own materials. Same case as the space stack last epoch — where a ladder exists, you do not build a second one.",
+          "After this comes construction to a blueprint: vessel, laser ports, capacitors, turbochargers. A half-built installation gives nothing."
+        ],
+        "task": "Build the plasma forge"
+      }
+    },
+    {
+      "slug": "renewables", "x": 9, "y": 0, "icon": "gcyr:photovoltaic_cell", "deps": ["flow"],
+      "ru": {
+        "title": "База и пик",
+        "subtitle": "Возобновляемая линия рядом с реактором, а не вместо",
+        "desc": [
+          "Возобновляемая энергетика закрывает базовую нагрузку, реактор — пиковую и ночную. Обратный порядок означает реактор, который то разгоняют, то глушат, и это худший способ им пользоваться.",
+          "Солнечная мощность зависит от планеты и известна заранее. На Меркурии панель окупается вдвое быстрее земной, на Венере — вдвое медленнее. Одинаковых солнечных ферм на разных планетах не бывает.",
+          "Накопитель обязателен. Возобновляемая энергетика без хранения — это не энергетика, а погода, и рассчитывается ёмкость на самую долгую паузу, а не на среднюю."
+        ],
+        "task": "Закрыть базовую нагрузку возобновляемой линией"
+      },
+      "en": {
+        "title": "Base and peak",
+        "subtitle": "Renewables beside the reactor, not instead of it",
+        "desc": [
+          "Renewables cover the base load, the reactor covers peaks and nights. The reverse means a reactor that is throttled up and down, which is the worst way to use one.",
+          "Solar output depends on the planet and is known in advance. On Mercury a panel pays back twice as fast as on Earth, on Venus twice as slowly. Identical solar farms on different planets do not exist.",
+          "Storage is mandatory. Renewables without storage are not power generation but weather, and capacity is sized for the longest pause, not the average one."
+        ],
+        "task": "Cover the base load with a renewable line"
+      }
+    },
+    {
+      "slug": "diagnosis", "x": 12, "y": 0, "icon": "hbm_ntm_rebirth:machine_orbus", "deps": ["renewables"],
+      "ru": {
+        "title": "Когда встала цепь",
+        "subtitle": "Узнать раньше, чем кончится склад",
+        "desc": [
+          "У распределённого завода новая беда: он ломается тихо. Цех на другой планете остановился неделю назад, а вы узнаёте об этом, когда на Земле кончается сырьё.",
+          "Отсюда правило: буфер ставится на каждом плече и рассчитывается на время, за которое вы точно заметите проблему. Не на объём производства — на вашу невнимательность.",
+          "Второе правило: у каждой цепи должен быть конец, который видно. Один склад, по которому понятно, работает вся сеть или нет."
+        ],
+        "task": "Поставить буфер на каждом плече сети"
+      },
+      "en": {
+        "title": "When the chain stops",
+        "subtitle": "Find out before the store runs dry",
+        "desc": [
+          "A distributed factory has a new failure mode: it breaks quietly. A shop on another planet stopped a week ago, and you learn about it when Earth runs out of feedstock.",
+          "Hence the rule: a buffer on every leg, sized for the time in which you will certainly notice. Not for production volume — for your inattention.",
+          "Second rule: every chain needs an end you can see. One store that tells you whether the whole network is running."
+        ],
+        "task": "Put a buffer on every leg of the network"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "structures": [
+    {
+      "structure": "industrial_frontier:base_zemlemer",
+      "weight": 1
+    },
+    {
+      "structure": "industrial_frontier:base_meridian",
+      "weight": 1
+    },
+    {
+      "structure": "industrial_frontier:base_free_caravans",
+      "weight": 1
+    },
+    {
+      "structure": "industrial_frontier:base_helios",
+      "weight": 1
+    },
+    {
+      "structure": "industrial_frontier:base_ash_root",
+      "weight": 1
+    },
+    {
+      "structure": "industrial_frontier:base_scar",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "moogs_structures:advanced_random_spread",
+    "salt": 748213906,
+    "spacing": 48,
+    "separation": 20
+  }
+}

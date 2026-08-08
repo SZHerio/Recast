@@ -1,0 +1,178 @@
+{
+  "key": "mastery",
+  "file": "72_mastery_distributed_factory",
+  "chapter_id": "2072000000000001",
+  "group_id": "1000000000000003",
+  "icon": "minecraft:compass",
+  "order": 2,
+  "tag": "academy",
+  "optional": true,
+  "xp": 25,
+  "title_ru": "72 — Мастерство: распределённая фабрика",
+  "title_en": "72 — Mastery: the distributed factory",
+  "sub_ru": "Как содержать завод, раскиданный по планетам",
+  "sub_en": "How to run a factory scattered across planets",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "minecraft:compass", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Мастерство",
+        "subtitle": "Справочник эксплуатации, а не линия прогресса",
+        "desc": [
+          "Это не обязательная глава. Здесь нет ни одного квеста, который что-то открывает: сюда заходят, когда завод уже построен и начал вести себя не так, как задумывалось.",
+          "Всё, что дальше, — приёмы эксплуатации. Как понять, где встало. Как считать запас. Как расширяться, не переделывая половину. Как не превратить космос в утомительную работу.",
+          "Правило одно на всю главу: распределённый завод ломается тихо. Всё остальное — способы услышать поломку раньше, чем она дойдёт до вас складом."
+        ],
+        "task": "Открыть главу, когда завод начнёт вести себя странно"
+      },
+      "en": {
+        "title": "Mastery",
+        "subtitle": "An operations handbook, not a progress line",
+        "desc": [
+          "This chapter is optional. Nothing here unlocks anything: you come in when the factory is already built and has started behaving differently than intended.",
+          "Everything below is operating practice. How to tell where it stopped. How to size a reserve. How to expand without rebuilding half of it. How not to turn space into tedious work.",
+          "One rule holds for the whole chapter: a distributed factory fails quietly. Everything else is a way of hearing the failure before it reaches you as an empty store."
+        ],
+        "task": "Open this chapter when the factory starts behaving oddly"
+      }
+    },
+    {
+      "slug": "where_it_stopped", "x": 3, "y": -3, "icon": "minecraft:redstone_torch", "deps": ["intro"],
+      "ru": {
+        "title": "Где встало",
+        "subtitle": "Ищите первый непустой буфер",
+        "desc": [
+          "У длинной цепи есть удобное свойство: она останавливается с конца. Пока производство работает, буферы перед сломанным участком наполняются, а после него пустеют.",
+          "Значит искать надо не там, где кончился ресурс, а там, где он накопился. Первый непустой буфер по ходу цепи стоит прямо перед поломкой.",
+          "Отсюда практический вывод: буфер нужен не самый большой, а самый заметный. Ёмкость на час работы, которую видно с одного взгляда, полезнее ёмкости на неделю, в которую никто не заглядывает."
+        ],
+        "task": "Найти поломку по первому непустому буферу"
+      },
+      "en": {
+        "title": "Where it stopped",
+        "subtitle": "Look for the first non-empty buffer",
+        "desc": [
+          "A long chain has a convenient property: it stops from the far end. While production runs, buffers before the broken section fill up and those after it drain.",
+          "So look not where the resource ran out but where it piled up. The first non-empty buffer along the chain sits right before the fault.",
+          "Practical consequence: a buffer should not be the largest but the most visible. An hour's capacity you can read at a glance beats a week's capacity nobody ever opens."
+        ],
+        "task": "Locate a fault by the first non-empty buffer"
+      }
+    },
+    {
+      "slug": "reserve_math", "x": 6, "y": -3, "icon": "minecraft:clock", "deps": ["where_it_stopped"],
+      "ru": {
+        "title": "Сколько держать запаса",
+        "subtitle": "Считайте по времени реакции, а не по объёму",
+        "desc": [
+          "Запас рассчитывается не от производительности, а от того, за сколько вы заметите проблему и доберётесь до неё. На соседней базе это минуты, на другой планете — часы или дни.",
+          "Формула простая: сколько потребляет линия за то время, которое вам нужно на дорогу и починку. Всё сверх этого — замороженный ресурс, всё ниже — простой.",
+          "Поэтому на межпланетных плечах запас всегда больше земного, и это не перестраховка, а расстояние, выраженное в материалах."
+        ],
+        "task": "Пересчитать запас на межпланетном плече"
+      },
+      "en": {
+        "title": "How much reserve to hold",
+        "subtitle": "Size it by response time, not by throughput",
+        "desc": [
+          "Reserve is sized not by output but by how long it takes you to notice a problem and reach it. At the next base that is minutes; on another planet, hours or days.",
+          "The formula is simple: what the line consumes during your travel and repair time. Anything above that is frozen material, anything below is downtime.",
+          "That is why reserves on interplanetary legs are always larger than terrestrial ones — not caution but distance expressed in materials."
+        ],
+        "task": "Recalculate the reserve on an interplanetary leg"
+      }
+    },
+    {
+      "slug": "expand_without_rebuild", "x": 3, "y": 3, "icon": "minecraft:scaffolding", "deps": ["intro"],
+      "ru": {
+        "title": "Расширяться, не переделывая",
+        "subtitle": "Место под второй ряд закладывается сразу",
+        "desc": [
+          "Самая дорогая ошибка поздней игры — цех, построенный впритык. Он работает, пока не понадобится вдвое больше, и тогда его проще снести, чем расширить.",
+          "Дешёвое лекарство: оставлять проход и подводить шину питания и логистики с запасом. Пустое место стоит ничего, перестройка работающего цеха стоит всего.",
+          "Второе лекарство: одинаковые модули. Десять одинаковых линий проще обслуживать и расширять, чем одна большая с уникальной планировкой."
+        ],
+        "task": "Заложить место под расширение до того, как оно понадобится"
+      },
+      "en": {
+        "title": "Expanding without rebuilding",
+        "subtitle": "Leave room for the second row from the start",
+        "desc": [
+          "The most expensive late-game mistake is a shop built exactly to size. It works until you need twice as much, and then demolishing is easier than extending.",
+          "The cheap cure: leave an aisle and run the power and logistics bus with headroom. Empty space costs nothing; rebuilding a working shop costs everything.",
+          "The second cure: identical modules. Ten identical lines are easier to maintain and extend than one large one with a unique layout."
+        ],
+        "task": "Leave expansion room before you need it"
+      }
+    },
+    {
+      "slug": "boring_work", "x": 6, "y": 3, "icon": "minecraft:hopper", "deps": ["expand_without_rebuild"],
+      "ru": {
+        "title": "Признаки скучной работы",
+        "subtitle": "Если вы делаете это второй раз руками — автоматизируйте",
+        "desc": [
+          "У сборки есть правило: любой массовый компонент автоматизируется до того, как станет массовым. К поздней игре оно превращается в личное правило игрока.",
+          "Проверка простая. Если действие повторяется третий раз и вы уже знаете, что будет дальше, — это не игра, а работа. Автоматизировать её дешевле, чем терпеть.",
+          "Отдельно про космос: рейс, который вы делаете руками ради тридцати единиц груза, не окупается никогда. Либо он автоматический, либо этот материал не нужен."
+        ],
+        "task": "Найти действие, которое вы повторяете третий раз"
+      },
+      "en": {
+        "title": "Signs of boring work",
+        "subtitle": "If you are doing it by hand a second time, automate it",
+        "desc": [
+          "The pack has a rule: any mass component is automated before it becomes mass. By the late game that becomes the player's own rule.",
+          "The test is simple. If an action repeats a third time and you already know how it ends, that is not play, that is work. Automating it is cheaper than enduring it.",
+          "Space specifically: a run you fly by hand for thirty units of cargo never pays back. Either it is automatic, or that material is not needed."
+        ],
+        "task": "Find the action you are repeating for the third time"
+      }
+    },
+    {
+      "slug": "power_discipline", "x": 9, "y": 0, "icon": "minecraft:lightning_rod", "deps": ["reserve_math", "boring_work"],
+      "ru": {
+        "title": "Дисциплина энергии",
+        "subtitle": "Отключать по важности, а не по алфавиту",
+        "desc": [
+          "Когда энергии не хватает, гаснет не то, что менее важно, а то, что оказалось дальше по кабелю. Это лечится заранее: критичное питание отделяется от массового.",
+          "Что относится к критичному: жизнеобеспечение, охлаждение реакторов, управление и всё, чей перезапуск стоит дороже простоя. Всё остальное можно и погасить.",
+          "Разделение делается один раз и спасает много раз. Особенно на планетах, где перезапуск замороженной линии означает новый рейс с Земли."
+        ],
+        "task": "Отделить критичное питание от массового"
+      },
+      "en": {
+        "title": "Power discipline",
+        "subtitle": "Shed load by importance, not by cable order",
+        "desc": [
+          "When power runs short, what goes dark is not the least important thing but whatever sits farther along the cable. Cure it in advance: separate critical supply from bulk.",
+          "Critical means life support, reactor cooling, control, and anything whose restart costs more than the downtime. Everything else may go dark.",
+          "The split is done once and saves you many times. Especially on planets where restarting a frozen line means another trip from Earth."
+        ],
+        "task": "Separate critical supply from bulk supply"
+      }
+    },
+    {
+      "slug": "handover", "x": 12, "y": 0, "icon": "minecraft:writable_book", "deps": ["power_discipline"],
+      "ru": {
+        "title": "Записывайте, как это работает",
+        "subtitle": "Через месяц вы не вспомните",
+        "desc": [
+          "Распределённый завод переживает перерывы в игре. Вернуться к нему через месяц и разобраться в собственной схеме — отдельная задача, и она тем сложнее, чем лучше вы строили.",
+          "Дешёвое лекарство: таблички на входах в цеха и на буферах. Что здесь делается, откуда приходит, куда уходит. Три строки на цех.",
+          "Дорогое, но лучшее: одинаковые модули и предсказуемая планировка. Схема, которую видно с первого взгляда, не требует записей вовсе."
+        ],
+        "task": "Подписать цеха до перерыва в игре"
+      },
+      "en": {
+        "title": "Write down how it works",
+        "subtitle": "In a month you will not remember",
+        "desc": [
+          "A distributed factory outlives breaks from the game. Coming back after a month and working out your own layout is a separate task, and the better you built, the harder it is.",
+          "The cheap cure: signs at shop entrances and on buffers. What is made here, where it comes from, where it goes. Three lines per shop.",
+          "The expensive but better cure: identical modules and a predictable layout. A scheme you can read at a glance needs no notes at all."
+        ],
+        "task": "Label the shops before you take a break"
+      }
+    }
+  ]
+}

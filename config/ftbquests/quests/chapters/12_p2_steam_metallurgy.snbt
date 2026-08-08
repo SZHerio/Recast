@@ -1,14 +1,17 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "12_p2_steam_metallurgy"
 	group: "1000000000000004"
-	icon: "minecraft:blast_furnace"
+	icon: "industrial_frontier:textures/gui/icons/epochs/p2.png"
 	id: "2012000000000001"
 	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3011000000000009"]
 			description: [
 				"{industrial_frontier.quest.p2.intro.desc.1}"
 				"{industrial_frontier.quest.p2.intro.desc.2}"
@@ -16,13 +19,6 @@
 			]
 			icon: "minecraft:campfire"
 			id: "3012000000000001"
-			rewards: [{
-				id: "5012000000000001"
-				type: "xp"
-				xp: 25
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.p2.intro.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -31,8 +27,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p2.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3012000000000001"]
@@ -43,11 +41,6 @@
 			]
 			icon: "minecraft:coal"
 			id: "3012000000000002"
-			rewards: [{
-				id: "5012000000000002"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.p2.carbon.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -61,8 +54,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p2.carbon.title}"
-			x: 3.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
 		}
 		{
 			dependencies: ["3012000000000001"]
@@ -73,11 +68,6 @@
 			]
 			icon: "minecraft:bucket"
 			id: "3012000000000003"
-			rewards: [{
-				id: "5012000000000003"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.p2.boiler.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -86,8 +76,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p2.boiler.title}"
-			x: 3.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
 		}
 		{
 			dependencies: ["3012000000000003"]
@@ -98,11 +90,6 @@
 			]
 			icon: "minecraft:piston"
 			id: "3012000000000004"
-			rewards: [{
-				id: "5012000000000004"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.p2.steam_machine.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -111,8 +98,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p2.steam_machine.title}"
-			x: 6.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: ["3012000000000002"]
@@ -121,13 +110,8 @@
 				"{industrial_frontier.quest.p2.steel.desc.2}"
 				"{industrial_frontier.quest.p2.steel.desc.3}"
 			]
-			icon: "minecraft:iron_ingot"
+			icon: "industrial_frontier:textures/gui/icons/process/gtceu/metallurgy.png"
 			id: "3012000000000005"
-			rewards: [{
-				id: "5012000000000005"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.p2.steel.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -144,8 +128,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p2.steel.title}"
-			x: 6.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
 			dependencies: ["3012000000000005"]
@@ -156,11 +142,6 @@
 			]
 			icon: "gtceu:iron_plate"
 			id: "3012000000000006"
-			rewards: [{
-				id: "5012000000000006"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.p2.plates.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -177,8 +158,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p2.plates.title}"
-			x: 9.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: -1d
 		}
 		{
 			dependencies: ["3012000000000004"]
@@ -187,13 +170,8 @@
 				"{industrial_frontier.quest.p2.brass.desc.2}"
 				"{industrial_frontier.quest.p2.brass.desc.3}"
 			]
-			icon: "gtceu:brass_ingot"
+			icon: "industrial_frontier:textures/gui/icons/process/create/heated_brass.png"
 			id: "3012000000000007"
-			rewards: [{
-				id: "5012000000000007"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.p2.brass.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -207,8 +185,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p2.brass.title}"
-			x: 9.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 1d
 		}
 		{
 			dependencies: [
@@ -221,13 +201,8 @@
 				"{industrial_frontier.quest.p2.ore_route.desc.3}"
 				"{industrial_frontier.quest.p2.ore_route.desc.4}"
 			]
-			icon: "minecraft:raw_copper"
+			icon: "industrial_frontier:textures/gui/icons/process/geology/ore_sources.png"
 			id: "3012000000000008"
-			rewards: [{
-				id: "5012000000000008"
-				type: "xp"
-				xp: 25
-			}]
 			subtitle: "{industrial_frontier.quest.p2.ore_route.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -236,8 +211,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p2.ore_route.title}"
-			x: 12.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 0d
 		}
 		{
 			dependencies: ["3012000000000008"]
@@ -247,12 +224,6 @@
 			]
 			icon: "minecraft:redstone"
 			id: "3012000000000009"
-			rewards: [{
-				id: "5012000000000009"
-				type: "xp"
-				xp: 50
-			}]
-			shape: "diamond"
 			subtitle: "{industrial_frontier.quest.p2.exit.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -261,8 +232,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p2.exit.title}"
-			x: 15.0d
-			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 10d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.p2.subtitle}"]

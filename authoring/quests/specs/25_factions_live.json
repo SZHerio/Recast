@@ -1,0 +1,178 @@
+{
+  "key": "factions",
+  "file": "25_factions_live",
+  "chapter_id": "2025000000000001",
+  "group_id": "1000000000000005",
+  "icon": "minecraft:written_book",
+  "order": 3,
+  "tag": "diplomacy",
+  "optional": true,
+  "title_ru": "Фракции: как это работает",
+  "title_en": "Factions: how it works",
+  "sub_ru": "Команды, посланники, договоры и операции на практике",
+  "sub_en": "Commands, envoys, treaties and operations in practice",
+  "quests": [
+    {
+      "slug": "intro",
+      "x": 0,
+      "y": 0,
+      "icon": "minecraft:compass",
+      "deps": [],
+      "ru": {
+        "title": "Где всё это посмотреть",
+        "subtitle": "Три команды, которые отвечают на все вопросы",
+        "desc": [
+          "Состояние ваших отношений видно командой /if_threat status: эпоха, отношение всех шести фракций, действующие договоры и то, что за вами помнят.",
+          "Досье конкретной фракции — /if_threat faction и её имя: чем занимается, как воюет, что считает победой, с кем дружит и с кем в открытой вражде. Там же видно, о чём с ней сейчас готовы говорить.",
+          "Насколько мир ушёл вперёд, показывает /if_threat growth. Фракции равняются на вашу эпоху, а не на возраст мира: их базы и снаряжение растут вместе с вами."
+        ],
+        "task": "Посмотреть своё положение"
+      },
+      "en": {
+        "title": "Where to check all this",
+        "subtitle": "Three commands that answer almost everything",
+        "desc": [
+          "You can see your standing with /if_threat status: your era, all six factions' standing, active treaties, and what people remember about you.",
+          "A specific faction's dossier is /if_threat faction plus its name: what it does, how it fights, what counts as victory, who it likes, and who it openly hates. It also shows what it is currently willing to discuss.",
+          "/if_threat growth shows how far the world has advanced. Factions scale to your era, not to the world's age: their bases and gear grow with you."
+        ],
+        "task": "Check your standing"
+      }
+    },
+    {
+      "slug": "bases",
+      "x": 3,
+      "y": -1.5,
+      "icon": "minecraft:campfire",
+      "deps": ["intro"],
+      "ru": {
+        "title": "Их базы стоят в мире",
+        "subtitle": "Найти можно, просто уйдя достаточно далеко",
+        "desc": [
+          "У каждой из шести фракций есть свои постройки в мире, подобранные под её ремесло: у караванов стоянка на маршруте, у промышленников выработка с лагерем, у наблюдателей башня.",
+          "Стоят они редко — примерно одна на сорок восемь чанков. Это событие, а не декорация вдоль дороги.",
+          "Когда вы приходите на базу впервые, она оживает: появляется посланник, а уровень базы считается по вашей эпохе. В начале игры это ранний лагерь, а не военный комплекс, даже если миру тысяча дней."
+        ],
+        "task": "Найти базу фракции"
+      },
+      "en": {
+        "title": "Их базы стоят в мире",
+        "subtitle": "Найти можно, просто уйдя достаточно далеко",
+        "desc": [
+          "У каждой из шести фракций есть свои постройки в мире, подобранные под её ремесло: у караванов стоянка на маршруте, у промышленников выработка с лагерем, у наблюдателей башня.",
+          "Стоят они редко — примерно одна на сорок восемь чанков. Это событие, а не декорация вдоль дороги.",
+          "Когда вы приходите на базу впервые, она оживает: появляется посланник, а уровень базы считается по вашей эпохе. В начале игры это ранний лагерь, а не военный комплекс, даже если миру тысяча дней."
+        ],
+        "task": "Найти базу фракции"
+      }
+    },
+    {
+      "slug": "talks",
+      "x": 3,
+      "y": 1.5,
+      "icon": "minecraft:paper",
+      "deps": ["intro"],
+      "ru": {
+        "title": "Разговор с посланником",
+        "subtitle": "Кнопки, которых нет, — это тоже ответ",
+        "desc": [
+          "На базе стоит посланник. Нажмите на него, и откроется разговор: можно спросить, кто они такие, а можно перейти к договору.",
+          "Список договоров в разговоре зависит от отношений. Перемирие и торговля доступны почти всегда, союз и совместная оборона появятся только после сорока одного пункта уважения. Если кнопки нет — значит, вам ещё не доверяют настолько.",
+          "Это решает сервер, а не вежливость формулировки. Просить союз у врага невозможно не потому, что он откажет, а потому, что такого разговора не существует."
+        ],
+        "task": "Поговорить с посланником"
+      },
+      "en": {
+        "title": "Разговор с посланником",
+        "subtitle": "Кнопки, которых нет, — это тоже ответ",
+        "desc": [
+          "На базе стоит посланник. Нажмите на него, и откроется разговор: можно спросить, кто они такие, а можно перейти к договору.",
+          "Список договоров в разговоре зависит от отношений. Перемирие и торговля доступны почти всегда, союз и совместная оборона появятся только после сорока одного пункта уважения. Если кнопки нет — значит, вам ещё не доверяют настолько.",
+          "Это решает сервер, а не вежливость формулировки. Просить союз у врага невозможно не потому, что он откажет, а потому, что такого разговора не существует."
+        ],
+        "task": "Поговорить с посланником"
+      }
+    },
+    {
+      "slug": "reputation",
+      "x": 6,
+      "y": -1.5,
+      "icon": "minecraft:emerald",
+      "deps": ["bases"],
+      "ru": {
+        "title": "За что меняется отношение",
+        "subtitle": "Пятнадцать причин, и каждая называется вслух",
+        "desc": [
+          "Отношение никогда не меняется просто так. У каждого изменения есть причина из известного списка, и вы видите её вместе с числом: не «минус восемнадцать», а «убит мирный житель фракции».",
+          "Причины, которые засчитываются один раз, помечены. Один и тот же разговор не принесёт уважения дважды, а вот торговля идёт по чуть-чуть и постоянно.",
+          "Заметные поступки расходятся по миру. Союзники обиженной фракции узнают половину, её противники — треть с обратным знаком. Мелочи никому не пересказывают."
+        ],
+        "task": "Разобраться в причинах"
+      },
+      "en": {
+        "title": "What moves your standing",
+        "subtitle": "Fifteen reasons, each of them named aloud",
+        "desc": [
+          "Standing never shifts for no reason. Every change carries a cause from a known list, shown alongside the number: not 'minus eighteen' but 'killed a faction civilian'.",
+          "Causes that count once are marked as such. The same conversation will not earn respect twice, while trade adds a little at a time, steadily.",
+          "Notable deeds travel. Allies of the wronged faction learn half of it, its enemies a third with the sign flipped. Small things are not retold to anyone."
+        ],
+        "task": "Learn the reasons"
+      }
+    },
+    {
+      "slug": "treaties",
+      "x": 6,
+      "y": 1.5,
+      "icon": "minecraft:writable_book",
+      "deps": ["talks"],
+      "ru": {
+        "title": "Договор и его цена",
+        "subtitle": "Пять типов, и один из них останавливает операции",
+        "desc": [
+          "Перемирие приостанавливает враждебные операции. Торговый договор открывает каталог целиком. Дань снижает давление, пока платится, но уважения не приносит. Союз даёт взаимную защиту и чужих врагов в придачу. Совместная оборона присылает отряд, когда по вам работают.",
+          "Заключается всё это либо в разговоре с посланником, либо командой /if_threat treaty sign с именем фракции и типом. Посмотреть, что бывает, — /if_threat treaty list.",
+          "Разрыв стоит сорока пунктов и записывается фактом навсегда. Это единственное действие в сборке, у которого нет дешёвого исхода: договор, нарушенный один раз, помнят и торговлей это не стирается."
+        ],
+        "task": "Заключить первый договор"
+      },
+      "en": {
+        "title": "A treaty and its price",
+        "subtitle": "Five kinds, and one of them stops operations",
+        "desc": [
+          "A truce suspends hostile operations. A trade pact opens the whole catalogue. Tribute lowers pressure while it is paid but earns no respect. An alliance grants mutual defence and somebody else's enemies along with it. Joint defence sends a squad when you are hit.",
+          "You sign either through the envoy conversation or with /if_threat treaty sign plus faction and type. To see what exists, use /if_threat treaty list.",
+          "Breaking one costs forty points and is recorded as a permanent fact. It is the only action in the pack with no cheap way out: a treaty broken once is remembered, and trade will not wash it off."
+        ],
+        "task": "Sign your first treaty"
+      }
+    },
+    {
+      "slug": "operations",
+      "x": 9,
+      "y": 0,
+      "icon": "minecraft:bell",
+      "deps": ["reputation", "treaties"],
+      "ru": {
+        "title": "Как проходит операция",
+        "subtitle": "Предупреждение, окно переговоров, и только потом отряд",
+        "desc": [
+          "Операция начинается, только если с кем-то из фракций отношения испортились ниже минус одиннадцати. При нейтралитете и выше никто ничего против вас не планирует.",
+          "Дальше по шагам: сначала вас изучают, потом объявляют о намерении, потом открывается окно переговоров на четыре минуты. Договориться можно командой /if_threat operation negotiate или через посланника — и тогда операция отзывается, а отношение растёт.",
+          "Если промолчали, приходит отряд — на расстоянии, а не за спиной. После любого исхода идёт восстановление и час паузы. Посмотреть, что происходит прямо сейчас, — /if_threat operation status."
+        ],
+        "task": "Пройти операцию до конца"
+      },
+      "en": {
+        "title": "How an operation runs",
+        "subtitle": "Warning, negotiation window, and only then a squad",
+        "desc": [
+          "An operation starts only if your standing with someone has fallen below minus eleven. At neutral or better, nobody is planning anything against you.",
+          "Then, step by step: first they study you, then they announce intent, then a four-minute negotiation window opens. You can settle with /if_threat operation negotiate or through an envoy — the operation is called off and standing rises.",
+          "If you stay silent, a squad arrives — at a distance, not behind your back. Any outcome is followed by recovery and an hour of cooldown. To see what is happening right now, use /if_threat operation status."
+        ],
+        "task": "See an operation through"
+      }
+    }
+  ]
+}

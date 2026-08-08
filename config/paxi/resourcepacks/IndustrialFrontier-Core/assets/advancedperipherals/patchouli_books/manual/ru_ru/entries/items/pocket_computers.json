@@ -1,0 +1,15 @@
+{
+  "name": "Модули карманного компьютера",
+  "icon": "computercraft:pocket_computer_advanced",
+  "category": "advancedperipherals:items",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Для карманного компьютера доступны модули следующих устройств:$(li)$(9)$(l:peripherals/environment_detector)Детектор среды$(/l)$()$(li)$(9)$(l:peripherals/player_detector)Детектор игроков$(/l)$()$(li)$(9)$(l:peripherals/chat_box)Чат-блок$(/l)$()$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/items/pocket_computer/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "text",
+      "text": "Просто соедините нужный модуль с карманным компьютером, чтобы добавить к нему периферийное устройство. Учтите: связанные с этим устройством события работать не будут."
+    }
+  ]
+}

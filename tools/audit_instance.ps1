@@ -384,6 +384,24 @@ $allProvided = [System.Collections.Generic.List[object]]::new()
 $allDependencies = [System.Collections.Generic.List[object]]::new()
 $metadataErrors = [System.Collections.Generic.List[string]]::new()
 $languageSources = [System.Collections.Generic.List[object]]::new()
+$installedNamespaces = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+
+# The owner deliberately preserves names of mods and concrete weapons/ammo.
+# Descriptions, components, upgrades and ordinary prose are still translation
+# debt and are checked by the stricter archive audit. Each local rule must
+# carry a reason; a rule without one is not accepted.
+$translationExclusions = [System.Collections.Generic.List[object]]::new()
+$exclusionFile = Join-Path $rootPath 'authoring\lang\excluded_keys.json'
+if (Test-Path -LiteralPath $exclusionFile) {
+    $exclusionData = Get-Content -Raw -Encoding UTF8 -LiteralPath $exclusionFile | ConvertFrom-Json
+    foreach ($rule in @($exclusionData.rules)) {
+        if ([string]::IsNullOrWhiteSpace($rule.reason_ru)) { continue }
+        $translationExclusions.Add([pscustomobject]@{
+            namespace = [string]$rule.namespace
+            pattern = [string]$rule.pattern
+        })
+    }
+}
 $guideDefaultPages = @{}
 $guideRussianPages = [System.Collections.Generic.HashSet[string]]::new()
 $guideRussianTexts = @{}
@@ -493,6 +511,14 @@ foreach ($jar in $jars) {
                 text = Get-ZipEntryText -Archive $archive -Name $entry.FullName
             })
         }
+
+        # Mods ship compatibility strings for mods that may not be installed.
+        # NuclearCraft, for example, carries EMI fluid tag names — two thousand
+        # of them — while EMI itself is not in this pack. Those strings can
+        # never reach the player, so counting them as a translation debt makes
+        # the release gate lie about how much work is left. Namespaces owned by
+        # absent mods are recorded here and excluded from the report.
+        foreach ($item in $metadata.provided) { [void]$installedNamespaces.Add([string]$item.mod_id) }
 
         foreach ($entry in $archive.Entries | Where-Object { $_.FullName -match '^assets/([^/]+)/([^/]*guide[^/]*)/(.+\.md)$' }) {
             $match = [regex]::Match($entry.FullName, '^assets/([^/]+)/([^/]*guide[^/]*)/(.+\.md)$')
@@ -647,7 +673,17 @@ if (Test-Path -LiteralPath $guideContentCorrectionPath) {
 }
 
 $localizationRows = [System.Collections.Generic.List[object]]::new()
+$skippedNamespaces = [System.Collections.Generic.List[string]]::new()
 foreach ($group in $languageSources | Group-Object namespace) {
+    # Strings that belong to a mod which is not installed can never reach the
+    # player. Counting them as missing translations makes the release gate
+    # report work that does not exist. Vanilla namespaces stay in scope.
+    $ownerInstalled = ($group.Name -in @('minecraft', 'forge', 'fml')) -or $installedNamespaces.Contains($group.Name)
+    if (-not $ownerInstalled) {
+        $skippedNamespaces.Add($group.Name)
+        continue
+    }
+
     $english = [System.Collections.Generic.HashSet[string]]::new()
     $russian = [System.Collections.Generic.HashSet[string]]::new()
     $englishValues = @{}
@@ -681,6 +717,13 @@ foreach ($group in $languageSources | Group-Object namespace) {
         }
     }
     $missing = @($english | Where-Object { -not $russian.Contains($_) } | Sort-Object)
+    $excludedHere = 0
+    foreach ($rule in $translationExclusions) {
+        if ($rule.namespace -ne $group.Name) { continue }
+        $before = $missing.Count
+        $missing = @($missing | Where-Object { $_ -notmatch $rule.pattern })
+        $excludedHere += ($before - $missing.Count)
+    }
     $empty = @($english | Where-Object {
         $russianValues.ContainsKey($_) -and
         -not [string]::IsNullOrWhiteSpace([string]$englishValues[$_]) -and

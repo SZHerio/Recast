@@ -1,0 +1,151 @@
+{
+  "key": "oil",
+  "file": "24_oil_line",
+  "chapter_id": "2024000000000001",
+  "group_id": "1000000000000003",
+  "icon": "immersivepetroleum:pumpjack",
+  "order": 14,
+  "tag": "academy",
+  "optional": true,
+  "title_ru": "Нефть и её продукты",
+  "title_en": "Oil and what comes from it",
+  "sub_ru": "Откуда берётся топливо, пластик и половина химии",
+  "sub_en": "Where fuel, plastic and half your chemistry come from",
+  "quests": [
+    {
+      "slug": "intro",
+      "x": 0,
+      "y": 0,
+      "icon": "industrial_frontier:textures/gui/icons/process/future/petroleum_primary.png",
+      "deps": [],
+      "ru": {
+        "title": "Зачем сборке нефть",
+        "subtitle": "Одно сырьё, из которого выходит слишком многое",
+        "desc": [
+          "Нефть в сборке — это не просто топливо. Из неё выходят дизель для двигателей, битум для дорог, лёгкие фракции для химии и, в конечном счёте, пластик, без которого не собрать позднюю электронику.",
+          "Поэтому нефтяная линия — первое производство, где ошибка планировки бьёт по всему заводу сразу. Встала перегонка — встали двигатели, химия и выпуск пластика.",
+          "Разведка и добыча здесь тоже не мгновенные: месторождение нужно найти, оно конечно, и качать из него придётся долго. Это осознанно — нефть не должна быть бесконечной бочкой у базы."
+        ],
+        "task": "Прочитать про нефтяную линию"
+      },
+      "en": {
+        "title": "Why the pack needs oil",
+        "subtitle": "One raw material that turns into far too much",
+        "desc": [
+          "In this pack, oil is not just fuel. It becomes diesel for engines, bitumen for roads, light fractions for chemistry, and eventually plastic, without which you cannot build late-game electronics.",
+          "That is why the oil line is the first production chain where a planning mistake hits the whole factory at once. If refining stops, engines stop, chemistry stops, and plastic output stops too.",
+          "Exploration and extraction are also not instant here: you have to find a deposit, it is finite, and pumping it will take time. That is intentional — oil should not be an endless barrel next to your base."
+        ],
+        "task": "Read about the oil line"
+      }
+    },
+    {
+      "slug": "survey",
+      "x": 3,
+      "y": 0,
+      "icon": "immersivepetroleum:pumpjack",
+      "deps": ["intro"],
+      "ru": {
+        "title": "Разведка и скважина",
+        "subtitle": "Сначала узнать, потом бурить",
+        "desc": [
+          "Месторождение сначала ищут. Пробы показывают, есть ли под этим участком нефть и сколько её там, — бурить наугад дорого и почти всегда бессмысленно.",
+          "Скважина ставится один раз и надолго. Она занимает место, требует питания и не переносится, поэтому выбирают не ближайшую точку, а ту, где запас оправдает стройку.",
+          "Запас конечен. Когда он падает, скважина переходит на остаточный режим и даёт немного, но постоянно. Планировать завод под этот остаток — ошибка."
+        ],
+        "task": "Найти месторождение и поставить скважину"
+      },
+      "en": {
+        "title": "Exploration and the well",
+        "subtitle": "Learn first, drill second",
+        "desc": [
+          "A deposit has to be found first. Samples show whether there is oil under this area and how much of it there is — drilling blindly is expensive and almost always pointless.",
+          "A well is placed once and stays there. It takes space, needs power, and cannot be moved, so you choose not the nearest spot, but the one whose reserves justify the build.",
+          "The reserve is finite. When it drops, the well switches to a residual mode and produces a little, but steadily. Designing your factory around that remainder is a mistake."
+        ],
+        "task": "Find a deposit and place a well"
+      }
+    },
+    {
+      "slug": "distillation",
+      "x": 6,
+      "y": 0,
+      "icon": "industrial_frontier:textures/gui/icons/process/gtceu/petrochemical_products.png",
+      "deps": ["survey"],
+      "ru": {
+        "title": "Перегонка: одно на входе, много на выходе",
+        "subtitle": "И всё это надо куда-то деть",
+        "desc": [
+          "Перегонная колонна разделяет сырую нефть на фракции. Это первый процесс сборки, где выходов больше, чем входов, и он учит главному правилу химии.",
+          "Правило такое: если хотя бы один выход некуда девать, встаёт вся установка. Не нужен вам битум — он всё равно копится, переполняет бак и останавливает перегонку вместе с нужным дизелем.",
+          "Отсюда планировка: у каждой фракции должен быть потребитель, хранилище или способ утилизации. Заранее, а не когда встанет."
+        ],
+        "task": "Построить перегонку и развести фракции"
+      },
+      "en": {
+        "title": "Distillation: one input, many outputs",
+        "subtitle": "And all of them need somewhere to go",
+        "desc": [
+          "A distillation column separates crude oil into fractions. This is the first process in the pack with more outputs than inputs, and it teaches the main rule of chemistry.",
+          "The rule is simple: if even one output has nowhere to go, the entire installation stops. If you do not need bitumen, it will still accumulate, fill the tank, and stop distillation along with the diesel you do need.",
+          "That is why layout matters: every fraction needs a consumer, storage, or a disposal path. Decide that in advance, not after the line has already stalled."
+        ],
+        "task": "Build distillation and route the fractions"
+      }
+    },
+    {
+      "slug": "crusher",
+      "x": 9,
+      "y": -1.5,
+      "icon": "immersiveengineering:crusher",
+      "deps": ["distillation"],
+      "ru": {
+        "title": "Тяжёлые машины рядом",
+        "subtitle": "Дробилка, домна и другие сооружения",
+        "desc": [
+          "Тот же домен даёт крупные машины из блоков: дробилку, доменную печь, металлический пресс. Собираются они как сооружения и работают на обычной энергии.",
+          "Их ниша — большой поток простой обработки. Там, где GregTech требует точной настройки и своих корпусов, эти дают грубую производительность за понятную цену.",
+          "На стыке эпох это часто лучший выбор: домна закрывает потребность в стали до того, как вы дойдёте до промышленных плавильных линий."
+        ],
+        "task": "Построить дробилку"
+      },
+      "en": {
+        "title": "Heavy machines nearby",
+        "subtitle": "Crusher, blast furnace, and other structures",
+        "desc": [
+          "The same domain also gives you large block-built machines: a crusher, a blast furnace, and a metal press. They are assembled as structures and run on ordinary energy.",
+          "Their niche is a high throughput of simple processing. Where GregTech demands precise setup and its own casings, these give raw output for a clear price.",
+          "At the boundary between eras, they are often the best choice: the blast furnace covers your steel needs before you reach industrial smelting lines."
+        ],
+        "task": "Build a crusher"
+      }
+    },
+    {
+      "slug": "plastic",
+      "x": 9,
+      "y": 1.5,
+      "icon": "minecraft:bucket",
+      "deps": ["distillation"],
+      "ru": {
+        "title": "Куда всё это идёт дальше",
+        "subtitle": "Пластик, дизель и химическое сырьё",
+        "desc": [
+          "Дизель кормит двигатели — самый компактный источник энергии средних эпох. Пластик уходит в электронику, корпуса и изоляцию, и без него поздние схемы не собрать.",
+          "Лёгкие фракции идут в химию: растворители, полимеры, сырьё для удобрений. Нефтяная линия смыкается с хлор-щелочным и азотным циклами, которые вы уже проходили в четвёртой эпохе.",
+          "Практический вывод: нефть ставят не тогда, когда нужен бензин, а тогда, когда нужен пластик. Топливо — приятный побочный продукт, а не цель."
+        ],
+        "task": "Довести нефть до пластика"
+      },
+      "en": {
+        "title": "Where all of this goes next",
+        "subtitle": "Plastic, diesel, and chemical feedstock",
+        "desc": [
+          "Diesel powers engines — the most compact power source of the midgame eras. Plastic goes into electronics, casings, and insulation, and without it you cannot assemble late-stage circuits.",
+          "The light fractions feed chemistry: solvents, polymers, and fertilizer feedstock. The oil line ties into the chlorine-alkali and nitrogen chains you already passed in the fourth era.",
+          "The practical takeaway: you build oil processing not when you need gasoline, but when you need plastic. Fuel is a pleasant by-product, not the goal."
+        ],
+        "task": "Turn oil into plastic"
+      }
+    }
+  ]
+}

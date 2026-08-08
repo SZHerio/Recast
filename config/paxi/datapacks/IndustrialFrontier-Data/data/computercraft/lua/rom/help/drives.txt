@@ -1,0 +1,19 @@
+Дисковод - периферийное устройство CraftOS. Введите "help peripheral", чтобы узнать, как подключаться к периферийным устройствам через API peripheral. Когда дисковод подключён, peripheral.getType() возвращает "drive".
+
+Методы дисковода:
+isDiskPresent()
+getDiskLabel()
+setDiskLabel( label )
+hasData()
+getMountPath()
+hasAudio()
+getAudioTitle()
+playAudio()
+stopAudio()
+ejectDisk()
+getDiskID()
+
+События дисковода:
+"disk" - диск или другой предмет вставлен в дисковод. Аргумент - имя дисковода.
+"disk_eject" - диск извлечён из дисковода. Аргумент - имя дисковода.
+Введите "help events", чтобы узнать о системе событий.

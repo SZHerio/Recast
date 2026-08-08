@@ -1,0 +1,19 @@
+{
+  "name": "Электрический буксир",
+  "icon": "littlelogistics:energy_tug",
+  "category": "littlelogistics:vessels",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:energy_tug",
+      "scale": 0.4,
+      "offset": 0.5,
+      "text": "Буксир работает на Forge Energy и заряжается у $(l:vessel_charger)зарядной станции$() во время стоянки."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:energy_tug",
+      "text": "В буксире есть дополнительная ячейка для аккумулятора. Она пригодится, если энергия закончится посреди маршрута."
+    }
+  ]
+}

@@ -1,14 +1,17 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "11_p1_mechanised"
 	group: "1000000000000004"
-	icon: "create:cogwheel"
+	icon: "industrial_frontier:textures/gui/icons/epochs/p1.png"
 	id: "2011000000000001"
 	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3010000000000008"]
 			description: [
 				"{industrial_frontier.quest.p1.intro.desc.1}"
 				"{industrial_frontier.quest.p1.intro.desc.2}"
@@ -16,13 +19,6 @@
 			]
 			icon: "create:cogwheel"
 			id: "3011000000000001"
-			rewards: [{
-				id: "5011000000000001"
-				type: "xp"
-				xp: 15
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.p1.intro.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -31,8 +27,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p1.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3011000000000001"]
@@ -43,11 +41,6 @@
 			]
 			icon: "create:andesite_alloy"
 			id: "3011000000000002"
-			rewards: [{
-				id: "5011000000000002"
-				type: "xp"
-				xp: 15
-			}]
 			subtitle: "{industrial_frontier.quest.p1.andesite.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -61,8 +54,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p1.andesite.title}"
-			x: 3.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 0d
 		}
 		{
 			dependencies: ["3011000000000002"]
@@ -73,11 +68,6 @@
 			]
 			icon: "create:shaft"
 			id: "3011000000000003"
-			rewards: [{
-				id: "5011000000000003"
-				type: "xp"
-				xp: 15
-			}]
 			subtitle: "{industrial_frontier.quest.p1.rotation.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -91,8 +81,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p1.rotation.title}"
-			x: 6.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: ["3011000000000002"]
@@ -103,11 +95,6 @@
 			]
 			icon: "create:water_wheel"
 			id: "3011000000000004"
-			rewards: [{
-				id: "5011000000000004"
-				type: "xp"
-				xp: 15
-			}]
 			subtitle: "{industrial_frontier.quest.p1.power.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -120,8 +107,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p1.power.title}"
-			x: 6.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
 			dependencies: ["3011000000000004"]
@@ -132,11 +121,6 @@
 			]
 			icon: "create:stressometer"
 			id: "3011000000000005"
-			rewards: [{
-				id: "5011000000000005"
-				type: "xp"
-				xp: 15
-			}]
 			subtitle: "{industrial_frontier.quest.p1.stress.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -149,8 +133,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p1.stress.title}"
-			x: 9.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: -1d
 		}
 		{
 			dependencies: ["3011000000000003"]
@@ -161,11 +147,6 @@
 			]
 			icon: "create:millstone"
 			id: "3011000000000006"
-			rewards: [{
-				id: "5011000000000006"
-				type: "xp"
-				xp: 15
-			}]
 			subtitle: "{industrial_frontier.quest.p1.mill.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -178,8 +159,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p1.mill.title}"
-			x: 9.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 1d
 		}
 		{
 			dependencies: ["3011000000000006"]
@@ -188,13 +171,8 @@
 				"{industrial_frontier.quest.p1.press.desc.2}"
 				"{industrial_frontier.quest.p1.press.desc.3}"
 			]
-			icon: "create:mechanical_press"
+			icon: "industrial_frontier:textures/gui/icons/process/create/clay_form_service.png"
 			id: "3011000000000007"
-			rewards: [{
-				id: "5011000000000007"
-				type: "xp"
-				xp: 15
-			}]
 			subtitle: "{industrial_frontier.quest.p1.press.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -207,8 +185,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p1.press.title}"
-			x: 12.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 0d
 		}
 		{
 			dependencies: [
@@ -222,11 +202,6 @@
 			]
 			icon: "create:belt_connector"
 			id: "3011000000000008"
-			rewards: [{
-				id: "5011000000000008"
-				type: "xp"
-				xp: 15
-			}]
 			subtitle: "{industrial_frontier.quest.p1.line.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -240,8 +215,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p1.line.title}"
-			x: 15.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: 0d
 		}
 		{
 			dependencies: ["3011000000000008"]
@@ -251,12 +228,6 @@
 			]
 			icon: "minecraft:blast_furnace"
 			id: "3011000000000009"
-			rewards: [{
-				id: "5011000000000009"
-				type: "xp"
-				xp: 30
-			}]
-			shape: "diamond"
 			subtitle: "{industrial_frontier.quest.p1.exit.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -265,8 +236,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p1.exit.title}"
-			x: 18.0d
-			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 12d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.p1.subtitle}"]

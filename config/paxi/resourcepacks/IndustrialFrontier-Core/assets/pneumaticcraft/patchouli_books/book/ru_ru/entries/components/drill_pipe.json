@@ -1,0 +1,17 @@
+{
+  "name": "Буровая труба",
+  "icon": "pneumaticcraft:drill_pipe",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Буровые трубы/$ нужны $(l:machines/gas_lift)Пузырьковому насосу/$, чтобы добраться до залежей жидкостей.$(p)При желании их можно использовать и как обычные строительные блоки."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание буровой трубы",
+      "recipe": "pneumaticcraft:drill_pipe"
+    }
+  ]
+}

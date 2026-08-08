@@ -1,14 +1,17 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "16_p6_nuclear"
 	group: "1000000000000004"
-	icon: "nuclearcraft:fission_reactor_controller"
+	icon: "industrial_frontier:textures/gui/icons/epochs/p6.png"
 	id: "2016000000000001"
 	order_index: 7
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3015000000000014"]
 			description: [
 				"{industrial_frontier.quest.p6.intro.desc.1}"
 				"{industrial_frontier.quest.p6.intro.desc.2}"
@@ -16,13 +19,6 @@
 			]
 			icon: "nuclearcraft:fission_reactor_controller"
 			id: "3016000000000001"
-			rewards: [{
-				id: "5016000000000001"
-				type: "xp"
-				xp: 70
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.p6.intro.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -31,11 +27,13 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p6.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
-			dependencies: ["3016000000000001"]
+			dependencies: ["3016000000000003"]
 			description: [
 				"{industrial_frontier.quest.p6.materials.desc.1}"
 				"{industrial_frontier.quest.p6.materials.desc.2}"
@@ -43,11 +41,6 @@
 			]
 			icon: "nuclearcraft:graphite_block"
 			id: "3016000000000002"
-			rewards: [{
-				id: "5016000000000002"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.materials.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -60,11 +53,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.materials.title}"
-			x: 3.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
-			dependencies: ["3016000000000002"]
+			dependencies: ["3016000000000001"]
 			description: [
 				"{industrial_frontier.quest.p6.entry.desc.1}"
 				"{industrial_frontier.quest.p6.entry.desc.2}"
@@ -72,11 +67,6 @@
 			]
 			icon: "nuclearcraft:manufactory"
 			id: "3016000000000003"
-			rewards: [{
-				id: "5016000000000003"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.entry.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -89,11 +79,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.entry.title}"
-			x: 6.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
 		}
 		{
-			dependencies: ["3016000000000003"]
+			dependencies: ["3016000000000002"]
 			description: [
 				"{industrial_frontier.quest.p6.alloys.desc.1}"
 				"{industrial_frontier.quest.p6.alloys.desc.2}"
@@ -101,11 +93,6 @@
 			]
 			icon: "nuclearcraft:alloy_smelter"
 			id: "3016000000000004"
-			rewards: [{
-				id: "5016000000000004"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.alloys.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -118,23 +105,20 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.alloys.title}"
-			x: 9.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: -1d
 		}
 		{
-			dependencies: ["3016000000000004"]
+			dependencies: ["3016000000000013"]
 			description: [
 				"{industrial_frontier.quest.p6.purification.desc.1}"
 				"{industrial_frontier.quest.p6.purification.desc.2}"
 				"{industrial_frontier.quest.p6.purification.desc.3}"
 			]
-			icon: "minecraft:bucket"
+			icon: "industrial_frontier:textures/gui/icons/process/gtceu/uranium_preparation.png"
 			id: "3016000000000005"
-			rewards: [{
-				id: "5016000000000005"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.purification.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -143,11 +127,13 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p6.purification.title}"
-			x: 12.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: -1d
 		}
 		{
-			dependencies: ["3016000000000005"]
+			dependencies: ["3016000000000003"]
 			description: [
 				"{industrial_frontier.quest.p6.enrichment.desc.1}"
 				"{industrial_frontier.quest.p6.enrichment.desc.2}"
@@ -155,11 +141,6 @@
 			]
 			icon: "nuclearcraft:centrifuge"
 			id: "3016000000000006"
-			rewards: [{
-				id: "5016000000000006"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.enrichment.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -172,11 +153,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.enrichment.title}"
-			x: 15.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
-			dependencies: ["3016000000000006"]
+			dependencies: ["3016000000000005"]
 			description: [
 				"{industrial_frontier.quest.p6.fuel.desc.1}"
 				"{industrial_frontier.quest.p6.fuel.desc.2}"
@@ -184,11 +167,6 @@
 			]
 			icon: "nuclearcraft:fission_reactor_solid_fuel_cell"
 			id: "3016000000000007"
-			rewards: [{
-				id: "5016000000000007"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.fuel.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -201,11 +179,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.fuel.title}"
-			x: 18.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: -1d
 		}
 		{
-			dependencies: ["3016000000000004"]
+			dependencies: ["3016000000000001"]
 			description: [
 				"{industrial_frontier.quest.p6.dosimetry.desc.1}"
 				"{industrial_frontier.quest.p6.dosimetry.desc.2}"
@@ -213,11 +193,6 @@
 			]
 			icon: "nuclearcraft:geiger_counter"
 			id: "3016000000000008"
-			rewards: [{
-				id: "5016000000000008"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.dosimetry.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -230,12 +205,14 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.dosimetry.title}"
-			x: 12.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
 		}
 		{
 			dependencies: [
-				"3016000000000007"
+				"3016000000000004"
 				"3016000000000008"
 			]
 			description: [
@@ -245,11 +222,6 @@
 			]
 			icon: "nuclearcraft:fission_reactor_controller"
 			id: "3016000000000009"
-			rewards: [{
-				id: "5016000000000009"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.reactor.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -262,8 +234,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.reactor.title}"
-			x: 15.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 1d
 		}
 		{
 			dependencies: ["3016000000000009"]
@@ -274,11 +248,6 @@
 			]
 			icon: "nuclearcraft:heat_exchanger"
 			id: "3016000000000010"
-			rewards: [{
-				id: "5016000000000010"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.heat_loop.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -291,8 +260,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.heat_loop.title}"
-			x: 18.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: 1d
 		}
 		{
 			dependencies: ["3016000000000010"]
@@ -303,11 +274,6 @@
 			]
 			icon: "nuclearcraft:turbine_controller"
 			id: "3016000000000011"
-			rewards: [{
-				id: "5016000000000011"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.turbine.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -320,11 +286,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.turbine.title}"
-			x: 21.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 12d
+			y: -1d
 		}
 		{
-			dependencies: ["3016000000000009"]
+			dependencies: ["3016000000000007"]
 			description: [
 				"{industrial_frontier.quest.p6.spent_fuel.desc.1}"
 				"{industrial_frontier.quest.p6.spent_fuel.desc.2}"
@@ -332,11 +300,6 @@
 			]
 			icon: "nuclearcraft:fuel_reprocessor"
 			id: "3016000000000012"
-			rewards: [{
-				id: "5016000000000012"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.spent_fuel.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -349,11 +312,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.spent_fuel.title}"
-			x: 18.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 12d
+			y: 1d
 		}
 		{
-			dependencies: ["3016000000000012"]
+			dependencies: ["3016000000000006"]
 			description: [
 				"{industrial_frontier.quest.p6.isotopes.desc.1}"
 				"{industrial_frontier.quest.p6.isotopes.desc.2}"
@@ -361,11 +326,6 @@
 			]
 			icon: "nuclearcraft:isotope_separator"
 			id: "3016000000000013"
-			rewards: [{
-				id: "5016000000000013"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.isotopes.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -378,26 +338,23 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p6.isotopes.title}"
-			x: 21.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 1d
 		}
 		{
 			dependencies: [
 				"3016000000000011"
-				"3016000000000013"
+				"3016000000000012"
 			]
 			description: [
 				"{industrial_frontier.quest.p6.city_plant.desc.1}"
 				"{industrial_frontier.quest.p6.city_plant.desc.2}"
 				"{industrial_frontier.quest.p6.city_plant.desc.3}"
 			]
-			icon: "minecraft:writable_book"
+			icon: "industrial_frontier:textures/gui/icons/process/future/civil_nuclear_cycle.png"
 			id: "3016000000000014"
-			rewards: [{
-				id: "5016000000000014"
-				type: "xp"
-				xp: 70
-			}]
 			subtitle: "{industrial_frontier.quest.p6.city_plant.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -406,8 +363,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p6.city_plant.title}"
-			x: 24.0d
-			y: 1.5d
+			shape: "diamond"
+			size: 1.5d
+			x: 14d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.p6.subtitle}"]

@@ -1,0 +1,19 @@
+{
+  "name": "Паровой буксир",
+  "icon": "littlelogistics:tug",
+  "category": "littlelogistics:vessels",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:tug",
+      "scale": 0.4,
+      "offset": 0.5,
+      "text": "Простой буксир, работающий на любом печном топливе."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:tug",
+      "text": "Топливо можно загружать воронками, установленными над причалом буксира."
+    }
+  ]
+}

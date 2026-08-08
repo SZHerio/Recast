@@ -1,0 +1,62 @@
+{
+  "name": "Пневматический отбойный молоток",
+  "icon": "pneumaticcraft:jackhammer",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:plastic",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:jackhammer",
+      "text": "$(item)Пневматический отбойный молоток/$ — универсальный шахтёрский инструмент, одинаково эффективно разрушающий любые блоки с помощью $(l:base_concepts/pressure)сжатого воздуха/$. Скорость добычи и запас воздуха улучшаются в $(l:machines/charging_station)зарядной станции/$ с помощью $(l:base_concepts/upgrades#speed)улучшений скорости/$ и $(l:base_concepts/upgrades#volume)улучшений объёма/$ соответственно."
+    },
+    {
+      "type": "text",
+      "title": "Буровые насадки",
+      "text": "Новый отбойный молоток создаётся без $(thing)буровой насадки/$ и почти бесполезен, пока вы её не установите. Щёлкните молотком ПКМ, чтобы открыть настройки, и поместите насадку в правый верхний слот.$(p)Существует четыре вида насадок в порядке роста мощности и стоимости:$(li)железная/$$(li)из сжатого железа/$$(li)алмазная/$$(li)незеритовая/$"
+    },
+    {
+      "type": "text",
+      "title": "Режимы добычи",
+      "text": "Отбойный молоток поддерживает несколько режимов добычи, в том числе $(thing)разработку жил/$, и позволяет быстро расчищать большие области. Набор режимов зависит от установленной $(thing)буровой насадки/$: более совершенные насадки не только ускоряют работу, но и открывают дополнительные схемы.$(p)Чтобы выбрать режим, щёлкните молотком ПКМ и нажмите кнопку в правом нижнем углу интерфейса (см. изображение напротив)."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/jackhammer_gui.png"
+      ],
+      "text": "$(italic)Интерфейс отбойного молотка с незеритовой насадкой и выбранным режимом 3x3/$"
+    },
+    {
+      "type": "spotlight",
+      "item": "minecraft:enchanted_book",
+      "title": "Зачарование",
+      "text": "Отбойный молоток нельзя зачаровать обычным способом на $(thing)столе зачарований/$, но через интерфейс в него можно вставить книгу с чарами $(thing)«Шёлковое касание»/$ или $(thing)«Удача»/$. Книга в верхнем центральном слоте передаёт молотку своё зачарование."
+    },
+    {
+      "type": "text",
+      "title": "Зачарование (продолжение)",
+      "text": "Так книги с «Шёлковым касанием» и «Удачей» можно быстро менять по необходимости.$(p)Если получить нужную книгу трудно из-за случайности обычного зачарования, помните: $(l:manufacturing/pressure_chamber)барокамера/$ умеет снимать чары с инструментов и переносить их на книги."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание пневматического отбойного молотка",
+      "recipe": "pneumaticcraft:jackhammer"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/iron_drill_bit"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/compressed_iron_drill_bit"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/diamond_drill_bit"
+    },
+    {
+      "type": "pneumaticcraft:assembly_system",
+      "recipe": "pneumaticcraft:assembly/netherite_drill_bit"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Ядро автомата Края",
+  "icon": "advancedperipherals:end_automata_core",
+  "category": "advancedperipherals:metaphysics",
+  "advancement": "advancedperipherals:weak_automata_core",
+  "pages": [
+    {
+      "type": "spotlight",
+      "title": "Ядро автомата Края",
+      "item": "advancedperipherals:end_automata_core",
+      "text": "Поглотив 10 эндерменов, ядро слабого автомата превратится в ядро автомата Края.$(p)Эта душа не только сильнее исходной, но и, похоже, наделяет саму черепаху ограниченной способностью к телепортации."
+    },
+    {
+      "type": "link",
+      "text": "Помимо возможностей ядра слабого автомата, эта душа позволяет телепортироваться между сохранёнными точками в пределах одного мира.$(p)Будьте внимательны: если черепаху сломать, все сохранённые точки исчезнут.",
+      "url": "https://docs.intelligence-modding.de/metaphysics/end_automata/",
+      "link_text": "Документация API"
+    }
+  ]
+}

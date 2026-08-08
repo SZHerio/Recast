@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.oil",
+  "engine_id": "2024000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/24_oil_line.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.oil.intro",
+      "engine_id": "3024000000000001",
+      "purpose": "Один исходник, из которого получается слишком много всего",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.oil.survey",
+      "engine_id": "3024000000000002",
+      "purpose": "Сначала понять, потом бурить",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.oil.distillation",
+      "engine_id": "3024000000000003",
+      "purpose": "И всем им нужно куда-то идти",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.oil.crusher",
+      "engine_id": "3024000000000004",
+      "purpose": "Дробилка, домна и другие структуры",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.oil.plastic",
+      "engine_id": "3024000000000005",
+      "purpose": "Пластик, дизель и химическое сырьё",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

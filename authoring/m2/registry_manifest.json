@@ -11,8 +11,8 @@
       "schema_path": "authoring/schemas/m2_substance_passports.schema.json",
       "status": "STATIC_COMPLETE_USER_GATE_PENDING",
       "counts": {
-        "passports": 26,
-        "planned_substances": 73
+        "passports": 29,
+        "planned_substances": 70
       }
     },
     {
@@ -65,7 +65,7 @@
       "schema_path": "authoring/schemas/m2_bypass_decisions.schema.json",
       "status": "STATIC_COMPLETE_USER_GATE_PENDING",
       "counts": {
-        "decisions": 42
+        "decisions": 45
       }
     },
     {
@@ -75,7 +75,7 @@
       "status": "STATIC_COMPLETE_USER_GATE_PENDING",
       "counts": {
         "nodes": 10,
-        "dependency_edges": 255,
+        "dependency_edges": 259,
         "component_requirement_edges": 45,
         "edges": 9,
         "production_edges": 112,

@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Вызов подпрограммы»",
+  "icon": "pneumaticcraft:textures/progwidgets/jump_sub_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Этот виджет работает как $(thing)Переход/$, но после завершения подпрограммы выполнение продолжается с виджета, подключённого снизу к виджету $(thing)Вызов подпрограммы/$. Виджет $(thing)Вызов подпрограммы/$ позволяет повторно использовать общие участки кода и передавать подпрограммам произвольные аргументы через присваивание переменных перед вызовом."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/jump_sub_piece.png"
+      ],
+      "text": "$(italic)Виджет «Вызов подпрограммы»/$"
+    }
+  ]
+}

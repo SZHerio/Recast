@@ -1487,6 +1487,169 @@
       "gate_refs": [
         "industrial_frontier:gate/substance/future_atomic"
       ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/environment_resistant_coating",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "MIXTURE",
+      "name_ru": "покрытие для экстремальной среды",
+      "name_en": "Extreme-Environment Coating",
+      "formula": null,
+      "formula_status": "NOT_APPLICABLE",
+      "physical_states": [
+        "SOLID",
+        "LIQUID"
+      ],
+      "purity_classes": [
+        "AEROSPACE",
+        "DOMAIN_SPECIALIZED"
+      ],
+      "world_origin_decision_ref": null,
+      "first_epoch": 8,
+      "automation": {
+        "first_automatic_epoch": 8,
+        "mass_epoch": 8
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Всё, что стоит на чужой планете, живёт ровно столько, сколько держится покрытие."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Состав производится химией и металлургией, как и остальные материалы этого класса."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "покрытие для экстремальной среды",
+      "source_strategy_ru": "Покрытие делается из полимеров и керамик той же химии, что и корпус ракеты, но с другой задачей: не держать нагрузку, а пережить среду. Отдельного месторождения у него нет.",
+      "process_route_ru": "Полимеры и керамика P4–P7 → состав под конкретную среду → нанесение на узел → периодическое обновление.",
+      "process_refs": [
+        "industrial_frontier:process/future/strategic_materials",
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/rocket_and_planetary_logistics"
+      ],
+      "recipe_policy_ru": "Покрытий не одно: венерианские 737 кельвинов и лунные 113 требуют разного состава. Универсального покрытия сборка не заводит — иначе исчезает смысл различать планеты.",
+      "waste_policy_ru": "Снятое старое покрытие не восстанавливается до исходных компонентов: возврат ограничен, и это цена работы в агрессивной среде.",
+      "canonical_output_policy_ru": "Канонические формы принадлежат тому домену, который выпускает узел: покрытие существует на детали, а не отдельным складским предметом.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_space"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/interplanetary_composite",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "FICTIONAL_MATERIAL",
+      "name_ru": "межпланетный конструкционный композит",
+      "name_en": "Interplanetary Structural Composite",
+      "formula": null,
+      "formula_status": "NOT_APPLICABLE",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "AEROSPACE",
+        "DOMAIN_SPECIALIZED"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_planetary_resources",
+      "first_epoch": 9,
+      "automation": {
+        "first_automatic_epoch": 9,
+        "mass_epoch": 9
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Единственный потребитель: секции роя и конструкции колонии."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Сплав и матрица приходят из металлургии, как и всё остальное конструкционное."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "межпланетный конструкционный композит",
+      "source_strategy_ru": "Материал секций мегаструктуры. Собирается из планетарного сырья: без работающей планетарной сети его не сделать в нужном количестве, и это сделано намеренно — сфера не должна строиться из земных запасов.",
+      "process_route_ru": "Планетарные металлы и редкозем → сплав и полимерная матрица → секция мегаструктуры → вывод на орбиту.",
+      "process_refs": [
+        "industrial_frontier:process/future/strategic_materials",
+        "industrial_frontier:process/gtceu/precision_metallurgy",
+        "industrial_frontier:process/future/rocket_and_planetary_logistics"
+      ],
+      "recipe_policy_ru": "Секции нужны сотнями, поэтому материал обязан идти линией. Ручная сборка партии допустима один раз — на проверке схемы.",
+      "waste_policy_ru": "Брак секций возвращается в переплавку с потерей класса. Изношенные секции сферы возвращаются тем же путём — это и есть её обслуживание.",
+      "canonical_output_policy_ru": "Одна каноническая форма на секцию. Второго материала того же назначения сборка не заводит.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_space"
+      ]
+    },
+    {
+      "substance_id": "industrial_frontier:substance/strategic_energetic_composition",
+      "status": "ACTIVE_INSTALLED",
+      "kind": "FICTIONAL_MATERIAL",
+      "name_ru": "стратегический энергетический состав",
+      "name_en": "Strategic Energetic Composition",
+      "formula": null,
+      "formula_status": "NOT_APPLICABLE",
+      "physical_states": [
+        "SOLID"
+      ],
+      "purity_classes": [
+        "REACTOR",
+        "DOMAIN_SPECIALIZED"
+      ],
+      "world_origin_decision_ref": "industrial_frontier:worldgen/future_atomic_feedstocks",
+      "first_epoch": 9,
+      "automation": {
+        "first_automatic_epoch": 9,
+        "mass_epoch": 9
+      },
+      "renewability": "RENEWABLE_INSTALLED",
+      "form_refs": [],
+      "domain_consumers": [
+        {
+          "domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Единственный владелец и единственный потребитель."
+        },
+        {
+          "domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
+          "status": "ACTIVE_INSTALLED",
+          "purpose_ru": "Поставляет исходные продукты переработки, но сам состав не производит."
+        }
+      ],
+      "byproduct_refs": [],
+      "russian_term": "стратегический энергетический состав",
+      "source_strategy_ru": "Высокоэнергетический состав стратегического домена. Существует только как результат собственной программы игрока: переработка, разделение и ускорительный комплекс. Через лут, торговлю и награду не приходит никогда.",
+      "process_route_ru": "Продукты переработки ОЯТ и разделения изотопов → ускорительный комплекс → состав → изделие стратегического домена.",
+      "process_refs": [
+        "industrial_frontier:process/future/strategic_materials",
+        "industrial_frontier:process/gtceu/industrial_chemistry",
+        "industrial_frontier:process/future/civil_nuclear_fuel_cycle"
+      ],
+      "recipe_policy_ru": "Состав не заменяется обычной взрывчаткой и не производится обходным путём: единственный маршрут проходит через ускоритель, то есть через восьмую эпоху.",
+      "waste_policy_ru": "Отходы производства имеют дозу и учтены в единой радиационной модели. Хранение отдельное и поштучное, как у всего стратегического.",
+      "canonical_output_policy_ru": "Каноническая форма принадлежит стратегическому домену. Гражданская атомная отрасль этот состав не производит и не потребляет.",
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_atomic"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/substance/future_atomic"
+      ]
     }
   ],
   "planned_substances": [
@@ -7393,304 +7556,6 @@
         ],
         "blocked_contract_refs": [
           "m2_extended_domains:chemistry.specialized_propellant"
-        ],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/mandatory_physical_audit",
-          "industrial_frontier:evidence/substance/planned_chemistry_architecture"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
-      "substance_id": "industrial_frontier:substance/environment_resistant_coating",
-      "group": "P8_EXTRATERRESTRIAL",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "покрытие для экстремальной среды",
-      "name_en": "Extreme-Environment Coating",
-      "russian_term": "покрытие для экстремальной среды",
-      "kind": "MIXTURE",
-      "formula": null,
-      "formula_status": "UNVERIFIED",
-      "physical_states": [
-        "MIXTURE",
-        "SOLID"
-      ],
-      "purity_classes": [
-        "AEROSPACE",
-        "DOMAIN_SPECIALIZED"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 8,
-      "automation": {
-        "first_automatic_epoch": 8,
-        "mass_epoch": 8
-      },
-      "renewability": "NONRENEWABLE",
-      "owner_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-      "secondary_owner_domain_refs": [
-        "industrial_frontier:domain/industrial_chemistry_metallurgy"
-      ],
-      "form_refs": [],
-      "forms_policy_ru": "Проектный паспорт не назначает runtime-формы. На выходе gate выбираются только необходимые формы из owner-dump; одна форма — один канонический производитель, декоративные варианты не становятся параллельным сырьём.",
-      "source_strategy_ru": "Aerospace-grade связующее и функциональные добавки выбираются после подтверждения среды и космического стека.",
-      "process_route_ru": "Высокочистая подготовка, нанесение в контролируемой атмосфере, отверждение и квалификационный тест.",
-      "process_refs": [
-        "industrial_frontier:process/future/strategic_materials",
-        "industrial_frontier:process/gtceu/industrial_chemistry"
-      ],
-      "recipe_policy_ru": "Каждая среда требует утверждённой марки; покрытие не создаёт универсальную неуязвимость.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/planetary_spaceflight",
-        "industrial_frontier:domain/mechanical_engineering"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «покрытие для экстремальной среды» только в утверждённой междоменной производственной цепочке."
-        },
-        {
-          "domain_ref": "industrial_frontier:domain/mechanical_engineering",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «покрытие для экстремальной среды» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Высокочистый остаток, загрязнённая оснастка и бракованная панель."
-      ],
-      "waste_policy_ru": "Остатки собираются по марке, загрязнённый брак не возвращается в чистый контур.",
-      "recycle_policy_ru": "Неотверждённый чистый остаток частично возвращается; снятое покрытие понижается в отход.",
-      "canonical_output_policy_ru": "Канонический выход — сертифицированная партия покрытия под конкретный класс среды.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/mandatory_physical_audit",
-        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/pack_native_physical_contracts",
-        "industrial_frontier:gate/substance/future_space"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [
-          "chemistry.environmental_coating"
-        ],
-        "blocked_contract_refs": [
-          "m2_extended_domains:chemistry.environmental_coating"
-        ],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/mandatory_physical_audit",
-          "industrial_frontier:evidence/substance/planned_chemistry_architecture"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
-      "substance_id": "industrial_frontier:substance/interplanetary_composite",
-      "group": "P9_STRATEGIC",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "межпланетный конструкционный композит",
-      "name_en": "Interplanetary Structural Composite",
-      "russian_term": "межпланетный конструкционный композит",
-      "kind": "FICTIONAL_MATERIAL",
-      "formula": null,
-      "formula_status": "UNVERIFIED",
-      "physical_states": [
-        "SOLID"
-      ],
-      "purity_classes": [
-        "AEROSPACE",
-        "DOMAIN_SPECIALIZED"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 9,
-      "automation": {
-        "first_automatic_epoch": 9,
-        "mass_epoch": 9
-      },
-      "renewability": "NONRENEWABLE",
-      "owner_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-      "secondary_owner_domain_refs": [
-        "industrial_frontier:domain/industrial_chemistry_metallurgy",
-        "industrial_frontier:domain/mechanical_engineering"
-      ],
-      "form_refs": [],
-      "forms_policy_ru": "Проектный паспорт не назначает runtime-формы. На выходе gate выбираются только необходимые формы из owner-dump; одна форма — один канонический производитель, декоративные варианты не становятся параллельным сырьём.",
-      "source_strategy_ru": "Только утверждённые P7–P9 волокна, матрица и добавки; «внеземное» происхождение само по себе не является материалом.",
-      "process_route_ru": "Подготовка компонентов, укладка, инфильтрация, отверждение, мехобработка и неразрушающий контроль.",
-      "process_refs": [
-        "industrial_frontier:process/future/strategic_materials"
-      ],
-      "recipe_policy_ru": "Композит привязан к мегапроектам, имеет учётный брак и не крафтится из абстрактного strategic material.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/planetary_spaceflight",
-        "industrial_frontier:domain/mechanical_engineering"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «межпланетный конструкционный композит» только в утверждённой междоменной производственной цепочке."
-        },
-        {
-          "domain_ref": "industrial_frontier:domain/mechanical_engineering",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «межпланетный конструкционный композит» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Обрезки, загрязнённая матрица и бракованная панель."
-      ],
-      "waste_policy_ru": "Обрезки сортируются, матрица и волокно не восстанавливаются полностью.",
-      "recycle_policy_ru": "Панель перерабатывается только в низкосортный наполнитель или ремонтные вставки с крупными потерями.",
-      "canonical_output_policy_ru": "Канонический выход — сертифицированная панель межпланетного композита.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/mandatory_physical_audit",
-        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/pack_native_physical_contracts",
-        "industrial_frontier:gate/substance/future_space"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [
-          "material.interplanetary_composite"
-        ],
-        "blocked_contract_refs": [
-          "m2_extended_domains:material.interplanetary_composite"
-        ],
-        "owner": "SHARED",
-        "approval_state": "BLOCKED_PENDING_EVIDENCE",
-        "required_evidence_refs": [
-          "industrial_frontier:evidence/substance/mandatory_physical_audit",
-          "industrial_frontier:evidence/substance/planned_chemistry_architecture"
-        ],
-        "criteria_ru": [
-          "Подтвердить источник, физическое состояние, классы чистоты и отсутствие раннего обхода эпохи.",
-          "Утвердить материальный баланс маршрута, канонические формы, побочные продукты, отходы и возврат.",
-          "Связать русские термины с квестом-обучением и получить статическое одобрение владельца сборки."
-        ],
-        "checks": {
-          "source_world_origin_verified": false,
-          "mass_balance_verified": false,
-          "canonical_forms_verified": false,
-          "byproducts_waste_verified": false,
-          "epoch_lock_verified": false,
-          "no_bypass_duplication_verified": false,
-          "russian_quest_link_verified": false
-        },
-        "runtime_binding_allowed": false
-      }
-    },
-    {
-      "substance_id": "industrial_frontier:substance/strategic_energetic_composition",
-      "group": "P9_STRATEGIC",
-      "status": "GATED_CONCEPTUAL",
-      "name_ru": "стратегический энергетический состав",
-      "name_en": "Strategic Energetic Composition",
-      "russian_term": "стратегический энергетический состав",
-      "kind": "FICTIONAL_MATERIAL",
-      "formula": null,
-      "formula_status": "UNVERIFIED",
-      "physical_states": [
-        "MIXTURE"
-      ],
-      "purity_classes": [
-        "DOMAIN_SPECIALIZED"
-      ],
-      "world_origin_decision_ref": null,
-      "first_epoch": 9,
-      "automation": {
-        "first_automatic_epoch": 9,
-        "mass_epoch": 9
-      },
-      "renewability": "NONRENEWABLE",
-      "owner_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-      "secondary_owner_domain_refs": [
-        "industrial_frontier:domain/industrial_chemistry_metallurgy",
-        "industrial_frontier:domain/mechanical_engineering"
-      ],
-      "form_refs": [],
-      "forms_policy_ru": "Проектный паспорт не назначает runtime-формы. На выходе gate выбираются только необходимые формы из owner-dump; одна форма — один канонический производитель, декоративные варианты не становятся параллельным сырьём.",
-      "source_strategy_ru": "Только явно утверждённые поздние прекурсоры; название не разрешает произвольный набор веществ.",
-      "process_route_ru": "Многоступенчатая очистка, защищённая сборка состава, стабилизация, учёт и приёмочный контроль.",
-      "process_refs": [
-        "industrial_frontier:process/future/strategic_materials",
-        "industrial_frontier:process/gtceu/industrial_chemistry"
-      ],
-      "recipe_policy_ru": "Состав существует только для стратегического проекта, не торгуется как обычный ресурс и не является случайным лутом.",
-      "consumer_domain_refs": [
-        "industrial_frontier:domain/planetary_spaceflight",
-        "industrial_frontier:domain/mechanical_engineering"
-      ],
-      "domain_consumers": [
-        {
-          "domain_ref": "industrial_frontier:domain/planetary_spaceflight",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «стратегический энергетический состав» только в утверждённой междоменной производственной цепочке."
-        },
-        {
-          "domain_ref": "industrial_frontier:domain/mechanical_engineering",
-          "status": "GATED_CONCEPTUAL",
-          "purpose_ru": "Использование вещества «стратегический энергетический состав» только в утверждённой междоменной производственной цепочке."
-        }
-      ],
-      "byproduct_refs": [],
-      "waste_streams_ru": [
-        "Некондиционная партия, загрязнённая тара и контролируемый остаток."
-      ],
-      "waste_policy_ru": "Весь брак остаётся учётным стратегическим отходом и получает отдельный маршрут обезвреживания.",
-      "recycle_policy_ru": "Готовый состав не регенерируется; возврат возможен лишь для проверенной тары и чистого несмешанного прекурсора.",
-      "canonical_output_policy_ru": "Канонический выход — опломбированный стратегический контейнер с нулевой свободной конвертацией.",
-      "evidence_refs": [
-        "industrial_frontier:evidence/substance/mandatory_physical_audit",
-        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
-      ],
-      "gate_refs": [
-        "industrial_frontier:gate/substance/pack_native_physical_contracts",
-        "industrial_frontier:gate/substance/future_space"
-      ],
-      "exit_contract": {
-        "target_status": "ACTIVE_INSTALLED",
-        "unblocks_concept_refs": [
-          "chemistry.strategic_composition"
-        ],
-        "blocked_contract_refs": [
-          "m2_extended_domains:chemistry.strategic_composition"
         ],
         "owner": "SHARED",
         "approval_state": "BLOCKED_PENDING_EVIDENCE",

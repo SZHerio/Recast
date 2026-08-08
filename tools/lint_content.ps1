@@ -472,6 +472,72 @@ if ($null -ne $m7Trace) {
     }
 }
 
+# M8 closes the campaign with P8 and P9. Two things here are worth protecting.
+# The seven accelerator installations were deferred in M6 and returned here: if
+# that return disappears, the whole branch becomes unreachable forever rather
+# than late. And fusion has exactly two owners by owner decision — the third
+# copy must stay removed.
+$m8TracePath = Join-Path $rootPath 'authoring\trace\m8_trace.json'
+$m8Trace = Read-JsonObject $m8TracePath
+$m8ChapterFiles = @('18_p8_orbital_network', '19_p9_finale')
+if ($null -ne $m8Trace) {
+    if ([int]$m8Trace.schema_version -ne 2) { Add-LintError 'm8_trace.json must use schema_version 2.' }
+    if ([string]$m8Trace.build_id -ne 'IF-M8-0001') { Add-LintError 'm8_trace.json must identify IF-M8-0001.' }
+    $m8FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
+    $m8FeaturesById = @{}
+    foreach ($feature in @($m8Trace.features)) {
+        $featureId = [string]$feature.id
+        if ([string]::IsNullOrWhiteSpace($featureId)) { Add-LintError 'M8 trace feature has an empty ID.'; continue }
+        if (-not $m8FeatureIds.Add($featureId)) { Add-LintError "Duplicate M8 trace feature ID: $featureId" }
+        $m8FeaturesById[$featureId] = $feature
+        foreach ($relativeFile in @($feature.files)) {
+            $artifactPath = Join-Path $rootPath (([string]$relativeFile) -replace '/', '\')
+            if (-not (Test-Path -LiteralPath $artifactPath)) { Add-LintError "M8 trace artifact does not exist: $relativeFile ($featureId)" }
+        }
+    }
+
+    $m8QuestCount = 0
+    foreach ($chapterFile in $m8ChapterFiles) {
+        $chapterSource = Read-JsonObject (Join-Path $rootPath "authoring\quests\$chapterFile.json")
+        if ($null -eq $chapterSource) { continue }
+        $m8QuestCount += @($chapterSource.quests).Count
+        if (-not (Test-Path -LiteralPath (Join-Path $rootPath "config\ftbquests\quests\chapters\$chapterFile.snbt") -PathType Leaf)) {
+            Add-LintError "Missing compiled M8 chapter: $chapterFile.snbt"
+        }
+        if ([bool]$chapterSource.optional) { Add-LintError "M8 main-line chapter must not be optional: $chapterFile" }
+    }
+    if ($m8FeaturesById.ContainsKey('m8.questbook') -and
+        $m8QuestCount -ne [int]$m8FeaturesById['m8.questbook'].artifact_count) {
+        Add-LintError "M8 trace quest count mismatch: trace=$($m8FeaturesById['m8.questbook'].artifact_count), source=$m8QuestCount"
+    }
+
+    # The mastery chapter is an optional handbook, not a progression gate.
+    $masterySource = Read-JsonObject (Join-Path $rootPath 'authoring\quests\72_mastery_distributed_factory.json')
+    if ($null -ne $masterySource -and -not [bool]$masterySource.optional) {
+        Add-LintError 'The mastery chapter must remain optional.'
+    }
+
+    $lateGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m8_late_epoch_gate.js'
+    if (Test-Path -LiteralPath $lateGatePath -PathType Leaf) {
+        $lateGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $lateGatePath
+        foreach ($returnedInstallation in @(
+            'nuclearcraft:linear_accelerator_controller', 'nuclearcraft:ring_accelerator_controller',
+            'nuclearcraft:beam_diverter_controller', 'nuclearcraft:target_chamber_controller',
+            'nuclearcraft:collision_chamber_controller', 'nuclearcraft:chamber_terminal',
+            'nuclearcraft:quantum_transformer'
+        )) {
+            if ($lateGateText -notmatch [regex]::Escape($returnedInstallation)) {
+                Add-LintError "M8 late gate no longer returns $returnedInstallation; the accelerator branch would stay unreachable."
+            }
+        }
+        # Fusion has two owners, not three. The M6 gate removes the third copy
+        # and M8 must not quietly re-create it.
+        if ($lateGateText -match 'shaped\(\s*[''"]nuclearcraft:fusion_core') {
+            Add-LintError 'M8 late gate re-creates the NuclearCraft fusion core: fusion has exactly two owners by owner decision.'
+        }
+    }
+}
+
 # The municipal water tail must stay closed: every declared sewage product needs
 # a passport, otherwise the loop drains into an undeclared substance again.
 $waterSubstancePath = Join-Path $rootPath 'docs\registries\m2_substance_passports.json'
@@ -506,7 +572,7 @@ if (Test-Path -LiteralPath $chapterGroupsPath -PathType Leaf) {
     if ($chapterGroupsText -notmatch '1000000000000004') {
         Add-LintError 'Main-line chapter group 1000000000000004 is not declared in chapter_groups.snbt.'
     }
-    foreach ($chapterFile in @($m3ChapterFiles + $m4ChapterFiles + $m5ChapterFiles + $m6ChapterFiles + $m7ChapterFiles)) {
+    foreach ($chapterFile in @($m3ChapterFiles + $m4ChapterFiles + $m5ChapterFiles + $m6ChapterFiles + $m7ChapterFiles + $m8ChapterFiles)) {
         $compiled = Join-Path $rootPath "config\ftbquests\quests\chapters\$chapterFile.snbt"
         if (-not (Test-Path -LiteralPath $compiled -PathType Leaf)) { continue }
         $compiledText = Get-Content -Raw -Encoding UTF8 -LiteralPath $compiled
@@ -915,6 +981,210 @@ foreach ($ponderRelative in @(
     }
 }
 
+# The quest book must open gradually.
+#
+# Eighteen chapters and a hundred and seventy-eight quests visible from the
+# first minute is not guidance, it is a wall: a player who has not mined stone
+# yet could read the reactor chapter and both endings. Chapters are chained so
+# the next one appears only once the previous is finished, and this check makes
+# sure the chain is not silently broken by an edit.
+$chapterRoot = Join-Path $rootPath 'config\ftbquests\quests\chapters'
+$questDataFile = Join-Path $rootPath 'config\ftbquests\quests\data.snbt'
+if ((Test-Path -LiteralPath $chapterRoot) -and (Test-Path -LiteralPath $questDataFile)) {
+    $questDataText = Get-Content -Raw -Encoding UTF8 -LiteralPath $questDataFile
+    if ($questDataText -notmatch 'hide_excluded_quests:\s*true') {
+        Add-LintError 'Quest book shows quests that are locked out by dependencies (hide_excluded_quests is not true).'
+    }
+
+    # These two are entry and reference material: they are always available.
+    $alwaysOpenChapters = @('00_start_here', '90_help')
+
+    foreach ($chapterFile in @(Get-ChildItem -LiteralPath $chapterRoot -Filter '*.snbt' -File)) {
+        $chapterName = [System.IO.Path]::GetFileNameWithoutExtension($chapterFile.Name)
+        $chapterText = Get-Content -Raw -Encoding UTF8 -LiteralPath $chapterFile.FullName
+
+        if ($alwaysOpenChapters -contains $chapterName) {
+            if ($chapterText -match 'hide_until_deps_complete') {
+                Add-LintError "Chapter $chapterName must stay open but is gated."
+            }
+            continue
+        }
+
+        if ($chapterText -notmatch 'hide_quest_until_deps_visible:\s*true') {
+            Add-LintError "Chapter $chapterName does not hide its quests until the previous chapter is reached."
+        }
+        if ($chapterText -notmatch 'hide_until_deps_complete:\s*true') {
+            Add-LintError "Chapter $chapterName has no opening gate - it would be visible from the first minute."
+        }
+
+        # The gate must point at a quest that lives in another chapter,
+        # otherwise the chapter gates itself and never opens.
+        $ownQuestIds = [regex]::Matches($chapterText, '(?m)^\t\t\tid: "(3\d{15})"') | ForEach-Object { $_.Groups[1].Value }
+        $externalFound = $false
+        foreach ($dependencyBlock in [regex]::Matches($chapterText, '(?s)dependencies: \[(.*?)\]')) {
+            foreach ($reference in [regex]::Matches($dependencyBlock.Groups[1].Value, '"(3\d{15})"')) {
+                if ($ownQuestIds -notcontains $reference.Groups[1].Value) { $externalFound = $true }
+            }
+        }
+        if (-not $externalFound) {
+            Add-LintError "Chapter $chapterName is gated but depends on nothing outside itself - it can never open."
+        }
+    }
+}
+
+# Top-level names must be unique across each script pack.
+#
+# KubeJS gives every script pack one shared scope, so two files declaring the
+# same top-level const or function is not shadowing but a redeclaration error
+# that kills the whole pack. It is silent in the editor and fatal in game, so
+# it is checked here.
+foreach ($packName in @('server_scripts', 'startup_scripts', 'client_scripts')) {
+    $packPath = Join-Path $rootPath "kubejs\$packName"
+    if (-not (Test-Path -LiteralPath $packPath)) { continue }
+
+    $declarationOwners = @{}
+    foreach ($scriptFile in @(Get-ChildItem -LiteralPath $packPath -Filter '*.js' -Recurse -File)) {
+        $scriptText = Get-Content -Raw -Encoding UTF8 -LiteralPath $scriptFile.FullName
+        foreach ($match in [regex]::Matches($scriptText, '(?m)^(?:const|let|var|function)\s+([A-Za-z_$][A-Za-z0-9_$]*)')) {
+            $declaredName = $match.Groups[1].Value
+            if ($declarationOwners.ContainsKey($declaredName)) {
+                $previousOwner = $declarationOwners[$declaredName]
+                if ($previousOwner -ne $scriptFile.Name) {
+                    Add-LintError "Duplicate top-level name '$declaredName' in $packName ($previousOwner and $($scriptFile.Name)) - KubeJS shares one scope per pack."
+                }
+            }
+            else {
+                $declarationOwners[$declaredName] = $scriptFile.Name
+            }
+        }
+    }
+}
+
+# The faction module must agree with the registries it claims to follow.
+$factionDataRelative = 'kubejs\server_scripts\40_balance\m85_factions_1_data.js'
+$factionDataPath = Join-Path $rootPath $factionDataRelative
+$threatCorePath = Join-Path $rootPath 'kubejs\server_scripts\40_balance\m3_threat_director.js'
+if ((Test-Path -LiteralPath $factionDataPath) -and (Test-Path -LiteralPath $threatCorePath)) {
+    $factionDataText = Get-Content -Raw -Encoding UTF8 -LiteralPath $factionDataPath
+    $threatCoreText = Get-Content -Raw -Encoding UTF8 -LiteralPath $threatCorePath
+
+    # The faction order feeds scoreboard mirrors if_rep_01..06, so the module
+    # and the Threat Director core must list them identically.
+    $moduleOrder = ''
+    if ($factionDataText -match "IF_FACTION_LIST\s*=\s*\[([^\]]+)\]") {
+        $moduleOrder = ($Matches[1] -replace "[\s'`"]", '')
+    }
+    $coreOrder = ''
+    if ($threatCoreText -match "IF_FACTIONS\s*=\s*\[([^\]]+)\]") {
+        $coreOrder = ($Matches[1] -replace "[\s'`"]", '')
+    }
+    if (-not $moduleOrder -or -not $coreOrder) {
+        Add-LintError 'Could not read the faction order from the faction module or the Threat Director core.'
+    }
+    elseif ($moduleOrder -ne $coreOrder) {
+        Add-LintError "Faction order differs between the module and the Threat Director core: '$moduleOrder' vs '$coreOrder'."
+    }
+
+    # Dialogue buttons are gated by scoreboard thresholds baked into the NPC
+    # presets, while the command that signs the treaty checks the module table.
+    # If the two disagree the player gets a button that always refuses, so the
+    # generator and the module are compared here.
+    $npcGeneratorPath = Join-Path $rootPath 'tools\generate_faction_npc.py'
+    if (Test-Path -LiteralPath $npcGeneratorPath) {
+        $npcGeneratorText = Get-Content -Raw -Encoding UTF8 -LiteralPath $npcGeneratorPath
+        foreach ($treatyMatch in [regex]::Matches($npcGeneratorText, '"id":\s*"([a-z_]+)",\s*"ru":\s*"[^"]*",\s*"min_reputation":\s*(-?\d+),\s*"min_epoch":\s*(\d+)')) {
+            $treatyId = $treatyMatch.Groups[1].Value
+            $generatorReputation = [int]$treatyMatch.Groups[2].Value
+            $generatorEpoch = [int]$treatyMatch.Groups[3].Value
+
+            $modulePattern = "(?s)\b$treatyId\s*:\s*\{.*?min_reputation:\s*(-?\d+),\s*min_epoch:\s*(\d+)"
+            if ($factionDataText -match $modulePattern) {
+                if ([int]$Matches[1] -ne $generatorReputation -or [int]$Matches[2] -ne $generatorEpoch) {
+                    Add-LintError "Treaty '$treatyId' thresholds differ: presets say $generatorReputation/$generatorEpoch, module says $($Matches[1])/$($Matches[2])."
+                }
+            }
+            else {
+                Add-LintError "Treaty '$treatyId' is offered by the NPC presets but missing from the faction module."
+            }
+        }
+
+        # Every faction must have a generated envoy preset, otherwise its base
+        # would place a spokesman that does not exist.
+        foreach ($factionId in @($moduleOrder -split ',')) {
+            if (-not $factionId) { continue }
+            $presetPath = Join-Path $rootPath "kubejs\data\industrial_frontier\preset\$factionId`_envoy.npc.snbt"
+            if (-not (Test-Path -LiteralPath $presetPath -PathType Leaf)) {
+                Add-LintError "Faction '$factionId' has no generated envoy preset - run tools/generate_faction_npc.py."
+            }
+        }
+    }
+
+    # Base tier epoch ceilings are owned by the Threat Director definitions.
+    $baseDefinitionPath = Join-Path $rootPath 'threat_director\definitions\bases.json'
+    if (Test-Path -LiteralPath $baseDefinitionPath) {
+        $baseDefinitions = Get-Content -Raw -Encoding UTF8 -LiteralPath $baseDefinitionPath | ConvertFrom-Json
+        foreach ($level in @($baseDefinitions.levels)) {
+            $tierId = ($level.base_id -split '/')[-1]
+            $pattern = "id:\s*'$tierId'\s*,\s*ru:\s*'[^']*'\s*,\s*max_epoch:\s*(\d+)"
+            if ($factionDataText -match $pattern) {
+                if ([int]$Matches[1] -ne [int]$level.max_epoch) {
+                    Add-LintError "Base $tierId epoch ceiling is $($Matches[1]) in the faction module but $($level.max_epoch) in the definitions."
+                }
+            }
+            else {
+                Add-LintError "Base $tierId from the definitions is missing in the faction module."
+            }
+        }
+    }
+}
+
+# Commands promised to the player must exist under the promised name.
+#
+# Every pack command is declared with ServerEvents.customCommand, which in game
+# is only reachable through "/kubejs custom_command <id>". The short "/if_..."
+# form the quest book and the test protocols promise is created by the bridge
+# in kubejs/server_scripts/00_core/if_commands.js. If a command is added and the
+# bridge is not updated, the promise silently breaks, so the two sets are
+# compared here.
+$commandBridgeRelative = 'kubejs\server_scripts\00_core\if_commands.js'
+$commandBridgePath = Join-Path $rootPath $commandBridgeRelative
+if (-not (Test-Path -LiteralPath $commandBridgePath -PathType Leaf)) {
+    Add-LintError "Missing command bridge: $commandBridgeRelative"
+}
+else {
+    $serverScriptRoot = Join-Path $rootPath 'kubejs\server_scripts'
+    $declaredCommands = [System.Collections.Generic.HashSet[string]]::new()
+    foreach ($scriptFile in @(Get-ChildItem -LiteralPath $serverScriptRoot -Filter '*.js' -Recurse -File)) {
+        $scriptText = Get-Content -Raw -Encoding UTF8 -LiteralPath $scriptFile.FullName
+        foreach ($match in [regex]::Matches($scriptText, "customCommand\(\s*'([a-z0-9_]+)'")) {
+            [void]$declaredCommands.Add($match.Groups[1].Value)
+        }
+    }
+
+    $bridgeText = Get-Content -Raw -Encoding UTF8 -LiteralPath $commandBridgePath
+    $bridgedCommands = [System.Collections.Generic.HashSet[string]]::new()
+    foreach ($match in [regex]::Matches($bridgeText, "'(if_[a-z0-9_]+)'")) {
+        [void]$bridgedCommands.Add($match.Groups[1].Value)
+    }
+
+    foreach ($declared in @($declaredCommands)) {
+        if (-not $bridgedCommands.Contains($declared)) {
+            Add-LintError "Command /$declared has a handler but is not registered under its own name in the bridge."
+        }
+    }
+    foreach ($bridged in @($bridgedCommands)) {
+        if (-not $declaredCommands.Contains($bridged)) {
+            Add-LintError "Bridge registers /$bridged but no handler declares it."
+        }
+    }
+
+    # The bridge must use the real command registry; delegating through another
+    # customCommand would recreate the very problem it exists to solve.
+    if ($bridgeText -notmatch 'ServerEvents\.commandRegistry') {
+        Add-LintError 'Command bridge does not use ServerEvents.commandRegistry.'
+    }
+}
+
 # Run the M2 cross-registry validator in a separate PowerShell process so its
 # exit code cannot terminate this lint process. This remains a static file
 # check and never loads Forge or Minecraft.
@@ -933,6 +1203,72 @@ else {
     }
     if ($m2ValidatorExitCode -ne 0 -and -not (@($m2ValidatorOutput) -match '^ERROR:')) {
         Add-LintError "M2 architecture validator exited with code $m2ValidatorExitCode."
+    }
+}
+
+# M9 has its own asset and screen contract. Run it out-of-process for the same
+# reason as M2: a validator failure must become a lint error instead of ending
+# this process before the consolidated report is printed. This remains a
+# static check and never loads Forge or Minecraft.
+$m9ValidatorPath = Join-Path $rootPath 'tools\validate_m9_visuals.ps1'
+if (-not (Test-Path -LiteralPath $m9ValidatorPath -PathType Leaf)) {
+    Add-LintError 'Missing M9 visual-system validator.'
+}
+else {
+    $powerShellExecutable = Join-Path $PSHOME 'powershell.exe'
+    $m9ValidatorOutput = & $powerShellExecutable -NoProfile -ExecutionPolicy Bypass -File $m9ValidatorPath -Root $rootPath 2>&1
+    $m9ValidatorExitCode = $LASTEXITCODE
+    foreach ($line in @($m9ValidatorOutput)) {
+        $lineText = [string]$line
+        if ($lineText -match '^\[M9\]\[WARN\]\s*(.+)$') { Add-LintWarning "M9 validator: $($Matches[1])" }
+        if ($lineText -match '^\[M9\]\[ERROR\]\s*(.+)$') { Add-LintError "M9 validator: $($Matches[1])" }
+    }
+    if ($m9ValidatorExitCode -ne 0 -and -not (@($m9ValidatorOutput) -match '^\[M9\]\[ERROR\]')) {
+        Add-LintError "M9 visual-system validator exited with code $m9ValidatorExitCode."
+    }
+}
+
+# The v2 title-menu contract is narrower than the complete M9 visual atlas. It
+# verifies cursor parallax, overscan, button states and the replacement logo
+# and icon without reading localization files or launching the game.
+$menuValidatorPath = Join-Path $rootPath 'tools\validate_menu_visuals.ps1'
+if (-not (Test-Path -LiteralPath $menuValidatorPath -PathType Leaf)) {
+    Add-LintError 'Missing Recast v2 menu validator.'
+}
+else {
+    $powerShellExecutable = Join-Path $PSHOME 'powershell.exe'
+    $menuValidatorOutput = & $powerShellExecutable -NoProfile -ExecutionPolicy Bypass -File $menuValidatorPath -Root $rootPath 2>&1
+    $menuValidatorExitCode = $LASTEXITCODE
+    foreach ($line in @($menuValidatorOutput)) {
+        $lineText = [string]$line
+        if ($lineText -match '^\[MENU\]\[WARN\]\s*(.+)$') { Add-LintWarning "Menu validator: $($Matches[1])" }
+        if ($lineText -match '^\[MENU\]\[ERROR\]\s*(.+)$') { Add-LintError "Menu validator: $($Matches[1])" }
+    }
+    if ($menuValidatorExitCode -ne 0 -and -not (@($menuValidatorOutput) -match '^\[MENU\]\[ERROR\]')) {
+        Add-LintError "Menu validator exited with code $menuValidatorExitCode."
+    }
+}
+
+# M10 owns release-readiness truth rather than pretending that static success
+# proves runtime readiness. It validates the exact manifest/source/hash lock,
+# hash-current progression report, release allowlist, licence inventory,
+# milestone counts and quest structure. Translation sources are deliberately
+# excluded because that work is an external parallel stream in this build.
+$m10ValidatorPath = Join-Path $rootPath 'tools\validate_m10_release.ps1'
+if (-not (Test-Path -LiteralPath $m10ValidatorPath -PathType Leaf)) {
+    Add-LintError 'Missing M10 release-readiness validator.'
+}
+else {
+    $powerShellExecutable = Join-Path $PSHOME 'powershell.exe'
+    $m10ValidatorOutput = & $powerShellExecutable -NoProfile -ExecutionPolicy Bypass -File $m10ValidatorPath -Root $rootPath 2>&1
+    $m10ValidatorExitCode = $LASTEXITCODE
+    foreach ($line in @($m10ValidatorOutput)) {
+        $lineText = [string]$line
+        if ($lineText -match '^\[M10\]\[WARN\]\s*(.+)$') { Add-LintWarning "M10 validator: $($Matches[1])" }
+        if ($lineText -match '^\[M10\]\[ERROR\]\s*(.+)$') { Add-LintError "M10 validator: $($Matches[1])" }
+    }
+    if ($m10ValidatorExitCode -ne 0 -and -not (@($m10ValidatorOutput) -match '^\[M10\]\[ERROR\]')) {
+        Add-LintError "M10 release-readiness validator exited with code $m10ValidatorExitCode."
     }
 }
 

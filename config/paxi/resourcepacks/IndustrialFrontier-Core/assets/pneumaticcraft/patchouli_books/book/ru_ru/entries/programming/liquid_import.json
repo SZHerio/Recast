@@ -1,0 +1,23 @@
+{
+  "name": "Виджет «Импорт жидкости»",
+  "icon": "pneumaticcraft:textures/progwidgets/liquid_import_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Виджет $(thing)Импорт жидкости/$ отправляет $(l:tools/drone)дрона/$ к ближайшему резервуару в указанной $(l:programming/area)области/$, откуда тот забирает жидкость в собственный резервуар.$(p)Дрон также умеет всасывать жидкостные блоки прямо из мира: такой $(item)дрон/$ действует как переносной насос."
+    },
+    {
+      "type": "text",
+      "text": "Нажмите по виджету $(thing)ПКМ/$, чтобы выбрать стороны забора жидкости и её максимальный объём за одну операцию в mB.$(p)Можно $(ttcolor)$(t:Подключение справа добавляет в белый список, слева — в чёрный)подключить/$ $(l:programming/liquid_filter)Фильтр жидкости/$ и ограничить импортируемые дроном жидкости.$(p)Виджет завершится, когда резервуар $(item)дрона/$ заполнится или в резервуарах не останется подходящей жидкости."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/liquid_import_piece.png"
+      ],
+      "text": "$(italic)Хлюп/$"
+    }
+  ]
+}

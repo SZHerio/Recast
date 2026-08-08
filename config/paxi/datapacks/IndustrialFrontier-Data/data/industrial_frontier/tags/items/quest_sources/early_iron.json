@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:raw_iron",
+    "gtceu:raw_yellow_limonite",
+    "gtceu:raw_magnetite",
+    "gtceu:raw_basaltic_mineral_sand",
+    "gtceu:raw_granitic_mineral_sand",
+    "gtceu:raw_pyrite",
+    "gtceu:raw_goethite",
+    "gtceu:raw_hematite"
+  ]
+}

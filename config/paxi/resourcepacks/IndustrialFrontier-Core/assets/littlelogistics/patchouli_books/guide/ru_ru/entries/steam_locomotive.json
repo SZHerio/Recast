@@ -1,0 +1,19 @@
+{
+  "name": "Паровой локомотив",
+  "icon": "littlelogistics:steam_locomotive",
+  "category": "littlelogistics:trains",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "littlelogistics:steam_locomotive",
+      "scale": 0.4,
+      "offset": 0.5,
+      "text": "Простой локомотив, работающий на любом печном топливе."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:steam_locomotive",
+      "text": "Топливо можно загружать воронками, установленными рядом с погрузочным путём."
+    }
+  ]
+}

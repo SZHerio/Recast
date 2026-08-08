@@ -1,0 +1,21 @@
+{
+  "name": "Пневмоключ",
+  "icon": "pneumaticcraft:pneumatic_wrench",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Пневмоключ — основной $(thing)ключ/$ в $(pncr). Он выполняет множество задач:$(p)$(li)Щелчок $(thing)ПКМ/$ поворачивает обычные блоки и блоки из модов.$(li)Нажатие $(thing)Shift + ПКМ/$ разбирает машины $(pncr), сохраняя в выпавшем предмете установленные улучшения и запас воздуха."
+    },
+    {
+      "type": "text",
+      "text": "$(li)Щелчок $(thing)ПКМ/$ по $(l:base_concepts/drones)дрону/$ разбирает его в предмет.$(li)Щелчок $(thing)ПКМ/$ по $(l:tubes/pressure_tubes)напорной трубе/$ закрывает или вновь открывает её соединение, позволяя разделять участки сети.$(p)Перед использованием $(item)пневмоключ/$ необходимо заправить в $(l:machines/charging_station)зарядной станции/$."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание пневмоключа",
+      "recipe": "pneumaticcraft:pneumatic_wrench"
+    }
+  ]
+}

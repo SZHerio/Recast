@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.workshop",
+  "engine_id": "2023000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+  "optional": true,
+  "quests": [
+    {
+      "alias": "if.quest.workshop.intro",
+      "engine_id": "3023000000000001",
+      "purpose": "Четыре направления, и у каждого своя роль",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.workshop.foundry",
+      "engine_id": "3023000000000002",
+      "purpose": "Вторая эпоха перестала быть тонкой",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.workshop.pressure",
+      "engine_id": "3023000000000003",
+      "purpose": "Третий тип энергии рядом с вращением и током",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.workshop.lithography",
+      "engine_id": "3023000000000004",
+      "purpose": "Пластина, маска, засветка, брак",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.workshop.assembly",
+      "engine_id": "3023000000000005",
+      "purpose": "Решение для самой нудной части лейта",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.workshop.choice",
+      "engine_id": "3023000000000006",
+      "purpose": "Ни одно из четырёх не обязательно",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "name": "Интерфейс дрона",
+  "icon": "pneumaticcraft:drone_interface",
+  "category": "pneumaticcraft:machines",
+  "flag": "|mod:computercraft,mod:opencomputers",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Интерфейс дрона — $(thing)периферийное устройство ComputerCraft/OpenComputers/$ для связи с $(l:tools/drone)дронами/$. Запрограммируйте $(item)дрона/$ с элементом $(l:programming/computer_control)«Управление компьютером»/$.$(p)Выполняя этот элемент, дрон попытается подключиться к $(ttcolor)$(t:Один интерфейс дрона может быть подключён только к одному дрону одновременно)свободному/$ $(item)интерфейсу дрона/$ в заданной элементом области."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:drone_interface",
+      "text": "После подключения дрон полностью переходит под управление интерфейса, а точнее — методов Lua, которые вызывает управляющий компьютер.$(p)Интерфейс дрона предоставляет большой набор методов Lua. Все они описаны на следующих страницах."
+    },
+    {
+      "type": "text",
+      "title": "Пример",
+      "text": "Пример программы на Lua:$(br)$(#008)m = peripheral.wrap(\"right\")$(br)m.addArea(100, 64, 100, 120, 4, 120, \"Filled\")$(br)m.setAction(\"dig\")$(br)while not m.isActionDone()$(br)do$(br)  sleep(1)$(br)end$(br)m.clearArea()$(br)m.addArea(80, 65, 80)$(br)m.setAction(\"goto\")$(br)-- ждём завершения, как выше$(br)m.setAction(\"standby\")$(p)/$Программа заставляет дрона выкопать все блоки в большой области от (100,64,100) до (120,4,120), затем вернуться в точку (80, 65, 80) и перейти в режим ожидания."
+    },
+    {
+      "type": "text",
+      "title": "Пример (продолжение)",
+      "text": "В примере напротив программа явно ждёт завершения действий Dig и Goto, прежде чем идти дальше. При программировании дрона через $(l:programming/programmer)Программатор/$ это не требуется. Причина в том, что программа Lua работает в отдельном потоке и не взаимодействует с миром напрямую: она лишь сообщает дрону следующее действие и должна отдельно спрашивать, завершено ли оно."
+    },
+    {
+      "type": "text",
+      "title": "abortAction()",
+      "text": "$(#800)abortAction()/$$(p)Останавливает выполняемое действие."
+    },
+    {
+      "type": "text",
+      "title": "addArea()",
+      "text": "$(#800)addArea(<x1>,<y1>,<z1>)/$$(p)$(#800)addArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<areaType>)/$$(p)Добавляет область к текущей сохранённой области дрона. Во втором варианте x1/y1/z1 задают первую точку — P1 на $(l:tools/gps_area_tool)GPS-маркере области/$, а x2/y2/z2 — вторую точку P2.$(p)Список допустимых типов области возвращает getAreaTypes()."
+    },
+    {
+      "type": "text",
+      "text": "$(#800)addBlacklistItemFilter(<item/block name>, <useNBT>, <useModSimilarity>)/$$(p)Работает как addWhitelistItemFilter(...), но добавляет предметы в чёрный список.",
+      "title": "addBlacklistItemFilter()"
+    },
+    {
+      "type": "text",
+      "title": "addBlacklistLiquidFilter()",
+      "text": "$(#800)addBlacklistLiquidFilter(<liquid name>)/$$(p)Работает как addWhitelistLiquidFilter(...), но добавляет жидкости в чёрный список."
+    },
+    {
+      "type": "text",
+      "title": "addBlacklistText()",
+      "text": "$(#800)addBlacklistText(<text>)/$$(p)Добавляет строку в чёрный список текста. Например, этот список используется как фильтр для действия \"entity_attack\"."
+    },
+    {
+      "type": "text",
+      "text": "$(#800)addWhitelistItemFilter(<item/block name>, <useNBT>, <useModSimilarity>)/$$(p)Работает как элемент $(l:programming/item_filter)«Фильтр предметов»/$ справа от другого элемента. В качестве имени предмета или блока укажите регистрационное имя, например $(thing)pneumaticcraft:pressure_tube/$. Аргументы 'useXXX' — логические значения, определяющие используемые параметры фильтра, как в интерфейсе элемента «Фильтр предметов».",
+      "title": "addWhitelistItemFilter()"
+    },
+    {
+      "title": "addWhitelistLiquidFilter()",
+      "text": "$(#800)addWhitelistLiquidFilter(<liquid name>)/$$(p)Работает так, словно справа от элемента установлен $l(:programming/liquid_filter)элемент «Фильтр жидкостей»/$. Необходимо передать регистрационное имя жидкости, например $(thing)minecraft:water/$.",
+      "type": "text"
+    },
+    {
+      "text": "$(#800)addWhitelistText(<text>)/$$(p)Добавляет строку в белый список текста. Например, этот список используется как фильтр для действия \"entity_attack\".",
+      "type": "text",
+      "title": "addWhitelistText()"
+    },
+    {
+      "title": "clearArea()",
+      "type": "text",
+      "text": "$(#800)clearArea()/$$(p)Очищает текущую сохранённую область."
+    },
+    {
+      "title": "clearBlacklistItemFilter()",
+      "type": "text",
+      "text": "$(#800)clearBlacklistItemFilter()/$$(p)Удаляет все сохранённые фильтры предметов из чёрного списка."
+    },
+    {
+      "title": "clearBlacklistLiquidFilter()",
+      "text": "$(#800)clearBlacklistLiquidFilter()/$$(p)Удаляет все сохранённые фильтры жидкостей из чёрного списка.",
+      "type": "text"
+    },
+    {
+      "text": "$(#800)clearBlacklistText()/$$(p)Удаляет все сохранённые строки из чёрного списка.",
+      "type": "text",
+      "title": "clearBlacklistText()"
+    },
+    {
+      "title": "clearWhitelistItemFilter()",
+      "text": "$(#800)clearWhitelistItemFilter()/$$(p)Удаляет все сохранённые фильтры предметов из белого списка.",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)clearWhitelistLiquidFilter()/$$(p)Удаляет все сохранённые фильтры жидкостей из белого списка.",
+      "title": "clearWhitelistLiquidFilter()"
+    },
+    {
+      "title": "clearWhitelistText()",
+      "text": "$(#800)clearWhitelistText()/$$(p)Удаляет все сохранённые строки из белого списка.",
+      "type": "text"
+    },
+    {
+      "title": "evaluateCondition()",
+      "text": "$(#800)evaluateCondition()/$$(p)Возвращает true или false и применяется только в $(l:programming/conditions)условиях/$. Результат зависит от того, выполнено ли условие. Условия дрона можно проверять сразу после вызова $(#800)setAction()/$, а для остальных условий следует дождаться, пока $(#800)isActionDone()/$ вернёт true; лишь после этого результат $(#800)evaluateCondition()/$ будет полезен.",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)exitPiece()/$$(p)Завершает элемент $(thing)«Управление компьютером»/$ в программе дрона и позволяет перейти к следующему элементу.",
+      "title": "exitPiece()"
+    },
+    {
+      "type": "text",
+      "title": "forgetTarget()",
+      "text": "$(#800)forgetTarget()/$$(p)Если дрон атакует существо с помощью действия \"entity_attack\", прекращает атаку текущей цели."
+    },
+    {
+      "text": "$(#800)getAction()/$$(p)Возвращает строку с последним действием, заданным через $(#800)setAction()/$. Если действие не задано, возвращает $(thing)nil/$. Это позволяет вызывать $(#800)isActionDone()/$ только тогда, когда метод вернул не nil.",
+      "type": "text",
+      "title": "getAction()"
+    },
+    {
+      "title": "getAllActions()",
+      "type": "text",
+      "text": "$(#800)getAllActions()/$$(p)Возвращает таблицу всех доступных действий, например $(thing)pneumaticcraft:dig/$ или $(thing)pneumaticcraft:place'/$. Каждому действию напрямую соответствует программный элемент в интерфейсе $(l:programming/programmer#ids)Программатора/$.$(p)Для действий с префиксом $(thing)pneumaticcraft:/$ — то есть всех стандартных действий — этот $(thing)pneumaticcraft:/$ префикс указывать необязательно."
+    },
+    {
+      "title": "getAreaTypes()",
+      "text": "$(#800)getAreaTypes()/$$(p)Возвращает таблицу всех допустимых типов области (filled, frame, sphere...).",
+      "type": "text"
+    },
+    {
+      "title": "getDronePosition()",
+      "text": "$(#800)getDronePosition()/$$(p)Возвращает координаты x/y/z дрона. Метод оставлен для совместимости со старыми программами; вместо него рекомендуется новый $(#800)getDronePositionVec()/$.",
+      "type": "text"
+    },
+    {
+      "title": "getDronePositionVec()",
+      "text": "$(#800)getDronePosition()/$$(p)Возвращает таблицу координат x/y/z дрона. Отдельные значения удобно получать через поля .x, .y и .z, например $(#800)xpos = getDronePosition().x/$.",
+      "type": "text"
+    },
+    {
+      "title": "getUpgrades()",
+      "type": "text",
+      "text": "$(#800)getUpgrades(<upgrade>)/$$(p)Возвращает число установленных улучшений указанного типа.$(p)Имя улучшения можно узнать, включив расширенные подсказки клавишами F3+H и наведя курсор на любое улучшение PneumaticCraft. Используйте имя предмета без окончания '_upgrade'.$(p)Например, для $(thing)pneumaticcraft:speed_upgrade/$ именем будет \"speed\"."
+    },
+    {
+      "type": "text",
+      "title": "getVariable()",
+      "text": "$(#800)getVariable(<variable name>)/$$(p)Возвращает значение переменной этого дрона: x, y и z. Поддерживаются также $(l:programming/variables#global)глобальные/$ переменные с префиксом # и $(l:programming/variables#special)особые/$ переменные с префиксом $."
+    },
+    {
+      "type": "text",
+      "title": "hideArea()",
+      "text": "$(#800)hideArea()/$$(p)Отключает подсветку сохранённой в дроне области, показанную методом $(#800)showArea()/$."
+    },
+    {
+      "type": "text",
+      "title": "isActionDone()",
+      "text": "$(#800)isActionDone()/$$(p)Возвращает true, если текущее действие завершено: например, \"goto\" достигло цели, \"inventory import\" больше не может загружать предметы или \"dig\" выкопало все доступные блоки."
+    },
+    {
+      "type": "text",
+      "title": "isConnectedToDrone()",
+      "text": "$(#800)isConnectedToDrone()/$$(p)Возвращает true, если дрон подключился к этому интерфейсу дрона, дойдя в своей программе до элемента ComputerCraft и установив соединение."
+    },
+    {
+      "type": "text",
+      "title": "removeArea()",
+      "text": "$(#800)removeArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<areaType>)/$$(p)Вычитает область из текущей сохранённой области, что равнозначно добавлению этой части в чёрный список."
+    },
+    {
+      "type": "text",
+      "title": "setAction()",
+      "text": "$(#800)setAction(<action>)/$$(p)Задаёт действие для дрона. Оно должно входить в список, возвращаемый $(#800)getAllActions()/$; этим действиям напрямую соответствуют программные элементы в интерфейсе $(l:programming/programmer)Программатора/$. При включённых расширенных подсказках F3+H имя действия показывается в подсказке элемента.$(p)Если префикс равен $(thing)pneumaticcraft:/$, его можно не указывать."
+    },
+    {
+      "type": "text",
+      "title": "setBlockOrder()",
+      "text": "$(#800)setBlockOrder(<\"closest\"/\"highToLow\"/\"lowToHigh\">)/$$(p)Задаёт порядок установки или разрушения блоков дроном."
+    },
+    {
+      "type": "text",
+      "title": "setCanSteal()",
+      "text": "$(#800)setCanSteal(<true/false>)/$$(p)Для действия \"pickup_item\" определяет, может ли дрон забирать предметы, которые обычно должен оставлять на месте, например лежащие на конвейере $(thing)Immersive Engineering/$.$(p)Значение по умолчанию — 'false': дрон не пытается забирать такие предметы."
+    },
+    {
+      "type": "text",
+      "title": "setCheckLineOfSight()",
+      "text": "$(#800)setCheckLineOfSight(<true/false>)/$$(p)Для действия \"entity_attack\" определяет, атакует ли дрон любую цель в области или только цели в прямой видимости.$(p)Значение по умолчанию — 'false': видимость не проверяется."
+    },
+    {
+      "type": "text",
+      "title": "setCount()",
+      "text": "$(#800)setCount(<amount>)/$$(p)Задаёт максимальное число предметов, обрабатываемых действиями загрузки, выгрузки и выбрасывания. То же значение используется при проверке условий количества."
+    },
+    {
+      "type": "text",
+      "title": "setCraftingGrid()",
+      "text": "$(#800)setCraftingGrid(<item/block name>, <item/block name>, ...(9x))/$$(p)Заполняет сетку создания для действия \"crafting\". Необходимо указать все 9 позиций рецепта; для пустых ячеек передавайте $(thing)nil/$. Формат имён предметов совпадает с форматом фильтров предметов."
+    },
+    {
+      "type": "text",
+      "title": "setDropStraight()",
+      "text": "$(#800)setDropStraight(<true/false>)/$$(p)Когда выполняется действие \"drop_item\", определяет, выбрасывать ли предмет со случайной скоростью, как обычный выбрасыватель, или строго вниз."
+    },
+    {
+      "type": "text",
+      "title": "setEmittingRedstone()",
+      "text": "$(#800)setEmittingRedstone(<strength>)/$$(p)Задаёт силу сигнала редстоуна, выдаваемого во время действия \"emit_redstone\"."
+    },
+    {
+      "type": "text",
+      "title": "setIsAndFunction()",
+      "text": "$(#800)setIsAndFunction(<true/false>)/$$(p)Используется только в условиях. При true все проверяемые блоки должны удовлетворять требованию условия, например >=10."
+    },
+    {
+      "type": "text",
+      "title": "setMaxActions()",
+      "text": "$(#800)setMaxActions(<amount>)/$$(p)Задаёт максимальное число действий над блоками, после которого действие считается завершённым. Применяется к \"place\", \"dig\" и \"block_right_click\". Чтобы включить ограничение, обязательно вызовите также $(#800)setUseMaxActions(true)/$."
+    },
+    {
+      "type": "text",
+      "text": "$(#800)setOperator(<\"=\" / \">=\" / \"<=\">)/$$(p)Используется только в условиях. Выбирает сравнение количества: равно (=), больше или равно (>=), меньше или равно (<=). Количество задаётся методом $(#800)setCount()/$.",
+      "title": "setOperator()"
+    },
+    {
+      "title": "setPlaceFluidBlocks()",
+      "type": "text",
+      "text": "$(#800)setPlaceFluidBlocks(<true/false>)/$$(p)Используется только в действии \"liquid_export\". При true дрон может размещать блоки жидкости в мире. Стандартное значение 'false' разрешает выгружать жидкости только в резервуары."
+    },
+    {
+      "title": "setRenameString()",
+      "text": "$(#800)setRenameString(<name>)/$$(p)Задаёт новое имя дрона для действия \"rename\".",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "title": "setRequiresTool()",
+      "text": "$(#800)setRequiresTool(<true/false>)/$$(p)Определяет, нужен ли дрону инструмент для действий \"dig\" и \"harvest\". Если инструмент обязателен, но не выдан, дрон не будет выполнять эти действия."
+    },
+    {
+      "type": "text",
+      "title": "setRightClickType()",
+      "text": "$(#800)setRightClickType(\"click_item\" / \"click_block\")/$$(p)Для текущего действия \"block_right_click\" определяет, использовать ли механику предмета в руке дрона, например $(item)огнива/$, или активировать выбранный блок, например переключить $(item)рычаг/$. Значение по умолчанию — \"click_item\"."
+    },
+    {
+      "type": "text",
+      "title": "setSide()",
+      "text": "$(#800)setSide(<side>, <accessible>)/$$(p)Разрешает или запрещает доступ к указанной стороне. В действиях \"inventory_import\" и \"inventory_export\" задаёт доступную дрону грань инвентаря, а в действии \"place\" — сторону установки блока."
+    },
+    {
+      "title": "setSides()",
+      "text": "$(#800)setSides(<down>, <up>, <north>, <south>, <east>, <west>)/$$(p)Выполняет ту же настройку сразу для всех сторон и принимает шесть логических параметров.",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "title": "setSignText()",
+      "text": "$(#800)setSignText(<line1>, <line2>, ..., <lineN>)/$$(p)Задаёт текст, который действие $(thing)edit_sign/$ запишет на обычные таблички и таблички для надписей."
+    },
+    {
+      "title": "setSneaking()",
+      "text": "$(#800)setSneaking(<true/false>)/$$(p)Используется только в действии \"block_right_click\" и определяет, должен ли виртуальный игрок красться при щелчке ПКМ.",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)setUseCount(<true/false>)/$$(p)Включает или отключает ограничение числа загружаемых, выгружаемых и выбрасываемых предметов. При true обязательно вызовите также $(#800)setCount()/$.",
+      "title": "setUseCount()"
+    },
+    {
+      "title": "setUseMaxActions()",
+      "type": "text",
+      "text": "$(#800)setUseMaxActions(<true/false>)/$$(p)Включает или отключает максимальное число действий над одним блоком, после которого команда считается завершённой. Применяется к \"place\", \"dig\" и \"block_right_click\". При true обязательно вызовите также $(#800)setMaxActions()/$."
+    },
+    {
+      "text": "$(#800)setVariable(<variable name>, <x>, <y>, <z>)/$$(p)Записывает в $(l:programming/variables)переменную/$ этого дрона заданные координаты X/Y/Z. Можно задавать и $(l:programming/variables#global)глобальные переменные/$.",
+      "type": "text",
+      "title": "setVariable()"
+    },
+    {
+      "text": "$(#800)setVariable(<variable name>, <boolean>)/$$(p)Записывает значение в $(l:programming/coordinate_operator)переменную/$ этого дрона. 'true' равнозначно координатам (1,0,0), а 'false' — (0,0,0).",
+      "type": "text",
+      "title": "setVariable()"
+    },
+    {
+      "type": "text",
+      "title": "showArea()",
+      "text": "$(#800)showArea()/$$(p)Показывает текущую сохранённую область тем же способом, что и кнопка $(thing)«Показать область»/$ в настройках программного элемента. Скрыть такую подсветку можно методом $(#800)hideArea()/$."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание интерфейса дрона",
+      "recipe": "pneumaticcraft:drone_interface"
+    }
+  ]
+}

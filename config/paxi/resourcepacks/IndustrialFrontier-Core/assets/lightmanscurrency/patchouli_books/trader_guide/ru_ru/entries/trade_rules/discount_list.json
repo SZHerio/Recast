@@ -1,0 +1,15 @@
+{
+	"name": "Скидки",
+	"icon": "lightmanscurrency:textures/gui/trader_guide/trade_rules/discount_list/icon.png",
+	"category": "lightmanscurrency:trade_rules",
+	"pages":[
+		"Правило «Скидки» даёт указанным игрокам процентную скидку на одну или несколько сделок. Это более прямой вариант правила $(l:trade_rules/discount_codes)«Коды скидок»$(): он безопаснее, но гораздо менее гибок.",
+		{
+			"type":"lightmanscurrency:wide_image",
+			"image":"lightmanscurrency:textures/gui/trader_guide/trade_rules/discount_list/inputs.png",
+			"text":"Здесь важны два параметра. Поле слева вверху задаёт размер скидки: например, значение 10 означает скидку 10%.$(br2)Ниже находится список игроков, которым она доступна."
+		},
+		"Введите имя игрока в текстовое поле. Когда игра найдёт его профиль, нажмите кнопку +, чтобы добавить игрока в список.$(br)Просмотреть список и удалить участника можно ниже: нажмите X рядом с его именем."
+	]
+
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Напорные трубы",
+  "icon": "pneumaticcraft:pressure_tube",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:root",
+  "priority": "true",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Напорные трубы — основной способ передачи сжатого воздуха между компрессорами и машинами в $(pncr).$(p)Из неподключённых труб воздух утекает! Любую сторону трубы можно открыть или закрыть щелчком ПКМ с $(l:tools/pneumatic_wrench)пневмоключом/$ в руке. Ключи из других модов также могут подойти."
+    },
+    {
+      "type": "image",
+      "title": "Трубы!",
+      "text": "$(italic)Две напорные трубы с $(l:tubes/pressure_gauge_module)датчиком давления/$ $(italic)соединяют $(l:compressors/air_compressor)воздушный компрессор/$ $(italic)и $(l:machines/air_cannon)Air Cannon/$",
+      "images": [
+        "pneumaticcraft:textures/patchouli/pressure_tubes.png"
+      ],
+      "border": "true"
+    },
+    {
+      "type": "text",
+      "text": "На напорные трубы можно устанавливать $(l:tubes/tube_modules)трубные модули/$ — дополнительные компоненты с разными функциями. Каждый модуль подробно описан на отдельной странице.$(p)Напорные трубы можно скрыть с помощью $(l:tools/camo_applicator)камуфлятора/$."
+    },
+    {
+      "type": "text",
+      "text": "Существует три $(l:base_concepts/pressure_tiers)уровня/$ труб:$(br)$(li)Трубы 1-го уровня выдерживают до 5 бар и вмещают 1000 мл воздуха.$(li)Укреплённые трубы уровня 1,5 выдерживают до 10 бар и также вмещают 1000 мл.$(li)Продвинутые трубы 2-го уровня выдерживают до 20 бар и вмещают 4000 мл воздуха."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание напорной трубы",
+      "recipe": "pneumaticcraft:pressure_tube"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/reinforced_pressure_tube"
+    },
+    {
+      "anchor": "advanced",
+      "type": "pneumaticcraft:assembly_system",
+      "recipe": "pneumaticcraft:assembly/advanced_pressure_tube"
+    }
+  ]
+}

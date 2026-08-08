@@ -1,0 +1,159 @@
+{
+  "key": "marathon",
+  "file": "73_marathon_choices",
+  "chapter_id": "2073000000000001",
+  "group_id": "1000000000000003",
+  "icon": "minecraft:comparator",
+  "order": 3,
+  "tag": "academy",
+  "optional": true,
+  "xp": 25,
+  "title_ru": "73 — Марафоны выбора",
+  "title_en": "73 — Marathons of choice",
+  "sub_ru": "Пять развилок, у которых нет правильного ответа",
+  "sub_en": "Five forks with no correct answer",
+  "quests": [
+    {
+      "slug": "intro", "x": 0, "y": 0, "icon": "minecraft:comparator", "shape": "gear", "size": 2.0,
+      "ru": {
+        "title": "Марафоны выбора",
+        "subtitle": "Справочник сравнений, а не линия прогресса",
+        "desc": [
+          "Остальные главы книги отвечают на вопрос «как правильно». Эта отвечает на другой: «из чего выбирать».",
+          "У сборки пять настоящих развилок. На каждой есть несколько рабочих путей, и ни один не лучше остальных вообще — они лучше или хуже в конкретных условиях: сколько у вас места, сколько внимания, что уже построено.",
+          "Здесь ничего не открывается и не выдаётся. Сюда заходят, когда развилка уже перед вами и надо решить."
+        ],
+        "task": "Зайти сюда, когда придётся выбирать"
+      },
+      "en": {
+        "title": "Marathons of choice",
+        "subtitle": "A comparison reference, not a progress line",
+        "desc": [
+          "The other chapters in the book answer the question 'what is correct'. This one answers another: 'what do you choose from'.",
+          "The pack has five real forks. Each has several workable paths, and none is better than the others in general — they are better or worse in specific conditions: how much space you have, how much attention you can spare, what is already built.",
+          "Nothing here unlocks or gives rewards. You come here when the fork is already in front of you and you need to decide."
+        ],
+        "task": "Come here when you have to choose"
+      }
+    },
+    {
+      "slug": "energy", "x": 3, "y": -3, "icon": "gtceu:gas_large_turbine", "deps": ["intro"],
+      "ru": {
+        "title": "Чем питать завод",
+        "subtitle": "Пар, дизель, газ или изотоп",
+        "desc": [
+          "Пар. Дёшев, прощает ошибки, работает на угле, который есть везде. Платите объёмом: котёл, вода, топливо и место под всё это. Хорош, пока потребление не выросло.",
+          "Двигатель внутреннего сгорания. Компактнее пара и мощнее, но требует топливной химии и её ритма: остановилась перегонка — встал завод. Хорош, когда нефтяная линия уже есть и стабильна.",
+          "Газовая турбина. Лучшая отдача из тепловых при том же месте, но самая требовательная к подаче. Ставится, когда есть чем её кормить постоянно, а не когда хочется мощности.",
+          "Изотопный источник. Крошечный, вечный и очень слабый. Никогда не питает завод — он питает то, что нельзя оставить без энергии: контроль, связь, аварийное освещение. Это единственный вариант, который не конкурирует с остальными."
+        ],
+        "task": "Выбрать источник под свой ритм, а не под свою мечту"
+      },
+      "en": {
+        "title": "What powers the factory",
+        "subtitle": "Steam, diesel, gas or isotope",
+        "desc": [
+          "Steam. Cheap, forgiving, runs on coal that is everywhere. You pay in volume: boiler, water, fuel and the room for all of it. Good until consumption grows.",
+          "Combustion engine. More compact and stronger than steam, but it needs fuel chemistry and its rhythm: refining stops, the factory stops. Good once the oil line exists and is stable.",
+          "Gas turbine. The best return among thermal sources for the same footprint, and the most demanding on supply. You build it when you have something to feed it constantly, not when you want more power.",
+          "Isotope source. Tiny, eternal and very weak. It never powers a factory — it powers what must never lose power: control, comms, emergency lighting. The only option here that does not compete with the others."
+        ],
+        "task": "Pick the source that fits your rhythm, not your ambition"
+      }
+    },
+    {
+      "slug": "logistics", "x": 6, "y": -3, "icon": "create:train_door", "deps": ["energy"],
+      "ru": {
+        "title": "Чем возить",
+        "subtitle": "Поезда, баржи, трубы или сеть",
+        "desc": [
+          "Поезд. Единственный способ возить много и далеко по земле. Стоит рельсов, сигналов и планировки, зато один состав заменяет десятки рейсов. Невыгоден на коротком плече: разгон и торможение съедают выигрыш.",
+          "Баржа. Дешевле поезда там, где вода уже есть, и бесполезна там, где её нет. Медленнее, но не требует ни путей, ни развязок.",
+          "Труба и лента. Лучшее на коротком расстоянии и внутри цеха. За пределами базы превращаются в километры инфраструктуры, которую нечем обслуживать.",
+          "ME-сеть. Убирает рутину поиска и учёта, но не создаёт материал и не пересекает расстояние бесплатно. Гаснет вместе с энергией. Ставится поверх физической логистики, а не вместо неё — это записано отдельным квестом в главе пятой эпохи."
+        ],
+        "task": "Развести четыре слоя по расстояниям"
+      },
+      "en": {
+        "title": "What moves the goods",
+        "subtitle": "Trains, barges, pipes or a network",
+        "desc": [
+          "Train. The only way to move a lot, far, over land. It costs rails, signals and planning, but one consist replaces dozens of trips. Not worth it on a short leg: acceleration and braking eat the gain.",
+          "Barge. Cheaper than a train where water already runs, useless where it does not. Slower, but needs neither track nor junctions.",
+          "Pipe and belt. Best over short distances and inside a shop. Beyond the base they become kilometres of infrastructure with nobody to maintain them.",
+          "ME network. It removes the routine of searching and counting, but creates no material and crosses no distance for free. It dies with the power. It goes on top of physical logistics, not instead of it — that is written as its own quest in the fifth-epoch chapter."
+        ],
+        "task": "Split the four layers by distance"
+      }
+    },
+    {
+      "slug": "nuclear", "x": 3, "y": 3, "icon": "nuclearcraft:fission_reactor_controller", "deps": ["intro"],
+      "ru": {
+        "title": "Какой реактор",
+        "subtitle": "Гражданский или канальный",
+        "desc": [
+          "Гражданский реактор. Собирается как машина: корпус, топливо, теплоноситель, турбина. Поведение предсказуемо, ошибки стоят ресурсов. Это рабочая лошадь городской сети, и большинству ничего другого не нужно.",
+          "Канальный РБМК. Собирается колонна за колонной, и его поведение зависит от того, что вы поставили в каждую ячейку. Даёт больше, разгоняется быстрее, чем вы дойдёте до консоли, и требует дистанционного управления до первого пуска.",
+          "Разница не в мощности, а в том, чем вы платите. Первый берёт материалами, второй — вниманием. Строить оба имеет смысл только если вам интересен сам процесс: город питает и тот, и другой."
+        ],
+        "task": "Решить, чем вы готовы платить"
+      },
+      "en": {
+        "title": "Which reactor",
+        "subtitle": "Civil or channel-type",
+        "desc": [
+          "Civil reactor. Assembled like a machine: vessel, fuel, coolant, turbine. Behaviour is predictable, mistakes cost resources. This is the workhorse of the city grid, and most players need nothing else.",
+          "Channel-type RBMK. Assembled column by column, and its behaviour depends on what you placed in every cell. It gives more, runs away faster than you can walk to the console, and demands a remote panel before the first startup.",
+          "The difference is not power but currency. The first takes materials, the second takes attention. Building both makes sense only if the process itself interests you: either one feeds the city."
+        ],
+        "task": "Decide what you are willing to pay with"
+      }
+    },
+    {
+      "slug": "space", "x": 6, "y": 3, "icon": "gcyr:basic_rocket_motor", "deps": ["nuclear"],
+      "ru": {
+        "title": "Как лететь",
+        "subtitle": "Готовый мотор или свой двигатель",
+        "desc": [
+          "Короткий путь: три тира готового мотора. Собрал, заправил, полетел. Он полностью достаточен и ведёт на все планеты программы — Луну, Марс, Меркурий, Венеру и Проксиму b.",
+          "Глубокий путь: конструктор двигателя. Камера сгорания, форсуночная головка, турбонасос, сопло — двигатель проектируется, а не покупается. Девяносто семь последовательных сборок, часы работы.",
+          "Глубокий путь ведёт на околоземную орбиту и к станции, короткий — на планеты. Не открывать конструктор — законное решение, а не пропущенное содержимое: вы ничего не теряете, кроме самого проектирования, ради которого его и открывают."
+        ],
+        "task": "Выбрать, интересен ли вам сам двигатель"
+      },
+      "en": {
+        "title": "How to fly",
+        "subtitle": "A ready motor or your own engine",
+        "desc": [
+          "The short path: three tiers of ready-made motor. Build, fuel, fly. It is entirely sufficient and reaches every planet of the programme — the Moon, Mars, Mercury, Venus and Proxima b.",
+          "The deep path: the engine designer. Combustion chamber, injector head, turbopump, nozzle — the engine is designed, not bought. Ninety-seven sequenced assemblies, hours of work.",
+          "The deep path leads to low orbit and the station, the short one to the planets. Not opening the designer is a legitimate decision, not skipped content: you lose nothing except the designing itself, which is the whole reason to open it."
+        ],
+        "task": "Decide whether the engine itself interests you"
+      }
+    },
+    {
+      "slug": "finale", "x": 9, "y": 0, "icon": "gcyr:dyson_system_controller", "deps": ["logistics", "space"],
+      "ru": {
+        "title": "Чем закончить",
+        "subtitle": "Сфера или колония",
+        "desc": [
+          "Сфера Дайсона проверяет масштаб. Её нельзя построить в одиночку: нужен поточный выпуск спутников, постоянный вывод на орбиту и ремонтная линия. Брошенная сфера разрушается — это единственная постройка сборки, которая наказывает за забывчивость.",
+          "Колония на Проксиме b проверяет автономность. Воздух, вода, еда и производство должны работать на месте; регулярная доставка еды с Земли не засчитывается. Это самый сложный экзамен: почти вся цепочка восьми эпох повторяется на чужой планете.",
+          "Можно построить оба, любой один или ни одного. Это два разных финала, а не две половины одного, и ни один не закрывает другой."
+        ],
+        "task": "Выбрать финал или отказаться от обоих"
+      },
+      "en": {
+        "title": "How to finish",
+        "subtitle": "The sphere or the colony",
+        "desc": [
+          "The Dyson swarm tests scale. It cannot be built alone: it needs a production line for satellites, constant launches and a repair line. An abandoned sphere decays — the only structure in the pack that punishes forgetfulness.",
+          "The colony on Proxima b tests autonomy. Air, water, food and production must work on site; regular food deliveries from Earth do not count. This is the hardest exam: nearly the whole eight-epoch chain repeated on an alien planet.",
+          "You may build both, either one, or neither. These are two different finales, not two halves of one, and neither closes the other off."
+        ],
+        "task": "Choose a finale or decline both"
+      }
+    }
+  ]
+}

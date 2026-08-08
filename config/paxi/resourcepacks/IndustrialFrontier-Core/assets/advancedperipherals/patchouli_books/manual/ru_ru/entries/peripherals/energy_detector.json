@@ -1,0 +1,30 @@
+{
+  "name": "Детектор энергии",
+  "icon": "advancedperipherals:energy_detector",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Детектор энергии измеряет поток энергии и может работать как резистор. Задайте предельную скорость передачи, чтобы ограничить поток.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/energy_detector/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:energy_detector"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:energy_detector"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите детектор энергии к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}

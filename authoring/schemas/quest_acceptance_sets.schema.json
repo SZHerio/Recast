@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/quest_acceptance_sets.schema.json",
+  "title": "Industrial Frontier quest acceptance sets",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "registry_id",
+    "status",
+    "policy_ru",
+    "editorial_policy_ru",
+    "sets"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "minLength": 1 },
+    "schema_version": { "const": 1 },
+    "registry_id": { "const": "industrial_frontier:quest/acceptance_sets" },
+    "status": { "const": "STATIC_IDS_CONFIRMED_USER_RUNTIME_PENDING" },
+    "policy_ru": { "$ref": "#/$defs/russianText" },
+    "editorial_policy_ru": { "$ref": "#/$defs/russianText" },
+    "sets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/acceptanceSet" }
+    }
+  },
+  "$defs": {
+    "russianText": {
+      "type": "string",
+      "minLength": 12,
+      "pattern": "[А-Яа-яЁё]"
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "excludedEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "reason_ru"],
+      "properties": {
+        "value": { "type": "string", "minLength": 1 },
+        "reason_ru": { "$ref": "#/$defs/russianText" }
+      }
+    },
+    "acceptanceSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "set_id",
+        "title_ru",
+        "capability_ru",
+        "epoch",
+        "semantic_role",
+        "implementation",
+        "tag_id",
+        "values",
+        "excluded",
+        "evidence_refs",
+        "runtime_gate",
+        "copy_status"
+      ],
+      "properties": {
+        "set_id": {
+          "type": "string",
+          "pattern": "^industrial_frontier:quest_set/[a-z0-9_/-]+$"
+        },
+        "title_ru": { "$ref": "#/$defs/russianText" },
+        "capability_ru": { "$ref": "#/$defs/russianText" },
+        "epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+        "semantic_role": {
+          "enum": ["SOURCE", "PRODUCT", "CONSUMABLE_CAPABILITY", "INTERMEDIATE", "UTILITY"]
+        },
+        "implementation": { "enum": ["ITEM_TAG", "FLUID_TAG", "ONE_OF_ITEMS"] },
+        "tag_id": { "$ref": "#/$defs/identifier" },
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "excluded": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/excludedEntry" }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "runtime_gate": {
+          "enum": [
+            "USER_TASK_MATCH_PENDING",
+            "USER_FLUID_TASK_MATCH_PENDING",
+            "USER_RECIPE_AND_TASK_MATCH_PENDING"
+          ]
+        },
+        "copy_status": { "const": "RU_PRIMARY_REVIEWED" }
+      }
+    }
+  }
+}

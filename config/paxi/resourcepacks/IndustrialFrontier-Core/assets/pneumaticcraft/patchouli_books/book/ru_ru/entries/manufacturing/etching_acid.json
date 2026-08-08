@@ -1,0 +1,16 @@
+{
+  "name": "Травильная кислота",
+  "icon": "pneumaticcraft:etching_acid_bucket",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Травильная кислота используется для химического проявления $(l:components/pcb)печатных плат/$. Её получают в $(l:manufacturing/pressure_chamber)барокамере/$, а применяют в $(l:manufacturing/etching_tank)резервуаре для травления/$.$(p)Подробнее о производстве плат рассказано в статье $(l:components/pcb)«Печатная плата»/$."
+    },
+    {
+      "type": "pneumaticcraft:pressure_chamber",
+      "recipe": "pneumaticcraft:pressure_chamber/etching_acid"
+    }
+  ]
+}

@@ -1,0 +1,1048 @@
+{
+    "schema_version":  1,
+    "generated_at":  "2026-08-08T22:19:19.5057640+03:00",
+    "root":  "C:/Users/SZHerio/curseforge/minecraft/Instances/main1.20",
+    "outputs":  {
+                    "csv":  "tmp/codex_ru_audit_20260808/archive_lang_findings.csv",
+                    "exclusions_csv":  "tmp/codex_ru_audit_20260808/archive_lang_exclusions.csv",
+                    "summary":  "tmp/codex_ru_audit_20260808/archive_lang_summary.json"
+                },
+    "scope":  {
+                  "active_mod_archives_only":  true,
+                  "top_level_archive_directory":  "mods",
+                  "nested_archives_scanned":  true,
+                  "loose_ru_overrides_included":  true,
+                  "excluded_inactive_directories":  [
+                                                        "backups",
+                                                        "tmp"
+                                                    ],
+                  "resourcepacks_archive_count":  0,
+                  "datapacks_archive_count":  0
+              },
+    "translation_policy":  {
+                               "generated_translations_in_csv":  false,
+                               "csv_english_is_source_text":  true,
+                               "future_translation_style":  "human, clear, natural Russian",
+                               "preserve_placeholders_and_formatting":  true,
+                               "protected_source_names":  [
+                                                              "mod names",
+                                                              "concrete weapon/ammunition/explosive names"
+                                                          ],
+                               "weapon_descriptions_components_and_upgrades_are_not_protected":  true
+                           },
+    "inventory":  {
+                      "top_level_archives":  134,
+                      "top_level_archives_with_lang":  105,
+                      "top_level_archives_without_lang":  29,
+                      "top_level_namespace_pairs":  109,
+                      "top_level_unique_namespaces":  109,
+                      "top_level_en_files":  110,
+                      "top_level_valid_ru_files":  65,
+                      "nested_archives":  68,
+                      "nested_archives_with_lang":  14,
+                      "nested_namespace_pairs":  14,
+                      "nested_en_files":  14,
+                      "nested_valid_ru_files":  7,
+                      "loose_valid_ru_files":  101,
+                      "loose_ru_files_scanned":  101,
+                      "english_source_files":  124,
+                      "unique_en_keys":  55717,
+                      "unique_valid_ru_keys":  57785,
+                      "raw_unique_missing_ru_keys":  379,
+                      "raw_unique_ru_equals_english_keys":  349,
+                      "known_mod_display_names":  138
+                  },
+    "findings":  {
+                     "rows":  448,
+                     "unique_keys":  441,
+                     "status_counts":  {
+                                           "missing_ru":  120,
+                                           "ru_equals_english":  328
+                                       },
+                     "unique_key_counts_by_status":  {
+                                                         "missing_ru":  120,
+                                                         "ru_equals_english":  321
+                                                     },
+                     "category_counts":  {
+                                             "ui_text":  196,
+                                             "content_name":  56,
+                                             "other":  196
+                                         },
+                     "rows_with_placeholders_or_format_codes":  128,
+                     "excluded_by_heuristic":  {
+                                                   "weapon_names":  230,
+                                                   "mod_names":  40,
+                                                   "status_rows_without_latin_letters":  20
+                                               },
+                     "duplicate_source_occurrences":  7
+                 },
+    "namespace_aggregates":  [
+                                 {
+                                     "namespace":  "hbm_ntm_rebirth",
+                                     "rows":  76,
+                                     "missing_ru":  70,
+                                     "ru_equals_english":  6,
+                                     "unique_keys":  76,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "gtceu",
+                                     "rows":  44,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  44,
+                                     "unique_keys":  44,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "fancymenu",
+                                     "rows":  32,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  32,
+                                     "unique_keys":  32,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "magistuarmory",
+                                     "rows":  29,
+                                     "missing_ru":  29,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  29,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "handcrafted",
+                                     "rows":  27,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  27,
+                                     "unique_keys":  27,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "ftbquests",
+                                     "rows":  16,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  16,
+                                     "unique_keys":  16,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "create_central_kitchen",
+                                     "rows":  15,
+                                     "missing_ru":  3,
+                                     "ru_equals_english":  12,
+                                     "unique_keys":  15,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "immersiveengineering",
+                                     "rows":  13,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  13,
+                                     "unique_keys":  13,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "lightmanscurrency",
+                                     "rows":  13,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  13,
+                                     "unique_keys":  13,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "mtr",
+                                     "rows":  13,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  13,
+                                     "unique_keys":  13,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "nuclearcraft",
+                                     "rows":  13,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  13,
+                                     "unique_keys":  13,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "jade",
+                                     "rows":  12,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  12,
+                                     "unique_keys":  12,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "create",
+                                     "rows":  10,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  10,
+                                     "unique_keys":  10,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "car",
+                                     "rows":  9,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  9,
+                                     "unique_keys":  9,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "ae2",
+                                     "rows":  8,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  8,
+                                     "unique_keys":  8,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "minecolonies",
+                                     "rows":  8,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  8,
+                                     "unique_keys":  8,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "xaerolib",
+                                     "rows":  8,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  8,
+                                     "unique_keys":  4,
+                                     "source_count":  2
+                                 },
+                                 {
+                                     "namespace":  "pneumaticcraft",
+                                     "rows":  7,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  7,
+                                     "unique_keys":  7,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "gtnn",
+                                     "rows":  6,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  6,
+                                     "unique_keys":  6,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "jei",
+                                     "rows":  6,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  6,
+                                     "unique_keys":  6,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "supplementaries",
+                                     "rows":  6,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  6,
+                                     "unique_keys":  6,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "alexsmobs",
+                                     "rows":  4,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  4,
+                                     "unique_keys":  4,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "createbigcannons",
+                                     "rows":  4,
+                                     "missing_ru":  2,
+                                     "ru_equals_english":  2,
+                                     "unique_keys":  4,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "immersivepetroleum",
+                                     "rows":  4,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  4,
+                                     "unique_keys":  4,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "mes",
+                                     "rows":  4,
+                                     "missing_ru":  4,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  4,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "mvs",
+                                     "rows":  4,
+                                     "missing_ru":  4,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  4,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "ponder",
+                                     "rows":  4,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  4,
+                                     "unique_keys":  1,
+                                     "source_count":  4
+                                 },
+                                 {
+                                     "namespace":  "tacz",
+                                     "rows":  4,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  4,
+                                     "unique_keys":  4,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "agriculturalenhancements",
+                                     "rows":  3,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  3,
+                                     "unique_keys":  3,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "aquaculture",
+                                     "rows":  3,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  3,
+                                     "unique_keys":  3,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "biomesoplenty",
+                                     "rows":  3,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  3,
+                                     "unique_keys":  3,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "cloth-config2",
+                                     "rows":  3,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  3,
+                                     "unique_keys":  3,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "effortlessbuilding",
+                                     "rows":  3,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  3,
+                                     "unique_keys":  3,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "littlelogistics",
+                                     "rows":  3,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  3,
+                                     "unique_keys":  3,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "powergrid",
+                                     "rows":  3,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  3,
+                                     "unique_keys":  3,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "codechickenlib",
+                                     "rows":  2,
+                                     "missing_ru":  2,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  2,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "computercraft",
+                                     "rows":  2,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  2,
+                                     "unique_keys":  2,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "easy_npc_config_ui",
+                                     "rows":  2,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  2,
+                                     "unique_keys":  2,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "ftblibrary",
+                                     "rows":  2,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  2,
+                                     "unique_keys":  2,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "gravestone",
+                                     "rows":  2,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  2,
+                                     "unique_keys":  2,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "ldlib",
+                                     "rows":  2,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  2,
+                                     "unique_keys":  2,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "cb_microblock",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "cristellib",
+                                     "rows":  1,
+                                     "missing_ru":  1,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "domum_ornamentum",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "easy_npc",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "framedblocks",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "ftbfiltersystem",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "patchouli",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "philipsruins",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "projectred_core",
+                                     "rows":  1,
+                                     "missing_ru":  1,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "projectred_fabrication",
+                                     "rows":  1,
+                                     "missing_ru":  1,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "projectred_illumination",
+                                     "rows":  1,
+                                     "missing_ru":  1,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "projectred_integration",
+                                     "rows":  1,
+                                     "missing_ru":  1,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "projectred_transmission",
+                                     "rows":  1,
+                                     "missing_ru":  1,
+                                     "ru_equals_english":  0,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "railways",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "sereneseasons",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 },
+                                 {
+                                     "namespace":  "toms_storage",
+                                     "rows":  1,
+                                     "missing_ru":  0,
+                                     "ru_equals_english":  1,
+                                     "unique_keys":  1,
+                                     "source_count":  1
+                                 }
+                             ],
+    "source_aggregates":  [
+                              {
+                                  "source":  "mods/hbm_ntm_rebirth-0.4.1beta.jar!assets/hbm_ntm_rebirth/lang/en_us.json",
+                                  "namespace":  "hbm_ntm_rebirth",
+                                  "rows":  76,
+                                  "missing_ru":  70,
+                                  "ru_equals_english":  6,
+                                  "unique_keys":  76
+                              },
+                              {
+                                  "source":  "mods/gtceu-1.20.1-7.5.3.jar!assets/gtceu/lang/en_us.json",
+                                  "namespace":  "gtceu",
+                                  "rows":  44,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  44,
+                                  "unique_keys":  44
+                              },
+                              {
+                                  "source":  "mods/fancymenu_forge_3.9.9_MC_1.20.1.jar!assets/fancymenu/lang/en_us.json",
+                                  "namespace":  "fancymenu",
+                                  "rows":  32,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  32,
+                                  "unique_keys":  32
+                              },
+                              {
+                                  "source":  "mods/epic-knights-1.20.1-forge-10.11.jar!assets/magistuarmory/lang/en_us.json",
+                                  "namespace":  "magistuarmory",
+                                  "rows":  29,
+                                  "missing_ru":  29,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  29
+                              },
+                              {
+                                  "source":  "mods/handcrafted-forge-1.20.1-3.0.6.jar!assets/handcrafted/lang/en_us.json",
+                                  "namespace":  "handcrafted",
+                                  "rows":  27,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  27,
+                                  "unique_keys":  27
+                              },
+                              {
+                                  "source":  "mods/ftb-quests-forge-2001.4.22.jar!assets/ftbquests/lang/en_us.json",
+                                  "namespace":  "ftbquests",
+                                  "rows":  16,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  16,
+                                  "unique_keys":  16
+                              },
+                              {
+                                  "source":  "mods/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar!assets/create_central_kitchen/lang/en_us.json",
+                                  "namespace":  "create_central_kitchen",
+                                  "rows":  15,
+                                  "missing_ru":  3,
+                                  "ru_equals_english":  12,
+                                  "unique_keys":  15
+                              },
+                              {
+                                  "source":  "mods/ImmersiveEngineering-1.20.1-10.2.0-183.jar!assets/immersiveengineering/lang/en_us.json",
+                                  "namespace":  "immersiveengineering",
+                                  "rows":  13,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  13,
+                                  "unique_keys":  13
+                              },
+                              {
+                                  "source":  "mods/lightmanscurrency-1.20.1-2.3.0.5.jar!assets/lightmanscurrency/lang/en_us.json",
+                                  "namespace":  "lightmanscurrency",
+                                  "rows":  13,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  13,
+                                  "unique_keys":  13
+                              },
+                              {
+                                  "source":  "mods/MTR-forge-4.0.5+1.20.1.jar!assets/mtr/lang/en_us.json",
+                                  "namespace":  "mtr",
+                                  "rows":  13,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  13,
+                                  "unique_keys":  13
+                              },
+                              {
+                                  "source":  "mods/NuclearCraft-1.20.1-1.2.33.jar!assets/nuclearcraft/lang/en_us.json",
+                                  "namespace":  "nuclearcraft",
+                                  "rows":  13,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  13,
+                                  "unique_keys":  13
+                              },
+                              {
+                                  "source":  "mods/Jade-1.20.1-Forge-11.13.3.jar!assets/jade/lang/en_us.json",
+                                  "namespace":  "jade",
+                                  "rows":  12,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  12,
+                                  "unique_keys":  12
+                              },
+                              {
+                                  "source":  "mods/create-1.20.1-6.0.8.jar!assets/create/lang/en_us.json",
+                                  "namespace":  "create",
+                                  "rows":  10,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  10,
+                                  "unique_keys":  10
+                              },
+                              {
+                                  "source":  "mods/car-forge-1.20.1-1.0.42.jar!assets/car/lang/en_us.json",
+                                  "namespace":  "car",
+                                  "rows":  9,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  9,
+                                  "unique_keys":  9
+                              },
+                              {
+                                  "source":  "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json",
+                                  "namespace":  "ae2",
+                                  "rows":  8,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  8,
+                                  "unique_keys":  8
+                              },
+                              {
+                                  "source":  "mods/minecolonies-1.20.1-1.1.1274.jar!assets/minecolonies/lang/en_us.json",
+                                  "namespace":  "minecolonies",
+                                  "rows":  8,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  8,
+                                  "unique_keys":  8
+                              },
+                              {
+                                  "source":  "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/lang/en_us.json",
+                                  "namespace":  "pneumaticcraft",
+                                  "rows":  7,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  7,
+                                  "unique_keys":  7
+                              },
+                              {
+                                  "source":  "mods/gtnn-1.20.1-1.3.9.jar!assets/gtnn/lang/en_us.json",
+                                  "namespace":  "gtnn",
+                                  "rows":  6,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  6,
+                                  "unique_keys":  6
+                              },
+                              {
+                                  "source":  "mods/jei-1.20.1-forge-15.20.0.134.jar!assets/jei/lang/en_us.json",
+                                  "namespace":  "jei",
+                                  "rows":  6,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  6,
+                                  "unique_keys":  6
+                              },
+                              {
+                                  "source":  "mods/supplementaries-1.20-3.1.43-forge.jar!assets/supplementaries/lang/en_us.json",
+                                  "namespace":  "supplementaries",
+                                  "rows":  6,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  6,
+                                  "unique_keys":  6
+                              },
+                              {
+                                  "source":  "mods/alexsmobs-1.22.9.jar!assets/alexsmobs/lang/en_us.json",
+                                  "namespace":  "alexsmobs",
+                                  "rows":  4,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  4,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/createbigcannons-5.11.4-mc.1.20.1-forge.jar!assets/createbigcannons/lang/en_us.json",
+                                  "namespace":  "createbigcannons",
+                                  "rows":  4,
+                                  "missing_ru":  2,
+                                  "ru_equals_english":  2,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/ImmersivePetroleum-1.20.1-4.3.1-36b.jar!assets/immersivepetroleum/lang/en_us.json",
+                                  "namespace":  "immersivepetroleum",
+                                  "rows":  4,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  4,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/MoogsEndStructures-1.20-2.0.3.jar!assets/mes/lang/en_us.json",
+                                  "namespace":  "mes",
+                                  "rows":  4,
+                                  "missing_ru":  4,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/MoogsVoyagerStructures-1.20-5.0.8.jar!assets/mvs/lang/en_us.json",
+                                  "namespace":  "mvs",
+                                  "rows":  4,
+                                  "missing_ru":  4,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/tacz-1.20.1-1.1.8-hotfix.jar!assets/tacz/lang/en_us.json",
+                                  "namespace":  "tacz",
+                                  "rows":  4,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  4,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/xaerominimap-forge-1.20.1-26.4.2.jar!META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar!assets/xaerolib/lang/en_us.json",
+                                  "namespace":  "xaerolib",
+                                  "rows":  4,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  4,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/xaeroworldmap-forge-1.20.1-1.44.2.jar!META-INF/jarjar/xaerolib-forge-1.20.1-1.7.1.jar!assets/xaerolib/lang/en_us.json",
+                                  "namespace":  "xaerolib",
+                                  "rows":  4,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  4,
+                                  "unique_keys":  4
+                              },
+                              {
+                                  "source":  "mods/agriculturalenhancements-FORGE-1.20.1-0.3.3.jar!assets/agriculturalenhancements/lang/en_us.json",
+                                  "namespace":  "agriculturalenhancements",
+                                  "rows":  3,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  3,
+                                  "unique_keys":  3
+                              },
+                              {
+                                  "source":  "mods/Aquaculture-1.20.1-2.5.7.jar!assets/aquaculture/lang/en_us.json",
+                                  "namespace":  "aquaculture",
+                                  "rows":  3,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  3,
+                                  "unique_keys":  3
+                              },
+                              {
+                                  "source":  "mods/BiomesOPlenty-1.20.1-18.0.0.592.jar!assets/biomesoplenty/lang/en_us.json",
+                                  "namespace":  "biomesoplenty",
+                                  "rows":  3,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  3,
+                                  "unique_keys":  3
+                              },
+                              {
+                                  "source":  "mods/cloth-config-11.1.136-forge.jar!assets/cloth-config2/lang/en_us.json",
+                                  "namespace":  "cloth-config2",
+                                  "rows":  3,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  3,
+                                  "unique_keys":  3
+                              },
+                              {
+                                  "source":  "mods/effortlessbuilding-1.20.1-3.11.jar!assets/effortlessbuilding/lang/en_us.json",
+                                  "namespace":  "effortlessbuilding",
+                                  "rows":  3,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  3,
+                                  "unique_keys":  3
+                              },
+                              {
+                                  "source":  "mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json",
+                                  "namespace":  "littlelogistics",
+                                  "rows":  3,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  3,
+                                  "unique_keys":  3
+                              },
+                              {
+                                  "source":  "mods/powergrid-mc1.20.1-0.5.5.1.jar!assets/powergrid/lang/en_us.json",
+                                  "namespace":  "powergrid",
+                                  "rows":  3,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  3,
+                                  "unique_keys":  3
+                              },
+                              {
+                                  "source":  "mods/cc-tweaked-1.20.1-forge-1.120.0.jar!assets/computercraft/lang/en_us.json",
+                                  "namespace":  "computercraft",
+                                  "rows":  2,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  2,
+                                  "unique_keys":  2
+                              },
+                              {
+                                  "source":  "mods/CodeChickenLib-1.20.1-4.4.0.528-universal.jar!assets/codechickenlib/lang/en_us.json",
+                                  "namespace":  "codechickenlib",
+                                  "rows":  2,
+                                  "missing_ru":  2,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  2
+                              },
+                              {
+                                  "source":  "mods/easy_npc_config_ui-forge-1.20.1-7.4.1.jar!assets/easy_npc_config_ui/lang/en_us.json",
+                                  "namespace":  "easy_npc_config_ui",
+                                  "rows":  2,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  2,
+                                  "unique_keys":  2
+                              },
+                              {
+                                  "source":  "mods/ftb-library-forge-2001.2.13.jar!assets/ftblibrary/lang/en_us.json",
+                                  "namespace":  "ftblibrary",
+                                  "rows":  2,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  2,
+                                  "unique_keys":  2
+                              },
+                              {
+                                  "source":  "mods/gravestone-forge-1.20.1-1.0.35.jar!assets/gravestone/lang/en_us.json",
+                                  "namespace":  "gravestone",
+                                  "rows":  2,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  2,
+                                  "unique_keys":  2
+                              },
+                              {
+                                  "source":  "mods/gtceu-1.20.1-7.5.3.jar!META-INF/jarjar/ldlib-forge-1.20.1-1.0.40.b.jar!assets/ldlib/lang/en_us.json",
+                                  "namespace":  "ldlib",
+                                  "rows":  2,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  2,
+                                  "unique_keys":  2
+                              },
+                              {
+                                  "source":  "mods/CBMultipart-1.20.1-3.3.0.159-universal.jar!assets/cb_microblock/lang/en_us.json",
+                                  "namespace":  "cb_microblock",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/create-1.20.1-6.0.8.jar!META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar!assets/ponder/lang/en_us.json",
+                                  "namespace":  "ponder",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/cristellib-1.1.6-forge.jar!assets/cristellib/lang/en_us.json",
+                                  "namespace":  "cristellib",
+                                  "rows":  1,
+                                  "missing_ru":  1,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/domum_ornamentum-1.20.1-1.0.303-snapshot-universal.jar!assets/domum_ornamentum/lang/en_us.json",
+                                  "namespace":  "domum_ornamentum",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/easy_npc-forge-1.20.1-7.4.1.jar!assets/easy_npc/lang/en_us.json",
+                                  "namespace":  "easy_npc",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/effortlessbuilding-1.20.1-3.11.jar!META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar!assets/ponder/lang/en_us.json",
+                                  "namespace":  "ponder",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/FramedBlocks-9.4.3.jar!assets/framedblocks/lang/en_us.json",
+                                  "namespace":  "framedblocks",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/ftb-filter-system-forge-20.0.1.jar!assets/ftbfiltersystem/lang/en_us.json",
+                                  "namespace":  "ftbfiltersystem",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/NuclearCraft-1.20.1-1.2.33.jar!META-INF/jarjar/Ponder-Forge-1.20.1-1.0.91.jar!assets/ponder/lang/en_us.json",
+                                  "namespace":  "ponder",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/Patchouli-1.20.1-85-FORGE.jar!assets/patchouli/lang/en_us.json",
+                                  "namespace":  "patchouli",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/PhilipsRuins1.20.1-5.7.jar!assets/philipsruins/lang/en_us.json",
+                                  "namespace":  "philipsruins",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/ponderjs-1.20.1-2.1.0.jar!META-INF/jarjar/Ponder-Forge-1.20.1-1.0.92.jar!assets/ponder/lang/en_us.json",
+                                  "namespace":  "ponder",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/ProjectRed-1.20.1-4.21.0-core.jar!assets/projectred_core/lang/en_us.json",
+                                  "namespace":  "projectred_core",
+                                  "rows":  1,
+                                  "missing_ru":  1,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/ProjectRed-1.20.1-4.21.0-fabrication.jar!assets/projectred_fabrication/lang/en_us.json",
+                                  "namespace":  "projectred_fabrication",
+                                  "rows":  1,
+                                  "missing_ru":  1,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/ProjectRed-1.20.1-4.21.0-illumination.jar!assets/projectred_illumination/lang/en_us.json",
+                                  "namespace":  "projectred_illumination",
+                                  "rows":  1,
+                                  "missing_ru":  1,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/ProjectRed-1.20.1-4.21.0-integration.jar!assets/projectred_integration/lang/en_us.json",
+                                  "namespace":  "projectred_integration",
+                                  "rows":  1,
+                                  "missing_ru":  1,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/ProjectRed-1.20.1-4.21.0-transmission.jar!assets/projectred_transmission/lang/en_us.json",
+                                  "namespace":  "projectred_transmission",
+                                  "rows":  1,
+                                  "missing_ru":  1,
+                                  "ru_equals_english":  0,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/SereneSeasons-forge-1.20.1-9.1.0.3.jar!assets/sereneseasons/lang/en_us.json",
+                                  "namespace":  "sereneseasons",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/Steam_Rails-1.7.2+forge-mc1.20.1.jar!assets/railways/lang/en_us.json",
+                                  "namespace":  "railways",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              },
+                              {
+                                  "source":  "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/lang/en_us.json",
+                                  "namespace":  "toms_storage",
+                                  "rows":  1,
+                                  "missing_ru":  0,
+                                  "ru_equals_english":  1,
+                                  "unique_keys":  1
+                              }
+                          ],
+    "parse_errors":  [
+                         {
+                             "source":  "mods/ImmersivePetroleum-1.20.1-4.3.1-36b.jar!assets/immersivepetroleum/lang/ru_ru.json",
+                             "locale":  "ru_ru",
+                             "kind":  "invalid_json",
+                             "message":  "Invalid object passed in, \u0027:\u0027 or \u0027}\u0027 expected. (13976): { \"itemGroup.immersivepetroleum\": \"Immersive Petroleum\", \"_comment\": \"################## Блоки ##################\", \"block.immersivepetroleum.fluid_diesel\": \"Дизельное топливо\", \"block.immersivepetroleum.fluid_crude_oil\": \"Сырая нефть\", \"block.immersivepetroleum.fluid_lubricant\": \"Смазка\", \"block.immersivepetroleum.fluid_gasoline\": \"Бензин\", \"block.immersivepetroleum.fluid_napalm\": \"Напалм\", \"block.immersivepetroleum.asphalt\": \"Асфальтобето",
+                             "line_hint":  293,
+                             "details":  "Missing comma after desc.immersivepetroleum.compat.jei.distillation.byproduct; the invalid RU file is ignored.",
+                             "salvaged_key_count":  229,
+                             "ignored":  true
+                         }
+                     ],
+    "notes":  [
+                  "Each CSV row is an English source occurrence; duplicate keys in repeated nested libraries remain separate because source is part of the record.",
+                  "missing_ru means no valid active RU value exists after merging valid mod, nested-JAR, Paxi, KubeJS, and TACZ language resources.",
+                  "ru_equals_english means the effective RU value is byte-content equivalent after trimming and still contains Latin letters.",
+                  "Invalid RU JSON files are reported and ignored, matching runtime behavior.",
+                  "CSV english values are copied from source language resources; no machine translations were generated.",
+                  "Future Russian translations must be human, clear, natural, and preserve placeholders and formatting codes exactly.",
+                  "Weapon and mod-name exclusion is heuristic; the exact regular expressions are preserved in generate_archive_lang_audit.ps1."
+              ]
+}

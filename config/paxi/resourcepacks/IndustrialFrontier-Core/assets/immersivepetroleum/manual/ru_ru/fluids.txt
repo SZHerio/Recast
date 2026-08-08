@@ -1,0 +1,46 @@
+Нефтепродукты
+Хотя бы не GT5u
+<&crude>
+Нефть — липкая чёрная жидкость, которая просачивается из подземных <link;immersivepetroleum:reservoir;§n§oместорождений§r>. Это исходное сырьё для всех остальных нефтепродуктов и основа работы инженера-нефтехимика.
+
+После добычи нефть можно разделить на фракции в <link;immersivepetroleum:distillationtower;§n§oректификационной колонне§r>.
+<&lubricant>
+Смазка — самая тяжёлая фракция, которую можно непосредственно выделить из <link;immersivepetroleum:fluids;§n§oнефти§r;crude>. Её основное назначение — смазывать механизмы и тем самым ускорять их работу. Из смазки также получают <link;immersivepetroleum:fluids;§n§oпарафин§r;paraffin>.
+
+Если эти применения не нужны, смазку можно сжечь в газовом факеле или подвергнуть крекингу, получив <link;immersivepetroleum:fluids;§n§oсернистое дизельное топливо§r;diesel>.
+<&diesel>
+Дизельное и сернистое дизельное топливо — тяжёлые виды топлива в арсенале инженера-нефтехимика. Они подходят для <link;immersiveengineering:diesel_generator;§n§oдизельного генератора§r> и массового производства энергии.
+
+Сернистое дизельное топливо служит удобным источником серы. Это вторая по тяжести фракция, которую можно непосредственно выделить из <link;immersivepetroleum:fluids;§n§oнефти§r;crude>.
+<&kerosene>
+Керосин — средняя топливная фракция, пригодная для <link;immersiveengineering:diesel_generator;§n§oдизельного генератора§r> и массового производства энергии. Его можно разделить на лёгкую и тяжёлую составляющие, чтобы переработать <link;immersivepetroleum:fluids;§n§oлигроин§r;naphtha> в <link;immersivepetroleum:fluids;§n§oбензин§r;gasoline>.
+
+Керосин легче <link;immersivepetroleum:fluids;§n§oдизельного топлива§r;diesel>, поэтому сера в нём не накапливается и десульфурация не требуется.
+<&naphtha>
+Лигроин — летучее лёгкое топливо для <link;immersivepetroleum:portablegenerator;§n§oпереносных генераторов§r> и <link;immersivepetroleum:speedboat;§n§oмоторных лодок§r>. Это самая лёгкая фракция <link;immersivepetroleum:fluids;§n§oнефти§r;crude>.
+
+Чтобы снизить летучесть, лигроин смешивают с бензиновыми присадками и получают <link;immersivepetroleum:fluids;§n§oбензин§r;gasoline>.
+
+Лигроин служит химическим сырьём для пластмасс. Из его <link;immersivepetroleum:fluids;§n§oпродуктов крекинга§r;petroleum_gas> получают <link;immersiveengineering:plastic;§n§oфенольную смолу§r>.
+<&bitumen>
+Битум — тёмное липкое твёрдое вещество. Он заменяет природное связующее в бетоне, образуя <link;immersivepetroleum:asphalt;§n§oасфальтобетон§r>, либо подвергается пиролизу с получением <link;immersivepetroleum:fluids;§n§oнефтяного кокса§r;petroleum_coke>.
+
+Битум медленно образуется при перегонке <link;immersivepetroleum:fluids;§n§oнефти§r;crude>.
+<&petroleum_gas>
+Нефтяной газ нельзя напрямую выделить перегонкой нефти: эту лёгкую фракцию получают крекингом <link;immersivepetroleum:fluids;§n§oлигроина§r;naphtha>.
+
+Из-за газообразного состояния нефтяной газ непригоден для генераторов. Вместо этого он служит химическим сырьём для <link;immersiveengineering:plastic;§n§oфенольной смолы§r>.
+<&gasoline>
+Бензин — качественное лёгкое топливо для <link;immersivepetroleum:portablegenerator;§n§oпереносного генератора§r> или <link;immersivepetroleum:speedboat;§n§oмоторной лодки§r>. Кроме того, он используется для производства <link;immersivepetroleum:fluids;§n§oнапалма§r;napalm>.
+
+ Он менее летуч и эффективнее работает в <link;immersivepetroleum:portablegenerator;§n§oпереносном генераторе§r>. Для получения бензина бензол, выделенный из <link;immersivepetroleum:fluids;§n§oкеросина§r;kerosene>, добавляют к <link;immersivepetroleum:fluids;§n§oлигроину§r;naphtha> в <link;immersiveengineering:refinery;§n§oочистителе§r>.
+<&napalm>
+Напалм — чрезвычайно легковоспламеняющееся вещество. Его получают в <link;mixer;§n§oсмесителе§r> из <link;immersivepetroleum:fluids;§n§oбензина§r;gasoline> и трёх порций алюминиевой крошки. Помимо бессмысленного разрушения применений у него немного: подожжённый напалм почти мгновенно распространяет огонь по своей поверхности и позволяет быстро выжигать лес. Кроме того, это очень эффективное топливо для <link;chemthrower;§n§oChemthrower§r>.
+<&paraffin>
+Парафин — воскообразное твёрдое вещество, заменяющее пчелиный воск. Из него делают свечи и покрывают им медь, чтобы остановить окисление.
+
+Парафин медленно получают депарафинизацией <link;immersivepetroleum:fluids;§n§oсмазки§r;lubricant> под высоким давлением.
+<&petroleum_coke>
+Нефтяной кокс — высокочистая форма углерода, равноценная коксу из каменного угля. Он подходит для выплавки стали, а прессованием из него получают <link;immersiveengineering:graphite;§n§oHOP-графит§r>.
+
+Нефтяной кокс образуется при высокотемпературном коксовании <link;immersivepetroleum:fluids;§n§oбитума§r;bitumen>.

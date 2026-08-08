@@ -1,0 +1,22 @@
+{
+  "name": "Пневмодинамо",
+  "icon": "pneumaticcraft:pneumatic_dynamo",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:advanced_pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Пневмодинамо/$ преобразует $(l:base_concepts/pressure)сжатый воздух/$ в $(thing)Forge Energy/$, совместимую с $(thing)Redstone Flux/$ и энергосистемами других модов. Базовая выработка равна 40 FE/тик и повышается $(l:base_concepts/upgrades#speed)улучшениями скорости/$. Максимальная выдача FE у $(item)флаксового компрессора/$ вдвое выше текущей выработки: по умолчанию 80 FE/тик, а с улучшениями скорости — больше."
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:pneumatic_dynamo",
+      "text": "На эффективность пневмодинамо сильно влияет $(l:base_concepts/heat)температура/$. Машину необходимо $(thing)охлаждать/$: при нагреве эффективность падает, пока выработка энергии не прекращается полностью."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание пневмодинамо",
+      "recipe": "pneumaticcraft:pneumatic_dynamo"
+    }
+  ]
+}

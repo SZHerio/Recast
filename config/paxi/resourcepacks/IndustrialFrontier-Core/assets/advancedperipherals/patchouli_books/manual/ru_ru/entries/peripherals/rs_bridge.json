@@ -1,0 +1,30 @@
+{
+  "name": "Мост Refined Storage",
+  "icon": "advancedperipherals:rs_bridge",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Мост Refined Storage взаимодействует с сетью Refined Storage. Через него можно извлекать и создавать предметы, получать список содержимого сети и выполнять другие операции.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/rs_bridge/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:rs_bridge"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:rs_bridge"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите мост Refined Storage к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}

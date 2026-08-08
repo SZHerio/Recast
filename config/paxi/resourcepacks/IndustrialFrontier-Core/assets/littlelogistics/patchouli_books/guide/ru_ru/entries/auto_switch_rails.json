@@ -1,0 +1,23 @@
+{
+  "name": "Автоматические стрелки",
+  "icon": "littlelogistics:automatic_switch_rail",
+  "category": "littlelogistics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Такие стрелки автоматически переключаются при приближении локомотива. Они выбирают направление к ближайшей ещё не посещённой в текущем цикле точке из $(l:loco_route)маршрута локомотива$()."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Автоматическая стрелка",
+      "recipe": "littlelogistics:automatic_switch_rail",
+      "text": "Переключается между прямым путём и поворотом налево или направо."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Автоматическая Т-образная развилка",
+      "recipe": "littlelogistics:automatic_tee_junction_rail",
+      "text": "Переключается между левым и правым направлениями."
+    }
+  ]
+}

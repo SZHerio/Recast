@@ -1,0 +1,12 @@
+{
+  "name": "Направляющая буксира",
+  "icon": "littlelogistics:guide_rail_tug",
+  "category": "littlelogistics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:guide_rail_tug",
+      "text": "Установите под блоком воды. Направляющая действует примерно как энергорельсы и заставляет буксир следовать определённым путём, но не влияет на баржи. Для поворота щёлкните по ней правой кнопкой мыши, удерживая Shift."
+    }
+  ]
+}

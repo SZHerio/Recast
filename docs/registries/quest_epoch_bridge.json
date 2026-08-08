@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "registry_id": "industrial_frontier:quest/epoch_bridge",
+  "status": "STATIC_IMPLEMENTED_USER_RUNTIME_PENDING",
+  "authority": {
+    "parameter": "industrial_frontier:tech_epoch",
+    "state_owner": "kubejs/server_scripts/40_balance/m3_threat_director.js",
+    "team_key": "FTB_QUESTS_TEAM_UUID",
+    "username_as_persistent_key": false,
+    "mirror_policy": "Scoreboard и другие зеркала доступны только для чтения и никогда не повышают эпоху."
+  },
+  "event_source": {
+    "integration": "FTB XMod Compat",
+    "event": "FTBQuestsEvents.completed",
+    "selector_rule": "Каждый commissioning имеет единственный тег if_commissioning_pN; интеграция публикует отдельное событие #if_commissioning_pN.",
+    "implementation": "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js"
+  },
+  "transitions": [
+    { "tag": "if_commissioning_p0", "expected_epoch": 0, "result_epoch": 1, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p1", "expected_epoch": 1, "result_epoch": 2, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p2", "expected_epoch": 2, "result_epoch": 3, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p3", "expected_epoch": 3, "result_epoch": 4, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p4", "expected_epoch": 4, "result_epoch": 5, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p5", "expected_epoch": 5, "result_epoch": 6, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p6", "expected_epoch": 6, "result_epoch": 7, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p7", "expected_epoch": 7, "result_epoch": 8, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p8", "expected_epoch": 8, "result_epoch": 9, "result": "ADVANCE" },
+    { "tag": "if_commissioning_p9", "expected_epoch": 9, "result_epoch": 9, "result": "MARK_COMPLETE" }
+  ],
+  "guards": [
+    "Событие более поздней эпохи отклоняется, если текущий tech_epoch ниже ожидаемого.",
+    "Повторное или запоздалое событие не понижает и не повышает состояние второй раз.",
+    "P9 ставит отдельную отметку завершения и не создаёт несуществующую эпоху P10.",
+    "Штатное событие и административное восстановление всегда записываются в audit-журнал.",
+    "Публичная форма /kubejs custom_command if_advance_epoch не изменяет состояние."
+  ],
+  "recovery": {
+    "command": "/if_advance_epoch",
+    "permission_level": 2,
+    "purpose_ru": "Только узкое восстановление после подтверждённой ошибки миграции или зачёта; команда не является способом обычного прохождения."
+  },
+  "evidence": [
+    "mods/ftb-xmod-compat-forge-2.1.3.jar!dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.QuestObjectCompletedEventJS",
+    "mods/ftb-quests-forge-2001.4.22.jar!dev.ftb.mods.ftbquests.quest.TeamData#getTeamId",
+    "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js",
+    "kubejs/server_scripts/40_balance/m3_threat_director.js",
+    "kubejs/server_scripts/00_core/if_commands.js",
+    "tools/test_quest_epoch_bridge.js"
+  ],
+  "runtime_gates": [
+    "USER_SINGLEPLAYER_EVENT_PENDING",
+    "USER_MULTIPLAYER_TEAM_UUID_PENDING",
+    "USER_REPEAT_EVENT_IDEMPOTENCE_PENDING",
+    "USER_OPERATOR_RECOVERY_PERMISSION_PENDING"
+  ]
+}

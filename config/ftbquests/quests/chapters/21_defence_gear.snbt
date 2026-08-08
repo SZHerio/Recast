@@ -1,0 +1,158 @@
+{
+	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
+	default_quest_shape: "square"
+	filename: "21_defence_gear"
+	group: "1000000000000003"
+	icon: "tacz:gun_smith_table"
+	id: "2021000000000001"
+	order_index: 11
+	quest_links: [ ]
+	quests: [
+		{
+			hide_until_deps_complete: true
+			dependencies: ["3012000000000009"]
+			description: [
+				"{industrial_frontier.quest.defence.intro.desc.1}"
+				"{industrial_frontier.quest.defence.intro.desc.2}"
+				"{industrial_frontier.quest.defence.intro.desc.3}"
+			]
+			icon: "minecraft:shield"
+			id: "3021000000000001"
+			optional: true
+			subtitle: "{industrial_frontier.quest.defence.intro.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4021000000000001"
+				title: "{industrial_frontier.quest.defence.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.defence.intro.title}"
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["3021000000000001"]
+			description: [
+				"{industrial_frontier.quest.defence.melee.desc.1}"
+				"{industrial_frontier.quest.defence.melee.desc.2}"
+				"{industrial_frontier.quest.defence.melee.desc.3}"
+			]
+			icon: "magistuarmory:iron_bastardsword"
+			id: "3021000000000002"
+			optional: true
+			subtitle: "{industrial_frontier.quest.defence.melee.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4021000000000002"
+				title: "{industrial_frontier.quest.defence.melee.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.defence.melee.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
+		}
+		{
+			dependencies: ["3021000000000001"]
+			description: [
+				"{industrial_frontier.quest.defence.firearms.desc.1}"
+				"{industrial_frontier.quest.defence.firearms.desc.2}"
+				"{industrial_frontier.quest.defence.firearms.desc.3}"
+			]
+			icon: "tacz:ammo"
+			id: "3021000000000003"
+			optional: true
+			subtitle: "{industrial_frontier.quest.defence.firearms.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4021000000000003"
+				title: "{industrial_frontier.quest.defence.firearms.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.defence.firearms.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
+		}
+		{
+			dependencies: ["3021000000000002"]
+			description: [
+				"{industrial_frontier.quest.defence.structures.desc.1}"
+				"{industrial_frontier.quest.defence.structures.desc.2}"
+				"{industrial_frontier.quest.defence.structures.desc.3}"
+			]
+			icon: "minecraft:filled_map"
+			id: "3021000000000004"
+			optional: true
+			subtitle: "{industrial_frontier.quest.defence.structures.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4021000000000004"
+				title: "{industrial_frontier.quest.defence.structures.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.defence.structures.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
+		}
+		{
+			dependencies: ["3021000000000003"]
+			description: [
+				"{industrial_frontier.quest.defence.cannons.desc.1}"
+				"{industrial_frontier.quest.defence.cannons.desc.2}"
+				"{industrial_frontier.quest.defence.cannons.desc.3}"
+			]
+			icon: "createbigcannons:cast_iron_cannon_barrel"
+			id: "3021000000000005"
+			optional: true
+			subtitle: "{industrial_frontier.quest.defence.cannons.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4021000000000005"
+				title: "{industrial_frontier.quest.defence.cannons.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.defence.cannons.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"3021000000000004"
+				"3021000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.defence.discipline.desc.1}"
+				"{industrial_frontier.quest.defence.discipline.desc.2}"
+				"{industrial_frontier.quest.defence.discipline.desc.3}"
+				"{industrial_frontier.quest.defence.discipline.desc.4}"
+			]
+			icon: "minecraft:iron_chestplate"
+			id: "3021000000000006"
+			optional: true
+			subtitle: "{industrial_frontier.quest.defence.discipline.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4021000000000006"
+				title: "{industrial_frontier.quest.defence.discipline.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.defence.discipline.title}"
+			shape: "diamond"
+			size: 1.5d
+			x: 6d
+			y: 0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.defence.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.defence.title}"
+}

@@ -16,8 +16,6 @@
 			]
 			icon: "minecraft:compass"
 			id: "3000000000000001"
-			shape: "gear"
-			size: 2.5d
 			subtitle: "{industrial_frontier.quest.start.welcome.subtitle}"
 			tags: ["tutorial"]
 			tasks: [{
@@ -28,8 +26,10 @@
 				type: "dimension"
 			}]
 			title: "{industrial_frontier.quest.start.welcome.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["3000000000000001"]
@@ -47,8 +47,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.start.reading.title}"
-			x: 3.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 0d
 		}
 		{
 			dependencies: ["3000000000000002"]
@@ -67,8 +69,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.start.jei.title}"
-			x: 6.0d
-			y: -1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: ["3000000000000002"]
@@ -86,8 +90,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.start.team.title}"
-			x: 6.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
 			dependencies: [
@@ -117,8 +123,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.start.wood_tag.title}"
-			x: 9.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 0d
 		}
 		{
 			dependencies: ["3000000000000005"]
@@ -133,8 +141,6 @@
 			]
 			icon: "minecraft:chest"
 			id: "3000000000000006"
-			shape: "gear"
-			size: 1.5d
 			subtitle: "{industrial_frontier.quest.start.bulk_chest.subtitle}"
 			tags: ["tutorial"]
 			tasks: [{
@@ -148,8 +154,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.start.bulk_chest.title}"
-			x: 12.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 0d
 		}
 		{
 			dependencies: ["3000000000000006"]
@@ -159,7 +167,6 @@
 			]
 			icon: "create:andesite_casing"
 			id: "3000000000000007"
-			shape: "diamond"
 			subtitle: "{industrial_frontier.quest.start.next.subtitle}"
 			tags: ["tutorial"]
 			tasks: [{
@@ -168,8 +175,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.start.next.title}"
-			x: 15.0d
-			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			x: 10d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.start.subtitle}"]

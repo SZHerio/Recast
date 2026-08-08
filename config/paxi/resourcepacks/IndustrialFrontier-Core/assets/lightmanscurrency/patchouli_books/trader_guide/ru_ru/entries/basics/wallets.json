@@ -1,0 +1,87 @@
+{
+	"name": "Кошельки",
+	"icon": "lightmanscurrency:wallet_gold",
+	"category": "lightmanscurrency:basics",
+	"pages":[
+		"Кошелёк — один из важнейших предметов Lightman's Currency, поэтому изготовить его стоит как можно раньше.$(br2)В нём хранятся любые монеты. Кошелёк автоматически взаимодействует с торговыми устройствами, выдавая и принимая монеты при оплате или получении денег.",
+		"Так можно хранить деньги и проводить расчёты, не занимая монетами ячейки обычного инвентаря.$(br2)По умолчанию кошельки более высокого качества имеют больше возможностей и вмещают больше монет.$(br2)Кошелёк — ключевая механика мода: при некоторых способах покупки для оплаты $(l)обязательно$() нужен экипированный кошелёк.",
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_leather",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_leather) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_leather; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_leather; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_leather; * Ограниченный доступ к банку)$()$(br2)Можно окрасить в любой цвет, как обычную кожаную броню."
+		},
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_copper",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_copper) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_copper; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_copper; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_copper; * Ограниченный доступ к банку)$()"
+		},
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_iron",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_iron) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_iron; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_iron; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_iron; * Ограниченный доступ к банку)$()"
+		},
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_gold",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_gold) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_gold; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_gold; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_gold; * Ограниченный доступ к банку)$()"
+		},
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_emerald",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_emerald) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_emerald; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_emerald; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_emerald; * Ограниченный доступ к банку)$()"
+		},
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_diamond",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_diamond) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_diamond; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_diamond; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_diamond; * Ограниченный доступ к банку)$()"
+		},
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_netherite",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_netherite) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_netherite; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_netherite; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_netherite; * Ограниченный доступ к банку)$()$(br3)Не получает урон от огня"
+		},
+		{
+			"type":"patchouli:crafting",
+			"recipe":"lightmanscurrency:wallet/wallet_nether_star",
+			"text":"$(br) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_nether_star) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_nether_star; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_nether_star; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_nether_star; * Ограниченный доступ к банку)$()$(br) * $(lightmanscurrency_wallet_magnet:wallet_nether_star) доп. ур. $(item)«Магнита для монет»$()$(br2)Полностью неуязвим"
+		},
+		{
+			"type":"patchouli:spotlight",
+			"item":"lightmanscurrency:wallet_ender_dragon",
+			"link_recipe":true,
+			"text":"С вероятностью 10% встречается в сундуках города Края.$(br)Нельзя изготовить.$(br2) * Обычная вместимость: $(lightmanscurrency_wallet_slots:wallet_ender_dragon) яч.$(br)$(l:basics/wallets#coin_exchange)$(lightmanscurrency_wallet_exchange:lightmanscurrency-wallet_ender_dragon; * Обмен монет)$()$(br)$(l:basics/wallets#coin_pickup)$(lightmanscurrency_wallet_pickup:lightmanscurrency-wallet_ender_dragon; * Автоподбор монет)$()$(br)$(l:basics/wallets#bank_access)$(lightmanscurrency_wallet_bank:lightmanscurrency-wallet_ender_dragon; * Ограниченный доступ к банку)$()$(br) * $(lightmanscurrency_wallet_magnet:wallet_ender_dragon) доп. ур. $(item)«Магнита для монет»$()$(br)Можно улучшить ещё 2 раза$(br)    Не получает урон от огня"
+		},
+		"Помимо обычного рецепта, большинство кошельков можно улучшить из менее качественного варианта, добавив нужные материалы.$(br2)Кроме того, вместимость кошелька можно увеличить ограниченное число раз с помощью $(item)алмаза$(): примените его к кошельку в любом меню, не связанном с кошельками.",
+		{
+			"type":"lightmanscurrency:wide_image",
+			"flag":"!mod:curios",
+			"image":"lightmanscurrency:textures/gui/trader_guide/basics/wallets/wallet_slot_normal.png",
+			"text":"Сам кошелёк $(o)можно$() открыть, применив его как предмет. Но большинство возможностей — автоматический сбор и использование при оплате — работают только тогда, когда кошелёк экипирован в показанную выше ячейку."
+		},
+		{
+			"type":"lightmanscurrency:wide_image",
+			"flag":"mod:curios",
+			"image":"lightmanscurrency:textures/gui/trader_guide/basics/wallets/wallet_slot_curios.png",
+			"text":"Сам кошелёк $(o)можно$() открыть, применив его как предмет. Но большинство возможностей — автоматический сбор и использование при оплате — работают только тогда, когда кошелёк экипирован в показанную выше ячейку кошелька Curios."
+		},
+		{
+			"type":"patchouli:text",
+			"anchor":"coin_exchange",
+			"title":"Обмен монет",
+			"text":"У кошельков с возможностью $(l)«Обмен монет»$() в меню появляется кнопка, которая вручную заменяет все находящиеся внутри монеты на монеты наибольшего доступного номинала. Так та же сумма занимает меньше предметов.$(br2)Эта возможность необходима для эффективного использования ячеек кошелька."
+		},
+		{
+			"type":"patchouli:text",
+			"anchor":"coin_pickup",
+			"title":"Автоподбор монет",
+			"text":"Кошельки с возможностью $(l)«Автоподбор монет»$() автоматически отправляют внутрь монеты, которые вы подбираете с земли. Такие кошельки также можно зачаровать «Магнитом для монет».$(br)Поскольку эта возможность открывается после обмена, подобранные монеты сразу обмениваются на наибольший номинал и занимают меньше места."
+		},
+		{
+			"type":"patchouli:text",
+			"anchor":"bank_access",
+			"title":"Доступ к банку",
+			"text":"Кошелёк с доступом к банку позволяет вносить деньги на банковские счета и снимать их прямо из своего меню.$(br2)Кнопка слева вверху открывает второе меню с упрощёнными версиями вкладок банкомата для выбора счёта и операций с ним."
+		}
+	]
+
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Minigun",
+  "icon": "pneumaticcraft:minigun",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Minigun/$ — ручное оружие, работающее на $(l:base_concepts/pressure)сжатом воздухе/$ и боеприпасах $(l:tools/minigun_ammo)Gun Ammo/$. Боеприпасы нужно поместить в $(l:tools/minigun_ammo#magazine)магазин Minigun/$: из инвентаря игрока они не расходуются.$(p)Чтобы стрелять, удерживайте $(thing)ПКМ/$. Ствол начнёт вращаться и откроет огонь, набрав нужную скорость."
+    },
+    {
+      "type": "text",
+      "title": "Улучшение",
+      "text": "Многие характеристики $(item)Minigun/$ — скорость раскрутки, дальность, вероятность наложения эффекта зелья и другие — улучшаются в $(l:machines/charging_station)зарядной станции/$.$(p)Полное описание улучшений и их эффектов приведено во вкладке улучшений зарядной станции."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание Minigun",
+      "recipe": "pneumaticcraft:minigun"
+    }
+  ]
+}

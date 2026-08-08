@@ -1,0 +1,2156 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.p2",
+    "engine_id": "2012000000000001",
+    "filename": "12_p2",
+    "group": {
+      "alias": "if.group.v2.mainline",
+      "engine_id": "1000000000000004",
+      "title_ru": "Главная линия"
+    },
+    "order": 12,
+    "icon": "industrial_frontier:textures/gui/icons/epochs/p2.png",
+    "epoch": "P2",
+    "tags": [
+      "mainline",
+      "steam",
+      "metallurgy"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "P2 — Пар и металлургия",
+      "subtitle": "Выбранный котёл, первая паровая машина, кокс, доменная сталь, пластины и латунь",
+      "description": [
+        "P2 связывает механику Create с ранней металлургией GTCEu. Котёл превращает воду и выбранный источник тепла в пар, а машина использует его как рабочую среду.",
+        "Параллельно угольное сырьё становится коксом, затем сталью. Пластины и латунь завершают набор материалов, необходимый для электрической эпохи."
+      ]
+    },
+    "editorial": {
+      "voice": "Начальник раннего металлургического цеха: предупреждает об опасности до запуска и объясняет поток воды, пара, топлива и металла.",
+      "tone_rules": [
+        "Источник, промежуточный продукт и готовый металл проверять отдельными задачами.",
+        "Котлы показывать как альтернативы, а не как коллекцию обязательных машин.",
+        "Сначала малая учебная партия, затем подготовка к автоматизации."
+      ],
+      "avoid": [
+        "Не называть пар электричеством.",
+        "Не обещать исправный многоблок по одному контроллеру.",
+        "Не принимать древесный уголь вместо сырья коксовой цепочки."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.p2.intro",
+      "engine_id": "3012000000000001",
+      "epoch": "P2",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:campfire",
+      "tags": [
+        "mainline",
+        "briefing"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p1.commissioning",
+            "reason": "Паровая металлургия начинается после принятой механической линии P1.",
+            "evidence": [
+              "docs/registries/m2_progression_graph.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.intro.read",
+          "engine_id": "4012000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте два потока P2 и подтвердите безопасный порядок запуска.",
+            "help": "Если схема неясна, отдельно проследите воду до пара и угольное сырьё до стали."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Два потока одного цеха",
+        "lead_ru": "Пар приводит машины, а кокс обеспечивает металлургию; смешивать эти функции нельзя.",
+        "purpose_ru": "Глава строится из двух параллельных потоков. Водяной поток заканчивается рабочей паровой машиной, углеродный — сталью; пластины и латунь связывают их с P3.",
+        "steps_ru": [
+          "Наметьте безопасное место для котла, подачи воды и отдельной паровой машины.",
+          "Оставьте рядом площадку для примитивной доменной печи и склад угольного сырья."
+        ],
+        "success_ru": "Вы различаете энергетический и металлургический потоки и понимаете, где они сходятся перед P3.",
+        "diagnostics_ru": [
+          "Если план тесный, разделите горячую зону, склад топлива и рабочие проходы до установки контроллеров."
+        ],
+        "next_ru": "Сначала подготовим угольное сырьё и параллельно выберем подходящий котёл.",
+        "task_text_ru": "Прочитайте два потока P2 и подтвердите безопасный порядок запуска."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вводная показывает причинную карту главы и заранее отделяет пар от углерода."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Потоки сверены с m2_progression_graph и паспортами веществ."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_progression_graph.json",
+          "evidence": [
+            "P2 требует паровую, коксовую и металлургическую инфраструктуру."
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_substance_passports.json",
+          "evidence": [
+            "Паспорта отдельно описывают пар, кокс, сталь и латунь."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Брифинг не требует предметов."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.carbon_feedstock",
+      "engine_id": "3012000000000002",
+      "epoch": "P2",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "minecraft:coal",
+      "tags": [
+        "mainline",
+        "carbon",
+        "source_product_split"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.intro",
+            "reason": "Угольный поток начинается с точного допустимого сырья после брифинга.",
+            "evidence": [
+              "docs/registries/quest_acceptance_sets.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.carbon_feedstock.items",
+          "engine_id": "4012000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите восемь единиц угольного сырья из принятого набора.",
+            "help": "Подойдут обычный уголь или сырой уголь GTCEu; древесный уголь и готовый кокс исключены."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:quest_sources/coking_feedstock",
+            "count": 8
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сырьё для коксовой линии",
+        "lead_ru": "Обычный уголь и сырой уголь GTCEu подходят, но древесный уголь остаётся только ранним топливом.",
+        "purpose_ru": "Единый набор подтверждает освоение месторождения и вход коксовой цепочки. Готовый кокс не принимается, потому что является продуктом следующей операции.",
+        "steps_ru": [
+          "Получите восемь единиц обычного или сырого угля из списка задачи.",
+          "Сохраните партию для коксования; предметная проверка её не расходует."
+        ],
+        "success_ru": "В инвентаре есть восемь принятых входов, и углеродный поток готов к первой переработке.",
+        "diagnostics_ru": [
+          "Если древесный уголь не считается, это намеренно: используйте его как топливо, но найдите угольное сырьё для технологии.",
+          "Если у вас уже есть кокс, он пригодится дальше, однако не заменяет подтверждение источника."
+        ],
+        "next_ru": "Следующая задача проверит отдельный продукт — кокс.",
+        "task_text_ru": "Получите восемь единиц угольного сырья из принятого набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Квест использует локальный acceptance set и отделяет SOURCE от продукта коксования."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег, два входа и исключения сверены с quest_acceptance_sets и datapack."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:quest_sources/coking_feedstock",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_sources/coking_feedstock.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/quest_acceptance_sets.json",
+          "evidence": [
+            "Набор coking_feedstock принимает coal/raw_coal и исключает charcoal/coke."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 8,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Восемь единиц обеспечивают небольшую учебную партию без массовой добывающей квоты."
+      },
+      "layout": {
+        "x": 2,
+        "y": -3,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.coke",
+      "engine_id": "3A12000000000001",
+      "epoch": "P2",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:coke_gem",
+      "tags": [
+        "mainline",
+        "carbon",
+        "source_product_split"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.carbon_feedstock",
+            "reason": "Кокс является отдельным продуктом уже подтверждённого угольного сырья.",
+            "evidence": [
+              "docs/registries/m2_substance_passports.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.coke.items",
+          "engine_id": "4A12000000000001",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите четыре единицы кокса GTCEu.",
+            "help": "Проверяется точная форма coke_gem; кокс не расходуется при зачёте."
+          },
+          "item": {
+            "id": "gtceu:coke_gem",
+            "count": 4,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Уголь становится коксом",
+        "lead_ru": "Кокс — не просто топливо с другим названием, а подготовленный углеродный материал для доменной операции.",
+        "purpose_ru": "Отдельная проверка продукта показывает смену формы и функции. Четырёх единиц достаточно для первой металлургической партии и диагностики маршрута.",
+        "steps_ru": [
+          "Откройте в JEI доступный рецепт кокса GTCEu из выбранного угольного сырья.",
+          "Получите четыре единицы и сохраните их для примитивной доменной печи."
+        ],
+        "success_ru": "В инвентаре есть четыре единицы кокса, а углеродный поток готов войти в доменную операцию.",
+        "diagnostics_ru": [
+          "Если процесс не начинается, сначала сверьте точную форму угольного входа и требуемую установку.",
+          "Если результат имеет другую форму, проверьте его применения и приведите к coke_gem только разрешённым рецептом."
+        ],
+        "next_ru": "Кокс понадобится примитивной доменной печи для первой стали.",
+        "task_text_ru": "Получите четыре единицы кокса GTCEu."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Сырьё и продукт разведены; конкретная установка коксования не утверждается без локального recipe evidence."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Item ID подтверждён census; точный рецепт оставлен действующему JEI."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:coke_gem",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_substance_passports.json",
+          "evidence": [
+            "Паспорт кокса отделяет материал от исходного угля."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Четыре единицы — одна учебная металлургическая партия."
+      },
+      "layout": {
+        "x": 4,
+        "y": -3,
+        "shape": "rsquare",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.boiler_solid",
+      "engine_id": "3A12000000000002",
+      "epoch": "P2",
+      "role": "machine",
+      "requirement": "optional",
+      "icon": "gtceu:lp_steam_solid_boiler",
+      "tags": [
+        "choice",
+        "boiler",
+        "solid_fuel"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.intro",
+            "reason": "Котёл выбирается после планирования отдельной горячей зоны.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.boiler_solid.item",
+          "engine_id": "4A12000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один паровой котёл низкого давления на твёрдом топливе.",
+            "help": "Котёл останется частью выбранной паровой линии."
+          },
+          "item": {
+            "id": "gtceu:lp_steam_solid_boiler",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Котёл на твёрдом топливе",
+        "lead_ru": "Этот путь прост для запуска, если уголь уже поступает в цех.",
+        "purpose_ru": "Твердотопливный котёл связывает склад топлива с паром и удобен для первого стабильного запуска. Он требует контролировать подачу воды и запас топлива.",
+        "steps_ru": [
+          "Соберите котёл низкого давления на твёрдом топливе.",
+          "Установите его в горячей зоне с доступом к воде, топливу и паровому выходу."
+        ],
+        "success_ru": "Выбранный котёл готов к подаче воды и запуску общей паровой проверки.",
+        "diagnostics_ru": [
+          "До розжига убедитесь, что вода уже доступна на входе.",
+          "Если пар не появляется, проверьте топливо, воду и свободный паровой выход."
+        ],
+        "next_ru": "После любого одного выбранного котла общий узел проверит полученный пар.",
+        "task_text_ru": "Получите один паровой котёл низкого давления на твёрдом топливе.",
+        "optional_note_ru": "Достаточно одного котла. Выбирайте этот вариант при надёжном угольном снабжении; жидкостный и солнечный пути строить не нужно."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Твердотопливный вариант описан как выбор снабжения, а не обязательная первая машина."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Точный item ID подтверждён локальным census."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:lp_steam_solid_boiler",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "gtceu-low-pressure-steam-generation",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Строится один выбранный котёл; коллекция вариантов не требуется."
+      },
+      "layout": {
+        "x": 2,
+        "y": -1,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.boiler_liquid",
+      "engine_id": "3A12000000000003",
+      "epoch": "P2",
+      "role": "machine",
+      "requirement": "optional",
+      "icon": "gtceu:lp_steam_liquid_boiler",
+      "tags": [
+        "choice",
+        "boiler",
+        "liquid_fuel"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.intro",
+            "reason": "Котёл выбирается после планирования отдельной горячей зоны.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.boiler_liquid.item",
+          "engine_id": "4A12000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один паровой котёл низкого давления на жидком топливе.",
+            "help": "Эта ветвь проверяет точный жидкостный котёл."
+          },
+          "item": {
+            "id": "gtceu:lp_steam_liquid_boiler",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Котёл на жидком топливе",
+        "lead_ru": "Жидкое топливо упрощает трубную подачу, если такой поток уже существует у вашей базы.",
+        "purpose_ru": "Этот котёл выбирают ради управляемого топливного потока. Он не становится выгоднее автоматически: доступность топлива и безопасная разводка важнее названия машины.",
+        "steps_ru": [
+          "Проверьте в JEI доступное жидкое топливо и только после этого соберите котёл.",
+          "Установите отдельные линии воды, топлива и пара, не соединяя резервуары случайно."
+        ],
+        "success_ru": "Жидкостный котёл готов к контролируемой подаче воды и топлива.",
+        "diagnostics_ru": [
+          "Если котёл не принимает жидкость, проверьте её точный ID и сторону ввода.",
+          "Если паровой выход забит, остановите топливо до очистки линии."
+        ],
+        "next_ru": "После любого одного выбранного котла общий узел проверит полученный пар.",
+        "task_text_ru": "Получите один паровой котёл низкого давления на жидком топливе.",
+        "optional_note_ru": "Достаточно одного котла. Выбирайте жидкостный вариант только при уже понятном топливном потоке; остальные ветви необязательны."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст не придумывает список жидких топлив и требует сверить фактический JEI."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Точный item ID подтверждён локальным census."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:lp_steam_liquid_boiler",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "gtceu-low-pressure-steam-generation",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Один выбранный котёл выполняет функцию; лишние варианты не требуются."
+      },
+      "layout": {
+        "x": 2,
+        "y": 0,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.boiler_solar",
+      "engine_id": "3A12000000000004",
+      "epoch": "P2",
+      "role": "machine",
+      "requirement": "optional",
+      "icon": "gtceu:lp_steam_solar_boiler",
+      "tags": [
+        "choice",
+        "boiler",
+        "solar"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.intro",
+            "reason": "Котёл выбирается после планирования отдельной горячей зоны.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.boiler_solar.item",
+          "engine_id": "4A12000000000004",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один солнечный паровой котёл низкого давления.",
+            "help": "Солнечный вариант проверяется как отдельный допустимый выбор."
+          },
+          "item": {
+            "id": "gtceu:lp_steam_solar_boiler",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Солнечный паровой котёл",
+        "lead_ru": "Солнечный путь уменьшает расход топлива, но зависит от размещения и доступного времени работы.",
+        "purpose_ru": "Котёл подходит для базы с открытой площадкой и терпимым переменным потоком. Он учит учитывать не только рецепт, но и режим доступности источника.",
+        "steps_ru": [
+          "Соберите солнечный котёл и выберите открытую площадку без перекрытия.",
+          "Подведите воду и предусмотрите буфер пара для периодов без выработки."
+        ],
+        "success_ru": "Солнечный котёл готов к работе, а переменный режим учтён в планировке парового буфера.",
+        "diagnostics_ru": [
+          "Если пар не появляется, проверьте открытое небо, время работы и подачу воды.",
+          "Если машине не хватает непрерывности, увеличьте буфер или выберите другой котёл вместо обязательного ожидания."
+        ],
+        "next_ru": "После любого одного выбранного котла общий узел проверит полученный пар.",
+        "task_text_ru": "Получите один солнечный паровой котёл низкого давления.",
+        "optional_note_ru": "Достаточно одного котла. Солнечный путь выбирают ради экономии топлива, но он не обязателен и не требует строить другие варианты."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Переменная выработка описана как планировочное решение без неподтверждённых чисел."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Точный item ID подтверждён локальным census."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:lp_steam_solar_boiler",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "gtceu-low-pressure-steam-generation",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Строится один выбранный вариант; ожидание солнца не используется как искусственный gate."
+      },
+      "layout": {
+        "x": 2,
+        "y": 1,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.steam_ready",
+      "engine_id": "3012000000000003",
+      "epoch": "P2",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "gtceu:steam_bucket",
+      "tags": [
+        "mainline",
+        "steam",
+        "choice_join"
+      ],
+      "dependency": {
+        "mode": "ANY_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.boiler_solid",
+            "reason": "Твердотопливный котёл способен закрыть функцию парогенерации.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.boiler_liquid",
+            "reason": "Жидкостный котёл способен закрыть функцию парогенерации.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.boiler_solar",
+            "reason": "Солнечный котёл способен закрыть функцию парогенерации.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.steam_ready.fluid",
+          "engine_id": "4A12000000000005",
+          "type": "fluid",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите 1000 mB пара GTCEu.",
+            "help": "Условие проверяет каноническую жидкость gtceu:steam независимо от выбранного котла."
+          },
+          "fluid": {
+            "id": "gtceu:steam",
+            "amount": 1000
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первый рабочий пар",
+        "lead_ru": "Выбранный котёл должен дать измеримый продукт — канонический пар GTCEu.",
+        "purpose_ru": "Жидкостная проверка объединяет три котла по реальной функции. Она не засчитывает одну лишь иконку машины и не требует строить остальные варианты.",
+        "steps_ru": [
+          "Подведите воду к выбранному котлу до подачи тепла или топлива.",
+          "Запустите котёл безопасным способом и накопите 1000 mB пара в доступной линии или резервуаре."
+        ],
+        "success_ru": "Система обнаружила 1000 mB gtceu:steam, и паровой поток готов к подключению первой машины.",
+        "diagnostics_ru": [
+          "Если пара нет, сначала проверьте воду, затем источник тепла и свободный выход.",
+          "Если объём не накапливается, временно отключите потребителя и проверьте утечку либо неверную сторону трубы."
+        ],
+        "next_ru": "Подключим пар к мацератору и научимся читать его стороны и выход.",
+        "task_text_ru": "Получите 1000 mB пара GTCEu."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "ANY_OF котлов объединяется объективной fluid-проверкой общей функции."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Fluid ID подтверждён census и паспортом вещества; объём ограничен одной демонстрационной порцией."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "fluid",
+          "id": "gtceu:steam",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json",
+            "docs/registries/m2_substance_passports.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_substance_passports.json",
+          "evidence": [
+            "Каноническая fluid-форма пара — gtceu:steam."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "1000 mB показывает функцию без требования большого парового запаса."
+      },
+      "layout": {
+        "x": 4,
+        "y": 0,
+        "shape": "hexagon",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.steam_machine",
+      "engine_id": "3012000000000004",
+      "epoch": "P2",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "gtceu:lp_steam_macerator",
+      "tags": [
+        "mainline",
+        "steam_machine"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.steam_ready",
+            "reason": "Первая машина подключается только после подтверждения рабочего парового потока.",
+            "evidence": [
+              "docs/registries/m2_substance_passports.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.steam_machine.item",
+          "engine_id": "4A12000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один паровой мацератор низкого давления.",
+            "help": "Машина останется в цехе после проверки."
+          },
+          "item": {
+            "id": "gtceu:lp_steam_macerator",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p2.steam_machine.use",
+          "engine_id": "4A12000000000007",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите паровой мацератор и откройте его интерфейс.",
+            "help": "Проверьте точный блок и доступ к стороне парового входа."
+          },
+          "use": {
+            "block": "gtceu:lp_steam_macerator",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первая паровая машина",
+        "lead_ru": "Мацератор показывает полный порядок запуска: машина, стороны, пар, вход, свободный выход.",
+        "purpose_ru": "Дробление подготавливает рудное сырьё к более управляемой металлургии. Машина вводится как рабочий узел, а не как предмет для коллекции.",
+        "steps_ru": [
+          "Установите мацератор рядом с паровой линией и оставьте доступ к его сторонам.",
+          "Откройте интерфейс, настройте паровой вход и предусмотрите место для продукта.",
+          "Проверьте одну подходящую учебную порцию по рецепту JEI."
+        ],
+        "success_ru": "Интерфейс мацератора доступен, пар подведён, а учебная порция может пройти без ручной перестановки машины.",
+        "diagnostics_ru": [
+          "Если машина не запускается, проверьте пар, правильную сторону входа и точный рецепт.",
+          "Если обработка остановилась, освободите выход и убедитесь, что паровая линия не опустела."
+        ],
+        "next_ru": "Параллельно соберём примитивную доменную печь и получим первую сталь.",
+        "task_text_ru": "Получите, установите и откройте один паровой мацератор низкого давления."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Общий старый узел паровой машины конкретизирован до мацератора как первого полезного потребителя."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Item/block ID подтверждён локальным census; точный учебный рецепт оставлен JEI."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:lp_steam_macerator",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "process",
+          "id": "gtceu-low-pressure-steam-maceration",
+          "evidence": [
+            "mods/gtceu-1.20.1-7.5.3.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Одна машина и одна учебная порция вводят интерфейс без серийного ручного дробления."
+      },
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "shape": "square",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.primitive_blast_furnace",
+      "engine_id": "3A12000000000005",
+      "epoch": "P2",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "gtceu:primitive_blast_furnace",
+      "tags": [
+        "mainline",
+        "metallurgy",
+        "multiblock"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.coke",
+            "reason": "Доменная операция требует подготовленного кокса.",
+            "evidence": [
+              "docs/registries/m2_substance_passports.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.steam_machine",
+            "reason": "Металлургический узел вводится после освоения интерфейса первой машины.",
+            "evidence": [
+              "docs/registries/m2_progression_graph.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.primitive_blast_furnace.item",
+          "engine_id": "4A12000000000008",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите контроллер примитивной доменной печи.",
+            "help": "Предметная проверка подтверждает контроллер, но не всю структуру."
+          },
+          "item": {
+            "id": "gtceu:primitive_blast_furnace",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p2.primitive_blast_furnace.use",
+          "engine_id": "4A12000000000009",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите контроллер и откройте его интерфейс.",
+            "help": "Структуру сверяйте с предпросмотром GTCEu; использование контроллера не заменяет её сборку."
+          },
+          "use": {
+            "block": "gtceu:primitive_blast_furnace",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Примитивная доменная печь",
+        "lead_ru": "Контроллер задаёт структуру, но только готовая сталь дальше докажет, что многоблок собран и работает.",
+        "purpose_ru": "Доменная печь связывает кокс с железом и вводит первый структурный металл. Текущие условия проверяют контроллер и доступ к нему; функциональность подтверждает следующий продуктовый квест.",
+        "steps_ru": [
+          "Получите контроллер и откройте предпросмотр структуры GTCEu.",
+          "Соберите многоблок по точной схеме, оставив рабочий доступ к контроллеру.",
+          "Загрузите первую малую партию железного входа и кокса по рецепту JEI."
+        ],
+        "success_ru": "Контроллер установлен и доступен; окончательная работоспособность будет доказана четырьмя стальными слитками.",
+        "diagnostics_ru": [
+          "Если структура не формируется, сравните каждый слой с предпросмотром и проверьте ориентацию контроллера.",
+          "Если структура собрана, но процесс не идёт, сверьте входы и свободный выход."
+        ],
+        "next_ru": "Следующая задача требует продукт многоблока — первую партию стали.",
+        "task_text_ru": "Получите, установите и откройте контроллер примитивной доменной печи."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст честно ограничивает item/use-proof и переносит доказательство работы на стальной продукт."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Контроллер подтверждён census; структура не выдумана как автоматический proof."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:primitive_blast_furnace",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "process",
+          "id": "gtceu-primitive-blast-furnace-steel",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Строится один многоблок, который остаётся производственным активом."
+      },
+      "layout": {
+        "x": 6,
+        "y": -3,
+        "shape": "gear",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.steel",
+      "engine_id": "3012000000000005",
+      "epoch": "P2",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:steel_ingot",
+      "tags": [
+        "mainline",
+        "metallurgy",
+        "product"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.primitive_blast_furnace",
+            "reason": "Сталь является функциональным продуктом собранной доменной установки.",
+            "evidence": [
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/steel_ingots.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.steel.ingots",
+          "engine_id": "4012000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите четыре стальных слитка из принятого набора.",
+            "help": "Слитки не расходуются и пойдут на корпусные детали следующих машин."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/steel_ingots",
+            "count": 4
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первая сталь",
+        "lead_ru": "Четыре стальных слитка доказывают, что доменная цепочка работает от кокса до металла.",
+        "purpose_ru": "Сталь становится первым структурным сплавом общего производства. Небольшая партия подтверждает способность, не заставляя вручную готовить массовый запас.",
+        "steps_ru": [
+          "Запустите одну малую доменную партию по действующему рецепту JEI.",
+          "Получите четыре подходящих стальных слитка и оставьте их для корпусных деталей."
+        ],
+        "success_ru": "В инвентаре находятся четыре стальных слитка, а работоспособность доменной цепочки доказана продуктом.",
+        "diagnostics_ru": [
+          "Если результата нет, проверьте сформированную структуру, вход железа, кокс и свободный выход.",
+          "Если предмет не считается, убедитесь, что это слиток принятого стального тега, а не горячая или магнитная форма."
+        ],
+        "next_ru": "Часть ранних металлов теперь нужно превратить в пластины.",
+        "task_text_ru": "Получите четыре стальных слитка из принятого набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Продуктовый тег сохраняет межмодовую совместимость и не принимает неподходящие формы."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег подтверждён локальным datapack; количество сохранено из существующего runtime-квеста."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/steel_ingots",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/steel_ingots.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_substance_passports.json",
+          "evidence": [
+            "Паспорт стали отделяет слиток от горячих и специализированных форм."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Четыре слитка — одна полезная партия без массового ручного производства."
+      },
+      "layout": {
+        "x": 8,
+        "y": -3,
+        "shape": "rsquare",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.plates",
+      "engine_id": "3012000000000006",
+      "epoch": "P2",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:iron_plate",
+      "tags": [
+        "mainline",
+        "material_forms"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.steel",
+            "reason": "Формование металла следует после подтверждения структурного сплава.",
+            "evidence": [
+              "docs/registries/m2_material_forms.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.steam_machine",
+            "reason": "Паровой цех уже предоставляет механический путь обработки.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.plates.items",
+          "engine_id": "4012000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите восемь железных пластин из принятого набора.",
+            "help": "Пластины останутся у вас и войдут в первые корпуса и электрические детали."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/iron_plates",
+            "count": 8
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Металл в форме пластины",
+        "lead_ru": "Слиток хранит материал, а пластина становится конструкционной формой для корпусов и механизмов.",
+        "purpose_ru": "Отдельная форма учит выбирать процесс по задаче. Ручной путь допустим для первой партии, но повторный спрос должен перейти на паровой молот или компрессор.",
+        "steps_ru": [
+          "Сравните доступные способы получения железной пластины в JEI.",
+          "Получите восемь пластин удобным ранним маршрутом и сохраните их для P3."
+        ],
+        "success_ru": "В инвентаре есть восемь принятых железных пластин, и форма материала готова к следующему потребителю.",
+        "diagnostics_ru": [
+          "Если результат не считается, проверьте, что это одинарная железная пластина, а не двойная, магнитная или кованая форма.",
+          "Если приходится повторять ручную операцию больше учебной партии, переключитесь на доступную паровую обработку."
+        ],
+        "next_ru": "Параллельно восстановим межмодовую латунную цепочку Cu₃Zn.",
+        "task_text_ru": "Получите восемь железных пластин из принятого набора."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Квест связывает форму материала с будущим корпусом и заранее ограничивает ручное повторение."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Тег подтверждён datapack; восемь единиц соответствуют существующей рабочей партии."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "automation",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/iron_plates",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/iron_plates.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_material_forms.json",
+          "evidence": [
+            "Реестр различает слиток и пластину как функциональные формы."
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:lp_steam_forge_hammer",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 8,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p2/coke_and_steel",
+        "rationale_ru": "Восемь пластин — полезный запас; паровой маршрут доступен до дальнейшего массового спроса."
+      },
+      "layout": {
+        "x": 10,
+        "y": -2,
+        "shape": "square",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.brass",
+      "engine_id": "3012000000000007",
+      "epoch": "P2",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "gtceu:brass_ingot",
+      "tags": [
+        "mainline",
+        "alloy",
+        "cross_mod"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.steam_machine",
+            "reason": "Латунь вводится после появления устойчивого P2-цеха и уже освоенной чаши Create.",
+            "evidence": [
+              "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.brass.ingots",
+          "engine_id": "4012000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите четыре латунных слитка GTCEu.",
+            "help": "Локальный рецепт использует три входа меди и один вход цинка и даёт четыре слитка."
+          },
+          "item": {
+            "id": "gtceu:brass_ingot",
+            "count": 4,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Латунь Cu₃Zn",
+        "lead_ru": "Латунь связывает металлургию GTCEu с нагреваемой пакетной обработкой Create.",
+        "purpose_ru": "Единый рецепт закрепляет состав: три части меди и одна часть цинка дают четыре латунных слитка. Выход не создаёт материал из ничего и сразу допускает автоматическую подачу.",
+        "steps_ru": [
+          "Подготовьте три принятых медных входа и один принятый цинковый вход.",
+          "Подайте их в нагретую чашу Create по рецепту industrial_frontier:m2/create/brass_from_copper_zinc.",
+          "Заберите четыре латунных слитка GTCEu."
+        ],
+        "success_ru": "Одна партия 3 Cu + 1 Zn превратилась в четыре латунных слитка, а межмодовая цепочка сохраняет материальный баланс.",
+        "diagnostics_ru": [
+          "Если смешивание не начинается, проверьте точные входы, нагрев чаши и свободный выход.",
+          "Если получается другой предмет латуни, убедитесь, что активен pack-owned рецепт с выходом gtceu:brass_ingot."
+        ],
+        "next_ru": "Пластины и латунь вместе подготовят корпусные и передающие элементы для электрификации.",
+        "task_text_ru": "Получите четыре латунных слитка GTCEu."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Точный состав и recipe ID подтверждены локальным KubeJS; текст написан как отдельная межмодовая операция."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Стехиометрия, выход и ID сверены с m2_process_ownership.js."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "automation",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:brass_ingot",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "recipe",
+          "id": "industrial_frontier:m2/create/brass_from_copper_zinc",
+          "evidence": [
+            "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_grind_budget.json",
+          "evidence": [
+            "Цепочка p2/brass ограничена одной учебной партией."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p2/brass",
+        "rationale_ru": "Одна партия даёт четыре слитка и сразу допускает автоматическую подачу."
+      },
+      "layout": {
+        "x": 10,
+        "y": 1,
+        "shape": "rsquare",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.ore_policy",
+      "engine_id": "3012000000000008",
+      "epoch": "P2",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "industrial_frontier:textures/gui/icons/process/geology/ore_sources.png",
+      "tags": [
+        "mainline",
+        "routing",
+        "anti_bypass"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.plates",
+            "reason": "Форма металла показывает ценность управляемой обработки.",
+            "evidence": [
+              "docs/registries/m2_bypass_decisions.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.brass",
+            "reason": "Межмодовый сплав показывает единый владелец процесса.",
+            "evidence": [
+              "docs/registries/m2_bypass_decisions.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.ore_policy.read",
+          "engine_id": "4012000000000008",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правило владельца процесса и подтвердите маршруты P2.",
+            "help": "Если дешёвый прямой рецепт отсутствует, это может быть закрытый обход, а не ошибка JEI."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Почему короткий путь закрыт",
+        "lead_ru": "Руда, дроблёный продукт, пыль и слиток имеют разные функции; бесплатная конверсия между ними ломает производственную цепочку.",
+        "purpose_ru": "Владелец процесса задаёт канонический маршрут, а совместимые теги принимают эквивалентный результат. Закрытый обход сохраняет ценность мацератора, формования и металлургии.",
+        "steps_ru": [
+          "Откройте применения одного рудного входа и проследите путь через промежуточные формы.",
+          "Сравните его с готовым слитком и убедитесь, что источник не засчитывается как продукт."
+        ],
+        "success_ru": "Вы можете отличить намеренно закрытый обход от отсутствующего рецепта и знаете, где искать канонический процесс.",
+        "diagnostics_ru": [
+          "Если цепочка действительно обрывается, запишите последний существующий вход и ожидаемый продукт вместо добавления собственного временного рецепта."
+        ],
+        "next_ru": "Осталось принять паровой цех по четырём рабочим результатам и открыть P3.",
+        "task_text_ru": "Прочитайте правило владельца процесса и подтвердите маршруты P2."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Справочный узел объясняет ограничение через функцию цепочки, а не через запрет ради сложности."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Формулировка сверена с bypass registry и паспортами форм."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_bypass_decisions.json",
+          "evidence": [
+            "Реестр фиксирует разрешённые и закрытые рецептурные обходы."
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/m2_material_forms.json",
+          "evidence": [
+            "Формы материала имеют разные функции и владельцев процессов."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Задание объясняет маршрут и не требует дополнительной партии."
+      },
+      "layout": {
+        "x": 12,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p2.commissioning",
+      "engine_id": "3012000000000009",
+      "epoch": "P2",
+      "role": "commissioning",
+      "requirement": "required",
+      "icon": "minecraft:redstone",
+      "tags": [
+        "mainline",
+        "if_commissioning_p2"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.steam_machine",
+            "reason": "Паровой цех должен иметь установленную и открытую рабочую машину.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.steel",
+            "reason": "Доменная ветвь должна доказать готовую сталь.",
+            "evidence": [
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/steel_ingots.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.ore_policy",
+            "reason": "Перед P3 игрок должен понимать формы и закрытые обходы.",
+            "evidence": [
+              "docs/registries/m2_bypass_decisions.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p2.exit.steel",
+          "engine_id": "4A1200000000000A",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте четыре стальных слитка при итоговой приёмке.",
+            "help": "Сталь подтверждает рабочую доменную ветвь и не расходуется."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/steel_ingots",
+            "count": 4
+          }
+        },
+        {
+          "alias": "if.task.v2.p2.exit.brass",
+          "engine_id": "4A1200000000000B",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Имейте четыре латунных слитка при итоговой приёмке.",
+            "help": "Латунь подтверждает межмодовую пакетную обработку."
+          },
+          "item": {
+            "id": "gtceu:brass_ingot",
+            "count": 4,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Паровой цех готов",
+        "lead_ru": "Рабочий пар приводит машину, кокс даёт сталь, а пластины и латунь готовят переход к электричеству.",
+        "purpose_ru": "Итоговая приёмка объединяет энергетический, металлургический и межмодовый результаты. Машины и материалы остаются в цехе; проверка не превращается в сдачу оборудования.",
+        "steps_ru": [
+          "Проверьте доступ к паровой машине и наличие четырёх стальных слитков.",
+          "Убедитесь, что четыре латунных слитка получены единым рецептом и готовы к дальнейшим деталям."
+        ],
+        "success_ru": "Паровой цех принят, а квестовый мост переводит команду из P2 в электрификацию P3.",
+        "diagnostics_ru": [
+          "Если переход закрыт, откройте входящие узлы паровой машины, стали и правила рудного маршрута.",
+          "Если эпоха не меняется после выполнения, сохраните журнал и передайте его владельцу сборки для проверки квестового моста."
+        ],
+        "next_ru": "В P3 паровая турбина превратит пар в EU, а кабели и буфер соберут первую сеть LV.",
+        "task_text_ru": "Подтвердите паровой цех четырьмя стальными и четырьмя латунными слитками."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Единственная итоговая приёмка P2 использует два объективных материальных результата и точный тег эпохи."
+      },
+      "editorial_review": {
+        "state": "RU_PRIMARY_DRAFTED",
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Обязательные концы охватывают паровую машину, сталь и anti-bypass знание; proofs предметные."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "prerequisites",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p2.steam_machine",
+          "evidence": [
+            "Функциональный конец паровой ветви."
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p2.steel",
+          "evidence": [
+            "Функциональный продукт доменной ветви."
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:brass_ingot",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/quest_epoch_bridge.json",
+          "evidence": [
+            "Реестр описывает переход P2→P3."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Приёмка повторно проверяет существующие материалы и ничего не расходует."
+      },
+      "layout": {
+        "x": 14,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.6
+      },
+      "commissioning": {
+        "epoch": "P2",
+        "advances_to": "P3",
+        "required_branch_ends": [
+          "if.quest.v2.p2.steam_machine",
+          "if.quest.v2.p2.steel",
+          "if.quest.v2.p2.ore_policy"
+        ],
+        "epoch_state_evidence": [
+          "docs/registries/quest_epoch_bridge.json",
+          "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js"
+        ]
+      }
+    }
+  ]
+}

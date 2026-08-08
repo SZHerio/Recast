@@ -1,0 +1,19 @@
+{
+  "name": "Виджет «Уничтожить жидкость»",
+  "icon": "pneumaticcraft:textures/progwidgets/void_fluid_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Как и виджет $(l:programming/void_item)Уничтожить предметы/$, этот виджет немедленно и безвозвратно уничтожает жидкость в резервуаре дрона — будьте осторожны! Настоятельно рекомендуется использовать его вместе с $(l:programming/liquid_filter)Фильтром жидкости/$: тогда будет уничтожена только разрешённая фильтром жидкость."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/void_fluid_piece.png"
+      ],
+      "text": "$(italic)Высохло до капли/$"
+    }
+  ]
+}

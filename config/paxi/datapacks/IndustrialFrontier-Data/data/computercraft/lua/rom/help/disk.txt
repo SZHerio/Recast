@@ -1,0 +1,17 @@
+Функции API disk для работы с дисководами:
+disk.isPresent( drive )
+disk.setLabel( drive, label )
+disk.getLabel( drive )
+disk.hasData( drive )
+disk.getMountPath( drive )
+disk.hasAudio( drive )
+disk.getAudioTitle( drive )
+disk.playAudio( drive )
+disk.stopAudio( )
+disk.eject( drive )
+disk.getID( drive )
+
+События API disk:
+"disk" - диск или другой предмет вставлен в дисковод. Аргумент - имя дисковода
+"disk_eject" - диск извлечён из дисковода. Аргумент - имя дисковода
+Введите "help events", чтобы узнать о системе событий.

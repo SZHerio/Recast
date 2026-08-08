@@ -1,0 +1,42 @@
+// Тиры измерений.
+//
+// GregTech умеет показывать, какого уровня измерение: рядом с названием мира в
+// его интерфейсе стоит тир. GCYR этой возможностью не пользуется — проверено
+// разбором JAR, ни один его класс не регистрирует маркер, — поэтому все шесть
+// пунктов назначения выглядят одинаково, хотя различаются требованиями к
+// ракете вчетверо.
+//
+// Здесь тиры проставлены по данным самого мода из data/gcyr/gcyr/planets:
+// rocket_tier 1 у Луны, 2 у Марса, Меркурия и Венеры, 3 у Проксимы b. Это не
+// изменение баланса, а подпись к тому, что уже есть: игрок видит уровень
+// раньше, чем соберёт неподходящую ракету.
+//
+// Орбиты получают тир своей планеты: добраться до орбиты Марса стоит того же,
+// что и до самого Марса. Околоземная орбита — единственная, куда возит
+// Creating Space, и она первого тира.
+GTCEuStartupEvents.registry('gtceu:dimension_marker', (event) => {
+  const marker = (dimension, tier, icon) =>
+    event.create(dimension)
+      .tier(tier)
+      .iconSupplier(() => Item.getItem(icon))
+
+  // Земля и её орбита: начало пути.
+  marker('gcyr:overworld_orbit', 1, 'gcyr:launch_pad')
+
+  // Первый тир: Луна и её орбита.
+  marker('gcyr:luna', 1, 'gcyr:luna_marker')
+  marker('gcyr:luna_orbit', 1, 'gcyr:luna_marker')
+
+  // Второй тир: Марс, Меркурий, Венера и их орбиты.
+  marker('gcyr:mars', 2, 'gcyr:mars_marker')
+  marker('gcyr:mars_orbit', 2, 'gcyr:mars_marker')
+  marker('gcyr:mercury', 2, 'gcyr:mercury_marker')
+  marker('gcyr:mercury_orbit', 2, 'gcyr:mercury_marker')
+  marker('gcyr:venus', 2, 'gcyr:venus_marker')
+  marker('gcyr:venus_orbit', 2, 'gcyr:venus_marker')
+
+  // Третий тир: другая звёздная система. Собственного маркера-предмета у неё
+  // в моде нет, поэтому иконкой служит сканер ракеты — единственный предмет,
+  // который проверяет, дотянет ли ступень.
+  marker('gcyr:proxima_centauri_b', 3, 'gcyr:rocket_scanner')
+})

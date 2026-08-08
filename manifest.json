@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Recast",
-  "version": "IF-M5-0001",
+  "version": "IF-M10-0001",
   "author": "SZHerio",
   "files": [
     {
@@ -32,6 +32,26 @@
     {
       "projectID": 223794,
       "fileID": 7148487,
+      "required": true
+    },
+    {
+      "projectID": 228702,
+      "fileID": 6868143,
+      "required": true
+    },
+    {
+      "projectID": 229045,
+      "fileID": 6868148,
+      "required": true
+    },
+    {
+      "projectID": 229046,
+      "fileID": 6868147,
+      "required": true
+    },
+    {
+      "projectID": 230111,
+      "fileID": 6868146,
       "required": true
     },
     {
@@ -75,6 +95,11 @@
       "required": true
     },
     {
+      "projectID": 242818,
+      "fileID": 8491810,
+      "required": true
+    },
+    {
       "projectID": 244830,
       "fileID": 8499852,
       "required": true
@@ -92,6 +117,11 @@
     {
       "projectID": 248787,
       "fileID": 4770828,
+      "required": true
+    },
+    {
+      "projectID": 258426,
+      "fileID": 7845318,
       "required": true
     },
     {
@@ -195,8 +225,18 @@
       "required": true
     },
     {
+      "projectID": 368293,
+      "fileID": 8237857,
+      "required": true
+    },
+    {
       "projectID": 368825,
       "fileID": 8362093,
+      "required": true
+    },
+    {
+      "projectID": 378609,
+      "fileID": 6418133,
       "required": true
     },
     {
@@ -280,6 +320,11 @@
       "required": true
     },
     {
+      "projectID": 478939,
+      "fileID": 6868149,
+      "required": true
+    },
+    {
       "projectID": 499980,
       "fileID": 8261419,
       "required": true
@@ -297,6 +342,11 @@
     {
       "projectID": 510089,
       "fileID": 5271360,
+      "required": true
+    },
+    {
+      "projectID": 511770,
+      "fileID": 8552902,
       "required": true
     },
     {
@@ -345,6 +395,11 @@
       "required": true
     },
     {
+      "projectID": 569737,
+      "fileID": 7024377,
+      "required": true
+    },
+    {
       "projectID": 570050,
       "fileID": 4799459,
       "required": true
@@ -375,6 +430,11 @@
       "required": true
     },
     {
+      "projectID": 626761,
+      "fileID": 4923828,
+      "required": true
+    },
+    {
       "projectID": 631016,
       "fileID": 4769439,
       "required": true
@@ -397,6 +457,11 @@
     {
       "projectID": 646668,
       "fileID": 8169547,
+      "required": true
+    },
+    {
+      "projectID": 656977,
+      "fileID": 8381644,
       "required": true
     },
     {
@@ -450,6 +515,11 @@
       "required": true
     },
     {
+      "projectID": 856996,
+      "fileID": 5869180,
+      "required": true
+    },
+    {
       "projectID": 858897,
       "fileID": 7850072,
       "required": true
@@ -472,6 +542,11 @@
     {
       "projectID": 890405,
       "fileID": 7917773,
+      "required": true
+    },
+    {
+      "projectID": 892382,
+      "fileID": 8043172,
       "required": true
     },
     {
@@ -512,6 +587,16 @@
     {
       "projectID": 955399,
       "fileID": 5787839,
+      "required": true
+    },
+    {
+      "projectID": 985872,
+      "fileID": 8312911,
+      "required": true
+    },
+    {
+      "projectID": 1008510,
+      "fileID": 7616827,
       "required": true
     },
     {
@@ -567,6 +652,11 @@
     {
       "projectID": 1321420,
       "fileID": 7999913,
+      "required": true
+    },
+    {
+      "projectID": 1337167,
+      "fileID": 8419671,
       "required": true
     },
     {

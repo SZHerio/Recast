@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "chapter_alias": "if.chapter.p8",
+  "engine_id": "2018000000000001",
+  "compiled_path": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+  "optional": false,
+  "quests": [
+    {
+      "alias": "if.quest.p8.intro",
+      "engine_id": "3018000000000001",
+      "purpose": "Объясняет, что орбитальный этап — это связь, а не просто новый способ летать.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.specialisation",
+      "engine_id": "3018000000000002",
+      "purpose": "Показывает специализацию как ответ на обычную перевозку.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.flow",
+      "engine_id": "3018000000000003",
+      "purpose": "Показывает поток, который идёт без игрока рядом.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.survey_satellite",
+      "engine_id": "3018000000000004",
+      "purpose": "Заменяет ноги данными разведки с орбиты.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p8.navigation_grid",
+      "engine_id": "3018000000000005",
+      "purpose": "Показывает навигационную сетку как сеть точек.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p8.power_beam",
+      "engine_id": "3018000000000006",
+      "purpose": "Показывает лучевую энергию как станцию там, где наземная не встанет.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p8.elevator",
+      "engine_id": "3018000000000007",
+      "purpose": "Объясняет лифт как разовый расход, убирающий постоянный подъём.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.accelerator",
+      "engine_id": "3018000000000008",
+      "purpose": "Показывает продукты, которые не даст ни печь, ни реактор.",
+      "task_kind": "item",
+      "grind_class": "GREEN"
+    },
+    {
+      "alias": "if.quest.p8.target_chamber",
+      "engine_id": "3018000000000009",
+      "purpose": "Отмечает приёмную камеру как цель луча.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.fusion_split",
+      "engine_id": "3018000000000010",
+      "purpose": "Разделяет термояд на роль материалов и роль энергии.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.plasma_forge",
+      "engine_id": "3018000000000011",
+      "purpose": "Показывает плазменную печь как вход в крупнейшую структуру сборки.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.renewables",
+      "engine_id": "3018000000000012",
+      "purpose": "Ставит возобновляемые источники рядом с реактором, а не вместо него.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    },
+    {
+      "alias": "if.quest.p8.diagnosis",
+      "engine_id": "3018000000000013",
+      "purpose": "Учит диагностике до того, как склад опустеет.",
+      "task_kind": "checkmark",
+      "grind_class": "NONE"
+    }
+  ]
+}

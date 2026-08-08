@@ -1,0 +1,17 @@
+{
+  "name": "Витринная полка",
+  "icon": "pneumaticcraft:display_shelf",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Витринная полка/$ работает точно так же, как её старший собрат $(l:machines/display_table)витринный стол/$, но занимает половину блока по высоте. Если у блока снизу нет сплошной верхней грани, ножки полки не отображаются."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание витринной полки",
+      "recipe": "pneumaticcraft:display_shelf"
+    }
+  ]
+}

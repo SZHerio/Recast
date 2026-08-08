@@ -1,0 +1,16 @@
+{
+  "name": "Ключ путейца",
+  "icon": "littlelogistics:conductors_wrench",
+  "category": "littlelogistics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "littlelogistics:conductors_wrench",
+      "text": "Если держать ключ путейца в руке, он показывает местоположение всех зарегистрированных локомотивов и буксиров."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Щелчок правой кнопкой мыши по любому рельсу перебирает доступные формы пути."
+    }
+  ]
+}

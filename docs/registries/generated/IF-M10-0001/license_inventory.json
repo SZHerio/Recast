@@ -1,0 +1,3976 @@
+{
+  "schema_version": 1,
+  "build_id": "IF-M10-0001",
+  "generated_at_utc": "2026-08-08T14:24:46.966724+00:00",
+  "method": "Static inspection of JAR metadata; no Minecraft, Forge, or mod code executed.",
+  "interpretation": {
+    "DECLARED": "A license declaration was found in mod metadata.",
+    "LICENSE_FILE_ONLY": "No metadata declaration was found, but a license/notice file exists in the archive.",
+    "UNDECLARED": "No machine-readable declaration or obvious license file was found; manual review is required.",
+    "ERROR": "The archive could not be inspected completely."
+  },
+  "summary": {
+    "jar_count": 133,
+    "status_counts": {
+      "DECLARED": 133
+    },
+    "source_counts": {
+      "CURSEFORGE": 132,
+      "OWNER_EXCEPTION": 1
+    },
+    "manual_review_count": 3
+  },
+  "mods": [
+    {
+      "file_name": "AdChimneys-1.20.1-10.1.31.0-build.2268.jar",
+      "sha256": "932BCD6CDDE75311D59FD5C4C8F0375775C4BC05FEEE3D2BB8CDFA37625A5787",
+      "size_bytes": 349577,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 244830,
+        "file_id": 8499852,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/advanced-chimneys",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "AdPother-1.20.1-8.1.49.0-build.2294.jar",
+      "sha256": "4D66CEB91116D2F1DBC55A125CF8B237A11E3EBA7787908C066E3EE9D18F4DE5",
+      "size_bytes": 899728,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 269973,
+        "file_id": 8554528,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/pollution-of-the-realms",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "AdvancedPeripherals-1.20.1-0.7.48r.jar",
+      "sha256": "664A94FE47D2E9A7E94BC204C1C546617F4AA4B6787D24BCF5694C19F5C2D2BC",
+      "size_bytes": 885438,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 431725,
+        "file_id": 8228409,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/advanced-peripherals",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "agriculturalenhancements-FORGE-1.20.1-0.3.3.jar",
+      "sha256": "E1E8B9E7CCB99A3292FD59E21F2732F9490EC85F6E9FF4F58929539C1CCB7527",
+      "size_bytes": 360785,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 866742,
+        "file_id": 6078300,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/agricultural-enhancements",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "AI-Improvements-1.20-0.5.2.jar",
+      "sha256": "575A4A8E00F982C064D54BB3E73E5CDA2D14414DE054A471A3DAF3F58BDF560A",
+      "size_bytes": 29553,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT License https://github.com/BuiltBrokenModding/AI-Improvements/blob/1.20/LICENSE"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 233019,
+        "file_id": 4578262,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ai-improvements",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "alexsmobs-1.22.9.jar",
+      "sha256": "16BC5BCC19DB9029C24F951346EC71098E6F5B0AFEF96E61894A2E9407AAD37C",
+      "size_bytes": 26350793,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LESSER GENERAL PUBLIC LICENSE"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 426558,
+        "file_id": 5698791,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/alexs-mobs",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "appleskin-forge-mc1.20.1-2.5.1.jar",
+      "sha256": "E12419E43E3BABC810AF289403C5CD96BD7F09809B389ACC6BB2F122B4B2A426",
+      "size_bytes": 47428,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "The Unlicense"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 248787,
+        "file_id": 4770828,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/appleskin",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "appliedenergistics2-forge-15.4.10.jar",
+      "sha256": "FBFEE05C6674CB6B00FE425E945CA4818D41EB34069B60DCB4A36221A0390FCC",
+      "size_bytes": 8495956,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "See GitHub repository for details"
+        }
+      ],
+      "license_files": [
+        "NOTICE"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": true,
+      "review_reasons": [
+        "Ambiguous or placeholder declaration: See GitHub repository for details"
+      ],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 223794,
+        "file_id": 7148487,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "Aquaculture-1.20.1-2.5.7.jar",
+      "sha256": "4C96CF0DD3363A8E15F9EF6B6BFC00AC7D4791E8E9EEEBE19B8092C59E800F8F",
+      "size_bytes": 601839,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 60028,
+        "file_id": 7331172,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/aquaculture",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "architectury-9.2.14-forge.jar",
+      "sha256": "218B471D0B8A1F6CDA14CFC1BEB9EEB0DF54304500ACC6C5613D9B88EC65D9AF",
+      "size_bytes": 580602,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 419699,
+        "file_id": 5137938,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/architectury-api",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "balm-forge-1.20.1-7.3.42.jar",
+      "sha256": "1ABE13B5DE575AF91EBC073B19E4E2CFEDBE795B15F406E9516ED52CBD2DE3A6",
+      "size_bytes": 561670,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [
+        "LICENSE_balm"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 531761,
+        "file_id": 8545415,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/balm",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "bettercombat-forge-1.9.0+1.20.1.jar",
+      "sha256": "49C69DCCF2C641246B4E3DECA81EBAC21F0EE119E81FC713B838B8E33569EEA1",
+      "size_bytes": 1054339,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GPL-3.0"
+        }
+      ],
+      "license_files": [
+        "LICENSE_tinyconfig"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 639842,
+        "file_id": 7287334,
+        "project_slug": "better-combat-by-daedelus",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/better-combat-by-daedelus",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "BiomesOPlenty-1.20.1-18.0.0.592.jar",
+      "sha256": "C587B49931E62F89C2673936A5E7269C6DAABB713DBCC30813CB0F76DA37E01D",
+      "size_bytes": 21800460,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 220318,
+        "file_id": 4617259,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "blockui-1.20.1-1.0.193.jar",
+      "sha256": "0658AEA747CFAEA37171EA0794E420C4AC40E638B1D7DEC50D196086B80A4CB7",
+      "size_bytes": 391010,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GPL3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 522992,
+        "file_id": 7541343,
+        "project_slug": "blockui",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/blockui",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "botarium-forge-1.20.1-2.3.4.jar",
+      "sha256": "470810A364FF4AD4D4FCD4E55798263938FC893970EACECC58E8B741A392B1CF",
+      "size_bytes": 157633,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 704113,
+        "file_id": 5486070,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/botarium",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "BrewinAndChewin-1.20.1-3.2.1.jar",
+      "sha256": "D06EDC7A145E8808903B7BD06E0639458A817FBC4EE589BE239C0AF77A6367DB",
+      "size_bytes": 1206255,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT License"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 637808,
+        "file_id": 6237884,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/brewin-and-chewin",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "car-forge-1.20.1-1.0.42.jar",
+      "sha256": "823002208ABAFFCA601BC914129AA99498B8D4C26AD860D7CA87D3051BBDEB06",
+      "size_bytes": 2666112,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [
+        "assets/car/models/entity/license_plate.mtl",
+        "assets/car/models/entity/license_plate.obj",
+        "assets/car/models/item/license_plate.json",
+        "assets/car/textures/item/license_plate.png",
+        "data/car/recipes/license_plate.json"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 267458,
+        "file_id": 7076409,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ultimate-car-mod",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "carryon-forge-1.20.1-2.1.2.7.jar",
+      "sha256": "D7470921FC5FF988788D43409083F62478AECC91F4B81D7E6B63C80C933D4613",
+      "size_bytes": 439457,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 274259,
+        "file_id": 4882500,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/carry-on",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "CBMultipart-1.20.1-3.3.0.159-universal.jar",
+      "sha256": "4D67B97040AA6F03333A0629D968A494EB1FB49E5FD6F91D0A6FD661118F24F2",
+      "size_bytes": 527817,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU Lesser General Public License v2.1"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 258426,
+        "file_id": 7845318,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/cb-multipart",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "cc-tweaked-1.20.1-forge-1.120.0.jar",
+      "sha256": "F3CDE5A1AA20CA6ACE802FED8250920D73C000E32A392F887B02315DFC678E90",
+      "size_bytes": 3096410,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "ComputerCraft Public License (https://raw.githubusercontent.com/dan200/ComputerCraft/master/LICENSE)"
+        }
+      ],
+      "license_files": [
+        "data/computercraft/lua/rom/help/credits.md"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "OWNER_EXCEPTION",
+        "reason_ru": "CC: Tweaked прекратил публикацию на CurseForge: последняя доступная там forge-сборка — 1.113.1 (файл 5714507, сентябрь 2024). Advanced Peripherals 0.7.45r и новее требуют computercraft [1.116.1,), поэтому пара «новый AP + CurseForge-сборка CC» невозможна в принципе."
+      }
+    },
+    {
+      "file_name": "citadel-2.6.3-1.20.1.jar",
+      "sha256": "56C7AB87348A5292583AAC787B6CF11B5193E77F02AF1D17EA75A96F8640B3CE",
+      "size_bytes": 3185275,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LESSER GENERAL PUBLIC LICENSE"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 331936,
+        "file_id": 7476570,
+        "project_slug": "citadel",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/citadel",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "cloth-config-11.1.136-forge.jar",
+      "sha256": "1E895E85CF5B1E1905EF3178EC155C8BADFE22A1577B92C09143A5AA1F4CE0F2",
+      "size_bytes": 1181413,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LGPLv3"
+        }
+      ],
+      "license_files": [
+        "LICENSE.md"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 348521,
+        "file_id": 5729105,
+        "project_slug": "cloth-config",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/cloth-config",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
+      "sha256": "754240E1CD05CAAF511A808DDF6FC74ECE68A8FCA7D94548D9AC967287F7960D",
+      "size_bytes": 1473536,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU Lesser General Public License v2.1"
+        }
+      ],
+      "license_files": [
+        "LICENSE",
+        "LICENSE.txt"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 242818,
+        "file_id": 8491810,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-1-8",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "cookingforblockheads-forge-1.20.1-16.0.15.jar",
+      "sha256": "AFE0E99F9929B29ABED3EE9530C834255D9EC723D3790F2F2E6F3C6F60799CBA",
+      "size_bytes": 837809,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [
+        "LICENSE_cookingforblockheads"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 231484,
+        "file_id": 7454483,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "create-1.20.1-6.0.8.jar",
+      "sha256": "6FBB910C367DBCE8E4FC7E5BF64B6EDD4DE980906ED00AF8E47E4AF843C0D9B0",
+      "size_bytes": 19170905,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 328085,
+        "file_id": 7178761,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/create",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar",
+      "sha256": "E2DF6C4D862160A4BB5C5C19D3EAE3BE5226794D3E6FB5816BA69A20A34CCE9F",
+      "size_bytes": 835363,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 820977,
+        "file_id": 8204836,
+        "project_slug": "create-central-kitchen",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/create-central-kitchen",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "createbigcannons-5.11.4-mc.1.20.1-forge.jar",
+      "sha256": "11845F0D79A9014977F667A57B14D0527928BEE8B66BC6B50BEDCC29EE81878A",
+      "size_bytes": 4058306,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT and CC BY-NC-SA (see github for details)"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 646668,
+        "file_id": 8169547,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/create-big-cannons",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "createdeco-2.0.3-1.20.1-forge.jar",
+      "sha256": "7D6DD0094D18D6BAB64FCD7DE680EA736015D1A1FFC472D3FE03122BC7AA0864",
+      "size_bytes": 3509013,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "Insert License Here"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": true,
+      "review_reasons": [
+        "Ambiguous or placeholder declaration: Insert License Here"
+      ],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 509285,
+        "file_id": 6373226,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/create-deco",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "creatingspace-1.20.1-1.7.13.jar",
+      "sha256": "21FD2B30E1D75BE15FF24E1A55ECCA3908E190BCC29D3937CC9FD2F7942530B6",
+      "size_bytes": 2273610,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 858897,
+        "file_id": 7850072,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/create-creating-space",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "cristellib-1.1.6-forge.jar",
+      "sha256": "3856AD565EA45D6189452D813E2F021B365B686D3B1ADAE5F747C56A1E535D9F",
+      "size_bytes": 431318,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "CC BY-NC-ND 4.0"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 856996,
+        "file_id": 5869180,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/cristel-lib",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "domum_ornamentum-1.20.1-1.0.303-snapshot-universal.jar",
+      "sha256": "6A8D84F68F37465F4FDC991C34623A6DCC8BB86A1EB6C6C738AACC9EEAC9D999",
+      "size_bytes": 1180560,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 527361,
+        "file_id": 8338110,
+        "project_slug": "domum-ornamentum",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/domum-ornamentum",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar",
+      "sha256": "3213B0A5AE3B487360BC2CAFD036A11F35C4E1465122E18E218968C0771DDC42",
+      "size_bytes": 281881,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "DSMSLv3.1 (DON'T SNATCH MA STUFF LICENSE v3.1)"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 511770,
+        "file_id": 8552902,
+        "project_slug": "drippy-loading-screen",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/drippy-loading-screen",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "easy_npc-forge-1.20.1-7.4.1.jar",
+      "sha256": "C170BBC32B0D2B3073413920DDE2F87E612AE2A7BE8596CF06D38315EF8F67CC",
+      "size_bytes": 2270248,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1308987,
+        "file_id": 8500451,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/easy-npc-core",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "easy_npc_bundle-forge-1.20.1-7.4.1.jar",
+      "sha256": "438652873D02931E6FB82E652B48C8349AFD3C2FA7068AA052FDAB640534F325",
+      "size_bytes": 25438,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 559312,
+        "file_id": 8500463,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/easy-npc",
+        "allow_mod_distribution": false,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "easy_npc_config_ui-forge-1.20.1-7.4.1.jar",
+      "sha256": "A7C220210097CDD34287513F9F794DE71D561F5E8ECA48055AE37057D0ACA72A",
+      "size_bytes": 978860,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1214728,
+        "file_id": 8500457,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/easy-npc-config-ui",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "effortlessbuilding-1.20.1-3.11.jar",
+      "sha256": "C40EE9A5B49FB4721E6E6A629D6236A640B6DA76F95E3F636C77DB8F2EB92DC2",
+      "size_bytes": 2326090,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LESSER GENERAL PUBLIC LICENSE"
+        }
+      ],
+      "license_files": [
+        "assets/effortlessbuilding/textures/gui/license.txt",
+        "assets/effortlessbuilding/textures/special/license.txt"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 302113,
+        "file_id": 7944965,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/effortless-building",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "embeddium-0.3.31+mc1.20.1.jar",
+      "sha256": "EED3D1325F2ACC2FD4E69BB495E5CCB91D962126AC5330F0582EBC2A3DAF47FB",
+      "size_bytes": 1320675,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPL-3.0-only"
+        }
+      ],
+      "license_files": [
+        "COPYING",
+        "COPYING.LESSER"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 908741,
+        "file_id": 5681725,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/embeddium",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "epic-knights-1.20.1-forge-10.11.jar",
+      "sha256": "6043FDC77EA9651B1293E8602C8E858C728628F6F6B6E9EFA247E4281F4CA733",
+      "size_bytes": 2913733,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 509041,
+        "file_id": 7756534,
+        "project_slug": "epic-knights-shields-armor-and-weapons",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/epic-knights-armor-and-weapons",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "fancymenu_forge_3.9.9_MC_1.20.1.jar",
+      "sha256": "686253F50D103E21CC04B8710AB9BA4BA788916AD852620040308F3F08512FAB",
+      "size_bytes": 26174014,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "DSMSLv3.1 (DON'T SNATCH MA STUFF LICENSE v3.1)"
+        }
+      ],
+      "license_files": [
+        "assets/fancymenu/credits_and_copyright.md"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 367706,
+        "file_id": 8544939,
+        "project_slug": "fancymenu",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/fancymenu",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "FarmersDelight-1.20.1-1.3.2.jar",
+      "sha256": "47AED94BB9192C4978FE199F9D3CA5895AECCFBE5B5A0869FDF3AA011C2641F7",
+      "size_bytes": 3313327,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT License"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 398521,
+        "file_id": 8083474,
+        "project_slug": "farmers-delight",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "FastLeafDecay-32.jar",
+      "sha256": "CE48DB06BFB5830C147969793771A8F8B5A5774B182543B906BC439EFD4E9469",
+      "size_bytes": 9835,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 230976,
+        "file_id": 5375681,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/fast-leaf-decay",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ForgeEndertech-1.20.1-11.1.10.2-build.2294.jar",
+      "sha256": "D9CBDEA8307744485EFC80BEE9BAF5712A4F6C2F0851CBA55D75AADA6CCDA947",
+      "size_bytes": 552922,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 244844,
+        "file_id": 8554308,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/forgeendertech",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "FramedBlocks-9.4.3.jar",
+      "sha256": "58F4A8D8FB759A9DB8754D83461DF1B7B2E94426888259286D3ACC316E6C6589",
+      "size_bytes": 4251314,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPL v3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 441647,
+        "file_id": 7386520,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/framedblocks",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ftb-filter-system-forge-20.0.1.jar",
+      "sha256": "FCB7B312A010986A868A6645E4E395B2635383A2387297C7C134AA4250959E24",
+      "size_bytes": 197884,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 943925,
+        "file_id": 6466153,
+        "project_slug": "ftb-filter-system",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ftb-filter-system",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ftb-library-forge-2001.2.13.jar",
+      "sha256": "41810281B65336265CAE2C88412022D02F2F0A3F28C66A06173D86F98ACF14A7",
+      "size_bytes": 780558,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 404465,
+        "file_id": 8226927,
+        "project_slug": "ftb-library-forge",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ftb-quests-forge-2001.4.22.jar",
+      "sha256": "9EA9D159A78A2724CFE0457B024680FDB52A2126EFF9CFA5280A30578F647A68",
+      "size_bytes": 1255469,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 289412,
+        "file_id": 8078538,
+        "project_slug": "ftb-quests-forge",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ftb-teams-forge-2001.3.2.jar",
+      "sha256": "B1CB4D82EA9F137A87E12A7AAF3329619294B56F7D70337DFD557A76E10B6E07",
+      "size_bytes": 252579,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 404468,
+        "file_id": 7499810,
+        "project_slug": "ftb-teams-forge",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ftb-xmod-compat-forge-2.1.3.jar",
+      "sha256": "16A8EB9DE88D5C33D29CB076CC39DFB337B2C54348E1EF1EFE9DD60CF85E5F72",
+      "size_bytes": 129725,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 889915,
+        "file_id": 6402486,
+        "project_slug": "ftb-xmod-compat",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ftb-xmod-compat",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ftbq_better_fluids-1.0.1.jar",
+      "sha256": "D6817C263A098B9CBBF6F01DEFA6036CD7BA552B001ADC0BA257F947A7A7BD93",
+      "size_bytes": 23901,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1569344,
+        "file_id": 8222414,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ftbq-better-fluids",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "fusion-1.3.12-forge-mc1.20.1.jar",
+      "sha256": "FAB5F0460CB4B6F9EBC0F7F0FBD3B0AA62DC8408C3F14A5B69EB11211D79F0CB",
+      "size_bytes": 948577,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 854949,
+        "file_id": 8536533,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/fusion-connected-textures",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "gcyr-1.20.1-0.2.9.jar",
+      "sha256": "86538EEFC0B7BD2FB030AD658ECBEEDF4E500E2CA0DBDB45A7F73614FD58C94C",
+      "size_bytes": 1720922,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LGPL 3.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 922713,
+        "file_id": 8349382,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/gcyr",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "GlitchCore-forge-1.20.1-0.0.1.1.jar",
+      "sha256": "E42A8B513DA08A910C133CAEAFAD9FC2FCC22FDAAA2EB3E2516E9112A5A0DB61",
+      "size_bytes": 87550,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 955399,
+        "file_id": 5787839,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/glitchcore",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "gravestone-forge-1.20.1-1.0.35.jar",
+      "sha256": "3D31BD224BC1F9055C502CF675416AE8046DBC15BF2DB6627E26A032DA437E85",
+      "size_bytes": 317181,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 238551,
+        "file_id": 7099725,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/gravestone-mod",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "gtceu-1.20.1-7.5.3.jar",
+      "sha256": "D6560D8B695828A763389D3F45E0210EF70C1892C7B1633AC458544905DF1A0D",
+      "size_bytes": 18209988,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPL-3.0 license"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 890405,
+        "file_id": 7917773,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/gregtechceu-modern",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "gtec-1.20.1-0.2.2.jar",
+      "sha256": "171F4128FDFAA09E1A6C763E7E23E3C0B49765B5186A70E1DECED5E59A8A8BA6",
+      "size_bytes": 54385,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1088948,
+        "file_id": 8202134,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/gregtech-extended-chemistry-extended",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "gtmoldraw-3.3.0.jar",
+      "sha256": "9C03E4D3E57D1DF51E08CB18A8CA3D7FB400D6B37C83225D21BCEC1FE62D7E1C",
+      "size_bytes": 939444,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1348330,
+        "file_id": 8073757,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/gregtech-molecule-drawings",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "gtnn-1.20.1-1.3.9.jar",
+      "sha256": "7F3D98C310A87178174665767C3B58BDA61CFE04C62C4CC9E78CB0190A167AFC",
+      "size_bytes": 8741328,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "AGPL-3.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 985872,
+        "file_id": 8312911,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/gt",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "guideme-20.1.15.jar",
+      "sha256": "CF8052AB3DA121012EFC59A20E731C24BFE7488DFA556C9B88809F42DEA3B24A",
+      "size_bytes": 9414827,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "See GitHub repository for details"
+        }
+      ],
+      "license_files": [
+        "META-INF/LICENSE.txt",
+        "META-INF/NOTICE.txt",
+        "NOTICE"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": true,
+      "review_reasons": [
+        "Ambiguous or placeholder declaration: See GitHub repository for details"
+      ],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1173950,
+        "file_id": 8204776,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/guideme",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "handcrafted-forge-1.20.1-3.0.6.jar",
+      "sha256": "1DA3C7C524BFB656BB370757AF55F08F1678E8E1CB934E1C4C04AA773ED64A79",
+      "size_bytes": 7111059,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "Terrarium Licence"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 538214,
+        "file_id": 5118729,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/handcrafted",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "hbm_ntm_rebirth-0.4.1beta.jar",
+      "sha256": "9971A9A8C431DCCF30562D6AB53821C04029A9D81DB46368417A5CCF030E04C1",
+      "size_bytes": 74579632,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPL-3.0-only"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1566557,
+        "file_id": 8339756,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/hbm-ntm-rebirth",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ImmersiveEngineering-1.20.1-10.2.0-183.jar",
+      "sha256": "061DD0E8E066DC39277736D5607A47A18FEE4AFF428DE3363882F96E5C405AAA",
+      "size_bytes": 12129396,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "Blu's License of Common Sense"
+        }
+      ],
+      "license_files": [
+        "assets/immersiveengineering/lang/credits.md"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 231951,
+        "file_id": 6206989,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/immersive-engineering",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ImmersivePetroleum-1.20.1-4.3.1-36b.jar",
+      "sha256": "CEC000B892AE56452C54471A6411EE8F7AFCEC9B37EB7A3FB0319CF015983173",
+      "size_bytes": 1975671,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [
+        "assets/immersivepetroleum/lang/credits.md"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 268250,
+        "file_id": 8499079,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/immersive-petroleum",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ImmersiveUI-FORGE-0.3.0.jar",
+      "sha256": "7295AE6681B178ED633E951B1F4478D15B2ED7B13836038CAF7D3C9427FFF1FF",
+      "size_bytes": 401514,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1021685,
+        "file_id": 6023593,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/immersive-ui",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "inventoryessentials-forge-1.20.1-8.2.18.jar",
+      "sha256": "8317C14EF243A6C48C620C691F278AD74A702C9B0790AC18DC698D8EA35CE36C",
+      "size_bytes": 170012,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [
+        "LICENSE_inventoryessentials"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 368825,
+        "file_id": 8362093,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/inventory-essentials",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "Jade-1.20.1-Forge-11.13.3.jar",
+      "sha256": "A632C77975E5AEDFF6322B0072F8B0DB3F5D4BF914DF6BDCC87D1AEA4D5F55F4",
+      "size_bytes": 553487,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "CC BY-NC-SA 4.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 324717,
+        "file_id": 8479276,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/jade",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "jei-1.20.1-forge-15.20.0.134.jar",
+      "sha256": "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
+      "size_bytes": 1412399,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "The MIT License (MIT)"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 238222,
+        "file_id": 8419086,
+        "project_slug": "jei",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/jei",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "JustEnoughResources-1.20.1-1.4.0.247.jar",
+      "sha256": "311D3A83DB489D27B96CD15DEB690CE64C78CFFB552C25C3DFF85956A14EC09E",
+      "size_bytes": 276231,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "'Don't Be a Jerk' non-commercial care-free license"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 240630,
+        "file_id": 5057220,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+      "sha256": "E78686B92C3761EC26EB9D3C53EFDD3D6CA77981CBD3723995E1163B7103AE0B",
+      "size_bytes": 625185,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "Apache-2.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 410295,
+        "file_id": 5028413,
+        "project_slug": "konkrete",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/konkrete",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "kubejs-create-forge-2001.3.0-build.8.jar",
+      "sha256": "7ED3229677A98159BADD9250F8E9555B5E8F7F7B55981F1A99B11E30574BAFD4",
+      "size_bytes": 30960,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 429371,
+        "file_id": 6265498,
+        "project_slug": "kubejs-create",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/kubejs-create",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "kubejs-forge-2001.6.5-build.26.jar",
+      "sha256": "1769312192FBF9D72F45054BA61130523BFB471B5F480A4BFF8C210EC09400BB",
+      "size_bytes": 1658792,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 238086,
+        "file_id": 8020595,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/kubejs",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "kubejsadditions-forge-4.3.4.jar",
+      "sha256": "89EF426761BC68B2F449C93FE75C0532317E53561758D7A002E4CB0450B9BE27",
+      "size_bytes": 321976,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 594387,
+        "file_id": 6302185,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/kubejs-additions",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "lightmanscurrency-1.20.1-2.3.0.5.jar",
+      "sha256": "D7527BFD0FB480E867E95A4504B278951A5E6B7857BF79C3A8BA7CB6FD2C50AB",
+      "size_bytes": 10445393,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "Apache License 2.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 472521,
+        "file_id": 8366258,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/lightmans-currency",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "littlelogistics-mc1.20.1-v1.20.1.2.jar",
+      "sha256": "61372FEAFAFB2500C8A19A5678422B7BB913D6FA876A05836620916196ECDF63",
+      "size_bytes": 834991,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 570050,
+        "file_id": 4799459,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/little-logistics",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "lootjs-forge-1.20.1-2.13.1.jar",
+      "sha256": "C1672330605A691B8A91B3A4D252F2D3A280F252874F1FC5FDD7CAD07D13B719",
+      "size_bytes": 242267,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU Lesser General Public License v3.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 570630,
+        "file_id": 7551186,
+        "project_slug": "lootjs",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/lootjs",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+      "sha256": "933E2A7E79C4594F965F7F7D00B1F28A98EC2A180AD8F9F90310A266FE5CF5D8",
+      "size_bytes": 37178,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 938643,
+        "file_id": 5109692,
+        "project_slug": "melody",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/melody",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "minecolonies-1.20.1-1.1.1274.jar",
+      "sha256": "F938B60BE97A3778FE041B46A0CB358F520704F86863A19A94FA0D6DA41CE1C3",
+      "size_bytes": 77866945,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GPL 3.0"
+        }
+      ],
+      "license_files": [
+        "assets/minecolonies/LICENSE"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 245506,
+        "file_id": 8562856,
+        "project_slug": "minecolonies",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/minecolonies",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ModernUI-Forge-1.20.1-3.12.0.1-universal.jar",
+      "sha256": "49FEA599522316EF7ABD8897E8BCAD3ED742D935F0A53726EBA1F00C9CA8FE4C",
+      "size_bytes": 25104473,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPL-3.0-or-later"
+        }
+      ],
+      "license_files": [
+        "assets/modernui/emoji/license.txt",
+        "assets/modernui/font/license.txt"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 352491,
+        "file_id": 6956345,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/modern-ui",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "moogs_structures-1.20-1.20.4-3.0.2-forge.jar",
+      "sha256": "A06C6A15A38D37A5DDB5F325EC6487ED223575F1080E3106B902168AE1130F00",
+      "size_bytes": 338402,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU Lesser General Public License v3.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1337167,
+        "file_id": 8419671,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/moogs-structure-lib",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "MoogsEndStructures-1.20-2.0.3.jar",
+      "sha256": "9142BDE3F2E42E609AF29D26626C9904EF21586DE00E55D989FABA1A6D42CC1B",
+      "size_bytes": 1510937,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU Lesser General Public License v3.0"
+        },
+        {
+          "source": "fabric.mod.json",
+          "value": "GNU Lesser General Public License v3.0"
+        },
+        {
+          "source": "quilt.mod.json",
+          "value": "LGPL-3.0-only"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml",
+        "fabric.mod.json",
+        "quilt.mod.json"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 892382,
+        "file_id": 8043172,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/moogs-end-structures",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "MoogsVoyagerStructures-1.20-5.0.8.jar",
+      "sha256": "584749F9E963313984DACBFBE0AFF32F6A99DDD8C662C18A5B44ABA375AA2FB1",
+      "size_bytes": 1376277,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU Lesser General Public License v3.0"
+        },
+        {
+          "source": "fabric.mod.json",
+          "value": "GNU Lesser General Public License v3.0"
+        },
+        {
+          "source": "quilt.mod.json",
+          "value": "LGPL-3.0-only"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml",
+        "fabric.mod.json",
+        "quilt.mod.json"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 656977,
+        "file_id": 8381644,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "moonlight-1.20-2.16.34-forge.jar",
+      "sha256": "007C05AE799417CA7AA26669C5D97BE9DFACE5B6FC27ACA4CA8031CAFE4DDD6E",
+      "size_bytes": 1419416,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "gplv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 499980,
+        "file_id": 8261419,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/selene",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+      "sha256": "6C27D16AA715AC6613A55FC463739E2C7B78279E4E4C4CEDE299E4A2D4A70F08",
+      "size_bytes": 76237,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "BSD-3-Clause"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 60089,
+        "file_id": 5338457,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "MTR-forge-4.0.5+1.20.1.jar",
+      "sha256": "97466EB715AB02F50A7F7E23F920BF9FDD9D5E4BBB12620C06C6751324C66E9A",
+      "size_bytes": 84608102,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [
+        "LICENSE",
+        "org/mtr/libraries/okhttp3/internal/publicsuffix/NOTICE"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 266707,
+        "file_id": 8244920,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/minecraft-transit-railway",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "MultiBuilderTool-1.20.1-1.0.27.jar",
+      "sha256": "DFACE6E2EFE6B19CA3A9C49218560B75F3F50481C9776BCC3AD6BA109884E798",
+      "size_bytes": 426277,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 827020,
+        "file_id": 8499284,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/multi-builder-tool",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "NuclearCraft-1.20.1-1.2.33.jar",
+      "sha256": "41E80FCFDDF6FEE890B99992DF7B2E3F66C80C574A45FAF1CF70D1E5FAC59456",
+      "size_bytes": 30745675,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 840010,
+        "file_id": 8564186,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-neoteric",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+      "sha256": "5BB146C691F2C5054752F006A61AAB6335ECB1CD9718A9643733DE5367971047",
+      "size_bytes": 424035,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 916747,
+        "file_id": 6274623,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/shatterbyte-lib",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "Patchouli-1.20.1-85-FORGE.jar",
+      "sha256": "05F7B5D52F6B8F0FD7F8B4822FA07A192D1394D83A264309C9D221D6D4FD21C5",
+      "size_bytes": 642732,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "CC BY-NC-SA 3.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 306770,
+        "file_id": 7731017,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/patchouli",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "Paxi-1.20-Forge-4.0.jar",
+      "sha256": "DD18DD9696D099137B170076676E8411E3D8385AF15941F68472F21167266F1A",
+      "size_bytes": 96892,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 515708,
+        "file_id": 4749994,
+        "project_slug": "paxi",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/paxi",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "PhilipsRuins1.20.1-5.7.jar",
+      "sha256": "5CDAFACA61C34AD7E38AEA13033FCB5E8CADC557226BE4FBCC0743DB2222FBE3",
+      "size_bytes": 1525512,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 569737,
+        "file_id": 7024377,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ruins",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+      "sha256": "90D9965CB9EFDBDA29FDC5610BE3914CF7008BF5C392FF34F7AB25F96A852691",
+      "size_bytes": 181437,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 658587,
+        "file_id": 4587214,
+        "project_slug": "playeranimator",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/playeranimator",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar",
+      "sha256": "8D5117F18A3F80EB6670CFB04F0A42A103195972BFDF429D2181587958EC4C38",
+      "size_bytes": 10790934,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU GPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 281849,
+        "file_id": 8411196,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/pneumaticcraft-repressurized",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ponderjs-1.20.1-2.1.0.jar",
+      "sha256": "A3D42DCD63133B7542599B5E12ECB67E0719EA19DC28A1F3E3365A1AD7DF5978",
+      "size_bytes": 2285835,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 622888,
+        "file_id": 7188949,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ponder",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "powergrid-mc1.20.1-0.5.5.1.jar",
+      "sha256": "EBF1B79894C0BC48BA4773D313EEDF55D2EB364604A2610E2941BCE58CBE1838",
+      "size_bytes": 6209133,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "Apache-2.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1321420,
+        "file_id": 7999913,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/power-grid",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ProjectRed-1.20.1-4.21.0-core.jar",
+      "sha256": "54F67EF990D46BDD5E8831112963131E57B1C5D5BC01BE2E2E442956B571B1B4",
+      "size_bytes": 806997,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 228702,
+        "file_id": 6868143,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/project-red-core",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ProjectRed-1.20.1-4.21.0-fabrication.jar",
+      "sha256": "6D803CB2B8A845014BF46994B978A66DF9764A858DB94C9FE36F33E63B068D40",
+      "size_bytes": 764281,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 230111,
+        "file_id": 6868146,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/project-red-fabrication",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ProjectRed-1.20.1-4.21.0-illumination.jar",
+      "sha256": "479EE5800FCC34A3535527B7FD0133AEBA600472580058035649619A1A67FA19",
+      "size_bytes": 771005,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 229046,
+        "file_id": 6868147,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/project-red-illumination",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ProjectRed-1.20.1-4.21.0-integration.jar",
+      "sha256": "691AEDB782EB9A42716DAFB6C413C20D007C4A7645571812CDED671B627F0F42",
+      "size_bytes": 3539788,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 229045,
+        "file_id": 6868148,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/project-red-integration",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ProjectRed-1.20.1-4.21.0-transmission.jar",
+      "sha256": "B10515E1FBD587C231E665D55B0A92CA34C266DC402124B36049B04FD1FDEBE1",
+      "size_bytes": 461444,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 478939,
+        "file_id": 6868149,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/project-red-transmission",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "questsadditions-1.4.7.jar",
+      "sha256": "C0914E53B3545972F1B81511A00363D724DA209AF290A0FDA301836BC5B3F2BA",
+      "size_bytes": 112015,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 580129,
+        "file_id": 6004490,
+        "project_slug": "quests-additions",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/quests-additions",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "rechiseled-1.2.5-forge-mc1.20.1.jar",
+      "sha256": "163ABA6C1F3816C3B5BF96FF0250818F0162ACC9BC8C8DB72AFD8277C61CC6F0",
+      "size_bytes": 11867985,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 558998,
+        "file_id": 8301383,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/rechiseled",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "rechiseledcreate-1.1.1-forge-mc1.20.jar",
+      "sha256": "C030AD104DC8326BBAE06CB35ACA6571520E0E4EF1FB35949CBA53F283B416F5",
+      "size_bytes": 1007122,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 888624,
+        "file_id": 8302800,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/rechiseled-create",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "repurposed_structures-7.1.24+1.20.1-forge.jar",
+      "sha256": "2A3C01A2E13D2D4016E0C45CD3676BC7C306B75FACE8389F5CCACBB31A463339",
+      "size_bytes": 8236083,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GNU Lesser General Public License v3.0"
+        }
+      ],
+      "license_files": [
+        "LICENSE.txt"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 368293,
+        "file_id": 8237857,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/repurposed-structures",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "resourcefulconfig-forge-1.20.1-2.1.3.jar",
+      "sha256": "C404B9E5CF8595427A72D4CA6EE5730289168762B463F169BE3AE5DFE3727DED",
+      "size_bytes": 136923,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 714059,
+        "file_id": 6231176,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/resourceful-config",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "resourcefullib-forge-1.20.1-2.1.29.jar",
+      "sha256": "B13AFB95231D88E1CAEA5A045967E0FC291B29020B0D26AD39E6F9E9A551FEE8",
+      "size_bytes": 432753,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 570073,
+        "file_id": 5659871,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/resourceful-lib",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "rhino-forge-2001.2.3-build.10.jar",
+      "sha256": "FED2211429301BF043864183CAB9AB8E92D4CC4DBB9E488CE6C75217C54584A6",
+      "size_bytes": 1798244,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MPL-2.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 416294,
+        "file_id": 6186971,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/rhino",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "ritchiesprojectilelib-2.1.1-mc.1.20.1-forge.jar",
+      "sha256": "5531EC454792F98993FA29D55F8810444BA3E9EF8F04331C5811B84EC8D0C3DC",
+      "size_bytes": 78625,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT License"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1279407,
+        "file_id": 7292523,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/ritchies-projectile-library",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "SereneSeasons-forge-1.20.1-9.1.0.3.jar",
+      "sha256": "650C35858D335D45ADEA5445FFAED25CCD433F5CBFE4936AC2694B250177B674",
+      "size_bytes": 160885,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 291874,
+        "file_id": 8246702,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/serene-seasons",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "sodiumdynamiclights-forge-1.0.10-1.20.1.jar",
+      "sha256": "DFF5325ABB58C0C8526DFFB80E764188BDE045FD02CA6ED5E2BB76F0897D46F4",
+      "size_bytes": 511601,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 551736,
+        "file_id": 6044481,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/dynamiclights-reforged",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
+      "sha256": "37EC0B6248F04E856E6E5BA2066C4DED9981CE128282A9B45CDB10B67B9C8415",
+      "size_bytes": 443978,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1103431,
+        "file_id": 6100812,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/sodium-options-api",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "Steam_Rails-1.7.2+forge-mc1.20.1.jar",
+      "sha256": "DA82605F01A4A43EA0907467583704253C2E718392D44BE1CD7B9761EDCB0DA1",
+      "size_bytes": 16819720,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPL v3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 688231,
+        "file_id": 7758640,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "steamadditions-1.5.2.jar",
+      "sha256": "2B699B972B1FA9BCE652DD262B5314E7FB6F1744552C00E95DC54824E6BE8081",
+      "size_bytes": 173915,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1008510,
+        "file_id": 7616827,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/gregtech-steam-additions",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "structurize-1.20.1-1.0.816.jar",
+      "sha256": "A4DC864C13A825546E09805CE754A4DC8D92919A69B940CE284B546DAD4E9699",
+      "size_bytes": 1128298,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GPL 3.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 298744,
+        "file_id": 8138301,
+        "project_slug": "structurize",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/structurize",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+      "sha256": "BEA425EF7E9CD27A7FC0F4B89E00CBD0A1EE050F071ECAA9F28F7238F400F0A3",
+      "size_bytes": 206584,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 438332,
+        "file_id": 4715408,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "supermartijn642corelib-1.1.22-forge-mc1.20.1.jar",
+      "sha256": "A3479421DCA11EFB172D47DF5F0E4CCC645CCCA209BF9211992D03D92408FB33",
+      "size_bytes": 555653,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All rights reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 454372,
+        "file_id": 8526509,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "supplementaries-1.20-3.1.43-forge.jar",
+      "sha256": "6132FC23A2FE1DA0CA57439B35526EE9A1A8D898397FF8E61B2D08FB951CDF6A",
+      "size_bytes": 13667742,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "Supplementaries Team License v.1.4"
+        }
+      ],
+      "license_files": [
+        "assets/supplementaries/blockstates/notice_board.json",
+        "assets/supplementaries/models/block/notice_board.json",
+        "assets/supplementaries/models/block/notice_board_full.json",
+        "assets/supplementaries/models/item/notice_board.json",
+        "assets/supplementaries/textures/block/notice_board_front.png",
+        "assets/supplementaries/textures/block/notice_board_front_full.png",
+        "assets/supplementaries/textures/block/notice_board_side.png",
+        "assets/supplementaries/textures/block/notice_board_top.png",
+        "assets/supplementaries/textures/gui/notice_board_gui.png",
+        "data/supplementaries/advancements/recipes/notice_board.json",
+        "data/supplementaries/loot_tables/blocks/notice_board.json",
+        "data/supplementaries/recipes/notice_board.json",
+        "net/mehvahdjukaar/supplementaries/common/utils/Credits.class"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 412082,
+        "file_id": 7884611,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/supplementaries",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "tacz-1.20.1-1.1.8-hotfix.jar",
+      "sha256": "9ED8ADA1283ED7A793A70CC1B51C4A340F367CE84707E1A7B8CF21EE3D288D77",
+      "size_bytes": 57465167,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "GPL3 / CC BY-NC-ND 4.0"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1028108,
+        "file_id": 8141310,
+        "project_slug": "timeless-and-classics-guns",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/timeless-and-classics-zero",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "tacznpcs-2.1.0-1.20.1.jar",
+      "sha256": "2593AA66CD56C08538A91ED3D274C054B043F0C6A4C0FF51A37DE310D60734EE",
+      "size_bytes": 84383,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1072515,
+        "file_id": 8421557,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/tacz-npcs",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
+      "sha256": "C109016F46CA9BDAE69976BF080BBF2E8E5968CB66C0A78845F8CA6AF5DBBEB1",
+      "size_bytes": 107532,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 563928,
+        "file_id": 6290448,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/terrablender",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "toms_storage-1.20-1.7.1.jar",
+      "sha256": "08552BE86F960111E501227707DC089C91B8A55F6C1BE09BAEE188338576FF9B",
+      "size_bytes": 520148,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT License https://github.com/tom5454/Toms-Storage/blob/master/LICENSE"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 378609,
+        "file_id": 6418133,
+        "project_slug": "toms-storage",
+        "website": "https://www.curseforge.com/minecraft/mc-mods/toms-storage",
+        "allow_mod_distribution": true,
+        "registry_lock_present": true,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "Towns-and-Towers-1.12-Fabric+Forge.jar",
+      "sha256": "9C8115AF7109579DA990249FDD67B38323A45BE70F8A3A962B61DA69C7021984",
+      "size_bytes": 2864275,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        },
+        {
+          "source": "fabric.mod.json",
+          "value": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ],
+      "metadata_files": [
+        "META-INF/mods.toml",
+        "fabric.mod.json"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 626761,
+        "file_id": 4923828,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/towns-and-towers",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "vapourware-FORGE-1.20.1-0.1.10.jar",
+      "sha256": "A5515CC71FEF5B304293D55746477158403BFBC51166D60E8E251D3E2FB68F7F",
+      "size_bytes": 53850,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "MIT"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 1130334,
+        "file_id": 6861708,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/vapourware",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "xaerominimap-forge-1.20.1-26.4.2.jar",
+      "sha256": "8143F332ED20A61A518692B42C793E021B6BD2D0D9D61CF3938FB9CFA07EB59C",
+      "size_bytes": 2195245,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 263420,
+        "file_id": 8449808,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "xaeroworldmap-forge-1.20.1-1.44.2.jar",
+      "sha256": "CC20A74887923EECF5B614FFBF5A58E6C749D98A657003BDE4A77D04212DEE0D",
+      "size_bytes": 1421224,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "All Rights Reserved"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 317780,
+        "file_id": 8449908,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsApi-1.20-Forge-4.0.6.jar",
+      "sha256": "101C30D01D0CF9D86190F578EB1E43BD06B64092E95662A00EF52946F472C7B1",
+      "size_bytes": 370524,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 421850,
+        "file_id": 5769971,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-api",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterCaves-1.20.1-Forge-2.0.5.jar",
+      "sha256": "BD1E07E03626AD851E7B84E5A8A6ECDD976F7E923A3E56DF69C6B6E906E7389E",
+      "size_bytes": 401492,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 340583,
+        "file_id": 6984599,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-caves",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+      "sha256": "5A74294725232C665B908AF6E25224D111550CF69D74613E415B9F48FF150D16",
+      "size_bytes": 918012,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 631016,
+        "file_id": 4769439,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-desert-temples",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+      "sha256": "93C24E4075C51DA0866F3FC92322BDB60E590AC2CD78DCE275460839C54C36F5",
+      "size_bytes": 792381,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 510089,
+        "file_id": 5271360,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-dungeons",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+      "sha256": "05C2F43A67116F0BBCA32D903B55CE1655B9319ED6554080DE02BD1D0C232A83",
+      "size_bytes": 387111,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 901344,
+        "file_id": 5193815,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-end-island",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterJungleTemples-1.20-Forge-2.0.5.jar",
+      "sha256": "728C0A807742356887EDF7D4F736B3870B7C84007EC9C495C27DA1DC0B61078D",
+      "size_bytes": 806652,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 897669,
+        "file_id": 5331760,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-jungle-temples",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar",
+      "sha256": "12CFFC99DCCCA69D294BA5BC39C331367794B339061572A6F3773620303A2F51",
+      "size_bytes": 619255,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 817651,
+        "file_id": 5193465,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-nether-fortresses",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
+      "sha256": "BEA2640C4AFEB5231362A756D886CA4F246C7951175C91348272B3CE5D483BAE",
+      "size_bytes": 1033262,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 689238,
+        "file_id": 4883003,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-ocean-monuments",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterStrongholds-1.20-Forge-4.0.3.jar",
+      "sha256": "054B0A1BE86510ED6BD05DE66A29200F13F5603C0C9EB7E62074DDC3D19CB0E4",
+      "size_bytes": 473564,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 465575,
+        "file_id": 4769083,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-strongholds",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    },
+    {
+      "file_name": "YungsBetterWitchHuts-1.20-Forge-3.0.3.jar",
+      "sha256": "24B3BDC844755E8A39571B5000D8DD829543F7B150D154016CCD926E47D06A71",
+      "size_bytes": 179190,
+      "status": "DECLARED",
+      "declarations": [
+        {
+          "source": "META-INF/mods.toml",
+          "value": "LGPLv3"
+        }
+      ],
+      "license_files": [],
+      "metadata_files": [
+        "META-INF/mods.toml"
+      ],
+      "manual_review_required": false,
+      "review_reasons": [],
+      "errors": [],
+      "distribution_source": {
+        "type": "CURSEFORGE",
+        "project_id": 631401,
+        "file_id": 4769489,
+        "project_slug": null,
+        "website": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-witch-huts",
+        "allow_mod_distribution": true,
+        "registry_lock_present": false,
+        "instance_record_present": true
+      }
+    }
+  ]
+}

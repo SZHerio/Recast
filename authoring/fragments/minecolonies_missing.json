@@ -1,0 +1,9 @@
+{
+  "com.minecolonies.coremod.journeymap.options.borderloadedstyle": "Граница принудительно загруженной области",
+  "com.minecolonies.coremod.journeymap.options.borderloadedstyle.tooltip": "Стиль отображения границы принудительно загруженной области колонии на полноэкранной и веб-карте",
+  "com.minecolonies.coremod.gui.tooldesc.scepterlumberjack": "Задайте рабочую зону лесника по всем трём измерениям: щёлкните ПКМ по одному углу, а затем ЛКМ по противоположному. Так можно ограничить и высоту зоны.",
+  "com.minecolonies.core.gui.residence.warning.3": "Внимание: жители более высокого уровня ожидают регулярного питания. Перед улучшением постройте столовую и настройте меню питания MineColonies.",
+  "minecolonies.quests.tutorial.welcome.obj0.answer0.reply.answer0": "Хорошо! Пора за дело!",
+  "minecolonies.quests.tutorial.welcome.obj2.answer0.reply.answer0": "Хорошо! Пора за дело!",
+  "minecolonies.quests.tutorial.welcome.obj3.answer0.reply.answer0": "Хорошо! Пора за дело!"
+}

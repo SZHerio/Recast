@@ -1,0 +1,7 @@
+{
+  "item.supplementaries.cannon_boat": "%s лодка с пушкой",
+  "item.supplementaries.cannon_boat_bamboo": "Бамбуковый плот с пушкой",
+  "item.supplementaries.bamboo_spikes_tipped.effect": "Бамбуковые шипы с эффектом «%s»",
+  "message.supplementaries.cannon_maneuver": "Нажмите %1$s, чтобы слезть, или %2$s, чтобы выстрелить",
+  "gui.supplementaries.safe.name": "%2$s игрока %1$s"
+}

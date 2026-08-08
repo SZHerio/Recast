@@ -1,0 +1,17 @@
+{
+  "name": "Набор улучшения укреплённого сундука",
+  "icon": "pneumaticcraft:reinforced_chest_kit",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Набор улучшения укреплённого сундука/$ превращает любой деревянный сундук в $(l:machines/reinforced_chest)укреплённый/$ прямо на месте и сохраняет его содержимое. Нажмите по деревянному сундуку $(thing)Shift + ПКМ/$ с набором в руке.$(p)Исходный $(item)деревянный сундук/$ выпадет в виде предмета."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание набора улучшения укреплённого сундука.$(p)Укреплённый сундук для рецепта должен быть совершенно пуст.",
+      "recipe": "pneumaticcraft:reinforced_chest_kit"
+    }
+  ]
+}

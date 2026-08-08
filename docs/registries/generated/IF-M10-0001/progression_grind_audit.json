@@ -1,0 +1,1052 @@
+{
+  "audit_id": "industrial_frontier:m10/progression_grind_static_audit",
+  "audit_version": 1,
+  "generated_at_utc": "2026-08-08T14:30:04+00:00",
+  "scope": "Static registry audit only; Minecraft/Forge was not launched.",
+  "inputs": {
+    "progression_graph": {
+      "path": "docs/registries/m2_progression_graph.json",
+      "sha256": "6944F2448D7F91E6912E6C274E327ED59C1FBD06F377326F8A5AC99854E2AB9B",
+      "bytes": 324671
+    },
+    "substance_passports": {
+      "path": "docs/registries/m2_substance_passports.json",
+      "sha256": "8514FAABF6BAAEFFD91D47E11D0BEBD3DE7976FC7B2FB883BDF4FF6060638BA9",
+      "bytes": 493269
+    },
+    "grind_budget": {
+      "path": "docs/registries/m2_grind_budget.json",
+      "sha256": "E80AB50804A4CA894A3D47B2EAC0707E78129573A1E1F1986A2430FBA22F7F79",
+      "bytes": 61303
+    }
+  },
+  "exit_policy": "Non-zero only when summary.unexplained_blockers > 0.",
+  "summary": {
+    "unexplained_blockers": 0,
+    "warnings": 68,
+    "information": 2,
+    "status": "PASS_STATIC",
+    "minecraft_launched": false
+  },
+  "checks": {
+    "grind": {
+      "limits": {
+        "training_batches_max": 3,
+        "manual_repeats_green_max": 3,
+        "manual_repeats_hard_max": 8,
+        "transfers_green_max": 4,
+        "transfers_hard_max": 10,
+        "passive_minutes_green_max": 3,
+        "passive_minutes_hard_max": 8
+      },
+      "chains": 21,
+      "critical_components": 21,
+      "chains_per_epoch": {
+        "P0": 2,
+        "P1": 2,
+        "P2": 2,
+        "P3": 1,
+        "P4": 4,
+        "P5": 2,
+        "P6": 2,
+        "P7": 3,
+        "P8": 2,
+        "P9": 1
+      },
+      "result_counts": {
+        "EXPLAIN": 8,
+        "GREEN": 13
+      },
+      "metric_band_counts": {
+        "EXPLAIN": 13,
+        "GREEN": 50
+      },
+      "hard_exceedances": 0,
+      "explained_hard_exceedances": 0
+    },
+    "epochs": {
+      "expected": 10,
+      "present": 10,
+      "covered": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sequential_edges_expected": 9,
+      "sequential_edges_present": 9,
+      "reachable_from_p0": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "jumps": 0
+    },
+    "topology": {
+      "dependency_edges": 259,
+      "production_edges": 112,
+      "bounded_recycle_edges": 5,
+      "dependency_cycle_refs": [],
+      "production_epoch_mismatches": 0
+    },
+    "reachability": {
+      "substances": 99,
+      "world_sources": 18,
+      "produced": 48,
+      "consumed": 40,
+      "required_by_epochs_or_components": 99,
+      "reachable_by_fixed_point": 37,
+      "unexplained_missing_producer": [],
+      "explained_missing_producer": [
+        "industrial_frontier:substance/activated_carbon_filter_media",
+        "industrial_frontier:substance/black_powder",
+        "industrial_frontier:substance/brine",
+        "industrial_frontier:substance/bronze",
+        "industrial_frontier:substance/cast_iron",
+        "industrial_frontier:substance/compacted_earth",
+        "industrial_frontier:substance/decontamination_agent",
+        "industrial_frontier:substance/engineered_refrigerant",
+        "industrial_frontier:substance/environment_resistant_coating",
+        "industrial_frontier:substance/feather",
+        "industrial_frontier:substance/fired_brick",
+        "industrial_frontier:substance/food_acid",
+        "industrial_frontier:substance/food_ethanol",
+        "industrial_frontier:substance/food_preservative",
+        "industrial_frontier:substance/high_explosive_filling",
+        "industrial_frontier:substance/lead",
+        "industrial_frontier:substance/leather",
+        "industrial_frontier:substance/light_alloy",
+        "industrial_frontier:substance/natural_adhesive_resin",
+        "industrial_frontier:substance/optical_coating_compound",
+        "industrial_frontier:substance/paper",
+        "industrial_frontier:substance/potassium_nitrate",
+        "industrial_frontier:substance/primer_compound",
+        "industrial_frontier:substance/processed_plant_fiber",
+        "industrial_frontier:substance/propellant_stabilizer",
+        "industrial_frontier:substance/protective_coating",
+        "industrial_frontier:substance/protective_oil",
+        "industrial_frontier:substance/raw_water",
+        "industrial_frontier:substance/smoke_composition",
+        "industrial_frontier:substance/smokeless_propellant",
+        "industrial_frontier:substance/soda_lime_glass",
+        "industrial_frontier:substance/specialized_propellant",
+        "industrial_frontier:substance/steam",
+        "industrial_frontier:substance/stone",
+        "industrial_frontier:substance/structural_concrete",
+        "industrial_frontier:substance/surface_coating",
+        "industrial_frontier:substance/tanning_agent",
+        "industrial_frontier:substance/technical_ceramic",
+        "industrial_frontier:substance/tin",
+        "industrial_frontier:substance/transitional_propellant",
+        "industrial_frontier:substance/wood",
+        "industrial_frontier:substance/woven_textile"
+      ],
+      "unexplained_dead_ends": [],
+      "explained_dead_ends": [],
+      "unexplained_path_unreachable": [],
+      "explained_path_unreachable": [
+        "industrial_frontier:substance/activated_carbon_filter_media",
+        "industrial_frontier:substance/ammonia",
+        "industrial_frontier:substance/biogas",
+        "industrial_frontier:substance/black_powder",
+        "industrial_frontier:substance/brine",
+        "industrial_frontier:substance/bronze",
+        "industrial_frontier:substance/cast_iron",
+        "industrial_frontier:substance/chlorine",
+        "industrial_frontier:substance/clay",
+        "industrial_frontier:substance/compacted_earth",
+        "industrial_frontier:substance/compost",
+        "industrial_frontier:substance/coolant",
+        "industrial_frontier:substance/decontamination_agent",
+        "industrial_frontier:substance/drinking_water",
+        "industrial_frontier:substance/engineered_refrigerant",
+        "industrial_frontier:substance/environment_resistant_coating",
+        "industrial_frontier:substance/feather",
+        "industrial_frontier:substance/fired_brick",
+        "industrial_frontier:substance/fission_products",
+        "industrial_frontier:substance/food_acid",
+        "industrial_frontier:substance/food_ethanol",
+        "industrial_frontier:substance/food_preservative",
+        "industrial_frontier:substance/high_explosive_filling",
+        "industrial_frontier:substance/hydrochloric_acid",
+        "industrial_frontier:substance/hydrogen",
+        "industrial_frontier:substance/lead",
+        "industrial_frontier:substance/leather",
+        "industrial_frontier:substance/light_alloy",
+        "industrial_frontier:substance/natural_adhesive_resin",
+        "industrial_frontier:substance/nitric_acid",
+        "industrial_frontier:substance/optical_coating_compound",
+        "industrial_frontier:substance/oxidizer",
+        "industrial_frontier:substance/paper",
+        "industrial_frontier:substance/potassium_nitrate",
+        "industrial_frontier:substance/primer_compound",
+        "industrial_frontier:substance/processed_plant_fiber",
+        "industrial_frontier:substance/propellant_stabilizer",
+        "industrial_frontier:substance/protective_coating",
+        "industrial_frontier:substance/protective_oil",
+        "industrial_frontier:substance/pvc",
+        "industrial_frontier:substance/raw_water",
+        "industrial_frontier:substance/rocket_fuel",
+        "industrial_frontier:substance/sludge",
+        "industrial_frontier:substance/smoke_composition",
+        "industrial_frontier:substance/smokeless_propellant",
+        "industrial_frontier:substance/soda_lime_glass",
+        "industrial_frontier:substance/specialized_propellant",
+        "industrial_frontier:substance/spent_fuel",
+        "industrial_frontier:substance/steam",
+        "industrial_frontier:substance/stone",
+        "industrial_frontier:substance/structural_concrete",
+        "industrial_frontier:substance/sulfuric_acid",
+        "industrial_frontier:substance/surface_coating",
+        "industrial_frontier:substance/tanning_agent",
+        "industrial_frontier:substance/technical_ceramic",
+        "industrial_frontier:substance/technical_water",
+        "industrial_frontier:substance/tin",
+        "industrial_frontier:substance/transitional_propellant",
+        "industrial_frontier:substance/uranium_concentrate",
+        "industrial_frontier:substance/wastewater",
+        "industrial_frontier:substance/wood",
+        "industrial_frontier:substance/woven_textile"
+      ]
+    },
+    "evidence": {
+      "definitions": 26,
+      "referenced_definition_ids": 26,
+      "gate_definitions": 16,
+      "referenced_gate_ids": 14,
+      "physical_paths_checked": 69,
+      "physical_paths_valid": 69
+    }
+  },
+  "findings": [
+    {
+      "severity": "WARNING",
+      "code": "ACTIVE_BUDGET_FOR_GATED_COMPONENT",
+      "category": "grind",
+      "subject": "industrial_frontier:component/p4/city_ration_batch",
+      "message": "The measurement card is active, but the runtime component remains gated by its typed dependencies.",
+      "explained": true,
+      "evidence_refs": [
+        "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md",
+        "docs/registries/curseforge_sources.json",
+        "kubejs/server_scripts/40_balance/m4_city_signals.js",
+        "kubejs/server_scripts/40_balance/m4_municipal_contracts.js"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "ACTIVE_BUDGET_FOR_GATED_COMPONENT",
+      "category": "grind",
+      "subject": "industrial_frontier:component/p5/regional_logistics_node",
+      "message": "The measurement card is active, but the runtime component remains gated by its typed dependencies.",
+      "explained": true,
+      "evidence_refs": [
+        "docs/GLOBAL_TECH_CITY_CURSEFORGE_AUDIT.md#transport",
+        "kubejs/server_scripts/30_integrations/m5_transport_domains.js",
+        "kubejs/server_scripts/40_balance/m5_regional_contracts.js"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "ACTIVE_BUDGET_FOR_GATED_COMPONENT",
+      "category": "grind",
+      "subject": "industrial_frontier:component/p8/colony_supply_manifest",
+      "message": "The measurement card is active, but the runtime component remains gated by its typed dependencies.",
+      "explained": true,
+      "evidence_refs": [
+        "docs/MASTER_DESIGN_DOCUMENT.md#P8"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "ACTIVE_BUDGET_FOR_GATED_COMPONENT",
+      "category": "grind",
+      "subject": "industrial_frontier:component/p8/interplanetary_cargo_unit",
+      "message": "The measurement card is active, but the runtime component remains gated by its typed dependencies.",
+      "explained": true,
+      "evidence_refs": [
+        "docs/TECHNOLOGY_FEDERATION.md"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "ACTIVE_BUDGET_FOR_GATED_COMPONENT",
+      "category": "grind",
+      "subject": "industrial_frontier:component/p9/megastructure_section",
+      "message": "The measurement card is active, but the runtime component remains gated by its typed dependencies.",
+      "explained": true,
+      "evidence_refs": [
+        "docs/MASTER_DESIGN_DOCUMENT.md#P9"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "CONSERVATIVE_EXPLAIN_RESULT",
+      "category": "grind",
+      "subject": "industrial_frontier:grind/p1/andesite_alloy",
+      "message": "result=EXPLAIN although all measured metrics are inside green limits; a non-numeric design risk is documented.",
+      "explained": true,
+      "evidence_refs": [
+        "docs/M2_SUBSTANCE_AND_BYPASS_AUDIT.md#andesite",
+        "docs/registries/m2_bypass_decisions.json"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/ammonia",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/biogas",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/chlorine",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/clay",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/m1_clay_recipe",
+        "industrial_frontier:evidence/substance/m2_core_audit",
+        "industrial_frontier:evidence/substance/m2_pack_tags"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/compost",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/coolant",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_atomic"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/drinking_water",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/fission_products",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_atomic"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/hydrochloric_acid",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/hydrogen",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/nitric_acid",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/oxidizer",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/pvc",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/rocket_fuel",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/sludge",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/spent_fuel",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_atomic"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/sulfuric_acid",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/technical_water",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/uranium_concentrate",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_atomic"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_PATH_UNREACHABLE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/wastewater",
+      "message": "A declared route exists but its required input chain is gated.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/activated_carbon_filter_media",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/black_powder",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/brine",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/bronze",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/cast_iron",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/compacted_earth",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/decontamination_agent",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/engineered_refrigerant",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/environment_resistant_coating",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/federation_space"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/feather",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/fired_brick",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/food_acid",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/food_ethanol",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/food_preservative",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/high_explosive_filling",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/lead",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/leather",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/light_alloy",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/natural_adhesive_resin",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/optical_coating_compound",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/paper",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/potassium_nitrate",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/primer_compound",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/processed_plant_fiber",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/propellant_stabilizer",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/protective_coating",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/protective_oil",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/raw_water",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/m2_core_audit",
+        "industrial_frontier:evidence/substance/m2_pack_tags"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/smoke_composition",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/smokeless_propellant",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/soda_lime_glass",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/specialized_propellant",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/steam",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/m2_core_audit",
+        "industrial_frontier:evidence/substance/m2_pack_tags"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/stone",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/structural_concrete",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/surface_coating",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/tanning_agent",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/technical_ceramic",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/tin",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/transitional_propellant",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/wood",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "code": "EXPLAINED_UNREACHABLE_SUBSTANCE",
+      "category": "reachability",
+      "subject": "industrial_frontier:substance/woven_textile",
+      "message": "No production/world-source edge is declared; the passport route, evidence and gate explain the registry debt.",
+      "explained": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/substance/mandatory_physical_audit",
+        "industrial_frontier:evidence/substance/planned_chemistry_architecture"
+      ]
+    },
+    {
+      "severity": "INFO",
+      "code": "BOUNDARY_PROOF_SUBSTANCE",
+      "category": "topology",
+      "subject": "industrial_frontier:epoch/p0",
+      "message": "industrial_frontier:substance/iron is a P1 boundary proof referenced by P0.",
+      "explained": false
+    },
+    {
+      "severity": "INFO",
+      "code": "BOUNDARY_PROOF_SUBSTANCE",
+      "category": "topology",
+      "subject": "industrial_frontier:epoch/p0",
+      "message": "industrial_frontier:substance/copper is a P1 boundary proof referenced by P0.",
+      "explained": false
+    }
+  ]
+}

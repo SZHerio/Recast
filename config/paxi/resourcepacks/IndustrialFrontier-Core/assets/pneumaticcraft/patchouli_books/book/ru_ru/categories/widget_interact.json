@@ -1,0 +1,7 @@
+{
+  "name": "Виджеты взаимодействия с миром",
+  "description": "Виджеты, которые тем или иным образом взаимодействуют с миром.",
+  "icon": "pneumaticcraft:textures/progwidgets/dig_piece.png",
+  "parent": "pneumaticcraft:programming",
+  "sortnum": 2
+}

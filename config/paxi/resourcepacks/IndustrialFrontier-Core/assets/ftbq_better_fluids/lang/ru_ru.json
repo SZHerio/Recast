@@ -1,0 +1,13 @@
+{
+  "ftbq_better_fluids.task.any_fluid": "Любая из %s жидкостей",
+  "ftbq_better_fluids.task.any_of": "Любая из",
+  "ftbq_better_fluids.task.click_recipe": "Нажмите, чтобы посмотреть рецепты",
+  "ftbq_better_fluids.task.click_valid_fluids": "Нажмите, чтобы посмотреть подходящие жидкости",
+  "ftbq_better_fluids.task.valid_fluids_for": "Подходящие жидкости для %s",
+  "ftbquests.task.ftbq_better_fluids.fluid_plus": "Жидкость+",
+  "ftbquests.task.ftbq_better_fluids.fluid_plus.amount": "Количество",
+  "ftbquests.task.ftbq_better_fluids.fluid_plus.consume_fluid": "Расходовать жидкость",
+  "ftbquests.task.ftbq_better_fluids.fluid_plus.fluid": "Жидкость",
+  "ftbquests.task.ftbq_better_fluids.fluid_plus.fluid_nbt": "NBT жидкости",
+  "ftbquests.task.ftbq_better_fluids.fluid_plus.fluids": "Жидкости"
+}

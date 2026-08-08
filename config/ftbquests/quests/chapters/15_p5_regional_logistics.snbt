@@ -1,14 +1,17 @@
 {
 	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
 	default_quest_shape: "square"
 	filename: "15_p5_regional_logistics"
 	group: "1000000000000004"
-	icon: "create:track"
+	icon: "industrial_frontier:textures/gui/icons/epochs/p5.png"
 	id: "2015000000000001"
 	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
+			hide_until_deps_complete: true
+			dependencies: ["3014000000000013"]
 			description: [
 				"{industrial_frontier.quest.p5.intro.desc.1}"
 				"{industrial_frontier.quest.p5.intro.desc.2}"
@@ -16,13 +19,6 @@
 			]
 			icon: "create:track"
 			id: "3015000000000001"
-			rewards: [{
-				id: "5015000000000001"
-				type: "xp"
-				xp: 60
-			}]
-			shape: "gear"
-			size: 2.0d
 			subtitle: "{industrial_frontier.quest.p5.intro.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -31,11 +27,13 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p5.intro.title}"
-			x: 0.0d
-			y: 0.0d
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
 		}
 		{
-			dependencies: ["3015000000000001"]
+			dependencies: ["3015000000000014"]
 			description: [
 				"{industrial_frontier.quest.p5.bulk_processing.desc.1}"
 				"{industrial_frontier.quest.p5.bulk_processing.desc.2}"
@@ -43,11 +41,6 @@
 			]
 			icon: "minecraft:raw_iron"
 			id: "3015000000000002"
-			rewards: [{
-				id: "5015000000000002"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.bulk_processing.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -56,23 +49,20 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p5.bulk_processing.title}"
-			x: 3.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 14d
+			y: 0d
 		}
 		{
-			dependencies: ["3015000000000002"]
+			dependencies: ["3015000000000001"]
 			description: [
 				"{industrial_frontier.quest.p5.ae2_entry.desc.1}"
 				"{industrial_frontier.quest.p5.ae2_entry.desc.2}"
 				"{industrial_frontier.quest.p5.ae2_entry.desc.3}"
 			]
-			icon: "ae2:energy_acceptor"
+			icon: "industrial_frontier:textures/gui/icons/process/ae2/digital_material_entry.png"
 			id: "3015000000000003"
-			rewards: [{
-				id: "5015000000000003"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.ae2_entry.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -85,8 +75,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p5.ae2_entry.title}"
-			x: 6.0d
-			y: -3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -2d
 		}
 		{
 			dependencies: ["3015000000000003"]
@@ -97,11 +89,6 @@
 			]
 			icon: "ae2:controller"
 			id: "3015000000000004"
-			rewards: [{
-				id: "5015000000000004"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.ae2_channels.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -110,8 +97,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p5.ae2_channels.title}"
-			x: 9.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
 		}
 		{
 			dependencies: ["3015000000000004"]
@@ -122,11 +111,6 @@
 			]
 			icon: "ae2:pattern_provider"
 			id: "3015000000000005"
-			rewards: [{
-				id: "5015000000000005"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.ae2_patterns.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -139,8 +123,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p5.ae2_patterns.title}"
-			x: 12.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: -1d
 		}
 		{
 			dependencies: ["3015000000000005"]
@@ -151,11 +137,6 @@
 			]
 			icon: "ae2:crafting_unit"
 			id: "3015000000000006"
-			rewards: [{
-				id: "5015000000000006"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.ae2_autocraft.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -168,8 +149,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p5.ae2_autocraft.title}"
-			x: 15.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 8d
+			y: 0d
 		}
 		{
 			dependencies: ["3015000000000006"]
@@ -180,11 +163,6 @@
 			]
 			icon: "ae2:drive"
 			id: "3015000000000007"
-			rewards: [{
-				id: "5015000000000007"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.ae2_recovery.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -193,8 +171,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p5.ae2_recovery.title}"
-			x: 18.0d
-			y: -4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 10d
+			y: 0d
 		}
 		{
 			dependencies: ["3015000000000001"]
@@ -205,11 +185,6 @@
 			]
 			icon: "create:track"
 			id: "3015000000000008"
-			rewards: [{
-				id: "5015000000000008"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.freight_rail.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -222,11 +197,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p5.freight_rail.title}"
-			x: 6.0d
-			y: 0.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 0d
 		}
 		{
-			dependencies: ["3015000000000008"]
+			dependencies: ["3015000000000001"]
 			description: [
 				"{industrial_frontier.quest.p5.water_route.desc.1}"
 				"{industrial_frontier.quest.p5.water_route.desc.2}"
@@ -234,11 +211,6 @@
 			]
 			icon: "littlelogistics:barge"
 			id: "3015000000000009"
-			rewards: [{
-				id: "5015000000000009"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.water_route.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -251,11 +223,13 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p5.water_route.title}"
-			x: 9.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 2d
 		}
 		{
-			dependencies: ["3015000000000001"]
+			dependencies: ["3015000000000008"]
 			description: [
 				"{industrial_frontier.quest.p5.transit_line.desc.1}"
 				"{industrial_frontier.quest.p5.transit_line.desc.2}"
@@ -263,11 +237,6 @@
 			]
 			icon: "mtr:rail"
 			id: "3015000000000010"
-			rewards: [{
-				id: "5015000000000010"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.transit_line.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -280,11 +249,16 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p5.transit_line.title}"
-			x: 6.0d
-			y: 3.0d
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
 		}
 		{
-			dependencies: ["3015000000000010"]
+			dependencies: [
+				"3015000000000010"
+				"3015000000000009"
+			]
 			description: [
 				"{industrial_frontier.quest.p5.last_mile.desc.1}"
 				"{industrial_frontier.quest.p5.last_mile.desc.2}"
@@ -292,11 +266,6 @@
 			]
 			icon: "create:brown_toolbox"
 			id: "3015000000000011"
-			rewards: [{
-				id: "5015000000000011"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.last_mile.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -305,14 +274,13 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p5.last_mile.title}"
-			x: 9.0d
-			y: 4.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 1d
 		}
 		{
-			dependencies: [
-				"3015000000000009"
-				"3015000000000011"
-			]
+			dependencies: ["3015000000000002"]
 			description: [
 				"{industrial_frontier.quest.p5.reserve.desc.1}"
 				"{industrial_frontier.quest.p5.reserve.desc.2}"
@@ -320,11 +288,6 @@
 			]
 			icon: "create:item_vault"
 			id: "3015000000000012"
-			rewards: [{
-				id: "5015000000000012"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.reserve.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -337,8 +300,10 @@
 				type: "item"
 			}]
 			title: "{industrial_frontier.quest.p5.reserve.title}"
-			x: 12.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 16d
+			y: 0d
 		}
 		{
 			dependencies: ["3015000000000012"]
@@ -349,11 +314,6 @@
 			]
 			icon: "minecraft:writable_book"
 			id: "3015000000000013"
-			rewards: [{
-				id: "5015000000000013"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.contracts.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -362,12 +322,14 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p5.contracts.title}"
-			x: 15.0d
-			y: 1.5d
+			shape: "diamond"
+			size: 1.5d
+			x: 18d
+			y: 0d
 		}
 		{
 			dependencies: [
-				"3015000000000013"
+				"3015000000000011"
 				"3015000000000007"
 			]
 			description: [
@@ -377,11 +339,6 @@
 			]
 			icon: "create:railway_casing"
 			id: "3015000000000014"
-			rewards: [{
-				id: "5015000000000014"
-				type: "xp"
-				xp: 60
-			}]
 			subtitle: "{industrial_frontier.quest.p5.balance.subtitle}"
 			tags: ["mainline"]
 			tasks: [{
@@ -390,8 +347,10 @@
 				type: "checkmark"
 			}]
 			title: "{industrial_frontier.quest.p5.balance.title}"
-			x: 18.0d
-			y: 1.5d
+			shape: "rsquare"
+			size: 1.5d
+			x: 12d
+			y: 0d
 		}
 	]
 	subtitle: ["{industrial_frontier.quest.chapter.p5.subtitle}"]

@@ -1,0 +1,5 @@
+Функции API help:
+help.setPath( path )
+help.lookup( topic )
+help.topics()
+help.completeTopic( topic )

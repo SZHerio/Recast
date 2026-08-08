@@ -2,48 +2,46 @@
 #             ores.json              #
 ######################################
 
-  This file contains a BlockSetSelector (see below) describing the probability of a given ore being chosen.
-These probabilities are used in treasure rooms in the stronghold, in which
-piles of ore have a chance of spawning.
-For information on BlockSetSelectors, see the bottom of this README.
+Этот файл содержит BlockSetSelector (см. ниже), описывающий вероятность выбора той или иной руды.
+Эти вероятности используются в комнатах сокровищ в крепости, где могут появляться кучи руды.
+Сведения о BlockSetSelector см. внизу этого README.
 
 ######################################
 #          rareblocks.json           #
 ######################################
 
-  This file contains a BlockSetSelector describing the probability of a given block being chosen.
-These probabilities are used in grand libraries, in which
-two rare blocks will spawn.
-For information on BlockSetSelectors, see the bottom of this README.
+Этот файл содержит BlockSetSelector, описывающий вероятность выбора того или иного блока.
+Эти вероятности используются в больших библиотеках, где появляются два редких блока.
+Сведения о BlockSetSelector см. внизу этого README.
 
 ######################################
 #          armorstands.json          #
 ######################################
 
-  This file contains ItemSetSelectors describing the probability distribution of armor on armor stands.
-Common armor stands spawn in Armoury rooms, while Rare ones are only available in the rare Commander rooms.
-For information on ItemSetSelectors, see the bottom of this README.
+Этот файл содержит ItemSetSelector, описывающие распределение вероятностей брони на стойках для брони.
+Обычные стойки для брони появляются в оружейных комнатах, а редкие доступны только в редких комнатах командира.
+Сведения об ItemSetSelector см. внизу этого README.
 
 ######################################
-#          itemframes.json          #
+#          itemframes.json           #
 ######################################
 
-  This file contains ItemSetSelectors describing the probability distribution of items in item frames.
-Item frames only spawn in storage rooms and armoury rooms.
-For information on ItemSetSelectors, see the bottom of this README.
+Этот файл содержит ItemSetSelector, описывающие распределение вероятностей предметов в рамках для предметов.
+Рамки для предметов появляются только в складских и оружейных комнатах.
+Сведения об ItemSetSelector см. внизу этого README.
 
 ######################################
 #         BlockSetSelectors          #
 ######################################
 
-Describes a set of blockstates and the probability of each blockstate being chosen.
- - entries: An object where each entry's key is a blockstate, and each value is that blockstate's probability of being chosen.
-      The total sum of all probabilities SHOULD NOT exceed 1.0!
- - defaultBlock: The blockstate used for any leftover probability ranges.
-      For example, if the total sum of all the probabilities of the entries is 0.6, then
-      there is a 0.4 chance of the defaultBlock being selected.
+Описывает набор состояний блока и вероятность выбора каждого из них.
+ - entries: объект, где ключ каждой записи — состояние блока, а значение — вероятность его выбора.
+   Сумма всех вероятностей НЕ ДОЛЖНА превышать 1.0!
+ - defaultBlock: состояние блока, используемое для оставшихся диапазонов вероятности.
+   Например, если сумма всех вероятностей в entries равна 0.6, то
+   существует 0.4 вероятности, что будет выбран defaultBlock.
 
-Here's an example block selector:
+Вот пример селектора блоков:
 "entries": {
   "minecraft:cobblestone": 0.25,
   "minecraft:air": 0.2,
@@ -51,12 +49,12 @@ Here's an example block selector:
 },
 "defaultBlock": "minecraft:oak_planks"
 
-For each block, this selector has a 25% chance of returning cobblestone, 20% chance of choosing air,
-10% chance of choosing stone bricks, and a 100 - (25 + 20 + 10) = 45% chance of choosing oak planks (since it's the default block).
+Для каждого блока этот селектор имеет 25% шанс вернуть булыжник, 20% шанс выбрать воздух,
+10% шанс выбрать каменные кирпичи и 100 - (25 + 20 + 10) = 45% шанс выбрать дубовые доски (так как это defaultBlock).
 
 ######################################
 #         ItemSetSelectors           #
 ######################################
 
-Describes a set of items and the probability of each item being chosen.
-Works the same as BlockSetSelectors, but with items instead of blockstates.
+Описывает набор предметов и вероятность выбора каждого из них.
+Работает так же, как BlockSetSelectors, но для предметов вместо состояний блоков.

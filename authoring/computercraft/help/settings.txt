@@ -1,0 +1,19 @@
+Функции API Settings:
+settings.get( name, [default] )
+settings.set( name, value )
+settings.unset( name )
+settings.load( path )
+settings.save( path )
+settings.clear()
+settings.getNames()
+
+Настройки по умолчанию:
+shell.autocomplete — включает автодополнение в оболочке.
+lua.autocomplete — включает автодополнение в программе Lua.
+edit.autocomplete — включает автодополнение в программе Edit.
+edit.default_extension — задаёт расширение по умолчанию для файлов, созданных программой Edit.
+paint.default_extension — задаёт расширение по умолчанию для файлов, созданных программой Paint.
+bios.use_multishell — включает Multishell на продвинутых компьютерах, черепахах, карманных и командных компьютерах.
+shell.allow_disk_startup — разрешает автоматически запускать скрипт 'startup' при включении компьютера, если он находится на дискете в подключённом дисководе.
+shell.allow_startup — разрешает автоматически запускать скрипт 'startup' при включении компьютера, если он находится в корневом каталоге компьютера.
+list.show_hidden — определяет, будет ли программа List показывать скрытые файлы.

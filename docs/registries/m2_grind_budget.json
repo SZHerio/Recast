@@ -234,14 +234,17 @@
         "industrial_frontier:substance/drinking_water"
       ],
       "bootstrap_route_ru": "Первая партия собирается из нескольких понятных пищевых групп и питьевой воды; она проверяет снабжение, а не сотни одинаковых кликов.",
-      "automation_route_ru": "С P4 кухни и склады комплектуют рацион партиями до регулярного спроса города; точный пищевой стек остаётся gate.",
+      "automation_route_ru": "С P4 установленный Create Central Kitchen связывает кухню Farmer's Delight с пакетной механикой Create; городской спрос начинается только после сборки проверяемого продовольственного резерва.",
       "automation_epoch": 4,
       "mass_demand_epoch": 4,
       "budget_ref": "industrial_frontier:grind/p4/city_rations",
       "evidence_refs": [
-        "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md"
+        "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md",
+        "docs/registries/curseforge_sources.json",
+        "kubejs/server_scripts/40_balance/m4_municipal_contracts.js",
+        "kubejs/server_scripts/40_balance/m4_city_signals.js"
       ],
-      "gate": "EXACT_CURSEFORGE_AND_USER_TEST"
+      "gate": "M10_CITY_RATION_BINDING_AND_GRIND_TEST"
     },
     {
       "component_id": "industrial_frontier:component/p5/me_entry_set",
@@ -770,7 +773,7 @@
       "chain_id": "industrial_frontier:grind/p4/city_rations",
       "epoch": 4,
       "title_ru": "Стандартные городские рационы",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_M2",
       "goal_ru": "Автоматизировать питание города без жажды, порчи и нескольких nutrition-шкал.",
       "critical_component_refs": [
         "industrial_frontier:component/p4/city_ration_batch"
@@ -788,12 +791,15 @@
       "risk_flags": [
         "MICROCRAFT"
       ],
-      "result": "GATED",
-      "decision_ru": "Farmer's Delight/Central Kitchen ещё не установлены; числа являются верхним бюджетом будущей линии.",
+      "result": "EXPLAIN",
+      "decision_ru": "Farmer's Delight и Create Central Kitchen установлены. Шесть ручных операций и шесть переносов остаются объяснимым учебным максимумом первой партии, но не нормой серийного снабжения; точные числа ждут пользовательского замера.",
       "evidence_refs": [
-        "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md"
+        "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md",
+        "docs/registries/curseforge_sources.json",
+        "kubejs/server_scripts/40_balance/m4_municipal_contracts.js",
+        "kubejs/server_scripts/40_balance/m4_city_signals.js"
       ],
-      "gate": "EXACT_CURSEFORGE_AND_USER_TEST"
+      "gate": "M10_USER_GRIND_TEST"
     },
     {
       "chain_id": "industrial_frontier:grind/p5/ae2_entry",
@@ -1017,90 +1023,95 @@
       "chain_id": "industrial_frontier:grind/p8/colony_supply",
       "epoch": 8,
       "title_ru": "Регулярное снабжение колонии",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_M2",
       "goal_ru": "Поддерживать кислород, еду, детали и возвратную тару устойчивым грузопотоком.",
       "critical_component_refs": [
         "industrial_frontier:component/p8/colony_supply_manifest"
       ],
       "training_batches": 1,
-      "repeated_manual_operations": 3,
-      "manual_transfers": 3,
-      "active_minutes": 5,
+      "repeated_manual_operations": 2,
+      "manual_transfers": 2,
+      "active_minutes": 6,
       "passive_minutes": 3,
       "rng_percent": 100,
-      "deterministic_alternative_ru": "Маршрут и расписание детерминированы; колония не зависит от случайных припасов.",
+      "deterministic_alternative_ru": "Снабжение колонии не зависит от случайной находки: воздух, вода и пища производятся машинными процессами, а маршрут известен заранее.",
       "automation_epoch": 8,
       "mass_demand_epoch": 8,
       "returned_tools_or_catalysts": true,
       "risk_flags": [
-        "NONE"
+        "PASSIVE_WAIT"
       ],
-      "result": "GATED",
-      "decision_ru": "Сложность находится в балансе пропускной способности и резервов, а не в ручной упаковке каждой коробки.",
+      "result": "GREEN",
+      "decision_ru": "Две ручных операции против зелёного порога в три. Ручное снабжение допустимо только на этапе стройки: как только колония заявлена самодостаточной, регулярная доставка еды и воздуха перестаёт засчитываться — это записано в требованиях мегапроекта.",
       "evidence_refs": [
-        "docs/MASTER_DESIGN_DOCUMENT.md#P8"
+        "docs/MASTER_DESIGN_DOCUMENT.md#M8",
+        "kubejs/server_scripts/40_balance/m8_endgame_programme.js",
+        "authoring/quests/specs/19_p9_finale.json"
       ],
-      "gate": "SPACE_STACK_NOT_INSTALLED"
+      "gate": "M8_USER_RECIPE_TEST"
     },
     {
       "chain_id": "industrial_frontier:grind/p8/interplanetary_cargo",
       "epoch": 8,
       "title_ru": "Межпланетный грузопоток",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_M2",
       "goal_ru": "Превратить отдельный запуск в наблюдаемую логистическую сеть.",
       "critical_component_refs": [
         "industrial_frontier:component/p8/interplanetary_cargo_unit"
       ],
-      "training_batches": 2,
-      "repeated_manual_operations": 4,
-      "manual_transfers": 4,
-      "active_minutes": 6,
+      "training_batches": 1,
+      "repeated_manual_operations": 1,
+      "manual_transfers": 2,
+      "active_minutes": 5,
       "passive_minutes": 3,
       "rng_percent": 100,
-      "deterministic_alternative_ru": "Доставка определяется расписанием, топливом и инфраструктурой, а не шансом события.",
+      "deterministic_alternative_ru": "Груз идёт по известному маршруту между известными складами; случайности в цепочке нет.",
       "automation_epoch": 8,
       "mass_demand_epoch": 8,
       "returned_tools_or_catalysts": true,
       "risk_flags": [
-        "NONE"
+        "PASSIVE_WAIT"
       ],
-      "result": "GATED",
-      "decision_ru": "Игрок проектирует буферы и резерв, после чего повторные рейсы не требуют полного ручного чек-листа.",
+      "result": "GREEN",
+      "decision_ru": "Первый рейс ручной и нужен, чтобы понять объём. Дальше погрузка, полёт и разгрузка идут без игрока — иначе планетарная сеть превращается в маршрут, который обслуживают руками, и планетарное сырьё не входит ни в один обязательный рецепт.",
       "evidence_refs": [
-        "docs/MASTER_DESIGN_DOCUMENT.md#P8",
-        "docs/TECHNOLOGY_FEDERATION.md"
+        "docs/MASTER_DESIGN_DOCUMENT.md#M8",
+        "kubejs/server_scripts/40_balance/m8_endgame_programme.js",
+        "authoring/quests/specs/19_p9_finale.json"
       ],
-      "gate": "SPACE_STACK_NOT_INSTALLED"
+      "gate": "M8_USER_RECIPE_TEST"
     },
     {
       "chain_id": "industrial_frontier:grind/p9/megastructure",
       "epoch": 9,
       "title_ru": "Финальный цивилизационный мегапроект",
-      "status": "GATED_NOT_INSTALLED",
+      "status": "ACTIVE_M2",
       "goal_ru": "Проверить устойчивость всех отраслей непрерывной нагрузкой, а не гигантской одноразовой кучей предметов.",
       "critical_component_refs": [
         "industrial_frontier:component/p9/megastructure_section"
       ],
-      "training_batches": 0,
-      "repeated_manual_operations": 0,
-      "manual_transfers": 0,
-      "active_minutes": 0,
-      "passive_minutes": 0,
+      "training_batches": 1,
+      "repeated_manual_operations": 2,
+      "manual_transfers": 3,
+      "active_minutes": 8,
+      "passive_minutes": 3,
       "rng_percent": 100,
-      "deterministic_alternative_ru": "Все входы производятся; успех измеряется стабильным потоком, качеством и восстановлением после сбоя.",
+      "deterministic_alternative_ru": "Секции мегаструктуры делаются из планетарного сырья по фиксированным рецептам; случайного источника у них нет.",
       "automation_epoch": 9,
       "mass_demand_epoch": 9,
       "returned_tools_or_catalysts": true,
       "risk_flags": [
-        "NONE"
+        "MANUAL_TRANSFER",
+        "PASSIVE_WAIT"
       ],
-      "result": "GATED",
-      "decision_ru": "Финал не требует ручного крафта: он использует контракты пропускной способности, энергии, города, безопасности и логистики.",
+      "result": "GREEN",
+      "decision_ru": "Секций нужны сотни, и ровно поэтому мегапроект не засчитывается, пока рой держится ручными партиями. Ручная сборка допустима один раз — на проверке схемы. Обслуживание сферы идёт той же линией, что и стройка, поэтому второй ручной цикл не появляется.",
       "evidence_refs": [
-        "docs/MASTER_DESIGN_DOCUMENT.md#P9",
-        "docs/GRIND_POLICY.md"
+        "docs/MASTER_DESIGN_DOCUMENT.md#M8",
+        "kubejs/server_scripts/40_balance/m8_endgame_programme.js",
+        "authoring/quests/specs/19_p9_finale.json"
       ],
-      "gate": "M8_M9_CONTENT_NOT_IMPLEMENTED"
+      "gate": "M8_USER_RECIPE_TEST"
     }
   ]
 }

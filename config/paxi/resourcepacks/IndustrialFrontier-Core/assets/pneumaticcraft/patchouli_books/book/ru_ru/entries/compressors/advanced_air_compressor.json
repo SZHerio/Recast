@@ -1,0 +1,17 @@
+{
+  "name": "Продвинутый воздушный компрессор",
+  "icon": "pneumaticcraft:advanced_air_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:advanced_pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)Продвинутый воздушный компрессор/$ — это версия $(l:base_concepts/pressure_tiers)2-го уровня/$ обычного $(l:compressors/air_compressor)воздушного компрессора/$ с максимальным безопасным давлением 20 бар. Базовая производительность составляет $(ttcolor)$(t:Её можно повысить улучшениями скорости)50 мл воздуха за тик/$; также компрессор поддерживает $(l:base_concepts/upgrades#speed)улучшения скорости/$.$(p)Компрессор необходимо $(l:base_concepts/heat)охлаждать/$: с ростом температуры его эффективность падает, пока выработка воздуха не прекращается полностью."
+    },
+    {
+      "type": "crafting",
+      "text": "Создание $(item)продвинутого воздушного компрессора/$",
+      "recipe": "pneumaticcraft:advanced_air_compressor"
+    }
+  ]
+}

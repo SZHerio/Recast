@@ -1,0 +1,73 @@
+{
+  "name": "Условия",
+  "icon": "minecraft:comparator",
+  "category": "pneumaticcraft:programming",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)Условия/$ — семейство виджетов, которые выполняют проверку и при её успехе переходят в другую часть программы.$(p)Каждый виджет $(thing)Условие/$ принимает параметр $(l:programming/text)Текст/$ — он всегда располагается ниже остальных параметров — с настроенным $(thing)именем ярлыка/$."
+    },
+    {
+      "type": "text",
+      "text": "Если условие принимает значение $(thing)истина/$, $(l:programming/flow_control)выполнение программы/$ переходит к виджету $(l:programming/label)Ярлык/$ с тем же именем, что у параметра $(thing)Текст/$ $(italic)справа/$. При значении $(thing)ложь/$ выполняется переход к $(thing)Ярлыку/$ с именем параметра $(thing)Текст/$ $(italic)слева/$.$(p)Если виджет $(thing)Условие/$ не находит допустимый параметр $(thing)Текст/$, программа просто переходит к следующему виджету, подключённому $(italic)снизу/$."
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/condition_widget.png"
+      ],
+      "border": "true",
+      "text": "$(italic)Виджет «Условие: редстоун», уничтожающий дрона при сигнале >= 10/$"
+    },
+    {
+      "type": "text",
+      "text": "У большинства виджетов $(thing)Условие/$ по $(thing)ПКМ/$ открывается окно настроек. Обычно в нём есть варианты '=' и '>=' и текстовое поле для числа.$(p)Так можно задать, например, ровно 10 предметов в сундуке — режим '=' и значение 10; больше 20 — режим '>=' и значение '21'; меньше 12 — режим '>=' и значение '12', но переход по значению $(thing)ложь/$."
+    },
+    {
+      "type": "text",
+      "title": "Измерение",
+      "text": "В интерфейсе всех виджетов $(thing)Условие/$, кроме $(l:programming/condition_item)Условия: фильтр предметов/$, есть текстовое поле $(thing)Измерить/$. В него можно ввести имя $(l:programming/variables)переменной/$. Тогда результат любого измерения дрона будет записан в поле X этой переменной.$(p)После этого значение доступно как обычная переменная: например, можно измерить уровень жидкости в резервуаре и вывести его на табличку."
+    },
+    {
+      "type": "text",
+      "title": "Измерение (продолжение)",
+      "text": "Если указана переменная измерения, отсутствие ветвящих виджетов Текст у виджета Условие больше не считается ошибкой, хотя обычно требуется хотя бы одна ветвь. Поэтому Условие можно использовать только для измерения величины: выполнение продолжится вниз обычным образом.$(p)Примечание: условия измерения давления записывают результат в миллибарах — например, 5,5 бар превратятся в 5 500."
+    },
+    {
+      "type": "text",
+      "title": "Виды условий",
+      "text": "Условия делятся на две категории: $(thing)Условия мира/$ и $(thing)Условия дрона/$.$(p)Условия мира проверяют окружение: например, есть ли в $(item)сундуке/$ заданное количество предметов или существует ли где-нибудь нужный блок.$(p)$(thing)Условия дрона/$ относятся непосредственно к $(l:tools/drone)дрону/$: например, есть ли у него нужный предмет или достигнуто ли определённое давление."
+    },
+    {
+      "type": "text",
+      "text": "У всех работающих с блоками $(thing)Условий мира/$ есть параметр $(thing)Любой/Все/$ для одновременной проверки нескольких блоков.$(li)В режиме $(thing)Любой/$ достаточно, чтобы совпал хотя бы $(italic)один/$ блок в выбранной $(l:programming/area)области/$; тогда условие будет $(thing)истинным/$.$(li)В режиме $(thing)Все/$ должны совпасть $(italic)все/$ блоки; только тогда условие будет $(thing)истинным/$."
+    },
+    {
+      "type": "relations",
+      "title": "Условия мира",
+      "entries": [
+        "pneumaticcraft:programming/condition_block",
+        "pneumaticcraft:programming/condition_coordinate",
+        "pneumaticcraft:programming/condition_entity",
+        "pneumaticcraft:programming/condition_item",
+        "pneumaticcraft:programming/condition_item_inventory",
+        "pneumaticcraft:programming/condition_liquid_inventory",
+        "pneumaticcraft:programming/condition_pressure",
+        "pneumaticcraft:programming/condition_redstone",
+        "pneumaticcraft:programming/condition_rf"
+      ]
+    },
+    {
+      "type": "relations",
+      "title": "Условия дрона",
+      "entries": [
+        "pneumaticcraft:programming/drone_condition_item",
+        "pneumaticcraft:programming/drone_condition_liquid",
+        "pneumaticcraft:programming/drone_condition_entity",
+        "pneumaticcraft:programming/drone_condition_pressure",
+        "pneumaticcraft:programming/drone_condition_rf"
+      ]
+    }
+  ]
+}

@@ -1,9 +1,8 @@
 {
   "schema_version": 2,
   "build_id": "IF-M1-0001",
-  "full_ru_gate_status": "OPEN",
+  "full_ru_gate_status": "STATIC_COMPLETE_OWNER_QA",
   "full_ru_gate_blockers": [
-    "guideme.hardcoded_screen_titles",
     "owner_visual_qa"
   ],
   "entries": [
@@ -11,33 +10,33 @@
       "id": "ae2.guideme.markdown",
       "priority": "P0",
       "status": "STATIC_COMPLETE",
-      "scope": "119/119 assets/ae2/ae2guide/**/*.md pages; structural QA clean",
+      "scope": "119/119 страниц assets/ae2/ae2guide/**/*.md; структурная проверка пройдена",
       "machine_report": "docs/registries/generated/IF-M1-0001/guide_content_baseline.json",
-      "release_gate": "Owner completes visual navigation, search, scene, wrapping and item-link QA."
+      "release_gate": "Владелец проходит визуальную проверку навигации, поиска, сцен, переноса строк и ссылок на предметы."
     },
     {
       "id": "alexsmobs.animal_dictionary.editorial",
       "priority": "P1",
       "status": "STATIC_COMPLETE",
-      "scope": "91/91 pages editorially reviewed; 90 corrected Paxi overrides and one accepted vendor page",
+      "scope": "91/91 страниц отредактированы; 90 исправленных переопределений Paxi и одна принятая страница от поставщика",
       "machine_report": "docs/registries/generated/IF-M1-0001/book_content_baseline.json",
-      "release_gate": "Owner completes in-game book rendering QA."
+      "release_gate": "Владелец завершает проверку рендеринга книги в игре."
     },
     {
       "id": "citadel.demo_book",
       "priority": "P2",
       "status": "STATIC_COMPLETE",
-      "scope": "2/2 ru_ru text pages and 2/2 common JSON literal labels",
+      "scope": "2/2 текстовых страницы ru_ru и 2/2 буквальных метки в common JSON",
       "machine_report": "docs/registries/generated/IF-M1-0001/book_content_baseline.json",
-      "release_gate": "Owner confirms the demo book renders Russian if accessed."
+      "release_gate": "Владелец подтверждает, что демонстрационная книга отображается по-русски, если к ней обратиться."
     },
     {
       "id": "guideme.hardcoded_screen_titles",
       "priority": "P2",
-      "status": "OPEN",
-      "scope": "GuideME 20.1.15 (CurseForge 1173950/8204776): GuideME Guidebook; AE2 Guidebook Search; Navigation Tree",
+      "status": "EXPLAINED_CODE_LIMITATION",
+      "scope": "GuideME 20.1.15 (CurseForge 1173950/8204776): два английских narration-title в Java bytecode; третья метка Navigation Tree не выводится и не озвучивается",
       "machine_report": null,
-      "release_gate": "Exact upstream version fixes the literals, or a narrow pack-owned CurseForge-published patch localizes them without a runtime translator."
+      "release_gate": "Визуальную локализацию не блокирует. Для полного русского accessibility-слоя нужен upstream-патч либо узкий client-only compat-мод: обычный resource/lang-overlay Java-literal не заменяет."
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "fancymenu.actions.blocks.else": "ИНАЧЕ",
+  "fancymenu.actions.blocks.else_if": "ИНАЧЕ ЕСЛИ (%s)",
+  "fancymenu.actions.blocks.if": "ЕСЛИ (%s)",
+  "fancymenu.actions.blocks.while": "ПОКА (%s)",
+  "fancymenu.actions.screens.finish.no_action_selected": "§xСначала выберите действие!",
+  "fancymenu.buddy.achievement.reward": "+%s ед. опыта",
+  "fancymenu.placeholders.jvm_name": "Виртуальная машина Java",
+  "fancymenu.placeholders.pi": "§opi π §r(математика)",
+  "fancymenu.requirements.categories.gui": "Интерфейс",
+  "fancymenu.ui.filechooser.create_folder.default_name": "новая_папка"
+}

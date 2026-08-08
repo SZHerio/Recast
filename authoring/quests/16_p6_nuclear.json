@@ -8,98 +8,98 @@
     {
       "alias": "if.quest.p6.intro",
       "engine_id": "3016000000000001",
-      "purpose": "And starts being a responsibility",
+      "purpose": "Объясняет, что атомная энергия начинается как ответственность, а не просто апгрейд.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p6.materials",
       "engine_id": "3016000000000002",
-      "purpose": "And none of them is fuel",
+      "purpose": "Сначала показывает набор материалов, и только потом топливо.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.entry",
       "engine_id": "3016000000000003",
-      "purpose": "Entry costs steel and HV electronics",
+      "purpose": "Обозначает входную цену в атомную отрасль.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.alloys",
       "engine_id": "3016000000000004",
-      "purpose": "Ferroboron, tough alloy and cladding",
+      "purpose": "Вводит сплавы, которые делают отрасль безопаснее.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.purification",
       "engine_id": "3016000000000005",
-      "purpose": "Ore is not yet fuel",
+      "purpose": "Объясняет, что руда ещё не топливо и её надо обрабатывать.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     },
     {
       "alias": "if.quest.p6.enrichment",
       "engine_id": "3016000000000006",
-      "purpose": "Separation by mass, not by chemistry",
+      "purpose": "Показывает разделение изотопов как задачу массы.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.fuel",
       "engine_id": "3016000000000007",
-      "purpose": "Pellet, cladding, assembly",
+      "purpose": "Показывает весь топливный набор: таблетка, оболочка, сборка.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.dosimetry",
       "engine_id": "3016000000000008",
-      "purpose": "The one sense humans do not have",
+      "purpose": "Объясняет дозиметрию как недостающий игроку орган чувств.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.reactor",
       "engine_id": "3016000000000009",
-      "purpose": "Heat removal is designed before startup",
+      "purpose": "Ставит отвод тепла в проект ещё до запуска.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.heat_loop",
       "engine_id": "3016000000000010",
-      "purpose": "Coolant travels in a circle",
+      "purpose": "Учит контуру охлаждения как замкнутой системе циркуляции.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.turbine",
       "engine_id": "3016000000000011",
-      "purpose": "A familiar machine at a new scale",
+      "purpose": "Показывает турбину как знакомую машину, но на другом масштабе.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.spent_fuel",
       "engine_id": "3016000000000012",
-      "purpose": "Fuel does not run out, it changes",
+      "purpose": "Показывает, что отработанное топливо не исчезает, а меняет состояние.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.isotopes",
       "engine_id": "3016000000000013",
-      "purpose": "What only a reactor can give you",
+      "purpose": "Отмечает изотопы как уникальный продукт реактора.",
       "task_kind": "item",
       "grind_class": "GREEN"
     },
     {
       "alias": "if.quest.p6.city_plant",
       "engine_id": "3016000000000014",
-      "purpose": "A cross-domain megaproject",
+      "purpose": "Показывает завод как междисциплинарный мегапроект.",
       "task_kind": "checkmark",
       "grind_class": "NONE"
     }

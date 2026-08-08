@@ -1,0 +1,180 @@
+{
+	default_hide_dependency_lines: false
+	hide_quest_until_deps_visible: true
+	default_quest_shape: "square"
+	filename: "72_mastery_distributed_factory"
+	group: "1000000000000003"
+	icon: "minecraft:compass"
+	id: "2072000000000001"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			hide_until_deps_complete: true
+			dependencies: ["3018000000000013"]
+			description: [
+				"{industrial_frontier.quest.mastery.intro.desc.1}"
+				"{industrial_frontier.quest.mastery.intro.desc.2}"
+				"{industrial_frontier.quest.mastery.intro.desc.3}"
+			]
+			icon: "minecraft:compass"
+			id: "3072000000000001"
+			optional: true
+			subtitle: "{industrial_frontier.quest.mastery.intro.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4072000000000001"
+				title: "{industrial_frontier.quest.mastery.intro.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.mastery.intro.title}"
+			shape: "gear"
+			size: 1.5d
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: ["3072000000000001"]
+			description: [
+				"{industrial_frontier.quest.mastery.where_it_stopped.desc.1}"
+				"{industrial_frontier.quest.mastery.where_it_stopped.desc.2}"
+				"{industrial_frontier.quest.mastery.where_it_stopped.desc.3}"
+			]
+			icon: "minecraft:redstone_torch"
+			id: "3072000000000002"
+			optional: true
+			subtitle: "{industrial_frontier.quest.mastery.where_it_stopped.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4072000000000002"
+				title: "{industrial_frontier.quest.mastery.where_it_stopped.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.mastery.where_it_stopped.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: -1d
+		}
+		{
+			dependencies: ["3072000000000002"]
+			description: [
+				"{industrial_frontier.quest.mastery.reserve_math.desc.1}"
+				"{industrial_frontier.quest.mastery.reserve_math.desc.2}"
+				"{industrial_frontier.quest.mastery.reserve_math.desc.3}"
+			]
+			icon: "minecraft:clock"
+			id: "3072000000000003"
+			optional: true
+			subtitle: "{industrial_frontier.quest.mastery.reserve_math.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4072000000000003"
+				title: "{industrial_frontier.quest.mastery.reserve_math.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.mastery.reserve_math.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: -1d
+		}
+		{
+			dependencies: ["3072000000000001"]
+			description: [
+				"{industrial_frontier.quest.mastery.expand_without_rebuild.desc.1}"
+				"{industrial_frontier.quest.mastery.expand_without_rebuild.desc.2}"
+				"{industrial_frontier.quest.mastery.expand_without_rebuild.desc.3}"
+			]
+			icon: "minecraft:scaffolding"
+			id: "3072000000000004"
+			optional: true
+			subtitle: "{industrial_frontier.quest.mastery.expand_without_rebuild.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4072000000000004"
+				title: "{industrial_frontier.quest.mastery.expand_without_rebuild.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.mastery.expand_without_rebuild.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 2d
+			y: 1d
+		}
+		{
+			dependencies: ["3072000000000004"]
+			description: [
+				"{industrial_frontier.quest.mastery.boring_work.desc.1}"
+				"{industrial_frontier.quest.mastery.boring_work.desc.2}"
+				"{industrial_frontier.quest.mastery.boring_work.desc.3}"
+			]
+			icon: "minecraft:hopper"
+			id: "3072000000000005"
+			optional: true
+			subtitle: "{industrial_frontier.quest.mastery.boring_work.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4072000000000005"
+				title: "{industrial_frontier.quest.mastery.boring_work.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.mastery.boring_work.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 4d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"3072000000000003"
+				"3072000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.mastery.power_discipline.desc.1}"
+				"{industrial_frontier.quest.mastery.power_discipline.desc.2}"
+				"{industrial_frontier.quest.mastery.power_discipline.desc.3}"
+			]
+			icon: "minecraft:lightning_rod"
+			id: "3072000000000006"
+			optional: true
+			subtitle: "{industrial_frontier.quest.mastery.power_discipline.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4072000000000006"
+				title: "{industrial_frontier.quest.mastery.power_discipline.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.mastery.power_discipline.title}"
+			shape: "rsquare"
+			size: 1.5d
+			x: 6d
+			y: 0d
+		}
+		{
+			dependencies: ["3072000000000006"]
+			description: [
+				"{industrial_frontier.quest.mastery.handover.desc.1}"
+				"{industrial_frontier.quest.mastery.handover.desc.2}"
+				"{industrial_frontier.quest.mastery.handover.desc.3}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3072000000000007"
+			optional: true
+			subtitle: "{industrial_frontier.quest.mastery.handover.subtitle}"
+			tags: ["academy"]
+			tasks: [{
+				id: "4072000000000007"
+				title: "{industrial_frontier.quest.mastery.handover.task}"
+				type: "checkmark"
+			}]
+			title: "{industrial_frontier.quest.mastery.handover.title}"
+			shape: "diamond"
+			size: 1.5d
+			x: 8d
+			y: 0d
+		}
+	]
+	subtitle: ["{industrial_frontier.quest.chapter.mastery.subtitle}"]
+	title: "{industrial_frontier.quest.chapter.mastery.title}"
+}

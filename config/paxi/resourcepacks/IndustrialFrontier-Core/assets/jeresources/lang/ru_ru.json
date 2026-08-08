@@ -1,0 +1,7 @@
+{
+  "_comment": "#Фазы Луны",
+  "jer.magmaCream.text": "Малые и большие магмовые кубы",
+  "jer.villager.poi": "Точка интереса",
+  "jer.worldgen.affectedByFortune": "(Зависит от чар «Удача»)",
+  "jer.worldgen.chance": "с вероятностью %s"
+}

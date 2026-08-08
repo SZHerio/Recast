@@ -1,0 +1,15 @@
+Чтобы задать выходные сигналы многоканального кабеля:
+c = colors.combine( colors.red, colors.blue )
+rs.setBundledOutput( "left", c )
+
+c = colors.combine( c, colors.green )
+rs.setBundledOutput( "left", c )
+
+c = colors.subtract( c, colors.blue )
+rs.setBundledOutput( "left", c )
+
+Чтобы получить входные сигналы многоканального кабеля:
+c = rs.getBundledInput( "right" )
+red = colors.test( c, colors.red )
+
+Введите "help colors", чтобы увидеть список цветов проводов.

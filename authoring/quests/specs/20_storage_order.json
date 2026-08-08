@@ -1,0 +1,207 @@
+{
+  "key": "storage",
+  "file": "20_storage_order",
+  "chapter_id": "2020000000000001",
+  "group_id": "1000000000000003",
+  "icon": "toms_storage:ts.storage_terminal",
+  "order": 10,
+  "tag": "academy",
+  "optional": true,
+  "title_ru": "Хранение и порядок",
+  "title_en": "Storage and order",
+  "sub_ru": "Как перестать искать вещь по сундукам",
+  "sub_en": "How to stop hunting for items across chests",
+  "quests": [
+    {
+      "slug": "intro",
+      "x": 0,
+      "y": 0,
+      "icon": "minecraft:chest",
+      "deps": [],
+      "ru": {
+        "title": "Сундуки кончаются раньше идей",
+        "subtitle": "Почему порядок — это не уборка",
+        "desc": [
+          "К концу первой эпохи у вас будет двадцать сундуков и ни одной мысли, в каком из них лежит нужная шестерёнка. Это не неряшливость, это арифметика: количество разных предметов растёт быстрее, чем память.",
+          "Сборка относится к этому как к производственной задаче, а не к вопросу аккуратности. Время, потраченное на поиск, ничем не отличается от времени простоя станка.",
+          "Дальше в этой главе — три ступени порядка: подписанные ящики, общий список и, много позже, сеть, которая сама приносит. Каждая ступень стоит своих материалов и открывается тогда, когда предыдущая перестаёт справляться."
+        ],
+        "task": "Прочитать про порядок хранения"
+      },
+      "en": {
+        "title": "Chests run out before ideas do",
+        "subtitle": "Why order is not tidiness",
+        "desc": [
+          "By the end of the first epoch you will own twenty chests and no idea which one holds the cog you need. That is not sloppiness, it is arithmetic: the number of distinct items grows faster than memory does.",
+          "The pack treats this as a production problem, not a housekeeping one. Time spent searching is no different from machine downtime.",
+          "This chapter covers three steps of order: labelled crates, a shared list and, much later, a network that fetches things for you. Each step costs its own materials and opens when the previous one stops coping."
+        ],
+        "task": "Read about storage order"
+      }
+    },
+    {
+      "slug": "connector",
+      "x": 3,
+      "y": 0,
+      "icon": "toms_storage:ts.inventory_connector",
+      "deps": ["intro"],
+      "item": "toms_storage:ts.inventory_connector",
+      "ru": {
+        "title": "Связующий блок",
+        "subtitle": "Один блок собирает соседние ящики в одно целое",
+        "desc": [
+          "Связующий блок смотрит на всё, что стоит рядом с ним, и объявляет это единым хранилищем. Сундуки остаются сундуками — просто теперь у них появился общий учёт.",
+          "Правило простое: контейнеры должны касаться связующего блока или друг друга. Разорвалась цепочка касаний — отвалилась часть склада, и это самая частая ошибка новичка.",
+          "В сборке он стоит стальных пластин, а не пары досок. Причина в том, что это уже промышленный инструмент: он экономит вам часы, и появляться раньше стали не должен."
+        ],
+        "task": "Собрать связующий блок"
+      },
+      "en": {
+        "title": "The inventory connector",
+        "subtitle": "One block turns neighbouring crates into a whole",
+        "desc": [
+          "The connector looks at everything placed against it and declares the lot a single store. Chests stay chests — they simply gain shared bookkeeping.",
+          "The rule is simple: containers must touch the connector or each other. Break the chain of contact and part of the warehouse drops out, which is the most common beginner mistake.",
+          "In this pack it costs steel plates rather than a couple of planks. It is already an industrial tool: it saves you hours, so it must not arrive before steel does."
+        ],
+        "task": "Craft the inventory connector"
+      }
+    },
+    {
+      "slug": "terminal",
+      "x": 6,
+      "y": 0,
+      "icon": "toms_storage:ts.storage_terminal",
+      "deps": ["connector"],
+      "item": "toms_storage:ts.storage_terminal",
+      "ru": {
+        "title": "Терминал: весь склад одним списком",
+        "subtitle": "Поиск вместо перебора",
+        "desc": [
+          "Терминал показывает содержимое всего связанного склада одним списком с поиском. Двадцать сундуков превращаются в одну строку ввода.",
+          "Это первая ступень, на которой склад начинает работать на вас. Важно понимать её границу: терминал умеет показывать и отдавать, но ничего не производит и никуда не носит.",
+          "Ставьте его там, где вы действительно работаете, а не там, где стоят сундуки. Смысл в том, чтобы не ходить."
+        ],
+        "task": "Собрать терминал хранения"
+      },
+      "en": {
+        "title": "The terminal: one list for the whole store",
+        "subtitle": "Search instead of rummaging",
+        "desc": [
+          "The terminal shows the contents of the entire linked store as one searchable list. Twenty chests collapse into a single input field.",
+          "This is the first step where storage starts working for you. Mind its boundary: the terminal shows and hands over, but it produces nothing and carries nothing.",
+          "Put it where you actually work, not where the chests stand. The point is to stop walking."
+        ],
+        "task": "Craft the storage terminal"
+      }
+    },
+    {
+      "slug": "cables",
+      "x": 9,
+      "y": -1.5,
+      "icon": "toms_storage:ts.inventory_cable",
+      "deps": ["terminal"],
+      "ru": {
+        "title": "Кабель и удалённые ящики",
+        "subtitle": "Склад может стоять не там, где вы",
+        "desc": [
+          "Кабель переносит связь на расстояние: коннектор на дальнем конце подключает к общему складу ящики, стоящие в другом помещении.",
+          "Так решается настоящая планировочная задача. Грязное и шумное — плавильню, склад руды, бочки с кислотой — держат отдельно от рабочего места, но видеть их содержимое нужно постоянно.",
+          "Ограничение честное: кабель имеет длину, и каждый коннектор потребляет её. Проектируйте склад заранее, а не тяните нитку через всю базу."
+        ],
+        "task": "Протянуть кабель до удалённого хранилища"
+      },
+      "en": {
+        "title": "Cable and remote crates",
+        "subtitle": "The store need not sit where you do",
+        "desc": [
+          "Cable carries the link over distance: a connector at the far end attaches crates in another room to the shared store.",
+          "This solves a real layout problem. Dirty and noisy things — the smeltery, the ore pile, the acid barrels — are kept away from the workbench, yet you still need to see their contents.",
+          "The limit is honest: cable has length and each connector consumes it. Plan the warehouse ahead instead of trailing a wire across the base."
+        ],
+        "task": "Run cable to a remote store"
+      }
+    },
+    {
+      "slug": "crafting",
+      "x": 9,
+      "y": 1.5,
+      "icon": "toms_storage:ts.crafting_terminal",
+      "deps": ["terminal"],
+      "ru": {
+        "title": "Крафт прямо из склада",
+        "subtitle": "Третья эпоха, и не раньше",
+        "desc": [
+          "Крафт-терминал добавляет к списку верстак: собирать можно, не доставая материалы руками. Экономия времени огромная, и именно поэтому он открыт только в третьей эпохе.",
+          "Правило сборки не меняется: удобство приходит после того, как задача, которую оно решает, уже начала болеть. Пока у вас три рецепта, крафт-терминал не нужен, а когда их триста — он спасает вечер.",
+          "Не путайте его с автосборкой. Он по-прежнему требует, чтобы кнопку нажали вы."
+        ],
+        "task": "Собрать крафт-терминал"
+      },
+      "en": {
+        "title": "Crafting straight from the store",
+        "subtitle": "Third epoch, not before",
+        "desc": [
+          "The crafting terminal adds a workbench to the list: you can assemble without pulling materials out by hand. The time saved is enormous, which is exactly why it only opens in the third epoch.",
+          "The pack rule does not change: convenience arrives after the problem it solves has started to hurt. With three recipes you do not need it; with three hundred it saves your evening.",
+          "Do not confuse it with autocrafting. It still needs you to press the button."
+        ],
+        "task": "Craft the crafting terminal"
+      }
+    },
+    {
+      "slug": "level",
+      "x": 12,
+      "y": 0,
+      "icon": "toms_storage:ts.level_emitter",
+      "deps": ["cables", "crafting"],
+      "ru": {
+        "title": "Эмиттер уровня: склад отвечает сигналом",
+        "subtitle": "Первая настоящая автоматика хранения",
+        "desc": [
+          "Эмиттер даёт сигнал, когда количество предмета на складе падает ниже заданного. Это превращает склад из витрины в датчик.",
+          "Отсюда начинается автоматизация по потребности, а не по расписанию. Машина включается, когда запас кончается, и молчит, когда его достаточно — вместо того чтобы вечно молоть впрок.",
+          "Это же приём лежит в основе всей поздней логистики. Здесь он стоит редстоуна и схемы, а в пятой эпохе тот же принцип будет управлять целыми линиями."
+        ],
+        "task": "Собрать эмиттер уровня"
+      },
+      "en": {
+        "title": "Level emitter: the store answers with a signal",
+        "subtitle": "The first real storage automation",
+        "desc": [
+          "The emitter fires a signal when the stored amount of an item drops below a set number. That turns the warehouse from a display case into a sensor.",
+          "This is where automation by need begins, as opposed to automation by schedule. A machine starts when the stock runs out and stays quiet when there is enough, instead of grinding forever just in case.",
+          "The same trick underpins all late logistics. Here it costs redstone and a circuit; in the fifth epoch the same principle will drive entire lines."
+        ],
+        "task": "Craft the level emitter"
+      }
+    },
+    {
+      "slug": "handover",
+      "x": 15,
+      "y": 0,
+      "icon": "ae2:controller",
+      "deps": ["level"],
+      "ru": {
+        "title": "Где заканчивается склад и начинается сеть",
+        "subtitle": "Почему ME не отменяет то, что вы построили",
+        "desc": [
+          "В пятой эпохе появится ME-сеть, и логичный вопрос: зачем тогда всё это было. Ответ в том, что они решают разные задачи.",
+          "Эта система показывает и отдаёт то, что лежит в обычных сундуках. ME-сеть хранит предметы в собственных ячейках, раздаёт их машинам по каналам и в конце концов собирает вещи сама, без вас. Первое — порядок, второе — производство.",
+          "Практика такая: склад сырья и мусора остаётся здесь, потому что он дешёвый и его не жалко. В ME уходит то, что участвует в автосборке. Беспроводной доступ намеренно отдан ME — это его привилегия, а не ваша плата за терпение."
+        ],
+        "task": "Разобраться в разделении склада и сети"
+      },
+      "en": {
+        "title": "Where storage ends and the network begins",
+        "subtitle": "Why ME does not cancel what you built",
+        "desc": [
+          "The ME network arrives in the fifth epoch, raising a fair question: what was all this for. The answer is that they solve different problems.",
+          "This system shows and hands over what sits in ordinary chests. An ME network keeps items in its own cells, feeds machines through channels and eventually assembles things itself, without you. One is order, the other is production.",
+          "In practice: bulk and scrap stay here, because this is cheap and expendable. What takes part in autocrafting moves to ME. Wireless access is deliberately reserved for ME — that is its privilege, not your reward for patience."
+        ],
+        "task": "Work out what belongs where"
+      }
+    }
+  ]
+}

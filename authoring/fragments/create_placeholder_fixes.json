@@ -1,0 +1,5 @@
+{
+  "create.schedule.condition.time_of_day.digital_format": "%1$s:%3$s %4$s",
+  "create.track_signal.mode_controlled_by_computer": "Режим сигнала управляется компьютером",
+  "tag.item.create.casing": "Корпусы"
+}

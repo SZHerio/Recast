@@ -1,0 +1,30 @@
+{
+  "name": "Детектор среды",
+  "icon": "advancedperipherals:environment_detector",
+  "category": "advancedperipherals:peripherals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Детектор среды получает сведения об окружении: текущее время, фазу Луны, уровень освещения блока и многое другое.$(p)Подробности приведены на $(9)$(l:https://docs.intelligence-modding.de/peripherals/environment_detector/)официальной странице документации$(/l)$()."
+    },
+    {
+      "type": "crafting",
+      "recipe": "advancedperipherals:environment_detector"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "0": "computercraft:computer_advanced",
+          "P": "advancedperipherals:environment_detector"
+        },
+        "pattern": [
+          [
+            "0P"
+          ]
+        ]
+      },
+      "text": "Подключите детектор среды к компьютеру, чтобы начать им пользоваться."
+    }
+  ]
+}
