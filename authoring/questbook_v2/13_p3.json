@@ -140,6 +140,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -147,14 +159,14 @@
           "kind": "registry",
           "id": "docs/registries/m2_energy_networks.json",
           "evidence": [
-            "Реестр фиксирует сеть GT EU и её ограничения."
+            "docs/registries/m2_energy_networks.json"
           ]
         },
         {
           "kind": "doc",
           "id": "docs/RU_STYLE_GUIDE.md",
           "evidence": [
-            "Глоссарий различает напряжение, число ампер, EU/т и FE/т."
+            "docs/RU_STYLE_GUIDE.md"
           ]
         }
       ],
@@ -278,7 +290,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -463,6 +476,12 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -601,7 +620,8 @@
         {
           "kind": "operation",
           "source_fields": [
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -759,6 +779,12 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
           ]
         }
       ],
@@ -969,7 +995,7 @@
           "kind": "registry",
           "id": "docs/registries/m2_grind_budget.json",
           "evidence": [
-            "Цепочка p3/lv_components требует автоматизацию до массового спроса."
+            "docs/registries/m2_grind_budget.json"
           ]
         }
       ],
@@ -1094,7 +1120,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1252,7 +1279,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1418,6 +1446,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -1502,7 +1542,7 @@
           "Прочитайте направление: сеть GT EU может питать совместимый FE-потребитель через разрешённый выход.",
           "Не проектируйте FE→EU возврат и не соединяйте выход с исходной сетью через обходной мод."
         ],
-        "success_ru": "Вы понимаете разрешённое направление EU→FE и знаете, что enableFEConverters=false запрещает обратный маршрут.",
+        "success_ru": "Вы понимаете разрешённое направление EU→FE и знаете, что обратный маршрут в этой сборке отключён.",
         "diagnostics_ru": [
           "Если FE-потребитель не получает энергию, проверьте совместимость выхода и фактическую сторону подключения.",
           "Если проект требует обратной конверсии, это архитектурная ошибка, а не недостающий рецепт."
@@ -1556,6 +1596,18 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
           ]
         }
       ],
@@ -1720,7 +1772,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {

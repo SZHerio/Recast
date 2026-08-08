@@ -132,6 +132,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -242,7 +254,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -384,6 +397,12 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -511,6 +530,12 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
           ]
         }
       ],
@@ -992,6 +1017,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -1122,6 +1159,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -1251,6 +1300,18 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
           ]
         }
       ],
@@ -1506,7 +1567,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1643,6 +1705,12 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -1766,6 +1834,18 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
           ]
         }
       ],
@@ -1897,6 +1977,12 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
           ]
         }
       ],
@@ -2041,6 +2127,12 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
           ]
         }
       ],
@@ -2268,7 +2360,7 @@
           "status": "verified",
           "text_ru": {
             "objective": "Откройте установленную обычную печь.",
-            "help": "Используйте minecraft:furnace, а не коптильню или плавильную печь."
+            "help": "Используйте обычную ванильную печь, а не коптильню или плавильную печь."
           },
           "use": {
             "block": "minecraft:furnace",
@@ -2334,6 +2426,12 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
           ]
         }
       ],

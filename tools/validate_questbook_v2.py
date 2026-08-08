@@ -412,6 +412,80 @@ def _validate_migrations(project: Project, quests: dict[str, dict[str, Any]], is
     }
 
 
+def _validate_content_mod_coverage(
+    project: Project,
+    quests: dict[str, dict[str, Any]],
+    release: bool,
+    issues: list[Issue],
+) -> list[dict[str, Any]]:
+    """Match every gameplay JAR contract to explicit Quest Source v2 references."""
+    registry_path = project.root / "docs/registries/quest_content_coverage.json"
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as exc:
+        issues.append(Issue(
+            "ERROR" if release else "WARN",
+            "QV2-CONTENT-COVERAGE-REGISTRY",
+            str(registry_path),
+            f"Could not read the QR2 content coverage registry: {exc}.",
+        ))
+        return []
+
+    resource_kinds = {
+        "item", "item_tag", "block", "block_tag", "fluid", "fluid_tag",
+        "entity", "biome", "structure", "dimension", "recipe",
+    }
+    by_modid: dict[str, set[str]] = defaultdict(set)
+    for alias, quest in quests.items():
+        for ref in quest.get("content_refs", []):
+            kind = ref.get("kind")
+            value = str(ref.get("id", "")).lstrip("#")
+            modid = ""
+            if kind == "mod":
+                modid = value.split(":", 1)[0]
+            elif kind in resource_kinds and ":" in value:
+                modid = value.split(":", 1)[0]
+            if modid:
+                by_modid[modid].add(alias)
+
+    results: list[dict[str, Any]] = []
+    for jar in registry.get("jars", []):
+        if jar.get("category") != "CONTENT_GAMEPLAY":
+            continue
+        modids = sorted({str(item) for item in jar.get("modids", []) if str(item)})
+        matched = sorted({alias for modid in modids for alias in by_modid.get(modid, set())})
+        required_matches = sorted(alias for alias in matched if quests[alias].get("requirement") == "required")
+        role = str(jar.get("role", ""))
+        path = f"content:{jar.get('jar', jar.get('name', 'unknown'))}"
+        if not matched:
+            issues.append(Issue(
+                "ERROR" if release else "WARN",
+                "QV2-CONTENT-MOD-UNCOVERED",
+                path,
+                f"Gameplay mod IDs {modids} have no explicit quest content_ref.",
+            ))
+        if role in {"MANDATORY_BACKBONE", "MANDATORY_INTEGRATION"} and not required_matches:
+            issues.append(Issue(
+                "ERROR" if release else "WARN",
+                "QV2-CONTENT-MOD-NOT-REQUIRED",
+                path,
+                f"{role} needs at least one required quest reference; matches={matched}.",
+            ))
+        results.append({
+            "jar": jar.get("jar"),
+            "name": jar.get("name"),
+            "modids": modids,
+            "category": jar.get("category"),
+            "role": role,
+            "home_chapter": jar.get("home_chapter"),
+            "quest_refs": matched,
+            "required_quest_refs": required_matches,
+            "covered": bool(matched),
+            "required_contract_satisfied": role not in {"MANDATORY_BACKBONE", "MANDATORY_INTEGRATION"} or bool(required_matches),
+        })
+    return results
+
+
 def validate_project(project: Project, *, release: bool = False) -> tuple[list[Issue], dict[str, Any]]:
     issues: list[Issue] = []
     groups: dict[str, dict[str, Any]] = {}
@@ -797,6 +871,7 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
                 issues.append(Issue("WARN", "QV2-RU-REPEATED-OPENING", chapter_alias, f"Three adjacent quests start alike: {[entry[0] for entry in window]}."))
 
     migration_report = _validate_migrations(project, quests, issues)
+    mod_coverage = _validate_content_mod_coverage(project, quests, release, issues)
     coverage: dict[str, dict[str, Any]] = {}
     for alias, quest in quests.items():
         for ref in quest.get("content_refs", []):
@@ -837,6 +912,7 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
         "commissioning_by_epoch": commissioning_by_epoch,
         "blocked_proofs": blocked,
         "coverage": [coverage[key] for key in sorted(coverage)],
+        "mod_coverage": mod_coverage,
         "migration": migration_report,
         "verified_adapters": VERIFIED_ADAPTERS,
     }

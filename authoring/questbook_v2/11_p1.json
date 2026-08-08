@@ -124,7 +124,8 @@
         {
           "kind": "operation",
           "source_fields": [
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -300,7 +301,7 @@
           "kind": "registry",
           "id": "docs/registries/m2_grind_budget.json",
           "evidence": [
-            "Цепочка p1/andesite_alloy допускает две учебные партии и требует серийный путь до массового спроса."
+            "docs/registries/m2_grind_budget.json"
           ]
         }
       ],
@@ -557,6 +558,12 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -709,7 +716,8 @@
         {
           "kind": "operation",
           "source_fields": [
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -880,7 +888,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1046,7 +1055,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1219,7 +1229,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1446,6 +1457,12 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -1597,6 +1614,12 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -1618,7 +1641,7 @@
           "kind": "registry",
           "id": "docs/registries/m2_grind_budget.json",
           "evidence": [
-            "Цепочка p1/bulk_storage сохраняет цену и убирает повторные операции."
+            "docs/registries/m2_grind_budget.json"
           ]
         }
       ],

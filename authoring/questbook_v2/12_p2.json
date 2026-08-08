@@ -138,6 +138,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -293,7 +305,7 @@
           "kind": "registry",
           "id": "docs/registries/quest_acceptance_sets.json",
           "evidence": [
-            "Набор coking_feedstock принимает coal/raw_coal и исключает charcoal/coke."
+            "docs/registries/quest_acceptance_sets.json"
           ]
         }
       ],
@@ -409,12 +421,6 @@
           "source_fields": [
             "text_ru.success_ru",
             "text_ru.task_text_ru"
-          ]
-        },
-        {
-          "kind": "diagnostics",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
           ]
         },
         {
@@ -565,6 +571,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -708,6 +726,18 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -841,15 +871,21 @@
           ]
         },
         {
-          "kind": "diagnostics",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
-          ]
-        },
-        {
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
           ]
         }
       ],
@@ -987,7 +1023,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1148,7 +1185,8 @@
           "kind": "operation",
           "source_fields": [
             "text_ru.steps_ru",
-            "text_ru.success_ru"
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1314,7 +1352,8 @@
         {
           "kind": "operation",
           "source_fields": [
-            "text_ru.steps_ru"
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1629,6 +1668,12 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
         }
       ],
       "content_refs": [
@@ -1807,7 +1852,7 @@
           "kind": "registry",
           "id": "docs/registries/m2_grind_budget.json",
           "evidence": [
-            "Цепочка p2/brass ограничена одной учебной партией."
+            "docs/registries/m2_grind_budget.json"
           ]
         }
       ],
@@ -1929,6 +1974,18 @@
           "kind": "downstream",
           "source_fields": [
             "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
           ]
         }
       ],

@@ -381,6 +381,78 @@ def _translation_handoff(report: dict[str, Any]) -> dict[str, Any]:
     return {"schema_version": 2, "policy": "RU_PRIMARY_EN_SEPARATELY_AUTHORED", "entries": entries}
 
 
+def _russian_editorial_corpus(report: dict[str, Any]) -> str:
+    """Render every player-facing Russian string in reading order for review."""
+    lines = [
+        "# Сквозная вычитка русского квестбука",
+        "",
+        "Этот файл собран автоматически из Quest Source v2. Он нужен для непрерывного чтения; правки вносятся в исходные JSON-файлы.",
+        "",
+    ]
+    chapter_order = sorted(
+        report["chapters"],
+        key=lambda alias: (
+            report["chapters"][alias]["order"],
+            report["chapters"][alias]["filename"],
+            alias,
+        ),
+    )
+    for chapter_alias in chapter_order:
+        chapter = report["chapters"][chapter_alias]
+        chapter_text = chapter["text_ru"]
+        lines.extend([
+            f"## {chapter_text['title']}",
+            "",
+            f"_{chapter_text['subtitle']}_",
+            "",
+        ])
+        for paragraph in chapter_text["description"]:
+            lines.extend([paragraph, ""])
+
+        aliases = [
+            alias
+            for alias in report["topological_order"]
+            if report["chapter_for_quest"][alias] == chapter_alias
+        ]
+        for alias in aliases:
+            quest = report["quests"][alias]
+            text_ru = quest["text_ru"]
+            lines.extend([
+                f"### {text_ru['title_ru']}",
+                "",
+                f"<!-- {alias} | {quest['epoch']} | {quest['role']} | {quest['requirement']} -->",
+                "",
+                text_ru["lead_ru"],
+                "",
+                text_ru["purpose_ru"],
+                "",
+            ])
+            if text_ru["steps_ru"]:
+                lines.extend(["Что сделать:", ""])
+                lines.extend(f"{index}. {step}" for index, step in enumerate(text_ru["steps_ru"], 1))
+                lines.append("")
+            lines.extend([f"Результат: {text_ru['success_ru']}", ""])
+            if text_ru["diagnostics_ru"]:
+                lines.extend(["Если не получилось:", ""])
+                lines.extend(f"- {entry}" for entry in text_ru["diagnostics_ru"])
+                lines.append("")
+            lines.extend([
+                f"Дальше: {text_ru['next_ru']}",
+                "",
+                f"Текст задачи: {text_ru['task_text_ru']}",
+                "",
+            ])
+            if text_ru.get("optional_note_ru"):
+                lines.extend([f"Необязательная ветвь: {text_ru['optional_note_ru']}", ""])
+            lines.extend(["Задачи проверки:", ""])
+            for proof in quest["proofs"]:
+                proof_text = proof["text_ru"]
+                suffix = f" — {proof_text['help']}" if proof_text.get("help") else ""
+                lines.append(f"- {proof_text['objective']}{suffix}")
+            lines.extend(["", "---", ""])
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def _write_json(path: pathlib.Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
@@ -579,11 +651,18 @@ def main(argv: list[str] | None = None) -> int:
         }
         _write_json(reports / "validation.json", validation_json)
         _write_json(reports / "graph.json", _graph_report(report))
-        _write_json(reports / "coverage.json", {"schema_version": 2, "entries": report["coverage"]})
+        _write_json(reports / "coverage.json", {
+            "schema_version": 2,
+            "entries": report["coverage"],
+            "gameplay_mod_contracts": report["mod_coverage"],
+        })
         _write_json(reports / "migration.json", report["migration"])
         _write_json(reports / "blocked_proofs.json", {"schema_version": 2, "blocked_proofs": report["blocked_proofs"]})
         _write_json(reports / "task_adapter_evidence.json", {"schema_version": 2, "adapters": report["verified_adapters"]})
         _write_json(reports / "translation_handoff.json", _translation_handoff(report))
+        (reports / "russian_editorial_corpus.md").write_text(
+            _russian_editorial_corpus(report), encoding="utf-8", newline="\n"
+        )
         _write_json(temp / "registries" / "stable_ids_v2.json", _stable_registry(report))
 
         localized: dict[str, str] = {}

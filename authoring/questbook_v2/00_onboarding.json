@@ -5,11 +5,18 @@
     "alias": "if.chapter.v2.onboarding",
     "engine_id": "2000000000000001",
     "filename": "00_onboarding",
-    "group": {"alias": "if.group.v2.start", "engine_id": "1000000000000001", "title_ru": "Начать здесь"},
+    "group": {
+      "alias": "if.group.v2.start",
+      "engine_id": "1000000000000001",
+      "title_ru": "Начать здесь"
+    },
     "order": 0,
     "icon": "minecraft:book",
     "epoch": "ONBOARDING",
-    "tags": ["mainline", "guide"],
+    "tags": [
+      "mainline",
+      "guide"
+    ],
     "hide_until_reached": false,
     "text_ru": {
       "title": "Перед стартом",
@@ -41,18 +48,26 @@
       "role": "onboarding",
       "requirement": "required",
       "icon": "minecraft:compass",
-      "tags": ["mainline", "reading"],
-      "dependency": {"mode": "ALL_OF", "edges": []},
-      "proofs": [{
-        "alias": "if.task.v2.onboarding.welcome.read",
-        "engine_id": "4000000000000001",
-        "type": "checkmark",
-        "status": "verified",
-        "text_ru": {
-          "objective": "Прочитайте вводную и подтвердите готовность начать.",
-          "help": "Эта отметка проверяет только знакомство с замыслом сборки; предметы здесь не нужны."
+      "tags": [
+        "mainline",
+        "reading"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": []
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.onboarding.welcome.read",
+          "engine_id": "4000000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте вводную и подтвердите готовность начать.",
+            "help": "Эта отметка проверяет только знакомство с замыслом сборки; предметы здесь не нужны."
+          }
         }
-      }],
+      ],
       "text_ru": {
         "title_ru": "Один промышленный мир",
         "lead_ru": "Экспедиция вырастет в фабрику, город, химический комплекс и космическую программу.",
@@ -62,7 +77,9 @@
           "Поставьте отметку после того, как общий маршрут станет понятен."
         ],
         "success_ru": "Задание отмечено, а вы знаете, что главная линия ведёт между эпохами и не требует сдавать дорогие машины.",
-        "diagnostics_ru": ["Если назначение боковой ветви неясно, откройте её первый узел: там прямо указана её роль."],
+        "diagnostics_ru": [
+          "Если назначение боковой ветви неясно, откройте её первый узел: там прямо указана её роль."
+        ],
         "next_ru": "Дальше разберём, как читать связи между заданиями и где книга хранит подсказки.",
         "task_text_ru": "Прочитайте вводную и подтвердите готовность начать."
       },
@@ -74,21 +91,76 @@
       },
       "editorial_review": {
         "state": "RU_PRIMARY_DRAFTED",
-        "marks": ["RU_PRIMARY_DRAFTED"],
-        "review_notes": ["Технические и потоковые отметки будут выставлены после проверки всей цепочки P0–P3."]
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Технические и потоковые отметки будут выставлены после проверки всей цепочки P0–P3."
+        ]
       },
       "teaching_sections": [
-        {"kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru"]},
-        {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]},
-        {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]},
-        {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        }
       ],
       "content_refs": [
-        {"kind": "doc", "id": "docs/QUEST_RU_EDITORIAL_STANDARD.md", "evidence": ["Норматив задаёт русскоязычную структуру и голос книги."]},
-        {"kind": "doc", "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md", "evidence": ["План задаёт единую эпохальную архитектуру квестбука."]}
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+          "evidence": [
+            "Норматив задаёт русскоязычную структуру и голос книги."
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+          "evidence": [
+            "План задаёт единую эпохальную архитектуру квестбука."
+          ]
+        }
       ],
-      "grind": {"class": "NONE", "training_batch": 0, "expected_runs": 0, "automation_before_bulk": false, "rationale_ru": "Это чтение без ресурсной или временной пошлины."},
-      "layout": {"x": 0, "y": 0, "shape": "gear", "size": 1.5}
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Это чтение без ресурсной или временной пошлины."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.5
+      }
     },
     {
       "alias": "if.quest.v2.onboarding.reading",
@@ -97,22 +169,34 @@
       "role": "onboarding",
       "requirement": "required",
       "icon": "minecraft:writable_book",
-      "tags": ["mainline", "reading"],
-      "dependency": {"mode": "ALL_OF", "edges": [{
-        "quest": "if.quest.v2.onboarding.welcome",
-        "reason": "Сначала нужен общий замысел, затем правила навигации по книге.",
-        "evidence": ["docs/QUEST_RU_EDITORIAL_STANDARD.md"]
-      }]},
-      "proofs": [{
-        "alias": "if.task.v2.onboarding.reading.read",
-        "engine_id": "4000000000000002",
-        "type": "checkmark",
-        "status": "verified",
-        "text_ru": {
-          "objective": "Прочитайте правила связей и подтвердите знакомство с ними.",
-          "help": "Если линия не видна, откройте предыдущий узел: скрытая задача появляется после выполнения зависимости."
+      "tags": [
+        "mainline",
+        "reading"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.welcome",
+            "reason": "Сначала нужен общий замысел, затем правила навигации по книге.",
+            "evidence": [
+              "docs/QUEST_RU_EDITORIAL_STANDARD.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.onboarding.reading.read",
+          "engine_id": "4000000000000002",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правила связей и подтвердите знакомство с ними.",
+            "help": "Если линия не видна, откройте предыдущий узел: скрытая задача появляется после выполнения зависимости."
+          }
         }
-      }],
+      ],
       "text_ru": {
         "title_ru": "Как читать маршрут",
         "lead_ru": "Линии показывают причину порядка, форма узла — его роль, а текст объясняет механику.",
@@ -137,21 +221,70 @@
       },
       "editorial_review": {
         "state": "RU_PRIMARY_DRAFTED",
-        "marks": ["RU_PRIMARY_DRAFTED"],
-        "review_notes": ["Потоковая проверка будет выполнена после сборки соседних узлов onboarding и P0."]
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Потоковая проверка будет выполнена после сборки соседних узлов onboarding и P0."
+        ]
       },
       "teaching_sections": [
-        {"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]},
-        {"kind": "operation", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"]},
-        {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]},
-        {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
       ],
       "content_refs": [
-        {"kind": "mod", "id": "ftbquests:ftbquests", "evidence": ["config/ftbquests/quests/data.snbt"]},
-        {"kind": "doc", "id": "docs/QUEST_RU_EDITORIAL_STANDARD.md", "evidence": ["Норматив требует объяснять зависимости и последствия выбора."]}
+        {
+          "kind": "mod",
+          "id": "ftbquests:ftbquests",
+          "evidence": [
+            "config/ftbquests/quests/data.snbt"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+          "evidence": [
+            "Норматив требует объяснять зависимости и последствия выбора."
+          ]
+        }
       ],
-      "grind": {"class": "NONE", "training_batch": 0, "expected_runs": 0, "automation_before_bulk": false, "rationale_ru": "Задание обучает интерфейсу и не требует ресурсов."},
-      "layout": {"x": 2, "y": 0, "shape": "square", "size": 1.2}
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Задание обучает интерфейсу и не требует ресурсов."
+      },
+      "layout": {
+        "x": 2,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
     },
     {
       "alias": "if.quest.v2.onboarding.jei",
@@ -160,22 +293,34 @@
       "role": "onboarding",
       "requirement": "required",
       "icon": "minecraft:knowledge_book",
-      "tags": ["mainline", "interface"],
-      "dependency": {"mode": "ALL_OF", "edges": [{
-        "quest": "if.quest.v2.onboarding.reading",
-        "reason": "После навигации по книге можно вводить второй инструмент поиска информации.",
-        "evidence": ["mods/jei-1.20.1-forge-15.20.0.112.jar"]
-      }]},
-      "proofs": [{
-        "alias": "if.task.v2.onboarding.jei.read",
-        "engine_id": "4000000000000003",
-        "type": "checkmark",
-        "status": "verified",
-        "text_ru": {
-          "objective": "Откройте в JEI рецепт и применения знакомого предмета, затем подтвердите чтение.",
-          "help": "Если список скрыт, проверьте назначенные клавиши JEI и конфликт сочетаний в настройках управления."
+      "tags": [
+        "mainline",
+        "interface"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.reading",
+            "reason": "После навигации по книге можно вводить второй инструмент поиска информации.",
+            "evidence": [
+              "mods/jei-1.20.1-forge-15.20.0.134.jar"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.onboarding.jei.read",
+          "engine_id": "4000000000000003",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте в JEI рецепт и применения знакомого предмета, затем подтвердите чтение.",
+            "help": "Если список скрыт, проверьте назначенные клавиши JEI и конфликт сочетаний в настройках управления."
+          }
         }
-      }],
+      ],
       "text_ru": {
         "title_ru": "JEI: рецепт и применения",
         "lead_ru": "Книга объясняет принцип, а JEI показывает действующую форму рецепта в вашей версии сборки.",
@@ -200,21 +345,71 @@
       },
       "editorial_review": {
         "state": "RU_PRIMARY_DRAFTED",
-        "marks": ["RU_PRIMARY_DRAFTED"],
-        "review_notes": ["Клавиши намеренно не зафиксированы: пользовательская раскладка может отличаться."]
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Клавиши намеренно не зафиксированы: пользовательская раскладка может отличаться."
+        ]
       },
       "teaching_sections": [
-        {"kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru"]},
-        {"kind": "operation", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"]},
-        {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]},
-        {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
       ],
       "content_refs": [
-        {"kind": "mod", "id": "jei:jei", "evidence": ["mods/jei-1.20.1-forge-15.20.0.112.jar"]},
-        {"kind": "mechanic", "id": "recipe-and-usage-lookup", "evidence": ["docs/QUEST_RU_EDITORIAL_STANDARD.md"]}
+        {
+          "kind": "mod",
+          "id": "jei:jei",
+          "evidence": [
+            "mods/jei-1.20.1-forge-15.20.0.134.jar"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "recipe-and-usage-lookup",
+          "evidence": [
+            "docs/QUEST_RU_EDITORIAL_STANDARD.md"
+          ]
+        }
       ],
-      "grind": {"class": "NONE", "training_batch": 0, "expected_runs": 0, "automation_before_bulk": false, "rationale_ru": "Это одноразовое знакомство с интерфейсом."},
-      "layout": {"x": 4, "y": 0, "shape": "square", "size": 1.2}
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Это одноразовое знакомство с интерфейсом."
+      },
+      "layout": {
+        "x": 4,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
     },
     {
       "alias": "if.quest.v2.onboarding.field_tools",
@@ -223,22 +418,36 @@
       "role": "onboarding",
       "requirement": "required",
       "icon": "minecraft:spyglass",
-      "tags": ["mainline", "interface", "geology"],
-      "dependency": {"mode": "ALL_OF", "edges": [{
-        "quest": "if.quest.v2.onboarding.jei",
-        "reason": "Jade и JER дополняют знакомый справочник рецептов сведениями о блоке и мире.",
-        "evidence": ["mods/Jade-1.20.1-Forge-11.13.3.jar", "mods/JustEnoughResources-1.20.1-1.4.0.247.jar"]
-      }]},
-      "proofs": [{
-        "alias": "if.task.v2.onboarding.field_tools.read",
-        "engine_id": "4A00000000000001",
-        "type": "checkmark",
-        "status": "verified",
-        "text_ru": {
-          "objective": "Осмотрите знакомый блок через Jade и откройте сведения JER об одном ресурсе.",
-          "help": "Если подсказка или вкладка не видна, проверьте настройки соответствующего мода и конфликт клавиш."
+      "tags": [
+        "mainline",
+        "interface",
+        "geology"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.jei",
+            "reason": "Jade и JER дополняют знакомый справочник рецептов сведениями о блоке и мире.",
+            "evidence": [
+              "mods/Jade-1.20.1-Forge-11.13.3.jar",
+              "mods/JustEnoughResources-1.20.1-1.4.0.247.jar"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.onboarding.field_tools.read",
+          "engine_id": "4A00000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Осмотрите знакомый блок через Jade и откройте сведения JER об одном ресурсе.",
+            "help": "Если подсказка или вкладка не видна, проверьте настройки соответствующего мода и конфликт клавиш."
+          }
         }
-      }],
+      ],
       "text_ru": {
         "title_ru": "Jade и JER в поле",
         "lead_ru": "Jade отвечает на вопрос «что передо мной», а JER помогает понять, где искать ресурс.",
@@ -263,22 +472,78 @@
       },
       "editorial_review": {
         "state": "RU_PRIMARY_DRAFTED",
-        "marks": ["RU_PRIMARY_DRAFTED"],
-        "review_notes": ["Версии Jade и JER подтверждены локальными jar; действия не зависят от фиксированных клавиш."]
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Версии Jade и JER подтверждены локальными jar; действия не зависят от фиксированных клавиш."
+        ]
       },
       "teaching_sections": [
-        {"kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru"]},
-        {"kind": "operation", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"]},
-        {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]},
-        {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
       ],
       "content_refs": [
-        {"kind": "mod", "id": "jade:jade", "evidence": ["mods/Jade-1.20.1-Forge-11.13.3.jar"]},
-        {"kind": "mod", "id": "jeresources:jeresources", "evidence": ["mods/JustEnoughResources-1.20.1-1.4.0.247.jar"]},
-        {"kind": "doc", "id": "docs/M2_BUILD_TEST_PROTOCOL.md", "evidence": ["Протокол использует JER вместе с наблюдением жил и предупреждает о владельце генерации. "]}
+        {
+          "kind": "mod",
+          "id": "jade:jade",
+          "evidence": [
+            "mods/Jade-1.20.1-Forge-11.13.3.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "jeresources:jeresources",
+          "evidence": [
+            "mods/JustEnoughResources-1.20.1-1.4.0.247.jar"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/M2_BUILD_TEST_PROTOCOL.md",
+          "evidence": [
+            "Протокол использует JER вместе с наблюдением жил и предупреждает о владельце генерации. "
+          ]
+        }
       ],
-      "grind": {"class": "NONE", "training_batch": 0, "expected_runs": 0, "automation_before_bulk": false, "rationale_ru": "Задание обучает двум справочным действиям без добывающего требования."},
-      "layout": {"x": 6, "y": 0, "shape": "square", "size": 1.2}
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Задание обучает двум справочным действиям без добывающего требования."
+      },
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
     },
     {
       "alias": "if.quest.v2.onboarding.team",
@@ -287,22 +552,34 @@
       "role": "knowledge",
       "requirement": "required",
       "icon": "minecraft:player_head",
-      "tags": ["mainline", "state"],
-      "dependency": {"mode": "ALL_OF", "edges": [{
-        "quest": "if.quest.v2.onboarding.reading",
-        "reason": "Правила состояния нужны после знакомства с книгой, но не должны задерживать обучение справочникам.",
-        "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]
-      }]},
-      "proofs": [{
-        "alias": "if.task.v2.onboarding.team.read",
-        "engine_id": "4000000000000004",
-        "type": "checkmark",
-        "status": "verified",
-        "text_ru": {
-          "objective": "Прочитайте различие между состоянием команды, мира и персонажа.",
-          "help": "В одиночной игре правило всё равно определяет владельца будущих репутационных и мировых событий."
+      "tags": [
+        "mainline",
+        "state"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.reading",
+            "reason": "Правила состояния нужны после знакомства с книгой, но не должны задерживать обучение справочникам.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.onboarding.team.read",
+          "engine_id": "4000000000000004",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте различие между состоянием команды, мира и персонажа.",
+            "help": "В одиночной игре правило всё равно определяет владельца будущих репутационных и мировых событий."
+          }
         }
-      }],
+      ],
       "text_ru": {
         "title_ru": "Команда и личный выбор",
         "lead_ru": "Заводы строятся вместе, но репутация, обещания и предательство остаются личными решениями.",
@@ -327,21 +604,71 @@
       },
       "editorial_review": {
         "state": "RU_PRIMARY_DRAFTED",
-        "marks": ["RU_PRIMARY_DRAFTED"],
-        "review_notes": ["Фракционная часть описана только как правило состояния; диалоги здесь не создаются."]
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Фракционная часть описана только как правило состояния; диалоги здесь не создаются."
+        ]
       },
       "teaching_sections": [
-        {"kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru"]},
-        {"kind": "operation", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"]},
-        {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]},
-        {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
       ],
       "content_refs": [
-        {"kind": "mod", "id": "ftbteams:ftbteams", "evidence": ["config/ftbquests/quests/data.snbt"]},
-        {"kind": "doc", "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md", "evidence": ["План разделяет командный прогресс, личную репутацию и состояние мира."]}
+        {
+          "kind": "mod",
+          "id": "ftbteams:ftbteams",
+          "evidence": [
+            "config/ftbquests/quests/data.snbt"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+          "evidence": [
+            "План разделяет командный прогресс, личную репутацию и состояние мира."
+          ]
+        }
       ],
-      "grind": {"class": "NONE", "training_batch": 0, "expected_runs": 0, "automation_before_bulk": false, "rationale_ru": "Правило состояния объясняется один раз и не требует предметов."},
-      "layout": {"x": 6, "y": -2, "shape": "circle", "size": 1}
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Правило состояния объясняется один раз и не требует предметов."
+      },
+      "layout": {
+        "x": 6,
+        "y": -2,
+        "shape": "circle",
+        "size": 1
+      }
     },
     {
       "alias": "if.quest.v2.onboarding.help",
@@ -350,29 +677,43 @@
       "role": "recovery",
       "requirement": "required",
       "icon": "minecraft:recovery_compass",
-      "tags": ["mainline", "help", "transition"],
-      "dependency": {"mode": "ALL_OF", "edges": [
+      "tags": [
+        "mainline",
+        "help",
+        "transition"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.field_tools",
+            "reason": "Помощь опирается на уже известные инструменты проверки предмета, блока и источника.",
+            "evidence": [
+              "mods/Jade-1.20.1-Forge-11.13.3.jar",
+              "mods/JustEnoughResources-1.20.1-1.4.0.247.jar"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.onboarding.team",
+            "reason": "Перед началом P0 игрок должен знать, кому принадлежит состояние спорного квеста.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
         {
-          "quest": "if.quest.v2.onboarding.field_tools",
-          "reason": "Помощь опирается на уже известные инструменты проверки предмета, блока и источника.",
-          "evidence": ["mods/Jade-1.20.1-Forge-11.13.3.jar", "mods/JustEnoughResources-1.20.1-1.4.0.247.jar"]
-        },
-        {
-          "quest": "if.quest.v2.onboarding.team",
-          "reason": "Перед началом P0 игрок должен знать, кому принадлежит состояние спорного квеста.",
-          "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]
+          "alias": "if.task.v2.onboarding.help.read",
+          "engine_id": "4A00000000000002",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте порядок диагностики и подтвердите переход к P0.",
+            "help": "Если узел закрыт, завершите параллельные уроки полевых инструментов и командного состояния."
+          }
         }
-      ]},
-      "proofs": [{
-        "alias": "if.task.v2.onboarding.help.read",
-        "engine_id": "4A00000000000002",
-        "type": "checkmark",
-        "status": "verified",
-        "text_ru": {
-          "objective": "Прочитайте порядок диагностики и подтвердите переход к P0.",
-          "help": "Если узел закрыт, завершите параллельные уроки полевых инструментов и командного состояния."
-        }
-      }],
+      ],
       "text_ru": {
         "title_ru": "Если что-то не работает",
         "lead_ru": "Хорошая диагностика начинается с самого дешёвого наблюдения, а не с разборки всей линии.",
@@ -398,22 +739,89 @@
       },
       "editorial_review": {
         "state": "RU_PRIMARY_DRAFTED",
-        "marks": ["RU_PRIMARY_DRAFTED"],
-        "review_notes": ["Порядок диагностики совпадает с редакционным стандартом и не требует запуска игры. "]
+        "marks": [
+          "RU_PRIMARY_DRAFTED"
+        ],
+        "review_notes": [
+          "Порядок диагностики совпадает с редакционным стандартом и не требует запуска игры. "
+        ]
       },
       "teaching_sections": [
-        {"kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru"]},
-        {"kind": "recovery", "source_fields": ["text_ru.steps_ru", "text_ru.diagnostics_ru"]},
-        {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]},
-        {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
+        }
       ],
       "content_refs": [
-        {"kind": "doc", "id": "docs/QUEST_RU_EDITORIAL_STANDARD.md", "evidence": ["Норматив задаёт порядок дешёвой первичной диагностики."]},
-        {"kind": "doc", "id": "docs/BUILD_TEST_PROTOCOL.md", "evidence": ["Протокол задаёт форму воспроизводимого отчёта владельца сборки. "]},
-        {"kind": "quest", "id": "if.quest.v2.p0.brief", "evidence": ["Следующий узел открывает практическую главу P0."]}
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+          "evidence": [
+            "Норматив задаёт порядок дешёвой первичной диагностики."
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/BUILD_TEST_PROTOCOL.md",
+          "evidence": [
+            "Протокол задаёт форму воспроизводимого отчёта владельца сборки. "
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p0.brief",
+          "evidence": [
+            "Следующий узел открывает практическую главу P0."
+          ]
+        }
       ],
-      "grind": {"class": "NONE", "training_batch": 0, "expected_runs": 0, "automation_before_bulk": false, "rationale_ru": "Вводная заканчивается знанием, а не ресурсным воротом."},
-      "layout": {"x": 8, "y": 0, "shape": "diamond", "size": 1.5}
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Вводная заканчивается знанием, а не ресурсным воротом."
+      },
+      "layout": {
+        "x": 8,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.5
+      }
     }
   ]
 }
