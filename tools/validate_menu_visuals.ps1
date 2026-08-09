@@ -253,31 +253,26 @@ try {
         Add-MenuError 'All eight action buttons and two compact buttons must use nine-slicing.'
     }
     if ($layout -match '(?m)^\s*slide\s*=\s*true\s*$') { Add-MenuError 'The stable title background must not slide.' }
-    if ($layout -match '(?m)^\s*action\s*=\s*setscale\s*$') {
-        Add-MenuError 'Title layout must not multiply autoscale; fixed setscale caused clipping at maximum GUI scale.'
+    if ($layout -match '(?m)^\s*action\s*=\s*(?:setscale|autoscale)\s*$') {
+        Add-MenuError 'Title layout must use the native GUI coordinate space; scale actions break maximum-GUI-scale geometry.'
     }
 
     $panelBlock = Get-ElementBlock $layout 'recast_title_panel'
-    if ([string]::IsNullOrWhiteSpace($panelBlock) -or
-        [int](Get-BlockSetting $panelBlock 'height') -ne 400) {
-        Add-MenuError 'The title panel must use the compact 400-unit safe-zone height.'
-    }
-
-    $buildBlock = Get-ElementBlock $layout 'recast_build_label'
-    if ([string]::IsNullOrWhiteSpace($buildBlock)) {
-        Add-MenuError 'Missing build-label element.'
+    if ([string]::IsNullOrWhiteSpace($panelBlock)) {
+        Add-MenuError 'Missing title-panel element.'
     }
     else {
-        $buildContract = $registry.ui.build_label
-        foreach ($setting in @('anchor_point', 'x', 'y')) {
-            $actual = Get-BlockSetting $buildBlock $setting
-            $expected = [string]$buildContract.$setting
-            if ($actual -ne $expected) {
-                Add-MenuError "Build-label setting '$setting' is '$actual', expected '$expected' from the registry."
+        $expectedPanel = @{ anchor_point = 'top-left'; x = '8'; y = '4'; width = '214'; height = '258' }
+        foreach ($setting in $expectedPanel.Keys) {
+            if ((Get-BlockSetting $panelBlock $setting) -ne $expectedPanel[$setting]) {
+                Add-MenuError "Title-panel setting '$setting' must be '$($expectedPanel[$setting])' for the 480x270 maximum-GUI-scale viewport."
             }
         }
-        if (-not [bool]$buildContract.inside_panel -or [int]$buildContract.y -lt 370 -or [int]$buildContract.y -gt 400) {
-            Add-MenuError 'Build label must remain inside the compact panel.'
+    }
+    foreach ($hiddenId in @('recast_service_hint', 'recast_build_label')) {
+        $hiddenBlock = Get-ElementBlock $layout $hiddenId
+        if ([string]::IsNullOrWhiteSpace($hiddenBlock) -or (Get-BlockSetting $hiddenBlock 'is_hidden') -ne 'true') {
+            Add-MenuError "Clutter element '$hiddenId' must remain hidden on the compact title screen."
         }
     }
     foreach ($widgetId in @('minecraft_logo_widget', 'minecraft_splash_widget', 'minecraft_branding_widget', 'title_screen_copyright_button')) {
@@ -285,7 +280,7 @@ try {
             Add-MenuError "Vanilla title widget '$widgetId' must be hidden by its real FancyMenu 3.9.9 identifier."
         }
     }
-    Add-MenuPass 'FancyMenu resize-safe moving background, autoscale-only compact panel and exact hidden-widget contracts validated.'
+    Add-MenuPass 'FancyMenu moving background, native 480x270-safe panel and exact hidden-widget contracts validated.'
 }
 catch {
     Add-MenuError "Title-layout validation failed: $($_.Exception.Message)"
@@ -304,11 +299,8 @@ try {
     )
     foreach ($name in $startupLayouts) {
         $startupLayout = Get-Content -Raw -Encoding UTF8 -LiteralPath (Resolve-MenuPath "config/fancymenu/customization/$name")
-        if ($startupLayout -match '(?m)^\s*action\s*=\s*setscale\s*$') {
-            Add-MenuError "Startup layout '$name' must use autoscale only; setscale breaks maximum-GUI-scale geometry."
-        }
-        if ([regex]::Matches($startupLayout, '(?ms)customization\s*\{\s*action\s*=\s*autoscale\s*basewidth\s*=\s*854\s*baseheight\s*=\s*480\s*\}').Count -ne 1) {
-            Add-MenuError "Startup layout '$name' must auto-scale from the 854x480 reference canvas."
+        if ($startupLayout -match '(?m)^\s*action\s*=\s*(?:setscale|autoscale)\s*$') {
+            Add-MenuError "Startup layout '$name' must use native GUI coordinates; forced scaling clips at maximum GUI scale."
         }
     }
 
@@ -317,13 +309,13 @@ try {
         if ($loadingLayout -match 'industrial_frontier\.loading\.' -or $loadingLayout -match '"placeholder"\s*:\s*"local"') {
             Add-MenuError "Loading layout '$name' contains a localization lookup that is unavailable before Paxi resource loading."
         }
-        foreach ($expected in @('width = 260', 'height = 87', 'width = 520', 'height = 96', 'width = 468', 'width = 452')) {
+        foreach ($expected in @('width = 200', 'height = 67', 'width = 420', 'height = 72', 'width = 388', 'width = 376')) {
             if (-not $loadingLayout.Contains($expected)) {
                 Add-MenuError "Loading layout '$name' is missing compact geometry token '$expected'."
             }
         }
     }
-    Add-MenuPass 'All startup layouts use autoscale-only resize-safe geometry; loading copy is bootstrap-safe and compact.'
+    Add-MenuPass 'All startup layouts use native maximum-GUI-scale-safe geometry; loading copy is bootstrap-safe and compact.'
 }
 catch {
     Add-MenuError "Startup-layout validation failed: $($_.Exception.Message)"

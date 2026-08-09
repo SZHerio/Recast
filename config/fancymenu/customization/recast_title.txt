@@ -11,12 +11,6 @@ layout-meta {
   custom_menu_title = Recast
 }
 
-customization {
-  action = autoscale
-  basewidth = 854
-  baseheight = 480
-}
-
 menu_background {
   image_path = [source:local]/config/fancymenu/assets/menu/base.png
   slide = false
@@ -42,10 +36,10 @@ element {
   element_type = image
   instance_identifier = recast_title_panel
   anchor_point = top-left
-  x = 16
-  y = 16
-  width = 294
-  height = 400
+  x = 8
+  y = 4
+  width = 214
+  height = 258
   stay_on_screen = true
 }
 
@@ -56,10 +50,10 @@ element {
   element_type = image
   instance_identifier = recast_title_logo
   anchor_point = top-left
-  x = 28
-  y = 27
-  width = 258
-  height = 86
+  x = 16
+  y = 10
+  width = 198
+  height = 66
   stay_on_screen = true
 }
 
@@ -74,10 +68,10 @@ element {
   element_type = text_v2
   instance_identifier = recast_title_tagline
   anchor_point = top-left
-  x = 34
-  y = 118
-  width = 240
-  height = 14
+  x = 16
+  y = 80
+  width = 198
+  height = 10
   stay_on_screen = true
 }
 
@@ -97,10 +91,10 @@ vanilla_button {
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_singleplayer_button
   anchor_point = top-left
-  x = 34
-  y = 140
-  width = 226
-  height = 24
+  x = 16
+  y = 96
+  width = 198
+  height = 19
   stay_on_screen = true
   is_hidden = false
 }
@@ -121,10 +115,10 @@ vanilla_button {
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_multiplayer_button
   anchor_point = top-left
-  x = 34
-  y = 168
-  width = 226
-  height = 24
+  x = 16
+  y = 119
+  width = 198
+  height = 19
   stay_on_screen = true
   is_hidden = false
 }
@@ -145,10 +139,10 @@ vanilla_button {
   element_type = vanilla_button
   instance_identifier = forge_titlescreen_mods_button
   anchor_point = top-left
-  x = 34
-  y = 196
-  width = 226
-  height = 24
+  x = 16
+  y = 142
+  width = 198
+  height = 19
   stay_on_screen = true
   is_hidden = false
 }
@@ -169,10 +163,10 @@ vanilla_button {
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_options_button
   anchor_point = top-left
-  x = 34
-  y = 224
-  width = 226
-  height = 24
+  x = 16
+  y = 165
+  width = 198
+  height = 19
   stay_on_screen = true
   is_hidden = false
 }
@@ -193,10 +187,10 @@ vanilla_button {
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_quit_button
   anchor_point = top-left
-  x = 34
-  y = 252
-  width = 226
-  height = 24
+  x = 16
+  y = 188
+  width = 198
+  height = 19
   stay_on_screen = true
   is_hidden = false
 }
@@ -218,10 +212,10 @@ element {
   element_type = custom_button
   instance_identifier = recast_guide_button
   anchor_point = top-left
-  x = 34
-  y = 286
-  width = 109
-  height = 24
+  x = 16
+  y = 214
+  width = 96
+  height = 18
   stay_on_screen = true
 }
 
@@ -242,10 +236,10 @@ element {
   element_type = custom_button
   instance_identifier = recast_credits_button
   anchor_point = top-left
-  x = 151
-  y = 286
-  width = 109
-  height = 24
+  x = 118
+  y = 214
+  width = 96
+  height = 18
   stay_on_screen = true
 }
 
@@ -266,10 +260,10 @@ element {
   element_type = custom_button
   instance_identifier = recast_changelog_button
   anchor_point = top-left
-  x = 34
-  y = 314
-  width = 226
-  height = 24
+  x = 16
+  y = 238
+  width = 198
+  height = 18
   stay_on_screen = true
 }
 
@@ -286,12 +280,7 @@ vanilla_button {
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_language_button
   anchor_point = top-left
-  x = 34
-  y = 346
-  width = 24
-  height = 24
-  stay_on_screen = true
-  is_hidden = false
+  is_hidden = true
 }
 
 vanilla_button {
@@ -307,12 +296,7 @@ vanilla_button {
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_accessibility_button
   anchor_point = top-left
-  x = 62
-  y = 346
-  width = 24
-  height = 24
-  stay_on_screen = true
-  is_hidden = false
+  is_hidden = true
 }
 
 element {
@@ -324,11 +308,7 @@ element {
   element_type = text_v2
   instance_identifier = recast_service_hint
   anchor_point = top-left
-  x = 94
-  y = 353
-  width = 172
-  height = 12
-  stay_on_screen = true
+  is_hidden = true
 }
 
 element {
@@ -340,11 +320,7 @@ element {
   element_type = text_v2
   instance_identifier = recast_build_label
   anchor_point = top-left
-  x = 34
-  y = 394
-  width = 250
-  height = 12
-  stay_on_screen = true
+  is_hidden = true
 }
 
 vanilla_button {
@@ -355,25 +331,33 @@ vanilla_button {
   is_hidden = true
 }
 
-deep_element {
+vanilla_button {
+  button_element_executable_block_identifier = recast_hide_logo_actions
+  [executable_block:recast_hide_logo_actions][type:generic] = [executables:]
   element_type = vanilla_button
   instance_identifier = minecraft_logo_widget
   is_hidden = true
 }
 
-deep_element {
+vanilla_button {
+  button_element_executable_block_identifier = recast_hide_branding_actions
+  [executable_block:recast_hide_branding_actions][type:generic] = [executables:]
   element_type = vanilla_button
   instance_identifier = minecraft_branding_widget
   is_hidden = true
 }
 
-deep_element {
+vanilla_button {
+  button_element_executable_block_identifier = recast_hide_splash_actions
+  [executable_block:recast_hide_splash_actions][type:generic] = [executables:]
   element_type = vanilla_button
   instance_identifier = minecraft_splash_widget
   is_hidden = true
 }
 
-deep_element {
+vanilla_button {
+  button_element_executable_block_identifier = recast_hide_copyright_actions
+  [executable_block:recast_hide_copyright_actions][type:generic] = [executables:]
   element_type = vanilla_button
   instance_identifier = title_screen_copyright_button
   is_hidden = true

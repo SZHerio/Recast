@@ -11,12 +11,6 @@ layout-meta {
   custom_menu_title = Recast
 }
 
-customization {
-  action = autoscale
-  basewidth = 854
-  baseheight = 480
-}
-
 menu_background {
   image_path = [source:local]/config/fancymenu/assets/background.png
   slide = false
@@ -38,10 +32,10 @@ element {
   element_type = image
   instance_identifier = recast_changelog_panel
   anchor_point = mid-centered
-  x = -330
-  y = -218
-  width = 660
-  height = 436
+  x = -220
+  y = -125
+  width = 440
+  height = 250
   stay_on_screen = true
 }
 
@@ -57,10 +51,10 @@ element {
   element_type = text_v2
   instance_identifier = recast_changelog_text
   anchor_point = mid-centered
-  x = -300
-  y = -186
-  width = 600
-  height = 326
+  x = -204
+  y = -110
+  width = 408
+  height = 190
   stay_on_screen = true
 }
 
@@ -77,9 +71,9 @@ element {
   element_type = custom_button
   instance_identifier = recast_changelog_back_button
   anchor_point = mid-centered
-  x = -110
-  y = 178
-  width = 220
-  height = 22
+  x = -70
+  y = 98
+  width = 140
+  height = 18
   stay_on_screen = true
 }
