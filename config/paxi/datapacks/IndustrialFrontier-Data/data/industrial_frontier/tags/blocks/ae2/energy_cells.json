@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "ae2:energy_cell",
+    "ae2:dense_energy_cell"
+  ]
+}

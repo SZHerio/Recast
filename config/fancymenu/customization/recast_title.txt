@@ -12,6 +12,11 @@ layout-meta {
 }
 
 customization {
+  action = setscale
+  scale = 2.0
+}
+
+customization {
   action = autoscale
   basewidth = 854
   baseheight = 480
@@ -21,48 +26,16 @@ menu_background {
   image_path = [source:local]/config/fancymenu/assets/menu/base.png
   slide = false
   repeat_texture = false
+  parallax = true
+  parallax_intensity_x = 0.025
+  parallax_intensity_y = 0.014
+  invert_parallax = false
   background_type = image
 }
 
 customization {
   action = backgroundoptions
   keepaspectratio = true
-}
-
-element {
-  source = [source:local]/config/fancymenu/assets/menu/mid.png
-  repeat_texture = false
-  nine_slice_texture = false
-  enable_parallax = true
-  invert_parallax = false
-  parallax_intensity_x = 0.18
-  parallax_intensity_y = 0.10
-  element_type = image
-  instance_identifier = recast_title_midground
-  anchor_point = top-left
-  x = -24
-  y = -16
-  width = 902
-  height = 512
-  stay_on_screen = false
-}
-
-element {
-  source = [source:local]/config/fancymenu/assets/menu/near.png
-  repeat_texture = false
-  nine_slice_texture = false
-  enable_parallax = true
-  invert_parallax = false
-  parallax_intensity_x = 0.30
-  parallax_intensity_y = 0.16
-  element_type = image
-  instance_identifier = recast_title_foreground
-  anchor_point = top-left
-  x = -28
-  y = -18
-  width = 910
-  height = 516
-  stay_on_screen = false
 }
 
 element {
@@ -77,7 +50,7 @@ element {
   x = 16
   y = 16
   width = 294
-  height = 450
+  height = 400
   stay_on_screen = true
 }
 
@@ -373,7 +346,7 @@ element {
   instance_identifier = recast_build_label
   anchor_point = top-left
   x = 34
-  y = 442
+  y = 394
   width = 250
   height = 12
   stay_on_screen = true
@@ -396,7 +369,7 @@ deep_element {
 deep_element {
   element_type = title_screen_branding
   instance_identifier = vanilla_branding
-  is_hidden = false
+  is_hidden = true
 }
 
 deep_element {

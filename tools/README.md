@@ -89,6 +89,64 @@ python tools/generate_chapter.py authoring/quests/specs/71_academy_of_elements.j
 
 ID выводятся из `chapter_id` по формату стабильных идентификаторов: тип `3` для квеста, `4` для задачи, `5` для награды. Повторный запуск перезаписывает главу целиком и идемпотентен.
 
+## Quest Source v2: проверка и изолированная сборка
+
+Новая книга хранится в `authoring/questbook_v2/`. Сначала запускается строгая статическая проверка:
+
+```powershell
+python tools/validate_questbook_v2.py --source authoring/questbook_v2 --release
+```
+
+Она проверяет schema, уникальность ID и alias, DAG, переходы P0–P9, доказательства задач, миграции, охват модов и четыре русских редакторских прохода. Дополнительные контракты `QV2-OPTIONAL-CAMPAIGN-GATE` и `QV2-CITY-GATES-MAINLINE` гарантируют, что добровольная городская кампания не станет условием перехода эпохи.
+
+После нулевого числа ошибок источник компилируется только в staging:
+
+```powershell
+python tools/compile_questbook_v2.py --source authoring/questbook_v2 --out build/questbook_v2
+python tools/validate_questbook_v2.py --source authoring/questbook_v2 --build build/questbook_v2 --release
+python tools/audit_quest_semantics.py --source authoring/questbook_v2 --build build/questbook_v2
+```
+
+Компилятор и семантический аудит не изменяют рабочую папку FTB Quests и не запускают Minecraft. После явного решения о выпуске сначала проверяется пакет продвижения, затем он атомарно заменяет только `chapters/` и `chapter_groups.snbt`, сохраняет `data.snbt` и создаёт восстанавливаемую копию предыдущей книги в `backups/`:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools/promote_questbook_v2.ps1 -CheckOnly
+powershell -ExecutionPolicy Bypass -File tools/promote_questbook_v2.ps1
+python tools/audit_quest_semantics.py --source authoring/questbook_v2 --build build/questbook_v2 --require-runtime-sync
+```
+
+### Безопасная миграция старого прогресса
+
+Перед выпуском Quest Source v2 миграции проверяются не только по совпадению ID, но и по замороженному исполняемому условию QR0: типу задания, предмету или тегу, количеству и дополнительным ограничениям. Предварительный запуск ничего не записывает:
+
+```powershell
+python tools/repair_quest_migration_ids.py
+```
+
+Режим `--apply` предназначен для единственной механической ротации ID после проверки отчёта:
+
+```powershell
+python tools/repair_quest_migration_ids.py --apply
+```
+
+Он переводит небезопасные переносы в `review`, выдаёт новые ID изменившимся квестам и доказательствам, сохраняет точные контракты QR0 в `docs/registries/quest_qr0_proof_contracts.json` и ставит старые ID на вечный учёт в `docs/registries/retired_ids.json`. Повторное использование retired-ID блокирует основной валидатор. Ни один из этих сценариев не запускает Minecraft.
+
+## Аудит пользовательского запуска
+
+`audit_launch_log.py` читает переданный `latest.log` или `.log.gz`, но не запускает Minecraft. Ошибки квестовых иконок, KubeJS, JSON-ресурсов, datapack reload и pack-owned моделей считаются блокерами. Известные сигнатуры сторонних модов выводятся отдельной категорией `EXTERNAL`, поэтому они видны, но не маскируют результат собственных файлов сборки.
+
+```powershell
+python tools/audit_launch_log.py logs/latest.log
+```
+
+Для архивного пользовательского прогона:
+
+```powershell
+python tools/audit_launch_log.py logs/2026-08-09-1.log.gz
+```
+
+Код возврата `0` означает отсутствие известных pack-owned ошибок в конкретном логе. Он не заменяет визуальную проверку меню, F11, квестовых линий и фактическое выполнение задач.
+
 ## Граница проверки
 
 Статика не доказывает, что Forge загрузился, Paxi применил packs, FTB Quests отрисовал граф, фильтр распознал предмет, Ponder проиграл сцену или worldgen создал правильные жилы. Эти пункты проверяет только владелец по `docs/BUILD_TEST_PROTOCOL.md` и текущему `docs/M2_BUILD_TEST_PROTOCOL.md`, после чего передаёт `latest.log`, runtime registry dump и результаты `OK/FAIL`.

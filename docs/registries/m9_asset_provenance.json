@@ -9,7 +9,7 @@
     "visual_generator_path": "tools/generate_m9_visuals.py",
     "brand_generator_path": "tools/generate_brand.py",
     "hero_installer_path": "tools/install_brand_assets.py",
-    "method": "Deterministic Pillow rendering for symbols and UI states; accepted ImageGen artwork is reframed and alpha-preserved by tools/build_menu_visuals.py; FancyMenu delivery copies are byte-identical to canonical resource-pack assets.",
+    "method": "Deterministic Pillow rendering for symbols and UI states; accepted ImageGen artwork is reframed and alpha-preserved by tools/build_menu_visuals.py; 16/32px window icons are direct pixel-grid micro-marks; FancyMenu delivery copies are byte-identical to canonical resource-pack assets.",
     "font_license_path": "assets/fonts/Lato-OFL-1.1.txt"
   },
   "source_artwork": [
@@ -259,8 +259,8 @@
       "kind": "PNG",
       "source_type": "DERIVED_PROJECT_ASSET",
       "license_id": "PROJECT-ORIGINAL",
-      "sha256": "0AE89A23C97E4FB437252385714F514F93EEBD2755533C2A5679FACDA2C45D48",
-      "bytes": 235,
+      "sha256": "4F1E3B6127EC3EDD00472C8F909CD867D8172C5284E2BD0AE1545A6C1329AA42",
+      "bytes": 209,
       "width": 16,
       "height": 16,
       "derived_from": "industrial_frontier:asset/gui/icon_16",
@@ -272,8 +272,8 @@
       "kind": "PNG",
       "source_type": "DERIVED_PROJECT_ASSET",
       "license_id": "PROJECT-ORIGINAL",
-      "sha256": "58E35C78818A646F540F83563EF38AFE9B867EB08FF43A1035065EE3A6E8EAFC",
-      "bytes": 2052,
+      "sha256": "F6465DFBFD01567293FC86D7509C31705BCCAA75CCEEABA883FD0FD8784593E2",
+      "bytes": 246,
       "width": 32,
       "height": 32,
       "derived_from": "industrial_frontier:asset/gui/icon_32",
@@ -1207,7 +1207,7 @@
       "width": 128,
       "height": 128,
       "source_artwork_id": "industrial_frontier:source/brand/mark",
-      "source_note": "Size-specific orbital-foundry icon built by tools/build_menu_visuals.py; small variants receive controlled contrast and sharpening."
+      "source_note": "Size-specific orbital-foundry icon built from the accepted source artwork by tools/build_menu_visuals.py."
     },
     {
       "asset_id": "industrial_frontier:asset/gui/icon_16",
@@ -1216,12 +1216,11 @@
       "kind": "PNG",
       "source_type": "PROJECT_GENERATED",
       "license_id": "PROJECT-ORIGINAL",
-      "sha256": "0AE89A23C97E4FB437252385714F514F93EEBD2755533C2A5679FACDA2C45D48",
-      "bytes": 235,
+      "sha256": "4F1E3B6127EC3EDD00472C8F909CD867D8172C5284E2BD0AE1545A6C1329AA42",
+      "bytes": 209,
       "width": 16,
       "height": 16,
-      "source_artwork_id": "industrial_frontier:source/brand/mark",
-      "source_note": "Size-specific orbital-foundry icon built by tools/build_menu_visuals.py; small variants receive controlled contrast and sharpening."
+      "source_note": "Dedicated Recast micro-mark drawn directly on a 16px grid by tools/build_menu_visuals.py; the 32px delivery uses nearest-neighbour scaling and is not a downsampled illustration."
     },
     {
       "asset_id": "industrial_frontier:asset/gui/icon_256",
@@ -1235,7 +1234,7 @@
       "width": 256,
       "height": 256,
       "source_artwork_id": "industrial_frontier:source/brand/mark",
-      "source_note": "Size-specific orbital-foundry icon built by tools/build_menu_visuals.py; small variants receive controlled contrast and sharpening."
+      "source_note": "Size-specific orbital-foundry icon built from the accepted source artwork by tools/build_menu_visuals.py."
     },
     {
       "asset_id": "industrial_frontier:asset/gui/icon_32",
@@ -1244,12 +1243,11 @@
       "kind": "PNG",
       "source_type": "PROJECT_GENERATED",
       "license_id": "PROJECT-ORIGINAL",
-      "sha256": "58E35C78818A646F540F83563EF38AFE9B867EB08FF43A1035065EE3A6E8EAFC",
-      "bytes": 2052,
+      "sha256": "F6465DFBFD01567293FC86D7509C31705BCCAA75CCEEABA883FD0FD8784593E2",
+      "bytes": 246,
       "width": 32,
       "height": 32,
-      "source_artwork_id": "industrial_frontier:source/brand/mark",
-      "source_note": "Size-specific orbital-foundry icon built by tools/build_menu_visuals.py; small variants receive controlled contrast and sharpening."
+      "source_note": "Dedicated Recast micro-mark drawn directly on a 16px grid by tools/build_menu_visuals.py; the 32px delivery uses nearest-neighbour scaling and is not a downsampled illustration."
     },
     {
       "asset_id": "industrial_frontier:asset/gui/icon_64",
@@ -1263,7 +1261,7 @@
       "width": 64,
       "height": 64,
       "source_artwork_id": "industrial_frontier:source/brand/mark",
-      "source_note": "Size-specific orbital-foundry icon built by tools/build_menu_visuals.py; small variants receive controlled contrast and sharpening."
+      "source_note": "Size-specific orbital-foundry icon built from the accepted source artwork by tools/build_menu_visuals.py."
     },
     {
       "asset_id": "industrial_frontier:asset/gui/icons/epochs/p0",

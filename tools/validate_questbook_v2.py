@@ -46,6 +46,9 @@ INTERNAL_JARGON_RE = re.compile(
     r"объективн(?:ая|ое|ую)\s+(?:предметн(?:ая|ое|ую)\s+)?проверк)",
     re.IGNORECASE,
 )
+RAW_RESOURCE_IN_PLAYER_RE = re.compile(r"(?<![/\w])[a-z0-9_.-]+:[a-z0-9_./-]+(?![\w/])")
+RAW_SNAKE_IN_PLAYER_RE = re.compile(r"(?<![/\w])[a-z][a-z0-9]*(?:_[a-z0-9]+){1,}(?![\w/])")
+MOJIBAKE_RE = re.compile(r"(?:Рџ|РЎ|РЃ|СЂР|С‚Р|РЅР|вЂ|в„–)")
 
 # Every emitted adapter is backed by the installed class' writeData bytecode or
 # by an existing compiled chapter.  This table is also written to reports by the
@@ -244,6 +247,10 @@ def _schema_issues(
         matches = sum(not _schema_issues(value, sub, root_schema, path) for sub in schema["oneOf"])
         if matches != 1:
             errors.append(f"{path}: expected exactly one oneOf branch, matched {matches}")
+    if "anyOf" in schema:
+        matches = sum(not _schema_issues(value, sub, root_schema, path) for sub in schema["anyOf"])
+        if matches == 0:
+            errors.append(f"{path}: expected at least one anyOf branch to match")
     if "not" in schema and not _schema_issues(value, schema["not"], root_schema, path):
         errors.append(f"{path}: value matches a forbidden schema")
     if "if" in schema:
@@ -337,22 +344,245 @@ def _ancestors(alias: str, dependencies: dict[str, list[str]], memo: dict[str, s
     return result
 
 
-def _validate_migrations(project: Project, quests: dict[str, dict[str, Any]], issues: list[Issue]) -> dict[str, Any]:
-    old_registry_path = project.root / "docs/registries/stable_ids.json"
-    old_ids: dict[str, str] = {}
-    if old_registry_path.is_file():
+def _pack_item_tag_members(root: pathlib.Path, tag_id: str, seen: set[str] | None = None) -> set[str] | None:
+    """Resolve author-owned item tags used as static migration evidence."""
+    seen = set() if seen is None else seen
+    if tag_id in seen or ":" not in tag_id:
+        return None
+    seen.add(tag_id)
+    namespace, path = tag_id.split(":", 1)
+    candidates = sorted(
+        (root / "config/paxi/datapacks").glob(f"*/data/{namespace}/tags/items/{path}.json")
+    )
+    candidates += sorted((root / "kubejs/data").glob(f"{namespace}/tags/items/{path}.json"))
+    if not candidates:
+        return None
+    members: set[str] = set()
+    for candidate in candidates:
         try:
-            registry = json.loads(old_registry_path.read_text(encoding="utf-8-sig"))
-            old_ids = {str(k): str(v) for k, v in registry.get("ids", {}).items() if str(k).startswith("if.quest.")}
+            document = json.loads(candidate.read_text(encoding="utf-8-sig"))
         except (OSError, json.JSONDecodeError):
-            issues.append(Issue("WARN", "QV2-MIGRATION-OLD-REGISTRY", str(old_registry_path), "Could not read the old stable registry."))
+            return None
+        if document.get("replace") is True:
+            members.clear()
+        for raw_value in document.get("values", []):
+            value = raw_value.get("id") if isinstance(raw_value, dict) else raw_value
+            if not isinstance(value, str):
+                continue
+            if value.startswith("#"):
+                nested = _pack_item_tag_members(root, value[1:], seen)
+                if nested is None:
+                    return None
+                members.update(nested)
+            else:
+                members.add(value)
+    return members
+
+
+def _old_task_implies_v2(
+    root: pathlib.Path,
+    task: dict[str, Any],
+    quest: dict[str, Any],
+) -> tuple[bool, str]:
+    proofs = quest.get("proofs", []) if isinstance(quest.get("proofs"), list) else []
+    if len(proofs) != 1 or proofs[0].get("status") != "verified":
+        return False, "the successor must have exactly one verified proof"
+    proof = proofs[0]
+    predicate = task.get("predicate", {})
+    old_type = task.get("type")
+    if old_type != proof.get("type"):
+        return False, f"QR0 type {old_type!r} does not imply v2 type {proof.get('type')!r}"
+    if old_type == "checkmark":
+        return True, "same manually reviewed checkmark contract"
+    if old_type == "dimension":
+        same = predicate.get("dimension") == proof.get("dimension")
+        return same, "same dimension" if same else "dimension target changed"
+    if old_type != "item" or not isinstance(predicate.get("selector"), dict):
+        return False, "unsupported or incomplete frozen QR0 predicate"
+
+    old_selector = predicate["selector"]
+    if isinstance(proof.get("item"), dict):
+        new_selector = {"kind": "item", "id": proof["item"].get("id")}
+        new_count = int(proof["item"].get("count", 1))
+        new_payload = proof["item"]
+    elif isinstance(proof.get("item_tag"), dict):
+        new_selector = {"kind": "item_tag", "id": proof["item_tag"].get("id")}
+        new_count = int(proof["item_tag"].get("count", 1))
+        new_payload = proof["item_tag"]
+    else:
+        return False, "v2 item proof has no supported item or item-tag selector"
+    if int(predicate.get("count", 0)) < new_count:
+        return False, f"QR0 count {predicate.get('count')} is below v2 count {new_count}"
+    if old_selector == new_selector:
+        selector_implies = True
+    elif old_selector.get("kind") == "item" and new_selector.get("kind") == "item_tag":
+        members = _pack_item_tag_members(root, str(new_selector.get("id", "")))
+        selector_implies = members is not None and old_selector.get("id") in members
+    else:
+        selector_implies = False
+    if not selector_implies:
+        return False, f"QR0 selector {old_selector!r} does not imply v2 selector {new_selector!r}"
+    for flag in ("only_from_crafting", "match_nbt", "weak_nbt_match"):
+        if bool(new_payload.get(flag, False)) and not bool(predicate.get(flag, False)):
+            return False, f"v2 strengthens the {flag} predicate"
+    return True, "the frozen QR0 item predicate statically implies the v2 proof"
+
+
+def _validate_migrations(project: Project, quests: dict[str, dict[str, Any]], issues: list[Issue]) -> dict[str, Any]:
+    baseline_path = project.root / "docs/registries/quest_rebuild_baseline.json"
+    stable_path = project.root / "docs/registries/stable_ids.json"
+    retired_path = project.root / "docs/registries/retired_ids.json"
+    retired_schema_path = project.root / "authoring/schemas/retired_ids.schema.json"
+    proof_contracts_path = project.root / "docs/registries/quest_qr0_proof_contracts.json"
+    proof_contracts_schema_path = project.root / "authoring/schemas/quest_qr0_proof_contracts.schema.json"
+    migration_schema_path = project.root / "authoring/schemas/quest_migration.schema.json"
+
+    baseline = _read_json(baseline_path, issues) or {}
+    stable = _read_json(stable_path, issues) or {}
+    retired_registry = _read_json(retired_path, issues) or {}
+    retired_schema = _read_json(retired_schema_path, issues) or {}
+    proof_contracts_registry = _read_json(proof_contracts_path, issues) or {}
+    proof_contracts_schema = _read_json(proof_contracts_schema_path, issues) or {}
+    migration_schema = _read_json(migration_schema_path, issues) or {}
+
+    baseline_rows = baseline.get("quests", []) if isinstance(baseline.get("quests"), list) else []
+    old_by_id = {
+        str(row.get("engine_id")): row
+        for row in baseline_rows
+        if isinstance(row, dict) and isinstance(row.get("engine_id"), str)
+    }
+    old_by_alias = {
+        str(row.get("alias")): row
+        for row in baseline_rows
+        if isinstance(row, dict) and isinstance(row.get("alias"), str)
+    }
+    if len(old_by_id) != len(baseline_rows) or len(old_by_alias) != len(baseline_rows):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-MIGRATION-BASELINE-IDENTITY",
+            str(baseline_path),
+            "QR0 baseline quest aliases and engine IDs must both be unique.",
+        ))
+
+    if proof_contracts_schema:
+        for message in _schema_issues(
+            proof_contracts_registry,
+            proof_contracts_schema,
+            proof_contracts_schema,
+            "$",
+        ):
+            issues.append(Issue("ERROR", "QV2-MIGRATION-PROOF-SCHEMA", str(proof_contracts_path), message))
+    proof_contract_rows = (
+        proof_contracts_registry.get("quests", [])
+        if isinstance(proof_contracts_registry.get("quests"), list)
+        else []
+    )
+    proof_contract_by_old_id: dict[str, dict[str, Any]] = {}
+    for index, row in enumerate(proof_contract_rows):
+        where = f"{proof_contracts_path}:quests[{index}]"
+        if not isinstance(row, dict) or not isinstance(row.get("quest_engine_id"), str):
+            issues.append(Issue("ERROR", "QV2-MIGRATION-PROOF-ENTRY", where, "Proof contract needs a quest_engine_id."))
+            continue
+        old_id = str(row["quest_engine_id"])
+        if old_id in proof_contract_by_old_id:
+            issues.append(Issue("ERROR", "QV2-MIGRATION-PROOF-DUPLICATE", where, f"Duplicate proof contract for {old_id}."))
+        proof_contract_by_old_id[old_id] = row
+        baseline_row = old_by_id.get(old_id)
+        task = row.get("task", {}) if isinstance(row.get("task"), dict) else {}
+        if baseline_row is None:
+            issues.append(Issue("ERROR", "QV2-MIGRATION-PROOF-SOURCE", where, f"Proof contract {old_id} is absent from QR0."))
+        else:
+            if row.get("old_alias") != baseline_row.get("alias") or task.get("type") != baseline_row.get("task_type"):
+                issues.append(Issue(
+                    "ERROR",
+                    "QV2-MIGRATION-PROOF-SOURCE",
+                    where,
+                    "Frozen proof alias or type differs from the QR0 baseline.",
+                ))
+            if task.get("engine_id") != "4" + old_id[1:]:
+                issues.append(Issue(
+                    "ERROR",
+                    "QV2-MIGRATION-PROOF-TASK-ID",
+                    where,
+                    f"Frozen QR0 task ID must be {'4' + old_id[1:]}.",
+                ))
+    for old_id in sorted(set(old_by_id) - set(proof_contract_by_old_id)):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-MIGRATION-PROOF-MISSING",
+            str(proof_contracts_path),
+            f"QR0 quest {old_id} has no frozen executable proof contract.",
+        ))
+
+    stable_alias_by_id = {
+        str(engine_id): str(alias)
+        for alias, engine_id in stable.get("ids", {}).items()
+        if isinstance(alias, str) and alias.startswith("if.quest.")
+    } if isinstance(stable.get("ids"), dict) else {}
+    stable_all_ids = {
+        str(engine_id)
+        for engine_id in stable.get("ids", {}).values()
+    } if isinstance(stable.get("ids"), dict) else set()
+
+    if retired_schema:
+        for message in _schema_issues(retired_registry, retired_schema, retired_schema, "$"):
+            issues.append(Issue("ERROR", "QV2-RETIRED-SCHEMA", str(retired_path), message))
+    retired_rows = retired_registry.get("retired", []) if isinstance(retired_registry.get("retired"), list) else []
+    retired_by_id: dict[str, dict[str, Any]] = {}
+    for index, item in enumerate(retired_rows):
+        where = f"{retired_path}:retired[{index}]"
+        if not isinstance(item, dict) or not isinstance(item.get("engine_id"), str):
+            issues.append(Issue("ERROR", "QV2-RETIRED-ENTRY", where, "Retired entry needs an engine_id."))
+            continue
+        engine_id = str(item["engine_id"])
+        if engine_id in retired_by_id:
+            issues.append(Issue("ERROR", "QV2-RETIRED-DUPLICATE", where, f"Retired ID {engine_id} is duplicated."))
+        retired_by_id[engine_id] = item
+
+    current_ids: set[str] = set()
+    current_proof_ids: set[str] = set()
+    for document in project.chapters:
+        chapter = document.get("chapter", {})
+        current_ids.update(
+            str(value)
+            for value in (chapter.get("engine_id"), chapter.get("group", {}).get("engine_id"))
+            if isinstance(value, str)
+        )
+        for quest in document.get("quests", []):
+            if isinstance(quest.get("engine_id"), str):
+                current_ids.add(str(quest["engine_id"]))
+            for proof in quest.get("proofs", []):
+                if isinstance(proof.get("engine_id"), str):
+                    proof_id = str(proof["engine_id"])
+                    current_ids.add(proof_id)
+                    current_proof_ids.add(proof_id)
+    for engine_id in sorted(current_ids & set(retired_by_id)):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-RETIRED-ID-REUSED",
+            str(retired_path),
+            f"Retired engine ID {engine_id} is still used by Quest Source v2.",
+        ))
+    for engine_id in sorted(stable_all_ids - current_ids - set(retired_by_id)):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-RETIRED-ID-MISSING",
+            str(retired_path),
+            f"Historical engine ID {engine_id} is inactive in v2 but has no retirement tombstone.",
+        ))
 
     mapped_old_aliases: set[str] = set()
+    mapped_old_ids: Counter[str] = Counter()
     mappings: list[dict[str, Any]] = []
+    mapping_locations: list[str] = []
     seen_migration_ids: set[str] = set()
+    target_rows: dict[str, list[tuple[str, dict[str, Any]]]] = defaultdict(list)
     for document in project.migrations:
         migration_id = document.get("migration_id")
         path = project.migration_files.get(str(migration_id), "migrations")
+        if migration_schema:
+            for message in _schema_issues(document, migration_schema, migration_schema, "$"):
+                issues.append(Issue("ERROR", "QV2-MIGRATION-JSON-SCHEMA", path, message))
         for required_field in ("schema_version", "migration_id", "from_book", "to_book", "mappings"):
             if required_field not in document:
                 issues.append(Issue("ERROR", "QV2-MIGRATION-FIELD", path, f"Migration is missing {required_field}."))
@@ -374,41 +604,203 @@ def _validate_migrations(project: Project, quests: dict[str, dict[str, Any]], is
                 issues.append(Issue("ERROR", "QV2-MIGRATION-MAPPING", where, "Mapping must be an object."))
                 continue
             policy = mapping.get("policy")
-            for required_field in ("old_engine_id", "new_alias", "new_engine_id", "policy", "reason", "evidence"):
+            for required_field in ("old_alias", "old_engine_id", "new_alias", "new_engine_id", "policy", "reason", "evidence"):
                 if required_field not in mapping:
                     issues.append(Issue("ERROR", "QV2-MIGRATION-MAPPING-FIELD", where, f"Mapping is missing {required_field}."))
             if policy not in {"carry", "review", "reset"}:
                 issues.append(Issue("ERROR", "QV2-MIGRATION-POLICY", where, f"Unknown policy {policy!r}."))
+
             new_alias = mapping.get("new_alias")
             new_id = mapping.get("new_engine_id")
-            if new_alias not in quests:
+            target = quests.get(str(new_alias)) if isinstance(new_alias, str) else None
+            if target is None:
                 issues.append(Issue("ERROR", "QV2-MIGRATION-TARGET", where, f"Unknown v2 quest {new_alias!r}."))
-            elif new_id != quests[new_alias].get("engine_id"):
+            elif new_id != target.get("engine_id"):
                 issues.append(Issue("ERROR", "QV2-MIGRATION-TARGET-ID", where, "new_engine_id does not match the v2 source."))
+
             old_alias = mapping.get("old_alias")
             old_id = mapping.get("old_engine_id")
+            old = old_by_id.get(str(old_id)) if isinstance(old_id, str) else None
+            if isinstance(old_id, str):
+                mapped_old_ids[old_id] += 1
             if isinstance(old_alias, str):
                 mapped_old_aliases.add(old_alias)
-                if old_alias in old_ids and old_id != old_ids[old_alias]:
-                    issues.append(Issue("ERROR", "QV2-MIGRATION-SOURCE-ID", where, "old_engine_id does not match docs/registries/stable_ids.json."))
+            if old is None:
+                issues.append(Issue(
+                    "ERROR",
+                    "QV2-MIGRATION-SOURCE-ID",
+                    where,
+                    f"old_engine_id {old_id!r} is absent from the frozen QR0 baseline.",
+                ))
+            else:
+                expected_alias = str(old.get("alias"))
+                if old_alias != expected_alias:
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-SOURCE-ALIAS",
+                        where,
+                        f"QR0 engine ID {old_id} belongs to {expected_alias}, not {old_alias!r}.",
+                    ))
+                runtime_alias = stable_alias_by_id.get(str(old_id))
+                documented_runtime_alias = mapping.get("old_runtime_alias")
+                if runtime_alias and runtime_alias != expected_alias:
+                    if documented_runtime_alias != runtime_alias:
+                        issues.append(Issue(
+                            "ERROR",
+                            "QV2-MIGRATION-SOURCE-DRIFT",
+                            where,
+                            f"QR0 authoring/runtime alias drift must be documented as old_runtime_alias={runtime_alias!r}.",
+                        ))
+                elif documented_runtime_alias not in {None, expected_alias}:
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-SOURCE-DRIFT",
+                        where,
+                        "old_runtime_alias is present but does not describe a QR0 alias drift.",
+                    ))
+
             evidence = mapping.get("evidence")
             reason = mapping.get("reason")
             if not isinstance(reason, str) or len(reason.strip()) < 12 or not isinstance(evidence, list) or not evidence:
                 issues.append(Issue("ERROR", "QV2-MIGRATION-EVIDENCE", where, "Every mapping needs a reason and non-empty evidence."))
-            if policy == "carry" and old_id != new_id:
-                issues.append(Issue("ERROR", "QV2-MIGRATION-CARRY-ID", where, "carry requires the same engine ID; no runtime progress converter exists."))
-            mappings.append(mapping)
 
-    reused_old_ids = {quest.get("engine_id") for quest in quests.values()} & set(old_ids.values())
+            if policy == "carry" and old_id != new_id:
+                issues.append(Issue("ERROR", "QV2-MIGRATION-CARRY-ID", where, "carry requires the same quest engine ID; no runtime progress converter exists."))
+            if policy == "carry" and old is not None and target is not None:
+                contract_row = proof_contract_by_old_id.get(str(old_id), {})
+                old_task = contract_row.get("task", {}) if isinstance(contract_row.get("task"), dict) else {}
+                old_type = old_task.get("type", old.get("task_type"))
+                new_proofs = target.get("proofs", []) if isinstance(target.get("proofs"), list) else []
+                safe, detail = _old_task_implies_v2(project.root, old_task, target)
+                if not safe:
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-CARRY-PROOF-CONTRACT",
+                        where,
+                        f"QR0 completion does not imply every v2 proof: {detail}.",
+                    ))
+                old_task_id = str(old_task.get("engine_id", "4" + str(old_id)[1:]))
+                if len(new_proofs) == 1 and new_proofs[0].get("engine_id") != old_task_id:
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-CARRY-TASK-ID",
+                        where,
+                        f"carry must preserve the QR0 task ID {old_task_id} for partial progress.",
+                    ))
+                if old_type == "checkmark" and target.get("role") == "commissioning":
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-CHECKMARK-COMMISSIONING",
+                        where,
+                        "A QR0 checkmark cannot carry into a v2 commissioning gate.",
+                    ))
+
+            if policy in {"review", "reset"} and old is not None and target is not None:
+                contract_row = proof_contract_by_old_id.get(str(old_id), {})
+                old_task = contract_row.get("task", {}) if isinstance(contract_row.get("task"), dict) else {}
+                old_task_id = str(old_task.get("engine_id", "4" + str(old_id)[1:]))
+                if old_id == target.get("engine_id"):
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-REVIEW-ID-REUSED",
+                        where,
+                        "review/reset must use a new quest engine ID so old completion cannot close the successor.",
+                    ))
+                if old_task_id in {proof.get("engine_id") for proof in target.get("proofs", [])}:
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-REVIEW-TASK-ID-REUSED",
+                        where,
+                        f"review/reset successor reuses the QR0 task ID {old_task_id}.",
+                    ))
+                retired_quest = retired_by_id.get(str(old_id))
+                if not retired_quest or retired_quest.get("kind") != "quest":
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-RETIRED-QUEST-MISSING",
+                        where,
+                        f"review/reset QR0 quest ID {old_id} is missing from retired_ids.json.",
+                    ))
+                else:
+                    for key, expected in (
+                        ("old_alias", old.get("alias")),
+                        ("successor_alias", new_alias),
+                        ("migration_policy", policy),
+                    ):
+                        if retired_quest.get(key) != expected:
+                            issues.append(Issue(
+                                "ERROR",
+                                "QV2-MIGRATION-RETIRED-QUEST-MISMATCH",
+                                where,
+                                f"Retired quest {old_id} has {key}={retired_quest.get(key)!r}, expected {expected!r}.",
+                            ))
+                retired_task = retired_by_id.get(old_task_id)
+                if not retired_task or retired_task.get("kind") != "task" or retired_task.get("parent_old_engine_id") != old_id:
+                    issues.append(Issue(
+                        "ERROR",
+                        "QV2-MIGRATION-RETIRED-TASK-MISSING",
+                        where,
+                        f"QR0 task ID {old_task_id} must be retired with its review/reset quest.",
+                    ))
+
+            mappings.append(mapping)
+            mapping_locations.append(where)
+            if isinstance(new_alias, str):
+                target_rows[new_alias].append((where, mapping))
+
+    for old_id, count in sorted(mapped_old_ids.items()):
+        if count > 1:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-MIGRATION-SOURCE-DUPLICATE",
+                "migrations",
+                f"QR0 quest ID {old_id} is mapped {count} times; every old quest needs exactly one policy.",
+            ))
+    for old_id in sorted(set(old_by_id) - set(mapped_old_ids)):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-MIGRATION-SOURCE-UNMAPPED",
+            "migrations",
+            f"QR0 quest {old_by_id[old_id].get('alias')} ({old_id}) has no migration policy.",
+        ))
+
+    for new_alias, rows in sorted(target_rows.items()):
+        if len(rows) > 1 and any(mapping.get("policy") == "carry" for _, mapping in rows):
+            locations = [where for where, _mapping in rows]
+            issues.append(Issue(
+                "ERROR",
+                "QV2-MIGRATION-MERGE-CARRY",
+                ", ".join(locations),
+                f"Merged successor {new_alias} cannot carry one predecessor; all predecessors must use review/reset.",
+            ))
+
+    reused_old_quest_ids = {quest.get("engine_id") for quest in quests.values()} & set(old_by_id)
     mapped_carry_ids = {item.get("new_engine_id") for item in mappings if item.get("policy") == "carry"}
-    for reused in sorted(reused_old_ids - mapped_carry_ids):
-        issues.append(Issue("ERROR", "QV2-ID-REUSE-UNDECLARED", "migrations", f"Old engine ID {reused} is reused without a carry mapping."))
+    for reused in sorted(reused_old_quest_ids - mapped_carry_ids):
+        issues.append(Issue("ERROR", "QV2-ID-REUSE-UNDECLARED", "migrations", f"Old quest engine ID {reused} is reused without a carry mapping."))
+    for engine_id in sorted((current_proof_ids & stable_all_ids) - {
+        "4" + str(item.get("old_engine_id"))[1:]
+        for item in mappings
+        if item.get("policy") == "carry" and isinstance(item.get("old_engine_id"), str)
+    }):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-TASK-ID-REUSE-UNDECLARED",
+            "migrations",
+            f"Old task engine ID {engine_id} is reused outside a carry mapping.",
+        ))
+
     return {
         "migration_documents": len(project.migrations),
         "mappings": mappings,
-        "old_quest_alias_count": len(old_ids),
+        "old_quest_alias_count": len(old_by_alias),
         "mapped_old_aliases": sorted(mapped_old_aliases),
-        "unmapped_old_aliases": sorted(set(old_ids) - mapped_old_aliases),
+        "unmapped_old_aliases": sorted(set(old_by_alias) - mapped_old_aliases),
+        "policy_counts": dict(sorted(Counter(str(item.get("policy")) for item in mappings).items())),
+        "retired_id_count": len(retired_by_id),
+        "retired_quest_count": sum(item.get("kind") == "quest" for item in retired_by_id.values()),
+        "retired_task_count": sum(item.get("kind") == "task" for item in retired_by_id.values()),
+        "frozen_qr0_proof_contract_count": len(proof_contract_by_old_id),
     }
 
 
@@ -436,6 +828,7 @@ def _validate_content_mod_coverage(
         "entity", "biome", "structure", "dimension", "recipe",
     }
     by_modid: dict[str, set[str]] = defaultdict(set)
+    declared_mod_refs: dict[str, set[str]] = defaultdict(set)
     for alias, quest in quests.items():
         for ref in quest.get("content_refs", []):
             kind = ref.get("kind")
@@ -443,10 +836,26 @@ def _validate_content_mod_coverage(
             modid = ""
             if kind == "mod":
                 modid = value.split(":", 1)[0]
+                if modid:
+                    declared_mod_refs[modid].add(alias)
             elif kind in resource_kinds and ":" in value:
                 modid = value.split(":", 1)[0]
             if modid:
                 by_modid[modid].add(alias)
+
+    known_modids = {
+        str(modid)
+        for jar in registry.get("jars", [])
+        for modid in jar.get("modids", [])
+        if str(modid)
+    }
+    for modid in sorted(set(declared_mod_refs) - known_modids):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-CONTENT-MOD-UNKNOWN",
+            f"content_ref:mod:{modid}",
+            f"Explicit mod reference is absent from the active QR2 registry; quests={sorted(declared_mod_refs[modid])}.",
+        ))
 
     results: list[dict[str, Any]] = []
     for jar in registry.get("jars", []):
@@ -651,9 +1060,346 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
             else:
                 mandatory_dependencies[alias] = set().union(*paths)
 
+    # Early-game causal contracts are deliberately explicit.  Generic graph
+    # validity is not enough here: the legacy runtime once asked for four
+    # chests before the player had reached the crafting table and accepted
+    # only vanilla raw iron even though several early GTCEu minerals produce
+    # the same metal.  Keep those player-visible regressions impossible even
+    # when aliases, layouts, or surrounding tutorial quests are edited later.
+    p0_crafting = "if.quest.v2.p0.crafting_table"
+    p0_planks = "if.quest.v2.p0.planks"
+    p0_camp = "if.quest.v2.p0.camp_kit"
+    p0_iron_source = "if.quest.v2.p0.iron_source"
+    p0_iron_product = "if.quest.v2.p0.iron_product"
+
+    def item_selectors(alias: str) -> list[tuple[str, str]]:
+        selectors: list[tuple[str, str]] = []
+        for proof in quests.get(alias, {}).get("proofs", []):
+            if proof.get("type") != "item":
+                continue
+            if isinstance(proof.get("item"), dict):
+                selectors.append(("item", str(proof["item"].get("id", ""))))
+            if isinstance(proof.get("item_tag"), dict):
+                selectors.append(("item_tag", str(proof["item_tag"].get("id", ""))))
+        return selectors
+
+    if p0_crafting in quests:
+        if p0_planks not in dependencies.get(p0_crafting, []):
+            issues.append(Issue(
+                "ERROR",
+                "QV2-P0-WORKBENCH-ORDER",
+                p0_crafting,
+                "The crafting-table quest must directly follow the accepted-planks quest.",
+            ))
+        chest_ancestors = sorted(
+            ancestor
+            for ancestor in mandatory_dependencies.get(p0_crafting, set())
+            if ("item", "minecraft:chest") in item_selectors(ancestor)
+        )
+        if chest_ancestors:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-P0-CHEST-BEFORE-WORKBENCH",
+                p0_crafting,
+                f"Chest acquisition must not gate the first crafting table: {chest_ancestors}.",
+            ))
+
+    if p0_camp in quests and p0_crafting not in mandatory_dependencies.get(p0_camp, set()):
+        issues.append(Issue(
+            "ERROR",
+            "QV2-P0-CAMP-BEFORE-WORKBENCH",
+            p0_camp,
+            "The camp kit must come after the crafting table has been obtained and opened.",
+        ))
+
+    for alias in sorted(quests):
+        if ("item", "minecraft:chest") not in item_selectors(alias):
+            continue
+        if alias != p0_crafting and p0_crafting in quests and p0_crafting not in mandatory_dependencies.get(alias, set()):
+            issues.append(Issue(
+                "ERROR",
+                "QV2-CHEST-REQUIRES-WORKBENCH",
+                alias,
+                "A chest-acquisition quest must have the first crafting table as a mandatory ancestor.",
+            ))
+
+    expected_p0_selectors = {
+        p0_iron_source: ("item_tag", "industrial_frontier:quest_sources/early_iron"),
+        p0_iron_product: ("item_tag", "industrial_frontier:materials/iron_ingots"),
+    }
+    for alias, expected_selector in expected_p0_selectors.items():
+        if alias not in quests:
+            continue
+        selectors = item_selectors(alias)
+        if selectors != [expected_selector]:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-P0-IRON-ACCEPTANCE",
+                alias,
+                f"Expected the capability selector {expected_selector}, got {selectors}; exact raw iron is forbidden.",
+            ))
+
+    expected_proof_selectors = {
+        "if.task.v2.p0.iron_consumer.pickaxe": (
+            "item_tag",
+            "industrial_frontier:quest_components/iron_pickaxes",
+        ),
+        "if.task.v2.p5.bulk_processing.item": (
+            "item_tag",
+            "industrial_frontier:quest_sources/purified_iron_bearing_ores",
+        ),
+        "if.task.v2.p5.contracts.cargo": (
+            "item_tag",
+            "industrial_frontier:quest_sources/purified_iron_bearing_ores",
+        ),
+        "if.task.v2.p5.ae2_patterns.provider": (
+            "item_tag",
+            "ae2:pattern_provider",
+        ),
+        "if.task.v2.p5.last_mile.item": (
+            "item_tag",
+            "create:toolboxes",
+        ),
+        "if.task.v2.p6.materials.lead": (
+            "item_tag",
+            "industrial_frontier:materials/lead_plates",
+        ),
+        "if.task.v2.p6.enrichment.u235": (
+            "item_tag",
+            "nuclearcraft:isotopes/uranium/235",
+        ),
+        "if.task.v2.p6.enrichment.u238": (
+            "item_tag",
+            "nuclearcraft:isotopes/uranium/238",
+        ),
+        "if.task.v2.p6.fuel_form.item": (
+            "item_tag",
+            "nuclearcraft:reactor_fuel/uranium/leu-235",
+        ),
+        "if.task.v2.p6.spent_fuel.item": (
+            "item_tag",
+            "nuclearcraft:depleted_reactor_fuel/uranium/leu-235",
+        ),
+        "if.task.v2.p6.reprocessing.u238": (
+            "item_tag",
+            "nuclearcraft:isotopes/uranium/238",
+        ),
+        "if.task.v2.p6.reprocessing.pu239": (
+            "item_tag",
+            "nuclearcraft:isotopes/plutonium/239",
+        ),
+        "if.task.v2.p8.fusion_material.copernicium": (
+            "item_tag",
+            "nuclearcraft:isotopes/copernicium/291",
+        ),
+        "if.task.v2.p8.commissioning.copernicium": (
+            "item_tag",
+            "nuclearcraft:isotopes/copernicium/291",
+        ),
+        "if.task.v2.control.hardwired_interlocks.bus": (
+            "item_tag",
+            "projectred_transmission:bundled_wire",
+        ),
+        "if.task.v2.oil.respirator.item": (
+            "item_tag",
+            "industrial_frontier:safety/respirators",
+        ),
+    }
+    for proof_alias, expected_selector in expected_proof_selectors.items():
+        proof = proofs.get(proof_alias)
+        if proof is None:
+            continue
+        if isinstance(proof.get("item"), dict):
+            actual_selector = ("item", str(proof["item"].get("id", "")))
+        elif isinstance(proof.get("item_tag"), dict):
+            actual_selector = ("item_tag", str(proof["item_tag"].get("id", "")))
+        else:
+            actual_selector = (str(proof.get("type", "")), "")
+        if actual_selector != expected_selector:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-CAPABILITY-SELECTOR-REGRESSION",
+                proof_alias,
+                f"Expected capability selector {expected_selector}, got {actual_selector}.",
+            ))
+
+    # These optional PneumaticCraft/IC2 bridge blocks have language and
+    # Patchouli assets in the PNC archive but are not registered with the
+    # installed integration set.  FTB Quests therefore cannot deserialize them
+    # as item stacks.  Keep them out of icons, proof selectors, and content refs.
+    known_unregistered_item_ids = {
+        "ad_astra:tier_1_rocket",
+        "pneumaticcraft:electric_compressor",
+        "pneumaticcraft:pneumatic_generator",
+    }
+
+    def registry_ids(value: object) -> set[str]:
+        found: set[str] = set()
+        if isinstance(value, dict):
+            for nested in value.values():
+                found.update(registry_ids(nested))
+        elif isinstance(value, list):
+            for nested in value:
+                found.update(registry_ids(nested))
+        elif isinstance(value, str) and value in known_unregistered_item_ids:
+            found.add(value)
+        return found
+
+    for alias, quest in quests.items():
+        invalid_ids = sorted(registry_ids(quest))
+        if invalid_ids:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-UNREGISTERED-ITEM-ID",
+                alias,
+                f"Quest source references item IDs not registered by the installed integration set: {invalid_ids}.",
+            ))
+
+    # Every pack-owned tag used by an item task must exist as real datapack
+    # content.  A friendly 'one of these materials' sentence is meaningless if
+    # the emitted FTB filter points at a missing or empty tag.
+    for proof_alias, proof in proofs.items():
+        if proof.get("type") == "fluid" and isinstance(proof.get("fluid"), dict):
+            objective = str(proof.get("text_ru", {}).get("objective", ""))
+            stated_amounts = {
+                int(value.replace(" ", "").replace("\u00a0", "").replace("\u202f", ""))
+                for value in re.findall(r"([0-9][0-9 \u00a0\u202f]*)\s*мБ\b", objective, re.IGNORECASE)
+            }
+            actual_amount = proof["fluid"].get("amount")
+            if stated_amounts and actual_amount not in stated_amounts:
+                issues.append(Issue(
+                    "ERROR",
+                    "QV2-PROOF-FLUID-AMOUNT",
+                    proof_alias,
+                    f"Russian objective states {sorted(stated_amounts)} mB, but executable selector requires {actual_amount} mB.",
+                ))
+        payload = proof.get("item_tag")
+        if proof.get("type") != "item" or not isinstance(payload, dict):
+            continue
+        tag_id = str(payload.get("id", ""))
+        if ":" not in tag_id:
+            continue
+        namespace, name = tag_id.split(":", 1)
+        if namespace not in {"industrial_frontier", "forge"}:
+            continue
+        tag_path = (
+            project.root
+            / "config"
+            / "paxi"
+            / "datapacks"
+            / "IndustrialFrontier-Data"
+            / "data"
+            / namespace
+            / "tags"
+            / "items"
+            / f"{name}.json"
+        )
+        if not tag_path.is_file():
+            issues.append(Issue(
+                "ERROR",
+                "QV2-ITEM-TAG-MISSING",
+                proof_alias,
+                f"Pack-owned item tag does not exist: {tag_path.relative_to(project.root).as_posix()}.",
+            ))
+            continue
+        try:
+            tag_document = json.loads(tag_path.read_text(encoding="utf-8-sig"))
+        except (OSError, json.JSONDecodeError) as exc:
+            issues.append(Issue("ERROR", "QV2-ITEM-TAG-INVALID", proof_alias, f"Cannot read item tag: {exc}."))
+            continue
+        if not isinstance(tag_document, dict) or not isinstance(tag_document.get("values"), list) or not tag_document["values"]:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-ITEM-TAG-EMPTY",
+                proof_alias,
+                f"Pack-owned item tag {tag_id} must contain at least one accepted value.",
+            ))
+
+    early_iron_exact_ids = {
+        "minecraft:raw_iron",
+        "gtceu:raw_yellow_limonite",
+        "gtceu:raw_magnetite",
+        "gtceu:raw_basaltic_mineral_sand",
+        "gtceu:raw_granitic_mineral_sand",
+        "gtceu:raw_pyrite",
+        "gtceu:raw_goethite",
+        "gtceu:raw_hematite",
+    }
+    for alias, quest in quests.items():
+        if quest.get("epoch") != "P0":
+            continue
+        forbidden = sorted(
+            selector
+            for kind, selector in item_selectors(alias)
+            if kind == "item" and selector in early_iron_exact_ids
+        )
+        if forbidden:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-P0-EXACT-IRON-FORBIDDEN",
+                alias,
+                f"P0 must accept the proven early-iron source set, not exact mineral IDs: {forbidden}.",
+            ))
+
+    exact_choice_claim = re.compile(
+        r"(?:из\s+списка\s+задачи|любой\s+подходящ(?:ий|ая|ее)\s+"
+        r"(?:минерал|руда|слиток|пластина|доска|бревно|брёвно))",
+        re.IGNORECASE,
+    )
+    for alias, quest in quests.items():
+        for proof in quest.get("proofs", []):
+            if proof.get("type") != "item" or not isinstance(proof.get("item"), dict):
+                continue
+            proof_copy = " ".join(str(value) for value in proof.get("text_ru", {}).values())
+            if exact_choice_claim.search(proof_copy):
+                issues.append(Issue(
+                    "ERROR",
+                    "QV2-EXACT-ITEM-CHOICE-LIE",
+                    str(proof.get("alias", alias)),
+                    "The Russian task promises a choice among equivalent materials, but the proof accepts one exact item ID.",
+                ))
+
+    # A campaign may contain its own required sequence while remaining wholly
+    # optional to the technological backbone.  Keep that distinction explicit:
+    # no quest from an optional campaign may become a mandatory ancestor of an
+    # epoch commissioning.  City-labelled nodes outside that chapter are also
+    # rejected on the backbone so a future rename cannot silently restore the
+    # old city gate.
+    optional_campaign_chapters = {
+        alias
+        for alias, chapter in chapters.items()
+        if "optional_campaign" in chapter.get("tags", [])
+    }
+    optional_campaign_quests = {
+        alias
+        for alias, chapter_alias in chapter_for_quest.items()
+        if chapter_alias in optional_campaign_chapters
+    }
+
+    def has_city_gate_marker(alias: str) -> bool:
+        tags = {str(tag).lower() for tag in quests[alias].get("tags", [])}
+        if bool(tags & {"city", "settlement", "minecolonies"}) or any(
+            tag.startswith("city_") for tag in tags
+        ):
+            return True
+        quest = quests[alias]
+        structural_values = [
+            str(quest.get("icon", "")),
+            str(quest.get("grind", {}).get("budget_ref", "")),
+        ]
+        for ref in quest.get("content_refs", []):
+            structural_values.append(str(ref.get("id", "")))
+            structural_values.extend(str(value) for value in ref.get("evidence", []))
+        return any(
+            re.search(r"(?:city_demand|municipal|minecolonies|(?:^|[/_.-])city(?:[/_.-]|$))", value, re.IGNORECASE)
+            for value in structural_values
+        )
+
     # Commissioning is the sole authoritative join and epoch boundary.
     memo: dict[str, set[str]] = {}
     commissioning_by_epoch: dict[str, str] = {}
+    reported_optional_campaign_gates: set[str] = set()
+    reported_city_gates: set[str] = set()
     for epoch in EPOCHS:
         epoch_quests = [alias for alias, quest in quests.items() if quest.get("epoch") == epoch]
         if not epoch_quests:
@@ -679,6 +1425,30 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
             issues.append(Issue("ERROR", "QV2-COMMISSIONING-TRANSITION", commission_alias, f"Expected {epoch} -> {expected_next}."))
         ancestors = _ancestors(commission_alias, dependencies, memo) if len(topological) == len(quests) else set()
         mandatory = mandatory_dependencies.get(commission_alias, set())
+        optional_campaign_gates = sorted(
+            (mandatory & optional_campaign_quests) - reported_optional_campaign_gates
+        )
+        if optional_campaign_gates:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-OPTIONAL-CAMPAIGN-GATE",
+                commission_alias,
+                f"Optional-campaign quests must not gate epoch commissioning: {optional_campaign_gates}.",
+            ))
+            reported_optional_campaign_gates.update(optional_campaign_gates)
+        city_gates = sorted(
+            alias
+            for alias in mandatory - reported_city_gates
+            if has_city_gate_marker(alias)
+        )
+        if city_gates:
+            issues.append(Issue(
+                "ERROR",
+                "QV2-CITY-GATES-MAINLINE",
+                commission_alias,
+                f"City-labelled quests or structural city contracts are mandatory ancestors of the technical backbone: {city_gates}.",
+            ))
+            reported_city_gates.update(city_gates)
         required = {alias for alias in epoch_quests if quests[alias].get("requirement") == "required" and alias != commission_alias}
         for missing in sorted(required - mandatory):
             detail = "not an ancestor" if missing not in ancestors else "avoidable through an ANY_OF path"
@@ -697,7 +1467,11 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
             continue  # A deliberately partial QR source tree.
         entries = [
             alias for alias, quest in quests.items()
-            if quest.get("epoch") == next_epoch and not any(quests.get(dep, {}).get("epoch") == next_epoch for dep in dependencies.get(alias, []))
+            if quest.get("epoch") == next_epoch
+            and not any(
+                quests.get(dep, {}).get("epoch") == next_epoch
+                for dep in _ancestors(alias, dependencies, memo)
+            )
         ]
         for entry in entries:
             if commission_alias not in dependencies.get(entry, []):
@@ -736,6 +1510,15 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
             words = re.findall(r"[А-Яа-яЁёA-Za-z0-9-]+", normalized)
             if len(words) >= 8 and sum(word.isupper() and len(word) > 2 for word in words) / len(words) > 0.25:
                 issues.append(Issue("WARN", "QV2-RU-CAPS", f"{path}.{field}", "Too much uppercase text for the calm mentor voice."))
+            cyrillic_words = sum(bool(re.search(r"[А-Яа-яЁё]", word)) for word in words)
+            latin_words = sum(bool(re.search(r"[A-Za-z]", word)) and not re.search(r"[А-Яа-яЁё]", word) for word in words)
+            if len(words) >= 8 and latin_words > cyrillic_words:
+                issues.append(Issue(
+                    "ERROR" if state == "RU_READY" else "WARN",
+                    "QV2-RU-LATIN-DOMINANT",
+                    f"{path}.{field}",
+                    "Russian-primary copy contains more Latin-script words than Cyrillic words.",
+                ))
             for sentence in re.split(r"(?<=[.!?])\s+", normalized):
                 count = len(re.findall(r"[А-Яа-яЁёA-Za-z0-9-]+", sentence))
                 if count > 40:
@@ -748,6 +1531,27 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
                     "QV2-RU-INTERNAL-JARGON",
                     f"{path}.{field}",
                     "Player-facing Russian text contains implementation language; explain the action in world terms instead.",
+                ))
+            if RAW_RESOURCE_IN_PLAYER_RE.search(normalized):
+                issues.append(Issue(
+                    "ERROR" if state == "RU_READY" else "WARN",
+                    "QV2-RU-RAW-RESOURCE-ID",
+                    f"{path}.{field}",
+                    "Player-facing Russian text contains a raw registry ID; use the natural Russian name and keep the ID only in proof/content_refs.",
+                ))
+            if RAW_SNAKE_IN_PLAYER_RE.search(normalized):
+                issues.append(Issue(
+                    "ERROR" if state == "RU_READY" else "WARN",
+                    "QV2-RU-RAW-SNAKE-ID",
+                    f"{path}.{field}",
+                    "Player-facing Russian text contains a raw snake_case identifier; replace it with a natural Russian name.",
+                ))
+            if MOJIBAKE_RE.search(normalized):
+                issues.append(Issue(
+                    "ERROR",
+                    "QV2-RU-MOJIBAKE",
+                    f"{path}.{field}",
+                    "Player-facing Russian text contains likely broken UTF-8/Windows-1251 decoding.",
                 ))
 
         authorship = quest.get("authorship", {})
@@ -836,6 +1640,35 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
         grind = quest.get("grind", {})
         if grind.get("class") == "REWORK" and state == "RU_READY":
             issues.append(Issue("ERROR", "QV2-GRIND-REWORK-READY", path, "A REWORK grind contract cannot be RU_READY."))
+        expected_runs = grind.get("expected_runs")
+        grind_copy = " ".join([
+            str(grind.get("rationale_ru", "")),
+            *(value for _, value in _flatten_ru_text(quest)),
+        ])
+        probabilistic_gate = bool(re.search(
+            r"вероятност|шанс(?:ом|а|е)?\s+(?:в\s+)?\d|\d+\s*(?:%|процент)",
+            grind_copy,
+            re.IGNORECASE,
+        ))
+        if (
+            requirement == "required"
+            and isinstance(expected_runs, int)
+            and expected_runs > 8
+            and probabilistic_gate
+        ):
+            issues.append(Issue(
+                "ERROR",
+                "QV2-GRIND-RNG-GATE",
+                path,
+                f"Required probabilistic result expects {expected_runs} runs without a proven deterministic alternative or pity path.",
+            ))
+        elif isinstance(expected_runs, int) and expected_runs > 8 and not grind.get("automation_before_bulk"):
+            issues.append(Issue(
+                "ERROR",
+                "QV2-GRIND-RUNS-BEFORE-AUTOMATION",
+                path,
+                f"Expected run count {expected_runs} exceeds the hard limit before automation.",
+            ))
         item_counts: list[int] = []
         for proof in quest.get("proofs", []):
             if proof.get("type") == "item":
@@ -869,6 +1702,39 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
             window = starts[index:index + 3]
             if window[0][1] and len({entry[1] for entry in window}) == 1:
                 issues.append(Issue("WARN", "QV2-RU-REPEATED-OPENING", chapter_alias, f"Three adjacent quests start alike: {[entry[0] for entry in window]}."))
+
+    # Oversized dependency lines obscure the quest graph at large GUI scales.
+    # Keep this release invariant next to the semantic graph checks so a theme
+    # edit cannot silently reintroduce the 1.5D regression seen in-game.
+    theme_path = (
+        project.root
+        / "config"
+        / "paxi"
+        / "resourcepacks"
+        / "IndustrialFrontier-Core"
+        / "assets"
+        / "ftbquests"
+        / "ftb_quests_theme.txt"
+    )
+    if not theme_path.is_file():
+        issues.append(Issue("ERROR", "QV2-THEME-DEPENDENCY-LINE", str(theme_path), "FTB Quests theme file is missing."))
+    else:
+        theme_text = theme_path.read_text(encoding="utf-8-sig")
+        match = re.search(
+            r"(?m)^\s*dependency_line_thickness\s*:\s*([0-9]+(?:\.[0-9]+)?)(?:[dDfF])?\s*$",
+            theme_text,
+        )
+        if match is None:
+            issues.append(Issue("ERROR", "QV2-THEME-DEPENDENCY-LINE", str(theme_path), "dependency_line_thickness is missing or malformed."))
+        else:
+            thickness = float(match.group(1))
+            if not 0.12 <= thickness <= 0.25:
+                issues.append(Issue(
+                    "ERROR",
+                    "QV2-THEME-DEPENDENCY-LINE",
+                    str(theme_path),
+                    f"dependency_line_thickness={thickness:g} is outside the safe 0.12-0.25 range.",
+                ))
 
     migration_report = _validate_migrations(project, quests, issues)
     mod_coverage = _validate_content_mod_coverage(project, quests, release, issues)
@@ -910,6 +1776,8 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
         "roots": roots,
         "topological_order": topological,
         "commissioning_by_epoch": commissioning_by_epoch,
+        "optional_campaign_chapters": sorted(optional_campaign_chapters),
+        "optional_campaign_quests": sorted(optional_campaign_quests),
         "blocked_proofs": blocked,
         "coverage": [coverage[key] for key in sorted(coverage)],
         "mod_coverage": mod_coverage,
@@ -939,7 +1807,11 @@ def validate_staging(project: Project, report: dict[str, Any], build_dir: pathli
         else:
             seen_chapters.add(chapter_ids[0])
         seen_quests.update(re.findall(r'^\t\t\tid: "(3[0-9A-F]{15})"$', text, re.M))
-        seen_proofs.update(re.findall(r'^\t\t\t\tid: "(4[0-9A-F]{15})"$', text, re.M))
+        # The compiler renders each proof as a compound inside ``tasks``:
+        # quest(3 tabs) -> proof compound(4) -> proof fields(5).
+        # Four tabs matched the opening compound level and therefore saw zero
+        # IDs while every generated task was actually present.
+        seen_proofs.update(re.findall(r'^\t{5}id: "(4[0-9A-F]{15})"$', text, re.M))
         # Cheap delimiter/string validation independent from the renderer.
         stack: list[str] = []
         in_string = False

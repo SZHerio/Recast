@@ -1,13 +1,8 @@
 {
-  "__comment": "Возвратная пищевая тара P5. Каждая позиция раскрывается обратно без потерь: девять единиц вошли — девять вышли. Тара, которую нельзя вернуть, в городской контракт не принимается.",
+  "__comment": "Возвратная пищевая тара P5. Корзины являются отдельной многоразовой упаковкой и не засчитываются как сам продовольственный резерв.",
   "replace": false,
   "values": [
-    "farmersdelight:cabbage_crate",
-    "farmersdelight:carrot_crate",
-    "farmersdelight:potato_crate",
-    "farmersdelight:beetroot_crate",
-    "farmersdelight:onion_crate",
-    "farmersdelight:tomato_crate",
-    "farmersdelight:rice_bag"
+    "farmersdelight:wooden_basket",
+    "farmersdelight:bamboo_basket"
   ]
 }

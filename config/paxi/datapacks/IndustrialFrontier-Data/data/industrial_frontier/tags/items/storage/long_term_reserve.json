@@ -1,9 +1,7 @@
 {
-  "__comment": "Резерв длительного хранения P5. Не инвентарь на поясе, а склад, который переживает межсезонье и осаду. Категория, а не один блок: контракт принимает любой из них.",
+  "__comment": "Резерв упакованной еды P5, который переживает межсезонье и осаду. Пустой складской блок не считается продовольствием.",
   "replace": false,
   "values": [
-    "create:item_vault",
-    "minecraft:barrel",
     "farmersdelight:cabbage_crate",
     "farmersdelight:carrot_crate",
     "farmersdelight:potato_crate",

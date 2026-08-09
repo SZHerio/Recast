@@ -574,14 +574,14 @@
       "planned_owner_labels": [
         "MineColonies plus an authored modern style"
       ],
-      "sovereign_role_ru": "Будущий ограниченный спрос населения, профессии, районы, услуги и строительные проекты.",
-      "forbidden_role_ru": "Не производит бесплатно высокоуровневые материалы и не существует в runtime до отдельной волны установки.",
+      "sovereign_role_ru": "Отдельная необязательная городская кампания P1–P9: население, профессии, районы, услуги и строительные проекты. Материальные контракты спроса включаются с P4.",
+      "forbidden_role_ru": "Не является условием открытия технических эпох или их commissioning-доказательств и не производит бесплатно высокоуровневые материалы.",
       "processes": [
         {
           "process_id": "industrial_frontier:process/future/city_demand_contracts",
           "status": "GATED_NOT_INSTALLED",
           "ownership": "RESERVED_FUTURE",
-          "purpose_ru": "Постоянный, ограниченный спрос на продукцию фабрик.",
+          "purpose_ru": "Необязательный, постоянный и ограниченный спрос на продукцию фабрик.",
           "io_semantics": "COVERAGE_ONLY_NOT_RECIPE",
           "input_refs": [
             "industrial_frontier:substance/drinking_water",
@@ -601,7 +601,7 @@
               "industrial_frontier:pathway/future/city_demand"
             ]
           },
-          "implementation_ru": "Только архитектурный placeholder; городской стек отсутствует."
+          "implementation_ru": "Реестр намеренно сохраняет архитектурный placeholder GATED_NOT_INSTALLED до отдельной сверки runtime-состава; этот долг статуса не блокирует обязательную техническую прогрессию."
         }
       ],
       "evidence_refs": [
@@ -919,7 +919,7 @@
       "title_ru": "Независимые городские контракты",
       "title_en": "Independent City Demand",
       "status": "GATED_NOT_INSTALLED",
-      "purpose_ru": "Каждый sink принимает собственный товар или явную ONE_OF-группу.",
+      "purpose_ru": "Внутри добровольно начатой городской кампании каждый sink принимает собственный товар или явную ONE_OF-группу; путь не входит в техническое commissioning.",
       "stage_refs": [
         "industrial_frontier:stage/future/city/drinking_water_demand",
         "industrial_frontier:stage/future/city/steel_demand",
@@ -2099,7 +2099,7 @@
       "source_basis_ru": "Не применяется: стадия имеет явные материальные входы.",
       "earliest_epoch": 4,
       "automation_epoch": null,
-      "implementation_ru": "Самостоятельный коммунальный контракт."
+      "implementation_ru": "Необязательный самостоятельный коммунальный контракт."
     },
     {
       "stage_id": "industrial_frontier:stage/future/city/steel_demand",
@@ -2125,7 +2125,7 @@
       "source_basis_ru": "Не применяется: стадия имеет явные материальные входы.",
       "earliest_epoch": 4,
       "automation_epoch": null,
-      "implementation_ru": "Самостоятельный строительный контракт."
+      "implementation_ru": "Необязательный самостоятельный строительный контракт."
     },
     {
       "stage_id": "industrial_frontier:stage/future/city/diesel_demand",
@@ -2151,7 +2151,7 @@
       "source_basis_ru": "Не применяется: стадия имеет явные материальные входы.",
       "earliest_epoch": 4,
       "automation_epoch": null,
-      "implementation_ru": "Самостоятельный транспортный контракт."
+      "implementation_ru": "Необязательный самостоятельный транспортный контракт."
     },
     {
       "stage_id": "industrial_frontier:stage/future/city/polymer_demand",
@@ -2179,7 +2179,7 @@
       "source_basis_ru": "Не применяется: стадия имеет явные материальные входы.",
       "earliest_epoch": 4,
       "automation_epoch": null,
-      "implementation_ru": "ONE_OF принимает подходящий полимер вместо ложного требования всех трёх."
+      "implementation_ru": "Необязательный контракт: ONE_OF принимает подходящий полимер вместо ложного требования всех трёх."
     },
     {
       "stage_id": "industrial_frontier:stage/future/space/launch_propellant_sink",
@@ -2350,6 +2350,7 @@
     {
       "contract_id": "industrial_frontier:contract/gtceu_zinc_to_create",
       "status": "ACTIVE_PACK",
+      "optionality": "REQUIRED",
       "source_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
       "target_domain_ref": "industrial_frontier:domain/mechanical_engineering",
       "direction": "ONE_WAY",
@@ -2371,6 +2372,7 @@
     {
       "contract_id": "industrial_frontier:contract/gtceu_electronics_to_ae2",
       "status": "GATED_M2_IMPLEMENTATION",
+      "optionality": "REQUIRED",
       "source_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
       "target_domain_ref": "industrial_frontier:domain/digital_factory",
       "direction": "ONE_WAY",
@@ -2392,6 +2394,7 @@
     {
       "contract_id": "industrial_frontier:contract/petroleum_to_chemistry",
       "status": "GATED_NOT_INSTALLED",
+      "optionality": "REQUIRED",
       "source_domain_ref": "industrial_frontier:domain/civil_heavy_industry",
       "target_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
       "direction": "ONE_WAY",
@@ -2413,6 +2416,7 @@
     {
       "contract_id": "industrial_frontier:contract/chemistry_to_civil_nuclear",
       "status": "GATED_NOT_INSTALLED",
+      "optionality": "REQUIRED",
       "source_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
       "target_domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
       "direction": "ONE_WAY",
@@ -2433,15 +2437,16 @@
     {
       "contract_id": "industrial_frontier:contract/industry_to_living_city",
       "status": "GATED_NOT_INSTALLED",
+      "optionality": "OPTIONAL",
       "source_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
       "target_domain_ref": "industrial_frontier:domain/living_city",
       "direction": "ONE_WAY",
-      "physical_basis_ru": "Город создаёт ограниченный спрос на материалы и услуги, произведённые фабрикой.",
+      "physical_basis_ru": "Добровольно начатая городская кампания создаёт ограниченный спрос на материалы и услуги, произведённые фабрикой.",
       "payload_refs": [
         "industrial_frontier:process/future/city_demand_contracts"
       ],
       "earliest_epoch": 4,
-      "no_bypass_rule_ru": "Город не выдаёт бесплатные высокоуровневые материалы и пока не имеет runtime-контента.",
+      "no_bypass_rule_ru": "Контракт работает только как необязательный односторонний потребитель: город не выдаёт бесплатные высокоуровневые материалы и не может быть условием открытия технической эпохи.",
       "evidence_refs": [
         "industrial_frontier:evidence/domain/federation_doc"
       ],
@@ -2452,6 +2457,7 @@
     {
       "contract_id": "industrial_frontier:contract/civil_nuclear_to_strategic_nuclear",
       "status": "ACTIVE_PACK",
+      "optionality": "REQUIRED",
       "source_domain_ref": "industrial_frontier:domain/civil_nuclear_industry",
       "target_domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
       "direction": "ONE_WAY",
@@ -2473,17 +2479,18 @@
     {
       "contract_id": "industrial_frontier:contract/city_life_support_to_space",
       "status": "ACTIVE_PACK",
+      "optionality": "OPTIONAL",
       "source_domain_ref": "industrial_frontier:domain/living_city",
       "target_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
       "direction": "ONE_WAY",
-      "physical_basis_ru": "Освоенная городская санитарная инфраструктура передаёт космической программе подготовленные воду и кислород как проверяемые запасы жизнеобеспечения.",
+      "physical_basis_ru": "Если городская кампания начата, её санитарная инфраструктура может передать космической программе подготовленные воду и кислород как один из допустимых источников жизнеобеспечения.",
       "payload_refs": [
         "industrial_frontier:substance/drinking_water",
         "industrial_frontier:substance/technical_water",
         "industrial_frontier:substance/oxygen"
       ],
       "earliest_epoch": 7,
-      "no_bypass_rule_ru": "Городской запас не заменяет ракетное топливо или окислитель и не создаёт космические формы до установки выбранного space stack.",
+      "no_bypass_rule_ru": "Техническая космическая ветвь обеспечивает собственное жизнеобеспечение: городской запас не обязателен, не заменяет ракетное топливо или окислитель и не создаёт космические формы до установки выбранного space stack.",
       "evidence_refs": [
         "industrial_frontier:evidence/domain/federation_doc"
       ],
@@ -2494,6 +2501,7 @@
     {
       "contract_id": "industrial_frontier:contract/mature_industry_to_space",
       "status": "ACTIVE_PACK",
+      "optionality": "REQUIRED",
       "source_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
       "target_domain_ref": "industrial_frontier:domain/planetary_spaceflight",
       "direction": "ONE_WAY",

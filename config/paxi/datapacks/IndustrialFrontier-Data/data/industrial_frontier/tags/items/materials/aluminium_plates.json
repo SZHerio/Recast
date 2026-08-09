@@ -1,0 +1,5 @@
+{
+  "__comment": "Пластины алюминия, совместимые с материальной ступенью MV.",
+  "replace": false,
+  "values": ["#forge:plates/aluminium"]
+}

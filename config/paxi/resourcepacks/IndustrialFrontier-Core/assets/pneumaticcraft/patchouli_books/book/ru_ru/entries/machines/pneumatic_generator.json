@@ -1,8 +1,8 @@
 {
   "name": "Пневмогенератор",
-  "icon": "pneumaticcraft:pneumatic_generator",
+  "icon": "pneumaticcraft:vortex_tube",
   "category": "pneumaticcraft:machines",
-  "flag": "pneumaticcraft:pneumaticGeneratorEnabled",
+  "flag": "&mod:ic2,pneumaticcraft:pneumaticGeneratorEnabled",
   "advancement": "pneumaticcraft:advanced_pressure_tube",
   "pages": [
     {

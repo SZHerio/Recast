@@ -1,0 +1,5 @@
+{
+  "__comment": "Пластины палладия с родиевым покрытием для материальной ступени LuV.",
+  "replace": false,
+  "values": ["#forge:plates/rhodium_plated_palladium"]
+}

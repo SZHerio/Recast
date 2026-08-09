@@ -1,0 +1,8 @@
+{
+  "__comment": "Унифицированные титановые пластины для межмодового учебного контракта.",
+  "replace": false,
+  "values": [
+    "gtceu:titanium_plate",
+    "hbm_ntm_rebirth:plate_titanium"
+  ]
+}

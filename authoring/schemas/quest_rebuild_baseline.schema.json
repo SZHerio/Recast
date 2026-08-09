@@ -9,14 +9,16 @@
     "registry_id",
     "generated_from",
     "expected_counts",
+    "historical_inventory_sha256",
     "content_snapshot",
+    "active_runtime_contract",
     "ru_authoring_policy",
     "chapters",
     "quests"
   ],
   "properties": {
     "$schema": { "type": "string" },
-    "schema_version": { "const": 1 },
+    "schema_version": { "const": 2 },
     "registry_id": { "const": "industrial_frontier:quest_rebuild_baseline/qr0" },
     "generated_from": {
       "type": "object",
@@ -43,6 +45,9 @@
         "quests": { "const": 214 }
       }
     },
+    "historical_inventory_sha256": {
+      "const": "a50a23f9f010b6f934c72bdd9151b66bc25d68eb9b119648c1a6426ba928fee0"
+    },
     "content_snapshot": {
       "type": "object",
       "additionalProperties": false,
@@ -50,6 +55,48 @@
       "properties": {
         "active_jars": { "const": 133 },
         "snapshot_kind": { "const": "HISTORICAL_PRE_QR2_DELTA" }
+      }
+    },
+    "active_runtime_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_kind",
+        "source_dir",
+        "source_schema",
+        "build_dir",
+        "build_manifest",
+        "validation_report",
+        "graph_report",
+        "semantic_audit_report",
+        "runtime_chapters",
+        "runtime_chapter_groups",
+        "expected_counts",
+        "runtime_sync_required"
+      ],
+      "properties": {
+        "source_kind": { "const": "QUESTBOOK_V2_PROMOTED" },
+        "source_dir": { "const": "authoring/questbook_v2" },
+        "source_schema": { "const": "authoring/schemas/quest_source_v2.schema.json" },
+        "build_dir": { "const": "build/questbook_v2" },
+        "build_manifest": { "const": "build/questbook_v2/manifest.json" },
+        "validation_report": { "const": "build/questbook_v2/reports/validation.json" },
+        "graph_report": { "const": "build/questbook_v2/reports/graph.json" },
+        "semantic_audit_report": { "const": "build/questbook_v2/reports/quest_semantic_audit_full.json" },
+        "runtime_chapters": { "const": "config/ftbquests/quests/chapters" },
+        "runtime_chapter_groups": { "const": "config/ftbquests/quests/chapter_groups.snbt" },
+        "expected_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["chapters", "quests", "proofs", "dependency_edges"],
+          "properties": {
+            "chapters": { "const": 27 },
+            "quests": { "const": 501 },
+            "proofs": { "const": 822 },
+            "dependency_edges": { "const": 668 }
+          }
+        },
+        "runtime_sync_required": { "const": true }
       }
     },
     "ru_authoring_policy": { "$ref": "#/$defs/ruPolicy" },

@@ -2,23 +2,35 @@
 	chapter_groups: [
 		{
 			id: "1000000000000001"
-			title: "{industrial_frontier.quest.group.onboarding}"
-		}
-		{
-			id: "1000000000000004"
-			title: "{industrial_frontier.quest.group.mainline}"
-		}
-		{
-			id: "1000000000000005"
-			title: "{industrial_frontier.quest.group.diplomacy}"
-		}
-		{
-			id: "1000000000000003"
-			title: "{industrial_frontier.quest.group.academy}"
+			title: "Начать здесь"
 		}
 		{
 			id: "1000000000000002"
-			title: "{industrial_frontier.quest.group.help}"
+			title: "Помощь"
+		}
+		{
+			id: "1000000000000003"
+			title: "Город и общество"
+		}
+		{
+			id: "1000000000000004"
+			title: "Главная линия"
+		}
+		{
+			id: "1000000000000005"
+			title: "Безопасность и внешние силы"
+		}
+		{
+			id: "1000000000000020"
+			title: "Производственные системы"
+		}
+		{
+			id: "1000000000000050"
+			title: "Мир и экспедиции"
+		}
+		{
+			id: "1A70000000000001"
+			title: "Академия"
 		}
 	]
 }

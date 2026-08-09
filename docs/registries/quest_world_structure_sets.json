@@ -1,0 +1,65 @@
+{
+  "$schema": "../../authoring/schemas/quest_world_structure_sets.schema.json",
+  "schema_version": 1,
+  "registry_id": "industrial_frontier:quest/world_structure_sets",
+  "status": "STATIC_IDS_CONFIRMED_USER_RUNTIME_PENDING",
+  "policy_ru": "Исследовательский квест принимает один показательный объект подходящего класса. Он не заставляет обходить каждый модовый храм и не обещает одинаковую ценность добычи во всех структурах.",
+  "sets": [
+    {
+      "set_id": "industrial_frontier:quest_set/world/overworld_expedition",
+      "title_ru": "Наземная экспедиционная цель",
+      "capability_ru": "Найти один лагерь, руины, поселение или переработанную структуру Верхнего мира и вернуться с отметкой маршрута.",
+      "tag_id": "industrial_frontier:expedition_overworld",
+      "tag_file": "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_overworld.json",
+      "values": [
+        { "id": "mvs:campsite", "source_jar": "MoogsVoyagerStructures-1.20-5.0.8.jar" },
+        { "id": "philipsruins:ancient_ruins", "source_jar": "PhilipsRuins1.20.1-5.7.jar" },
+        { "id": "repurposed_structures:mansion_birch", "source_jar": "repurposed_structures-7.1.24+1.20.1-forge.jar" },
+        { "id": "towns_and_towers:village_badlands", "source_jar": "Towns-and-Towers-1.12-Fabric+Forge.jar" },
+        { "id": "betterdeserttemples:desert_temple", "source_jar": "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar" },
+        { "id": "betterdungeons:small_dungeon", "source_jar": "YungsBetterDungeons-1.20-Forge-4.0.4.jar" },
+        { "id": "betterjungletemples:jungle_temple", "source_jar": "YungsBetterJungleTemples-1.20-Forge-2.0.5.jar" },
+        { "id": "betterwitchhuts:witch_hut", "source_jar": "YungsBetterWitchHuts-1.20-Forge-3.0.3.jar" }
+      ],
+      "runtime_gate": "USER_STRUCTURE_TASK_MATCH_PENDING"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/world/ocean_expedition",
+      "title_ru": "Морская экспедиционная цель",
+      "capability_ru": "Найти один морской объект, подготовив лодку, запас воздуха и безопасный путь возвращения.",
+      "tag_id": "industrial_frontier:expedition_ocean",
+      "tag_file": "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_ocean.json",
+      "values": [
+        { "id": "betteroceanmonuments:ocean_monument", "source_jar": "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar" },
+        { "id": "mvs:prismarine_house_1", "source_jar": "MoogsVoyagerStructures-1.20-5.0.8.jar" },
+        { "id": "towns_and_towers:village_ocean", "source_jar": "Towns-and-Towers-1.12-Fabric+Forge.jar" }
+      ],
+      "runtime_gate": "USER_STRUCTURE_TASK_MATCH_PENDING"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/world/nether_expedition",
+      "title_ru": "Экспедиционная цель Незера",
+      "capability_ru": "Найти укреплённый объект Незера после подготовки огнестойкости, запасного маршрута и отмеченного портала.",
+      "tag_id": "industrial_frontier:expedition_nether",
+      "tag_file": "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_nether.json",
+      "values": [
+        { "id": "betterfortresses:fortress", "source_jar": "YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar" },
+        { "id": "betterdungeons:small_nether_dungeon", "source_jar": "YungsBetterDungeons-1.20-Forge-4.0.4.jar" }
+      ],
+      "runtime_gate": "USER_STRUCTURE_TASK_MATCH_PENDING"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/world/end_expedition",
+      "title_ru": "Экспедиционная цель Края",
+      "capability_ru": "Найти один поздний объект Края, не превращая редкую структуру в обязательную остановку космической программы.",
+      "tag_id": "industrial_frontier:expedition_end",
+      "tag_file": "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_end.json",
+      "values": [
+        { "id": "mes:phantom_citadel", "source_jar": "MoogsEndStructures-1.20-2.0.3.jar" },
+        { "id": "philipsruins:end_ruins", "source_jar": "PhilipsRuins1.20.1-5.7.jar" },
+        { "id": "repurposed_structures:ancient_city_end", "source_jar": "repurposed_structures-7.1.24+1.20.1-forge.jar" }
+      ],
+      "runtime_gate": "USER_STRUCTURE_TASK_MATCH_PENDING"
+    }
+  ]
+}

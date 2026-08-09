@@ -1,0 +1,5 @@
+{
+  "__comment": "Пластины вольфрамовой стали, совместимые с материальной ступенью IV.",
+  "replace": false,
+  "values": ["#forge:plates/tungsten_steel"]
+}

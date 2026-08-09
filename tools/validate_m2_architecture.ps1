@@ -2463,8 +2463,10 @@ else {
     }
 
     # The graph is the complete M2 dependency spine, so every authored
-    # substance passport and every domain contract must be reachable from at
-    # least one epoch node. Exact row counts alone cannot prove that coverage.
+    # Every substance passport and every REQUIRED domain contract must be
+    # reachable from at least one epoch node. OPTIONAL contracts deliberately
+    # stay outside the required P0-P9 spine; placing one in contract_refs would
+    # silently turn a side campaign into a progression gate.
     $substanceRegistryInfo = $documentsByRegistryId['industrial_frontier:m2/substance_passports']
     if ($null -eq $substanceRegistryInfo) {
         Add-ValidationError 'Cannot audit progression coverage: substance passport registry is missing.'
@@ -2496,8 +2498,12 @@ else {
         }
         foreach ($contract in @(Get-PropertyValue -Object $domainRegistry -Name 'contracts')) {
             $contractId = [string](Get-PropertyValue -Object $contract -Name 'contract_id')
-            if (-not $referencedContractSet.ContainsKey($contractId)) {
+            $optionality = [string](Get-PropertyValue -Object $contract -Name 'optionality')
+            if ($optionality -eq 'REQUIRED' -and -not $referencedContractSet.ContainsKey($contractId)) {
                 Add-ValidationError "Progression P0-P9 does not cover domain contract '$contractId'."
+            }
+            if ($optionality -eq 'OPTIONAL' -and $referencedContractSet.ContainsKey($contractId)) {
+                Add-ValidationError "Optional domain contract '$contractId' must not appear in required P0-P9 contract_refs."
             }
         }
     }

@@ -1,0 +1,3267 @@
+{
+  "$schema": "../../authoring/schemas/quest_qr0_proof_contracts.schema.json",
+  "schema_version": 1,
+  "registry_id": "industrial_frontier:quest_qr0_proof_contracts",
+  "generated_from": [
+    "docs/registries/quest_rebuild_baseline.json",
+    "config/ftbquests/quests/chapters"
+  ],
+  "quest_count": 214,
+  "quests": [
+    {
+      "old_alias": "if.quest.start.welcome",
+      "quest_engine_id": "3000000000000001",
+      "task": {
+        "engine_id": "4000000000000001",
+        "type": "dimension",
+        "predicate": {
+          "kind": "dimension",
+          "dimension": "minecraft:overworld"
+        },
+        "source": "config/ftbquests/quests/chapters/00_start_here.snbt",
+        "source_fingerprint_sha256": "71e84145db35c88ae2e751c49b00b3308265eee2272aeb37beb70002670128dd"
+      }
+    },
+    {
+      "old_alias": "if.quest.start.reading_the_book",
+      "quest_engine_id": "3000000000000002",
+      "task": {
+        "engine_id": "4000000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/00_start_here.snbt",
+        "source_fingerprint_sha256": "2ac9af838f79cdf04c0bc7242ec9b4f6edea35b89e85620e8ca5f8bdd2f9daf6"
+      }
+    },
+    {
+      "old_alias": "if.quest.start.jei",
+      "quest_engine_id": "3000000000000003",
+      "task": {
+        "engine_id": "4000000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/00_start_here.snbt",
+        "source_fingerprint_sha256": "9bd29874876707ae1fcb11ac4235b16c6ff5fe059d0af76bcfca938c854c9fd6"
+      }
+    },
+    {
+      "old_alias": "if.quest.start.team",
+      "quest_engine_id": "3000000000000004",
+      "task": {
+        "engine_id": "4000000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/00_start_here.snbt",
+        "source_fingerprint_sha256": "f3bc1883a1144c5f3b450141cefed9ea7348288f35378e0220bdaae48a844071"
+      }
+    },
+    {
+      "old_alias": "if.quest.start.wood_tag",
+      "quest_engine_id": "3000000000000005",
+      "task": {
+        "engine_id": "4000000000000005",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/wood_logs"
+          },
+          "count": 8,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/00_start_here.snbt",
+        "source_fingerprint_sha256": "a646f21ab12428c0a8d71762e75dc8c1e9bc15187eabb54be998ed910c3bb585"
+      }
+    },
+    {
+      "old_alias": "if.quest.start.bulk_chest",
+      "quest_engine_id": "3000000000000006",
+      "task": {
+        "engine_id": "4000000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "minecraft:chest"
+          },
+          "count": 4,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/00_start_here.snbt",
+        "source_fingerprint_sha256": "013dc87866c15f0a4e2d87cebaab0bf8f7886148f8e716576eac316e99a1c49e"
+      }
+    },
+    {
+      "old_alias": "if.quest.start.next",
+      "quest_engine_id": "3000000000000007",
+      "task": {
+        "engine_id": "4000000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/00_start_here.snbt",
+        "source_fingerprint_sha256": "cc065c143dd108098995a03bc4f02bee7ca08eed6c3b963dd5c380b41703ad48"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.brief",
+      "quest_engine_id": "3010000000000001",
+      "task": {
+        "engine_id": "4010000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "65cef9cf4f87d4dc2f4ee3bf1de0cd394407a8e41a0c2520fe594caa5ccac377"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.seasons",
+      "quest_engine_id": "3010000000000002",
+      "task": {
+        "engine_id": "4010000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "5b2baa5401e68791882cac4963c3cc6a1a7f0274d49e6e2cea646a63077c2312"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.camp",
+      "quest_engine_id": "3010000000000003",
+      "task": {
+        "engine_id": "4010000000000003",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "minecraft:crafting_table"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "e9c84381e1cc3226435e4a7a48e1e6aa4199a4ac9f8aa2a1edcd32bbc9b9db42"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.food",
+      "quest_engine_id": "3010000000000004",
+      "task": {
+        "engine_id": "4010000000000004",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "minecraft:bread"
+          },
+          "count": 8,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "42b4c05112583e25f581b41532ce39ed1ca6d774be66dd91610a50d093e2f860"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.map",
+      "quest_engine_id": "3010000000000005",
+      "task": {
+        "engine_id": "4010000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "acd76297ff9c2647493a09661664d06a10502095e6dca1b54e3dc178d6764053"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.prospect",
+      "quest_engine_id": "3010000000000006",
+      "task": {
+        "engine_id": "4010000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "minecraft:raw_iron"
+          },
+          "count": 8,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "df5799be926af89879d84e25ff4b3362942707126a71eaba1d4cb86e00547e01"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.loss",
+      "quest_engine_id": "3010000000000007",
+      "task": {
+        "engine_id": "4010000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "97ed5c9e6f32924dfc9974283f9e3415b616a7b4831e18ccae1315e0021eb0b2"
+      }
+    },
+    {
+      "old_alias": "if.quest.p0.exit",
+      "quest_engine_id": "3010000000000008",
+      "task": {
+        "engine_id": "4010000000000008",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "source_fingerprint_sha256": "a99a372a880c32effe640ca3d964988e5482d098c40a165fef4f774138da22af"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.rotation",
+      "quest_engine_id": "3011000000000001",
+      "task": {
+        "engine_id": "4011000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "6d90e90adaa9e752f7b25ff81d7c20f40269540847fb782c558acb78792a6ca2"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.alloy",
+      "quest_engine_id": "3011000000000002",
+      "task": {
+        "engine_id": "4011000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:andesite_alloy"
+          },
+          "count": 16,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "3fef820a353168f84fb0f46f9eb52865d15502bf811a2d5f884b19bf2837d88d"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.line",
+      "quest_engine_id": "3011000000000003",
+      "task": {
+        "engine_id": "4011000000000003",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:cogwheel"
+          },
+          "count": 4,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "fe1577f20ca3940a941b96dbbc368340fdf2da934289cb7079a12876b19d6ade"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.power",
+      "quest_engine_id": "3011000000000004",
+      "task": {
+        "engine_id": "4011000000000004",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:water_wheel"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "8c8c61a9ff2d7a11339e879dc040942d4f283ac924eed80fa0a1670fa428a17a"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.stress",
+      "quest_engine_id": "3011000000000005",
+      "task": {
+        "engine_id": "4011000000000005",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:stressometer"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "cdec0aee20921f4bcf0529fd0e74ee7804dabe3615b3608433e878ad0a3327c6"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.machine",
+      "quest_engine_id": "3011000000000006",
+      "task": {
+        "engine_id": "4011000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:millstone"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "54f5577f895d89cdc29568e75af9dd4d338d01d0ede72a97169748ef3bcacd78"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.press",
+      "quest_engine_id": "3011000000000007",
+      "task": {
+        "engine_id": "4011000000000007",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:mechanical_press"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "fa57b5112d71c29ede936e03035dcbec871231678e9b1259482809b9b01b0d52"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.buffer",
+      "quest_engine_id": "3011000000000008",
+      "task": {
+        "engine_id": "4011000000000008",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:belt_connector"
+          },
+          "count": 8,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "aa913c7d5c5f82884076e9c8373fa98a356f751ddffcceeef6ee439b5cb11adb"
+      }
+    },
+    {
+      "old_alias": "if.quest.p1.exit",
+      "quest_engine_id": "3011000000000009",
+      "task": {
+        "engine_id": "4011000000000009",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "source_fingerprint_sha256": "3462484e7d2e62972eb2432aa89f6b83fe26c2df3523baeb7aa9ca8531441932"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.intro",
+      "quest_engine_id": "3012000000000001",
+      "task": {
+        "engine_id": "4012000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "52b55a905698a4f5bfef981e9f7e2f79edbd7f902b6389c4cc2b687e47ec2b56"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.carbon",
+      "quest_engine_id": "3012000000000002",
+      "task": {
+        "engine_id": "4012000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "minecraft:coal"
+          },
+          "count": 16,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "676f7cbfadeef3ab75285e21628afd6c0f633b563af1a9d4bbddda1599229dbf"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.boiler",
+      "quest_engine_id": "3012000000000003",
+      "task": {
+        "engine_id": "4012000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "22f7c42e3b939cdcca3fe892a799f65c97e5c68d098a115596d8ec69ceddd905"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.steam_machine",
+      "quest_engine_id": "3012000000000004",
+      "task": {
+        "engine_id": "4012000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "a7b7ef840d2d013ee5affcb8d2b5e4510d208d3751979dcfc10d72b5a22a0423"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.steel",
+      "quest_engine_id": "3012000000000005",
+      "task": {
+        "engine_id": "4012000000000005",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/steel_ingots"
+          },
+          "count": 4,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "291e575e4622b01ee24a5f0e251b6abf470cba29257c4e79fdde8e0bb02b0992"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.plates",
+      "quest_engine_id": "3012000000000006",
+      "task": {
+        "engine_id": "4012000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/iron_plates"
+          },
+          "count": 8,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "a1333ad607065c378b9d3fac5e8665eb721a65954db66394447c9a7451c21695"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.brass",
+      "quest_engine_id": "3012000000000007",
+      "task": {
+        "engine_id": "4012000000000007",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gtceu:brass_ingot"
+          },
+          "count": 4,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "d6d643eef27ff9ec68acb4e6e866835b5d7abc6dd26814a2951091e9f03157f2"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.ore_route",
+      "quest_engine_id": "3012000000000008",
+      "task": {
+        "engine_id": "4012000000000008",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "475f36aa0c9819c6bc6e1ec5296cab4ee175c4660058a3862d6910ebb9929cee"
+      }
+    },
+    {
+      "old_alias": "if.quest.p2.exit",
+      "quest_engine_id": "3012000000000009",
+      "task": {
+        "engine_id": "4012000000000009",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "source_fingerprint_sha256": "242b209a3a7651647131954d049489868b6724f5fb986ee12100c40b7a07d021"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.intro",
+      "quest_engine_id": "3013000000000001",
+      "task": {
+        "engine_id": "4013000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "fb89c50cacf988efaca5f8ae7c47653dd3ba54bebc0c652f4946c1ec19eb7c6f"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.generator",
+      "quest_engine_id": "3013000000000002",
+      "task": {
+        "engine_id": "4013000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "e44141159264322854e1acbefecfbb7f2f4afdf29ff7ac42661ff8527c255c24"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.cable",
+      "quest_engine_id": "3013000000000003",
+      "task": {
+        "engine_id": "4013000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "c4db51a5434f7d7d1e8227ce134c38861580f16f4f135edaa995aaa8a9604157"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.buffer",
+      "quest_engine_id": "3013000000000004",
+      "task": {
+        "engine_id": "4013000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "aa3982a7e736babf4cf2c8426019a332b586ade3565b93ca5021832ca3230165"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.signal",
+      "quest_engine_id": "3013000000000005",
+      "task": {
+        "engine_id": "4013000000000005",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/redstone_dusts"
+          },
+          "count": 16,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "36d9e452ee6bcc8daf037cca1b6fe6ccc0e56116fa810fdd5749741966ca6c2c"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.machine",
+      "quest_engine_id": "3013000000000006",
+      "task": {
+        "engine_id": "4013000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/steel_plates"
+          },
+          "count": 8,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "c7e7f97d930489da515e167b9f50b2a88308d74ea4354fc96d035c0d16f63302"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.bridge",
+      "quest_engine_id": "3013000000000007",
+      "task": {
+        "engine_id": "4013000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "876bb9a6b0ffc501e0bb85ffb9b5046ee581248a53e25fa2227929f915bf7ea7"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.line",
+      "quest_engine_id": "3013000000000008",
+      "task": {
+        "engine_id": "4013000000000008",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "7ac88e876cc8c7d62e905d72e1ea60af50e50d14e99a1e3cbede6ce470b2de7a"
+      }
+    },
+    {
+      "old_alias": "if.quest.p3.exit",
+      "quest_engine_id": "3013000000000009",
+      "task": {
+        "engine_id": "4013000000000009",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "source_fingerprint_sha256": "7f9b51974ba94cd89c0837a39a215e4b81658b825b35eb98a034f5f5d1d114e5"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.intro",
+      "quest_engine_id": "3014000000000001",
+      "task": {
+        "engine_id": "4014000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "7787c72725d98692a2fa45cbbf56225a3321f018770bd52220c049b7cbc949b1"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.raw_water",
+      "quest_engine_id": "3014000000000002",
+      "task": {
+        "engine_id": "4014000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "minecraft:water_bucket"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "21947c8f4fd5b3308b3ea6f91f37019d08c44547b8e9fe1644bcb7e98e6355ff"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.treatment",
+      "quest_engine_id": "3014000000000003",
+      "task": {
+        "engine_id": "4014000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "74afda84d917d7481207b7891c9ec9d5f3eac163443d14287aa7414c853c0802"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.sewage",
+      "quest_engine_id": "3014000000000004",
+      "task": {
+        "engine_id": "4014000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "dc75ad59ccf623611d7f95849834615c7b8d8985b50ed4f99a3e488afc1700ef"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.sulfur",
+      "quest_engine_id": "3014000000000005",
+      "task": {
+        "engine_id": "4014000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "9674f0b78f064fce2d562d4f9f47d83338fa35878b7cd46fc907d0fc9ce563ea"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.nitrogen",
+      "quest_engine_id": "3014000000000006",
+      "task": {
+        "engine_id": "4014000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "f2abf77c51111ca8be8644d7bafcbcf268119237d46c84aceeae64c50b6ff520"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.chlorine",
+      "quest_engine_id": "3014000000000007",
+      "task": {
+        "engine_id": "4014000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "08075e0fa77af284c9ca7315094d9543535d49674878552f2e85c9a59ad80ea2"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.fertiliser",
+      "quest_engine_id": "3014000000000008",
+      "task": {
+        "engine_id": "4014000000000008",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "farmersdelight:organic_compost"
+          },
+          "count": 8,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "b3b081cdd6f223f25791fd5cce08fbe9f30752fb2f5438c9d2e88c38bd9c149b"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.kitchen_manual",
+      "quest_engine_id": "3014000000000009",
+      "task": {
+        "engine_id": "4014000000000009",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "farmersdelight:cooking_pot"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "36ec0ebe102d791472b77e28084cac21c7dbc41609420fbb0c7a4f373eaba425"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.kitchen_batch",
+      "quest_engine_id": "3014000000000010",
+      "task": {
+        "engine_id": "4014000000000010",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "63675ba940a2f824268c772efda5498dca7e57b354068c120009f465c5eee03c"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.rations",
+      "quest_engine_id": "3014000000000011",
+      "task": {
+        "engine_id": "4014000000000011",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "e6171c83bd58bc5240d6b1f19e68ef594ed641428c9a527455582cb1f1aa2bbd"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.contract",
+      "quest_engine_id": "3014000000000012",
+      "task": {
+        "engine_id": "4014000000000012",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "2dcc95001f97b8655699e08ce784853ed284cd629754685fc5672f889d464e59"
+      }
+    },
+    {
+      "old_alias": "if.quest.p4.exit",
+      "quest_engine_id": "3014000000000013",
+      "task": {
+        "engine_id": "4014000000000013",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt",
+        "source_fingerprint_sha256": "e1879d772b9fc212ebd69f6c52f251d8c55965240109ec70bbbbace46a86a4a1"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.intro",
+      "quest_engine_id": "3015000000000001",
+      "task": {
+        "engine_id": "4015000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "cea47ee87be9ea749d42d646860a4943f75378247c7b5a27045f9e0eba031e1e"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.bulk_processing",
+      "quest_engine_id": "3015000000000002",
+      "task": {
+        "engine_id": "4015000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "42ced458be87d6928add3d8475bd15818389cc3661a3078ae6065ef2625ce6bc"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.ae2_entry",
+      "quest_engine_id": "3015000000000003",
+      "task": {
+        "engine_id": "4015000000000003",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "ae2:energy_acceptor"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "9d5e6bd3b9fb6091235c94f67c9581ce7115ed6ee62037fab4971b7ff3fd4bc4"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.ae2_channels",
+      "quest_engine_id": "3015000000000004",
+      "task": {
+        "engine_id": "4015000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "0f6eff8b9f09ac4cba3c8bb0b0d46e56744abe5cff6165eba0419d711f8467e4"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.ae2_patterns",
+      "quest_engine_id": "3015000000000005",
+      "task": {
+        "engine_id": "4015000000000005",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "ae2:pattern_provider"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "0b9765e08cf9b8ce16c03a6f227e7edb0ec6f5187b9c57a3bc4a23384faf9ed0"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.ae2_autocraft",
+      "quest_engine_id": "3015000000000006",
+      "task": {
+        "engine_id": "4015000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "ae2:crafting_unit"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "042238ae419623531e2e2de9b8b3ffd3c160ee4aa475ae73bb57e253bda3803c"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.ae2_recovery",
+      "quest_engine_id": "3015000000000007",
+      "task": {
+        "engine_id": "4015000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "c11cf32f5dc817dd4179f09eddffeb35ee6b39a470d5d575060666dadc523acc"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.freight_rail",
+      "quest_engine_id": "3015000000000008",
+      "task": {
+        "engine_id": "4015000000000008",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:track"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "981631d480f36c7d715946fa455c265e1e15c6d3ba33e6963c04dfaa7c3ff267"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.water_route",
+      "quest_engine_id": "3015000000000009",
+      "task": {
+        "engine_id": "4015000000000009",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "littlelogistics:barge"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "c641fb2b8d50703898a9e0a50e836a19113e8addb26870273431f7e3675a6429"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.transit_line",
+      "quest_engine_id": "3015000000000010",
+      "task": {
+        "engine_id": "4015000000000010",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "mtr:rail"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "85945993e35c0f8c359a49bdb27253b696e8f68fa2be32e09c6090c1dae9f325"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.last_mile",
+      "quest_engine_id": "3015000000000011",
+      "task": {
+        "engine_id": "4015000000000011",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "d302cf69f51ccfb01f1fd4f6521931847c514e437de5e53fb4c79dd0de443c23"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.reserve",
+      "quest_engine_id": "3015000000000012",
+      "task": {
+        "engine_id": "4015000000000012",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:item_vault"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "cd72c3b784d07f79befaf2b51c3a8387902fcd235669c2905e69f808473b94e1"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.contracts",
+      "quest_engine_id": "3015000000000013",
+      "task": {
+        "engine_id": "4015000000000013",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "3e9e946084565bcf51cae1d75beb9444c1900541e22ab30753bb90e3c68697a8"
+      }
+    },
+    {
+      "old_alias": "if.quest.p5.balance",
+      "quest_engine_id": "3015000000000014",
+      "task": {
+        "engine_id": "4015000000000014",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "source_fingerprint_sha256": "956ec54e91d4bd4afb76e680fb2e5f1a3e4c9364c5015c8adf7626bdb7578fd9"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.intro",
+      "quest_engine_id": "3016000000000001",
+      "task": {
+        "engine_id": "4016000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "1cba95a5ad95f9ee0eb45e6fadb8009c7c04edeb688efe0b8859b608f15134b6"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.materials",
+      "quest_engine_id": "3016000000000002",
+      "task": {
+        "engine_id": "4016000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:graphite_block"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "5f0d2f9635d0f6c1a5f6a3a56de5044ed6d952b11610e439678512c011f8e5c3"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.entry",
+      "quest_engine_id": "3016000000000003",
+      "task": {
+        "engine_id": "4016000000000003",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:manufactory"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "d0790e8012b2c68aac3f9e61433a53f5fb7e624cafffe534e0df7bec19fc62a3"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.alloys",
+      "quest_engine_id": "3016000000000004",
+      "task": {
+        "engine_id": "4016000000000004",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:alloy_smelter"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "798b33fc30fbb068fc7deed60836c7275d5c08f26e4a7d4fcf6593d0affb7a2f"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.purification",
+      "quest_engine_id": "3016000000000005",
+      "task": {
+        "engine_id": "4016000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "0f4748ac95b6f8583ae62206e73cfd2bafe66c6647e0cf4ae0397b71a1ef1b0d"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.enrichment",
+      "quest_engine_id": "3016000000000006",
+      "task": {
+        "engine_id": "4016000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:centrifuge"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "a3466f4b8605200b86c178b5ac5a2ab4912c5ac8635eef193206dddcefe55490"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.fuel",
+      "quest_engine_id": "3016000000000007",
+      "task": {
+        "engine_id": "4016000000000007",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:fission_reactor_solid_fuel_cell"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "8dd3882b6af06252b16e82fc7ea2e8f77fef6f274d023dbbc7ad50cf8a644691"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.dosimetry",
+      "quest_engine_id": "3016000000000008",
+      "task": {
+        "engine_id": "4016000000000008",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:geiger_counter"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "646ba512491137d8773e3d6ed5b646656421f89bd17ff44b2d37ceec2b9bd0c1"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.reactor",
+      "quest_engine_id": "3016000000000009",
+      "task": {
+        "engine_id": "4016000000000009",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:fission_reactor_controller"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "4c1ee2e9f0c1dc2d94217cd1d64619ff966b92e9ffc9209eb554dae1cf5f4020"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.heat_loop",
+      "quest_engine_id": "3016000000000010",
+      "task": {
+        "engine_id": "4016000000000010",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:heat_exchanger"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "c0f2f06bb73c4f3a6bac3b1c71f8a53508d410ed4b26503e4e465d5949e40c70"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.turbine",
+      "quest_engine_id": "3016000000000011",
+      "task": {
+        "engine_id": "4016000000000011",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:turbine_controller"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "caca828da13e14c6e49a67bf335c1a0395bca5f9c8ddb504a09855896f8934ac"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.spent_fuel",
+      "quest_engine_id": "3016000000000012",
+      "task": {
+        "engine_id": "4016000000000012",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:fuel_reprocessor"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "265187527fa2f5ec9b4a14fcda36239b23eba3aa30c76305abac30cf2c06f76f"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.isotopes",
+      "quest_engine_id": "3016000000000013",
+      "task": {
+        "engine_id": "4016000000000013",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:isotope_separator"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "8f25e42e1875a3eab92dec5c84b8d4f9e6355a50c730eaa914511e00fcf4effc"
+      }
+    },
+    {
+      "old_alias": "if.quest.p6.city_plant",
+      "quest_engine_id": "3016000000000014",
+      "task": {
+        "engine_id": "4016000000000014",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/16_p6_nuclear.snbt",
+        "source_fingerprint_sha256": "ba1bb0ec4cce5d6e2fc5a468771482d7bdbb275abebf1802d76cd71f3a7ed6ef"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.intro",
+      "quest_engine_id": "3017000000000001",
+      "task": {
+        "engine_id": "4017000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "b04c72995e712f2fa09837ef94a00cd70081f07c650a92ee7f1e334726963dd2"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.hbm_entry",
+      "quest_engine_id": "3017000000000002",
+      "task": {
+        "engine_id": "4017000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "hbm_ntm_rebirth:machine_assembly_machine"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "3d0e657930d661af0459bc4ea07ac5bb0aae2211a1831d8fdc3ff41bcd48b551"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.protected_zone",
+      "quest_engine_id": "3017000000000003",
+      "task": {
+        "engine_id": "4017000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "a2a2b15b7d9d35ae57b708d842e184cd2831556af62a4164c86c2aee4fdd0e75"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.rbmk",
+      "quest_engine_id": "3017000000000004",
+      "task": {
+        "engine_id": "4017000000000004",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "hbm_ntm_rebirth:rbmk_console"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "cb74abd88b5a1e21f6c3484e50ffe24d03fef6a88e757a9280ed64e21df3adff"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.purex",
+      "quest_engine_id": "3017000000000005",
+      "task": {
+        "engine_id": "4017000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "6019196dfb78b32216c1ecc82721b4849d8b87d187769a2b716cb29af5db6c43"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.radiation_model",
+      "quest_engine_id": "3017000000000006",
+      "task": {
+        "engine_id": "4017000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "f076b6a013bea25945dcc4b033c9544db36928aa11580a324e73851e45abfd21"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.strategic_charge",
+      "quest_engine_id": "3017000000000007",
+      "task": {
+        "engine_id": "4017000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "a386aad75c05e6394b2248d8549a4d3ac2ec249c84e68820faf71b93abaf81e5"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.domain_links",
+      "quest_engine_id": "3017000000000008",
+      "task": {
+        "engine_id": "4017000000000008",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "17b394c0da726a30c7b40dc78eaeb16ce119dac2bff155eca82bae4ffbc1a370"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.clearances",
+      "quest_engine_id": "3017000000000009",
+      "task": {
+        "engine_id": "4017000000000009",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "7149164d49a5892b830248e3f380681c2f6f77daf92b5ad871a8701338d91494"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.counterintel",
+      "quest_engine_id": "3017000000000010",
+      "task": {
+        "engine_id": "4017000000000010",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "8ff683c8d6e4d35e5111b80fef0dc009592a793794a41653bc35275736a4e187"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.rocket_materials",
+      "quest_engine_id": "3017000000000011",
+      "task": {
+        "engine_id": "4017000000000011",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:space_fabric"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "8245192feb1bd8f88f94c304fd78cadba70afdaebf298ea70a3a19f6ea7a768a"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.rocket_fuel",
+      "quest_engine_id": "3017000000000012",
+      "task": {
+        "engine_id": "4017000000000012",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "4708bfdab4053333bda2cf910f5994d6b4df8cfa45c406a2a8102ed9577865ef"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.rocket_electronics",
+      "quest_engine_id": "3017000000000013",
+      "task": {
+        "engine_id": "4017000000000013",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:id_chip"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "b25aa76ff42d06ff1e267a9238d3773a5bce0783f600e338c5c200ee6606257a"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.spaceport",
+      "quest_engine_id": "3017000000000014",
+      "task": {
+        "engine_id": "4017000000000014",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:launch_pad"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "8b21aa97226649367b519d696f6423fc68c9f1dbbbcb6daff9f39c2aedab3dec"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.suit_oxygen",
+      "quest_engine_id": "3017000000000015",
+      "task": {
+        "engine_id": "4017000000000015",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:space_helmet"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "c96d891c693a05894e24a3829227369abd38daf663542a10a141137d3b292af1"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.first_launch",
+      "quest_engine_id": "3017000000000016",
+      "task": {
+        "engine_id": "4017000000000016",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "61f50bc21b6d91d89d5196d7790be015181f73cc660f32c40223d834b1cee589"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.sealing_base",
+      "quest_engine_id": "3017000000000017",
+      "task": {
+        "engine_id": "4017000000000017",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "creatingspace:oxygen_sealer"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "907ec550d028cd160d8c8ce7759657509fcd03c3f131d95890016dea8ae839c6"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.return_flow",
+      "quest_engine_id": "3017000000000018",
+      "task": {
+        "engine_id": "4017000000000018",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "28e896d29a02fdfdbad0fdc253d3020ef0f5b36c4524754d94944dd1f3c84007"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.planetary",
+      "quest_engine_id": "3017000000000019",
+      "task": {
+        "engine_id": "4017000000000019",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "9426e5e3c6914a7bf7674a5f1907d1328edcc83a2b6ed4a9fcc86a6a18c224e9"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.deep_path",
+      "quest_engine_id": "3017000000000020",
+      "task": {
+        "engine_id": "4017000000000020",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "creatingspace:rocket_engineer_table"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "4f01fba82f512f8d66c22c0a0c43502705cd7548ae50f45fed43788c40f3bda9"
+      }
+    },
+    {
+      "old_alias": "if.quest.p7.emergency",
+      "quest_engine_id": "3017000000000021",
+      "task": {
+        "engine_id": "4017000000000021",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt",
+        "source_fingerprint_sha256": "36966b6a711565589e73ab37bf49a9c080829ecd014701757d2e8dcdfe132d96"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.intro",
+      "quest_engine_id": "3018000000000001",
+      "task": {
+        "engine_id": "4018000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "964c22d1e2279bedeffa261d10199f74d21ec388fa773eb4de87776e98c0e9eb"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.specialisation",
+      "quest_engine_id": "3018000000000002",
+      "task": {
+        "engine_id": "4018000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "dc11840e2deb0343d12dc86073b0711de646878b53efad31a83b24fe78b621fc"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.flow",
+      "quest_engine_id": "3018000000000003",
+      "task": {
+        "engine_id": "4018000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "09fdcd9ef875d05c07652e6fb17209c22d32ebec3e4a1007e297439619b99aa8"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.survey_satellite",
+      "quest_engine_id": "3018000000000004",
+      "task": {
+        "engine_id": "4018000000000004",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:ore_finder_satellite"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "c60f436c05a2a4ea333de647879ea14f39ef60332424b6de531667c499270272"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.navigation_grid",
+      "quest_engine_id": "3018000000000005",
+      "task": {
+        "engine_id": "4018000000000005",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:gps_satellite"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "edca6bc8cdbc8ecb7ef7a0eb328684408967a2faac52d8cd44de268660a8a0be"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.power_beam",
+      "quest_engine_id": "3018000000000006",
+      "task": {
+        "engine_id": "4018000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:beam_receiver"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "466ce3128a33c810f7349d566176d420f132b2753abd67cc282c778b694cc5d8"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.elevator",
+      "quest_engine_id": "3018000000000007",
+      "task": {
+        "engine_id": "4018000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "c33b6897a32fbd1ee2ab484d5da43b8f707e3868a9d87017ddca0acd3b110581"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.accelerator",
+      "quest_engine_id": "3018000000000008",
+      "task": {
+        "engine_id": "4018000000000008",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:linear_accelerator_controller"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "61beaf4a7554862277961df3f9cd3cd51f728c9e010e4102a32cb4dfa93eb263"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.target_chamber",
+      "quest_engine_id": "3018000000000009",
+      "task": {
+        "engine_id": "4018000000000009",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "dcbdffbdd83547ff2274ca3ac0a28646eab8b8c13fc87979af2c18e5e02e67fe"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.fusion_split",
+      "quest_engine_id": "3018000000000010",
+      "task": {
+        "engine_id": "4018000000000010",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "c0bc490da1491292f1e17a496e79c9eff7ec98e685864324818936005c99fdc4"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.plasma_forge",
+      "quest_engine_id": "3018000000000011",
+      "task": {
+        "engine_id": "4018000000000011",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "bcddeb489437b202caaf8c9e0db17ba161eb502715018611c6c7aab02f679bf6"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.renewables",
+      "quest_engine_id": "3018000000000012",
+      "task": {
+        "engine_id": "4018000000000012",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "04a98a6833e1a5650267c2cd6983ff346ac5e7bc03242f3a30e35e867c36eb49"
+      }
+    },
+    {
+      "old_alias": "if.quest.p8.diagnosis",
+      "quest_engine_id": "3018000000000013",
+      "task": {
+        "engine_id": "4018000000000013",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt",
+        "source_fingerprint_sha256": "6c44e9a2871ce3289ddfb2ca2ce14a73f03d15b591b69f9cfb7d350da00fb8f1"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.intro",
+      "quest_engine_id": "3019000000000001",
+      "task": {
+        "engine_id": "4019000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "165116a284503eabe8fe93d66bb887795790c861fb69ce6415d91c561834d41b"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.swarm_line",
+      "quest_engine_id": "3019000000000002",
+      "task": {
+        "engine_id": "4019000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "gcyr:dyson_swarm_satellite"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "62cb6d4d945d2059ed4eac5152653203fdaeb6127ba8cc1ee72e66c862ba13ce"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.swarm_upkeep",
+      "quest_engine_id": "3019000000000003",
+      "task": {
+        "engine_id": "4019000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "f5925fed97cd82f3671ab9786a276fa1796624edb1b5f3c402c0bb347f1243bc"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.colony_life",
+      "quest_engine_id": "3019000000000004",
+      "task": {
+        "engine_id": "4019000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "3f00db04c86a205d7cba1e467372f66b4f3a0028e95a1368f16dbe724b086e44"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.colony_industry",
+      "quest_engine_id": "3019000000000005",
+      "task": {
+        "engine_id": "4019000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "52317e2cdcbf4179b10420d583c29c6763e9e1f8698acfa4309c2fa6afb88f37"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.quantum",
+      "quest_engine_id": "3019000000000006",
+      "task": {
+        "engine_id": "4019000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "nuclearcraft:quantum_transformer"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "204d0ab8b4cbadef36015dcf79e7c9a2cee752fea775cc36ec21e70b4a4ee1da"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.closed_loop",
+      "quest_engine_id": "3019000000000007",
+      "task": {
+        "engine_id": "4019000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "67cb134ab4f47e9e192994bb35d39ea49b82542b222a47678db1b0f4d1df77e5"
+      }
+    },
+    {
+      "old_alias": "if.quest.p9.resolution",
+      "quest_engine_id": "3019000000000008",
+      "task": {
+        "engine_id": "4019000000000008",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/19_p9_finale.snbt",
+        "source_fingerprint_sha256": "c8516da92461c86da3dd194cc4ecfdc642ac278d66ca3b9e3f90fcf141e98f33"
+      }
+    },
+    {
+      "old_alias": "if.quest.storage.intro",
+      "quest_engine_id": "3020000000000001",
+      "task": {
+        "engine_id": "4020000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "source_fingerprint_sha256": "3f8e850040230374254049fbf5018cb332ca98439bbb6cffec37540115282eea"
+      }
+    },
+    {
+      "old_alias": "if.quest.storage.connector",
+      "quest_engine_id": "3020000000000002",
+      "task": {
+        "engine_id": "4020000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "toms_storage:ts.inventory_connector"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "source_fingerprint_sha256": "c33f51761aba30036ff61ed97aaf2a451a9bdd201818da5cbe8c04e99971dfc3"
+      }
+    },
+    {
+      "old_alias": "if.quest.storage.terminal",
+      "quest_engine_id": "3020000000000003",
+      "task": {
+        "engine_id": "4020000000000003",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "toms_storage:ts.storage_terminal"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "source_fingerprint_sha256": "3d048bee03d1de50a6b7819dcc5013868944693ca037ff408c0e39b39099d6da"
+      }
+    },
+    {
+      "old_alias": "if.quest.storage.cables",
+      "quest_engine_id": "3020000000000004",
+      "task": {
+        "engine_id": "4020000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "source_fingerprint_sha256": "a19e8c6c515a1f36d8b4381ae7b64edb7c62aceda9f88ab528c3d7166cd7a3ca"
+      }
+    },
+    {
+      "old_alias": "if.quest.storage.crafting",
+      "quest_engine_id": "3020000000000005",
+      "task": {
+        "engine_id": "4020000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "source_fingerprint_sha256": "859a057dd62df523c53bc34926ec72a60c068fb29f0c11bd8e5d0d571662ad48"
+      }
+    },
+    {
+      "old_alias": "if.quest.storage.level",
+      "quest_engine_id": "3020000000000006",
+      "task": {
+        "engine_id": "4020000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "source_fingerprint_sha256": "dfeabd6c7014f3790343ddcd3cbc933a616de656f569d1e801158b6b2da02dbc"
+      }
+    },
+    {
+      "old_alias": "if.quest.storage.handover",
+      "quest_engine_id": "3020000000000007",
+      "task": {
+        "engine_id": "4020000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "source_fingerprint_sha256": "0fec30cc0cbc7e1f74c1c7a337a4faa322f0b1135c2b204bd6663eb4904b4dd9"
+      }
+    },
+    {
+      "old_alias": "if.quest.defence.intro",
+      "quest_engine_id": "3021000000000001",
+      "task": {
+        "engine_id": "4021000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/21_defence_gear.snbt",
+        "source_fingerprint_sha256": "7887c84fa33d953e4acd9c31812cb9a6c07fac19253e2f3fe5f2b4bff6aa5ee7"
+      }
+    },
+    {
+      "old_alias": "if.quest.defence.melee",
+      "quest_engine_id": "3021000000000002",
+      "task": {
+        "engine_id": "4021000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/21_defence_gear.snbt",
+        "source_fingerprint_sha256": "368d58d1de16db44d8ee001f8e37a4b0cb16aa1018a3c7bbee055bf54d8d7ee4"
+      }
+    },
+    {
+      "old_alias": "if.quest.defence.firearms",
+      "quest_engine_id": "3021000000000003",
+      "task": {
+        "engine_id": "4021000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/21_defence_gear.snbt",
+        "source_fingerprint_sha256": "f8fb29eea621786376889d321be19fdee80a88839b263b9b28a5f4401e944745"
+      }
+    },
+    {
+      "old_alias": "if.quest.defence.structures",
+      "quest_engine_id": "3021000000000004",
+      "task": {
+        "engine_id": "4021000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/21_defence_gear.snbt",
+        "source_fingerprint_sha256": "5761144ca6ba3abfc08a6a2a004491a42dfc0471d0fd70a98ae7b9651d118d72"
+      }
+    },
+    {
+      "old_alias": "if.quest.defence.cannons",
+      "quest_engine_id": "3021000000000005",
+      "task": {
+        "engine_id": "4021000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/21_defence_gear.snbt",
+        "source_fingerprint_sha256": "8baed097ed2c96add8d7e5cf3ef23741f2fc75c25612a5a5b89bb7572312d8d5"
+      }
+    },
+    {
+      "old_alias": "if.quest.defence.discipline",
+      "quest_engine_id": "3021000000000006",
+      "task": {
+        "engine_id": "4021000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/21_defence_gear.snbt",
+        "source_fingerprint_sha256": "b052a0300f6ea8edcb72de44d87f45278ab62382fb33c8aed93cc18760738d10"
+      }
+    },
+    {
+      "old_alias": "if.quest.settlement.intro",
+      "quest_engine_id": "3022000000000001",
+      "task": {
+        "engine_id": "4022000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/22_settlement.snbt",
+        "source_fingerprint_sha256": "8c707048e0336b972a8555eddca9df0ec150ac70553e7dc32347c8a0a9b05d5b"
+      }
+    },
+    {
+      "old_alias": "if.quest.settlement.townhall",
+      "quest_engine_id": "3022000000000002",
+      "task": {
+        "engine_id": "4022000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/22_settlement.snbt",
+        "source_fingerprint_sha256": "0295f4724b29960bced80478301f7d726c00418a7c1537b8cb725c48c7c1a1da"
+      }
+    },
+    {
+      "old_alias": "if.quest.settlement.builder",
+      "quest_engine_id": "3022000000000003",
+      "task": {
+        "engine_id": "4022000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/22_settlement.snbt",
+        "source_fingerprint_sha256": "a54012533699f7b386f936d08fa78ff5756572eb9782bcb126d6cbebd3109cfa"
+      }
+    },
+    {
+      "old_alias": "if.quest.settlement.supply",
+      "quest_engine_id": "3022000000000004",
+      "task": {
+        "engine_id": "4022000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/22_settlement.snbt",
+        "source_fingerprint_sha256": "9086a30b169df05fba60b6cf8f6e72803087db8546908d3571da27a88aa08d61"
+      }
+    },
+    {
+      "old_alias": "if.quest.settlement.guards",
+      "quest_engine_id": "3022000000000005",
+      "task": {
+        "engine_id": "4022000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/22_settlement.snbt",
+        "source_fingerprint_sha256": "256b75d585dc6021f568ff133b7d797d91c69e05fcb61926753b6317599205ac"
+      }
+    },
+    {
+      "old_alias": "if.quest.workshop.intro",
+      "quest_engine_id": "3023000000000001",
+      "task": {
+        "engine_id": "4023000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "source_fingerprint_sha256": "e4a5d12b8a3cb0d5fe0f7fcbf2b6f8b7438991ae0b5cf6431f9371eb62bd6154"
+      }
+    },
+    {
+      "old_alias": "if.quest.workshop.foundry",
+      "quest_engine_id": "3023000000000002",
+      "task": {
+        "engine_id": "4023000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "source_fingerprint_sha256": "b921ec345782880365b1f4724449d4d3f763afad88478d3b0d4968992de084e4"
+      }
+    },
+    {
+      "old_alias": "if.quest.workshop.pressure",
+      "quest_engine_id": "3023000000000003",
+      "task": {
+        "engine_id": "4023000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "source_fingerprint_sha256": "85043975a7a9967cd0c2cb5411c6b2b6f611ebad561305f4b5e02be81980d746"
+      }
+    },
+    {
+      "old_alias": "if.quest.workshop.lithography",
+      "quest_engine_id": "3023000000000004",
+      "task": {
+        "engine_id": "4023000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "source_fingerprint_sha256": "a2caea6b46d45f98700455c10aa9deb018a14c2fc6de6f13d08b6a259a9abe2e"
+      }
+    },
+    {
+      "old_alias": "if.quest.workshop.assembly",
+      "quest_engine_id": "3023000000000005",
+      "task": {
+        "engine_id": "4023000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "source_fingerprint_sha256": "7526b8f184d99457769e7a1d69a7ab2cc954cfd75e34658c3cfdf1f2de4be071"
+      }
+    },
+    {
+      "old_alias": "if.quest.workshop.choice",
+      "quest_engine_id": "3023000000000006",
+      "task": {
+        "engine_id": "4023000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "source_fingerprint_sha256": "5d1b9e8fe30484b6570503bef3db0a5d3fcec68c21324f43774e1a265b305f8f"
+      }
+    },
+    {
+      "old_alias": "if.quest.oil.intro",
+      "quest_engine_id": "3024000000000001",
+      "task": {
+        "engine_id": "4024000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/24_oil_line.snbt",
+        "source_fingerprint_sha256": "fec64c95de82b9391c77510369b22ebfdcf66fbf3f2befecd4572815c7da03a4"
+      }
+    },
+    {
+      "old_alias": "if.quest.oil.survey",
+      "quest_engine_id": "3024000000000002",
+      "task": {
+        "engine_id": "4024000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/24_oil_line.snbt",
+        "source_fingerprint_sha256": "7c870414048216deba3cb94e5442e9a5a227759396ab3a91ef8db73e8a7d16d1"
+      }
+    },
+    {
+      "old_alias": "if.quest.oil.distillation",
+      "quest_engine_id": "3024000000000003",
+      "task": {
+        "engine_id": "4024000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/24_oil_line.snbt",
+        "source_fingerprint_sha256": "2c3b226fff695bf31da1c536f4f7c89e7921289b07c35f752412cc13821dab8c"
+      }
+    },
+    {
+      "old_alias": "if.quest.oil.crusher",
+      "quest_engine_id": "3024000000000004",
+      "task": {
+        "engine_id": "4024000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/24_oil_line.snbt",
+        "source_fingerprint_sha256": "e14fac0e8be7bdf57ed5b9686aec671b1b5f490d64614cc06393a3dc18bb9bf0"
+      }
+    },
+    {
+      "old_alias": "if.quest.oil.plastic",
+      "quest_engine_id": "3024000000000005",
+      "task": {
+        "engine_id": "4024000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/24_oil_line.snbt",
+        "source_fingerprint_sha256": "21cb8d9faafc81c66fb2c5ab4f437bb6b8e54935f4beef5d82c2e1a56e5dae2b"
+      }
+    },
+    {
+      "old_alias": "if.quest.factions.intro",
+      "quest_engine_id": "3025000000000001",
+      "task": {
+        "engine_id": "4025000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/25_factions_live.snbt",
+        "source_fingerprint_sha256": "66f2b60b7017adcec1af4ceb51986ad85446d1295a6241a07d66d1d49ab34d52"
+      }
+    },
+    {
+      "old_alias": "if.quest.factions.bases",
+      "quest_engine_id": "3025000000000002",
+      "task": {
+        "engine_id": "4025000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/25_factions_live.snbt",
+        "source_fingerprint_sha256": "8ab7baa707920ebd38a03c68a7d3ab460484b8e665c9937cfafc82beffd6c85e"
+      }
+    },
+    {
+      "old_alias": "if.quest.factions.talks",
+      "quest_engine_id": "3025000000000003",
+      "task": {
+        "engine_id": "4025000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/25_factions_live.snbt",
+        "source_fingerprint_sha256": "d305e728b5adb5472836aeda91b10d67bc8695d427b77291501a28e15d956478"
+      }
+    },
+    {
+      "old_alias": "if.quest.factions.reputation",
+      "quest_engine_id": "3025000000000004",
+      "task": {
+        "engine_id": "4025000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/25_factions_live.snbt",
+        "source_fingerprint_sha256": "6329d5e87f8e845eea0ad5114b5da0fcb742a3529e9d9eca485ef56569249671"
+      }
+    },
+    {
+      "old_alias": "if.quest.factions.treaties",
+      "quest_engine_id": "3025000000000005",
+      "task": {
+        "engine_id": "4025000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/25_factions_live.snbt",
+        "source_fingerprint_sha256": "bfe16ef8c0cae4549180af4374e915c54d201a32a88207b693e1e10d2679380f"
+      }
+    },
+    {
+      "old_alias": "if.quest.factions.operations",
+      "quest_engine_id": "3025000000000006",
+      "task": {
+        "engine_id": "4025000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/25_factions_live.snbt",
+        "source_fingerprint_sha256": "f20b4fdc0d86f82e6ceea81d27e631c003fe49e2134f6309fdafba4d558e40b0"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.intro",
+      "quest_engine_id": "3045000000000001",
+      "task": {
+        "engine_id": "4045000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "2b78588d187d11a647e03de07ae7e2a5342eb2d53793fcfd271cf1cacafcec69"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.epoch",
+      "quest_engine_id": "3045000000000002",
+      "task": {
+        "engine_id": "4045000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "feb562ff197c661ba81fbc8d20f6c8506ce323e0a02d97614808cb59ed280dd2"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.reputation",
+      "quest_engine_id": "3045000000000003",
+      "task": {
+        "engine_id": "4045000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "f3d990f6010ca6f833d9ea20523024d3eb6e6338088ccb2d9affd1d0c6f095b7"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.affiliation",
+      "quest_engine_id": "3045000000000004",
+      "task": {
+        "engine_id": "4045000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "47829f8861526ab0b0cd6db9e9b8e161c7af87b628a531be7d1748be22297427"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.operation",
+      "quest_engine_id": "3045000000000005",
+      "task": {
+        "engine_id": "4045000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "4ca7c34e707617187c642801ee73535ae4a8e920e99e4745043d049d671df5f8"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.treaty",
+      "quest_engine_id": "3045000000000006",
+      "task": {
+        "engine_id": "4045000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "c93cc18226d9ab4724f67128a4e88e19808a4dbb6e9e4cf3dc3d2547f8c2a576"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.loot",
+      "quest_engine_id": "3045000000000007",
+      "task": {
+        "engine_id": "4045000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "d00a853c921c53001abc645ef91b0cdc284b970d26113de8b5a517f115dc86e4"
+      }
+    },
+    {
+      "old_alias": "if.quest.diplomacy.recovery",
+      "quest_engine_id": "3045000000000008",
+      "task": {
+        "engine_id": "4045000000000008",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/45_diplomacy_security.snbt",
+        "source_fingerprint_sha256": "383648698f0448b38e492783f1b7303a80acbbaea9dbed5a6ef000c51cd73360"
+      }
+    },
+    {
+      "old_alias": "if.quest.ops.intro",
+      "quest_engine_id": "3046000000000001",
+      "task": {
+        "engine_id": "4046000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/46_operations_and_defence.snbt",
+        "source_fingerprint_sha256": "2facf2e50e530e47ed57ccbf53ad3c1a968d1a34b4ed6bccbc83b994659883b2"
+      }
+    },
+    {
+      "old_alias": "if.quest.ops.squads",
+      "quest_engine_id": "3046000000000002",
+      "task": {
+        "engine_id": "4046000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/46_operations_and_defence.snbt",
+        "source_fingerprint_sha256": "01c228ea44b360efe8c4fb872f1115f58d0fc540888e4c46cffc2fa70389c5f6"
+      }
+    },
+    {
+      "old_alias": "if.quest.ops.ordnance",
+      "quest_engine_id": "3046000000000003",
+      "task": {
+        "engine_id": "4046000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/46_operations_and_defence.snbt",
+        "source_fingerprint_sha256": "e6e613d0bf2e6488611630695ba8d9ab15e9167d6bba585fb74c9f1c6e682401"
+      }
+    },
+    {
+      "old_alias": "if.quest.ops.operations",
+      "quest_engine_id": "3046000000000004",
+      "task": {
+        "engine_id": "4046000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/46_operations_and_defence.snbt",
+        "source_fingerprint_sha256": "1471edccf2be988569e40ac0f4f3b2a626393a7e3e70ffe09c2a08bdfda0ef17"
+      }
+    },
+    {
+      "old_alias": "if.quest.ops.treaties",
+      "quest_engine_id": "3046000000000005",
+      "task": {
+        "engine_id": "4046000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/46_operations_and_defence.snbt",
+        "source_fingerprint_sha256": "fca04dd1f1fa3217bbeb6c74e664c1ef8b5897aad48879a08d8be7cfd2b3dbd4"
+      }
+    },
+    {
+      "old_alias": "if.quest.ops.recovery",
+      "quest_engine_id": "3046000000000006",
+      "task": {
+        "engine_id": "4046000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/46_operations_and_defence.snbt",
+        "source_fingerprint_sha256": "3309216dd867beb3791b4ea65fb3b1b178429a8afacf9824befedf8c9f9ba780"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.intro",
+      "quest_engine_id": "3070000000000001",
+      "task": {
+        "engine_id": "4070000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "a96606fc690b52c38adccd90e573c9b9afba6e74b3ab0911799cc96e1da34e8f"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.entity_form_id",
+      "quest_engine_id": "3070000000000002",
+      "task": {
+        "engine_id": "4070000000000002",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/iron_ingots"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "13ce27d52623056c2cfadc3a01f156a3b0b2b5a9acb1d570c3909b4effd3ecf0"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.anatomy",
+      "quest_engine_id": "3070000000000003",
+      "task": {
+        "engine_id": "4070000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "5059b856f8173915d311931679fc3ec593b218d2cec6526ef8349653ffef53e7"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.worldgen_owner",
+      "quest_engine_id": "3070000000000004",
+      "task": {
+        "engine_id": "4070000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "b36130b68bcb7704b52f8cc786e6b0004ea2376a4540e854fc9c837471c705ee"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.accepted_inputs",
+      "quest_engine_id": "3070000000000005",
+      "task": {
+        "engine_id": "4070000000000005",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/iron_nuggets"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "da4ae544f2e3aef5416664975ff3c9b26366ac7caf26057a0d611cb8b4221b19"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.create_gt_contract",
+      "quest_engine_id": "3070000000000006",
+      "task": {
+        "engine_id": "4070000000000006",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item",
+            "id": "create:andesite_alloy"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "353a8c45557e9ba488174f88f9b292d1472f0b9da7f4c7894444379b65e1ce76"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.specialized_forms",
+      "quest_engine_id": "3070000000000007",
+      "task": {
+        "engine_id": "4070000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "9758f95be303ecfd7cb157aff08b063af52c2702afd285a7cba89aa180556b12"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.safe_equivalence",
+      "quest_engine_id": "3070000000000008",
+      "task": {
+        "engine_id": "4070000000000008",
+        "type": "item",
+        "predicate": {
+          "kind": "item",
+          "selector": {
+            "kind": "item_tag",
+            "id": "industrial_frontier:materials/iron_plates"
+          },
+          "count": 1,
+          "only_from_crafting": false,
+          "match_nbt": false,
+          "weak_nbt_match": false
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "7451b746c98f082063a59ab0f1d414492cfab7be59c535096dd272514ce8fcb3"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.bypass_audit",
+      "quest_engine_id": "3070000000000009",
+      "task": {
+        "engine_id": "4070000000000009",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "d0b0aab68f139c74220eb5d6a87751b61e189d646894c06e198064f021ddc668"
+      }
+    },
+    {
+      "old_alias": "if.quest.passports.signoff",
+      "quest_engine_id": "307000000000000A",
+      "task": {
+        "engine_id": "407000000000000A",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/70_material_passports.snbt",
+        "source_fingerprint_sha256": "225e91ee8bd5f207676646aaa2a537027bab92313dc6993e30f9d32de2344dff"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.intro",
+      "quest_engine_id": "3071000000000001",
+      "task": {
+        "engine_id": "4071000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "1ea0f06ccf8c1a74e59fee6fa75002b16f808d094817219e65500f1e628e6adc"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.purity",
+      "quest_engine_id": "3071000000000002",
+      "task": {
+        "engine_id": "4071000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "86b81416d3e60a65ab20b0a633c2754f6e6f6595f70cdfd637517d51dff92b3f"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.carbon",
+      "quest_engine_id": "3071000000000003",
+      "task": {
+        "engine_id": "4071000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "0e0b7005939c65c2b609afc77aa4877474d6b2ca8d77f635ac49cb7a42639f62"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.sulfur",
+      "quest_engine_id": "3071000000000004",
+      "task": {
+        "engine_id": "4071000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "a77c35dbdb649b5a07627c082c7acb70e2b507d67e1f575f9eaf0903f8fb1fd0"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.nitrogen",
+      "quest_engine_id": "3071000000000005",
+      "task": {
+        "engine_id": "4071000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "aa2fa3a2843a2773d9fed23d53a80ec75462c47cc464a2fb8bfa6d613e8c2d58"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.chlorine",
+      "quest_engine_id": "3071000000000006",
+      "task": {
+        "engine_id": "4071000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "d75bcd8488fc1927b3ad678da31eb469494ff5b424bc413ee71097318c6d8149"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.water",
+      "quest_engine_id": "3071000000000007",
+      "task": {
+        "engine_id": "4071000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "7f89c35f74fa16ce8c64e4a71119f6d9c408c88a440aa7ad475e29710057f6f4"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.silicon",
+      "quest_engine_id": "3071000000000008",
+      "task": {
+        "engine_id": "4071000000000008",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "1acf4fbbff00834d5a944351ecc2f1d6f05060f342ebb6c50358b55525c97807"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.nuclear",
+      "quest_engine_id": "3071000000000009",
+      "task": {
+        "engine_id": "4071000000000009",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "6d3d6a46d11aef88813d20805b6ac47d7fe9f4f6f47e01f5e248390b8b18e70b"
+      }
+    },
+    {
+      "old_alias": "if.quest.elements.index",
+      "quest_engine_id": "3071000000000010",
+      "task": {
+        "engine_id": "4071000000000010",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/71_academy_of_elements.snbt",
+        "source_fingerprint_sha256": "b2b111bdf443d6d8a21db19571b1fed4f98171675cb0c2dc8bb6767bd5a60c95"
+      }
+    },
+    {
+      "old_alias": "if.quest.mastery.intro",
+      "quest_engine_id": "3072000000000001",
+      "task": {
+        "engine_id": "4072000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+        "source_fingerprint_sha256": "f8d172cac73ff6c18a517f9133506ad84e2cbcc64146cb4f6c92ee677dc3fedb"
+      }
+    },
+    {
+      "old_alias": "if.quest.mastery.where_it_stopped",
+      "quest_engine_id": "3072000000000002",
+      "task": {
+        "engine_id": "4072000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+        "source_fingerprint_sha256": "887fcd1a03d254e35fb05d46fd6b26cd310e2636e42f93978af74f284674fb13"
+      }
+    },
+    {
+      "old_alias": "if.quest.mastery.reserve_math",
+      "quest_engine_id": "3072000000000003",
+      "task": {
+        "engine_id": "4072000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+        "source_fingerprint_sha256": "dd20c84cc2ee8f0bf95f3360d4d7f591cdfa1f34115a0f7e9bda4346bfffb83f"
+      }
+    },
+    {
+      "old_alias": "if.quest.mastery.expand_without_rebuild",
+      "quest_engine_id": "3072000000000004",
+      "task": {
+        "engine_id": "4072000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+        "source_fingerprint_sha256": "6d77fc9e8a5d347f561b9550684f0df7bb561941ff6bb2f889c125b65766e26c"
+      }
+    },
+    {
+      "old_alias": "if.quest.mastery.boring_work",
+      "quest_engine_id": "3072000000000005",
+      "task": {
+        "engine_id": "4072000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+        "source_fingerprint_sha256": "db1d710c2a33b84c0977d9308d2effbf2115c749a97f1a5a3a57539bbce74dd5"
+      }
+    },
+    {
+      "old_alias": "if.quest.mastery.power_discipline",
+      "quest_engine_id": "3072000000000006",
+      "task": {
+        "engine_id": "4072000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+        "source_fingerprint_sha256": "2150da235073b18e36a76c8478d04afcca0cef5320b4d7c5f9401edd9688cddc"
+      }
+    },
+    {
+      "old_alias": "if.quest.mastery.handover",
+      "quest_engine_id": "3072000000000007",
+      "task": {
+        "engine_id": "4072000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/72_mastery_distributed_factory.snbt",
+        "source_fingerprint_sha256": "487ca10eef5dbb48e90da68eb47b297267fbef0f2e1b7aa7d6b142fba36dcf9e"
+      }
+    },
+    {
+      "old_alias": "if.quest.marathon.intro",
+      "quest_engine_id": "3073000000000001",
+      "task": {
+        "engine_id": "4073000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/73_marathon_choices.snbt",
+        "source_fingerprint_sha256": "1988cab4e2e4e7a29dfbb037bb64319b8bc0e475ec67d4bf16509765e83d0cd8"
+      }
+    },
+    {
+      "old_alias": "if.quest.marathon.energy",
+      "quest_engine_id": "3073000000000002",
+      "task": {
+        "engine_id": "4073000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/73_marathon_choices.snbt",
+        "source_fingerprint_sha256": "38509f89fab3af67664bd936dc94395781e81e668f24bf097e4a11dd193bef30"
+      }
+    },
+    {
+      "old_alias": "if.quest.marathon.logistics",
+      "quest_engine_id": "3073000000000003",
+      "task": {
+        "engine_id": "4073000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/73_marathon_choices.snbt",
+        "source_fingerprint_sha256": "d2574fdcfc957f97a7f35fb1f48b9109b7a1804d55fded4c9664e22a2ab82b88"
+      }
+    },
+    {
+      "old_alias": "if.quest.marathon.nuclear",
+      "quest_engine_id": "3073000000000004",
+      "task": {
+        "engine_id": "4073000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/73_marathon_choices.snbt",
+        "source_fingerprint_sha256": "f3b56923e5b608418d13b6ff4e24647457204ae002c4712d3e8c98ae6de63a20"
+      }
+    },
+    {
+      "old_alias": "if.quest.marathon.space",
+      "quest_engine_id": "3073000000000005",
+      "task": {
+        "engine_id": "4073000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/73_marathon_choices.snbt",
+        "source_fingerprint_sha256": "6040af710d97d120992dee1788ee0994bca42df5deba35d85f3c61b98a153456"
+      }
+    },
+    {
+      "old_alias": "if.quest.marathon.finale",
+      "quest_engine_id": "3073000000000006",
+      "task": {
+        "engine_id": "4073000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/73_marathon_choices.snbt",
+        "source_fingerprint_sha256": "8ca2a9f4a654263c50331be7558d92688d62e6b9f6265f5532b4faa68d5b6642"
+      }
+    },
+    {
+      "old_alias": "if.quest.help.index",
+      "quest_engine_id": "3090000000000001",
+      "task": {
+        "engine_id": "4090000000000001",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/90_help.snbt",
+        "source_fingerprint_sha256": "14629ba12fa919c5e3543560bafb7a6e2a30b5fc972429ec50e7834d710c934b"
+      }
+    },
+    {
+      "old_alias": "if.quest.help.jei",
+      "quest_engine_id": "3090000000000002",
+      "task": {
+        "engine_id": "4090000000000002",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/90_help.snbt",
+        "source_fingerprint_sha256": "6e2382cc57c55beef1a7332e0fc39c131380d040e962ebeef7aeeb3251844441"
+      }
+    },
+    {
+      "old_alias": "if.quest.help.not_counted",
+      "quest_engine_id": "3090000000000003",
+      "task": {
+        "engine_id": "4090000000000003",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/90_help.snbt",
+        "source_fingerprint_sha256": "83f4509a638bb91f127aa02fd37e26e6e9f7a6055dd100f1bade4fea946abec8"
+      }
+    },
+    {
+      "old_alias": "if.quest.help.team",
+      "quest_engine_id": "3090000000000004",
+      "task": {
+        "engine_id": "4090000000000004",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/90_help.snbt",
+        "source_fingerprint_sha256": "c3170bcf390dcf16bc9156e03710aa762df8a68cf9845cc2e682451e13d94c0c"
+      }
+    },
+    {
+      "old_alias": "if.quest.help.latest_log",
+      "quest_engine_id": "3090000000000005",
+      "task": {
+        "engine_id": "4090000000000005",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/90_help.snbt",
+        "source_fingerprint_sha256": "10ecf0e404e75dab3be587ff9fec6ecc2eb5420871bf0fbcda1e87ab3298be65"
+      }
+    },
+    {
+      "old_alias": "if.quest.help.report",
+      "quest_engine_id": "3090000000000006",
+      "task": {
+        "engine_id": "4090000000000006",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/90_help.snbt",
+        "source_fingerprint_sha256": "77fa1f55f5dac0af1bde08addf5eec73a8dc09c50c21796e88dc1ccb0f290e35"
+      }
+    },
+    {
+      "old_alias": "if.quest.help.recovery",
+      "quest_engine_id": "3090000000000007",
+      "task": {
+        "engine_id": "4090000000000007",
+        "type": "checkmark",
+        "predicate": {
+          "kind": "checkmark"
+        },
+        "source": "config/ftbquests/quests/chapters/90_help.snbt",
+        "source_fingerprint_sha256": "490c61a03a6ca45dd220de62e1e71feac42a34e00ddcd21c0be59866fe6f8c7d"
+      }
+    }
+  ]
+}

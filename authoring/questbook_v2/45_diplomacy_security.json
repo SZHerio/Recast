@@ -1,0 +1,1376 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.diplomacy",
+    "engine_id": "2045000000000001",
+    "filename": "45_diplomacy_security",
+    "group": {
+      "alias": "if.group.v2.security",
+      "engine_id": "1000000000000005",
+      "title_ru": "Безопасность и внешние силы"
+    },
+    "order": 45,
+    "icon": "minecraft:shield",
+    "epoch": "SYSTEMS",
+    "tags": [
+      "diplomacy",
+      "reputation",
+      "trade"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "Дипломатия и безопасность",
+      "subtitle": "Эпоха, отношение, принадлежность, договор и торговля остаются разными состояниями с понятными последствиями",
+      "description": [
+        "Эта глава разбирает правила, по которым внешний мир принимает решения. Технологическая эпоха ограничивает доступное оснащение, репутация показывает отношение конкретной стороны, а договор хранит отдельное обязательство.",
+        "Книга прямо отмечает, какие возможности уже работают. Незавершённая торговая связь, будущий сюжетный выбор или ещё не созданная награда не превращаются здесь в обязательное действие."
+      ]
+    },
+    "editorial": {
+      "voice": "Внимательный посредник, который заранее называет условия, последствия и способ проверить состояние отношений.",
+      "tone_rules": [
+        "Разделять числа отношения, договоры, принадлежность и технологическую эпоху.",
+        "Сначала называть реально действующее последствие, затем ограничение.",
+        "Объяснять команды как способ получить отчёт, а не как часть мира сама по себе."
+      ],
+      "avoid": [
+        "Не обещать скидку, союзный отряд или сюжетную развилку без работающей связи.",
+        "Не заставлять игрока портить отношения ради учебного задания.",
+        "Не выдавать команду табло за полноценную репутацию."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.diplomacy.social_state",
+      "engine_id": "3045000000000001",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:shield",
+      "tags": [
+        "diplomacy",
+        "state"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Механика отношений разбирается после знакомства с шестью сторонами и общим отчётом.",
+            "evidence": [
+              "authoring/questbook_v2/25_factions_live.json",
+              "kubejs/server_scripts/40_balance/m3_threat_director.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.social_state.read",
+          "engine_id": "4045000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте о четырёх независимых состояниях отношений.",
+            "help": "Знакомство с правилами ничего не меняет в текущем положении команды."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Четыре разных вопроса",
+        "lead_ru": "Фраза «мы союзники» может означать симпатию, формальный договор, принадлежность или общую войну, но система хранит их отдельно.",
+        "purpose_ru": "Технологическая эпоха отвечает за допустимую технику. Репутация от −100 до +100 показывает отношение каждой стороны. Принадлежность описывает формальное членство. Договор хранит конкретное обязательство и не появляется только от высокого числа.",
+        "steps_ru": [
+          "Откройте /if_threat status и найдите эпоху, шесть значений отношения и список договоров.",
+          "Не считайте положительное отношение автоматическим союзом.",
+          "Не считайте договор вступлением во фракцию: принадлежность остаётся отдельным выбором."
+        ],
+        "success_ru": "Вы можете объяснить, какое из четырёх состояний отвечает на каждый вопрос и почему одно не заменяет другое.",
+        "diagnostics_ru": [
+          "Если отчёт показывает хороший балл без договора, это нормальное состояние, а не ошибка.",
+          "Если договор есть при отрицательном отношении, проверьте его тип и порог: перемирие допускается даже с врагом."
+        ],
+        "next_ru": "Сначала разберём единственный источник технической эпохи, затем шкалу отношения и формальную принадлежность.",
+        "task_text_ru": "Разберитесь, чем отличаются эпоха, репутация, принадлежность и договор."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вводный узел расширен до четырёх состояний и совпадает с фактическим хранилищем."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Поля состояния и отчёт сверены по Threat Director."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:social_state",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m3_threat_director.js",
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Разделение состояний не требует менять их ради отметки."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.6
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.epoch",
+      "engine_id": "3045000000000002",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:clock",
+      "tags": [
+        "diplomacy",
+        "epoch"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.social_state",
+            "reason": "Единая эпоха разбирается после отделения её от социальных состояний.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m3_threat_director.js",
+              "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.epoch.read",
+          "engine_id": "4045000000000002",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, откуда внешние силы берут вашу эпоху.",
+            "help": "Галочка не повышает эпоху и не открывает следующий технологический этап."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Фракции равняются на вас",
+        "lead_ru": "Возраст мира не выдаёт чужому патрулю автомат раньше, чем ваша команда освоила соответствующее производство.",
+        "purpose_ru": "Единая технологическая эпоха повышается только после итогового задания этапа P0–P9. От неё зависят уровень обживаемой базы, ступень действующего отряда и набор возможных операций. Отчёты лишь показывают сохранённую эпоху и не могут повысить её сами.",
+        "steps_ru": [
+          "После завершения эпохи откройте /if_threat growth.",
+          "Сравните указанную эпоху с только что закрытым итоговым квестом.",
+          "Проверьте, что база и отряд не получили снаряжение будущего этапа."
+        ],
+        "success_ru": "Отчёт показывает ту же эпоху, что и основная кампания, а внешний мир не развивается по числу прожитых дней.",
+        "diagnostics_ru": [
+          "Если отчёт отстаёт на одну эпоху, проверьте, завершён ли именно итоговый квест этапа, а не последняя производственная ветка.",
+          "Если значение разошлось с книгой, не пытайтесь повышать его командой: восстановить правильную эпоху может только администратор мира."
+        ],
+        "next_ru": "На общей технической ступени разные стороны всё равно относятся к вам по-разному — это определяет репутация.",
+        "task_text_ru": "Ознакомьтесь с единым правилом технологической эпохи."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Источник эпохи обновлён после появления моста итоговых квестов; публичный обход не предлагается."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Переходы P0–P9 и потребители эпохи сверены статически."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:tech_epoch",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m3_threat_director.js",
+            "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка не создаёт второй путь повышения эпохи."
+      },
+      "layout": {
+        "x": 3,
+        "y": -1.5,
+        "shape": "rsquare",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.reputation",
+      "engine_id": "3045000000000003",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:paper",
+      "tags": [
+        "diplomacy",
+        "reputation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.epoch",
+            "reason": "Отношение разбирается после технической ступени, чтобы не смешивать способность и намерение стороны.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m3_threat_director.js",
+              "kubejs/server_scripts/40_balance/m85_factions_2_core.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.reputation.read",
+          "engine_id": "4045000000000003",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте шкалу отношения и правила распространения последствий.",
+            "help": "Не нужно намеренно переходить через каждый порог шкалы."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "От врага до особого статуса",
+        "lead_ru": "Одно число удобно для расчёта, но игроку важнее человеческая ступень и причина последнего изменения.",
+        "purpose_ru": "Шкала ограничена значениями −100 и +100. Она делится на заклятую вражду, враждебность, недоверие, нейтралитет, уважение, союз и особый статус. Крупный поступок влияет на союзников примерно наполовину, а на противников — примерно на треть с обратным знаком.",
+        "steps_ru": [
+          "После изменения найдите в сообщении причину, величину и новое название ступени.",
+          "Проверьте через /if_threat status не только прямую сторону, но и её известных союзников и противников.",
+          "Отделяйте повторяемые причины от одноразовых событий, привязанных к конкретному договору или операции."
+        ],
+        "success_ru": "Вы понимаете, почему один заметный поступок может изменить несколько отношений и почему мелкая торговля не должна разноситься по всему миру.",
+        "diagnostics_ru": [
+          "Если значение вышло за пределы шкалы, запишите событие и итоговое число.",
+          "Если крупное изменение не затронуло связанные стороны, проверьте, составило ли оно 10 пунктов или больше в любую сторону."
+        ],
+        "next_ru": "Даже особый статус не записывает вас в состав фракции — принадлежность хранится отдельно.",
+        "task_text_ru": "Ознакомьтесь со шкалой отношения и распространением крупных поступков."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Формула распространения переведена в понятное следствие без внутренних названий полей."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Границы шкалы, порог распространения и доли сверены по коду."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:reputation",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_2_core.js",
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Шкала изучается без искусственного фарма отношений."
+      },
+      "layout": {
+        "x": 6,
+        "y": -2,
+        "shape": "diamond",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.affiliation",
+      "engine_id": "3045000000000004",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:player_head",
+      "tags": [
+        "diplomacy",
+        "affiliation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.social_state",
+            "reason": "Принадлежность объясняется отдельно от репутации и договора.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m3_threat_director.js",
+              "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.affiliation.read",
+          "engine_id": "4045000000000004",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте текущее состояние принадлежности.",
+            "help": "Задание не пытается записать команду в какую-либо фракцию."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Принадлежность пока не выбирается",
+        "lead_ru": "Команда начинает независимой, и это состояние хранится отдельно от шести значений отношения.",
+        "purpose_ru": "Сейчас в строке принадлежности указано «нет»: обычного способа вступить во фракцию ещё нет. Репутация, договоры и операции работают без членства. Будущий переход на сторону должен стать отдельным ясным решением с последствиями, а не незаметным изменением служебного числа.",
+        "steps_ru": [
+          "Основной отчёт /if_threat status пока не показывает принадлежность. До появления отдельного выбора считайте команду независимой.",
+          "Не считайте союз или значение +100 автоматическим вступлением.",
+          "Не ищите скрытую кнопку выбора стороны у нынешнего посланника."
+        ],
+        "success_ru": "Вы знаете, что независимое положение не мешает дипломатии и что членство пока не является игровым выбором.",
+        "diagnostics_ru": [
+          "Если принадлежность изменилась без отдельного подтверждения, зафиксируйте действие, которое этому предшествовало.",
+          "Если отчёт недоступен, ориентируйтесь на договоры и репутацию; они продолжают работать отдельно."
+        ],
+        "next_ru": "Сюжетные переходы между сторонами остаются задумкой для ручных диалогов и проверяемых последствий.",
+        "task_text_ru": "Ознакомьтесь с текущим независимым положением команды."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст не изображает несуществующий выбор принадлежности как работающую механику."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Инициализация affiliation и отсутствие setter проверены поиском по сценариям."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:affiliation",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m3_threat_director.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Задание не подменяет будущий выбор стороны простой отметкой."
+      },
+      "layout": {
+        "x": 6,
+        "y": 2,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.dialogue_scope",
+      "engine_id": "3A4500000000000A",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:book",
+      "tags": [
+        "diplomacy",
+        "dialogue",
+        "npc"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.affiliation",
+            "reason": "Границы диалога объясняются после честного описания ещё не реализованного вступления.",
+            "evidence": [
+              "kubejs/data/industrial_frontier/preset/zemlemer_envoy.npc.snbt",
+              "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.factions.envoy",
+            "reason": "Справка продолжает знакомство с действующим посланником.",
+            "evidence": [
+              "authoring/questbook_v2/25_factions_live.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.dialogue_scope.read",
+          "engine_id": "4A4500000000000A",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте границы нынешней и будущей диалоговой системы.",
+            "help": "Это задание не меняет сюжет и не добавляет новых реплик."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сюжетные разговоры — отдельная работа",
+        "lead_ru": "Нынешние посланники уже умеют показать досье и доступные договоры, но не изображают полноценную кампанию из нескольких строк.",
+        "purpose_ru": "Большие разговоры должны учитывать эпоху, репутацию, прошлые ответы, исход операций, состояние города и дипломатические обязательства. Ключевые реплики будут написаны вручную для конкретных характеров; свободная генерация текста не станет основой сюжета.",
+        "steps_ru": [
+          "Используйте нынешний разговор только для досье и договора.",
+          "Не ищите пока торг, ложные сведения, вербовку, пленного или переход на сторону другой фракции.",
+          "Если простой договор не появляется, проверяйте его пороги, а не пытайтесь подобрать другую формулировку."
+        ],
+        "success_ru": "Вы отличаете работающий короткий разговор от будущей сюжетной системы и не ищете обязательное задание в ещё не написанной реплике.",
+        "diagnostics_ru": [
+          "Если кнопка договора видна вопреки порогу отношения или эпохи, запишите сторону и значения из отчёта.",
+          "Если команда договора срабатывает, а кнопка отсутствует, запишите фракцию, эпоху и отношение: сведения посланника нужно будет сверить с общим отчётом."
+        ],
+        "next_ru": "Пока отношения развиваются через уже работающие договоры и операции; сюжетные ветви появятся после того, как их реплики и последствия будут написаны и проверены вручную.",
+        "task_text_ru": "Ознакомьтесь с границами нынешних разговоров и будущей задумкой.",
+        "optional_note_ru": "Справка необязательна и не требует искать ещё не созданные сюжетные варианты."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Новые диалоги не создавались; зафиксированы только требования и границы существующих пресетов."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Шесть пресетов посланников имеют одинаковую структуру досье и договоров."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "easy_npc",
+          "evidence": [
+            "mods/easy_npc-forge-1.20.1-7.4.1.jar",
+            "kubejs/data/industrial_frontier/preset/zemlemer_envoy.npc.snbt"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#8",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка не заставляет перебирать одинаковые реплики."
+      },
+      "layout": {
+        "x": 9,
+        "y": 2,
+        "shape": "circle",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.treaty",
+      "engine_id": "3045000000000006",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:writable_book",
+      "tags": [
+        "diplomacy",
+        "treaty"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.reputation",
+            "reason": "Порог договора проверяется по уже объяснённой шкале отношения.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js",
+              "kubejs/server_scripts/40_balance/m85_factions_2_core.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.treaty.read",
+          "engine_id": "4045000000000006",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте пороги пяти договоров и цену разрыва.",
+            "help": "Задание не подписывает договор и не тратит репутацию."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Пять договоров, не пять наград",
+        "lead_ru": "Соглашение хранится как состояние отношений и требует явного решения, а не падает в инвентарь после квеста.",
+        "purpose_ru": "Перемирие доступно от −75 в P0, торговый договор — от −10 в P1, дань — от −75 в P2, союз — от +41 в P3, совместная оборона — от +41 в P5. Сейчас операцию надёжно предотвращают перемирие, союз и дань. Торговые скидки и прибытие союзного отряда пока не работают.",
+        "steps_ru": [
+          "Посмотрите список через /if_threat treaty list и выберите сторону осознанно.",
+          "Подписывайте договор у посланника или командой /if_threat treaty sign, выбрав затем фракцию и вид соглашения.",
+          "Перед разрывом помните о штрафе −40 и постоянной записи о нарушении."
+        ],
+        "success_ru": "Вы знаете порог каждого соглашения, работающую защиту от операции и необратимую цену предательства.",
+        "diagnostics_ru": [
+          "Если порог выполнен, но соглашение не принимается, проверьте требуемую эпоху.",
+          "Если торговый договор не меняет цену конкретного магазина, дополнительного скрытого условия нет: эта скидка пока не работает."
+        ],
+        "next_ru": "Договор влияет на намерение стороны, а денежные расчёты и устройство торговой точки остаются отдельной системой."
+        ,"task_text_ru": "Ознакомьтесь с пятью договорами и ценой их разрыва."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Все пороги приведены из таблицы; эффекты с отсутствующей связью названы ограничением."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Пороги, эпохи, штраф и реально блокирующие операцию типы сверены."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:treaties",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js",
+            "kubejs/server_scripts/40_balance/m85_factions_2_core.js",
+            "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка не требует тратить сорок пунктов на показательный разрыв."
+      },
+      "layout": {
+        "x": 9,
+        "y": -2,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.currency",
+      "engine_id": "3A45000000000009",
+      "epoch": "SYSTEMS",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "lightmanscurrency:coinmint",
+      "tags": [
+        "diplomacy",
+        "currency",
+        "trade"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.treaty",
+            "reason": "Физическая валюта вводится после объяснения, что договор и оплата не являются одним состоянием.",
+            "evidence": [
+              "docs/registries/quest_content_coverage.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.commissioning",
+            "reason": "Торговая инфраструктура относится к городской экономике после освоения стали P2.",
+            "evidence": [
+              "docs/registries/quest_content_coverage.json",
+              "authoring/quests/45_diplomacy_security.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.currency.item",
+          "engine_id": "4A45000000000009",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте один монетный двор Lightman's Currency.",
+            "help": "Блок нужен для отдельной торговой точки и не меняет репутацию сам по себе."
+          },
+          "item": {
+            "id": "lightmanscurrency:coinmint",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.diplomacy.currency.place",
+          "engine_id": "4B45000000000009",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите монетный двор в безопасной торговой зоне.",
+            "help": "Не ставьте его в проходе или рядом с незащищённым складом редких ресурсов."
+          },
+          "place": {
+            "block": "lightmanscurrency:coinmint",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.diplomacy.currency.use",
+          "engine_id": "4C45000000000009",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте установленный монетный двор.",
+            "help": "Обычного взаимодействия с блоком достаточно для проверки доступа."
+          },
+          "use": {
+            "block": "lightmanscurrency:coinmint",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Монета не равна доверию",
+        "lead_ru": "Lightman's Currency отвечает за физический расчёт, а отношение фракции хранится отдельно и меняется только по названной причине.",
+        "purpose_ru": "Монетный двор задаёт место для денежной инфраструктуры города. Он не превращает любую покупку в репутацию и не применяет условия договора ко всем магазинам автоматически. Пользуйтесь торговыми точками, где ассортимент и ограничения прямо показаны покупателю.",
+        "steps_ru": [
+          "Изготовьте монетный двор и поставьте его в доступной, но защищённой торговой зоне.",
+          "Откройте интерфейс и изучите допустимые операции без крупного обмена.",
+          "Отдельно храните резерв города, фракционную репутацию и личные деньги: это три разные вещи."
+        ],
+        "success_ru": "Монетный двор установлен и открывается, а денежная операция не воспринимается как скрытый дипломатический выбор.",
+        "diagnostics_ru": [
+          "Если блок не открывается, проверьте право взаимодействия и не защищён ли участок поселением.",
+          "Если цена не меняется после договора, не ищите скрытое условие: скидка пока не связана с этим торговцем."
+        ],
+        "next_ru": "После денежной инфраструктуры можно создавать ограниченные магазины и контракты без бесплатного обхода промышленного прогресса.",
+        "task_text_ru": "Изготовьте, установите и откройте монетный двор."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст отделяет работающий блок валюты от пока отсутствующей автоматической связи с репутацией."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точный блок найден в установленном JAR; интеграция с фракционным состоянием поиском не найдена."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "lightmanscurrency",
+          "evidence": [
+            "mods/lightmanscurrency-1.20.1-2.3.0.5.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "lightmanscurrency:coinmint",
+          "evidence": [
+            "mods/lightmanscurrency-1.20.1-2.3.0.5.jar!/assets/lightmanscurrency/blockstates/coinmint.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один блок достаточен для знакомства с городской валютой."
+      },
+      "layout": {
+        "x": 12,
+        "y": -3.5,
+        "shape": "gear",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.operation",
+      "engine_id": "3045000000000005",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:spyglass",
+      "tags": [
+        "diplomacy",
+        "operation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.treaty",
+            "reason": "Операция разбирается после договоров, которые способны остановить её планирование.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.diplomacy.affiliation",
+            "reason": "Враждебная операция зависит от отношения и договора, а не от пока не выбранного членства.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.operation.read",
+          "engine_id": "4045000000000005",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте дипломатические развилки операции.",
+            "help": "Ожидать случайную операцию ради отметки не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Окно переговоров обязательно",
+        "lead_ru": "Плохое отношение создаёт намерение, но активное действие не должно происходить без предупреждения и времени на ответ.",
+        "purpose_ru": "Операция выбирает самую недовольную сторону с отношением −11 или ниже. Перемирие, союз или дань блокируют её планирование. Если событие уже началось, мирный выход принимается только в четырёхминутное окно переговоров.",
+        "steps_ru": [
+          "После предупреждения откройте /if_threat operation status.",
+          "Сравните название стороны с худшим значением в /if_threat status.",
+          "Во время окна используйте /if_threat operation negotiate или решите готовиться к активной стадии."
+        ],
+        "success_ru": "Вы знаете, когда договор предотвращает событие заранее, а когда требуется отдельное решение в открытом окне.",
+        "diagnostics_ru": [
+          "Команда переговоров до или после нужной стадии должна отказать без изменения исхода.",
+          "Если защищающий договор есть, а новая операция этой стороны всё равно планируется, запишите его точный тип."
+        ],
+        "next_ru": "После исхода начинается восстановление; фактические последствия сейчас скромнее тех, что обещали старые описания."
+        ,"task_text_ru": "Ознакомьтесь с условиями планирования и мирного исхода операции."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Узел описывает только фактически читаемые условия и команду переговоров."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Порог, выбор стороны, блокирующие договоры и окно сверены по сценарию операций."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:operation_negotiation",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка не требует искусственно создавать кризис."
+      },
+      "layout": {
+        "x": 12,
+        "y": 0,
+        "shape": "octagon",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.loot",
+      "engine_id": "3045000000000007",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:chest",
+      "tags": [
+        "diplomacy",
+        "loot",
+        "progression"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.operation",
+            "reason": "Лут обсуждается после причин и исходов конфликта, чтобы нападение не выглядело основным способом прогресса.",
+            "evidence": [
+              "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.loot.read",
+          "engine_id": "4045000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правило добычи на фракционных базах.",
+            "help": "Глава не просит грабить базу или убивать посланника."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Ценность — в сведениях и деталях",
+        "lead_ru": "Чужая ранняя база не должна отменять несколько эпох производства одним удачным сундуком.",
+        "purpose_ru": "Ценная добыча на фракционной базе задумана как разведданные, чертежи, повреждённые узлы, редкая оптика, инструменты, валюта и образцы. Готовая техника будущей эпохи не должна появляться раньше производства. Для нынешних баз отдельный гарантированный набор наград ещё не создан.",
+        "steps_ru": [
+          "Оценивайте найденное по своей эпохе и не стройте обязательный маршрут вокруг случайного сундука.",
+          "Если попался предмет будущего этапа, запишите структуру, координаты и источник сундука.",
+          "Предпочитайте чертёж или компонент, который ещё требует вашей фабрики, готовой машине."
+        ],
+        "success_ru": "Вы не используете нападения как обход производства и умеете распознать слишком раннюю награду.",
+        "diagnostics_ru": [
+          "Если дорогой предмет выпал с бойца, запишите самого бойца, предмет и свою текущую эпоху.",
+          "Если сундук выглядит обычным, не считайте его содержимое особой фракционной наградой без отдельного подтверждения."
+        ],
+        "next_ru": "Неудача в операции должна оставлять последствия, которые можно исправить, а не вынуждать вас охотиться за ещё более сильной добычей.",
+        "task_text_ru": "Ознакомьтесь с правилом наград, соответствующих вашей эпохе."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст фиксирует проектное правило и честно сообщает об отсутствии подтверждённого набора текущих баз."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Отдельных faction loot tables в датапаке не найдено."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#4.5",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction_loot_policy",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Квест не требует повторно зачищать базы ради случайного предмета."
+      },
+      "layout": {
+        "x": 15,
+        "y": -1.5,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.diplomacy.recovery",
+      "engine_id": "3045000000000008",
+      "epoch": "SYSTEMS",
+      "role": "recovery",
+      "requirement": "required",
+      "icon": "minecraft:golden_apple",
+      "tags": [
+        "diplomacy",
+        "recovery"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.diplomacy.operation",
+            "reason": "Путь восстановления объясняется после полного порядка операции.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.diplomacy.loot",
+            "reason": "Восстановление не должно опираться на фарм случайного лута будущей эпохи.",
+            "evidence": [
+              "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.diplomacy.recovery.read",
+          "engine_id": "4045000000000008",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, что нынешняя операция действительно может повредить.",
+            "help": "Галочка отмечает знакомство с памяткой восстановления."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Не обещаем несуществующий ущерб",
+        "lead_ru": "Старые описания говорили о потерянных составах, грузах и повреждённых узлах, но нынешняя операция их не меняет.",
+        "purpose_ru": "Если выбранный вид операции предусматривает бойцов, в активной стадии приходит отряд Easy NPC. Сама операция не ломает рельсы, не забирает баржу и не удаляет содержимое склада. Затем появляется сообщение о завершении, меняется отношение и начинается пауза.",
+        "steps_ru": [
+          "После активной стадии проверьте людей, место боя и потерянное личное снаряжение.",
+          "Не ищите скрыто удалённый поезд или груз, если никакая отдельная система не сообщила о такой потере.",
+          "Следите за переходом к восстановлению и часовой паузе через отчёт операции."
+        ],
+        "success_ru": "Вы восстанавливаете только реальные потери боя и не тратите время на починку ущерба, которого система не наносила.",
+        "diagnostics_ru": [
+          "Если операция всё же изменила блоки или груз, запишите тип события и точный ущерб: это новая связь, которую нужно описать отдельно.",
+          "Если пауза не заканчивается, сохраните стадию и оставшееся время из отчёта."
+        ],
+        "next_ru": "Виды операций для разных эпох и состав действующих отрядов подробно разобраны в соседней главе обороны.",
+        "task_text_ru": "Ознакомьтесь с реальным путём восстановления после операции."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Удалены старые обещания о физическом ущербе, для которого нет обработчиков."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Активная и восстановительная стадии сверены построчно по сценарию операций."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:operation_recovery",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "easy_npc",
+          "evidence": [
+            "mods/easy_npc-forge-1.20.1-7.4.1.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Памятка не создаёт искусственную потерю ресурсов."
+      },
+      "layout": {
+        "x": 18,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.4
+      }
+    }
+  ]
+}

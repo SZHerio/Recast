@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/quest_qr0_proof_contracts.schema.json",
+  "title": "Frozen QR0 executable quest proof contracts",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_id",
+    "generated_from",
+    "quest_count",
+    "quests"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "registry_id": {
+      "const": "industrial_frontier:quest_qr0_proof_contracts"
+    },
+    "generated_from": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "quest_count": {
+      "const": 214
+    },
+    "quests": {
+      "type": "array",
+      "minItems": 214,
+      "maxItems": 214,
+      "items": {
+        "$ref": "#/$defs/quest"
+      }
+    }
+  },
+  "$defs": {
+    "engineId": {
+      "type": "string",
+      "pattern": "^[0-9A-F]{16}$"
+    },
+    "resourceLocation": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "selector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "item",
+            "item_tag"
+          ]
+        },
+        "id": {
+          "$ref": "#/$defs/resourceLocation"
+        }
+      }
+    },
+    "predicate": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "checkmark",
+            "dimension",
+            "item"
+          ]
+        },
+        "dimension": {
+          "$ref": "#/$defs/resourceLocation"
+        },
+        "selector": {
+          "$ref": "#/$defs/selector"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "only_from_crafting": {
+          "type": "boolean"
+        },
+        "match_nbt": {
+          "type": "boolean"
+        },
+        "weak_nbt_match": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "dimension"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "dimension"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "item"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "selector",
+              "count",
+              "only_from_crafting",
+              "match_nbt",
+              "weak_nbt_match"
+            ]
+          }
+        }
+      ]
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "engine_id",
+        "type",
+        "predicate",
+        "source",
+        "source_fingerprint_sha256"
+      ],
+      "properties": {
+        "engine_id": {
+          "$ref": "#/$defs/engineId"
+        },
+        "type": {
+          "enum": [
+            "checkmark",
+            "dimension",
+            "item"
+          ]
+        },
+        "predicate": {
+          "$ref": "#/$defs/predicate"
+        },
+        "source": {
+          "type": "string",
+          "pattern": "^config/ftbquests/quests/chapters/[a-z0-9_-]+\\.snbt$"
+        },
+        "source_fingerprint_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "quest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "old_alias",
+        "quest_engine_id",
+        "task"
+      ],
+      "properties": {
+        "old_alias": {
+          "type": "string",
+          "pattern": "^if\\.quest\\.[a-z0-9_.-]+$"
+        },
+        "quest_engine_id": {
+          "type": "string",
+          "pattern": "^3[0-9A-F]{15}$"
+        },
+        "task": {
+          "$ref": "#/$defs/task"
+        }
+      }
+    }
+  }
+}

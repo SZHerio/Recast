@@ -1,0 +1,8 @@
+{
+  "__comment": "Одинарные кабели медной семьи для сети MV; обычная и отожжённая медь выдерживают эту ступень.",
+  "replace": false,
+  "values": [
+    "gtceu:copper_single_cable",
+    "gtceu:annealed_copper_single_cable"
+  ]
+}

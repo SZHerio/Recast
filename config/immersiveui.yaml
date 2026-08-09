@@ -9,7 +9,7 @@ enableFloatingItemRotation: false
 # Enables the hotbar selector animation.
 enableHotbarSelectorAnimation: true
 # Enables hovering of matching items.
-enableMatchingItemHovering: true
+enableMatchingItemHovering: false
 # Enables particles for rare items.
 enableRarityParticles: true
 # Enables screen shake.
@@ -25,7 +25,7 @@ hotbarSelectorSpeed: 3.0
 # Affects the size of the hovered item.
 hoveredItemScale: 1.2
 # Affects the hover amplitude of items, that match to the item that is carried in the cursor.
-matchingItemHoverAmplitude: 0.8
+matchingItemHoverAmplitude: 0.0
 # Moves the hotbar selector above the items. You might want to disable this, if you use resource packs that change the default selector texture.
 renderHotbarSelectorAboveItems: false
 # Screen shake amplitude.

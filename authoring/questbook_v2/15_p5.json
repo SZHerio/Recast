@@ -5,239 +5,2715 @@
     "alias": "if.chapter.v2.p5",
     "engine_id": "2015000000000001",
     "filename": "15_p5",
-    "group": {"alias": "if.group.v2.mainline", "engine_id": "1000000000000004", "title_ru": "Главная линия"},
+    "group": {
+      "alias": "if.group.v2.mainline",
+      "engine_id": "1000000000000004",
+      "title_ru": "Главная линия"
+    },
     "order": 15,
     "icon": "industrial_frontier:textures/gui/icons/epochs/p5.png",
     "epoch": "P5",
-    "tags": ["mainline", "logistics", "ae2"],
+      "tags": [
+        "mainline",
+        "chemistry",
+        "logistics",
+        "ae2"
+    ],
     "hide_until_reached": true,
     "text_ru": {
       "title": "P5 — Региональная фабрика",
       "subtitle": "Сначала измеримый поток, затем транспорт, общий склад и управляемая автосборка",
-      "description": [
-        "P5 начинается с проблемы масштаба: сырьё, химия и город больше не помещаются в одном дворе. Физическая логистика переносит груз, буферы гасят перебои, а цифровая сеть показывает состояние запасов.",
+        "description": [
+          "Ступень HV открывает честный синтез аммиака и азотной кислоты: газовые входы, реактор HV и крупный химический реактор изучаются до конечной кислоты.",
+          "Эта эпоха начинается с проблемы масштаба: сырьё, химия и снабжение больше не помещаются в одном дворе. Физическая логистика переносит груз, буферы гасят перебои, а цифровая сеть показывает состояние запасов.",
         "Tom's Simple Storage становится понятным промежуточным слоем между сундуками и AE2. После него AE2 вводится по порядку: хранение, каналы, шаблоны, автосборка и восстановление после отказа."
       ]
     },
     "editorial": {
       "voice": "Инженер по логистике: объясняет поток через узкие места, буферы, маршруты и отказоустойчивость.",
-      "tone_rules": ["Каждому транспорту давать отдельную роль.", "Объяснять AE2 как систему ограничений, а не магический сундук.", "Массовую квоту требовать только после доступной автоматизации."],
-      "avoid": ["Не ставить цифровой склад раньше сформулированной проблемы масштаба.", "Не называть контроллер доказательством работающей сети.", "Не смешивать пассажирский и грузовой транспорт."]
+      "tone_rules": [
+        "Каждому транспорту давать отдельную роль.",
+        "Объяснять AE2 как систему ограничений, а не магический сундук.",
+        "Требовать массовые партии только после появления доступной автоматизации."
+      ],
+      "avoid": [
+        "Не ставить цифровой склад раньше сформулированной проблемы масштаба.",
+        "Не называть контроллер доказательством работающей сети.",
+        "Не смешивать пассажирский и грузовой транспорт."
+      ]
     }
   },
   "quests": [
     {
-      "alias": "if.quest.v2.p5.brief", "engine_id": "3015000000000001", "epoch": "P5", "role": "knowledge", "requirement": "required", "icon": "create:track", "tags": ["root", "logistics"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p4.commissioning", "reason": "Региональная логистика начинается только после ввода химического города P4.", "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.brief.read", "engine_id": "4015000000000001", "type": "checkmark", "status": "verified", "text_ru": {"objective": "Прочитайте карту региональных потоков.", "help": "Отметка подтверждает чтение схемы, а не построенный транспорт."}}],
-      "text_ru": {"title_ru": "Фабрика стала регионом", "lead_ru": "Химический город работает, но его сырьё, производство и потребители уже разделены расстоянием.", "purpose_ru": "Эпоха решает три разные задачи: перевозит груз, держит запас между рейсами и управляет заказами через цифровую сеть. Ни один слой не отменяет два остальных.", "steps_ru": [], "success_ru": "Вы понимаете порядок эпохи: масштаб, физический маршрут, буфер, Tom's Simple Storage, затем AE2.", "diagnostics_ru": [], "next_ru": "Первым делом линия должна показать повторяемую массовую переработку, ради которой вообще нужен региональный транспорт.", "task_text_ru": "Прочитайте карту региональной фабрики."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Вводная формулирует проблему до появления решения AE2."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Требуется потоковая вычитка вместе с концом P4 и началом P6."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "doc", "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md", "evidence": ["Раздел QR7"]}],
-      "grind": {"class": "NONE", "automation_before_bulk": false, "rationale_ru": "Навигационный узел не требует ресурсов."},
-      "layout": {"x": 0, "y": 0, "shape": "gear", "size": 2}
-    },
-    {
-      "alias": "if.quest.v2.p5.bulk_processing", "engine_id": "3015000000000002", "epoch": "P5", "role": "automation", "requirement": "required", "icon": "gtceu:purified_iron_ore", "tags": ["scale", "ore_processing"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.brief", "reason": "Измеримый серийный поток создаёт задачу, которую дальше решает логистика.", "evidence": ["docs/registries/m2_domain_process_ownership.json"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.bulk_processing.item", "engine_id": "4015000000000002", "type": "item", "status": "verified", "text_ru": {"objective": "Получите восемь очищенных железных руд GTCEu.", "help": "Проверяется промежуточный продукт gtceu:purified_iron_ore, а не сырая руда или готовый слиток."}, "item": {"id": "gtceu:purified_iron_ore", "count": 8, "consume": false}}],
-      "text_ru": {"title_ru": "Поток, а не единичный рецепт", "lead_ru": "Регион имеет смысл только тогда, когда линия выпускает повторяемую партию.", "purpose_ru": "GregTech остаётся владельцем умножения руды: дробление, промывка и очистка объясняют прирост и побочные минералы. Небольшая партия показывает, что работает именно процесс, а не ручной обход.", "steps_ru": ["Подайте железосодержащее сырьё в цепочку GTCEu до очищенной руды.", "Настройте непрерывный вывод основного продукта и отдельный буфер для побочных материалов."], "success_ru": "Линия выдаёт восемь очищенных железных руд без ручной перекладки каждого цикла.", "diagnostics_ru": ["Если процесс остановился, проверьте свободный выход для побочного продукта и жидкость промывки.", "Если получена другая форма руды, сверьте выбранную ступень цепочки в JEI."], "next_ru": "Теперь партии нужно регулярно перевозить от производственного узла к региональному буферу.", "task_text_ru": "Получите восемь очищенных железных руд GTCEu."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Партия ограничена восьмью единицами и следует после доступной автоматизации."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Item ID подтверждён локальным GTCEu census; рецепт проверяется пользователем."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "gtceu:purified_iron_ore", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "process", "id": "industrial_frontier:process/gtceu/ore_processing", "evidence": ["docs/registries/m2_domain_process_ownership.json"]}],
-      "grind": {"class": "TEACHING", "training_batch": 8, "expected_runs": 4, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/bulk_processing", "rationale_ru": "Восемь единиц показывают устойчивость линии, но не превращают обучение в складской заказ."},
-      "layout": {"x": 3, "y": 0, "shape": "gear", "size": 1.2}
-    },
-    {
-      "alias": "if.quest.v2.p5.freight_rail", "engine_id": "3015000000000008", "epoch": "P5", "role": "machine", "requirement": "required", "icon": "create:track", "tags": ["freight", "rail"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.bulk_processing", "reason": "Грузовая магистраль строится для уже существующей серийной партии.", "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.freight_rail.place", "engine_id": "4015000000000008", "type": "place", "status": "verified", "text_ru": {"objective": "Разместите восемь участков пути Create.", "help": "Небольшой испытательный путь достаточен; полноценную магистраль определит география вашего мира."}, "place": {"block": "create:track", "count": 8}}],
-      "text_ru": {"title_ru": "Грузовой путь", "lead_ru": "Партия появилась; теперь ей нужен маршрут между удалёнными узлами.", "purpose_ru": "Create и Steam 'n' Rails отвечают за тяжёлый регулярный груз. Путь, разъезд, станция, сигнал и буфер решают разные проблемы, поэтому начинать нужно с короткого испытательного участка.", "steps_ru": ["Разметьте прямой испытательный участок и разместите восемь блоков пути.", "Оставьте место под станцию, разгрузочный буфер и будущий разъезд."], "success_ru": "Испытательный путь размещён и имеет понятные точки будущей загрузки и выгрузки.", "diagnostics_ru": ["Если путь не соединяется, проверьте уклон, радиус поворота и опору под участком.", "Не стройте длинную магистраль до проверки станции и размера состава."], "next_ru": "Параллельно появится водное плечо для тяжёлого и наливного груза.", "task_text_ru": "Разместите восемь участков пути Create."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Place доказывает построенный испытательный участок без завышенного обещания расписания."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "block", "id": "create:track", "evidence": ["config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"]}, {"kind": "mod", "id": "railways", "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]}],
-      "grind": {"class": "TEACHING", "training_batch": 8, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/freight_rail", "rationale_ru": "Короткий путь проверяет геометрию; километры рельсов не являются учебной квотой."},
-      "layout": {"x": 6, "y": -2, "shape": "circle", "size": 1}
-    },
-    {
-      "alias": "if.quest.v2.p5.water_route", "engine_id": "3015000000000009", "epoch": "P5", "role": "machine", "requirement": "required", "icon": "littlelogistics:barge", "tags": ["freight", "water"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.bulk_processing", "reason": "Водный маршрут обслуживает тот же измеримый поток другим транспортным профилем.", "evidence": ["mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"]}]},
-      "proofs": [
-        {"alias": "if.task.v2.p5.water_route.dock", "engine_id": "4015000000000009", "type": "place", "status": "verified", "text_ru": {"objective": "Поставьте причал для баржи.", "help": "Причал должен быть доступен с воды и со стороны складского буфера."}, "place": {"block": "littlelogistics:barge_dock", "count": 1}},
-        {"alias": "if.task.v2.p5.water_route.vessels", "engine_id": "4A15000000000001", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один буксир и одну грузовую баржу.", "help": "Буксир ведёт маршрут, а баржа несёт груз; один предмет не заменяет второй."}, "item": {"id": "littlelogistics:tug", "count": 1, "consume": false}},
-        {"alias": "if.task.v2.p5.water_route.barge", "engine_id": "4A15000000000002", "type": "item", "status": "verified", "text_ru": {"objective": "Получите одну грузовую баржу.", "help": "Для наливных грузов позднее можно заменить её специализированной fluid barge."}, "item": {"id": "littlelogistics:barge", "count": 1, "consume": false}}
+      "alias": "if.quest.v2.p5.brief",
+      "engine_id": "3015000000000001",
+      "epoch": "P5",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "create:track",
+      "tags": [
+        "root",
+        "logistics"
       ],
-      "text_ru": {"title_ru": "Водное грузовое плечо", "lead_ru": "Рельс хорош не везде: река уже даёт готовый коридор для тяжёлого груза.", "purpose_ru": "Little Logistics обслуживает медленные, тяжёлые и наливные партии. Буксир задаёт движение, баржа несёт груз, причал связывает воду со складом.", "steps_ru": ["Поставьте причал у доступной воды и предусмотрите рядом место для разгрузки.", "Соберите буксир и грузовую баржу; маршрут и расписание проверит региональный заказ."], "success_ru": "Причал установлен, а буксир с баржей готовы к испытательному рейсу.", "diagnostics_ru": ["Если судно не подходит к причалу, проверьте глубину, свободный проход и ориентацию блока.", "Если маршрут обрывается, устраните сухой участок или слишком тесный поворот."], "next_ru": "Рельсовое и водное плечи сойдутся в общем региональном буфере.", "task_text_ru": "Поставьте причал и получите буксир с одной грузовой баржей."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Три proof различают инфраструктуру, тягу и грузовую единицу."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["IDs подтверждены установленным JAR."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "block", "id": "littlelogistics:barge_dock", "evidence": ["mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"]}, {"kind": "item", "id": "littlelogistics:tug", "evidence": ["mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"]}, {"kind": "item", "id": "littlelogistics:barge", "evidence": ["mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 3, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/water_route", "rationale_ru": "Один комплект достаточен для первого маршрута и сразу остаётся рабочим активом."},
-      "layout": {"x": 6, "y": 2, "shape": "circle", "size": 1}
-    },
-    {
-      "alias": "if.quest.v2.p5.reserve", "engine_id": "3015000000000012", "epoch": "P5", "role": "integration", "requirement": "required", "icon": "create:item_vault", "tags": ["buffer", "physical_logistics"],
-      "dependency": {"mode": "ALL_OF", "edges": [
-        {"quest": "if.quest.v2.p5.freight_rail", "reason": "Рельсовая разгрузка должна иметь физический приёмный запас.", "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]},
-        {"quest": "if.quest.v2.p5.water_route", "reason": "Водный маршрут сходится в тот же региональный узел без прямой перекладки в цифровую сеть.", "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]}
-      ]},
-      "proofs": [{"alias": "if.task.v2.p5.reserve.place", "engine_id": "4015000000000012", "type": "place", "status": "verified", "text_ru": {"objective": "Поставьте одно хранилище предметов Create.", "help": "Разместите item vault между разгрузкой и следующим потребителем, а не в тупике без вывода."}, "place": {"block": "create:item_vault", "count": 1}}],
-      "text_ru": {"title_ru": "Региональный буфер", "lead_ru": "Два маршрута готовы, но без запаса любой опоздавший рейс остановит фабрику.", "purpose_ru": "Физический буфер отделяет ритм транспорта от ритма производства. Он должен принять целую поставку и отдать следующую без участия цифровой сети.", "steps_ru": ["Поставьте item vault рядом с узлом разгрузки.", "Подведите отдельные вход и выход так, чтобы транспорт и производство не спорили за одну сторону."], "success_ru": "Буфер стоит между маршрутом и потребителем и остаётся доступным при выключенной AE2.", "diagnostics_ru": ["Если разгрузка встаёт, проверьте заполнение буфера и направление устройств ввода.", "Если производство забирает всё мгновенно, добавьте ограничение или отдельный аварийный запас."], "next_ru": "К этому физическому запасу сначала подключится простой общий терминал Tom's Simple Storage.", "task_text_ru": "Поставьте одно хранилище предметов Create как региональный буфер."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Буфер появляется до цифрового склада и сохраняет автономность линии."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "block", "id": "create:item_vault", "evidence": ["config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/reserve", "rationale_ru": "Один буфер проверяет развязку ритмов без требования строить складской квартал."},
-      "layout": {"x": 9, "y": 0, "shape": "diamond", "size": 1.2}
-    },
-    {
-      "alias": "if.quest.v2.p5.toms_storage", "engine_id": "3A15000000000001", "epoch": "P5", "role": "integration", "requirement": "required", "icon": "toms_storage:ts.storage_terminal", "tags": ["storage", "bridge"],
-      "dependency": {"mode": "ALL_OF", "edges": [
-        {"quest": "if.quest.v2.p5.reserve", "reason": "Региональный терминал подключается к уже существующему грузовому буферу, а не заменяет его.", "evidence": ["mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/lang/en_us.json"]},
-        {"quest": "if.quest.v2.storage.level", "reason": "Подробное знакомство с Tom's Simple Storage находится в системной главе; здесь игрок применяет уже освоенную схему в масштабе региона.", "evidence": ["authoring/questbook_v2/20_storage_order.json"]}
-      ]},
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p4.commissioning",
+            "reason": "Региональная логистика начинается только после ввода химического комплекса P4.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.oil.acceptance",
+            "reason": "До регионального масштаба нефтяной участок должен развести фракции, закрыть обязательные продукты и повторно измерить воздух после очистных мер.",
+            "evidence": [
+              "authoring/questbook_v2/24_oil_ecology.json"
+            ]
+          }
+        ]
+      },
       "proofs": [
-        {"alias": "if.task.v2.p5.toms_storage.connector", "engine_id": "4A15000000000003", "type": "place", "status": "verified", "text_ru": {"objective": "Поставьте соединитель инвентарей Tom's Simple Storage.", "help": "Соединитель должен касаться или видеть подключаемую сеть инвентарей по правилам мода."}, "place": {"block": "toms_storage:ts.inventory_connector", "count": 1}},
-        {"alias": "if.task.v2.p5.toms_storage.terminal", "engine_id": "4A15000000000004", "type": "place", "status": "verified", "text_ru": {"objective": "Поставьте терминал хранения Tom's Simple Storage.", "help": "Терминал без соединителя и кабельной связи не увидит ваши сундуки."}, "place": {"block": "toms_storage:ts.storage_terminal", "count": 1}}
+        {
+          "alias": "if.task.v2.p5.brief.read",
+          "engine_id": "4015000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте карту региональных потоков.",
+            "help": "Отметка подтверждает чтение схемы, а не построенный транспорт."
+          }
+        }
       ],
-      "text_ru": {"title_ru": "Домашний склад выходит в регион", "lead_ru": "Базовая сеть Tom's Simple Storage уже освоена; теперь перенесём знакомую схему к грузовому буферу.", "purpose_ru": "Этот квест не повторяет учебник мода. Он проверяет, умеете ли вы встроить знакомый соединитель и терминал в региональную логистику, сохранив прямой доступ к физическим запасам.", "steps_ru": ["Поставьте соединитель у грузового буфера и подключите его к уже освоенной складской сети.", "Разместите терминал в диспетчерской точке и убедитесь, что через него видны нужные контейнеры."], "success_ru": "Домашняя схема хранения повторена в региональном масштабе: грузовой буфер виден из одной точки, но остаётся доступным напрямую.", "diagnostics_ru": ["Если терминал пуст, проверьте непрерывность кабеля между ним, соединителем и контейнерами.", "Если видна только часть запаса, найдите разрыв сети или контейнер, который соединитель не поддерживает."], "next_ru": "Теперь можно переходить к AE2: это будет новый цифровой слой, а не замена непонятной сети сундуков.", "task_text_ru": "Поставьте региональный соединитель инвентарей и терминал Tom's Simple Storage."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Квест опирается на системную ветвь хранения и проверяет региональное применение уже освоенной схемы."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Block IDs подтверждены установленным JAR."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "block", "id": "toms_storage:ts.inventory_connector", "evidence": ["mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/lang/en_us.json"]}, {"kind": "block", "id": "toms_storage:ts.storage_terminal", "evidence": ["mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/lang/en_us.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 2, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/toms_storage", "rationale_ru": "Один соединитель и терминал образуют полезный рабочий комплект."},
-      "layout": {"x": 12, "y": 0, "shape": "square", "size": 1.2}
+      "text_ru": {
+        "title_ru": "Фабрика стала регионом",
+        "lead_ru": "Химический комплекс работает, но его сырьё, производство и потребители уже разделены расстоянием.",
+        "purpose_ru": "Эпоха решает три разные задачи: перевозит груз, держит запас между рейсами и управляет заказами через цифровую сеть. Ни один слой не отменяет два остальных.",
+        "steps_ru": [],
+        "success_ru": "Вы понимаете порядок эпохи: масштаб, физический маршрут, буфер, Tom's Simple Storage, затем AE2.",
+        "diagnostics_ru": [],
+        "next_ru": "Первым делом линия должна показать повторяемую массовую переработку, ради которой вообще нужен региональный транспорт.",
+        "task_text_ru": "Прочитайте карту региональной фабрики."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вводная формулирует проблему до появления решения AE2."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Требуется потоковая вычитка вместе с концом P4 и началом P6."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+          "evidence": [
+            "Раздел QR7"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Навигационный узел не требует ресурсов."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 2
+      }
     },
     {
-      "alias": "if.quest.v2.p5.ae2_storage", "engine_id": "3015000000000003", "epoch": "P5", "role": "machine", "requirement": "required", "icon": "industrial_frontier:textures/gui/icons/process/ae2/digital_material_entry.png", "tags": ["ae2", "storage"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.toms_storage", "reason": "AE2 вводится после освоения общей топологии физических инвентарей.", "evidence": ["kubejs/server_scripts/10_progression/m5_ae2_entry_contract.js"]}]},
+      "alias": "if.quest.v2.p5.stainless_inputs",
+      "engine_id": "3A15000000000018",
+      "epoch": "P5",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "gtceu:chromium_dust",
+      "tags": ["mainline", "metallurgy", "stainless_steel", "source_before_product"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.brief", "reason": "Материальную границу HV начинают с точных компонентов сплава, а не с готовой пластины.", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}]},
       "proofs": [
-        {"alias": "if.task.v2.p5.ae2_storage.power", "engine_id": "4015000000000003", "type": "item", "status": "verified", "text_ru": {"objective": "Получите приёмник энергии AE2.", "help": "Без питания сеть и терминалы не работают."}, "item": {"id": "ae2:energy_acceptor", "count": 1, "consume": false}},
-        {"alias": "if.task.v2.p5.ae2_storage.drive", "engine_id": "4A15000000000005", "type": "item", "status": "verified", "text_ru": {"objective": "Получите ME-накопитель.", "help": "Накопитель держит ячейки, но сам по себе не добавляет объём хранения."}, "item": {"id": "ae2:drive", "count": 1, "consume": false}},
-        {"alias": "if.task.v2.p5.ae2_storage.terminal", "engine_id": "4A15000000000006", "type": "item", "status": "verified", "text_ru": {"objective": "Получите ME-терминал.", "help": "Терминал показывает сеть, но нуждается в кабеле, питании и доступной ячейке."}, "item": {"id": "ae2:terminal", "count": 1, "consume": false}},
-        {"alias": "if.task.v2.p5.ae2_storage.cell", "engine_id": "4A15000000000007", "type": "item", "status": "verified", "text_ru": {"objective": "Получите одну ячейку хранения на 1К.", "help": "Для первого запуска достаточно малой ячейки; крупные ячейки не являются учебной квотой."}, "item": {"id": "ae2:item_storage_cell_1k", "count": 1, "consume": false}}
+        {"alias": "if.task.v2.p5.stainless_inputs.iron", "engine_id": "4A15000000000050", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте шесть совместимых железных пылей.", "help": "Подойдёт любая железная пыль из общего тега, которую принимает смеситель GregTech."}, "item_tag": {"id": "industrial_frontier:materials/iron_dusts", "count": 6}},
+        {"alias": "if.task.v2.p5.stainless_inputs.nickel", "engine_id": "4A15000000000051", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте одну совместимую никелевую пыль.", "help": "Никель отвечает за коррозионную стойкость учебного сплава."}, "item_tag": {"id": "industrial_frontier:materials/nickel_dusts", "count": 1}},
+        {"alias": "if.task.v2.p5.stainless_inputs.manganese", "engine_id": "4A15000000000052", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте одну совместимую марганцевую пыль.", "help": "Марганец является отдельным обязательным компонентом схемы 3."}, "item_tag": {"id": "industrial_frontier:materials/manganese_dusts", "count": 1}},
+        {"alias": "if.task.v2.p5.stainless_inputs.chromium", "engine_id": "4A15000000000053", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте одну совместимую хромовую пыль.", "help": "Хром завершает точную загрузку одного смесительного цикла."}, "item_tag": {"id": "industrial_frontier:materials/chromium_dusts", "count": 1}}
       ],
-      "text_ru": {"title_ru": "Первое цифровое хранение", "lead_ru": "Простой терминал показал удобство общего поиска; AE2 добавит собственное хранение и строгие ограничения.", "purpose_ru": "Первая ME-сеть решает только питание, ячейки и доступ к предметам. Автосборки пока нет: сначала нужно понять, где физически лежит запас и как вернуть его при отказе.", "steps_ru": ["Соберите приёмник энергии, накопитель, терминал и одну ячейку на 1К.", "Перед переносом важных ресурсов оставьте резерв в обычном контейнере."], "success_ru": "Полный стартовый комплект AE2 готов к сборке сети, а критический запас не заперт только в цифровой ячейке.", "diagnostics_ru": ["Если терминал тёмный, начните с приёмника энергии и кабельной связи.", "Если ячейка вставлена, но места нет, проверьте её тип, объём и количество разных типов предметов."], "next_ru": "Следующий урок объяснит каналы и узкое место, из-за которого часть устройств внезапно гаснет.", "task_text_ru": "Получите приёмник энергии, ME-накопитель, терминал и ячейку хранения на 1К."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Комплект хранит предметы, но текст не выдаёт его за уже собранную сеть."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["AE2 IDs подтверждены установленным JAR и локальным entry contract."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "ae2:energy_acceptor", "evidence": ["kubejs/server_scripts/10_progression/m5_ae2_entry_contract.js"]}, {"kind": "item", "id": "ae2:drive", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}, {"kind": "item", "id": "ae2:terminal", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}, {"kind": "item", "id": "ae2:item_storage_cell_1k", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar"]}],
-      "grind": {"class": "GREEN", "training_batch": 4, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/ae2_entry", "rationale_ru": "Четыре разных компонента образуют минимальную полезную сеть и не дублируются."},
-      "layout": {"x": 15, "y": 0, "shape": "diamond", "size": 1.2}
+      "text_ru": {"title_ru": "Четыре компонента нержавеющей стали", "lead_ru": "Региональная фабрика начнёт HV с фактической формулы, а не с команды заглянуть в JEI.", "purpose_ru": "Один цикл смесителя MV со схемой 3 использует шесть железных, одну никелевую, одну марганцевую и одну хромовую пыль. Результат — девять пылей нержавеющей стали: восемь для первой корпусной партии и одна запасная.", "steps_ru": ["Отмерьте шесть железных пылей и по одной никелевой, марганцевой и хромовой.", "Разместите четыре компонента в подписанных входных ячейках принятого смесителя MV и выставьте схему 3."], "success_ru": "Загрузка из шести частей железа и по одной части никеля, марганца и хрома готова к одному смесительному циклу.", "diagnostics_ru": ["Если рецепт не появляется, проверьте все четыре формы пыли, количество железа и схему 3.", "Если одна из совместимых пылей не считается, сообщите её идентификатор: тег обязан принимать эквивалентную форму."], "next_ru": "Смешайте одну партию и получите девять пылей нержавеющей стали.", "task_text_ru": "Подготовьте 6 железных, 1 никелевую, 1 марганцевую и 1 хромовую пыль."},
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "inputs", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "item_tag", "id": "industrial_frontier:materials/iron_dusts", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/iron_dusts.json"]}, {"kind": "item_tag", "id": "industrial_frontier:materials/nickel_dusts", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/nickel_dusts.json"]}, {"kind": "item_tag", "id": "industrial_frontier:materials/manganese_dusts", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/manganese_dusts.json"]}, {"kind": "item_tag", "id": "industrial_frontier:materials/chromium_dusts", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/chromium_dusts.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 4, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/stainless_inputs", "rationale_ru": "Четыре вида входов составляют одну точную загрузку; массовый запас не требуется."},
+      "layout": {"x": -6, "y": -7.3, "shape": "square", "size": 1.0}
     },
     {
-      "alias": "if.quest.v2.p5.ae2_channels", "engine_id": "3015000000000004", "epoch": "P5", "role": "knowledge", "requirement": "required", "icon": "ae2:controller", "tags": ["ae2", "channels"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.ae2_storage", "reason": "Ограничение каналов имеет смысл после знакомства с первым комплектом сети.", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.ae2_channels.item", "engine_id": "4015000000000004", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один ME-контроллер.", "help": "Контроллер помогает развести ветви, но не отменяет подсчёт каналов на каждом узком участке."}, "item": {"id": "ae2:controller", "count": 1, "consume": false}}],
-      "text_ru": {"title_ru": "Где закончились каналы", "lead_ru": "Первый комплект работает, пока сеть мала; расширение быстро упирается в пропускную способность кабеля.", "purpose_ru": "Обычный кабель переносит восемь каналов, плотный — тридцать два. Каждое устройство занимает канал на всём пути до контроллера, поэтому считать нужно самое узкое место.", "steps_ru": [], "success_ru": "У вас есть контроллер, и вы умеете искать перегруженный участок по пути конкретного устройства.", "diagnostics_ru": [], "next_ru": "После устойчивой топологии сеть сможет хранить шаблоны и направлять задания машинам.", "task_text_ru": "Получите ME-контроллер и прочитайте правило подсчёта каналов."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Item proof совпадает с условием; текст отдельно учит диагностике и не заявляет автопроверку каналов."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Числа каналов требуют пользовательской техпроверки текущей конфигурации AE2."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.lead_ru", "text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "ae2:controller", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}, {"kind": "mechanic", "id": "ae2:channels", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/ae2_channels", "rationale_ru": "Один контроллер открывает топологию без квоты на десятки кабелей."},
-      "layout": {"x": 18, "y": 0, "shape": "square", "size": 1}
+      "alias": "if.quest.v2.p5.stainless_alloy",
+      "engine_id": "3A15000000000019",
+      "epoch": "P5",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:stainless_steel_dust",
+      "tags": ["mainline", "metallurgy", "stainless_steel", "machine_output"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.stainless_inputs", "reason": "Сплав требуют только после точной загрузки и ранее принятого смесителя MV.", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}]},
+      "proofs": [{"alias": "if.task.v2.p5.stainless_alloy.dust", "engine_id": "4A15000000000054", "type": "item", "status": "verified", "text_ru": {"objective": "Получите девять совместимых пылей нержавеющей стали.", "help": "Один цикл смесителя со схемой 3 выдаёт девять пылей. Восемь пойдут в доменную печь, одна останется образцом."}, "item_tag": {"id": "industrial_frontier:materials/stainless_steel_dusts", "count": 9}}],
+      "text_ru": {"title_ru": "Один смесительный цикл", "lead_ru": "Компоненты отмерены; теперь принятый смеситель MV должен выдать точный сплав.", "purpose_ru": "Смешайте шесть частей железа и по одной части никеля, марганца и хрома со схемой 3. Один цикл даёт девять пылей нержавеющей стали и не требует повторного ручного дозирования ради первой ступени HV.", "steps_ru": ["Загрузите шесть железных и по одной никелевой, марганцевой и хромовой пыли в смеситель MV.", "Выставьте схему 3, проведите один цикл и заберите все девять пылей."], "success_ru": "Девять пылей нержавеющей стали получены одной точной загрузкой.", "diagnostics_ru": ["Если смеситель не запускается, проверьте схему 3, ступень MV и наличие всех четырёх компонентов.", "Если выход меньше девяти, проверьте заблокированный буфер и не оставляйте часть продукта внутри машины."], "next_ru": "Переплавьте восемь пылей в доменной печи; девятую сохраните как запас.", "task_text_ru": "Получите девять совместимых пылей нержавеющей стали в смесителе MV."},
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "item_tag", "id": "industrial_frontier:materials/stainless_steel_dusts", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/stainless_steel_dusts.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/stainless_alloy", "rationale_ru": "Один смесительный цикл даёт всю учебную пылевую партию с одной запасной единицей."},
+      "layout": {"x": -3, "y": -7.3, "shape": "hexagon", "size": 1.0}
     },
     {
-      "alias": "if.quest.v2.p5.ae2_patterns", "engine_id": "3015000000000005", "epoch": "P5", "role": "automation", "requirement": "required", "icon": "ae2:pattern_provider", "tags": ["ae2", "patterns"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.ae2_channels", "reason": "Поставщик шаблонов добавляет устройство и канал, поэтому топология изучается раньше.", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}]},
+      "alias": "if.quest.v2.p5.stainless_power_bus",
+      "engine_id": "3A1500000000001B",
+      "epoch": "P5",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "gtceu:copper_quadruple_cable",
+      "tags": ["mainline", "metallurgy", "stainless_steel", "power", "four_amp_bootstrap"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.stainless_alloy", "reason": "Четырёхамперную шину MV принимают после подготовки сплава и до доменных циклов на 480 EU/t.", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}]},
       "proofs": [
-        {"alias": "if.task.v2.p5.ae2_patterns.provider", "engine_id": "4015000000000005", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один поставщик шаблонов.", "help": "Поставщик держит записанные рецепты и передаёт задания подключённой машине."}, "item": {"id": "ae2:pattern_provider", "count": 1, "consume": false}},
-        {"alias": "if.task.v2.p5.ae2_patterns.terminal", "engine_id": "4A15000000000008", "type": "item", "status": "verified", "text_ru": {"objective": "Получите терминал кодирования шаблонов.", "help": "Обычный ME-терминал не записывает шаблоны."}, "item": {"id": "ae2:pattern_encoding_terminal", "count": 1, "consume": false}},
-        {"alias": "if.task.v2.p5.ae2_patterns.blank", "engine_id": "4A15000000000009", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один пустой шаблон.", "help": "Для урока достаточно одного рецепта; массовая запись шаблонов начнётся после проверки первой цепочки."}, "item": {"id": "ae2:blank_pattern", "count": 1, "consume": false}}
+        {"alias": "if.task.v2.p5.stainless_power_bus.batteries", "engine_id": "4A15000000000056", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте четыре совместимых аккумулятора MV.", "help": "Вставьте все четыре в уже принятый четырёхсекционный буфер MV и полностью зарядите; каждая непустая ячейка даёт один ампер."}, "item_tag": {"id": "industrial_frontier:power/mv_batteries", "count": 4}},
+        {"alias": "if.task.v2.p5.stainless_power_bus.buffer", "engine_id": "4A15000000000057", "type": "use", "status": "verified", "text_ru": {"objective": "Откройте буфер MV с четырьмя заряженными аккумуляторами.", "help": "Взаимодействие подтверждает буфер; наличие и заряд четырёх ячеек проверьте вручную в интерфейсе."}, "use": {"block": "gtceu:mv_battery_buffer_4x", "count": 1, "item_interaction": false, "check_item": false}},
+        {"alias": "if.task.v2.p5.stainless_power_bus.cable", "engine_id": "4A15000000000058", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте четыре четырёхжильных медных кабеля.", "help": "Одинарный медный кабель пропускает лишь один ампер и не подходит для участка 480 EU/t."}, "item": {"id": "gtceu:copper_quadruple_cable", "count": 4, "consume": false}},
+        {"alias": "if.task.v2.p5.stainless_power_bus.hatches", "engine_id": "4A15000000000059", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте два входных энергетических люка MV.", "help": "Каждый обычный люк принимает до двух ампер; два люка вместе дают доменной печи до 512 EU/t."}, "item": {"id": "gtceu:mv_energy_input_hatch", "count": 2, "consume": false}},
+        {"alias": "if.task.v2.p5.stainless_power_bus.place", "engine_id": "4A1500000000005A", "type": "place", "status": "verified", "text_ru": {"objective": "Установите хотя бы один четырёхжильный медный кабель на шине к двум люкам MV.", "help": "Ведите короткую трассу от выходной стороны буфера и разветвите её к обоим люкам доменной печи."}, "place": {"block": "gtceu:copper_quadruple_cable", "count": 1, "require_replace": false}}
       ],
-      "text_ru": {"title_ru": "Рецепт становится заданием", "lead_ru": "Сеть хранит предметы и не теряет каналы; теперь она может запомнить один производственный маршрут.", "purpose_ru": "Шаблон описывает вход и ожидаемый выход, поставщик передаёт материалы машине, а терминал записывает рецепт. Неправильный выход или побочный продукт способны навсегда подвесить заказ.", "steps_ru": ["Соберите поставщик шаблонов, терминал кодирования и один пустой шаблон.", "Выберите короткий рецепт с однозначным выходом и заранее предусмотрите возврат результата в сеть."], "success_ru": "Комплект для записи и исполнения первого шаблона готов, а выбранный процесс имеет понятный возврат продукта.", "diagnostics_ru": ["Если шаблон не записывается, проверьте режим крафта или обработки и точную форму ингредиентов.", "Если машина приняла вход, но заказ ждёт, проверьте путь возврата и название ожидаемого продукта."], "next_ru": "Процессор крафта превратит записанный маршрут в настоящий заказ сети.", "task_text_ru": "Получите поставщик шаблонов, терминал кодирования и один пустой шаблон."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Текст объясняет контракт шаблона и типичный зависший выход."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Item IDs подтверждены установленным JAR."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "ae2:pattern_provider", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}, {"kind": "item", "id": "ae2:pattern_encoding_terminal", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}, {"kind": "item", "id": "ae2:blank_pattern", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}],
-      "grind": {"class": "TEACHING", "training_batch": 3, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/ae2_patterns", "rationale_ru": "Три разных компонента нужны одному учебному маршруту; лишние шаблоны не требуются."},
-      "layout": {"x": 21, "y": 0, "shape": "diamond", "size": 1}
+      "text_ru": {"title_ru": "Четыре ампера MV для нержавейки", "lead_ru": "Плавка нержавеющей стали требует 480 EU/t: один ампер MV даёт только 128 EU/t.", "purpose_ru": "Четыре заряженных аккумулятора в буфере MV отдают до четырёх ампер. Четырёхжильный медный кабель переносит этот поток к двум входным люкам MV по два ампера каждый. Вместе они дают до 512 EU/t — достаточно для рецепта на 480 EU/t без преждевременного источника HV.", "steps_ru": ["Установите четыре совместимых аккумулятора в уже принятый буфер MV и полностью зарядите их.", "Замените два люка LV доменной печи на два входных люка MV или соберите отдельную принятую конфигурацию с двумя люками MV.", "От выходной стороны буфера проложите короткую четырёхамперную трассу из четырёхжильного медного кабеля и разветвите её к обоим люкам.", "Не ставьте одинарный кабель на участок между буфером и люками."], "success_ru": "Доменная печь получает до 4 A MV через безопасную шину и два люка, поэтому рецепт 480 EU/t достижим до сети HV.", "diagnostics_ru": ["Если рецепт сообщает о нехватке мощности, проверьте четыре заряженные ячейки, выходную сторону буфера, четырёхжильный кабель и оба люка MV.", "Если кабель горит, найдите одинарный участок или неверное напряжение до повторного запуска."], "next_ru": "Теперь проведите восемь доменных циклов нержавеющей стали.", "task_text_ru": "Подготовьте четыре аккумулятора MV, четырёхамперную шину и два входных люка MV для доменной печи."},
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Заряд аккумуляторов проверяется вручную; item/use proofs не читают NBT энергии."},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "hazards", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "item_tag", "id": "industrial_frontier:power/mv_batteries", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/power/mv_batteries.json"]}, {"kind": "block", "id": "gtceu:copper_quadruple_cable", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "item", "id": "gtceu:mv_energy_input_hatch", "evidence": ["kubejs/exported/gtceu_item_census.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 3, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/stainless_power_bus", "rationale_ru": "Буфер, короткая шина и два люка становятся постоянной мощной конфигурацией доменной печи; запасные детали не нужны."},
+      "layout": {"x": 0, "y": -9.5, "shape": "square", "size": 1.1}
     },
     {
-      "alias": "if.quest.v2.p5.ae2_autocraft", "engine_id": "3015000000000006", "epoch": "P5", "role": "automation", "requirement": "required", "icon": "ae2:crafting_unit", "tags": ["ae2", "autocrafting"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.ae2_patterns", "reason": "Процессор крафта исполняет уже записанный и проверенный шаблон.", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.ae2_autocraft.item", "engine_id": "4015000000000006", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один процессор крафта AE2.", "help": "Без поставщика и записанного шаблона процессор сам не знает ни одного рецепта."}, "item": {"id": "ae2:crafting_unit", "count": 1, "consume": false}}],
-      "text_ru": {"title_ru": "Первый автоматический заказ", "lead_ru": "Шаблон объяснил сети рецепт; процессор позволит поставить его в очередь.", "purpose_ru": "Автосборка не создаёт материалы. Она резервирует входы, запускает известные операции и ждёт точный результат. Один процессор выполняет учебный заказ без требования сразу строить серверную.", "steps_ru": ["Соберите процессор крафта и подключите его к ветви с доступными каналами.", "Запустите один короткий заказ и наблюдайте, на каком шаге сеть резервирует и возвращает материалы."], "success_ru": "Процессор готов, а вы знаете, где смотреть недостающий вход и зависшую операцию.", "diagnostics_ru": ["Если заказ не стартует, откройте список недостающих материалов и проверьте шаблон.", "Если заказ висит после работы машины, проверьте возврат точного продукта и свободное место в сети."], "next_ru": "Перед региональным контрактом нужно подготовить план действий на случай отключения сети.", "task_text_ru": "Получите один процессор крафта AE2."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Proof подтверждает компонент; текст честно оставляет запуск заказа для пользовательской проверки."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Item ID подтверждён установленным JAR; эпоху рецепта нужно сверить в пользовательском тесте."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "ae2:crafting_unit", "evidence": ["mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"]}, {"kind": "mechanic", "id": "ae2:autocrafting", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/ae2_autocraft", "rationale_ru": "Один процессор достаточен для обучения; параллельные серверы остаются улучшением."},
-      "layout": {"x": 24, "y": 0, "shape": "gear", "size": 1.2}
+      "alias": "if.quest.v2.p5.stainless_ingots",
+      "engine_id": "3A1500000000001A",
+      "epoch": "P5",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:stainless_steel_ingot",
+      "tags": ["mainline", "metallurgy", "stainless_steel", "machine_output"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.stainless_power_bus", "reason": "Доменный продукт требуют после пылевого сплава и честной шины 4 A MV, способной дать 480 EU/t.", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}]},
+      "proofs": [{"alias": "if.task.v2.p5.stainless_ingots.item", "engine_id": "4A15000000000055", "type": "item", "status": "verified", "text_ru": {"objective": "Получите восемь совместимых слитков нержавеющей стали.", "help": "Проведите восемь доменных циклов со схемой 1. Азот и другой газ не обязательны; схема 2 с азотом только ускоряет плавку."}, "item_tag": {"id": "industrial_frontier:materials/stainless_steel_ingots", "count": 8}}],
+      "text_ru": {"title_ru": "Восемь плавок без скрытого газа", "lead_ru": "Пылевой сплав готов; доменная печь превращает его в настоящую корпусную сталь.", "purpose_ru": "Каждая пыль нержавеющей стали даёт один обычный слиток при 480 EU/t. Проведите восемь циклов со схемой 1. Азотная схема 2 сокращает время, но не является обязательным условием для первой партии.", "steps_ru": ["Загрузите восемь пылей нержавеющей стали в принятую доменную печь со схемой 1.", "Подайте устойчивые 480 EU/t, освободите выход и проведите восемь циклов.", "Сохраните восемь слитков для уже принятого гибочного станка LV."], "success_ru": "Восемь слитков нержавеющей стали готовы к формованию пластин.", "diagnostics_ru": ["Если рецепт не стартует, проверьте 480 EU/t, температуру, схему 1 и свободный выход; газ для базового маршрута не нужен.", "Если используете схему 2, подайте азот только как добровольное ускорение."], "next_ru": "Сформуйте восемь пластин в уже принятом гибочном станке.", "task_text_ru": "Проведите восемь доменных циклов и получите восемь совместимых слитков нержавеющей стали."},
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "inputs", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "item_tag", "id": "industrial_frontier:materials/stainless_steel_ingots", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/stainless_steel_ingots.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 8, "expected_runs": 8, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/stainless_ingots", "rationale_ru": "Восемь доменных циклов дают одну полезную корпусную партию HV."},
+      "layout": {"x": 0, "y": -7.3, "shape": "square", "size": 1.0}
     },
     {
-      "alias": "if.quest.v2.p5.ae2_recovery", "engine_id": "3015000000000007", "epoch": "P5", "role": "recovery", "requirement": "required", "icon": "ae2:drive", "tags": ["ae2", "recovery"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.ae2_autocraft", "reason": "План восстановления изучается после появления цифрового хранения и автоматических заказов.", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.ae2_recovery.read", "engine_id": "4015000000000007", "type": "checkmark", "status": "verified", "text_ru": {"objective": "Прочитайте порядок восстановления ME-сети.", "help": "Это аварийная памятка; отметка не утверждает, что сеть уже пережила настоящий отказ."}}],
-      "text_ru": {"title_ru": "Если ME-сеть погасла", "lead_ru": "Автосборка полезна только тогда, когда фабрика умеет пережить её отказ.", "purpose_ru": "Диагностика идёт от дешёвого к сложному: питание, кабель, каналы, место в ячейках, недостающий вход, зависший возврат. Критические машины сохраняют физический запас на одну смену.", "steps_ru": [], "success_ru": "Вы знаете порядок проверки и не разбираете сеть до осмотра питания, каналов и очереди крафта.", "diagnostics_ru": [], "next_ru": "Региональный заказ проверит, проходит ли груз от удалённого сырья до цифрового склада без ручной перекладки каждого цикла.", "task_text_ru": "Прочитайте аварийный порядок восстановления ME-сети."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Recovery-квест допускает checkmark, потому что подтверждает чтение памятки, а не работу сети."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"]},
-      "teaching_sections": [{"kind": "recovery", "source_fields": ["text_ru.purpose_ru", "text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "prerequisites", "source_fields": ["text_ru.lead_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "ae2:network_recovery", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}],
-      "grind": {"class": "NONE", "automation_before_bulk": true, "rationale_ru": "Аварийная памятка не требует ломать рабочую сеть ради зачёта."},
-      "layout": {"x": 27, "y": 0, "shape": "square", "size": 1}
+      "alias": "if.quest.v2.p5.hv_materials",
+      "engine_id": "3A15000000000014",
+      "epoch": "P5",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:stainless_steel_plate",
+      "tags": ["mainline", "metallurgy", "hv", "material_bridge"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.stainless_ingots", "reason": "Пластины проверяются после точного сплава и восьми доменных циклов, а не появляются из подсказки JEI.", "evidence": ["kubejs/exported/gtceu_item_census.json"]}]},
+      "proofs": [{"alias": "if.task.v2.p5.hv_materials.stainless", "engine_id": "4A15000000000039", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте восемь совместимых пластин нержавеющей стали.", "help": "Передайте восемь уже принятых слитков в гибочный станок LV. Пластины образуют полезную корпусную партию, квест её не расходует."}, "item_tag": {"id": "industrial_frontier:materials/stainless_steel_plates", "count": 8}}],
+      "text_ru": {
+        "title_ru": "Нержавеющая сталь открывает HV",
+        "lead_ru": "Промышленный регион требует химически стойкого корпуса прежде, чем получит сеть HV.",
+        "purpose_ru": "Нержавеющая сталь — материальная граница HV. Она появляется в уже освоенной электрической доменной печи и только затем входит в корпуса и оборудование новой ступени.",
+        "steps_ru": ["Передайте восемь уже принятых слитков нержавеющей стали в гибочный станок LV со схемой пластин.", "Проведите восемь формовочных циклов и оставьте пластины в инвентаре до отметки: проверка их не расходует."],
+        "success_ru": "Восемь пластин нержавеющей стали готовы к корпусам и машинам HV.",
+        "diagnostics_ru": ["Если станок не выдаёт пластины, проверьте схему, вход в форме слитка и свободный выход.", "Если пластина не считается, проверьте, входит ли она в показанный тег совместимых форм."],
+        "next_ru": "Теперь вводите отдельный источник, золотой кабель, буфер и компоненты HV.",
+        "task_text_ru": "Получите восемь совместимых пластин нержавеющей стали до ввода сети HV."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "inputs", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "item_tag", "id": "industrial_frontier:materials/stainless_steel_plates", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/stainless_steel_plates.json", "kubejs/exported/gtceu_item_census.json"]}],
+      "grind": {"class": "GREEN", "training_batch": 8, "expected_runs": 8, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/hv_materials", "rationale_ru": "Восемь формовочных циклов дают реальный корпусной запас и не являются отдельным налогом квеста."},
+      "layout": {"x": 3, "y": -7.3, "shape": "hexagon", "size": 1.1}
     },
     {
-      "alias": "if.quest.v2.p5.transit_line", "engine_id": "3015000000000010", "epoch": "P5", "role": "optional_mastery", "requirement": "optional", "icon": "mtr:rail", "tags": ["optional", "city", "passenger"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.freight_rail", "reason": "Пассажирская линия изучается после грузовой, чтобы две задачи не смешивались.", "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.transit_line.item", "engine_id": "4015000000000010", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один рельс MTR.", "help": "Это вход в пассажирскую ветвь; маршрут, станция и депо остаются отдельным проектом города."}, "item": {"id": "mtr:rail", "count": 1, "consume": false}}],
-      "text_ru": {"title_ru": "Пассажиры — не груз", "lead_ru": "Грузовая магистраль уже имеет задачу; людям нужен другой ритм и другие остановки.", "purpose_ru": "MTR развивает городскую мобильность, но не является условием промышленного commissioning. Пассажирская сеть ценит частоту, доступность станций и понятный маршрут.", "steps_ru": ["Получите первый рельс MTR и наметьте линию между двумя населёнными районами."], "success_ru": "Пассажирская ветвь открыта без подмены грузовой логистики.", "diagnostics_ru": ["Если рельс недоступен, проверьте рецепты и эпохальные ограничения MTR.", "Не проводите линию через грузовой двор без отдельной безопасной платформы."], "next_ru": "Эту ветвь можно развить после основной региональной фабрики.", "task_text_ru": "Получите один рельс MTR.", "optional_note_ru": "Пассажирская сеть улучшает город и иммерсивность, но не блокирует переход к P6."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Факультативность объяснена через функцию транспорта, а не через ценность мода."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru", "text_ru.optional_note_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "mtr:rail", "evidence": ["config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/transit", "rationale_ru": "Один предмет открывает проектирование без обязательной километровой линии."},
-      "layout": {"x": 9, "y": -4, "shape": "circle", "size": 1}
-    },
-    {
-      "alias": "if.quest.v2.p5.last_mile", "engine_id": "3015000000000011", "epoch": "P5", "role": "optional_mastery", "requirement": "optional", "icon": "create:brown_toolbox", "tags": ["optional", "last_mile"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.reserve", "reason": "Последняя миля начинается от регионального буфера и заканчивается у конкретного потребителя.", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}]},
-      "proofs": [{"alias": "if.task.v2.p5.last_mile.item", "engine_id": "4015000000000011", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один переносной ящик инструментов Create.", "help": "Ящик представляет мобильное снабжение бригады, а не весь транспортный маршрут."}, "item": {"id": "create:brown_toolbox", "count": 1, "consume": false}}],
-      "text_ru": {"title_ru": "Последние сто метров", "lead_ru": "Магистраль привозит груз в район, но не ставит его у каждого рабочего места.", "purpose_ru": "Последняя миля связывает большой буфер с мастерской, магазином или стройкой. Здесь важны малый размер партии, частая доставка и удобный возврат тары.", "steps_ru": ["Соберите переносной ящик и назначьте ему конкретную бригаду или участок."], "success_ru": "У выбранного потребителя есть понятный малый запас, который не разбирает региональный склад поштучно.", "diagnostics_ru": ["Если ящик постоянно пуст, увеличьте частоту пополнения, а не весь региональный запас.", "Если предметы теряются, закрепите назначение ящика и исключите общий случайный доступ."], "next_ru": "После основной главы эту схему можно повторить для строителей, ремонтников и городских служб.", "task_text_ru": "Получите один переносной ящик инструментов Create.", "optional_note_ru": "Последняя миля улучшает обслуживание города, но основной контракт проверяет магистральный поток и резерв."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Предмет используется как честный символ малого запаса, без заявления о проверке маршрута."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru", "text_ru.optional_note_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "create:brown_toolbox", "evidence": ["config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/last_mile", "rationale_ru": "Один ящик даёт полезный мобильный запас без обязательного парка транспорта."},
-      "layout": {"x": 12, "y": 4, "shape": "circle", "size": 1}
-    },
-    {
-      "alias": "if.quest.v2.p5.contracts", "engine_id": "3015000000000013", "epoch": "P5", "role": "integration", "requirement": "required", "icon": "minecraft:writable_book", "tags": ["contract", "flow"],
-      "dependency": {"mode": "ALL_OF", "edges": [
-        {"quest": "if.quest.v2.p5.reserve", "reason": "Контракт требует физический запас, переживающий задержку транспорта.", "evidence": ["kubejs/server_scripts/40_balance/m5_regional_contracts.js"]},
-        {"quest": "if.quest.v2.p5.ae2_recovery", "reason": "Цифровой контур допускается в контракт только после изучения восстановления.", "evidence": ["authoring/quests/specs/15_p5_regional_logistics.json"]}
-      ]},
+      "alias": "if.quest.v2.p5.hv_source",
+      "engine_id": "3A15000000000011",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "gtceu:hv_steam_turbine",
+      "tags": ["mainline", "hv", "power", "tier_bridge"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.hv_materials", "reason": "Источник и кабель HV вводятся после получения нержавеющей материальной базы этой ступени.", "evidence": ["kubejs/exported/gtceu_item_census.json"]}]},
       "proofs": [
-        {"alias": "if.task.v2.p5.contracts.cargo", "engine_id": "4015000000000013", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте восемь очищенных железных руд.", "help": "Это небольшая приёмная партия для проверки грузового буфера, а не требование вручную носить каждую следующую партию."}, "item": {"id": "gtceu:purified_iron_ore", "count": 8, "consume": false}},
-        {"alias": "if.task.v2.p5.contracts.log", "engine_id": "4A1500000000000A", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте книгу для журнала отправки.", "help": "Книга обозначает журнал контрольного рейса; сама по себе она не доказывает, что груз прошёл маршрут."}, "item": {"id": "minecraft:writable_book", "count": 1, "consume": false}}
+        {"alias": "if.task.v2.p5.hv_source.generator_item", "engine_id": "4A15000000000032", "type": "item", "status": "verified", "text_ru": {"objective": "Соберите одну паровую или газовую турбину HV.", "help": "Оба источника дают напряжение HV; выберите устойчиво снабжаемое топливо."}, "item_tag": {"id": "industrial_frontier:power/hv_generators", "count": 1}},
+        {"alias": "if.task.v2.p5.hv_source.generator_use", "engine_id": "4A15000000000033", "type": "use", "status": "verified", "text_ru": {"objective": "Установите и откройте выбранную турбину HV.", "help": "Не подавайте HV в старые машины MV напрямую; сначала отделите новый участок."}, "use": {"block_tag": "industrial_frontier:power/hv_generators", "count": 1, "item_interaction": false, "check_item": false}},
+        {"alias": "if.task.v2.p5.hv_source.cable", "engine_id": "4A15000000000038", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте четыре одинарных золотых кабеля.", "help": "Четырёх кабелей достаточно для первого короткого участка HV; дальнейшую сеть рассчитывайте по току."}, "item": {"id": "gtceu:gold_single_cable", "count": 4, "consume": false}}
       ],
-      "text_ru": {"title_ru": "Контрольная региональная партия", "lead_ru": "Транспорт, буфер и цифровая сеть готовы; теперь проведём через них одну небольшую партию и запишем результат.", "purpose_ru": "Предметные задачи подтверждают только наличие груза и журнала отправки. Сам маршрут нужно проследить по линии, а его доступность ещё раз проверить при вводе фабрики в эксплуатацию.", "steps_ru": ["Подготовьте восемь очищенных железных руд и подпишите в книге точку отправления, маршрут и приёмный буфер.", "Проведите груз через физическую линию без ручной переноски каждой единицы между её участками.", "После разгрузки убедитесь, что партия доступна из складской системы, а исходный буфер готов принять следующий груз."], "success_ru": "Контрольная партия прошла региональный маршрут, запись о рейсе сделана, а логистика готова повторить тот же цикл.", "diagnostics_ru": ["Если груз не пришёл, ищите последнюю заполненную точку: выход обработки, транспорт, разгрузку, резерв или импорт в складскую сеть.", "Если приходится переносить каждую единицу вручную, разделите линию на участки и найдите место, где отсутствует автоматическая передача."], "next_ru": "Осталось пройти по трём слоям хранения и принять региональную фабрику.", "task_text_ru": "Подготовьте восемь очищенных железных руд и одну книгу журнала отправки."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Задачи честно проверяют приёмную партию и журнал; прохождение маршрута остаётся наблюдаемой частью учебного задания."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Нужны техническая и редакторская вычитки перед RU_READY."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "doc", "id": "kubejs/server_scripts/40_balance/m5_regional_contracts.js", "evidence": ["Current regional contract contour"]}, {"kind": "process", "id": "industrial_frontier:process/pack/cross_domain_contracts", "evidence": ["docs/registries/m2_domain_process_ownership.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/contracts", "rationale_ru": "Один сквозной заказ проверяет систему без обязательного марафона одинаковых поставок."},
-      "layout": {"x": 30, "y": 0, "shape": "octagon", "size": 1.5}
+      "text_ru": {
+        "title_ru": "Отдельный источник HV",
+        "lead_ru": "Крупный поток руды нельзя включать в сеть повышенного напряжения без явной границы.",
+        "purpose_ru": "Паровая или газовая турбина создаёт HV, а золотой кабель переносит энергию по новому участку. Выбор топлива остаётся за фабрикой; напряжение и изоляция сети — обязательны.",
+        "steps_ru": ["Выберите турбину под устойчивый поток пара или газа.", "Поставьте её отдельно от MV и подготовьте четыре золотых кабеля.", "Откройте интерфейс и проверьте топливо до подключения нагрузки."],
+        "success_ru": "Источник HV установлен и готов питать отдельный региональный участок.",
+        "diagnostics_ru": ["Если турбина простаивает, проверьте вид топлива и свободный выход.", "Если отключаются старые машины, разорвите прямую связь HV и MV."],
+        "next_ru": "Перед рудопромывкой поставим буфер HV.",
+        "task_text_ru": "Установите одну турбину HV и подготовьте четыре золотых кабеля."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "item_tag", "id": "industrial_frontier:power/hv_generators", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/power/hv_generators.json"]}, {"kind": "item", "id": "gtceu:gold_single_cable", "evidence": ["kubejs/exported/gtceu_item_census.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 5, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/hv_source", "rationale_ru": "Источник и короткий кабельный участок остаются рабочей инфраструктурой; дубли не требуются."},
+      "layout": {"x": 3, "y": -6, "shape": "gear", "size": 1.1}
     },
     {
-      "alias": "if.quest.v2.p5.commissioning", "engine_id": "3015000000000014", "epoch": "P5", "role": "commissioning", "requirement": "required", "icon": "create:railway_casing", "tags": ["if_commissioning_p5", "commissioning"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.contracts", "reason": "Только сквозной региональный заказ подтверждает совместную работу обязательных слоёв P5.", "evidence": ["docs/QUEST_SYSTEM_REBUILD_PLAN.md"]}]},
+      "alias": "if.quest.v2.p5.hv_buffer",
+      "engine_id": "3A15000000000012",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "gtceu:hv_battery_buffer_4x",
+      "tags": ["mainline", "hv", "power", "tier_bridge"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.hv_source", "reason": "Буфер подключают после проверки источника и золотого кабеля HV.", "evidence": ["authoring/questbook_v2/15_p5.json"]}]},
       "proofs": [
-        {"alias": "if.task.v2.p5.commissioning.reserve", "engine_id": "4015000000000014", "type": "use", "status": "verified", "text_ru": {"objective": "Откройте физический грузовой буфер.", "help": "Откройте интерфейс item vault после контрольной поставки и проверьте, что к нему остаётся прямой доступ."}, "use": {"block": "create:item_vault", "count": 1}},
-        {"alias": "if.task.v2.p5.commissioning.toms", "engine_id": "4A1500000000000B", "type": "use", "status": "verified", "text_ru": {"objective": "Откройте терминал Tom's Simple Storage.", "help": "Убедитесь, что региональный буфер виден через знакомый промежуточный слой хранения."}, "use": {"block": "toms_storage:ts.storage_terminal", "count": 1}},
-        {"alias": "if.task.v2.p5.commissioning.ae2", "engine_id": "4A1500000000000C", "type": "use", "status": "verified", "text_ru": {"objective": "Откройте ME-накопитель.", "help": "Проверьте доступ к ячейкам и убедитесь, что критический запас не заперт только внутри цифровой сети."}, "use": {"block": "ae2:drive", "count": 1}}
+        {"alias": "if.task.v2.p5.hv_buffer.item", "engine_id": "4A15000000000034", "type": "item", "status": "verified", "text_ru": {"objective": "Соберите четырёхсекционный аккумуляторный буфер HV.", "help": "Один буфер достаточен для учебной рудопромывочной линии."}, "item": {"id": "gtceu:hv_battery_buffer_4x", "count": 1, "consume": false}},
+        {"alias": "if.task.v2.p5.hv_buffer.batteries", "engine_id": "4A15000000000040", "type": "item", "status": "verified", "text_ru": {"objective": "Подготовьте четыре совместимых аккумулятора HV.", "help": "Подойдёт любой набор кадмиевых, литиевых и натриевых аккумуляторов HV из списка. Перед переходом к EV полностью зарядите все четыре."}, "item_tag": {"id": "industrial_frontier:power/hv_batteries", "count": 4}},
+        {"alias": "if.task.v2.p5.hv_buffer.use", "engine_id": "4A15000000000035", "type": "use", "status": "verified", "text_ru": {"objective": "Установите и откройте аккумуляторный буфер HV.", "help": "Проверьте направление, аккумуляторы нужной ступени и только затем подключайте машину."}, "use": {"block": "gtceu:hv_battery_buffer_4x", "count": 1, "item_interaction": false, "check_item": false}}
       ],
-      "text_ru": {"title_ru": "Региональная фабрика принята", "lead_ru": "Контрольная партия готова; комиссия пройдёт по физическому, переходному и цифровому слоям хранения.", "purpose_ru": "Это единственная точка перехода P5 → P6. Она проверяет доступность трёх складских слоёв после контрольного рейса и не выдаёт наличие отдельных блоков за автоматическое доказательство всего маршрута.", "steps_ru": ["После разгрузки откройте item vault и проверьте физический запас.", "Откройте терминал Tom's Simple Storage и убедитесь, что через него виден региональный буфер.", "Откройте ME-накопитель, проверьте ячейки и только затем завершите контрольный обход."], "success_ru": "Все три слоя хранения доступны после поставки; квест становится мостом из P5 в P6, а линия остаётся готовой к следующей партии.", "diagnostics_ru": ["Если один из интерфейсов не открывается, сначала проверьте питание, кабельную связь и прямой доступ к соответствующему блоку.", "Если цифровая сеть скрывает неисправность физической линии, вернитесь к item vault и проследите путь груза от разгрузки."], "next_ru": "P6 использует химию P4 и региональную сеть P5 для полного гражданского ядерного цикла.", "task_text_ru": "Откройте item vault, терминал Tom's Simple Storage и ME-накопитель."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Комиссионный обход проверяет доступность трёх складских слоёв; смену эпохи выполняет единственный переходный квест."},
-      "editorial_review": {"state": "RU_PRIMARY_DRAFTED", "marks": ["RU_PRIMARY_DRAFTED"], "review_notes": ["Нужны техническая и редакторская вычитки перед RU_READY."]},
-      "teaching_sections": [{"kind": "prerequisites", "source_fields": ["text_ru.lead_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.purpose_ru", "text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:tech_epoch", "evidence": ["kubejs/server_scripts/40_balance/m3_threat_director.js"]}, {"kind": "quest", "id": "if.quest.v2.p5.contracts", "evidence": ["authoring/questbook_v2/15_p5.json"]}],
-      "grind": {"class": "NONE", "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/commissioning", "rationale_ru": "Комиссия не повторяет ресурсную партию после уже выполненного заказа."},
-      "layout": {"x": 33, "y": 0, "shape": "gear", "size": 2},
-      "commissioning": {"epoch": "P5", "advances_to": "P6", "required_branch_ends": ["if.quest.v2.p5.contracts"], "epoch_state_evidence": ["kubejs/server_scripts/10_progression/quest_commissioning_bridge.js", "kubejs/server_scripts/40_balance/m3_threat_director.js"]}
+      "text_ru": {
+        "title_ru": "Резерв для рудопромывки",
+        "lead_ru": "Источник HV готов; следующий шаг — отделить его от переменной нагрузки машины.",
+        "purpose_ru": "Буфер удерживает локальный запас и сглаживает пусковые пики. Четыре непустые ячейки также станут честным источником 4 A на низкой стороне будущего перехода HV→EV.",
+        "steps_ru": ["Поставьте буфер между турбиной и будущей машиной.", "Разверните его правильной стороной, вставьте четыре аккумулятора HV и полностью зарядите их.", "Откройте интерфейс и убедитесь вручную, что пустых ячеек не осталось."],
+        "success_ru": "Буфер HV установлен, содержит четыре подготовленных аккумулятора и доступен для проверки.",
+        "diagnostics_ru": ["Если буфер не заряжается, проверьте ориентацию и выход турбины.", "Если он мгновенно пустеет, отключите нагрузку и проверьте её ступень."],
+        "next_ru": "Теперь подтвердим схему и корпус HV.",
+        "task_text_ru": "Соберите буфер HV, подготовьте четыре аккумулятора, полностью зарядите их и откройте интерфейс."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "block", "id": "gtceu:hv_battery_buffer_4x", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "item_tag", "id": "industrial_frontier:power/hv_batteries", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/power/hv_batteries.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 5, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/hv_buffer", "rationale_ru": "Буфер и четыре аккумулятора остаются рабочим резервом HV и затем питают низкую сторону перехода EV."},
+      "layout": {"x": 3, "y": -4.7, "shape": "square", "size": 1}
+    },
+    {
+      "alias": "if.quest.v2.p5.hv_components",
+      "engine_id": "3A15000000000013",
+      "epoch": "P5",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "gtceu:hv_machine_hull",
+      "tags": ["mainline", "hv", "components", "tier_bridge"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.hv_buffer", "reason": "Компоненты HV проверяются после безопасной приёмки питания этой ступени.", "evidence": ["authoring/questbook_v2/15_p5.json"]}]},
+      "proofs": [
+        {"alias": "if.task.v2.p5.hv_components.circuit", "engine_id": "4A15000000000036", "type": "item", "status": "verified", "text_ru": {"objective": "Получите одну схему уровня HV.", "help": "Подойдёт любая схема из семейства HV; конкретная технологическая линия остаётся вашим выбором."}, "item_tag": {"id": "gtceu:circuits/hv", "count": 1}},
+        {"alias": "if.task.v2.p5.hv_components.hull", "engine_id": "4A15000000000037", "type": "item", "status": "verified", "text_ru": {"objective": "Получите один корпус машины HV.", "help": "Корпус подтверждает компонентную базу до готовой рудопромывочной машины."}, "item": {"id": "gtceu:hv_machine_hull", "count": 1, "consume": false}}
+      ],
+      "text_ru": {
+        "title_ru": "Схема и корпус HV",
+        "lead_ru": "Питание принято; теперь новая машина должна опираться на компоненты своей ступени.",
+        "purpose_ru": "Схема управляет операцией, корпус принимает силовую часть машины. Оба нужны до рудопромывки, а не после первого продукта.",
+        "steps_ru": ["Выберите любую схему семейства HV.", "Соберите один корпус HV и предъявите оба предмета."],
+        "success_ru": "Схема и корпус HV готовы к сборке рудопромывочной машины.",
+        "diagnostics_ru": ["Если схема не принимается, проверьте её уровень.", "Если корпус закрыт, проследите его рецепт до первого отсутствующего компонента."],
+        "next_ru": "Теперь соберите и откройте рудопромывочную машину HV.",
+        "task_text_ru": "Получите одну схему семейства HV и один корпус машины HV."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "inputs", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "item_tag", "id": "gtceu:circuits/hv", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}, {"kind": "item", "id": "gtceu:hv_machine_hull", "evidence": ["kubejs/exported/gtceu_item_census.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 2, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/hv_components", "rationale_ru": "По одному компоненту достаточно; квест их не расходует."},
+      "layout": {"x": 3, "y": -3.4, "shape": "diamond", "size": 1}
+    },
+    {
+      "alias": "if.quest.v2.p5.hv_chemical_reactor",
+      "engine_id": "3A15000000000015",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "gtceu:hv_chemical_reactor",
+      "tags": ["mainline", "hv", "chemistry", "machine_before_product"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.hv_components", "reason": "Реактор аммиачной ступени собирают после приёмки компонентов и сети HV.", "evidence": ["kubejs/exported/gtceu_item_census.json"]}]},
+      "proofs": [
+        {"alias": "if.task.v2.p5.hv_chemical_reactor.item", "engine_id": "4A1500000000003A", "type": "item", "status": "verified", "text_ru": {"objective": "Соберите химический реактор HV GregTech.", "help": "Аммиак из азота и водорода требует 384 EU/t, поэтому реактор MV из P4 эту операцию не выполнит."}, "item": {"id": "gtceu:hv_chemical_reactor", "count": 1, "consume": false}},
+        {"alias": "if.task.v2.p5.hv_chemical_reactor.use", "engine_id": "4A1500000000003B", "type": "use", "status": "verified", "text_ru": {"objective": "Установите и откройте химический реактор HV.", "help": "Подготовьте раздельные газовые входы азота и водорода и свободный выход аммиака."}, "use": {"block": "gtceu:hv_chemical_reactor", "count": 1, "item_interaction": false, "check_item": false}}
+      ],
+      "text_ru": {
+        "title_ru": "Азотная программа начинается на HV",
+        "lead_ru": "Источник газов известен ещё с P4, но реальный синтез аммиака требует ступени HV.",
+        "purpose_ru": "Рецепт одной партии аммиака потребляет 1000 мБ азота и 3000 мБ водорода при 384 EU/t. Отдельный реактор HV устраняет ложное обещание, будто ту же операцию можно провести в машине MV.",
+        "steps_ru": ["Соберите и установите химический реактор HV GregTech.", "Подключите его к принятой сети HV и разведите два газовых входа.", "Откройте интерфейс и оставьте чистый выходной резервуар для аммиака."],
+        "success_ru": "Химический реактор HV установлен, открывается и готов принять точную аммиачную загрузку.",
+        "diagnostics_ru": ["Если рецепт недоступен, проверьте, что машина и сеть действительно имеют уровень HV.", "Если процесс останавливается, освободите выход аммиака и проверьте оба газовых входа."],
+        "next_ru": "Теперь подготовьте 1000 мБ азота и 3000 мБ водорода в раздельных буферах.",
+        "task_text_ru": "Соберите, установите и откройте химический реактор HV GregTech."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "HV gate следует фактическим 384 EU/t установленного GTCEu."},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Machine ID и EU/t ammonia_from_elements подтверждены GTCEu 7.5.3."]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "prerequisites", "source_fields": ["text_ru.steps_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "block", "id": "gtceu:hv_chemical_reactor", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "process", "id": "industrial_frontier:p5/ammonia_from_elements", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}],
+      "grind": {"class": "TEACHING", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/hv_chemical_reactor", "rationale_ru": "Один долговременный реактор обслуживает азотную химию; запасной корпус не требуется."},
+      "layout": {"x": 6, "y": -6, "shape": "gear", "size": 1.2}
+    },
+    {
+      "alias": "if.quest.v2.p5.nitrogen_feedstock",
+      "engine_id": "3A14000000000019",
+      "epoch": "P5",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "gtceu:nitrogen_bucket",
+      "tags": ["mainline", "chemistry", "nitrogen", "source_before_product", "hv"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.hv_chemical_reactor", "reason": "Азот и водород готовят после установки реактора HV, который действительно выдерживает 384 EU/t аммиачного синтеза.", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar", "docs/registries/m2_substance_passports.json"]}]},
+      "proofs": [
+        {"alias": "if.task.v2.p5.nitrogen_feedstock.nitrogen", "engine_id": "4A14000000000042", "type": "fluid", "status": "verified", "text_ru": {"objective": "Подготовьте 1000 мБ азота.", "help": "Воздух — источник, но реактору нужен выделенный азотный поток в отдельном буфере."}, "fluid": {"id": "gtceu:nitrogen", "amount": 1000}},
+        {"alias": "if.task.v2.p5.nitrogen_feedstock.hydrogen", "engine_id": "4A14000000000043", "type": "fluid", "status": "verified", "text_ru": {"objective": "Подготовьте 3000 мБ водорода.", "help": "Одна аммиачная партия требует три части водорода на одну часть азота. Держите газ отдельно от кислорода и открытого огня."}, "fluid": {"id": "gtceu:hydrogen", "amount": 3000}}
+      ],
+      "text_ru": {"title_ru": "Азот и водород для ступени HV", "lead_ru": "Азотная программа отложена до честной мощности HV; теперь два газовых потока можно превратить в аммиак.", "purpose_ru": "Одна аммиачная партия требует 1000 мБ азота и 3000 мБ водорода. Эти раздельные буферы следуют после принятого реактора HV, поэтому книга больше не предлагает невозможный синтез в машине MV.", "steps_ru": ["Выделите 1000 мБ азота из доступного воздушного маршрута.", "Получите 3000 мБ водорода освоенным способом и поместите оба газа в разные подписанные буферы.", "Подключите оба буфера к принятому химическому реактору HV, но сохраните раздельную маркировку потоков."], "success_ru": "1000 мБ азота и 3000 мБ водорода готовы к одной учебной аммиачной партии на HV.", "diagnostics_ru": ["Если аммиачный рецепт не появляется, проверьте пропорцию один к трём и уровень машины HV.", "Не соединяйте водородный буфер с кислородной линией без контролируемого рецепта."], "next_ru": "Теперь получите 1000 мБ аммиака в ветке P5.", "task_text_ru": "Подготовьте 1000 мБ азота и 3000 мБ водорода в отдельных буферах для реактора HV."},
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "inputs", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "fluid", "id": "gtceu:nitrogen", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "fluid", "id": "gtceu:hydrogen", "evidence": ["kubejs/exported/gtceu_item_census.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 2, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/nitrogen_feedstock", "rationale_ru": "Два газовых буфера содержат точную стехиометрию одной аммиачной партии без раннего массового производства."},
+      "layout": {"x": 9, "y": -8, "shape": "square", "size": 1}
+    },
+    {
+      "alias": "if.quest.v2.p5.ammonia",
+      "engine_id": "3A15000000000016",
+      "epoch": "P5",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:ammonia_bucket",
+      "tags": ["mainline", "hv", "chemistry", "source_before_product"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.nitrogen_feedstock", "reason": "Аммиак требуют только после приёмки реактора HV и точных газовых входов.", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}]},
+      "proofs": [{"alias": "if.task.v2.p5.ammonia.fluid", "engine_id": "4A1500000000003C", "type": "fluid", "status": "verified", "text_ru": {"objective": "Получите 1000 мБ аммиака GregTech.", "help": "Подайте 1000 мБ азота и 3000 мБ водорода в принятый химический реактор HV."}, "fluid": {"id": "gtceu:ammonia", "amount": 1000}}],
+      "text_ru": {
+        "title_ru": "Первая аммиачная партия",
+        "lead_ru": "Реактор HV и оба газа готовы; теперь одна операция должна подтвердить синтез.",
+        "purpose_ru": "1000 мБ азота и 3000 мБ водорода дают 1000 мБ аммиака. Эта партия станет точным входом крупного химического реактора для 1000 мБ азотной кислоты.",
+        "steps_ru": ["Подайте подтверждённые азот и водород в химический реактор HV.", "Отведите 1000 мБ аммиака в отдельный подписанный резервуар."],
+        "success_ru": "В отдельном резервуаре находятся 1000 мБ аммиака для азотнокислотной ступени.",
+        "diagnostics_ru": ["Если реакция не запускается, проверьте пропорцию один к трём и напряжение HV.", "Если выход блокируется, освободите резервуар от другой жидкости."],
+        "next_ru": "Для превращения этой партии в кислоту соберите крупный химический реактор и подготовьте 4000 мБ кислорода.",
+        "task_text_ru": "Получите 1000 мБ аммиака в химическом реакторе HV."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Стехиометрия и EU/t подтверждены установленным GTCEu."]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "inputs", "source_fields": ["text_ru.steps_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "fluid", "id": "gtceu:ammonia", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "process", "id": "industrial_frontier:p5/ammonia_from_elements", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}],
+      "grind": {"class": "TEACHING", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/ammonia", "rationale_ru": "Одна точная партия покрывает следующий кислотный рецепт без лишнего газа."},
+      "layout": {"x": 9, "y": -6, "shape": "circle", "size": 1}
+    },
+    {
+      "alias": "if.quest.v2.p5.nitric_lcr_setup",
+      "engine_id": "3A15000000000017",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "gtceu:large_chemical_reactor",
+      "tags": ["mainline", "hv", "chemistry", "machine_before_product"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.ammonia", "reason": "Крупный реактор вводят после получения одной точной партии аммиака и до требования азотной кислоты.", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}]},
+      "proofs": [
+        {"alias": "if.task.v2.p5.nitric_lcr_setup.item", "engine_id": "4A1500000000003D", "type": "item", "status": "verified", "text_ru": {"objective": "Соберите контроллер крупного химического реактора GregTech.", "help": "Маршрут 1000 мБ аммиака в 1000 мБ кислоты выполняется именно в этом многоблоке."}, "item": {"id": "gtceu:large_chemical_reactor", "count": 1, "consume": false}},
+        {"alias": "if.task.v2.p5.nitric_lcr_setup.use", "engine_id": "4A1500000000003E", "type": "use", "status": "verified", "text_ru": {"objective": "Соберите многоблок и откройте его контроллер.", "help": "Подготовьте вход аммиака, отдельный вход кислорода и раздельные выходы кислоты и воды."}, "use": {"block": "gtceu:large_chemical_reactor", "count": 1, "item_interaction": false, "check_item": false}},
+        {"alias": "if.task.v2.p5.nitric_lcr_setup.oxygen", "engine_id": "4A1500000000003F", "type": "fluid", "status": "verified", "text_ru": {"objective": "Подготовьте 4000 мБ кислорода.", "help": "Это точный расход крупного реактора на одну партию из 1000 мБ аммиака."}, "fluid": {"id": "gtceu:oxygen", "amount": 4000}}
+      ],
+      "text_ru": {
+        "title_ru": "Крупный реактор для азотной кислоты",
+        "lead_ru": "Аммиак готов; самый короткий честный маршрут одной кислотной партии требует отдельного многоблока.",
+        "purpose_ru": "Крупный химический реактор принимает 1000 мБ аммиака и 4000 мБ кислорода, затем выдаёт 1000 мБ азотной кислоты и 1000 мБ воды. Это короче и менее расточительно, чем несколько одиночных ступеней на двойную партию.",
+        "steps_ru": ["Соберите и сформируйте крупный химический реактор GregTech.", "Подведите 1000 мБ аммиака и подготовьте 4000 мБ кислорода в отдельном буфере.", "Откройте контроллер и назначьте раздельные выходы кислоты и воды."],
+        "success_ru": "Многоблок принят, а 1000 мБ аммиака и 4000 мБ кислорода готовы к одной кислотной партии.",
+        "diagnostics_ru": ["Если структура не формируется, проверьте корпус, люки и ориентацию контроллера.", "Если рецепт не виден, выберите схему 24 и проверьте точные объёмы обоих газов."],
+        "next_ru": "Теперь проведите одну загрузку и подтвердите 1000 мБ азотной кислоты.",
+        "task_text_ru": "Соберите и откройте крупный химический реактор, затем подготовьте 4000 мБ кислорода."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["LCR route 1000 NH3 + 4000 O2 подтверждён GTCEu 7.5.3."]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "prerequisites", "source_fields": ["text_ru.steps_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "block", "id": "gtceu:large_chemical_reactor", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "fluid", "id": "gtceu:oxygen", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "process", "id": "industrial_frontier:p5/nitric_acid_from_ammonia", "evidence": ["mods/gtceu-1.20.1-7.5.3.jar"]}],
+      "grind": {"class": "TEACHING", "training_batch": 3, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p5/nitric_lcr_setup", "rationale_ru": "Один долговременный многоблок и одна точная газовая партия исключают двойной обход одиночных рецептов."},
+      "layout": {"x": 12, "y": -6, "shape": "gear", "size": 1.5}
+    },
+    {
+      "alias": "if.quest.v2.p5.nitrogen",
+      "engine_id": "321947AAE68FE429",
+      "epoch": "P5",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:nitric_acid_bucket",
+      "tags": [
+        "chemistry",
+        "nitrogen"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.nitric_lcr_setup",
+            "reason": "Азотную кислоту требуют только после аммиака, 4000 мБ кислорода и приёмки крупного химического реактора.",
+            "evidence": [
+              "docs/registries/m2_domain_process_ownership.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.nitrogen.fluid",
+          "engine_id": "4B7658AEED6E4168",
+          "type": "fluid",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите 1000 мБ азотной кислоты.",
+            "help": "Проверьте весь путь от азота и водорода через аммиак, если конечная реакция не запускается."
+          },
+          "fluid": {
+            "id": "gtceu:nitric_acid",
+            "amount": 1000
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Азот из воздуха",
+        "lead_ru": "Аммиак, кислород и крупный реактор готовы; теперь одна точная загрузка завершит азотнокислотную ступень P5.",
+        "purpose_ru": "Крупный химический реактор превращает 1000 мБ аммиака и 4000 мБ кислорода в 1000 мБ азотной кислоты и 1000 мБ воды. Поле P4 не притворяется потребителем этой кислоты: продукт нужен дальнейшей химии, очистке и специальным синтезам.",
+        "steps_ru": [
+          "Подайте 1000 мБ аммиака и 4000 мБ кислорода в принятый крупный химический реактор со схемой 24.",
+          "Разведите 1000 мБ азотной кислоты и 1000 мБ воды по разным выходам."
+        ],
+        "success_ru": "Отдельный химический буфер содержит 1000 мБ азотной кислоты.",
+        "diagnostics_ru": [
+          "Если рецепт не появляется, проверьте схему 24 и точные объёмы аммиака с кислородом.",
+          "Если кислота не выходит, освободите оба жидкостных выхода: вода является обязательным совместным продуктом."
+        ],
+        "next_ru": "Азотная кислота войдёт в приёмку P5 и дальнейшие специальные химические цепочки.",
+        "task_text_ru": "Получите 1000 мБ азотной кислоты."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Азотная кислота перенесена на фактический HV/LCR-маршрут и больше не служит фиктивным гейтом удобрения."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Fluid ID подтверждён локальным census."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "fluid",
+          "id": "gtceu:nitric_acid",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "fluid",
+          "id": "gtceu:ammonia",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p5/nitrogen_chemistry",
+        "rationale_ru": "Одна точная загрузка крупного реактора подтверждает кислотную линию без массового накопления продукта."
+      },
+      "layout": {
+        "x": 15,
+        "y": -6,
+        "shape": "hexagon",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.hv_washery",
+      "engine_id": "3A15000000000010",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "gtceu:hv_ore_washer",
+      "tags": ["mainline", "hv", "ore_processing", "machine_before_product"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p5.hv_components", "reason": "Рудопромывочную машину собирают после поэтапной приёмки питания, буфера и компонентов HV.", "evidence": ["authoring/questbook_v2/15_p5.json"]}]},
+      "proofs": [
+        {"alias": "if.task.v2.p5.hv_washery.item", "engine_id": "4A15000000000030", "type": "item", "status": "verified", "text_ru": {"objective": "Соберите рудопромывочную машину HV GregTech.", "help": "Нужна одна рабочая машина для учебной линии; строить несколько одинаковых установок ради задания не требуется."}, "item": {"id": "gtceu:hv_ore_washer", "count": 1, "consume": false}},
+        {"alias": "if.task.v2.p5.hv_washery.use", "engine_id": "4A15000000000031", "type": "use", "status": "verified", "text_ru": {"objective": "Установите и откройте рудопромывочную машину HV.", "help": "Открытие интерфейса подтверждает размещённую установку до выпуска очищенной руды."}, "use": {"block": "gtceu:hv_ore_washer", "count": 1, "item_interaction": false, "check_item": false}}
+      ],
+      "text_ru": {
+        "title_ru": "Промывочная линия HV",
+        "lead_ru": "Сеть и компоненты HV уже приняты; теперь нужна конкретная машина, которая выдаёт очищенную форму руды.",
+        "purpose_ru": "Рудопромывочная машина становится входом в крупную переработку P5 и не привязывает вас к одной железной руде: следующая задача принимает несколько железосодержащих вариантов в нужной очищенной форме.",
+        "steps_ru": ["Соберите одну рудопромывочную машину HV на уже принятой компонентной базе.", "Подведите воду, подготовьте вход сырья и раздельные выходы основной и побочной продукции.", "Откройте интерфейс; только после этого выбирайте один доступный железосодержащий маршрут."],
+        "success_ru": "Рудопромывочная машина HV принята; входы и выходы подготовлены к первой очищенной партии.",
+        "diagnostics_ru": ["Если машина не запускается, проверьте напряжение, наличие воды и свободный выход.", "Если рецепт показывает другую форму входа, не подменяйте её похожей рудой: сверьте всю последовательность дробления и промывки."],
+        "next_ru": "Теперь получите небольшую партию любой подходящей очищенной железосодержащей руды и измерьте её поток.",
+        "task_text_ru": "Соберите, установите и откройте рудопромывочную машину HV."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "HV-машина вынесена в обязательный предшественник очищенной руды."},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Machine ID подтверждён локальным GTCEu census; рецепт проверяет владелец сборки."]},
+      "teaching_sections": [{"kind": "prerequisites", "source_fields": ["text_ru.steps_ru"]}, {"kind": "operation", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "block", "id": "gtceu:hv_ore_washer", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "item_tag", "id": "industrial_frontier:quest_sources/purified_iron_bearing_ores", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_sources/purified_iron_bearing_ores.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p5/hv_washery", "rationale_ru": "Одна долговременно полезная машина подтверждает операцию; дубликаты не требуются."},
+      "layout": {"x": 3, "y": -2, "shape": "gear", "size": 1.25}
+    },
+    {
+      "alias": "if.quest.v2.p5.bulk_processing",
+      "engine_id": "37AAC2C4C2466FEF",
+      "epoch": "P5",
+      "role": "automation",
+      "requirement": "required",
+      "icon": "gtceu:purified_iron_ore",
+      "tags": [
+        "scale",
+        "ore_processing"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.hv_washery",
+            "reason": "Измеримый поток очищенной руды появляется только после приёмки рудопромывочной машины HV.",
+            "evidence": [
+              "docs/registries/m2_domain_process_ownership.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.bulk_processing.item",
+          "engine_id": "4ACC05026AA4E987",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите три единицы очищенной железосодержащей руды из списка задачи.",
+            "help": "Подойдут очищенные железо, магнетит, гематит, лимонит, пирит, гётит и оба минеральных песка. Нужна именно очищенная форма, а не сырая руда или готовый слиток."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:quest_sources/purified_iron_bearing_ores",
+            "count": 3
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Поток, а не единичный рецепт",
+        "lead_ru": "Регион имеет смысл только тогда, когда линия выпускает повторяемую партию.",
+        "purpose_ru": "Основную цепочку обогащения руды по-прежнему выполняет GregTech: дробление, промывка и очистка увеличивают выход и дают побочные минералы. Трёх единиц достаточно, чтобы проверить повторяемый процесс без складского заказа.",
+        "steps_ru": [
+          "Подайте найденное железосодержащее сырьё в цепочку GregTech и проведите его через принятую рудопромывочную машину HV до соответствующей очищенной руды.",
+          "Настройте непрерывный вывод основного продукта и отдельный буфер для побочных материалов."
+        ],
+        "success_ru": "Линия выдаёт три единицы подходящей очищенной железосодержащей руды без ручной перекладки каждого цикла.",
+        "diagnostics_ru": [
+          "Если процесс остановился, проверьте свободный выход для побочного продукта и жидкость промывки.",
+          "Если продукт не засчитался, убедитесь, что это очищенная руда из списка задачи, а не раздробленная, промытая или центрифугированная форма."
+        ],
+        "next_ru": "Теперь партии нужно регулярно перевозить от производственного узла к региональному буферу.",
+        "task_text_ru": "Получите три единицы любой очищенной железосодержащей руды из списка задачи."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Партия ограничена тремя единицами и следует после доступной автоматизации."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Item ID подтверждён локальным GTCEu census; рецепт проверяется пользователем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:quest_sources/purified_iron_bearing_ores",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_sources/purified_iron_bearing_ores.json",
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "process",
+          "id": "industrial_frontier:process/gtceu/ore_processing",
+          "evidence": [
+            "docs/registries/m2_domain_process_ownership.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 3,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/bulk_processing",
+        "rationale_ru": "Три единицы показывают повторяемость линии; дальнейший объём определяется грузовым спросом."
+      },
+      "layout": {
+        "x": 3,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.freight_rail",
+      "engine_id": "3D2D584B4AC7C5B0",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "create:track",
+      "tags": [
+        "freight",
+        "rail"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.bulk_processing",
+            "reason": "Грузовая магистраль строится для уже существующей серийной партии.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.freight_rail.place",
+          "engine_id": "42DA7F8F9B82CBA0",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите восемь участков пути Create или Steam 'n' Rails.",
+            "help": "Подойдёт любой путь из общего семейства Create: выберите материал под местность. Небольшого испытательного участка достаточно."
+          },
+          "place": {
+            "block_tag": "create:tracks",
+            "count": 8
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Грузовой путь",
+        "lead_ru": "Партия появилась; теперь ей нужен маршрут между удалёнными узлами.",
+        "purpose_ru": "Create и Steam 'n' Rails отвечают за тяжёлый регулярный груз. Путь, разъезд, станция, сигнал и буфер решают разные проблемы, поэтому начинать нужно с короткого испытательного участка.",
+        "steps_ru": [
+          "Разметьте прямой испытательный участок и разместите восемь блоков пути.",
+          "Оставьте место под станцию, разгрузочный буфер и будущий разъезд."
+        ],
+        "success_ru": "Испытательный путь размещён и имеет понятные точки будущей загрузки и выгрузки.",
+        "diagnostics_ru": [
+          "Если путь не соединяется, проверьте уклон, радиус поворота и опору под участком.",
+          "Не стройте длинную магистраль до проверки станции и размера состава."
+        ],
+        "next_ru": "Параллельно появится водное плечо для тяжёлого и наливного груза.",
+        "task_text_ru": "Разместите восемь участков совместимого пути Create или Steam 'n' Rails."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Place доказывает построенный испытательный участок без завышенного обещания расписания."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block_tag",
+          "id": "create:tracks",
+          "evidence": [
+            "config/ftbquests/quests/chapters/15_p5.snbt"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "railways",
+          "evidence": [
+            "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 8,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/freight_rail",
+        "rationale_ru": "Все восемь участков сразу образуют один короткий испытательный путь; строить километры рельсов для выполнения задания не нужно."
+      },
+      "layout": {
+        "x": 6,
+        "y": -2,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.water_route",
+      "engine_id": "37C79C0EFF3E5B1B",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "littlelogistics:barge",
+      "tags": [
+        "freight",
+        "water"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.bulk_processing",
+            "reason": "Водный маршрут обслуживает тот же измеримый поток другим транспортным профилем.",
+            "evidence": [
+              "mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.water_route.dock",
+          "engine_id": "4DB31F425AE89127",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Поставьте причал для баржи.",
+            "help": "Причал должен быть доступен с воды и со стороны складского буфера."
+          },
+          "place": {
+            "block": "littlelogistics:barge_dock",
+            "count": 1
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.water_route.vessels",
+          "engine_id": "49C3A555CDBB4276",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один паровой или электрический буксир.",
+            "help": "Оба буксира Little Logistics ведут грузовой состав; выберите тягу под доступное топливо или электрическую сеть."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:transport/tugs",
+            "count": 1
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.water_route.barge",
+          "engine_id": "4FA572A285C04773",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите одну грузовую баржу.",
+            "help": "Для наливных грузов позднее можно добавить специализированную наливную баржу."
+          },
+          "item": {
+            "id": "littlelogistics:barge",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Водное грузовое плечо",
+        "lead_ru": "Рельс хорош не везде: река уже даёт готовый коридор для тяжёлого груза.",
+        "purpose_ru": "Little Logistics обслуживает медленные, тяжёлые и наливные партии. Буксир задаёт движение, баржа несёт груз, причал связывает воду со складом.",
+        "steps_ru": [
+          "Поставьте причал у доступной воды и предусмотрите рядом место для разгрузки.",
+          "Соберите буксир и грузовую баржу; маршрут и расписание проверит региональный заказ."
+        ],
+        "success_ru": "Причал установлен, а буксир с баржей готовы к испытательному рейсу.",
+        "diagnostics_ru": [
+          "Если судно не подходит к причалу, проверьте глубину, свободный проход и ориентацию блока.",
+          "Если маршрут обрывается, устраните сухой участок или слишком тесный поворот."
+        ],
+        "next_ru": "Рельсовое и водное плечи сойдутся в общем региональном буфере.",
+        "task_text_ru": "Поставьте причал и получите буксир с одной грузовой баржей."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Три proof различают инфраструктуру, тягу и грузовую единицу."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "IDs подтверждены установленным JAR."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block",
+          "id": "littlelogistics:barge_dock",
+          "evidence": [
+            "mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:transport/tugs",
+          "evidence": [
+            "mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "littlelogistics:barge",
+          "evidence": [
+            "mods/littlelogistics-mc1.20.1-v1.20.1.2.jar!assets/littlelogistics/lang/en_us.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/water_route",
+        "rationale_ru": "Один комплект достаточен для первого маршрута и сразу остаётся рабочим активом."
+      },
+      "layout": {
+        "x": 6,
+        "y": 2,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.reserve",
+      "engine_id": "32968094534C11AF",
+      "epoch": "P5",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "create:item_vault",
+      "tags": [
+        "buffer",
+        "physical_logistics"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.freight_rail",
+            "reason": "Рельсовая разгрузка должна иметь физический приёмный запас.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p5.water_route",
+            "reason": "Водный маршрут сходится в тот же региональный узел без прямой перекладки в цифровую сеть.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.reserve.place",
+          "engine_id": "4E1234BBD3138804",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Поставьте одно хранилище предметов Create.",
+            "help": "Разместите его между разгрузкой и следующим потребителем, а не в тупике без выхода."
+          },
+          "place": {
+            "block": "create:item_vault",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Региональный буфер",
+        "lead_ru": "Два маршрута готовы, но без запаса любой опоздавший рейс остановит фабрику.",
+        "purpose_ru": "Физический буфер отделяет ритм транспорта от ритма производства. Он должен принять целую поставку и отдать следующую без участия цифровой сети.",
+        "steps_ru": [
+          "Поставьте хранилище предметов Create рядом с узлом разгрузки.",
+          "Подведите отдельные вход и выход так, чтобы транспорт и производство не спорили за одну сторону."
+        ],
+        "success_ru": "Буфер стоит между маршрутом и потребителем и остаётся доступным при выключенной AE2.",
+        "diagnostics_ru": [
+          "Если разгрузка встаёт, проверьте заполнение буфера и направление устройств ввода.",
+          "Если производство забирает всё мгновенно, добавьте ограничение или отдельный аварийный запас."
+        ],
+        "next_ru": "К этому физическому запасу сначала подключится простой общий терминал Tom's Simple Storage.",
+        "task_text_ru": "Поставьте одно хранилище предметов Create как региональный буфер."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Буфер появляется до цифрового склада и сохраняет автономность линии."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block",
+          "id": "create:item_vault",
+          "evidence": [
+            "config/ftbquests/quests/chapters/15_p5.snbt"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/reserve",
+        "rationale_ru": "Один буфер проверяет развязку ритмов без требования строить складской квартал."
+      },
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.toms_storage",
+      "engine_id": "3A15000000000001",
+      "epoch": "P5",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "toms_storage:ts.storage_terminal",
+      "tags": [
+        "storage",
+        "bridge"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.reserve",
+            "reason": "Региональный терминал подключается к уже существующему грузовому буферу, а не заменяет его.",
+            "evidence": [
+              "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/lang/en_us.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.storage.level",
+            "reason": "Подробное знакомство с Tom's Simple Storage находится в системной главе; здесь игрок применяет уже освоенную схему в масштабе региона.",
+            "evidence": [
+              "authoring/questbook_v2/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.toms_storage.connector",
+          "engine_id": "4A15000000000003",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Поставьте соединитель инвентарей Tom's Simple Storage.",
+            "help": "Соединитель должен касаться или видеть подключаемую сеть инвентарей по правилам мода."
+          },
+          "place": {
+            "block": "toms_storage:ts.inventory_connector",
+            "count": 1
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.toms_storage.terminal",
+          "engine_id": "4A15000000000004",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Поставьте терминал хранения Tom's Simple Storage.",
+            "help": "Терминал без соединителя и кабельной связи не увидит ваши сундуки."
+          },
+          "place": {
+            "block": "toms_storage:ts.storage_terminal",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Домашний склад выходит в регион",
+        "lead_ru": "Базовая сеть Tom's Simple Storage уже освоена; теперь перенесём знакомую схему к грузовому буферу.",
+        "purpose_ru": "Знакомые соединитель и терминал теперь становятся частью региональной логистики. При этом у грузового буфера должен сохраниться прямой доступ: общий терминал помогает искать предметы, но не заменяет физический запас.",
+        "steps_ru": [
+          "Поставьте соединитель у грузового буфера и подключите его к уже освоенной складской сети.",
+          "Разместите терминал в диспетчерской точке и убедитесь, что через него видны нужные контейнеры."
+        ],
+        "success_ru": "Домашняя схема хранения повторена в региональном масштабе: грузовой буфер виден из одной точки, но остаётся доступным напрямую.",
+        "diagnostics_ru": [
+          "Если терминал пуст, проверьте непрерывность кабеля между ним, соединителем и контейнерами.",
+          "Если видна только часть запаса, найдите разрыв сети или контейнер, который соединитель не поддерживает."
+        ],
+        "next_ru": "Теперь можно переходить к AE2: это будет новый цифровой слой над физическими запасами.",
+        "task_text_ru": "Поставьте региональный соединитель инвентарей и терминал Tom's Simple Storage."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Квест опирается на системную ветвь хранения и проверяет региональное применение уже освоенной схемы."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Block IDs подтверждены установленным JAR."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block",
+          "id": "toms_storage:ts.inventory_connector",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "toms_storage:ts.storage_terminal",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/lang/en_us.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 2,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/toms_storage",
+        "rationale_ru": "Один соединитель и терминал образуют полезный рабочий комплект."
+      },
+      "layout": {
+        "x": 12,
+        "y": 0,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.ae2_storage",
+      "engine_id": "3E1AB571E2C45782",
+      "epoch": "P5",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "industrial_frontier:textures/gui/icons/process/ae2/digital_material_entry.png",
+      "tags": [
+        "ae2",
+        "storage"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.toms_storage",
+            "reason": "AE2 вводится после освоения общей топологии физических инвентарей.",
+            "evidence": [
+              "kubejs/server_scripts/10_progression/m5_ae2_entry_contract.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.ae2_storage.power",
+          "engine_id": "4DAFA2E496C3A62C",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите приёмник энергии AE2.",
+            "help": "Без питания сеть и терминалы не работают."
+          },
+          "item": {
+            "id": "ae2:energy_acceptor",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.ae2_storage.drive",
+          "engine_id": "4CD2B0BC16E79B72",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите ME-накопитель.",
+            "help": "Накопитель держит ячейки, но сам по себе не добавляет объём хранения."
+          },
+          "item": {
+            "id": "ae2:drive",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.ae2_storage.terminal",
+          "engine_id": "4C48FFAD06088D9D",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите ME-терминал.",
+            "help": "Терминал показывает сеть, но нуждается в кабеле, питании и доступной ячейке."
+          },
+          "item": {
+            "id": "ae2:terminal",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.ae2_storage.cell",
+          "engine_id": "41E5E0C215148194",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите одну ячейку хранения на 1К.",
+            "help": "Для первого запуска достаточно малой ячейки; переходите к крупным, когда действительно понадобится дополнительный объём."
+          },
+          "item": {
+            "id": "ae2:item_storage_cell_1k",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первое цифровое хранение",
+        "lead_ru": "Простой терминал показал удобство общего поиска; AE2 добавит собственное хранение и строгие ограничения.",
+        "purpose_ru": "Первая ME-сеть решает только питание, ячейки и доступ к предметам. Автосборки пока нет: сначала нужно понять, где физически лежит запас и как вернуть его при отказе.",
+        "steps_ru": [
+          "Соберите приёмник энергии, накопитель, терминал и одну ячейку на 1К.",
+          "Перед переносом важных ресурсов оставьте резерв в обычном контейнере."
+        ],
+        "success_ru": "Полный стартовый комплект AE2 готов к сборке сети, а критический запас не заперт только в цифровой ячейке.",
+        "diagnostics_ru": [
+          "Если терминал тёмный, начните с приёмника энергии и кабельной связи.",
+          "Если ячейка вставлена, но места нет, проверьте её тип, объём и количество разных типов предметов."
+        ],
+        "next_ru": "Следующий урок объяснит каналы и узкое место, из-за которого часть устройств внезапно гаснет.",
+        "task_text_ru": "Получите приёмник энергии, ME-накопитель, терминал и ячейку хранения на 1К."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Комплект хранит предметы, но текст не выдаёт его за уже собранную сеть."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "AE2 IDs подтверждены установленным JAR и локальным entry contract."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "ae2:energy_acceptor",
+          "evidence": [
+            "kubejs/server_scripts/10_progression/m5_ae2_entry_contract.js"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "ae2:drive",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "ae2:terminal",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "ae2:item_storage_cell_1k",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/ae2_entry",
+        "rationale_ru": "Четыре разных компонента образуют минимальную полезную сеть и не дублируются."
+      },
+      "layout": {
+        "x": 15,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.ae2_channels",
+      "engine_id": "396FA3718669D4AE",
+      "epoch": "P5",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "ae2:controller",
+      "tags": [
+        "ae2",
+        "channels"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.ae2_storage",
+            "reason": "Ограничение каналов имеет смысл после знакомства с первым комплектом сети.",
+            "evidence": [
+              "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.ae2_channels.item",
+          "engine_id": "43949633BD4054A4",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один ME-контроллер.",
+            "help": "Контроллер помогает развести ветви, но не отменяет подсчёт каналов на каждом узком участке."
+          },
+          "item": {
+            "id": "ae2:controller",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Где закончились каналы",
+        "lead_ru": "Первый комплект работает, пока сеть мала; расширение быстро упирается в пропускную способность кабеля.",
+        "purpose_ru": "Обычный кабель переносит восемь каналов, плотный — тридцать два. Каждое устройство занимает канал на всём пути до контроллера, поэтому считать нужно самое узкое место.",
+        "steps_ru": [],
+        "success_ru": "У вас есть контроллер, и вы умеете искать перегруженный участок по пути конкретного устройства.",
+        "diagnostics_ru": [],
+        "next_ru": "После устойчивой топологии сеть сможет хранить шаблоны и направлять задания машинам.",
+        "task_text_ru": "Получите ME-контроллер и прочитайте правило подсчёта каналов."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Item proof совпадает с условием; текст отдельно учит диагностике и не заявляет автопроверку каналов."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Числа каналов требуют пользовательской техпроверки текущей конфигурации AE2."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "ae2:controller",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "ae2:channels",
+          "evidence": [
+            "authoring/quests/specs/15_p5_regional_logistics.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/ae2_channels",
+        "rationale_ru": "Одного контроллера достаточно, чтобы освоить топологию; прокладывать десятки кабелей ради задания не нужно."
+      },
+      "layout": {
+        "x": 18,
+        "y": 0,
+        "shape": "square",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.ae2_patterns",
+      "engine_id": "3B135BC312CBE262",
+      "epoch": "P5",
+      "role": "automation",
+      "requirement": "required",
+      "icon": "ae2:pattern_provider",
+      "tags": [
+        "ae2",
+        "patterns"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.ae2_channels",
+            "reason": "Поставщик шаблонов добавляет устройство и канал, поэтому топология изучается раньше.",
+            "evidence": [
+              "authoring/quests/specs/15_p5_regional_logistics.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.ae2_patterns.provider",
+          "engine_id": "4AF19DAA0829FF53",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один поставщик шаблонов любого исполнения.",
+            "help": "Подойдёт обычный или кабельный поставщик: оба держат записанные рецепты и передают задания подключённой машине."
+          },
+          "item_tag": {
+            "id": "ae2:pattern_provider",
+            "count": 1
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.ae2_patterns.terminal",
+          "engine_id": "4BE49B632E451236",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите терминал кодирования шаблонов.",
+            "help": "Обычный ME-терминал не записывает шаблоны."
+          },
+          "item": {
+            "id": "ae2:pattern_encoding_terminal",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.ae2_patterns.blank",
+          "engine_id": "4B067221C1647C89",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один пустой шаблон.",
+            "help": "Для первого знакомства достаточно одного рецепта; новые шаблоны добавляйте после проверки первой цепочки."
+          },
+          "item": {
+            "id": "ae2:blank_pattern",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Рецепт становится заданием",
+        "lead_ru": "Сеть хранит предметы и не теряет каналы; теперь она может запомнить один производственный маршрут.",
+        "purpose_ru": "Шаблон описывает вход и ожидаемый выход, поставщик передаёт материалы машине, а терминал записывает рецепт. Неправильный выход или побочный продукт способны надолго подвесить заказ.",
+        "steps_ru": [
+          "Соберите поставщик шаблонов, терминал кодирования и один пустой шаблон.",
+          "Выберите короткий рецепт с однозначным выходом и заранее предусмотрите возврат результата в сеть."
+        ],
+        "success_ru": "Комплект для записи первого шаблона готов, а выбранный процесс имеет понятный возврат продукта.",
+        "diagnostics_ru": [
+          "Если шаблон не записывается, проверьте режим крафта или обработки и точную форму ингредиентов.",
+          "Если машина приняла вход, но заказ ждёт, проверьте путь возврата и название ожидаемого продукта."
+        ],
+        "next_ru": "Минимальное вычислительное хранилище позволит сети поставить записанный маршрут в очередь.",
+        "task_text_ru": "Получите поставщик шаблонов, терминал кодирования и один пустой шаблон."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст объясняет контракт шаблона и типичный зависший выход."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Item IDs подтверждены установленным JAR."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "ae2:pattern_provider",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar!data/ae2/tags/items/pattern_provider.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "ae2:pattern_encoding_terminal",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "ae2:blank_pattern",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/ae2_patterns",
+        "rationale_ru": "Три разных компонента нужны одному учебному маршруту; лишние шаблоны не требуются."
+      },
+      "layout": {
+        "x": 21,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.ae2_autocraft",
+      "engine_id": "3A2D5B8D711F4016",
+      "epoch": "P5",
+      "role": "automation",
+      "requirement": "required",
+      "icon": "ae2:1k_crafting_storage",
+      "tags": [
+        "ae2",
+        "autocrafting"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.ae2_patterns",
+            "reason": "Вычислительное хранилище исполняет уже записанный и проверенный шаблон.",
+            "evidence": [
+              "authoring/quests/specs/15_p5_regional_logistics.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.ae2_autocraft.item",
+          "engine_id": "46BCF5119B22081B",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите хранилище для изготовления на 1К.",
+            "help": "Обычный блок для изготовления не хранит данные заказа. Хранилище на 1К образует минимальный рабочий вычислительный узел."
+          },
+          "item": {
+            "id": "ae2:1k_crafting_storage",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первый автоматический заказ",
+        "lead_ru": "Шаблон объяснил сети рецепт; теперь нужен узел, который сможет поставить его в очередь.",
+        "purpose_ru": "Автосборка не создаёт материалы. Она резервирует входы, запускает известные операции и ждёт точный результат. Хранилище для изготовления на 1К образует минимальный рабочий вычислительный узел; простой блок создания без памяти заказ не выполнит.",
+        "steps_ru": [
+          "Соберите хранилище для изготовления на 1К и подключите его к ветви со свободным каналом.",
+          "Запустите один короткий заказ и наблюдайте, на каком шаге сеть резервирует и возвращает материалы."
+        ],
+        "success_ru": "Минимальный вычислительный узел готов, а вы знаете, где искать недостающий вход и зависшую операцию.",
+        "diagnostics_ru": [
+          "Если заказ не стартует, откройте список недостающих материалов и проверьте шаблон.",
+          "Если заказ висит после работы машины, проверьте возврат точного продукта и свободное место в сети."
+        ],
+        "next_ru": "Перед региональным контрактом нужно подготовить план действий на случай отключения сети.",
+        "task_text_ru": "Получите хранилище для изготовления на 1К."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Proof подтверждает компонент; текст честно оставляет запуск заказа для пользовательской проверки."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Item ID подтверждён установленным JAR; эпоху рецепта нужно сверить в пользовательском тесте."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "ae2:1k_crafting_storage",
+          "evidence": [
+            "mods/appliedenergistics2-forge-15.4.10.jar!assets/ae2/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "ae2:autocrafting",
+          "evidence": [
+            "authoring/quests/specs/15_p5_regional_logistics.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/ae2_autocraft",
+        "rationale_ru": "Одного хранилища на 1К достаточно для первого заказа; сопроцессоры и более крупная память остаются улучшениями."
+      },
+      "layout": {
+        "x": 24,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.ae2_recovery",
+      "engine_id": "3015000000000007",
+      "epoch": "P5",
+      "role": "recovery",
+      "requirement": "required",
+      "icon": "ae2:drive",
+      "tags": [
+        "ae2",
+        "recovery"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.ae2_autocraft",
+            "reason": "План восстановления изучается после появления цифрового хранения и автоматических заказов.",
+            "evidence": [
+              "authoring/quests/specs/15_p5_regional_logistics.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.ae2_recovery.read",
+          "engine_id": "4015000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте порядок восстановления ME-сети.",
+            "help": "Это аварийная памятка; отметка не утверждает, что сеть уже пережила настоящий отказ."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Если ME-сеть погасла",
+        "lead_ru": "Автоматическое изготовление полезно только тогда, когда фабрика умеет пережить отказ сети.",
+        "purpose_ru": "Диагностика идёт от простого к сложному: питание, кабель, каналы, место в ячейках, недостающий вход, зависший возврат. У критических машин должен оставаться физический запас на одну смену.",
+        "steps_ru": [],
+        "success_ru": "Вы знаете порядок проверки и не разбираете сеть до осмотра питания, каналов и очереди изготовления.",
+        "diagnostics_ru": [],
+        "next_ru": "Региональный заказ проверит, проходит ли груз от удалённого сырья до цифрового склада без ручной перекладки каждого цикла.",
+        "task_text_ru": "Прочитайте аварийный порядок восстановления ME-сети."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Recovery-квест допускает checkmark, потому что подтверждает чтение памятки, а не работу сети."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "prerequisites",
+          "source_fields": [
+            "text_ru.lead_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "ae2:network_recovery",
+          "evidence": [
+            "authoring/quests/specs/15_p5_regional_logistics.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": true,
+        "rationale_ru": "Аварийная памятка не требует ломать рабочую сеть ради зачёта."
+      },
+      "layout": {
+        "x": 27,
+        "y": 0,
+        "shape": "square",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.transit_line",
+      "engine_id": "3015000000000010",
+      "epoch": "P5",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "mtr:rail",
+      "tags": [
+        "optional",
+        "city",
+        "passenger"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.freight_rail",
+            "reason": "Пассажирская линия изучается после грузовой, чтобы две задачи не смешивались.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.transit_line.item",
+          "engine_id": "4015000000000010",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один рельс MTR.",
+            "help": "Это вход в пассажирскую ветвь; маршрут, станция и депо остаются отдельным проектом города."
+          },
+          "item": {
+            "id": "mtr:rail",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Пассажиры — не груз",
+        "lead_ru": "Грузовая магистраль уже имеет задачу; людям нужен другой ритм и другие остановки.",
+        "purpose_ru": "MTR развивает городскую мобильность, но не обязателен для запуска региональной фабрики. Пассажирская сеть ценит частоту, доступность станций и понятный маршрут.",
+        "steps_ru": [
+          "Получите первый рельс MTR и наметьте линию между двумя населёнными районами."
+        ],
+        "success_ru": "Пассажирская ветвь открыта без подмены грузовой логистики.",
+        "diagnostics_ru": [
+          "Если рельс недоступен, проверьте рецепты и ограничения текущей эпохи.",
+          "Не проводите линию через грузовой двор без отдельной безопасной платформы."
+        ],
+        "next_ru": "Эту ветвь можно развить после основной региональной фабрики.",
+        "task_text_ru": "Получите один рельс MTR.",
+        "optional_note_ru": "Пассажирская сеть улучшает город и атмосферу, но не блокирует переход к следующей технологической эпохе."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Факультативность объяснена через функцию транспорта, а не через ценность мода."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "mtr:rail",
+          "evidence": [
+            "config/ftbquests/quests/chapters/15_p5.snbt"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/transit",
+        "rationale_ru": "Один предмет открывает проектирование без обязательной километровой линии."
+      },
+      "layout": {
+        "x": 9,
+        "y": -4,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.last_mile",
+      "engine_id": "363662FEF86FD8D8",
+      "epoch": "P5",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "create:brown_toolbox",
+      "tags": [
+        "optional",
+        "last_mile"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.reserve",
+            "reason": "Последняя миля начинается от регионального буфера и заканчивается у конкретного потребителя.",
+            "evidence": [
+              "authoring/quests/specs/15_p5_regional_logistics.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.last_mile.item",
+          "engine_id": "4381415A8FC61030",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один ящик инструментов Create любого цвета.",
+            "help": "Цвет не влияет на зачёт. Ящик служит мобильным запасом для одной бригады, а не заменяет весь транспортный маршрут."
+          },
+          "item_tag": {
+            "id": "create:toolboxes",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Последние сто метров",
+        "lead_ru": "Магистраль привозит груз в район, но не ставит его у каждого рабочего места.",
+        "purpose_ru": "Последняя миля связывает большой буфер с мастерской, магазином или стройкой. Здесь важны малый размер партии, частая доставка и удобный возврат тары.",
+        "steps_ru": [
+          "Соберите переносной ящик и назначьте ему конкретную бригаду или участок."
+        ],
+        "success_ru": "У выбранного потребителя есть понятный малый запас, который не разбирает региональный склад поштучно.",
+        "diagnostics_ru": [
+          "Если ящик постоянно пуст, увеличьте частоту пополнения, а не весь региональный запас.",
+          "Если предметы теряются, закрепите назначение ящика и исключите общий случайный доступ."
+        ],
+        "next_ru": "После основной главы эту схему можно повторить для строителей, ремонтников и городских служб.",
+        "task_text_ru": "Получите один ящик инструментов Create любого цвета.",
+        "optional_note_ru": "Последняя миля улучшает обслуживание города, но основной контракт проверяет магистральный поток и резерв."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Предмет используется как честный символ малого запаса, без заявления о проверке маршрута."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "create:toolboxes",
+          "evidence": [
+            "mods/create-1.20.1-6.0.8.jar!data/create/tags/items/toolboxes.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/last_mile",
+        "rationale_ru": "Один ящик даёт полезный мобильный запас без обязательного парка транспорта."
+      },
+      "layout": {
+        "x": 12,
+        "y": 4,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.contracts",
+      "engine_id": "344C0C54261EBEF2",
+      "epoch": "P5",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "minecraft:writable_book",
+      "tags": [
+        "contract",
+        "flow"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.reserve",
+            "reason": "Контракт требует физический запас, переживающий задержку транспорта.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m5_regional_contracts.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p5.ae2_recovery",
+            "reason": "Цифровой контур допускается в контракт только после изучения восстановления.",
+            "evidence": [
+              "authoring/quests/specs/15_p5_regional_logistics.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p5.nitrogen",
+            "reason": "Приёмка P5 требует завершить перенесённую на HV азотнокислотную ветвь после реактора HV и крупного химического реактора.",
+            "evidence": [
+              "mods/gtceu-1.20.1-7.5.3.jar",
+              "authoring/questbook_v2/14_p4.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.contracts.cargo",
+          "engine_id": "46D1F335C5C0AEA6",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте три единицы очищенной железосодержащей руды из списка задачи.",
+            "help": "Используйте тот же очищенный минерал, который выпускает ваша линия. Это небольшая приёмная партия для проверки грузового буфера, а не требование вручную носить каждую следующую партию."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:quest_sources/purified_iron_bearing_ores",
+            "count": 3
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.contracts.log",
+          "engine_id": "49D669338D6BF290",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте книгу для журнала отправки.",
+            "help": "Книга обозначает журнал контрольного рейса; сама по себе она не доказывает, что груз прошёл маршрут."
+          },
+          "item": {
+            "id": "minecraft:writable_book",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Контрольная региональная партия",
+        "lead_ru": "Транспорт, буфер и цифровая сеть готовы; теперь проведём через них одну небольшую партию и запишем результат.",
+        "purpose_ru": "Предметные задачи подтверждают только наличие груза и журнала отправки. Сам маршрут нужно проследить по линии, а его доступность ещё раз проверить при вводе фабрики в эксплуатацию.",
+        "steps_ru": [
+          "Подготовьте три единицы подходящей очищенной железосодержащей руды и запишите в книге точку отправления, маршрут и приёмный буфер.",
+          "Проведите груз через физическую линию без ручной переноски каждой единицы между её участками.",
+          "После разгрузки убедитесь, что партия доступна из складской системы, а исходный буфер готов принять следующий груз."
+        ],
+        "success_ru": "Контрольная партия прошла региональный маршрут, запись о рейсе сделана, а логистика готова повторить тот же цикл.",
+        "diagnostics_ru": [
+          "Если груз не пришёл, ищите последнюю точку, до которой он добрался: выход обработки, транспорт, разгрузку, буфер или вход в складскую сеть.",
+          "Если приходится переносить каждую единицу вручную, разделите линию на участки и найдите место, где отсутствует автоматическая передача."
+        ],
+        "next_ru": "Осталось пройти по трём слоям хранения и принять региональную фабрику.",
+        "task_text_ru": "Подготовьте три единицы очищенной железосодержащей руды из списка задачи и книгу для журнала отправки."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Задачи честно проверяют приёмную партию и журнал; прохождение маршрута остаётся наблюдаемой частью учебного задания."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Техническая и редакторская вычитки завершены; контрольная партия согласована с предыдущими заданиями главы."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:quest_sources/purified_iron_bearing_ores",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_sources/purified_iron_bearing_ores.json",
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "kubejs/server_scripts/40_balance/m5_regional_contracts.js",
+          "evidence": [
+            "Current regional contract contour"
+          ]
+        },
+        {
+          "kind": "process",
+          "id": "industrial_frontier:process/pack/cross_domain_contracts",
+          "evidence": [
+            "docs/registries/m2_domain_process_ownership.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/contracts",
+        "rationale_ru": "Один сквозной заказ проверяет систему без обязательного марафона одинаковых поставок."
+      },
+      "layout": {
+        "x": 30,
+        "y": 0,
+        "shape": "octagon",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.p5.commissioning",
+      "engine_id": "39399468A06BC9EC",
+      "epoch": "P5",
+      "role": "commissioning",
+      "requirement": "required",
+      "icon": "create:railway_casing",
+      "tags": [
+        "if_commissioning_p5",
+        "commissioning"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p5.contracts",
+            "reason": "Только сквозной региональный заказ подтверждает совместную работу обязательных слоёв этой эпохи.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p5.commissioning.reserve",
+          "engine_id": "43E760C4DE082CD3",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте физический грузовой буфер.",
+            "help": "Откройте хранилище предметов Create после контрольной поставки и проверьте, что к нему остаётся прямой доступ."
+          },
+          "use": {
+            "block": "create:item_vault",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.commissioning.toms",
+          "engine_id": "4AB099F6524C08E2",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте терминал Tom's Simple Storage.",
+            "help": "Подойдёт обычный терминал хранения или улучшенный терминал крафта: региональный буфер должен оставаться доступен через знакомый промежуточный слой."
+          },
+          "use": {
+            "block_tag": "toms_storage:remote_activate",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p5.commissioning.ae2",
+          "engine_id": "44083979DD220360",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте ME-накопитель.",
+            "help": "Проверьте доступ к ячейкам и убедитесь, что критический запас не заперт только внутри цифровой сети."
+          },
+          "use": {
+            "block": "ae2:drive",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Региональная фабрика принята",
+        "lead_ru": "Контрольная партия готова; комиссия пройдёт по физическому буферу, общему терминалу и цифровому хранилищу.",
+        "purpose_ru": "Это единственная приёмка, которая открывает следующую технологическую эпоху. Обход подтверждает доступ к трём слоям хранения, а реальный путь груза уже проверен контрольной партией.",
+        "steps_ru": [
+          "После разгрузки откройте хранилище предметов Create и проверьте физический запас.",
+          "Откройте терминал Tom's Simple Storage и убедитесь, что через него виден региональный буфер.",
+          "Откройте ME-накопитель, проверьте ячейки и только затем завершите контрольный обход."
+        ],
+        "success_ru": "Все три слоя хранения доступны после поставки; приёмка открывает переход в следующую эпоху, а линия остаётся готовой к новой партии.",
+        "diagnostics_ru": [
+          "Если одно из окон не открывается, сначала проверьте питание, кабельную связь и прямой доступ к соответствующему блоку.",
+          "Если цифровая сеть скрывает неисправность физической линии, вернитесь к хранилищу Create и проследите путь груза от разгрузки."
+        ],
+        "next_ru": "Следующая эпоха использует ранее освоенную химию и региональную сеть для полного гражданского ядерного цикла.",
+        "task_text_ru": "Откройте хранилище предметов Create, терминал Tom's Simple Storage и ME-накопитель."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Комиссионный обход проверяет доступность трёх складских слоёв; смену эпохи выполняет единственный переходный квест."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Техническая и редакторская вычитки завершены; переход согласован с началом гражданского ядерного цикла."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "prerequisites",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:tech_epoch",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m3_threat_director.js"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p5.contracts",
+          "evidence": [
+            "authoring/questbook_v2/15_p5.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/commissioning",
+        "rationale_ru": "Комиссия не повторяет ресурсную партию после уже выполненного заказа."
+      },
+      "layout": {
+        "x": 33,
+        "y": 0,
+        "shape": "gear",
+        "size": 2
+      },
+      "commissioning": {
+        "epoch": "P5",
+        "advances_to": "P6",
+        "required_branch_ends": [
+          "if.quest.v2.p5.contracts"
+        ],
+        "epoch_state_evidence": [
+          "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js",
+          "kubejs/server_scripts/40_balance/m3_threat_director.js"
+        ]
+      }
     }
   ]
 }

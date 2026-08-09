@@ -80,14 +80,14 @@
       "text_ru": {
         "title_ru": "Три величины механики",
         "lead_ru": "Create передаёт вращение, а не электричество: направление, скорость и доступная нагрузка решают разные задачи.",
-        "purpose_ru": "Разделение величин помогает проектировать линию до установки машин. Вал переносит вращение, передача меняет скорость, а запас SU определяет, сколько потребителей выдержит источник.",
+        "purpose_ru": "Разделение величин помогает проектировать линию до установки машин. Вал переносит вращение, передача меняет скорость, а запас единиц нагрузки (SU) определяет, сколько потребителей выдержит источник.",
         "steps_ru": [
-          "Прочитайте определения направления, скорости вращения и нагрузки SU.",
+          "Прочитайте определения направления, скорости вращения и единиц нагрузки SU.",
           "Наметьте путь от будущего источника через валы к первой машине."
         ],
         "success_ru": "Вы можете объяснить, почему быстро вращающийся вал всё равно способен остановиться при перегрузке.",
         "diagnostics_ru": [
-          "Если линия позже встанет, сначала проверяйте наличие вращения, затем направление и только потом запас SU."
+          "Если линия позже встанет, сначала проверяйте наличие вращения, затем направление и только потом запас единиц нагрузки."
         ],
         "next_ru": "Первым материалом привода станет небольшая партия андезитового сплава.",
         "task_text_ru": "Прочитайте различие между вращением, скоростью и нагрузкой."
@@ -99,12 +99,15 @@
         "editorial_note": "Вводная разводит механические величины до появления первого движущегося блока."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Термины сверены с локальной Ponder-сценой механической нагрузки."
+          "Термины сверены с обучающей сценой нагрузки; направление, скорость и единицы нагрузки разведены понятным языком."
         ]
       },
       "teaching_sections": [
@@ -144,7 +147,7 @@
       "content_refs": [
         {
           "kind": "mod",
-          "id": "create:create",
+          "id": "create",
           "evidence": [
             "mods/create-1.20.1-6.0.8.jar"
           ]
@@ -241,12 +244,15 @@
         "editorial_note": "Количество уменьшено до рабочей партии и связано с двумя учебными партиями grind-карточки."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Предмет подтверждён существующим runtime-квестом и локальным Create jar; точный рецепт оставлен JEI."
+          "Андезитовый сплав подтверждён установленным модом; точный действующий рецепт игрок сверяет в JEI."
         ]
       },
       "teaching_sections": [
@@ -294,7 +300,7 @@
           "kind": "item",
           "id": "create:andesite_alloy",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
@@ -338,7 +344,7 @@
             "quest": "if.quest.v2.p1.andesite_alloy",
             "reason": "Зубчатые колёса используют материал уже освоенного привода.",
             "evidence": [
-              "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+              "config/ftbquests/quests/chapters/11_p1.snbt"
             ]
           }
         ]
@@ -372,7 +378,7 @@
         "diagnostics_ru": [
           "Если соседние колёса вращаются не в ожидаемую сторону, проследите каждое зацепление от источника вместо случайной перестановки."
         ],
-        "next_ru": "Параллельно поставим устойчивый источник вращения — водяное колесо.",
+        "next_ru": "Когда готовы и источник, и передача, установим стрессометр и измерим доступную нагрузку.",
         "task_text_ru": "Получите четыре малых зубчатых колеса."
       },
       "authorship": {
@@ -382,12 +388,15 @@
         "editorial_note": "Квест учит читать направление передачи, не обещая измерение, которого предметный proof не видит."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Item ID и количество сохранены из существующего runtime-квеста."
+          "Малые зубчатые колёса и размер партии сверены с действующей задачей; переход больше не навязывает конкретный источник."
         ]
       },
       "teaching_sections": [
@@ -429,7 +438,7 @@
           "kind": "item",
           "id": "create:cogwheel",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
@@ -473,7 +482,7 @@
             "quest": "if.quest.v2.p1.andesite_alloy",
             "reason": "Источник вращения собирается после подготовки материала первого привода.",
             "evidence": [
-              "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+              "config/ftbquests/quests/chapters/11_p1.snbt"
             ]
           }
         ]
@@ -485,7 +494,7 @@
           "type": "item",
           "status": "verified",
           "text_ru": {
-            "objective": "Получите один принятый механический источник мощности Create.",
+            "objective": "Получите один механический источник мощности Create из списка задачи.",
             "help": "Подойдут обычное или большое водяное колесо либо подшипник ветряной мельницы; творческий двигатель исключён."
           },
           "item_tag": {
@@ -497,19 +506,19 @@
       "text_ru": {
         "title_ru": "Выбрать источник вращения",
         "lead_ru": "Вода и ветер дают разные планировочные решения, поэтому книга проверяет функцию, а не один навязанный блок.",
-        "purpose_ru": "Общий набор принимает обычное водяное колесо, большое водяное колесо или подшипник ветряной мельницы. Творческий двигатель исключён, потому что отменяет урок нагрузки.",
+        "purpose_ru": "Подойдут обычное или большое водяное колесо либо подшипник ветряной мельницы. Творческий двигатель исключён, потому что отменяет урок нагрузки.",
         "steps_ru": [
           "Сравните доступное место и выберите водяной либо ветряной привод.",
           "Получите один подходящий источник и установите его по инструкции выбранного механизма.",
           "Убедитесь, что от источника можно вывести доступный вал к будущему стрессометру."
         ],
-        "success_ru": "В инвентаре подтверждён один допустимый источник; после установки его вращение можно передать в измеряемую сеть.",
+        "success_ru": "Получен один подходящий источник; после установки его вращение можно передать в измеряемую сеть.",
         "diagnostics_ru": [
-          "Если предмет не считается, сравните его с полным списком принятого набора.",
+          "Если предмет не считается, откройте полный список подходящих источников в условии задачи.",
           "Если установленный привод не вращается, проверьте воду или конструкцию ветряной мельницы по выбранному маршруту."
         ],
         "next_ru": "Соединим выбранный источник с передачей и поставим прибор, который покажет запас нагрузки.",
-        "task_text_ru": "Получите один принятый механический источник мощности Create."
+        "task_text_ru": "Получите один механический источник мощности Create из списка задачи."
       },
       "authorship": {
         "primary_language": "ru",
@@ -518,12 +527,15 @@
         "editorial_note": "Точный water_wheel заменён проверенным acceptance set, а функциональный запуск доказывается следующим использованием стрессометра."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Тег и три значения сверены с локальным datapack и реестром приёмки."
+          "Три допустимых источника сверены с локальным пакетом данных; творческий двигатель явно исключён."
         ]
       },
       "teaching_sections": [
@@ -606,7 +618,7 @@
     },
     {
       "alias": "if.quest.v2.p1.stress",
-      "engine_id": "3011000000000005",
+      "engine_id": "3538CE73ECF70BAD",
       "epoch": "P1",
       "role": "diagnostics",
       "requirement": "required",
@@ -638,7 +650,7 @@
       "proofs": [
         {
           "alias": "if.task.v2.p1.stress.item",
-          "engine_id": "4011000000000005",
+          "engine_id": "47461D683C57DD69",
           "type": "item",
           "status": "verified",
           "text_ru": {
@@ -653,7 +665,7 @@
         },
         {
           "alias": "if.task.v2.p1.stress.use",
-          "engine_id": "4A11000000000004",
+          "engine_id": "432A8FFFB61AC4E1",
           "type": "use",
           "status": "verified",
           "text_ru": {
@@ -681,7 +693,7 @@
           "Если показание отсутствует, проверьте, что вал действительно вращается и прибор связан с сетью.",
           "Если сеть перегружена, временно отключите потребитель и увеличьте источник либо снизьте скорость."
         ],
-        "next_ru": "С измеряемым приводом можно безопасно подключить мельницу и чашу пакетной обработки.",
+        "next_ru": "Завершите параллельную ветвь мельницы; затем подключим чашу для пакетной обработки.",
         "task_text_ru": "Получите, установите и прочитайте один стрессометр."
       },
       "authorship": {
@@ -691,12 +703,15 @@
         "editorial_note": "Диагностический прибор проверяется предметом и взаимодействием, а не формальной отметкой."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "ID подтверждён runtime-квестом и локальной Ponder-сценой нагрузки."
+          "Стрессометр подтверждён действующей задачей и обучающей сценой; диагностика встроена между источником и потребителем."
         ]
       },
       "teaching_sections": [
@@ -744,7 +759,7 @@
           "kind": "item",
           "id": "create:stressometer",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
@@ -778,7 +793,7 @@
     },
     {
       "alias": "if.quest.v2.p1.mill",
-      "engine_id": "3011000000000006",
+      "engine_id": "313F53950BC8F23B",
       "epoch": "P1",
       "role": "operation",
       "requirement": "required",
@@ -794,14 +809,14 @@
             "quest": "if.quest.v2.p1.rotation",
             "reason": "Мельнице нужен маршрут передачи вращения.",
             "evidence": [
-              "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+              "config/ftbquests/quests/chapters/11_p1.snbt"
             ]
           },
           {
             "quest": "if.quest.v2.p1.power",
             "reason": "Мельнице нужен действующий источник мощности.",
             "evidence": [
-              "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+              "config/ftbquests/quests/chapters/11_p1.snbt"
             ]
           }
         ]
@@ -809,7 +824,7 @@
       "proofs": [
         {
           "alias": "if.task.v2.p1.mill.item",
-          "engine_id": "4011000000000006",
+          "engine_id": "44DDA3DDC7D7AD71",
           "type": "item",
           "status": "verified",
           "text_ru": {
@@ -824,7 +839,7 @@
         },
         {
           "alias": "if.task.v2.p1.mill.use",
-          "engine_id": "4A11000000000005",
+          "engine_id": "47EC408520CB0AD5",
           "type": "use",
           "status": "verified",
           "text_ru": {
@@ -862,12 +877,15 @@
         "editorial_note": "Квест описывает наблюдаемую схему входа и выхода, но не выдумывает конкретный учебный рецепт."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Item/block ID подтверждён существующим runtime-квестом."
+          "Мельница и проверка установленного блока подтверждены действующей задачей; текст честно отделяет автоматическую проверку от пробной партии."
         ]
       },
       "teaching_sections": [
@@ -916,7 +934,7 @@
           "kind": "item",
           "id": "create:millstone",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
@@ -995,7 +1013,7 @@
           "status": "verified",
           "text_ru": {
             "objective": "Установите чашу и откройте её интерфейс.",
-            "help": "Если интерфейс не открывается, проверьте, что установлен именно блок create:basin."
+            "help": "Если окно не открывается, проверьте, что установлена именно чаша Create."
           },
           "use": {
             "block": "create:basin",
@@ -1012,7 +1030,7 @@
         "steps_ru": [
           "Установите чашу так, чтобы сверху оставалось место для рабочего механизма.",
           "Откройте интерфейс и посмотрите, где появляются входы и готовый результат.",
-          "Просмотрите локальную Ponder-сцену «Партия, буфер и узкое место»."
+          "Просмотрите обучающую сцену Ponder «Партия, буфер и узкое место»."
         ],
         "success_ru": "Чаша установлена, интерфейс прочитан, а место под входной и выходной поток предусмотрено заранее.",
         "diagnostics_ru": [
@@ -1029,12 +1047,15 @@
         "editorial_note": "Узел опирается на существующую русскую Ponder-сцену и вводит буферы до массового потока."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "ID и обучающая сцена подтверждены локальными authoring и client_scripts."
+          "Чаша и обучающая сцена подтверждены исходниками сборки; назначение входного и выходного буфера объяснено до пресса."
         ]
       },
       "teaching_sections": [
@@ -1119,7 +1140,7 @@
     },
     {
       "alias": "if.quest.v2.p1.press",
-      "engine_id": "3011000000000007",
+      "engine_id": "3A8FB34E62555188",
       "epoch": "P1",
       "role": "operation",
       "requirement": "required",
@@ -1150,7 +1171,7 @@
       "proofs": [
         {
           "alias": "if.task.v2.p1.press.item",
-          "engine_id": "4011000000000007",
+          "engine_id": "4E26D62F2EAF2969",
           "type": "item",
           "status": "verified",
           "text_ru": {
@@ -1165,7 +1186,7 @@
         },
         {
           "alias": "if.task.v2.p1.press.use",
-          "engine_id": "4A11000000000006",
+          "engine_id": "4BA1A072A578DB86",
           "type": "use",
           "status": "verified",
           "text_ru": {
@@ -1203,12 +1224,15 @@
         "editorial_note": "Квест объясняет многоролевой пресс и проверяет взаимодействие вместо одной иконки в инвентаре."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Item/block ID подтверждён runtime-квестом и локальной Ponder-сценой."
+          "Механический пресс подтверждён действующей задачей и обучающей сценой; проверены высота, вращение и свободный выход."
         ]
       },
       "teaching_sections": [
@@ -1257,7 +1281,7 @@
           "kind": "item",
           "id": "create:mechanical_press",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
@@ -1285,7 +1309,7 @@
     },
     {
       "alias": "if.quest.v2.p1.line",
-      "engine_id": "3011000000000008",
+      "engine_id": "3E36137316A04963",
       "epoch": "P1",
       "role": "automation",
       "requirement": "required",
@@ -1302,7 +1326,7 @@
             "quest": "if.quest.v2.p1.mill",
             "reason": "Полная линия должна включать первый вращательный потребитель.",
             "evidence": [
-              "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+              "config/ftbquests/quests/chapters/11_p1.snbt"
             ]
           },
           {
@@ -1324,7 +1348,7 @@
       "proofs": [
         {
           "alias": "if.task.v2.p1.line.belts",
-          "engine_id": "4011000000000008",
+          "engine_id": "4B8D0F44BFD493E8",
           "type": "item",
           "status": "verified",
           "text_ru": {
@@ -1339,12 +1363,12 @@
         },
         {
           "alias": "if.task.v2.p1.line.mill_use",
-          "engine_id": "4A11000000000008",
+          "engine_id": "4FBC0B4FCD841E3A",
           "type": "use",
           "status": "verified",
           "text_ru": {
             "objective": "Откройте мельницу, включённую в линию.",
-            "help": "Взаимодействуйте с установленным блоком create:millstone."
+            "help": "Взаимодействуйте с установленной мельницей Create."
           },
           "use": {
             "block": "create:millstone",
@@ -1355,7 +1379,7 @@
         },
         {
           "alias": "if.task.v2.p1.line.basin_use",
-          "engine_id": "4A11000000000009",
+          "engine_id": "412A83221B81F3A2",
           "type": "use",
           "status": "verified",
           "text_ru": {
@@ -1371,12 +1395,12 @@
         },
         {
           "alias": "if.task.v2.p1.line.press_use",
-          "engine_id": "4A1100000000000A",
+          "engine_id": "4235AF27E45646D3",
           "type": "use",
           "status": "verified",
           "text_ru": {
             "objective": "Взаимодействуйте с прессом над рабочей зоной.",
-            "help": "Убедитесь, что выбран установленный create:mechanical_press."
+            "help": "Убедитесь, что взаимодействуете с установленным механическим прессом Create."
           },
           "use": {
             "block": "create:mechanical_press",
@@ -1395,7 +1419,7 @@
           "Соедините подачу с мельницей, чашей и прессом по нужному процессу.",
           "Откройте каждый установленный рабочий узел и вручную проследите одну учебную партию от входа до выхода."
         ],
-        "success_ru": "Комплект ленты получен, а установленные мельница, чаша и пресс доступны для проверки; фактический проход партии остаётся обязательной пользовательской приёмкой.",
+        "success_ru": "Комплект ленты получен, а мельница, чаша и пресс доступны для осмотра. Проведите одну учебную партию сами и убедитесь, что она доходит от входа до выхода.",
         "diagnostics_ru": [
           "Если предмет стоит, проверьте направление ленты и свободное место следующего узла.",
           "Если вся сеть остановилась, прочитайте стрессометр и временно отключите один потребитель.",
@@ -1411,12 +1435,15 @@
         "editorial_note": "Условие усилено тремя взаимодействиями с установленными узлами; текст не выдаёт их за автоматическое наблюдение всей партии."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Типы use и три block ID сверены со schema и локальными Create-источниками; движение партии проверяет владелец."
+          "Проверки трёх установленных механизмов сверены со схемой источника; движение учебной партии оставлено честной игровой приёмкой владельца."
         ]
       },
       "teaching_sections": [
@@ -1470,7 +1497,7 @@
           "kind": "item",
           "id": "create:belt_connector",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
@@ -1549,17 +1576,17 @@
         "lead_ru": "Теперь сундуки решают реальную задачу: отделяют подачу сырья от готового продукта линии.",
         "purpose_ru": "Пакетный рецепт сохраняет стоимость четырёх обычных сундуков и убирает только повторные клики. Это удобное расширение, а не ворота механической эпохи.",
         "steps_ru": [
-          "Разложите восемь принятых брёвен кольцом на верстаке, оставив центр пустым.",
+          "Разложите восемь подходящих брёвен кольцом на верстаке, оставив центр пустым.",
           "Получите четыре сундука и поставьте отдельные буферы до и после рабочей зоны."
         ],
         "success_ru": "Четыре сундука готовы; линия получает раздельный запас входа и выхода без ресурсной скидки.",
         "diagnostics_ru": [
-          "Если рецепт не собирается, проверьте пустой центр и принадлежность всех брёвен к принятому тегу.",
+          "Если рецепт не собирается, проверьте пустой центр и убедитесь, что все брёвна входят в список рецепта.",
           "Если линия продолжает вставать, проверьте не размер сундука, а направление передачи и свободный выход."
         ],
         "next_ru": "Буферы можно расширять по мере пропускной способности; для перехода к P2 достаточно основной линии.",
         "task_text_ru": "Получите четыре сундука пакетным рецептом из восьми брёвен.",
-        "optional_note_ru": "Ветка необязательна: она улучшает устойчивость линии, но не блокирует ввод P1 в строй."
+        "optional_note_ru": "Это улучшение повышает устойчивость линии, но не блокирует ввод P1 в строй."
       },
       "authorship": {
         "primary_language": "ru",
@@ -1568,12 +1595,15 @@
         "editorial_note": "Существующий bulk_chest перенесён из onboarding в точку, где буфер уже имеет производственный смысл."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Рецепт и материальный баланс сверены с локальным KubeJS и grind-карточкой."
+          "Пакетный рецепт сохраняет стоимость четырёх сундуков; ветка остаётся добровольной и не блокирует эпоху."
         ]
       },
       "teaching_sections": [
@@ -1662,11 +1692,11 @@
     },
     {
       "alias": "if.quest.v2.p1.commissioning",
-      "engine_id": "3011000000000009",
+      "engine_id": "3BBFA9E08F6D1A38",
       "epoch": "P1",
       "role": "commissioning",
       "requirement": "required",
-      "icon": "minecraft:blast_furnace",
+      "icon": "create:mechanical_press",
       "tags": [
         "mainline",
         "if_commissioning_p1"
@@ -1680,13 +1710,21 @@
             "evidence": [
               "docs/registries/m2_progression_graph.json"
             ]
+          },
+          {
+            "quest": "if.quest.v2.storage.terminal",
+            "reason": "До парового этапа линии уже нужен общий склад: терминал связывает ранние запасы и убирает ручной поиск деталей.",
+            "evidence": [
+              "authoring/questbook_v2/20_storage_order.json",
+              "kubejs/server_scripts/10_progression/m9_storage_gate.js"
+            ]
           }
         ]
       },
       "proofs": [
         {
           "alias": "if.task.v2.p1.commissioning.stress_use",
-          "engine_id": "4A1100000000000B",
+          "engine_id": "42FBF7945A459487",
           "type": "use",
           "status": "verified",
           "text_ru": {
@@ -1702,11 +1740,11 @@
         },
         {
           "alias": "if.task.v2.p1.commissioning.press_use",
-          "engine_id": "4A1100000000000C",
+          "engine_id": "448A2EFE63D99215",
           "type": "use",
           "status": "verified",
           "text_ru": {
-            "objective": "Взаимодействуйте с прессом принятой линии.",
+            "objective": "Взаимодействуйте с прессом собранной линии.",
             "help": "Проверьте установленный механический пресс после завершения узла линии."
           },
           "use": {
@@ -1718,34 +1756,38 @@
         }
       ],
       "text_ru": {
-        "title_ru": "Механическая линия готова",
-        "lead_ru": "Источник, передача, измерение нагрузки и материальный поток уже собраны в одну понятную систему.",
-        "purpose_ru": "Приёмка P1 подтверждает, что механика уже снимает повторяемую ручную работу. Необязательный склад улучшает устойчивость, но не становится скрытым условием перехода.",
+        "title_ru": "Линия и общий склад готовы",
+        "lead_ru": "Источник, передача, измерение нагрузки, материальный поток и единая точка доступа к запасам уже работают как одна система.",
+        "purpose_ru": "Приёмка P1 подтверждает, что механика снимает повторяемую ручную работу, а общий склад сокращает поиск деталей между операциями. Пакетный рецепт сундуков остаётся необязательным удобством и не подменяет складской терминал.",
         "steps_ru": [
           "Откройте стрессометр и убедитесь, что диагностический прибор остаётся доступным.",
-          "Взаимодействуйте с механическим прессом после завершения узла полной линии."
+          "Взаимодействуйте с механическим прессом после завершения узла полной линии.",
+          "Перед переходом убедитесь, что связующий блок и терминал общего склада уже установлены и проверены в складской ветви."
         ],
-        "success_ru": "Диагностический прибор и рабочий пресс доступны после сборки линии; квестовый мост открывает P2.",
+        "success_ru": "Диагностический прибор, рабочий пресс и терминал общего склада доступны; команда переходит в P2.",
         "diagnostics_ru": [
-          "Если переход закрыт, завершите узел полной линии и повторно откройте оба установленных блока.",
+          "Если переход закрыт, завершите узел полной линии и складскую ветвь до терминала, затем повторно откройте оба механических блока.",
           "Если механизм доступен, но партия не проходит, исправьте направление потока, перегрузку и забитый выход до перехода."
         ],
         "next_ru": "В P2 механическое производство подготовит входы для пара, кокса, стали и латуни.",
-        "task_text_ru": "Откройте стрессометр и взаимодействуйте с механическим прессом принятой линии."
+        "task_text_ru": "После завершения механической линии и общего склада откройте стрессометр и взаимодействуйте с механическим прессом."
       },
       "authorship": {
         "primary_language": "ru",
         "origin": "human_authored",
         "machine_translation": false,
-        "editorial_note": "Итоговая приёмка P1 взаимодействует с диагностикой и рабочим механизмом вместо повторной проверки стопки лент."
+        "editorial_note": "Итоговая приёмка P1 объединяет рабочую механическую линию и реализованную раннюю ветвь общего склада."
       },
       "editorial_review": {
-        "state": "RU_PRIMARY_DRAFTED",
+        "state": "RU_READY",
         "marks": [
-          "RU_PRIMARY_DRAFTED"
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Два use-proof подтверждают доступность действующих узлов; фактический поток остаётся пользовательской проверкой."
+          "Две проверки подтверждают доступ к действующим узлам; терминал отдельно проверяется обязательной складской ветвью."
         ]
       },
       "teaching_sections": [
@@ -1791,17 +1833,24 @@
           ]
         },
         {
+          "kind": "quest",
+          "id": "if.quest.v2.storage.terminal",
+          "evidence": [
+            "authoring/questbook_v2/20_storage_order.json"
+          ]
+        },
+        {
           "kind": "block",
           "id": "create:stressometer",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
           "kind": "block",
           "id": "create:mechanical_press",
           "evidence": [
-            "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+            "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
@@ -1817,7 +1866,7 @@
         "training_batch": 0,
         "expected_runs": 0,
         "automation_before_bulk": false,
-        "rationale_ru": "Приёмка повторно не расходует материалы и не требует необязательного склада."
+        "rationale_ru": "Приёмка повторно не расходует материалы; общий склад строится один раз из деталей, уже доступных в P1."
       },
       "layout": {
         "x": 18,
@@ -1829,7 +1878,8 @@
         "epoch": "P1",
         "advances_to": "P2",
         "required_branch_ends": [
-          "if.quest.v2.p1.line"
+          "if.quest.v2.p1.line",
+          "if.quest.v2.storage.terminal"
         ],
         "epoch_state_evidence": [
           "docs/registries/m2_progression_graph.json",

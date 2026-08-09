@@ -32,8 +32,8 @@
       "additionalProperties": false,
       "required": ["all_jars", "content_gameplay", "authoring_runtime", "library_dependency", "client_optimization"],
       "properties": {
-        "all_jars": { "const": 134 },
-        "content_gameplay": { "const": 81 },
+        "all_jars": { "const": 133 },
+        "content_gameplay": { "const": 80 },
         "authoring_runtime": { "const": 19 },
         "library_dependency": { "const": 26 },
         "client_optimization": { "const": 8 }
@@ -42,24 +42,31 @@
     "inventory_delta": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["baseline_active_jars", "current_active_jars", "post_baseline_additions"],
+      "required": ["baseline_active_jars", "current_active_jars", "post_baseline_additions", "post_baseline_removals"],
       "properties": {
         "baseline_active_jars": { "const": 133 },
-        "current_active_jars": { "const": 134 },
+        "current_active_jars": { "const": 133 },
         "post_baseline_additions": {
           "type": "array",
           "minItems": 1,
           "maxItems": 1,
           "uniqueItems": true,
           "items": { "const": "ftb-essentials-forge-2001.2.4.jar" }
+        },
+        "post_baseline_removals": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "uniqueItems": true,
+          "items": { "const": "JustEnoughResources-1.20.1-1.4.0.247.jar" }
         }
       }
     },
     "ru_authoring_policy": { "$ref": "#/$defs/ruPolicy" },
     "jars": {
       "type": "array",
-      "minItems": 134,
-      "maxItems": 134,
+      "minItems": 133,
+      "maxItems": 133,
       "items": { "$ref": "#/$defs/jar" }
     }
   },

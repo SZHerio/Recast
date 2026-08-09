@@ -1,0 +1,15 @@
+{
+  "__comment": "Кислородные распределители IV и выше. Поздние городские аудиты принимают модернизированный узел вместо наказания за апгрейд.",
+  "replace": false,
+  "values": [
+    "gcyr:iv_oxygen_spreader",
+    "gcyr:luv_oxygen_spreader",
+    "gcyr:zpm_oxygen_spreader",
+    "gcyr:uv_oxygen_spreader",
+    "gcyr:uhv_oxygen_spreader",
+    "gcyr:uev_oxygen_spreader",
+    "gcyr:uiv_oxygen_spreader",
+    "gcyr:uxv_oxygen_spreader",
+    "gcyr:opv_oxygen_spreader"
+  ]
+}

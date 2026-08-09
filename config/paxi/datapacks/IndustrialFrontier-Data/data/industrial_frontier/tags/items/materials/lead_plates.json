@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "gtceu:lead_plate",
+    "nuclearcraft:lead_plate",
+    "immersiveengineering:plate_lead",
+    "hbm_ntm_rebirth:plate_lead"
+  ]
+}

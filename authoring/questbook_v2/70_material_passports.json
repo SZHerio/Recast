@@ -1,0 +1,1762 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.material_passports",
+    "engine_id": "2070000000000001",
+    "filename": "70_material_passports",
+    "group": {
+      "alias": "if.group.v2.academy",
+      "engine_id": "1A70000000000001",
+      "title_ru": "Академия"
+    },
+    "order": 70,
+    "icon": "gtceu:iron_plate",
+    "epoch": "REFERENCE",
+    "tags": [
+      "reference",
+      "materials",
+      "chemistry",
+      "integration"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "Паспорта материалов",
+      "subtitle": "Как отличать вещество, форму и конкретный предмет, не ломая производственный баланс",
+      "description": [
+        "Один и тот же материал встречается в слитках, пластинах, пыли, растворах и специальных деталях. Эти формы похожи по названию, но далеко не всегда выполняют одну работу.",
+        "Глава учит читать паспорт материала: откуда он берётся, какие формы считаются равнозначными, какая отрасль отвечает за основное производство и куда уходят побочные продукты. Практические задания требуют только одного-двух образцов и не заставляют делать лишние партии.",
+        "Это справочная ветвь. Она помогает понимать рецепты всех эпох, но не мешает запускать следующую эпоху или развивать город."
+      ]
+    },
+    "editorial": {
+      "voice": "Материаловед, который объясняет свойства через знакомые детали и честный баланс производства.",
+      "tone_rules": [
+        "Сначала называть видимый предмет, затем объяснять вещество и форму.",
+        "Любое правило совместимости связывать с конкретным примером применения.",
+        "Для практики просить один-два образца, а не склад одинаковых деталей."
+      ],
+      "avoid": [
+        "Не считать предметы равнозначными только из-за похожего названия.",
+        "Не обещать свободное превращение специальных химических и ядерных форм.",
+        "Не скрывать, когда задача видит предмет, но не может определить маршрут его получения."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.passports.intro",
+      "engine_id": "3070000000000001",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:book",
+      "tags": [
+        "root",
+        "reference",
+        "materials"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p1.line",
+            "reason": "После первой рабочей линии игрок уже встречает одинаковые вещества в разных формах и может применить правила справочника на практике.",
+            "evidence": [
+              "authoring/questbook_v2/11_p1.json",
+              "docs/registries/m2_material_forms.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.intro.read",
+          "engine_id": "4070000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, зачем каждому важному материалу нужен понятный паспорт.",
+            "help": "Отметьте пункт после чтения; никаких предметов для него не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Зачем материалу паспорт",
+        "lead_ru": "Название предмета ещё не говорит, откуда он взялся и куда его безопасно применять.",
+        "purpose_ru": "Паспорт связывает вещество с его источником, допустимыми формами, чистотой, основным способом производства и последующими потребителями. Благодаря этому железная пластина остаётся частью железного потока, а раствор кислоты не превращается в любую другую форму лишь по сходству названий.",
+        "steps_ru": [
+          "При встрече с новым материалом сначала найдите его исходное сырьё и основной производственный маршрут.",
+          "Затем посмотрите, в какой форме материал нужен следующему механизму: слиток, пластина, пыль, жидкость или специальная деталь.",
+          "В конце проверьте побочные продукты: полезный остаток следует вернуть в производство, опасный — отвести в отдельное хранилище."
+        ],
+        "success_ru": "Вы читаете цепочку как движение одного вещества между формами, а не как набор случайных рецептов.",
+        "diagnostics_ru": [
+          "Если два предмета называются похоже, но не принимаются одним механизмом, сравните их форму и назначение, а не только название.",
+          "Если короткий рецепт обходит целую отрасль, вероятнее всего перед вами нежелательная параллельная цепочка."
+        ],
+        "next_ru": "Начнём с самого важного различия: вещество, форма и конкретный предмет — это три разных уровня описания.",
+        "task_text_ru": "Ознакомьтесь с назначением паспортов материалов."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/substance_passports",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/material_forms",
+          "evidence": [
+            "docs/registries/m2_material_forms.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Вводное чтение не требует предметов и не расходует ресурсы."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "hexagon",
+        "size": 1.6
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.entity_form_id",
+      "engine_id": "3A70000000000001",
+      "epoch": "REFERENCE",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "minecraft:iron_ingot",
+      "tags": [
+        "materials",
+        "identity",
+        "iron"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.intro",
+            "reason": "Практический разбор начинается после знакомства с назначением паспорта.",
+            "evidence": [
+              "authoring/quests/70_material_passports.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.plates",
+            "reason": "Сравнение слитка и пластины имеет смысл после освоения изготовления металлических пластин.",
+            "evidence": [
+              "authoring/questbook_v2/12_p2.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.entity_form_id.ingot",
+          "engine_id": "4A70000000000001",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте один подходящий железный слиток.",
+            "help": "Подойдёт любой взаимозаменяемый железный слиток."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/iron_ingots",
+            "count": 1
+          }
+        },
+        {
+          "alias": "if.task.v2.passports.entity_form_id.plate",
+          "engine_id": "4A70000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте одну подходящую железную пластину.",
+            "help": "Подойдёт любая железная пластина из числа взаимозаменяемых вариантов."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/iron_plates",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Вещество, форма, предмет",
+        "lead_ru": "Железо осталось железом, но слиток и пластина выполняют разные производственные роли.",
+        "purpose_ru": "Вещество отвечает на вопрос «из чего это сделано», форма — «в каком виде материал подготовлен», а конкретный предмет — «какой объект лежит в инвентаре». Такое разделение позволяет принимать совместимые железные слитки, не разрешая подменять ими пластины, пыль или детали машин.",
+        "steps_ru": [
+          "Положите рядом один железный слиток и одну железную пластину.",
+          "Сравните их применения в просмотре рецептов: часть цепочек начинается со слитка, а сборка механизмов чаще требует уже обработанную пластину.",
+          "Обратите внимание: для задания подходят несколько взаимозаменяемых вариантов одной формы, поэтому вам не нужно искать единственного производителя железа."
+        ],
+        "success_ru": "У вас есть по одному образцу одного вещества в двух разных формах, и вы понимаете, почему они не взаимозаменяемы во всех рецептах.",
+        "diagnostics_ru": [
+          "Если слиток не засчитывается, убедитесь, что это именно железо, а не руда, необработанный металл или сплав.",
+          "Если пластина не засчитывается, найдите её применения: похожая по цвету деталь может быть листом другого материала."
+        ],
+        "next_ru": "Теперь разберём поля паспорта, которые описывают путь материала от источника до отходов.",
+        "task_text_ru": "Подготовьте один железный слиток и одну железную пластину."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Предметные условия заменили прежнее чтение и требуют отдельного переноса прогресса."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/iron_ingots",
+          "evidence": [
+            "docs/registries/quest_acceptance_sets.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/iron_plates",
+          "evidence": [
+            "docs/registries/quest_acceptance_sets.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 2,
+        "automation_before_bulk": false,
+        "rationale_ru": "Два одиночных образца показывают различие форм без требования собирать запас."
+      },
+      "layout": {
+        "x": 3,
+        "y": 0,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.anatomy",
+      "engine_id": "3070000000000003",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:writable_book",
+      "tags": [
+        "materials",
+        "reference",
+        "anatomy"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.entity_form_id",
+            "reason": "Поля паспорта легче читать после наглядного различения вещества, формы и предмета.",
+            "evidence": [
+              "docs/registries/m2_substance_passports.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.anatomy.read",
+          "engine_id": "4070000000000003",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, какие сведения входят в паспорт материала.",
+            "help": "Отметка подтверждает чтение справки, а не изготовление предмета."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Из чего состоит паспорт",
+        "lead_ru": "Хороший паспорт отвечает не только на вопрос «что это», но и на вопрос «что с этим делать дальше».",
+        "purpose_ru": "Для каждого важного вещества нужны семь сведений: источник, доступные формы, требуемая чистота, основная производственная отрасль, допустимые заменители, последующие потребители и судьба отходов. Вместе они образуют короткую карту производства, по которой можно искать ошибку или планировать расширение.",
+        "steps_ru": [
+          "Источник показывает, что добывать или из какой смеси выделять вещество.",
+          "Формы и чистота объясняют, почему внешне похожий предмет подходит не всегда.",
+          "Основная производственная отрасль указывает, где проходит главный маршрут, а потребители и отходы связывают его со следующими цехами."
+        ],
+        "success_ru": "Увидев новый материал, вы можете последовательно найти его источник, нужную форму, обработку и дальнейшее применение.",
+        "diagnostics_ru": [
+          "Если цепочка обрывается, сначала проверьте форму и чистоту продукта, затем свободный выход для побочного вещества.",
+          "Если существуют два одинаково выгодных основных маршрута, в паспорте ещё недостаточно чётко выбрана главная производственная отрасль."
+        ],
+        "next_ru": "Первое правило относится к миру: одна и та же руда не должна бесконтрольно появляться в нескольких вариантах.",
+        "task_text_ru": "Ознакомьтесь с семью основными полями паспорта."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/substance_passports",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Справка учит читать уже существующие материалы и ничего не требует производить."
+      },
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.worldgen_owner",
+      "engine_id": "3070000000000004",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "gtceu:iron_ore",
+      "tags": [
+        "materials",
+        "worldgen",
+        "ownership"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.anatomy",
+            "reason": "Правило месторождений является первым практическим применением поля владельца процесса.",
+            "evidence": [
+              "docs/registries/m2_domain_process_ownership.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p0.prospect",
+            "reason": "Игрок уже знаком с поиском месторождений и может отличить источник руды от её дальнейших форм.",
+            "evidence": [
+              "authoring/questbook_v2/10_p0.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.worldgen_owner.read",
+          "engine_id": "4070000000000004",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правило единого природного источника.",
+            "help": "Здесь нужно понять устройство сборки; добывать новую руду не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Один источник, много форм",
+        "lead_ru": "Несколько одинаковых руд в одном мире дают не выбор, а лишний шум и обходы баланса.",
+        "purpose_ru": "Для каждого природного ресурса сборка выбирает один основной источник. Остальные производственные системы могут использовать полученное вещество в своих машинах и формах, но не должны создавать параллельные месторождения с отдельной, более выгодной переработкой.",
+        "steps_ru": [
+          "Считайте месторождение началом общего потока, доступного всем подходящим способам дальнейшей обработки.",
+          "После добычи выбирайте обработку по нужному выходу: обогащение, пыль, слиток, пластина или химическое соединение.",
+          "Если просмотр рецептов показывает обходной путь из отключённой руды, сообщите о нём как о нарушении баланса, а не стройте вокруг него фабрику."
+        ],
+        "success_ru": "Вы различаете основной природный источник и системы, которые только продолжают обработку добытого материала.",
+        "diagnostics_ru": [
+          "Две руды с одинаковым веществом и разными выходами обычно означают непредусмотренный обход.",
+          "Несколько форм одного уже добытого металла допустимы, если переходы между ними не создают материал из ничего."
+        ],
+        "next_ru": "Следующий шаг — понять, почему рецепты принимают категорию совместимых входов, а не один случайный предмет.",
+        "task_text_ru": "Ознакомьтесь с правилом единого природного источника."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/process_ownership",
+          "evidence": [
+            "docs/registries/m2_domain_process_ownership.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p0.prospect",
+          "evidence": [
+            "authoring/questbook_v2/10_p0.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Правило объясняется после уже пройденной разведки и не просит повторной добычи."
+      },
+      "layout": {
+        "x": 9,
+        "y": -3,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.accepted_inputs",
+      "engine_id": "3A70000000000002",
+      "epoch": "REFERENCE",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "minecraft:iron_nugget",
+      "tags": [
+        "materials",
+        "compatibility",
+        "iron"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.worldgen_owner",
+            "reason": "После выбора единого природного источника можно безопасно объединить равнозначные формы материала на входах рецептов.",
+            "evidence": [
+              "docs/registries/quest_acceptance_sets.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.accepted_inputs.nugget",
+          "engine_id": "4A70000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте один подходящий железный самородок.",
+            "help": "Подойдёт любой взаимозаменяемый железный самородок."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/iron_nuggets",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Совместимый вход без охоты за маркой",
+        "lead_ru": "Рецепту важно получить железный самородок, а игроку не нужно угадывать единственного автора предмета.",
+        "purpose_ru": "В одну группу объединяются только предметы с одинаковыми веществом, формой и производственной функцией. Это делает цепочки удобнее, но не стирает разницу между самородком, слитком и пластиной.",
+        "steps_ru": [
+          "Получите один железный самородок любым доступным честным способом.",
+          "Посмотрите его применения и сравните с другим железным самородком, если в сборке есть ещё один вариант.",
+          "Заметьте, что совместимость относится к этой форме и не распространяется автоматически на все железные предметы."
+        ],
+        "success_ru": "Вы убедились, что взаимозаменяемость работает без привязки к конкретному производителю железного самородка.",
+        "diagnostics_ru": [
+          "Если предмет не принимается, убедитесь, что это железный самородок, а не маленькая кучка пыли или фрагмент руды.",
+          "Если совместимость даёт более выгодное обратное превращение, такой переход следует считать обходом и проверить отдельно."
+        ],
+        "next_ru": "Теперь применим те же правила к настоящему межотраслевому договору между механической обработкой и металлургией.",
+        "task_text_ru": "Подготовьте один совместимый железный самородок."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Новое предметное условие требует отдельного переноса прогресса."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/iron_nuggets",
+          "evidence": [
+            "docs/registries/quest_acceptance_sets.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "rationale_ru": "Один самородок достаточен, чтобы показать совместимость формы."
+      },
+      "layout": {
+        "x": 9,
+        "y": 3,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.create_gt_contract",
+      "engine_id": "3A70000000000003",
+      "epoch": "REFERENCE",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "gtceu:brass_ingot",
+      "tags": [
+        "materials",
+        "brass",
+        "integration"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.accepted_inputs",
+            "reason": "Межотраслевой рецепт опирается на уже понятное правило совместимых входов.",
+            "evidence": [
+              "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.brass",
+            "reason": "Латунный договор изучается после первого получения латуни в основной ветви.",
+            "evidence": [
+              "authoring/questbook_v2/12_p2.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.create_gt_contract.brass",
+          "engine_id": "4A70000000000004",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте один общий слиток латуни.",
+            "help": "Нужен латунный слиток, который сборка использует как общий выход металлургии."
+          },
+          "item": {
+            "id": "gtceu:brass_ingot",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Один состав латуни",
+        "lead_ru": "Нагретый механический смеситель показывает саму операцию, а общий металлургический выход сохраняет единый материал.",
+        "purpose_ru": "Латунь закреплена как сплав трёх частей меди и одной части цинка. Нагретый смеситель сохраняет наглядную механическую операцию, но выдаёт общий латунный слиток. Так механическая обработка и металлургия выполняют разные роли внутри одной цепочки вместо двух конкурирующих рецептов.",
+        "steps_ru": [
+          "В просмотре рецептов найдите нагретое смешивание трёх медных и одного цинкового слитка.",
+          "Убедитесь, что партия выдаёт четыре латунных слитка: масса и доли металлов при этом сохраняются.",
+          "Подготовьте один слиток из этой общей партии; остальные можно сразу отправить на пластины и детали."
+        ],
+        "success_ru": "У вас есть общий латунный слиток, а механическая и металлургическая части рецепта работают как одна производственная операция.",
+        "diagnostics_ru": [
+          "Если рецепт просит медь и цинк поровну, вы нашли старый параллельный вариант, который не соответствует составу сплава.",
+          "Если выходит отдельный вариант латунного слитка, найдите рецепт с общим выходом и сообщите о сохранившемся обходе."
+        ],
+        "next_ru": "Не все формы можно объединять так же свободно: топливо, растворы и реакторные материалы требуют более строгих границ.",
+        "task_text_ru": "Подготовьте один общий латунный слиток после правильного смешивания меди и цинка."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Новое условие подтверждает выход предметом и не переносит старую отметку автоматически."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "create",
+          "evidence": [
+            "mods/create-1.20.1-6.0.8.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "gtceu",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "recipe",
+          "id": "industrial_frontier:m2/create/brass_from_copper_zinc",
+          "evidence": [
+            "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:brass_ingot",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "rationale_ru": "Достаточно одного слитка из обычной учебной партии; повторять основной объём эпохи не нужно."
+      },
+      "layout": {
+        "x": 12,
+        "y": 3,
+        "shape": "gear",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.specialized_forms",
+      "engine_id": "3070000000000007",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "gtceu:sulfuric_acid_bucket",
+      "tags": [
+        "materials",
+        "chemistry",
+        "specialized"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.anatomy",
+            "reason": "Особые формы требуют понимания полей чистоты, назначения и допустимой замены.",
+            "evidence": [
+              "docs/registries/m2_substance_passports.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.specialized_forms.read",
+          "engine_id": "4070000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, почему специальные формы материала нельзя заменять по одному названию.",
+            "help": "Никакой предмет собирать не нужно; это правило безопасности для поздних цепочек."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Особая форма — особая работа",
+        "lead_ru": "Кислота, раствор соли, чистая пыль и топливная таблетка могут содержать один элемент, но это не один и тот же продукт.",
+        "purpose_ru": "Химические и ядерные процессы зависят от концентрации, примесей, состояния вещества и конструкции формы. Свободная замена разрушила бы разделение, обогащение, изготовление топлива и обращение с отходами. Поэтому специальные продукты объединяются только при прямом и проверенном совпадении функции.",
+        "steps_ru": [
+          "Читайте полное название продукта и его состояние: жидкость, пыль, раствор, изотопная смесь или готовое топливо.",
+          "Смотрите не только на состав, но и на машину, в которую поступает материал: именно она определяет нужную подготовку.",
+          "Не используйте обратное превращение, если оно возвращает больше исходного вещества или снимает обязательную стадию очистки."
+        ],
+        "success_ru": "Вы не подменяете технологически подготовленный продукт похожим предметом и сохраняете смысл сложной цепочки.",
+        "diagnostics_ru": [
+          "Если рецепт принимает необработанную руду там, где ожидается чистое соединение, проверьте, не сохранился ли сторонний обход.",
+          "Если две формы имеют одинаковый элемент, но разные применения, считайте их разными продуктами до прямого подтверждения совместимости."
+        ],
+        "next_ru": "После этого можно сформулировать безопасные правила обмена обычных металлических форм.",
+        "task_text_ru": "Ознакомьтесь с ограничениями для растворов, топлива и чистых соединений."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/substance_passports",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/material_forms",
+          "evidence": [
+            "docs/registries/m2_material_forms.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Справка предупреждает ошибки до дорогостоящего производства и не просит образцов."
+      },
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.safe_equivalence",
+      "engine_id": "3A70000000000004",
+      "epoch": "REFERENCE",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "gtceu:iron_plate",
+      "tags": [
+        "materials",
+        "equivalence",
+        "iron"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.accepted_inputs",
+            "reason": "Безопасная замена развивает правило совместимых входов.",
+            "evidence": [
+              "docs/registries/m2_material_forms.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.passports.specialized_forms",
+            "reason": "Сначала нужно понять границы, за которыми сходство материала уже не означает совместимость.",
+            "evidence": [
+              "docs/registries/m2_substance_passports.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.safe_equivalence.plate",
+          "engine_id": "4A70000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте одну совместимую железную пластину.",
+            "help": "Подойдёт любая взаимозаменяемая железная пластина; она не будет израсходована."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:materials/iron_plates",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Когда замена безопасна",
+        "lead_ru": "Совместимость удобна только тогда, когда она не меняет цену, выход и назначение материала.",
+        "purpose_ru": "Безопасная замена сохраняет одно вещество, одну форму и одну производственную функцию. Для обычной железной пластины это позволяет использовать взаимозаменяемый вариант из другой производственной системы. Для раствора, топлива или детали с особыми свойствами такого вывода уже недостаточно.",
+        "steps_ru": [
+          "Подготовьте одну железную пластину из числа взаимозаменяемых вариантов.",
+          "Убедитесь, что её применения соответствуют обычной железной пластине, а обратные переходы не приносят лишний металл.",
+          "Для массовой линии выберите один постоянный выход, чтобы склад и автоматическая сборка не дробили запас между дубликатами."
+        ],
+        "success_ru": "Пластина подходит по веществу, форме и функции, а её замена не создаёт выгоды из одного лишь различия производителей.",
+        "diagnostics_ru": [
+          "Если один вариант плавится или разбирается выгоднее другого, не считайте их безопасно равнозначными.",
+          "Если автоматическая сборка путает похожие предметы, закрепите общий выход, а взаимозаменяемые варианты разрешите только на входе."
+        ],
+        "next_ru": "Визуальный состав сплава поможет связать это правило с настоящим рецептом латуни.",
+        "task_text_ru": "Подготовьте одну совместимую железную пластину и сравните её применения."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Предметное условие и расширенная учебная цель требуют пересмотра старого завершения."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:materials/iron_plates",
+          "evidence": [
+            "docs/registries/quest_acceptance_sets.json",
+            "docs/registries/m2_material_forms.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "rationale_ru": "Одна пластина показывает правило без повторного производства партии."
+      },
+      "layout": {
+        "x": 12,
+        "y": 0,
+        "shape": "circle",
+        "size": 1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.moldraw_alloy",
+      "engine_id": "3A70000000000005",
+      "epoch": "REFERENCE",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "gtceu:brass_ingot",
+      "tags": [
+        "materials",
+        "alloy",
+        "visual_reference"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.create_gt_contract",
+            "reason": "Схему состава нужно сопоставить с уже освоенным рецептом правильной латуни.",
+            "evidence": [
+              "mods/gtmoldraw-3.3.0.jar!/assets/gtceu/alloys/brass.json",
+              "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.moldraw_alloy.brass",
+          "engine_id": "4A70000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Возьмите один латунный слиток для чтения схемы состава.",
+            "help": "Для отметки достаточно иметь образец; саму схему рассмотрите в подсказке предмета."
+          },
+          "item": {
+            "id": "gtceu:brass_ingot",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Состав сплава перед глазами",
+        "lead_ru": "Схема состава полезна не как украшение, а как быстрая сверка рецепта с веществом.",
+        "purpose_ru": "Встроенная схема показывает состав сплава прямо в подсказке материала. Для латуни она напоминает о меди и цинке, а производственный рецепт должен сохранять установленное отношение трёх частей к одной. Изображение объясняет состав, но не заменяет проверку расхода и выхода в рецепте.",
+        "steps_ru": [
+          "Наведите курсор на латунный слиток в инвентаре или списке рецептов и рассмотрите схему состава.",
+          "Если схема скрыта, используйте назначенную в настройках клавишу дополнительной информации.",
+          "Сопоставьте изображённые компоненты с нагретым смешиванием трёх медных и одного цинкового слитка."
+        ],
+        "success_ru": "Вы связываете состав латуни с реальным расходом меди и цинка, а не принимаете схему за отдельный рецепт.",
+        "diagnostics_ru": [
+          "Если схема не видна, проверьте клиентские настройки показа молекул и сплавов, затем снова откройте подсказку.",
+          "Если изображение и рецепт расходятся, доверяйте фактическому рецепту и сообщите о несогласованной справочной схеме."
+        ],
+        "next_ru": "На полимерах станет видно ещё одно различие: похожая форма предмета может скрывать совершенно разное строение вещества.",
+        "task_text_ru": "Возьмите один латунный слиток и сопоставьте схему состава с его рецептом."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Предметное условие подтверждает образец, но не может определить, была ли открыта подсказка."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "moldraw",
+          "evidence": [
+            "mods/gtmoldraw-3.3.0.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:brass_ingot",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "moldraw:alloy_drawing",
+          "evidence": [
+            "mods/gtmoldraw-3.3.0.jar!/assets/gtceu/alloys/brass.json"
+          ]
+        },
+        {
+          "kind": "recipe",
+          "id": "industrial_frontier:m2/create/brass_from_copper_zinc",
+          "evidence": [
+            "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "rationale_ru": "Используется один уже знакомый латунный слиток; дополнительная партия не требуется."
+      },
+      "layout": {
+        "x": 15,
+        "y": 3,
+        "shape": "diamond",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.moldraw_polymer",
+      "engine_id": "3A70000000000006",
+      "epoch": "REFERENCE",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "gtceu:polyvinyl_chloride_plate",
+      "tags": [
+        "materials",
+        "polymer",
+        "visual_reference"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.moldraw_alloy",
+            "reason": "Сначала игрок учится читать простую схему состава сплава, затем переходит к строению полимеров.",
+            "evidence": [
+              "mods/gtmoldraw-3.3.0.jar!/assets/gtceu/molecules/polyethylene.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p4.oil_distillation",
+            "reason": "Полиэтилен относится к нефтехимической ветви и должен изучаться после разделения нефти.",
+            "evidence": [
+              "authoring/questbook_v2/14_p4.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p4.chlorine",
+            "reason": "Поливинилхлорид связывает нефтехимию с уже освоенной хлорной ветвью.",
+            "evidence": [
+              "authoring/questbook_v2/14_p4.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.moldraw_polymer.polyethylene",
+          "engine_id": "4A70000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте одну полиэтиленовую пластину.",
+            "help": "Первый образец показывает углеводородный полимер без хлора."
+          },
+          "item": {
+            "id": "gtceu:polyethylene_plate",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.passports.moldraw_polymer.pvc",
+          "engine_id": "4A70000000000008",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте одну поливинилхлоридную пластину.",
+            "help": "Второй образец нужен для сравнения строения и производственной цепочки."
+          },
+          "item": {
+            "id": "gtceu:polyvinyl_chloride_plate",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Две пластины, две молекулы",
+        "lead_ru": "Одинаковая форма пластины не делает полиэтилен и поливинилхлорид одним материалом.",
+        "purpose_ru": "Встроенные схемы показывают повторяющееся строение двух полимеров. Полиэтилен опирается на углеводородное сырьё, а поливинилхлорид содержит хлор и связывает нефтехимию с хлор-щелочной линией. Поэтому их пластины нельзя объединять в одну безымянную категорию пластика.",
+        "steps_ru": [
+          "Положите рядом по одной пластине каждого полимера и откройте их подсказки.",
+          "Сравните структурные схемы и найдите хлор в поливинилхлориде.",
+          "Затем откройте рецепты: схема объясняет строение, а описание процесса показывает настоящие реагенты, машины и выход."
+        ],
+        "success_ru": "Вы различаете два полимера по строению, сырью и применению, хотя оба представлены пластиной.",
+        "diagnostics_ru": [
+          "Если отображается только одна схема, проверьте настройки показа молекул и повторно наведите курсор на второй материал.",
+          "Если рецепт поливинилхлорида не связан с хлорной ветвью, проверьте выбранный маршрут в просмотре рецептов и сообщите о подозрительном обходе."
+        ],
+        "next_ru": "Осталось научиться быстро находить обходы, которые нарушают одно из правил паспорта.",
+        "task_text_ru": "Подготовьте две полимерные пластины и сравните их структурные схемы с рецептами."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Предметные условия подтверждают только наличие двух образцов; просмотр схем остаётся осознанным действием игрока."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "moldraw",
+          "evidence": [
+            "mods/gtmoldraw-3.3.0.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:polyethylene_plate",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:polyvinyl_chloride_plate",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "moldraw:molecule_drawing/polyethylene",
+          "evidence": [
+            "mods/gtmoldraw-3.3.0.jar!/assets/gtceu/molecules/polyethylene.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "moldraw:molecule_drawing/polyvinyl_chloride",
+          "evidence": [
+            "mods/gtmoldraw-3.3.0.jar!/assets/gtceu/molecules/polyvinyl_chloride.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 2,
+        "automation_before_bulk": false,
+        "rationale_ru": "По одной пластине каждого полимера достаточно для сравнения; предметы не расходуются."
+      },
+      "layout": {
+        "x": 18,
+        "y": 3,
+        "shape": "diamond",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.bypass_audit",
+      "engine_id": "3070000000000009",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:spyglass",
+      "tags": [
+        "materials",
+        "diagnostics",
+        "balance"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.safe_equivalence",
+            "reason": "Поиск обходов требует понимания безопасной взаимозаменяемости.",
+            "evidence": [
+              "docs/registries/m2_bypass_decisions.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.passports.moldraw_polymer",
+            "reason": "Сравнение полимеров показывает, почему одинаковая форма не оправдывает слишком широкий обмен.",
+            "evidence": [
+              "docs/registries/m2_substance_passports.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.passports.create_gt_contract",
+            "reason": "Латунный договор даёт образец правильно объединённого межотраслевого рецепта.",
+            "evidence": [
+              "docs/M2_SUBSTANCE_AND_BYPASS_AUDIT.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.bypass_audit.read",
+          "engine_id": "4070000000000009",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте короткий порядок поиска производственных обходов.",
+            "help": "Отметьте пункт после чтения памятки; отдельную фабрику строить не нужно."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Пять вопросов к подозрительному рецепту",
+        "lead_ru": "Обход выдаёт тот же результат раньше, дешевле или без обязательного побочного потока.",
+        "purpose_ru": "Перед использованием необычно выгодного рецепта сравните его с паспортом вещества. Важно не запретить всякую альтернативу, а отличить честный выбор оборудования от пути, который обесценивает целую эпоху, умножает материал или стирает опасные отходы.",
+        "steps_ru": [
+          "Доступна ли нужная форма в той же эпохе, что и основной маршрут?",
+          "Сохраняются ли масса, состав и количество продукта при прямом и обратном превращении?",
+          "Не исчезают ли обязательные реагенты, энергия, тепло, чистота или побочные продукты?",
+          "Остаётся ли смысл автоматизировать основной процесс после появления этого рецепта?",
+          "Можно ли повторять цикл без внешнего сырья и получать прибыль из ничего?"
+        ],
+        "success_ru": "Вы можете объяснить, почему альтернативный рецепт честен или какое именно правило паспорта он нарушает.",
+        "diagnostics_ru": [
+          "Если сомнение вызывает только другая машина при тех же затратах и выходе, это может быть полезная альтернатива, а не обход.",
+          "Если цикл возвращает больше исходного материала, остановите его и сохраните список шагов для исправления."
+        ],
+        "next_ru": "Итоговый конспект соберёт все правила раздела в одну рабочую привычку.",
+        "task_text_ru": "Ознакомьтесь с пятью вопросами для оценки подозрительного рецепта."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/bypass_decisions",
+          "evidence": [
+            "docs/registries/m2_bypass_decisions.json"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/M2_SUBSTANCE_AND_BYPASS_AUDIT.md",
+          "evidence": [
+            "docs/M2_SUBSTANCE_AND_BYPASS_AUDIT.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Диагностическая памятка не требует повторять производство и помогает избежать лишней работы."
+      },
+      "layout": {
+        "x": 15,
+        "y": 0,
+        "shape": "octagon",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.signoff",
+      "engine_id": "3A70000000000007",
+      "epoch": "REFERENCE",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:written_book",
+      "tags": [
+        "materials",
+        "summary",
+        "reference"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.passports.bypass_audit",
+            "reason": "Итог открывается после знакомства со всеми правилами совместимости и поиска обходов.",
+            "evidence": [
+              "authoring/quests/70_material_passports.json",
+              "docs/registries/m2_substance_passports.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.signoff.read",
+          "engine_id": "4A70000000000009",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте итоговую памятку материаловеда.",
+            "help": "Отметьте задание после чтения; дополнительных предметов оно не требует."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Рабочая привычка материаловеда",
+        "lead_ru": "Перед новой фабрикой достаточно задать несколько правильных вопросов, чтобы не переделывать её позже.",
+        "purpose_ru": "Сначала определите вещество и нужную форму. Затем найдите природный источник и основную производственную отрасль. Проверьте чистоту, совместимые входы, массовый выход, потребителей и отходы. Только после этого выбирайте оборудование и масштаб.",
+        "steps_ru": [
+          "Не требуйте предмет одного производителя, если существуют взаимозаменяемые варианты.",
+          "Закрепляйте один общий выход там, где склад и автоматическая сборка не должны видеть дубликаты.",
+          "Сохраняйте специальные растворы, топлива и чистые соединения раздельно.",
+          "Перед массовым запуском исключите цикл, который создаёт материал или пропускает обязательную стадию."
+        ],
+        "success_ru": "Вы умеете читать паспорт материала и связывать несколько производственных систем в одну цепочку без случайных дубликатов и лишней работы.",
+        "diagnostics_ru": [
+          "Если фабрика постоянно путает предметы, вернитесь к форме и общему выходу.",
+          "Если производство кажется неоправданно длинным, проверьте назначение каждой стадии: полезная стадия меняет форму, чистоту, состав или безопасность."
+        ],
+        "next_ru": "В соседнем разделе академии те же правила применяются к углероду, кислотам, воде, редким землям и ядерному циклу.",
+        "task_text_ru": "Ознакомьтесь с итоговой памяткой и используйте её при проектировании новых линий."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Итог расширен интеграцией визуальных схем и требует отдельного переноса старого завершения."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:m2/substance_passports",
+          "evidence": [
+            "docs/registries/m2_substance_passports.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.elements.intro",
+          "evidence": [
+            "authoring/questbook_v2/71_academy_of_elements.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Итог закрепляет знания и не повторяет уже выполненные предметные задания."
+      },
+      "layout": {
+        "x": 18,
+        "y": 0,
+        "shape": "hexagon",
+        "size": 1.6
+      }
+    }
+  ]
+}

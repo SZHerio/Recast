@@ -1,0 +1,1698 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.factions",
+    "engine_id": "2025000000000001",
+    "filename": "25_factions_live",
+    "group": {
+      "alias": "if.group.v2.security",
+      "engine_id": "1000000000000005",
+      "title_ru": "Безопасность и внешние силы"
+    },
+    "order": 25,
+    "icon": "minecraft:written_book",
+    "epoch": "SYSTEMS",
+    "tags": [
+      "factions",
+      "world",
+      "diplomacy"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "Фракции живого мира",
+      "subtitle": "Шесть сил с разной экономикой, архитектурой, отношением к городу и способом решать конфликты",
+      "description": [
+        "Фракции здесь отличаются не цветом формы. Одна защищает коммунальные службы, другая строит контракты вокруг тяжёлой промышленности, третья живёт маршрутами, а четвёртая оценивает риск опасных технологий.",
+        "Сейчас работают базы, посланники, досье, репутация, договоры и плановые операции. Разветвлённые сюжетные диалоги, вербовка специалистов и сложные контракты остаются отдельной задумкой; эта глава не просит искать ещё не написанные реплики."
+      ]
+    },
+    "editorial": {
+      "voice": "Наблюдательный проводник, который объясняет мотивы сторон без деления мира на безусловно добрых и злых.",
+      "tone_rules": [
+        "Каждую фракцию описывать через хозяйство, город, командование и способ вести конфликт.",
+        "Отделять действующие возможности от будущих сюжетных задумок.",
+        "Показывать практическую причину союза и вражды."
+      ],
+      "avoid": [
+        "Не превращать досье в перечень цветов и названий.",
+        "Не обещать товары, награды или диалоги, которых пока нет в игре.",
+        "Не делать принадлежность игрока синонимом репутации."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.factions.overview",
+      "engine_id": "3025000000000001",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:compass",
+      "tags": [
+        "factions",
+        "status"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.map",
+            "reason": "Знакомство с внешними силами начинается после появления карты и первых маршрутов разведки.",
+            "evidence": [
+              "authoring/questbook_v2/10_p0.json",
+              "authoring/quests/specs/25_factions_live.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.overview.read",
+          "engine_id": "4025000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, где смотреть состояние отношений и развитие фракций.",
+            "help": "Галочка подтверждает знакомство с командами и не меняет отношение ни одной стороны."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Три отчёта о внешнем мире",
+        "lead_ru": "Отношения, договоры и эпоха хранятся отдельно, поэтому одного числа недостаточно, чтобы понять положение дел.",
+        "purpose_ru": "Команда /if_threat status показывает эпоху, отношение шести фракций, действующие договоры и важные события, которые мир запомнил. /if_threat faction с названием стороны открывает её досье. /if_threat growth объясняет уровень баз, отрядов и доступные виды операций.",
+        "steps_ru": [
+          "Начните с /if_threat status и посмотрите, с кем отношения уже отличаются от нуля.",
+          "Откройте досье интересующей стороны командой /if_threat faction и её коротким именем.",
+          "Сравните отчёт /if_threat growth со своей текущей эпохой."
+        ],
+        "success_ru": "Вы знаете, где отдельно проверить отношение, договор, памятный поступок и доступный уровень внешней силы.",
+        "diagnostics_ru": [
+          "Если команда не подсказывает продолжение, начните вводить /if_threat и выберите готовый вариант из списка.",
+          "Если эпоха в отчёте не совпадает с вашим продвижением, сначала проверьте итоговое задание предыдущего этапа основной кампании."
+        ],
+        "next_ru": "Дальше можно изучить досье сторон или отправиться на поиски первой настоящей базы.",
+        "task_text_ru": "Ознакомьтесь с тремя отчётами о фракциях."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Команды и поля сверены с действующими обработчиками; текст не требует выполнять команду через галочку."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Текст прошёл техническую, литературную, потоковую и финальную проверки рядом с главой дипломатии."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction_status",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_3_commands.js",
+            "kubejs/server_scripts/40_balance/m85_factions_7_growth.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка не требует искусственно менять репутацию."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.6
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.zemlemer",
+      "engine_id": "3A25000000000007",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:bell",
+      "tags": [
+        "factions",
+        "zemlemer",
+        "city"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Досье читается после знакомства с общим отчётом о фракциях.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.zemlemer.read",
+          "engine_id": "4A25000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте досье Землемера.",
+            "help": "Досье объясняет характер стороны и не заключает договор автоматически."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Землемер: город как служба",
+        "lead_ru": "Содружество выросло из фермерских коммун, мастерских и геодезистов, которым пришлось вместе защищать воду и дороги.",
+        "purpose_ru": "Землемер поддерживает распределённую промышленность, если она не отравляет соседей и не подчиняет себе город. Для него новая колония начинается с воды, пищи, жилья и дороги, а победа измеряется тем, работают ли эти службы после кризиса.",
+        "steps_ru": [
+          "Ожидайте от их баз читаемую уличную сетку, амбар, мастерскую, колодец и места укрытия.",
+          "В бою они предпочитают удержание территории, эвакуацию жителей и контратаку после истощения противника.",
+          "Лучшие основания для сотрудничества — орошение, снабжение квартала, ремонт дороги и защита поселения."
+        ],
+        "success_ru": "Вы отличаете Землемер от армии или корпорации: его главным объектом остаётся работающий гражданский город.",
+        "diagnostics_ru": [
+          "Не принимайте практичную форму и простые материалы за слабость: их архитектура рассчитана на ремонт местными силами.",
+          "Не обещайте защиту поселения, если ваш собственный запас еды и воды не переживёт длительный кризис."
+        ],
+        "next_ru": "Землемер естественно сходится с Лигой и умеренным Корнем, но спорит с теми, кто ставит реквизицию или прибыль выше городских служб.",
+        "task_text_ru": "Ознакомьтесь с хозяйством, городом и обороной Землемера.",
+        "optional_note_ru": "Досье необязательно; оно помогает заранее понять мотивы стороны и возможные причины конфликта."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Досье сжато из нормативного описания и не обещает ещё не выданные награды."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены идеология, экономика, архитектура и доктрина."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction/zemlemer",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#61-содружество-полисов-землемер",
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Досье не требует предметов."
+      },
+      "layout": {
+        "x": 3,
+        "y": -4,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.meridian",
+      "engine_id": "3A25000000000008",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:rail",
+      "tags": [
+        "factions",
+        "meridian",
+        "industry"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Досье читается после знакомства с общим отчётом о фракциях.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.meridian.read",
+          "engine_id": "4A25000000000008",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте досье Меридиана.",
+            "help": "Знакомство с досье не делает вас поставщиком консорциума."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Меридиан: порядок по контракту",
+        "lead_ru": "Консорциум продолжает традиции инженерных гильдий, заводов, железнодорожных компаний и бюро стандартов.",
+        "purpose_ru": "Меридиан считает тяжёлую промышленность основой цивилизации. Он предлагает крупные заказы, лицензии и быстрый рост, но требует измеримого качества, соблюдения сроков и контроля риска вместо устных обещаний.",
+        "steps_ru": [
+          "На их базах ищите прямоугольную заводскую сетку, склады, ветку, проходную и диспетчерскую.",
+          "Их охрана действует стандартными отделениями и прежде всего защищает производство и транспорт.",
+          "Перед любым крупным обязательством оцените запас мощности, сырья и возможность повторять поставку."
+        ],
+        "success_ru": "Вы понимаете цену сотрудничества: Меридиан ускоряет индустрию, но превращает срыв поставки в политическую проблему.",
+        "diagnostics_ru": [
+          "Не принимайте единый стандарт за дружбу: консорциум ставит надёжность выше личной симпатии.",
+          "Не соглашайтесь на объём, который держится на ручном переносе или одном случайном месторождении."
+        ],
+        "next_ru": "Меридиан легко работает с Лигой и Гелиосом, но сталкивается с Корнем из-за загрязнения, контроля земли и секретности производств.",
+        "task_text_ru": "Ознакомьтесь с промышленной моделью и договорной дисциплиной Меридиана.",
+        "optional_note_ru": "Досье необязательно и не создаёт контракт без отдельного согласия."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст удерживает преимущества и политическую цену консорциума в одном образе."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены экономика, архитектура, доктрина и причины вражды."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction/meridian",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#62-индустриальный-консорциум-меридиан",
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Досье не создаёт производственный заказ."
+      },
+      "layout": {
+        "x": 3,
+        "y": -2.4,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.free_caravans",
+      "engine_id": "3A25000000000009",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:minecart",
+      "tags": [
+        "factions",
+        "free_caravans",
+        "trade"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Досье читается после знакомства с общим отчётом о фракциях.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.free_caravans.read",
+          "engine_id": "4A25000000000009",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте досье Лиги Вольных Караванов.",
+            "help": "Досье объясняет интересы Лиги, но не страхует ваш груз само по себе."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Лига: ценность маршрута",
+        "lead_ru": "Караваны, речники, железнодорожные артели и картографы объединились потому, что ни один рынок не живёт без дороги.",
+        "purpose_ru": "Лига зарабатывает посредничеством, фрахтом, складами и арбитражем. Она не стремится владеть каждым заводом или городом; ей важнее открытый маршрут, стандартная тара и договор, которому доверяют обе стороны.",
+        "steps_ru": [
+          "На стоянке Лиги ищите склад, ремонтный двор, причал или ветку и несколько путей выхода.",
+          "Их охрана спасает груз и отходит, а не ведёт дорогую войну за каждый метр земли.",
+          "Ваш лучший вклад — карта, исправный транспорт, безопасная перевалка и предсказуемое время доставки."
+        ],
+        "success_ru": "Вы видите в Лиге логистическую сеть, а не ещё одного владельца территории или тяжёлой фабрики.",
+        "diagnostics_ru": [
+          "Не путайте нейтральный рынок с безусловной дружбой: нарушение гарантии для Лиги опаснее обычного спора о цене.",
+          "Если маршрут зависит от единственного моста или причала, сначала подготовьте обход, а затем обещайте срок."
+        ],
+        "next_ru": "Лига охотно связывает Полисы и Меридиан, но непримиримо относится к пиратству, блокаде и поддельным распискам.",
+        "task_text_ru": "Ознакомьтесь с экономикой маршрутов и конвойной доктриной Лиги.",
+        "optional_note_ru": "Досье необязательно и не заменяет реальный торговый договор."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Досье связывает экономику, архитектуру и бой через сохранность маршрута."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены торговая модель, база, доктрина и союзные интересы."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction/free_caravans",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#63-лига-вольных-караванов",
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Досье не требует перевозить показательный груз."
+      },
+      "layout": {
+        "x": 3,
+        "y": -0.8,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.helios",
+      "engine_id": "3A2500000000000A",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:spyglass",
+      "tags": [
+        "factions",
+        "helios",
+        "research"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Досье читается после знакомства с общим отчётом о фракциях.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.helios.read",
+          "engine_id": "4A2500000000000A",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте досье Гелиоса.",
+            "help": "Знакомство с досье не выдаёт допуск к закрытым объектам."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Гелиос: знание под контролем",
+        "lead_ru": "Директорат происходит от изолированных исследовательских, оборонных и космических программ, переживших потерю внешнего снабжения.",
+        "purpose_ru": "Гелиос ценит точные технологии, но опасается их бесконтрольного распространения. Он предпочитает защищённые анклавы, несколько уровней допуска и малые профессиональные группы вместо открытого города и массовой войны.",
+        "steps_ru": [
+          "В их архитектуре обращайте внимание на шлюзы, сенсоры, раздельные зоны и резервную энергию.",
+          "Ранние ячейки используют только снаряжение вашей эпохи; настоящий стратегический арсенал не появляется раньше P7.",
+          "Доверие строится вокруг данных, карантина, контроля утечек и доказуемой безопасности опасной технологии."
+        ],
+        "success_ru": "Вы понимаете, почему Гелиос может помочь остановить катастрофу и одновременно требовать ограничить доступ к её технологии.",
+        "diagnostics_ru": [
+          "Не принимайте секретность за техническое превосходство в ранней игре: снаряжение ячейки ограничено вашей эпохой.",
+          "Перед передачей образца оцените, какие знания и будущие решения вы отдаёте вместе с предметом."
+        ],
+        "next_ru": "Гелиос сотрудничает с Меридианом в сложных проектах, но конфликтует с радикалами Корня и всеми, кто распространяет опасные технологии без контроля.",
+        "task_text_ru": "Ознакомьтесь с системой допуска и стратегией сдерживания Гелиоса.",
+        "optional_note_ru": "Досье необязательно и не открывает закрытые технологии P7."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст сохраняет эпохальное ограничение и не выдаёт заявленный поздний арсенал за ранний контент."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены происхождение, режим допуска, архитектура и P7-ограничение."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction/helios",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#64-директорат-гелиос",
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Досье не требует приносить опасный образец."
+      },
+      "layout": {
+        "x": 3,
+        "y": 0.8,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.ash_root",
+      "engine_id": "3A2500000000000B",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:oak_sapling",
+      "tags": [
+        "factions",
+        "ash_root",
+        "ecology"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Досье читается после знакомства с общим отчётом о фракциях.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.ash_root.read",
+          "engine_id": "4A2500000000000B",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте досье Пепельного Корня.",
+            "help": "Досье не выбирает за вас сторону между умеренными и радикалами."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Корень: промышленность с пределом",
+        "lead_ru": "Движение собрало переселенцев из зон аварий, лесные общины, агрономов, медиков и ремонтные артели.",
+        "purpose_ru": "Пепельный Корень не отрицает машины. Умеренные принимают чистые замкнутые процессы и полезные инструменты, но выступают против сброса отходов, захвата воды и стратегических производств без согласия соседей.",
+        "steps_ru": [
+          "Их базы ищите по водосбору, семенному складу, лечебнице, скрытым тропам и запасным выходам.",
+          "В бою они нарушают снабжение и уходят, вместо того чтобы держать открытый фронт.",
+          "Сотрудничество строится на очистке воды, восстановлении почвы, честном отчёте о выбросах и защите общин."
+        ],
+        "success_ru": "Вы отличаете экологическое требование от запрета технологий и понимаете, почему внутри движения возможен раскол.",
+        "diagnostics_ru": [
+          "Не называйте любой протест луддизмом: сначала выясните, какой сброс отходов или спор о земле стал причиной конфликта.",
+          "Не обещайте замкнутый цикл, пока не знаете, куда уходит каждый побочный продукт."
+        ],
+        "next_ru": "Корень способен сотрудничать с Полисами и Лигой, но враждует с загрязняющими проектами Меридиана, секретными объектами Гелиоса и выжженной землёй Шрама.",
+        "task_text_ru": "Ознакомьтесь с экологической программой и внутренним расколом Корня.",
+        "optional_note_ru": "Досье необязательно и не делает одну ветвь движения единственным каноном."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Фракция описана как сложное движение, а не карикатурный противник индустрии."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены умеренное и радикальное крыло, хозяйство и доктрина."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction/ash_root",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#65-движение-пепельный-корень",
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Досье не требует показательной вырубки или посадки."
+      },
+      "layout": {
+        "x": 3,
+        "y": 2.4,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.scar",
+      "engine_id": "3A2500000000000C",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:tripwire_hook",
+      "tags": [
+        "factions",
+        "scar",
+        "mercenaries"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Досье читается после знакомства с общим отчётом о фракциях.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.scar.read",
+          "engine_id": "4A2500000000000C",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте досье артели Шрам.",
+            "help": "Знакомство с артелью не отменяет вражду конкретного отряда."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Шрам: долг, добыча и капитан",
+        "lead_ru": "В артели сошлись разорившиеся старатели, дезертиры, контрабандисты, сборщики лома и экипажи погибших колоний.",
+        "purpose_ru": "Шрам живёт разбором техники на детали, выкупом, наёмной охраной и чёрным рынком. У него нет единой вечной политики: власть конкретного капитана держится на добыче, долге и доле, поэтому разные артели способны торговать, воевать или наниматься.",
+        "steps_ru": [
+          "Их базы собираются из повторно использованных модулей, тайников, ремонтного двора и узких зон огня.",
+          "В бою они ищут слабое место, захватывают ценное и отходят до дорогой войны на истощение.",
+          "Любую сделку оценивайте по имени капитана, обещанной доле и тому, кто отвечает за нарушение."
+        ],
+        "success_ru": "Вы не считаете Шрам безликой армией: опасность и возможность сделки зависят от конкретной артели и её интереса.",
+        "diagnostics_ru": [
+          "Не полагайтесь на общий знак артели, если договор заключён только с одним капитаном.",
+          "Не храните единственный резерв у очевидного входа: налётчики прежде всего ищут узкое место снабжения."
+        ],
+        "next_ru": "Шрам конфликтует почти со всеми из-за налётов и хищений, но отдельный капитан может стать наёмником, посредником или постоянным врагом.",
+        "task_text_ru": "Ознакомьтесь с устройством артели, её добычей и тактикой налёта.",
+        "optional_note_ru": "Досье необязательно; конкретные капитаны и разветвлённые сделки остаются задумкой для будущих сюжетных контрактов."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Досье оставляет пространство для разных капитанов и не сочиняет их диалоги."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены происхождение, экономика, архитектура, командование и доктрина."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction/scar",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md#66-вольная-артель-шрам",
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Досье не требует провоцировать налёт."
+      },
+      "layout": {
+        "x": 3,
+        "y": 4,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.first_base",
+      "engine_id": "3A8CF713DE372BBC",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "minecraft:campfire",
+      "tags": [
+        "factions",
+        "bases",
+        "first_contact"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.overview",
+            "reason": "Поиск базы следует после знакомства с отчётами и короткими именами сторон.",
+            "evidence": [
+              "authoring/quests/specs/25_factions_live.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.first_base.structure",
+          "engine_id": "46E7754074BDA2B0",
+          "type": "structure",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Доберитесь до любой базы фракции.",
+            "help": "Подходят базы всех шести сторон из общего тега структур."
+          },
+          "structure": "#industrial_frontier:faction_base"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первая база в мире",
+        "lead_ru": "Досье объясняет мотивы, но настоящий контакт начинается только у постройки, которую можно отметить на карте.",
+        "purpose_ru": "Шесть типов баз встречаются редко и соответствуют хозяйству своих владельцев. При первом посещении база считается обжитой, а её уровень выбирается по вашей эпохе, а не по возрасту мира.",
+        "steps_ru": [
+          "Возьмите карту, еду и недорогой комплект для дальней разведки.",
+          "Ищите не только стены: водный узел, склад, вышка или ремонтный двор часто лучше выдают назначение базы.",
+          "После входа дождитесь сообщения о стороне и отметьте координаты."
+        ],
+        "success_ru": "Книга распознала одну из шести баз, а при первом посещении вы получили сообщение о её владельце и текущем уровне.",
+        "diagnostics_ru": [
+          "Если база не отзывается сразу, побудьте внутри до десяти секунд: сообщение может появиться с небольшой задержкой.",
+          "Если сообщение не появляется, запишите координаты и предполагаемого владельца, чтобы позже сверить, относится ли постройка к фракционным базам."
+        ],
+        "next_ru": "На обжитой базе появляется посланник, через которого доступны досье и простые договоры.",
+        "task_text_ru": "Доберитесь до любой базы фракции."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Посещение подтверждается структурой; десятисекундный интервал взят из фактического опроса баз."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Тег, шесть структур и интервал сканирования сверены по локальным файлам."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "structure",
+          "id": "industrial_frontier:base_zemlemer",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/faction_base.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:base_growth",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_5_bases.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 0,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один дальний поиск открывает место для контакта; повторный обход всех шести баз не обязателен."
+      },
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.envoy",
+      "engine_id": "3025000000000003",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:paper",
+      "tags": [
+        "factions",
+        "envoy",
+        "dialogue"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.first_base",
+            "reason": "Посланник появляется при первом заселении найденной базы.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_4_npc.js",
+              "kubejs/server_scripts/40_balance/m85_factions_5_bases.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.envoy.read",
+          "engine_id": "4025000000000003",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, что умеет нынешний посланник.",
+            "help": "Галочка отмечает чтение. Разговор с персонажем книга пока не подтверждает автоматически."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Посланник без притворства",
+        "lead_ru": "Easy NPC создаёт именного представителя стороны, но нынешний посланник пока не является полноценным сюжетным героем.",
+        "purpose_ru": "Посланник открывает короткое досье и меню договоров. Доступные кнопки зависят от отношения и эпохи. Разветвлённые характерные разговоры, торг, вербовка и сложные сюжетные решения пока остаются задумкой и не считаются пропущенной частью сюжета.",
+        "steps_ru": [
+          "Найдите посланника внутри обжитой базы и откройте разговор обычным взаимодействием.",
+          "Сначала запросите досье стороны, затем посмотрите доступные договоры.",
+          "Если нужной кнопки нет, сравните своё отношение и эпоху с порогом в списке договоров."
+        ],
+        "success_ru": "Вы понимаете, что нынешний разговор даёт досье и договор, а отсутствие сложной реплики не скрывает обязательное задание.",
+        "diagnostics_ru": [
+          "Если посланник не появился, вернитесь к центру базы и дождитесь следующей проверки присутствия.",
+          "Если меню договора пусто, откройте /if_threat treaty list и проверьте порог отношения и эпохи."
+        ],
+        "next_ru": "Перед первым договором разберитесь, какие поступки действительно меняют отношение уже сейчас.",
+        "task_text_ru": "Ознакомьтесь с действующими возможностями посланника."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Новые диалоги не создавались; текст честно ограничивает существующий набор досье и договоров."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены пресеты шести посланников и условия кнопок."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "easy_npc",
+          "evidence": [
+            "mods/easy_npc-forge-1.20.1-7.4.1.jar",
+            "kubejs/data/industrial_frontier/preset/zemlemer_envoy.npc.snbt"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:envoy_dialogue",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_4_npc.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Знакомство не требует повторять один разговор ради отношения."
+      },
+      "layout": {
+        "x": 9,
+        "y": -1.5,
+        "shape": "circle",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.reputation",
+      "engine_id": "3025000000000004",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:emerald",
+      "tags": [
+        "factions",
+        "reputation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.envoy",
+            "reason": "Репутационные причины разбираются после знакомства с первым представителем стороны.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js",
+              "kubejs/server_scripts/40_balance/m85_factions_2_core.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.reputation.read",
+          "engine_id": "4025000000000004",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, какие изменения отношения уже подключены.",
+            "help": "Не нужно намеренно портить отношения ради выполнения этого задания."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Отношение меняется по причине",
+        "lead_ru": "Шкала от −100 до +100 не движется сама по себе: каждое изменение должно назвать поступок и величину.",
+        "purpose_ru": "Уже сейчас учитываются заключение и разрыв договора, убийство посланника, мирный исход операции и силовое отражение. Обычная торговля, передача ресурсов и защита поселений пока не меняют отношение: для них ещё нет отдельных работающих заданий.",
+        "steps_ru": [
+          "После заметного события прочитайте сообщение: в нём должны быть сторона, изменение, новое значение и причина.",
+          "Проверьте итог через /if_threat status.",
+          "Помните, что крупный поступок частично влияет на союзников и противников задетой стороны."
+        ],
+        "success_ru": "Вы можете восстановить причину каждого уже работающего изменения и не ждёте скрытой награды за действие, которое пока не учитывается.",
+        "diagnostics_ru": [
+          "Если число изменилось без сообщения, запишите событие и значение до и после.",
+          "Если одноразовая причина начисляется повторно, укажите сторону и точную последовательность действий."
+        ],
+        "next_ru": "Репутация открывает возможность договора, но сам договор остаётся отдельным состоянием с собственными последствиями.",
+        "task_text_ru": "Узнайте, какие поступки уже меняют отношение фракций."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст отделяет пятнадцать объявленных причин от четырёх групп реально вызванных событий."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Вызовы изменения отношения найдены в договорах, смерти посланника и операциях."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:reputation",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js",
+            "kubejs/server_scripts/40_balance/m85_factions_2_core.js",
+            "kubejs/server_scripts/40_balance/m85_factions_4_npc.js",
+            "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Квест не заставляет фармить отношение или убивать мирного персонажа."
+      },
+      "layout": {
+        "x": 12,
+        "y": -1.5,
+        "shape": "diamond",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.treaties",
+      "engine_id": "3025000000000005",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:writable_book",
+      "tags": [
+        "factions",
+        "treaties"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.reputation",
+            "reason": "Порог договора имеет смысл только после объяснения шкалы отношения.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_1_data.js",
+              "kubejs/server_scripts/40_balance/m85_factions_2_core.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.treaties.read",
+          "engine_id": "4025000000000005",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, какие последствия договоров уже действуют.",
+            "help": "Заключать договор ради этой справки не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Договор — отдельное решение",
+        "lead_ru": "Хорошее отношение даёт право говорить, но не заключает соглашение за вас.",
+        "purpose_ru": "Перемирие, союз и дань уже останавливают подготовку враждебной операции этой стороны. Подписание даёт восемь пунктов отношения, а разрыв отменяет договор, отнимает сорок пунктов и навсегда оставляет отметку о предательстве. Скидки по торговому договору и прибытие союзного отряда пока не работают.",
+        "steps_ru": [
+          "Посмотрите пороги командой /if_threat treaty list.",
+          "Перед подписанием проверьте сторону, тип договора и свою эпоху.",
+          "После подписания откройте /if_threat status и убедитесь, что соглашение появилось в списке."
+        ],
+        "success_ru": "Вы понимаете, какие соглашения действительно предотвращают операцию, и не ждёте от договора ещё не созданных торговых или военных преимуществ.",
+        "diagnostics_ru": [
+          "Если договор не подписывается, команда прямо покажет недостающую репутацию или эпоху.",
+          "Если разорванный договор не оставил штраф и памятный след, зафиксируйте сторону и тип соглашения."
+        ],
+        "next_ru": "При плохом отношении и отсутствии защищающего договора сторона может начать плановую операцию.",
+        "task_text_ru": "Ознакомьтесь с порогами и действующими последствиями договоров."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Справка не повторяет необеспеченные обещания строк описания договора."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Пороги, штрафы и блокирующие операцию типы сверены по коду."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:treaties",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js",
+            "kubejs/server_scripts/40_balance/m85_factions_2_core.js",
+            "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка не вынуждает подписывать и разрывать договор ради проверки."
+      },
+      "layout": {
+        "x": 15,
+        "y": -1.5,
+        "shape": "square",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.operations",
+      "engine_id": "3025000000000006",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:bell",
+      "tags": [
+        "factions",
+        "operations",
+        "warning"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.treaties",
+            "reason": "Операции разбираются после способа предотвратить их договором.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.factions.base_growth",
+            "reason": "Перед угрозами нужно понять, как эпоха влияет на название базы и где физическое развитие пока заканчивается.",
+            "evidence": [
+              "authoring/questbook_v2/25_factions_live.json",
+              "kubejs/server_scripts/40_balance/m85_factions_5_bases.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.operations.read",
+          "engine_id": "4025000000000006",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте краткий порядок плановой операции.",
+            "help": "Провоцировать враждебность или ждать случайного события не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сначала предупреждение",
+        "lead_ru": "Операция возможна только у стороны с отношением −11 или ниже; пока вы вне мира, новая угроза не планируется и начатый отсчёт не движется.",
+        "purpose_ru": "Событие проходит через планирование, разведку, объявление и четырёхминутное окно переговоров. Только затем возможны подготовка и активная стадия. Команда /if_threat operation status показывает текущее положение, а /if_threat operation negotiate принимает мирное решение в своё окно.",
+        "steps_ru": [
+          "При первом сообщении проверьте сторону и название операции.",
+          "Следите за стадией через /if_threat operation status, не ожидая появления отряда без предупреждения.",
+          "Если хотите договориться, используйте команду только во время открытого окна переговоров."
+        ],
+        "success_ru": "Вы знаете, что активной стадии предшествуют предупреждение и переговоры, а нейтральная сторона ничего против вас не планирует.",
+        "diagnostics_ru": [
+          "Если операция началась при отношении выше −11, запишите сторону и значение из отчёта.",
+          "Если активная стадия наступила без окна переговоров, сохраните порядок сообщений для проверки."
+        ],
+        "next_ru": "Полная глава операций отдельно разбирает события разных эпох, действующие отряды и восстановление после столкновения.",
+        "task_text_ru": "Ознакомьтесь с порядком предупреждения и переговоров."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Числа и порядок стадий взяты из действующего планировщика, без выдуманных исходов."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Порог, окно в 4800 тиков и команды сверены статически."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:operations",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Знакомство не требует намеренно опускать репутацию."
+      },
+      "layout": {
+        "x": 18,
+        "y": -1.5,
+        "shape": "octagon",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.factions.base_growth",
+      "engine_id": "3A2500000000000D",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:stone_bricks",
+      "tags": [
+        "factions",
+        "bases",
+        "growth"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.factions.first_base",
+            "reason": "Семь уровней базы легче понять после первого посещения и сообщения о владельце постройки.",
+            "evidence": [
+              "authoring/questbook_v2/25_factions_live.json",
+              "kubejs/server_scripts/40_balance/m85_factions_5_bases.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.factions.base_growth.read",
+          "engine_id": "4A2500000000000D",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, как семь уровней базы соотносятся с технологическими эпохами.",
+            "help": "Отметка не повышает уровень найденной базы и не перестраивает её."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Уровень базы пока остаётся названием",
+        "lead_ru": "При первом посещении база получает уровень вашей эпохи, но её постройка пока не меняется вместе с этим названием.",
+        "purpose_ru": "Сейчас действует такая лестница: P0 — ранний лагерь; P1–P2 — укреплённый лагерь; P3 — постоянная база; P4–P5 — промышленный аванпост; P6 — военный комплекс; P7–P8 — высокотехнологичный объект; P9 — стратегический центр. Выбранный уровень сохраняется для этого места и выводится в сообщении.",
+        "steps_ru": [
+          "Введите /if_threat growth и сравните название текущего уровня со своей эпохой.",
+          "Не ждите, что уже найденная постройка сама заменит дерево на бетон или добавит новые комнаты после повышения эпохи.",
+          "Не ожидайте отдельный поздний склад или улучшенную добычу только из-за названия уровня: такие изменения пока не связаны с базой.",
+          "Оценивайте фактическую постройку по тому, что в ней действительно есть: входы, пути отхода, склад, мастерская, укрытия, а на поздних уровнях — источник энергии."
+        ],
+        "success_ru": "Вы знаете все семь названий, понимаете их связь с эпохой и не принимаете сохранённый уровень за автоматическую перестройку базы.",
+        "diagnostics_ru": [
+          "Если отчёт показывает неверный уровень, сначала сравните сохранённую эпоху с итоговым заданием основной кампании.",
+          "Если архитектура не соответствует громкому названию, перед вами ограничение нынешних баз, а не спрятанная комната или пропущенный этап."
+        ],
+        "next_ru": "Именной посланник уже появляется на обжитой базе независимо от её уровня; через него доступны досье и простые договоры.",
+        "task_text_ru": "Разберитесь, что уже означает уровень базы и чего он пока не меняет."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Перечень семи уровней сверён с действующей таблицей; физическая перестройка базы не заявлена."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Текст честно отделяет сохранённую метку уровня от ещё не созданных архитектурных вариантов."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:base_growth",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_1_data.js",
+            "kubejs/server_scripts/40_balance/m85_factions_5_bases.js",
+            "kubejs/server_scripts/40_balance/m85_factions_7_growth.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "После первого посещения достаточно изучить отчёт; искать семь разных баз не требуется."
+      },
+      "layout": {
+        "x": 9,
+        "y": 1.5,
+        "shape": "rsquare",
+        "size": 1.5
+      }
+    }
+  ]
+}

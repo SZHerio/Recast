@@ -276,6 +276,7 @@
         "required": [
           "contract_id",
           "status",
+          "optionality",
           "source_domain_ref",
           "target_domain_ref",
           "direction",
@@ -292,6 +293,7 @@
             "pattern": "^industrial_frontier:contract/[a-z0-9_/-]+$"
           },
           "status": { "enum": ["ACTIVE_VENDOR", "ACTIVE_PACK", "GATED_M2_IMPLEMENTATION", "GATED_NOT_INSTALLED"] },
+          "optionality": { "enum": ["REQUIRED", "OPTIONAL"] },
           "source_domain_ref": {
             "type": "string",
             "pattern": "^industrial_frontier:domain/[a-z0-9_/-]+$"

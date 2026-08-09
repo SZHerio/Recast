@@ -1,0 +1,1482 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.defence",
+    "engine_id": "2021000000000001",
+    "filename": "21_defence_gear",
+    "group": {
+      "alias": "if.group.v2.security",
+      "engine_id": "1000000000000005",
+      "title_ru": "Безопасность и внешние силы"
+    },
+    "order": 21,
+    "icon": "tacz:gun_smith_table",
+    "epoch": "SYSTEMS",
+    "tags": [
+      "defence",
+      "weapons",
+      "safety"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "Оборона и снаряжение",
+      "subtitle": "Холодное оружие, огнестрел и артиллерия появляются вместе с производством, которое способно их снабжать",
+      "description": [
+        "Эта ветка не смешивает несколько одинаковых боевых систем. Better Combat отвечает за сам удар, Epic Knights — за раннее холодное оружие, TaCZ — за единую линию огнестрельного оружия, а Create Big Cannons — за стационарную артиллерию.",
+        "Сила снаряжения растёт вместе с фабрикой. Ранний металл даёт надёжное оружие ближнего боя, сталь открывает оружейный стол, а поздняя стратегическая промышленность помогает защищать уже не одного человека, а целые объекты."
+      ]
+    },
+    "editorial": {
+      "voice": "Спокойный инструктор по безопасности, который связывает каждое оружие со снабжением, местом применения и ценой ошибки.",
+      "tone_rules": [
+        "Сначала объяснять задачу и безопасное применение, затем перечислять детали.",
+        "Чётко разводить личное оружие, отрядное вооружение и артиллерию.",
+        "Не обещать действие, которое книга не умеет проверить."
+      ],
+      "avoid": [
+        "Не превращать оружейную ветку в каталог похожих стволов.",
+        "Не выдавать найденный предмет за устойчивое снабжение.",
+        "Не описывать подготовленные, но ещё не подключённые отряды как действующие."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.defence.ladder",
+      "engine_id": "3021000000000001",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:shield",
+      "tags": [
+        "defence",
+        "progression"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.iron_consumer",
+            "reason": "Первое осмысленное снаряжение появляется после того, как железо уже стало рабочим инструментом.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+              "authoring/quests/specs/21_defence_gear.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.ladder.read",
+          "engine_id": "4021000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, как устроена лестница вооружения.",
+            "help": "Галочка отмечает только знакомство с правилами этой ветки."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Оружие следует за заводом",
+        "lead_ru": "Железный инструмент уже доказал, что ваш металл годится для работы; теперь тот же принцип применим к защите.",
+        "purpose_ru": "Каждая ступень вооружения опирается на своё производство. Холодному оружию нужны металл и ремонт, огнестрелу — оружейный стол и постоянный запас патронов, артиллерии — подготовленная позиция, порох и серийные детали.",
+        "steps_ru": [
+          "Для ранних выходов выберите холодное оружие и щит, которые можно чинить из доступного металла.",
+          "Не считайте найденный огнестрел открытой технологией, пока не построен оружейный стол и не налажен боезапас.",
+          "Стационарное орудие планируйте как часть укрепления, а не как замену личному оружию."
+        ],
+        "success_ru": "Вы можете назвать источник снабжения для каждого выбранного вида оружия и не рассчитываете на случайную добычу.",
+        "diagnostics_ru": [
+          "Если новое оружие кажется слишком дорогим, сначала проверьте, открыта ли соответствующая эпоха материалов.",
+          "Если боезапас заканчивается быстрее, чем производится, вернитесь к линии снабжения, а не наращивайте число стволов."
+        ],
+        "next_ru": "Сначала разберём ранний ближний бой, где цена ошибки невелика и не требуется отдельная линия боеприпасов.",
+        "task_text_ru": "Разберитесь, почему снаряжение не должно опережать производство."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст написан как вводная причинная схема без обещаний о несуществующем луте."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Техническая, литературная, потоковая и финальная проверки выполнены вместе с соседними главами."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:weapon_epoch_ladder",
+          "evidence": [
+            "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md",
+            "docs/registries/quest_content_coverage.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Вводный узел не требует расходовать материалы."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.6
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.melee",
+      "engine_id": "3B4E5CE2A065CDA5",
+      "epoch": "SYSTEMS",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "magistuarmory:iron_bastardsword",
+      "tags": [
+        "defence",
+        "melee",
+        "p0"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.defence.ladder",
+            "reason": "Выбор первого оружия следует после знакомства с общей лестницей снабжения.",
+            "evidence": [
+              "authoring/quests/specs/21_defence_gear.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.melee.item",
+          "engine_id": "43093DB11FB8DCEF",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите железный полуторный меч Epic Knights.",
+            "help": "Меч должен оставаться у вас: задача проверяет готовое оружие, а не отдельные слитки."
+          },
+          "item": {
+            "id": "magistuarmory:iron_bastardsword",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Удар имеет направление",
+        "lead_ru": "Better Combat меняет не рецепт оружия, а сам бой: дальность, дуга и ритм атаки теперь важнее беспорядочных нажатий.",
+        "purpose_ru": "Полуторный меч служит понятным учебным образцом: он показывает, как длина оружия и серия ударов меняют безопасную дистанцию. Epic Knights даёт форму оружия, а Better Combat определяет движение атаки.",
+        "steps_ru": [
+          "Изготовьте железный полуторный меч после того, как наладили выплавку железа.",
+          "Проверьте в безопасном месте, с какой дистанции начинается удар и сколько времени занимает вся серия.",
+          "Не зажимайтесь у стены: широкий замах удобен против группы, но требует свободного места."
+        ],
+        "success_ru": "Готовый меч находится у вас, а его дальность и темп не приходится угадывать в первом серьёзном бою.",
+        "diagnostics_ru": [
+          "Если движения не отличаются от обычных атак Minecraft, убедитесь, что Better Combat включён и клавиша атаки не была переназначена.",
+          "Если рецепт требует недоступный материал, убедитесь, что выбран именно железный вариант, а не стальной или алмазный."
+        ],
+        "next_ru": "После оружия зафиксируем правила выхода: запасной комплект, путь отхода и ремонт важнее лишней единицы урона.",
+        "task_text_ru": "Получите железный полуторный меч для ранней полевой подготовки."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Предметная задача подтверждает только готовое оружие; тренировочные советы не выдаются за автоматически проверяемое действие."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точный предмет сверён с установленным Epic Knights; игровое ощущение остаётся на проверку пользователя."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "bettercombat",
+          "evidence": [
+            "mods/bettercombat-forge-1.9.0+1.20.1.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "magistuarmory",
+          "evidence": [
+            "mods/epic-knights-1.20.1-forge-10.11.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "magistuarmory:iron_bastardsword",
+          "evidence": [
+            "mods/epic-knights-1.20.1-forge-10.11.jar!/assets/magistuarmory/models/item/iron_bastardsword.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "rationale_ru": "Одного оружия достаточно, чтобы познакомиться с дальностью и серией ударов."
+      },
+      "layout": {
+        "x": 3,
+        "y": -2,
+        "shape": "diamond",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.discipline",
+      "engine_id": "3021000000000006",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:iron_chestplate",
+      "tags": [
+        "defence",
+        "recovery",
+        "safety"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.defence.melee",
+            "reason": "Правила выхода разбираются после появления первого отдельного боевого комплекта.",
+            "evidence": [
+              "authoring/quests/specs/21_defence_gear.json",
+              "authoring/questbook_v2/10_p0.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.discipline.read",
+          "engine_id": "4021000000000006",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правила подготовки к выходу.",
+            "help": "Галочка подтверждает знакомство с памяткой, а не победу в бою."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Выход начинается на складе",
+        "lead_ru": "Хорошее оружие не спасёт, если после смерти невозможно добраться до места потери или заменить разбитый комплект.",
+        "purpose_ru": "Разделите рабочее и полевое снаряжение. На базе должны оставаться запасные инструменты, еда, простой комплект защиты и материалы для ремонта. Перед дальней разведкой отметьте маршрут и место, куда сможете отступить.",
+        "steps_ru": [
+          "Оставьте на базе запасной инструмент, еду и недорогую защиту для возвращения к месту гибели.",
+          "Берите только тот редкий предмет, потерю которого готовы восполнить своим производством.",
+          "Перед боем осмотрите путь отхода и не ставьте единственный склад боеприпасов у линии огня."
+        ],
+        "success_ru": "Неудачный выход отнимет время и расходники, но не остановит фабрику и не лишит вас возможности вернуться.",
+        "diagnostics_ru": [
+          "Если запасной комплект слишком дорог, упростите его до железа, щита и еды вместо копии лучшего снаряжения.",
+          "Если путь назад проходит через ту же угрозу, заранее подготовьте второй подход или временное укрытие."
+        ],
+        "next_ru": "Когда появится сталь, к этой дисциплине добавится отдельная линия огнестрельного снабжения.",
+        "task_text_ru": "Ознакомьтесь с правилами безопасного выхода и восстановления."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Памятка не требует изготовить дубликаты ради отметки и продолжает правила восстановления P0."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Ритм, переходы к соседним главам и границы проверяемых действий вычитаны в четырёх проходах."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:corpse_recovery",
+          "evidence": [
+            "authoring/questbook_v2/10_p0.json",
+            "authoring/quests/specs/21_defence_gear.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Памятка помогает избежать повторного гринда после потери вещей."
+      },
+      "layout": {
+        "x": 6,
+        "y": -2,
+        "shape": "square",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.firearms",
+      "engine_id": "3FA752DA7EDD595F",
+      "epoch": "SYSTEMS",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "tacz:gun_smith_table",
+      "tags": [
+        "defence",
+        "firearms",
+        "p2"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.defence.ladder",
+            "reason": "Оружейный стол открывается как следующая отдельная ступень, а не как замена раннему оружию.",
+            "evidence": [
+              "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.steel",
+            "reason": "Рецепт оружейного стола сборки прямо потребляет стальные слитки и пластины P2.",
+            "evidence": [
+              "kubejs/server_scripts/10_progression/m3_combat_epoch_gate.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.firearms.item",
+          "engine_id": "43931871EFD4367C",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте оружейный стол TaCZ.",
+            "help": "В рецепте сборки используются общие стальные слитки и пластины."
+          },
+          "item": {
+            "id": "tacz:gun_smith_table",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.defence.firearms.place",
+          "engine_id": "45C6B81FF6BCC25B",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите оружейный стол в мастерской.",
+            "help": "Оставьте рядом место для хранения патронов и ремонта снаряжения."
+          },
+          "place": {
+            "block": "tacz:gun_smith_table",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.defence.firearms.use",
+          "engine_id": "499798DD5ABC24E2",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Откройте установленный оружейный стол.",
+            "help": "Используйте стол пустой рукой или подходящим обычным предметом."
+          },
+          "use": {
+            "block": "tacz:gun_smith_table",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Оружейная начинается со стали",
+        "lead_ru": "Сталь P2 превращает огнестрел из случайной находки в воспроизводимую производственную систему.",
+        "purpose_ru": "TaCZ остаётся единственной основной системой ручного огнестрела. Оружейный стол открывает её ассортимент, но сам по себе не решает снабжение: каждый выбранный образец требует подходящих патронов, магазинов и места для безопасной проверки.",
+        "steps_ru": [
+          "Сверьте изменённый рецепт стола: ему нужны стальные пластины, стальные слитки и железный блок.",
+          "Поставьте стол в отдельной мастерской, а не посреди общего склада.",
+          "Откройте интерфейс и сначала выберите калибр, который сможете выпускать постоянно."
+        ],
+        "success_ru": "Оружейный стол установлен и открывается, а выбранный класс оружия не требует недоступных материалов.",
+        "diagnostics_ru": [
+          "Если старый дешёвый рецепт не работает, это ожидаемо: ранний обход заменён стальным рецептом сборки.",
+          "Если стол пуст, убедитесь, что встроенный набор TaCZ загрузился и предметы TaCZ видны в JEI. Если их нет вовсе, перезапустите клиент и снова проверьте список."
+        ],
+        "next_ru": "Перед изготовлением крупной партии боеприпасов подготовьте мишень и безопасное направление стрельбы.",
+        "task_text_ru": "Изготовьте, установите и откройте оружейный стол TaCZ."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Все три действия подтверждаются отдельными задачами; текст не требует конкретный ствол с непроверяемыми данными предмета."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Стальной рецепт и точный блок сверены статически; интерфейс проверяет пользователь."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block",
+          "id": "tacz:gun_smith_table",
+          "evidence": [
+            "mods/tacz-1.20.1-1.1.8-hotfix.jar!/assets/tacz/blockstates/gun_smith_table.json",
+            "kubejs/server_scripts/10_progression/m3_combat_epoch_gate.js"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "tacz",
+          "evidence": [
+            "mods/tacz-1.20.1-1.1.8-hotfix.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один стол открывает весь учебный контур и не требует повторного изготовления."
+      },
+      "layout": {
+        "x": 3,
+        "y": 2,
+        "shape": "gear",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.range",
+      "engine_id": "3A21000000000007",
+      "epoch": "SYSTEMS",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "tacz:target",
+      "tags": [
+        "defence",
+        "range",
+        "safety"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.defence.firearms",
+            "reason": "Тир готовится после появления оружейной мастерской и до расходования учебной партии патронов.",
+            "evidence": [
+              "docs/registries/quest_content_coverage.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.range.item",
+          "engine_id": "4A21000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте одну мишень TaCZ.",
+            "help": "Мишень нужна для отдельной безопасной зоны, а не для украшения мастерской."
+          },
+          "item": {
+            "id": "tacz:target",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.defence.range.place",
+          "engine_id": "4B21000000000007",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите мишень в выбранном направлении стрельбы.",
+            "help": "За мишенью должен быть надёжный земляной или каменный фон."
+          },
+          "place": {
+            "block": "tacz:target",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Тир раньше боезапаса",
+        "lead_ru": "Проверять новый калибр между машинами и жилыми домами — плохой способ узнать его разброс.",
+        "purpose_ru": "Простая мишень задаёт безопасное направление для пристрелки. За ней нужен грунтовый или каменный вал, сбоку — свободная зона, а вход на линию огня должен быть виден со стрелкового места.",
+        "steps_ru": [
+          "Выберите место вдали от жилья, складов с горючим и проходящих дорог.",
+          "Соберите за мишенью сплошной фон без окон и щелей.",
+          "Поставьте мишень так, чтобы при промахе снаряд уходил только в этот фон."
+        ],
+        "success_ru": "Мишень установлена, за ней есть безопасный фон, а случайный прохожий не может незаметно выйти на линию огня.",
+        "diagnostics_ru": [
+          "Если за мишенью виден горизонт, перенесите её к склону или достройте вал.",
+          "Если тир пересекает дорогу, разверните его: табличка не заменяет безопасную планировку."
+        ],
+        "next_ru": "Теперь можно изготовить небольшую учебную партию патронов и проверить выбранный калибр без лишнего расхода.",
+        "task_text_ru": "Изготовьте и установите мишень TaCZ в безопасном месте."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Квест проверяет мишень и её установку; безопасный фон сформулирован как наблюдаемый критерий пользователя."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точный блок сверён по установленному JAR; планировку требуется проверить в игре."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block",
+          "id": "tacz:target",
+          "evidence": [
+            "mods/tacz-1.20.1-1.1.8-hotfix.jar!/assets/tacz/blockstates/target.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Одной мишени достаточно для первой безопасной проверки оружия."
+      },
+      "layout": {
+        "x": 6,
+        "y": 1,
+        "shape": "square",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.ammunition",
+      "engine_id": "3A21000000000008",
+      "epoch": "SYSTEMS",
+      "role": "acquisition",
+      "requirement": "required",
+      "icon": "tacz:ammo",
+      "tags": [
+        "defence",
+        "ammunition",
+        "supply"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.defence.range",
+            "reason": "Учебный боезапас изготавливается только после подготовки безопасного места.",
+            "evidence": [
+              "docs/registries/quest_content_coverage.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.ammunition.item",
+          "engine_id": "4A21000000000008",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте восемь единиц боеприпасов TaCZ.",
+            "help": "Книга видит общий предмет боеприпаса и не различает калибр. Совместимость обязательно сверьте с описанием выбранного оружия."
+          },
+          "item": {
+            "id": "tacz:ammo",
+            "count": 8,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Выстрел имеет себестоимость",
+        "lead_ru": "Ствол без подходящего калибра остаётся тяжёлым предметом, поэтому первый выбор начинается с патрона.",
+        "purpose_ru": "Учебная партия из восьми патронов показывает реальную цену одного выхода, но ещё не превращает подготовку в нудное накопление. Сразу отмечайте, какие металл, порох и дополнительные компоненты уходят на выбранный калибр.",
+        "steps_ru": [
+          "Выберите один калибр для уже доступного оружия и найдите его рецепт в оружейном столе.",
+          "Изготовьте только восемь патронов, не заполняя склад раньше первого испытания.",
+          "После испытания сравните расход с темпом производства и только затем назначайте постоянный запас."
+        ],
+        "success_ru": "У вас есть восемь боеприпасов, а совместимость их калибра с выбранным оружием проверена по описанию и рецепту.",
+        "diagnostics_ru": [
+          "Если оружие не принимает патроны, сверьте калибр в описании оружия и в названии рецепта.",
+          "Если задача видит патроны, но стрелять нельзя, проверьте магазин, состояние перезарядки и назначенные клавиши TaCZ."
+        ],
+        "next_ru": "После первой проверки можно расширять запас, но хранить его следует отдельно от огня, артиллерийских зарядов и прохода жителей.",
+        "task_text_ru": "Изготовьте восемь боеприпасов TaCZ и отдельно сверьте их калибр с оружием."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Малая партия ограничивает расход; задача не пытается различать внутренний калибр по непроверенному совпадению данных предмета."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Базовый ID боеприпаса подтверждён; совместимость конкретного калибра проверяет пользователь."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "inputs",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "tacz:ammo",
+          "evidence": [
+            "mods/tacz-1.20.1-1.1.8-hotfix.jar!/assets/tacz/models/item/ammo.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 8,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Восемь патронов дают короткую проверку магазина и перезарядки без обязательного склада боеприпасов."
+      },
+      "layout": {
+        "x": 9,
+        "y": 1,
+        "shape": "circle",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.reconnaissance",
+      "engine_id": "3204C3EB1C4E9763",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "minecraft:filled_map",
+      "tags": [
+        "defence",
+        "reconnaissance",
+        "factions"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p0.map",
+            "reason": "Дальняя разведка начинается после знакомства с картой и точками возврата.",
+            "evidence": [
+              "authoring/questbook_v2/10_p0.json",
+              "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/faction_base.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.defence.discipline",
+            "reason": "Поиск чужой базы требует заранее подготовленного пути отхода и запасного комплекта.",
+            "evidence": [
+              "authoring/quests/specs/21_defence_gear.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.reconnaissance.structure",
+          "engine_id": "4676EC6FB6D9856F",
+          "type": "structure",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Найдите любую базу одной из шести фракций.",
+            "help": "Базы встречаются редко. Отмечайте путь и не рассчитывайте увидеть их рядом со стартом."
+          },
+          "structure": "#industrial_frontier:faction_base"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сначала карта, потом контакт",
+        "lead_ru": "Фракционные базы стоят в мире редко, поэтому поиск без маршрута быстро превращается в потерю времени и снаряжения.",
+        "purpose_ru": "Разведка нужна не ради сундука. База показывает, чьи интересы есть в районе, где можно встретить посланника и какое направление позже придётся защищать или обходить.",
+        "steps_ru": [
+          "Возьмите еду, простой запасной инструмент и отметьте точку возвращения.",
+          "Двигайтесь последовательно по одному направлению, нанося заметные постройки на карту.",
+          "При первом контакте осмотрите входы и пути отхода до разговора или боя."
+        ],
+        "success_ru": "Книга распознала базу фракции, а её положение отмечено так, чтобы вы смогли вернуться без повторного поиска.",
+        "diagnostics_ru": [
+          "Если база долго не встречается, расширяйте разведанный район полосами, а не ходите кругами вокруг дома.",
+          "Если подходящая постройка не засчитывается, запишите её координаты и название, указанное в сообщении о найденной структуре."
+        ],
+        "next_ru": "В главе о фракциях эта находка станет точкой первого контакта и объяснит, как база растёт вместе с вашей эпохой.",
+        "task_text_ru": "Доберитесь до любой базы фракции и отметьте её на карте.",
+        "optional_note_ru": "Разведка необязательна для промышленной кампании и не повышает технологическую эпоху."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Посещение подтверждается тегом структуры, а текст не обещает конкретный лут."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Тег шести баз найден в датапаке; частота генерации требует теста пользователя."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "structure",
+          "id": "industrial_frontier:base_zemlemer",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/faction_base.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:faction_bases",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/m85_factions_5_bases.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 0,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Поиск редкой базы даёт точку контакта и карту района, но не повторяется ради обязательной награды."
+      },
+      "layout": {
+        "x": 6,
+        "y": -5,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.artillery",
+      "engine_id": "33408C8AD3BED444",
+      "epoch": "SYSTEMS",
+      "role": "machine",
+      "requirement": "optional",
+      "icon": "createbigcannons:cast_iron_cannon_barrel",
+      "tags": [
+        "defence",
+        "artillery",
+        "p2"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.steel",
+            "reason": "Сборка ограничивает разрушительный боезапас сталью P2 и общей металлургией.",
+            "evidence": [
+              "kubejs/server_scripts/10_progression/m5_ordnance_limits.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.defence.firearms",
+            "reason": "Стационарная артиллерия идёт после личного огнестрельного оружия и его отдельной линии снабжения.",
+            "evidence": [
+              "authoring/questbook_v2/21_defence_gear.json",
+              "authoring/quests/specs/21_defence_gear.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.artillery.mount",
+          "engine_id": "4ED623DAE3477595",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте одну пушечную установку.",
+            "help": "Установка задаёт положение орудия; она не заменяет ствол и боеприпас."
+          },
+          "item": {
+            "id": "createbigcannons:cannon_mount",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.defence.artillery.barrel",
+          "engine_id": "43079CA7354CAF57",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте одну секцию чугунного пушечного ствола.",
+            "help": "Это только первая секция; длину и затвор выбирайте по руководству Create Big Cannons."
+          },
+          "item": {
+            "id": "createbigcannons:cast_iron_cannon_barrel",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.defence.artillery.shot",
+          "engine_id": "453E4C39D10B0831",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте одно сплошное ядро для первого орудия.",
+            "help": "Ядро остаётся ранним учебным боеприпасом; тяжёлые снаряды требуют стали."
+          },
+          "item": {
+            "id": "createbigcannons:solid_shot",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Орудие — это сооружение",
+        "lead_ru": "Create Big Cannons не выдаёт готовую пушку одним предметом: её приходится проектировать из ствола, затвора, установки и боезапаса.",
+        "purpose_ru": "Артиллерия защищает место, а не сопровождает одиночную разведку. Первые детали нужны для изучения компоновки. Разрушительные снаряды перенесены за сталь, чтобы тяжёлая огневая сила не опережала металлургию.",
+        "steps_ru": [
+          "Подготовьте пушечную установку, одну секцию чугунного ствола и сплошное ядро.",
+          "Через руководство Create изучите допустимый затвор, способ сборки ствола и порядок заряжания.",
+          "До выстрела выберите направление, где за целью нет города, склада и важной линии снабжения."
+        ],
+        "success_ru": "Три базовые части подготовлены, а будущая позиция имеет понятный сектор огня и безопасный тыл.",
+        "diagnostics_ru": [
+          "Если собранный ствол не становится единым орудием, проверьте направление секций и совместимость затвора.",
+          "Если тяжёлый снаряд всё ещё просит только железо, отметьте рецепт: сборка должна заменять его стальным вариантом."
+        ],
+        "next_ru": "После учебной компоновки переходите к пороховому заряду, хранению боезапаса и обслуживанию позиции, не увеличивая калибр вслепую.",
+        "task_text_ru": "Подготовьте пушечную установку, секцию чугунного ствола и сплошное ядро.",
+        "optional_note_ru": "Артиллерия необязательна для технологической эпохи и нужна только тем базам, которым действительно требуется стационарная оборона."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Предметные задачи не притворяются проверкой готового и выстрелившего орудия."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "IDs деталей и переписанные тяжёлые снаряды сверены статически; сборку орудия тестирует пользователь."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "createbigcannons",
+          "evidence": [
+            "mods/createbigcannons-5.11.4-mc.1.20.1-forge.jar",
+            "kubejs/server_scripts/10_progression/m5_ordnance_limits.js"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "createbigcannons:solid_shot",
+          "evidence": [
+            "mods/createbigcannons-5.11.4-mc.1.20.1-forge.jar!/assets/createbigcannons/models/item/solid_shot.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Три разные детали нужны для понимания устройства орудия, а не для накопления запаса."
+      },
+      "layout": {
+        "x": 9,
+        "y": -3,
+        "shape": "gear",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.squad_stack",
+      "engine_id": "3A21000000000009",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:iron_helmet",
+      "tags": [
+        "defence",
+        "factions",
+        "npc"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.defence.firearms",
+            "reason": "Эпохальные комплекты стрелков имеют смысл только после открытия основной системы огнестрела.",
+            "evidence": [
+              "config/tacznpc_loadouts.json",
+              "docs/COMBAT_FACTIONS_DIALOGUE_ROADMAP.md"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.squad_stack.read",
+          "engine_id": "4A21000000000009",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, чем отличаются именные персонажи и боевые отряды.",
+            "help": "Этот узел объясняет текущее состояние систем и ничего не выдаёт."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Персонаж и отряд — не одно",
+        "lead_ru": "Easy NPC хорошо подходит для посланников и предсказуемых разговоров, а TACZ: NPCs установлен для массовых стрелковых ролей.",
+        "purpose_ru": "Для TACZ: NPCs уже подготовлены комплекты по схеме «фракция, эпоха, роль». Однако во время нынешних плановых операций приходят бойцы Easy NPC с холодным оружием. Пока эти две части не соединены, не ожидайте у таких отрядов оружия TaCZ.",
+        "steps_ru": [
+          "Считайте посланников Easy NPC источником досье и договоров, а не массовой огневой силой.",
+          "Не планируйте оборону под автоматчиков: действующая операция пока не вызывает таких бойцов.",
+          "Во время операции смотрите, какой именно боец появился и какое оружие он действительно использует."
+        ],
+        "success_ru": "Вы различаете работающие отряды Easy NPC и подготовленные комплекты TACZ: NPCs, поэтому книга не создаёт ложных ожиданий.",
+        "diagnostics_ru": [
+          "Если у бойца только меч и щит, это соответствует нынешнему устройству операций.",
+          "Если появился стрелок TACZ: NPCs, запишите эпоху, фракцию, оружие, поведение при перезарядке и выпавшие предметы."
+        ],
+        "next_ru": "Подробный порядок предупреждений, переговоров и появления действующих отрядов разобран в главе об операциях.",
+        "task_text_ru": "Разберитесь, для чего сейчас используются именные персонажи и боевые отряды.",
+        "optional_note_ru": "Справка необязательна и помогает заранее понять состав фракционных операций."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст прямо фиксирует найденный разрыв между подготовленным конфигом и активным вызовом Easy NPC."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Состояние сверено по конфигам TACZ: NPCs, пресетам Easy NPC и планировщику операций."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "easy_npc",
+          "evidence": [
+            "mods/easy_npc-forge-1.20.1-7.4.1.jar",
+            "kubejs/server_scripts/40_balance/m85_factions_6_operations.js"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "tacznpcs",
+          "evidence": [
+            "mods/tacznpcs-2.1.0-1.20.1.jar",
+            "config/tacznpc_loadouts.json"
+          ]
+        },
+        {
+          "kind": "entity",
+          "id": "tacznpcs:npc",
+          "evidence": [
+            "docs/M5_BUILD_TEST_PROTOCOL.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справка предотвращает лишнюю подготовку к ещё не подключённому виду отряда."
+      },
+      "layout": {
+        "x": 12,
+        "y": 1,
+        "shape": "hexagon",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.defence.strategic",
+      "engine_id": "3A2100000000000A",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:nether_star",
+      "tags": [
+        "defence",
+        "strategic",
+        "p7"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p7.strategic_rules",
+            "reason": "HBM относится к поздней стратегической промышленности и раскрывается после её правил безопасности.",
+            "evidence": [
+              "authoring/questbook_v2/17_p7.json",
+              "docs/registries/quest_content_coverage.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.defence.strategic.read",
+          "engine_id": "4A2100000000000A",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте границу между обычной обороной и стратегической промышленностью.",
+            "help": "Галочка отмечает знакомство с ограничением и не открывает опасные рецепты."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Стратегическое оружие — не второй арсенал",
+        "lead_ru": "Поздние установки HBM решают задачи защищённых объектов и не должны дублировать повседневный огнестрел TaCZ.",
+        "purpose_ru": "TaCZ остаётся личным и отрядным оружием, Create Big Cannons — артиллерией укреплённой позиции, а HBM — источником стратегических процессов и особых угроз на этапах P7–P9. Все три направления сходятся в снабжении и защите объекта, но не подменяют друг друга.",
+        "steps_ru": [
+          "Сначала завершите гражданскую радиационную подготовку и правила защищённой зоны.",
+          "Отделите стратегический склад от обычной оружейной и жилых помещений.",
+          "Любой новый опасный образец оценивайте вместе с отходами, обслуживанием и возможностью безопасно остановить процесс."
+        ],
+        "success_ru": "Позднее вооружение рассматривается как часть защищённого комплекса со снабжением и аварийным планом, а не как случайный трофей.",
+        "diagnostics_ru": [
+          "Если предмет HBM выглядит доступным раньше P7, проверьте его рецепт: отсутствие материалов поздней эпохи может указывать на обход развития.",
+          "Если установка не имеет понятного безопасного применения, не включайте её в общий оборонительный контур до отдельного испытания."
+        ],
+        "next_ru": "Практические процессы HBM остаются в основной ветке P7, где их связывают материалы, радиационный контроль и космодром.",
+        "task_text_ru": "Разберитесь, какую роль HBM занимает в поздней обороне.",
+        "optional_note_ru": "Справка не заменяет задания P7 и не влияет на завершение технологической эпохи."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Узел разводит три оружейных домена и не перечисляет непроверенные стратегические образцы."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Роль HBM сверена с P7 и реестром покрытия; конкретные процессы остаются в основной кампании."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "hbm_ntm_rebirth",
+          "evidence": [
+            "mods/hbm_ntm_rebirth-0.4.1beta.jar",
+            "authoring/questbook_v2/17_p7.json"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "tacz",
+          "evidence": [
+            "mods/tacz-1.20.1-1.1.8-hotfix.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "createbigcannons",
+          "evidence": [
+            "mods/createbigcannons-5.11.4-mc.1.20.1-forge.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Справочный узел не требует создавать опасный предмет ради отметки."
+      },
+      "layout": {
+        "x": 12,
+        "y": -3,
+        "shape": "octagon",
+        "size": 1.2
+      }
+    }
+  ]
+}

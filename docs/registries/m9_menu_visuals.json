@@ -10,7 +10,7 @@
     "minecraft": "1.20.1",
     "loader": "Forge 47.4.22",
     "fancymenu": "3.9.9",
-    "parallax_position_multiplier": 0.1,
+    "parallax_position_multiplier": 1.0,
     "layout_path": "config/fancymenu/customization/recast_title.txt",
     "builder_path": "tools/build_menu_visuals.py",
     "validator_path": "tools/validate_menu_visuals.ps1",
@@ -52,11 +52,13 @@
       "mode": "RGB",
       "width": 2048,
       "height": 1152,
-      "parallax": false,
-      "intensity_x": 0.0,
-      "intensity_y": 0.0,
+      "parallax": true,
+      "intensity_x": 0.025,
+      "intensity_y": 0.014,
+      "maximum_cursor_offset_x": 10.68,
+      "maximum_cursor_offset_y": 3.36,
       "layout": {
-        "kind": "MENU_BACKGROUND"
+        "kind": "MENU_BACKGROUND_RESIZE_SAFE"
       }
     },
     {
@@ -66,19 +68,11 @@
       "mode": "RGBA",
       "width": 2048,
       "height": 1152,
-      "parallax": true,
-      "intensity_x": 0.18,
-      "intensity_y": 0.1,
-      "maximum_cursor_offset_x": 7.69,
-      "maximum_cursor_offset_y": 2.4,
+      "parallax": false,
+      "intensity_x": 0.0,
+      "intensity_y": 0.0,
       "layout": {
-        "instance_identifier": "recast_title_midground",
-        "x": -24,
-        "y": -16,
-        "width": 902,
-        "height": 512,
-        "stay_on_screen": false,
-        "invert_parallax": false
+        "kind": "DISABLED_IN_RUNTIME_AFTER_FULLSCREEN_RESIZE_QA"
       }
     },
     {
@@ -88,19 +82,11 @@
       "mode": "RGBA",
       "width": 2048,
       "height": 1152,
-      "parallax": true,
-      "intensity_x": 0.3,
-      "intensity_y": 0.16,
-      "maximum_cursor_offset_x": 12.81,
-      "maximum_cursor_offset_y": 3.84,
+      "parallax": false,
+      "intensity_x": 0.0,
+      "intensity_y": 0.0,
       "layout": {
-        "instance_identifier": "recast_title_foreground",
-        "x": -28,
-        "y": -18,
-        "width": 910,
-        "height": 516,
-        "stay_on_screen": false,
-        "invert_parallax": false
+        "kind": "DISABLED_IN_RUNTIME_AFTER_FULLSCREEN_RESIZE_QA"
       }
     }
   ],
@@ -152,18 +138,19 @@
         "inactive"
       ]
     },
-    "copyright_branding_visible": true,
+    "copyright_branding_visible": false,
     "interactive_elements_have_parallax": false,
     "build_label": {
       "anchor_point": "top-left",
       "x": 34,
-      "y": 442,
+      "y": 394,
       "inside_panel": true
     }
   },
   "icon": {
     "source_path": "brand_source/orbital_foundry_icon_v2.png",
-    "concept": "ORBITAL_FOUNDRY",
+    "concept": "ORBITAL_FOUNDRY_WITH_RECAST_MICROMARK",
+    "window_icon_design": "DIRECT_16PX_GRID_NOT_DOWNSAMPLED_ARTWORK",
     "runtime_sizes": [
       16,
       32,
@@ -181,12 +168,13 @@
     "static_preview_path": "docs/visual_previews/recast_title_v2_center.png",
     "static_cursor_extremes_preview_path": "docs/visual_previews/recast_title_v2_cursor_extremes.png",
     "static_button_states_preview_path": "docs/visual_previews/recast_title_v2_button_states.png",
+    "static_loading_preview_path": "docs/visual_previews/recast_loading_frontier_compact.png",
     "required_runtime_checks": [
-      "cursor_motion_direction_and_amplitude",
-      "no_exposed_layer_edges",
+      "fullscreen_window_transition_keeps_single_background_visible_and_moving",
+      "single_composite_background_cursor_parallax",
       "button_hover_alignment",
       "keyboard_navigation",
-      "copyright_readability",
+      "no_vanilla_branding_overlap",
       "gui_scale_1_2_3_4",
       "aspect_ratio_4_3_16_10_16_9_21_9"
     ],

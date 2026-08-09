@@ -1,0 +1,179 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/qr11_storage_help",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.storage.intro",
+      "old_engine_id": "3020000000000001",
+      "new_alias": "if.quest.v2.storage.intro",
+      "new_engine_id": "3020000000000001",
+      "policy": "carry",
+      "reason": "Смысл вводной памятки о складском порядке сохранён и только привязан к первой производственной линии.",
+      "evidence": [
+        "authoring/quests/20_storage_order.json",
+        "authoring/questbook_v2/20_storage_order.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.storage.connector",
+      "old_engine_id": "3020000000000002",
+      "new_alias": "if.quest.v2.storage.connector",
+      "new_engine_id": "3A20000000000002",
+      "policy": "review",
+      "reason": "Старый предметный квест не подтверждал установку связующего блока, поэтому новая практическая задача не закрывается автоматически.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "authoring/questbook_v2/20_storage_order.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.storage.terminal",
+      "old_engine_id": "3020000000000003",
+      "new_alias": "if.quest.v2.storage.terminal",
+      "new_engine_id": "3A20000000000003",
+      "policy": "review",
+      "reason": "Раньше проверялось только наличие терминала, а новая версия требует открыть подключённый общий список.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "authoring/questbook_v2/20_storage_order.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.storage.cables",
+      "old_engine_id": "3020000000000004",
+      "new_alias": "if.quest.v2.storage.cables",
+      "new_engine_id": "3A20000000000004",
+      "policy": "review",
+      "reason": "Старая галочка не доказывала получение и установку кабеля, поэтому удалённую зону нужно принять заново.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "authoring/questbook_v2/20_storage_order.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.storage.crafting",
+      "old_engine_id": "3020000000000005",
+      "new_alias": "if.quest.v2.storage.crafting",
+      "new_engine_id": "3A20000000000005",
+      "policy": "review",
+      "reason": "Старая галочка не подтверждала получение и открытие терминала сборки, поэтому практическая задача получила новый ID.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "authoring/questbook_v2/20_storage_order.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.storage.level",
+      "old_engine_id": "3020000000000006",
+      "new_alias": "if.quest.v2.storage.level",
+      "new_engine_id": "3A20000000000006",
+      "policy": "review",
+      "reason": "Старая галочка не подтверждала установленный эмиттер уровня и поэтому не переносит завершение новой практической задачи.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/20_storage_order.snbt",
+        "authoring/questbook_v2/20_storage_order.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.storage.handover",
+      "old_engine_id": "3020000000000007",
+      "new_alias": "if.quest.v2.storage.handover",
+      "new_engine_id": "3020000000000007",
+      "policy": "carry",
+      "reason": "Архитектурная памятка о разделении обычного склада и ME-сети сохранила прежний смысл.",
+      "evidence": [
+        "authoring/quests/20_storage_order.json",
+        "authoring/questbook_v2/20_storage_order.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.help.index",
+      "old_engine_id": "3090000000000001",
+      "new_alias": "if.quest.v2.help.index",
+      "new_engine_id": "3090000000000001",
+      "policy": "carry",
+      "reason": "Первичная развилка диагностики сохранена и стала подробнее без изменения назначения.",
+      "evidence": [
+        "authoring/quests/90_help.json",
+        "authoring/questbook_v2/90_help.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.help.jei",
+      "old_engine_id": "3090000000000002",
+      "new_alias": "if.quest.v2.help.jei",
+      "new_engine_id": "3090000000000002",
+      "policy": "carry",
+      "reason": "Памятка о поиске рецептов в JEI сохранила прежнее назначение.",
+      "evidence": [
+        "authoring/quests/90_help.json",
+        "authoring/questbook_v2/90_help.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.help.not_counted",
+      "old_engine_id": "3090000000000003",
+      "new_alias": "if.quest.v2.help.not_counted",
+      "new_engine_id": "3090000000000003",
+      "policy": "carry",
+      "reason": "Диагностика незасчитанного задания сохранена и уточнена для новых видов задач.",
+      "evidence": [
+        "authoring/quests/90_help.json",
+        "authoring/questbook_v2/90_help.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.help.team",
+      "old_engine_id": "3090000000000004",
+      "new_alias": "if.quest.v2.help.team",
+      "new_engine_id": "3090000000000004",
+      "policy": "carry",
+      "reason": "Памятка об общем командном прогрессе сохранила смысл и согласована с UUID команды.",
+      "evidence": [
+        "authoring/quests/90_help.json",
+        "docs/registries/quest_epoch_bridge.json",
+        "authoring/questbook_v2/90_help.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.help.latest_log",
+      "old_engine_id": "3090000000000005",
+      "new_alias": "if.quest.v2.help.latest_log",
+      "new_engine_id": "3090000000000005",
+      "policy": "carry",
+      "reason": "Порядок сохранения полного журнала проблемного запуска остался тем же.",
+      "evidence": [
+        "authoring/quests/90_help.json",
+        "authoring/questbook_v2/90_help.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.help.report",
+      "old_engine_id": "3090000000000006",
+      "new_alias": "if.quest.v2.help.report",
+      "new_engine_id": "3090000000000006",
+      "policy": "carry",
+      "reason": "Структура воспроизводимого отчёта сохранена и дополнена фактическим результатом.",
+      "evidence": [
+        "authoring/quests/90_help.json",
+        "authoring/questbook_v2/90_help.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.help.recovery",
+      "old_engine_id": "3090000000000007",
+      "new_alias": "if.quest.v2.help.recovery",
+      "new_engine_id": "3090000000000007",
+      "policy": "carry",
+      "reason": "Справочная роль восстановления сохранена; обновлённый текст лишь сужает и делает процедуру безопаснее.",
+      "evidence": [
+        "authoring/quests/90_help.json",
+        "docs/registries/quest_epoch_bridge.json",
+        "authoring/questbook_v2/90_help.json"
+      ]
+    }
+  ]
+}

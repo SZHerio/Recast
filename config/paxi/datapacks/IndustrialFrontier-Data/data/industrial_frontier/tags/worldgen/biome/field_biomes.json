@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "biomesoplenty:maple_woods",
+    "biomesoplenty:lavender_field",
+    "biomesoplenty:seasonal_forest",
+    "biomesoplenty:rainforest",
+    "biomesoplenty:prairie",
+    "biomesoplenty:bayou"
+  ]
+}

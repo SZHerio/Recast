@@ -151,8 +151,8 @@ if ($null -ne $registry) {
     $referenceWidth = [double]$registry.implementation.reference_canvas.width
     $referenceHeight = [double]$registry.implementation.reference_canvas.height
     $positionMultiplier = [double]$registry.implementation.parallax_position_multiplier
-    if ([Math]::Abs($positionMultiplier - 0.1) -gt 0.000001) {
-        Add-MenuError 'FancyMenu 3.9.9 parallax position multiplier must be 0.1.'
+    if ([Math]::Abs($positionMultiplier - 1.0) -gt 0.000001) {
+        Add-MenuError 'FancyMenu image-background parallax uses the direct 1.0 position multiplier.'
     }
     foreach ($layer in @($registry.layers)) {
         Assert-Png ([string]$layer.runtime_path) ([int]$layer.width) ([int]$layer.height) ([string]$layer.mode)
@@ -169,19 +169,26 @@ if ($null -ne $registry) {
             if ([Math]::Abs([double]$layer.maximum_cursor_offset_y - $expectedOffsetY) -gt 0.011) {
                 Add-MenuError "Layer '$($layer.id)' maximum_cursor_offset_y is not derived from the FancyMenu 3.9.9 formula; expected $expectedOffsetY."
             }
-            $left = [double](-[int]$layer.layout.x)
-            $right = [double]([int]$layer.layout.width - 854 + [int]$layer.layout.x)
-            $top = [double](-[int]$layer.layout.y)
-            $bottom = [double]([int]$layer.layout.height - 480 + [int]$layer.layout.y)
-            if ($expectedOffsetX -gt [Math]::Min($left, $right)) {
-                Add-MenuError "Layer '$($layer.id)' can expose a horizontal edge at maximum cursor displacement."
+            if ([string]$layer.layout.kind -eq 'MENU_BACKGROUND_RESIZE_SAFE') {
+                if ([string]$layer.id -ne 'base') {
+                    Add-MenuError 'Only the composite base may use resize-safe image-background parallax.'
+                }
             }
-            if ($expectedOffsetY -gt [Math]::Min($top, $bottom)) {
-                Add-MenuError "Layer '$($layer.id)' can expose a vertical edge at maximum cursor displacement."
+            else {
+                $left = [double](-[int]$layer.layout.x)
+                $right = [double]([int]$layer.layout.width - 854 + [int]$layer.layout.x)
+                $top = [double](-[int]$layer.layout.y)
+                $bottom = [double]([int]$layer.layout.height - 480 + [int]$layer.layout.y)
+                if ($expectedOffsetX -gt [Math]::Min($left, $right)) {
+                    Add-MenuError "Layer '$($layer.id)' can expose a horizontal edge at maximum cursor displacement."
+                }
+                if ($expectedOffsetY -gt [Math]::Min($top, $bottom)) {
+                    Add-MenuError "Layer '$($layer.id)' can expose a vertical edge at maximum cursor displacement."
+                }
             }
         }
     }
-    Add-MenuPass 'Base/mid/near PNG modes, dimensions, sources and overscan budgets validated.'
+    Add-MenuPass 'Resize-safe composite-background parallax and archived mid/near PNG contracts validated.'
 }
 
 Assert-Png 'config/fancymenu/assets/logo.png' 1536 512 'RGBA'
@@ -196,70 +203,63 @@ Assert-Png 'config/fancymenu/assets/icon_32.png' 32 32 'RGB'
 Assert-Png 'docs/visual_previews/recast_title_v2_center.png' 1920 1080 'RGB'
 Assert-Png 'docs/visual_previews/recast_title_v2_cursor_extremes.png' 1920 1080 'RGB'
 Assert-Png 'docs/visual_previews/recast_title_v2_button_states.png' 1280 480 'RGB'
+Assert-Png 'docs/visual_previews/recast_loading_frontier_compact.png' 1920 1080 'RGB'
 if ($errors.Count -eq 0) { Add-MenuPass 'Logo, icon, panel, button states and static preview dimensions validated.' }
+
+try {
+    $fancyMenuOptions = Get-Content -Raw -Encoding UTF8 -LiteralPath (Resolve-MenuPath 'config/fancymenu/options.txt')
+    foreach ($token in @(
+        "B:show_custom_window_icon = 'true';",
+        "S:custom_window_icon_16 = 'config/fancymenu/assets/icon_16.png';",
+        "S:custom_window_icon_32 = 'config/fancymenu/assets/icon_32.png';"
+    )) {
+        if (-not $fancyMenuOptions.Contains($token)) {
+            Add-MenuError "FancyMenu window-icon configuration is missing token: $token"
+        }
+    }
+    if ([string]$registry.icon.window_icon_design -ne 'DIRECT_16PX_GRID_NOT_DOWNSAMPLED_ARTWORK') {
+        Add-MenuError 'Window-icon registry must require the direct pixel-grid design.'
+    }
+    Add-MenuPass 'FancyMenu points the window and taskbar to dedicated 16px/32px pixel-native icons.'
+}
+catch {
+    Add-MenuError "Window-icon configuration validation failed: $($_.Exception.Message)"
+}
 
 try {
     $layoutPath = Resolve-MenuPath 'config/fancymenu/customization/recast_title.txt'
     $layout = Get-Content -Raw -LiteralPath $layoutPath -Encoding UTF8
     foreach ($token in @(
         '[source:local]/config/fancymenu/assets/menu/base.png',
-        '[source:local]/config/fancymenu/assets/menu/mid.png',
-        '[source:local]/config/fancymenu/assets/menu/near.png',
-        'parallax_intensity_x = 0.18',
-        'parallax_intensity_y = 0.10',
-        'parallax_intensity_x = 0.30',
-        'parallax_intensity_y = 0.16',
+        'action = setscale',
+        'scale = 2.0',
+        'parallax = true',
+        'parallax_intensity_x = 0.025',
+        'parallax_intensity_y = 0.014',
+        'invert_parallax = false',
         '[source:local]/config/fancymenu/assets/ui/icon_button_normal.png'
     )) {
         if (-not $layout.Contains($token)) { Add-MenuError "Title layout is missing required token: $token" }
     }
-    if ([regex]::Matches($layout, '(?m)^\s*enable_parallax\s*=\s*true\s*$').Count -ne 2) {
-        Add-MenuError 'Exactly two non-interactive image layers must enable parallax.'
+    if ($layout.Contains('[source:local]/config/fancymenu/assets/menu/mid.png') -or
+        $layout.Contains('[source:local]/config/fancymenu/assets/menu/near.png')) {
+        Add-MenuError 'Fullscreen-resize-unsafe mid/near image elements must not exist in the runtime title layout.'
+    }
+    if ($layout -match '(?m)^\s*enable_parallax\s*=\s*true\s*$') {
+        Add-MenuError 'The title layout must not contain separate cursor-parallax elements after the F11 resize defect.'
+    }
+    if ([regex]::Matches($layout, '(?m)^\s*parallax\s*=\s*true\s*$').Count -ne 1) {
+        Add-MenuError 'Exactly one always-present menu background must provide cursor parallax.'
     }
     if ([regex]::Matches($layout, '(?m)^\s*nine_slice_custom_background\s*=\s*true\s*$').Count -ne 10) {
         Add-MenuError 'All eight action buttons and two compact buttons must use nine-slicing.'
     }
-    if ($layout -match '(?m)^\s*slide\s*=\s*true\s*$') { Add-MenuError 'Wide-image sliding conflicts with cursor parallax.' }
+    if ($layout -match '(?m)^\s*slide\s*=\s*true\s*$') { Add-MenuError 'The stable title background must not slide.' }
 
-    foreach ($layer in @($registry.layers | Where-Object { [bool]$_.parallax })) {
-        $identifier = [string]$layer.layout.instance_identifier
-        $block = Get-ElementBlock $layout $identifier
-        if ([string]::IsNullOrWhiteSpace($block)) {
-            Add-MenuError "Missing FancyMenu element block for parallax layer '$identifier'."
-            continue
-        }
-        $expectedStrings = @{
-            'source' = "[source:local]/$($layer.runtime_path)"
-            'enable_parallax' = 'true'
-            'invert_parallax' = ([string][bool]$layer.layout.invert_parallax).ToLowerInvariant()
-            'stay_on_screen' = ([string][bool]$layer.layout.stay_on_screen).ToLowerInvariant()
-            'anchor_point' = 'top-left'
-        }
-        foreach ($setting in $expectedStrings.Keys) {
-            $actual = Get-BlockSetting $block $setting
-            if ($actual -ne $expectedStrings[$setting]) {
-                Add-MenuError "Layer '$identifier' setting '$setting' is '$actual', expected '$($expectedStrings[$setting])'."
-            }
-        }
-        foreach ($setting in @('x', 'y', 'width', 'height')) {
-            $actual = Get-BlockSetting $block $setting
-            if ([int]$actual -ne [int]$layer.layout.$setting) {
-                Add-MenuError "Layer '$identifier' setting '$setting' is '$actual', expected '$($layer.layout.$setting)'."
-            }
-        }
-        foreach ($pair in @(@('parallax_intensity_x', 'intensity_x'), @('parallax_intensity_y', 'intensity_y'))) {
-            $actual = Get-BlockSetting $block $pair[0]
-            if ([Math]::Abs([double]::Parse($actual, [Globalization.CultureInfo]::InvariantCulture) - [double]$layer.($pair[1])) -gt 0.000001) {
-                Add-MenuError "Layer '$identifier' setting '$($pair[0])' is '$actual', expected '$($layer.($pair[1]))'."
-            }
-        }
-    }
-
-    $midIndex = $layout.IndexOf('instance_identifier = recast_title_midground')
-    $nearIndex = $layout.IndexOf('instance_identifier = recast_title_foreground')
-    $panelIndex = $layout.IndexOf('instance_identifier = recast_title_panel')
-    if (-not ($midIndex -ge 0 -and $nearIndex -gt $midIndex -and $panelIndex -gt $nearIndex)) {
-        Add-MenuError 'FancyMenu layer order must be midground, foreground, then stationary UI panel.'
+    $panelBlock = Get-ElementBlock $layout 'recast_title_panel'
+    if ([string]::IsNullOrWhiteSpace($panelBlock) -or
+        [int](Get-BlockSetting $panelBlock 'height') -ne 400) {
+        Add-MenuError 'The title panel must use the compact 400-unit safe-zone height.'
     }
 
     $buildBlock = Get-ElementBlock $layout 'recast_build_label'
@@ -275,17 +275,58 @@ try {
                 Add-MenuError "Build-label setting '$setting' is '$actual', expected '$expected' from the registry."
             }
         }
-        if (-not [bool]$buildContract.inside_panel -or [int]$buildContract.y -lt 370 -or [int]$buildContract.y -gt 454) {
-            Add-MenuError 'Build label must remain inside the lower panel and outside vanilla branding zones.'
+        if (-not [bool]$buildContract.inside_panel -or [int]$buildContract.y -lt 370 -or [int]$buildContract.y -gt 400) {
+            Add-MenuError 'Build label must remain inside the compact panel.'
         }
     }
-    if ($layout -notmatch '(?s)element_type\s*=\s*title_screen_branding.*?is_hidden\s*=\s*false') {
-        Add-MenuError 'Protected Minecraft copyright branding must remain visible.'
+    if ($layout -notmatch '(?s)element_type\s*=\s*title_screen_branding.*?is_hidden\s*=\s*true') {
+        Add-MenuError 'Vanilla/Forge/MCP branding must be hidden to prevent the bottom overlay collision.'
     }
-    Add-MenuPass 'FancyMenu layer geometry/order, parallax, nine-slice and protected-branding tokens validated.'
+    Add-MenuPass 'FancyMenu resize-safe moving background, fixed-scale, compact-panel and hidden-branding contracts validated.'
 }
 catch {
     Add-MenuError "Title-layout validation failed: $($_.Exception.Message)"
+}
+
+try {
+    $startupLayouts = @(
+        'recast_title.txt',
+        'recast_guide.txt',
+        'recast_credits.txt',
+        'recast_licenses.txt',
+        'recast_changelog.txt',
+        'recast_loading_frontier.txt',
+        'recast_loading_works.txt',
+        'recast_loading_launch.txt'
+    )
+    foreach ($name in $startupLayouts) {
+        $startupLayout = Get-Content -Raw -Encoding UTF8 -LiteralPath (Resolve-MenuPath "config/fancymenu/customization/$name")
+        if ([regex]::Matches($startupLayout, '(?ms)customization\s*\{\s*action\s*=\s*setscale\s*scale\s*=\s*2\.0\s*\}').Count -ne 1) {
+            Add-MenuError "Startup layout '$name' must contain exactly one fixed layout scale of 2.0."
+        }
+        if ([regex]::Matches($startupLayout, '(?ms)customization\s*\{\s*action\s*=\s*autoscale\s*basewidth\s*=\s*854\s*baseheight\s*=\s*480\s*\}').Count -ne 1) {
+            Add-MenuError "Startup layout '$name' must auto-scale from the 854x480 reference canvas."
+        }
+        if ($startupLayout.IndexOf('action = setscale') -gt $startupLayout.IndexOf('action = autoscale')) {
+            Add-MenuError "Startup layout '$name' must apply setscale before autoscale."
+        }
+    }
+
+    foreach ($name in @('recast_loading_frontier.txt', 'recast_loading_works.txt', 'recast_loading_launch.txt')) {
+        $loadingLayout = Get-Content -Raw -Encoding UTF8 -LiteralPath (Resolve-MenuPath "config/fancymenu/customization/$name")
+        if ($loadingLayout -match 'industrial_frontier\.loading\.' -or $loadingLayout -match '"placeholder"\s*:\s*"local"') {
+            Add-MenuError "Loading layout '$name' contains a localization lookup that is unavailable before Paxi resource loading."
+        }
+        foreach ($expected in @('width = 260', 'height = 87', 'width = 520', 'height = 96', 'width = 468', 'width = 452')) {
+            if (-not $loadingLayout.Contains($expected)) {
+                Add-MenuError "Loading layout '$name' is missing compact geometry token '$expected'."
+            }
+        }
+    }
+    Add-MenuPass 'All startup layouts use resize-safe scale order; loading copy is bootstrap-safe and compact.'
+}
+catch {
+    Add-MenuError "Startup-layout validation failed: $($_.Exception.Message)"
 }
 
 try {
@@ -305,6 +346,8 @@ try {
         'config/fancymenu/assets/ui/icon_button_hover.png',
         'config/fancymenu/assets/ui/icon_button_inactive.png',
         'config/fancymenu/assets/ui/panel.png',
+        'config/fancymenu/assets/icon_16.png',
+        'config/fancymenu/assets/icon_32.png',
         'pack_icon.png'
     )
     foreach ($relativePath in $runtimePaths) {

@@ -1,0 +1,469 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.field_manual",
+    "engine_id": "2A01000000000001",
+    "filename": "01_field_manual",
+    "group": {
+      "alias": "if.group.v2.start",
+      "engine_id": "1000000000000001",
+      "title_ru": "Начать здесь"
+    },
+    "order": 1,
+    "icon": "minecraft:compass",
+    "epoch": "ONBOARDING",
+    "tags": [
+      "field_tools",
+      "interface",
+      "recovery"
+    ],
+    "hide_until_reached": false,
+    "text_ru": {
+      "title": "Полевые инструменты",
+      "subtitle": "Карта, подсказки интерфейса, питание, перенос блоков и безопасное возвращение после смерти",
+      "description": [
+        "Эти инструменты не являются новой технологической эпохой. Они помогают читать мир, не терять маршрут и тратить меньше времени на повторяющиеся действия.",
+        "Каждая памятка необязательна. Откройте её тогда, когда соответствующая проблема встретится в игре."
+      ]
+    },
+    "editorial": {
+      "voice": "Опытный участник экспедиции, который коротко объясняет полезные интерфейсные привычки и их границы.",
+      "tone_rules": [
+        "Называть видимый результат, а не внутреннее устройство мода.",
+        "Напоминать, что назначенные клавиши могут отличаться.",
+        "Опасное действие сначала объяснять, а не предлагать проверить на себе."
+      ],
+      "avoid": [
+        "Не требовать намеренно погибать ради обучения могиле.",
+        "Не выдавать карту за автоматическое знание об опасности маршрута.",
+        "Не делать удобство интерфейса обязательным условием кампании."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.field_manual.interface",
+      "engine_id": "3A01000000000001",
+      "epoch": "ONBOARDING",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:spyglass",
+      "tags": [
+        "interface",
+        "accessibility"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.reading",
+            "reason": "Настройки интерфейса разбираются после знакомства со структурой книги.",
+            "evidence": [
+              "authoring/questbook_v2/00_onboarding.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.field_manual.interface.read",
+          "engine_id": "4A01000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте памятку о настройке интерфейса.",
+            "help": "Отметка подтверждает только чтение; менять удобные вам настройки не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Интерфейс должен помогать",
+        "lead_ru": "Размер, прозрачность и расположение окон можно подстроить до того, как они начнут мешать работе с машинами.",
+        "purpose_ru": "Immersive UI меняет подачу экранов, а Inventory Essentials ускоряет привычные операции с инвентарём. Их задача — уменьшить лишние движения, но не скрыть важные значения и подсказки.",
+        "steps_ru": [
+          "Откройте настройки интерфейса и управления, затем найдите параметры двух вспомогательных модов.",
+          "Проверьте масштаб на обычном сундуке и на сложной машине с большим окном.",
+          "Оставьте только те быстрые действия, назначение которых вы уверенно помните."
+        ],
+        "success_ru": "Текст читается без напряжения, окна не перекрывают важные поля, а быстрые действия не срабатывают случайно.",
+        "diagnostics_ru": [
+          "Если предмет перемещается неожиданно, проверьте конфликт клавиш и временно отключите спорное быстрое действие.",
+          "Если подсказка обрезана, уменьшите масштаб интерфейса на один шаг и снова откройте то же окно."
+        ],
+        "next_ru": "Следующая памятка объясняет, как читать насыщение и планировать еду до выхода из города.",
+        "task_text_ru": "Ознакомьтесь с безопасной настройкой интерфейса.",
+        "optional_note_ru": "Настройки индивидуальны и не влияют на прохождение квестовой кампании."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Совет сохраняет выбор игрока и не предполагает стандартную раскладку клавиш."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены естественность, отсутствие обязательной перенастройки и ясная диагностика конфликтов."
+        ]
+      },
+      "teaching_sections": [
+        { "kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru", "text_ru.task_text_ru"] },
+        { "kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"] },
+        { "kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"] },
+        { "kind": "downstream", "source_fields": ["text_ru.next_ru", "text_ru.optional_note_ru"] }
+      ],
+      "content_refs": [
+        { "kind": "mod", "id": "immersiveui", "evidence": ["docs/registries/quest_content_coverage.json"] },
+        { "kind": "mod", "id": "inventoryessentials", "evidence": ["docs/registries/quest_content_coverage.json"] }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Настройка интерфейса не требует предметов или повторяемого действия."
+      },
+      "layout": { "x": 0, "y": 0, "shape": "gear", "size": 1.5 }
+    },
+    {
+      "alias": "if.quest.v2.field_manual.food",
+      "engine_id": "3A01000000000002",
+      "epoch": "ONBOARDING",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:apple",
+      "tags": [
+        "food",
+        "appleskin"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.field_manual.interface",
+            "reason": "Показатели питания являются частью читаемого полевого интерфейса.",
+            "evidence": [
+              "docs/registries/quest_content_coverage.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.field_manual.food.read",
+          "engine_id": "4A01000000000002",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, как сравнивать походную еду.",
+            "help": "Для этого урока не нужно тратить пищу или доводить персонажа до голода."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сытость важнее крупной цифры",
+        "lead_ru": "AppleSkin показывает не только восстановление шкалы голода, но и то, насколько надолго хватит еды.",
+        "purpose_ru": "Два блюда с похожим значком могут вести себя по-разному в длинной экспедиции. Подсказка помогает сравнить их до употребления и собрать компактный запас без требования одного обязательного рецепта.",
+        "steps_ru": [
+          "Наведите указатель на два разных готовых блюда и сравните их подсказки.",
+          "Для короткой работы у базы выбирайте доступную еду, а для дальнего маршрута — более устойчивое насыщение.",
+          "Не занимайте весь инвентарь едой: оставьте отдельный аварийный запас и свободное место для образцов."
+        ],
+        "success_ru": "Вы можете выбрать рацион по длительности маршрута, а не только по знакомому названию блюда.",
+        "diagnostics_ru": [
+          "Если дополнительные значения не видны, проверьте клиентские настройки AppleSkin и масштаб подсказок.",
+          "Если блюдо выглядит выгодным, но требует долгой ручной готовки, оцените размер партии и будущую кухонную линию."
+        ],
+        "next_ru": "После выбора рациона отметьте маршрут на карте и заранее продумайте точку возвращения.",
+        "task_text_ru": "Ознакомьтесь с показателями еды AppleSkin.",
+        "optional_note_ru": "Памятка помогает выбирать рацион, но не ограничивает допустимые блюда P0."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст не навязывает один рецепт и связывает интерфейс с длительностью маршрута."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"],
+        "review_notes": ["Проверены понятность различия голода и насыщения, отсутствие лишнего потребления и переход к маршруту."]
+      },
+      "teaching_sections": [
+        { "kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru", "text_ru.task_text_ru"] },
+        { "kind": "operation", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"] },
+        { "kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"] },
+        { "kind": "downstream", "source_fields": ["text_ru.next_ru", "text_ru.optional_note_ru"] }
+      ],
+      "content_refs": [
+        { "kind": "mod", "id": "appleskin", "evidence": ["docs/registries/quest_content_coverage.json"] }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Сравнение подсказок не требует расходовать еду."
+      },
+      "layout": { "x": 3, "y": -2, "shape": "rsquare", "size": 1.5 }
+    },
+    {
+      "alias": "if.quest.v2.field_manual.map",
+      "engine_id": "3A01000000000003",
+      "epoch": "ONBOARDING",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:filled_map",
+      "tags": [
+        "map",
+        "xaero",
+        "routes"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.onboarding.field_tools",
+            "reason": "Большая карта дополняет первичную разведку Jade, квестовую геологию и наблюдение реальных жил.",
+            "evidence": [
+              "authoring/questbook_v2/00_onboarding.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.field_manual.map.read",
+          "engine_id": "4A01000000000003",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правила меток и маршрутов.",
+            "help": "Назначенные клавиши мини-карты и большой карты проверьте в своих настройках управления."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Карта — журнал решений",
+        "lead_ru": "Мини-карта помогает на месте, а большая карта сохраняет связь между базой, месторождениями и будущими маршрутами.",
+        "purpose_ru": "Хорошая метка отвечает на три вопроса: что здесь находится, кому это нужно и безопасно ли возвращаться. Название вроде «точка 3» перестанет помогать сразу после появления четвёртой экспедиции.",
+        "steps_ru": [
+          "Проверьте в настройках назначенные клавиши мини-карты и большой карты Xaero.",
+          "Создайте понятные категории для базы, сырья, опасностей и временных целей.",
+          "В названии месторождения указывайте основной ресурс и ближайший транспортный ориентир.",
+          "После изменения дороги обновляйте или удаляйте старую метку, чтобы карта не отправила груз по закрытому пути."
+        ],
+        "success_ru": "По одной метке понятно, зачем возвращаться в точку и какой маршрут связывает её с базой.",
+        "diagnostics_ru": [
+          "Если карты открываются одной клавишей, устраните конфликт в настройках управления.",
+          "Если меток стало слишком много, объедините временные точки по категориям и удалите завершённые цели."
+        ],
+        "next_ru": "Перед переносом блока или экспедицией проверьте, хватит ли свободного места и безопасен ли обратный путь.",
+        "task_text_ru": "Ознакомьтесь с системой меток и маршрутов Xaero.",
+        "optional_note_ru": "Карта помогает планированию, но сама не подтверждает разведку месторождения или посещение объекта."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Памятка не предполагает стандартные клавиши и отделяет пользовательскую метку от доказанного посещения."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"],
+        "review_notes": ["Проверены практичные названия меток, обслуживание маршрута и связь с будущей логистикой."]
+      },
+      "teaching_sections": [
+        { "kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru", "text_ru.task_text_ru"] },
+        { "kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"] },
+        { "kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"] },
+        { "kind": "downstream", "source_fields": ["text_ru.next_ru", "text_ru.optional_note_ru"] }
+      ],
+      "content_refs": [
+        { "kind": "mod", "id": "xaerominimap", "evidence": ["docs/registries/quest_content_coverage.json"] },
+        { "kind": "mod", "id": "xaeroworldmap", "evidence": ["docs/registries/quest_content_coverage.json"] }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Памятка не требует создавать искусственные точки ради количества."
+      },
+      "layout": { "x": 3, "y": 0, "shape": "rsquare", "size": 1.5 }
+    },
+    {
+      "alias": "if.quest.v2.field_manual.carry",
+      "engine_id": "3A01000000000004",
+      "epoch": "ONBOARDING",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:chest",
+      "tags": [
+        "carry_on",
+        "safety",
+        "storage"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.field_manual.map",
+            "reason": "Перенос контейнера требует заранее выбранного короткого и безопасного пути.",
+            "evidence": [
+              "docs/registries/quest_content_coverage.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.field_manual.carry.read",
+          "engine_id": "4A01000000000004",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правила безопасного переноса блоков.",
+            "help": "Памятка не требует поднимать заполненный или важный контейнер ради проверки."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Перенос без разборки",
+        "lead_ru": "Carry On полезен для короткой перестановки, но заполненный контейнер всё равно остаётся тяжёлой и рискованной частью планировки.",
+        "purpose_ru": "Мод позволяет поднять некоторые блоки и существ, используя назначенное сочетание клавиш. Это удобно при ремонте комнаты, но не заменяет трубы, поезда или продуманную складскую сеть.",
+        "steps_ru": [
+          "Найдите клавишу Carry On и проверьте её на пустом дешёвом контейнере рядом с местом установки.",
+          "Перед переносом важного блока освободите руки, уберите препятствия и проверьте точку назначения.",
+          "Не используйте ручной перенос как постоянный способ снабжения производственной линии."
+        ],
+        "success_ru": "Вы знаете сочетание клавиш и применяете перенос только для короткой безопасной перестановки.",
+        "diagnostics_ru": [
+          "Если блок открывается вместо подъёма, проверьте сочетание клавиш и разрешён ли этот тип блока.",
+          "Если перемещение мешает обзору или бою, поставьте блок и сначала расчистите маршрут."
+        ],
+        "next_ru": "Для постоянного потока используйте складскую сеть, конвейер или транспорт соответствующей эпохи.",
+        "task_text_ru": "Ознакомьтесь с безопасным использованием Carry On.",
+        "optional_note_ru": "Ручной перенос является удобством и не входит в обязательную производственную цепь."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Игроку не предлагается рисковать важным контейнером; граница с логистикой названа прямо."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"],
+        "review_notes": ["Проверены безопасность пробного действия, естественный язык и запрет подменять транспорт ручным переносом."]
+      },
+      "teaching_sections": [
+        { "kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru", "text_ru.task_text_ru"] },
+        { "kind": "operation", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru"] },
+        { "kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"] },
+        { "kind": "downstream", "source_fields": ["text_ru.next_ru", "text_ru.optional_note_ru"] }
+      ],
+      "content_refs": [
+        { "kind": "mod", "id": "carryon", "evidence": ["docs/registries/quest_content_coverage.json"] }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Безопасное знакомство не требует многократной переноски блоков."
+      },
+      "layout": { "x": 3, "y": 2, "shape": "rsquare", "size": 1.5 }
+    },
+    {
+      "alias": "if.quest.v2.field_manual.grave",
+      "engine_id": "3A01000000000005",
+      "epoch": "ONBOARDING",
+      "role": "recovery",
+      "requirement": "optional",
+      "icon": "minecraft:recovery_compass",
+      "tags": [
+        "gravestone",
+        "death",
+        "recovery"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.field_manual.map",
+            "reason": "Безопасное возвращение начинается с понятного маршрута и сохранённой точки смерти.",
+            "evidence": [
+              "docs/registries/quest_content_coverage.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.field_manual.grave.read",
+          "engine_id": "4A01000000000005",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте порядок возвращения к могиле.",
+            "help": "Намеренно погибать для завершения этой памятки не нужно."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Возвращение после неудачи",
+        "lead_ru": "GraveStone сохраняет вещи в точке смерти, но путь к ним может остаться таким же опасным.",
+        "purpose_ru": "Могила уменьшает потерю предметов, а не отменяет последствия. Перед возвращением нужно восстановить базовый комплект, выбрать безопасный маршрут и не нести второй набор ценного снаряжения без необходимости.",
+        "steps_ru": [
+          "После смерти спокойно проверьте координаты или метку и оцените причину опасности.",
+          "Возьмите только еду, свет, простой инструмент и защиту, которые нужны для конкретного маршрута.",
+          "Если место контролируют враги или среда, сначала обеспечьте отход, а затем открывайте могилу.",
+          "После возвращения уберите временную метку и восполните аварийный комплект на базе."
+        ],
+        "success_ru": "У вас есть безопасный план возвращения, который не ставит второй комплект снаряжения под тот же риск.",
+        "diagnostics_ru": [
+          "Если путь недоступен, подготовьте обход или дождитесь подходящих условий вместо серии быстрых смертей.",
+          "Если могила не появилась или не открывается, сохраните журнал и точные координаты для отчёта."
+        ],
+        "next_ru": "После восстановления разберите причину смерти и измените маршрут, защиту или снабжение до следующей экспедиции.",
+        "task_text_ru": "Ознакомьтесь с безопасным возвращением к могиле.",
+        "optional_note_ru": "Памятка не требует смерти и не влияет на развитие команды."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вместо рискованного испытания дан порядок подготовки, возвращения и диагностики сбоя."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"],
+        "review_notes": ["Проверены безопасный тон, отсутствие требования умереть и связь с картой и отчётом."]
+      },
+      "teaching_sections": [
+        { "kind": "purpose", "source_fields": ["text_ru.lead_ru", "text_ru.purpose_ru", "text_ru.task_text_ru"] },
+        { "kind": "recovery", "source_fields": ["text_ru.steps_ru", "text_ru.success_ru", "text_ru.diagnostics_ru"] },
+        { "kind": "downstream", "source_fields": ["text_ru.next_ru", "text_ru.optional_note_ru"] }
+      ],
+      "content_refs": [
+        { "kind": "mod", "id": "gravestone", "evidence": ["docs/registries/quest_content_coverage.json"] }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Безопасная памятка исключает искусственную смерть и повторное изготовление потерянного комплекта."
+      },
+      "layout": { "x": 6, "y": 0, "shape": "diamond", "size": 1.5 }
+    }
+  ]
+}

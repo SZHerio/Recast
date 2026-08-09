@@ -1,0 +1,1236 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.expedition_atlas",
+    "engine_id": "2051000000000001",
+    "filename": "51_expedition_atlas",
+    "group": {
+      "alias": "if.group.v2.world",
+      "engine_id": "1000000000000050",
+      "title_ru": "Мир и экспедиции"
+    },
+    "order": 51,
+    "icon": "minecraft:spyglass",
+    "epoch": "SYSTEMS",
+    "tags": [
+      "world",
+      "structures",
+      "expeditions",
+      "optional"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "Экспедиционный атлас",
+      "subtitle": "Подготовка маршрута, один показательный объект каждого класса и разумный предел добычи",
+      "description": [
+        "Структуры мира дают ориентиры, разведданные, материалы и внешние контакты, но не заменяют собственное производство.",
+        "Каждая ветвь принимает один объект подходящего класса. Обходить все храмы, руины, деревни и подземелья не потребуется.",
+        "Сложность маршрута растёт вместе с эпохой: ранняя наземная разведка открыта почти сразу, а Край остаётся поздней и полностью необязательной экспедицией."
+      ]
+    },
+    "editorial": {
+      "voice": "Опытный руководитель экспедиции, который сначала говорит о снабжении и пути отхода, а затем о цели.",
+      "tone_rules": [
+        "Объяснять различие между находкой, добычей и готовой технологией.",
+        "Давать короткий план подготовки для каждого измерения.",
+        "Принимать одну показательную структуру вместо коллекционного списка."
+      ],
+      "avoid": [
+        "Не обещать одинаковый сундук или ценность добычи во всех структурах.",
+        "Не требовать зачистки ради подтверждения посещения.",
+        "Не ставить редкую экспедицию на обязательный путь технологической эпохи."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.atlas.brief",
+      "engine_id": "3051000000000001",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:filled_map",
+      "tags": [
+        "world",
+        "expedition",
+        "planning"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.world.field_brief",
+            "reason": "Дальняя экспедиция продолжает короткую полевую вылазку и использует тот же принцип отмеченного пути домой.",
+            "evidence": [
+              "authoring/questbook_v2/50_living_world.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.brief.read",
+          "engine_id": "4051000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте правила снабжения экспедиции.",
+            "help": "Галочка подтверждает только чтение; каждое посещение дальше проверяется отдельной задачей."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Маршрут важнее сундука",
+        "lead_ru": "Неизвестная постройка становится полезной только тогда, когда до неё можно добраться, осмотреть её и вернуться с результатом.",
+        "purpose_ru": "Экспедиция планируется как небольшая логистическая операция: цель, запас, путь отхода и предел риска. Руины и поселения дают сведения, образцы и контакты, но готовая машина будущей эпохи не считается нормальной добычей.",
+        "steps_ru": [
+          "Выберите одну ветвь атласа по текущей эпохе и отметьте точку возвращения до выхода.",
+          "Возьмите еду, свет, запасной инструмент и только то защитное снаряжение, которое действительно нужно выбранной среде.",
+          "При первом подходе найдите вход и путь отхода. Зачистка всей постройки не требуется для исследования."
+        ],
+        "success_ru": "Вы понимаете, какой запас нужен выбранной цели и при каком условии следует повернуть назад.",
+        "diagnostics_ru": [
+          "Если цель долго не находится, расширяйте карту последовательными полосами и возвращайтесь до исчерпания половины запаса.",
+          "Если вход опасен, отметьте место и вернитесь позже; найденная структура не обязана быть пройдена в тот же рейс."
+        ],
+        "next_ru": "Первой целью станет любой показательный объект Верхнего мира: лагерь, руины, поселение, храм или подземелье.",
+        "task_text_ru": "Прочитайте памятку и выберите одну экспедиционную цель.",
+        "optional_note_ru": "Весь атлас является боковой ветвью и не задерживает промышленное развитие."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вводный узел не выдаёт чтение за посещение и задаёт общий предел добычи."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Русский текст написан с нуля; требуется независимая проверка ритма всей главы."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/registries/quest_world_structure_sets.json",
+          "evidence": [
+            "Реестр закрепляет принцип одной показательной цели на класс экспедиции."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Вводная памятка не требует предметов или случайного поиска."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "hexagon",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.atlas.overworld_site",
+      "engine_id": "3051000000000002",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "minecraft:map",
+      "tags": [
+        "world",
+        "overworld",
+        "structures"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.atlas.brief",
+            "reason": "Первый наземный объект исследуется после знакомства с запасом, маршрутом и пределом риска.",
+            "evidence": [
+              "authoring/questbook_v2/51_expedition_atlas.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.overworld_site.structure",
+          "engine_id": "4051000000000002",
+          "type": "structure",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Найдите один наземный объект из общей группы экспедиций.",
+            "help": "Подойдут лагерь, руины, поселение, храм или небольшое подземелье из списка задачи; искать все варианты не нужно."
+          },
+          "structure": "#industrial_frontier:expedition_overworld"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первая цель на карте",
+        "lead_ru": "Наземная экспедиция позволяет освоить правила атласа без портала, подводного снаряжения и поздней техники.",
+        "purpose_ru": "Один объект показывает сразу несколько ролей мировых структур. Лагерь даёт ориентир, руины рассказывают о месте, поселение открывает контакт и торговлю, а храм или подземелье добавляет риск, который нужно оценить до входа.",
+        "steps_ru": [
+          "Выберите одно направление и отмечайте крупные постройки на карте, не сворачивая к каждой мелкой находке.",
+          "У руин проверьте устойчивость пути, у поселения не путайте внешнюю торговлю со своей колонией, а у храма или подземелья сначала ищите ловушки и выход.",
+          "Забирайте образцы, инструменты и сведения, которые пригодятся сейчас. Готовая техника будущей эпохи не должна заменять производство."
+        ],
+        "success_ru": "Наземная цель засчитана, поэтому остальные семейства построек можно исследовать только по желанию.",
+        "diagnostics_ru": [
+          "Если постройка выглядит подходящей, но не засчитывается, сохраните её координаты и видимое название в коротком отчёте.",
+          "Если внутри слишком опасно, отступите: задача подтверждает прибытие и не требует полной зачистки.",
+          "Если добыча кажется слишком сильной для вашей эпохи, сохраните её как образец и не стройте на ней обязательную цепочку."
+        ],
+        "next_ru": "Отдельная ветвь спускается под землю, где большие пещеры требуют собственного способа навигации.",
+        "task_text_ru": "Найдите любой наземный объект из указанной группы.",
+        "optional_note_ru": "Для завершения нужен один объект, а не полный список руин, храмов и поселений."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Подтверждение использует общий тег из восьми локально проверенных структур."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "ID структур подтверждены по JAR; распознавание общего тега требует проверки пользователя."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "moogs_structures",
+          "evidence": [
+            "mods/MoogsVoyagerStructures-1.20-5.0.8.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "philipsruins",
+          "evidence": [
+            "mods/PhilipsRuins1.20.1-5.7.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "repurposed_structures",
+          "evidence": [
+            "mods/repurposed_structures-7.1.24+1.20.1-forge.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "t_and_t",
+          "evidence": [
+            "mods/Towns-and-Towers-1.12-Fabric+Forge.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "betterdeserttemples",
+          "evidence": [
+            "mods/YungsBetterDesertTemples-1.20-Forge-3.0.3.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "betterdungeons",
+          "evidence": [
+            "mods/YungsBetterDungeons-1.20-Forge-4.0.4.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "betterjungletemples",
+          "evidence": [
+            "mods/YungsBetterJungleTemples-1.20-Forge-2.0.5.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "betterwitchhuts",
+          "evidence": [
+            "mods/YungsBetterWitchHuts-1.20-Forge-3.0.3.jar"
+          ]
+        },
+        {
+          "kind": "structure",
+          "id": "industrial_frontier:expedition_overworld",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_overworld.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один объект обучает разведке; повторный обход всех семейств не требуется."
+      },
+      "layout": {
+        "x": 3,
+        "y": -3,
+        "shape": "circle",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.atlas.cave_survey",
+      "engine_id": "3051000000000003",
+      "epoch": "SYSTEMS",
+      "role": "acquisition",
+      "requirement": "optional",
+      "icon": "minecraft:deepslate",
+      "tags": [
+        "world",
+        "caves",
+        "geology"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.atlas.brief",
+            "reason": "Подземный маршрут использует общий запас экспедиции, но требует особенно аккуратного пути назад.",
+            "evidence": [
+              "authoring/questbook_v2/51_expedition_atlas.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p0.prospect",
+            "reason": "Пещера становится геологической целью после знакомства с поиском рудных жил.",
+            "evidence": [
+              "authoring/questbook_v2/10_p0.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.cave_survey.sample",
+          "engine_id": "4051000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Принесите один образец глубинного сланца.",
+            "help": "Образец подтверждает, что вы добрались до глубинной зоны; искать конкретную руду для этой задачи не нужно."
+          },
+          "item": {
+            "id": "minecraft:deepslate",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Большая пещера — это маршрут",
+        "lead_ru": "Расширенные пещеры открывают дальние проходы, но легко скрывают обратную дорогу за десятком похожих развилок.",
+        "purpose_ru": "Подземная разведка нужна для поиска удобных подходов к жилам GregTech, а не для случайного сбора каждой руды по пути. Генерацию месторождений по-прежнему определяет геологическая система сборки; форма пещер лишь меняет доступ к ним.",
+        "steps_ru": [
+          "Оставляйте метки только на развилках и направляйте их к выходу; сплошная цепочка факелов хуже показывает направление.",
+          "Не спускайтесь в новую шахту без блока, воды, еды и запасной кирки.",
+          "Доберитесь до глубинной зоны, возьмите один образец сланца и возвращайтесь тем же отмеченным путём."
+        ],
+        "success_ru": "В инвентаре есть образец глубинного сланца, подтверждающий достижение глубинной зоны.",
+        "diagnostics_ru": [
+          "Если потеряли направление, вернитесь к последней понятной развилке вместо случайного движения вниз.",
+          "Если пещера слишком опасна, прокопайте короткий контролируемый обход и отметьте место для следующей вылазки.",
+          "Если жила не находится, используйте правила геологической разведки из P0; размер пещеры не гарантирует месторождение."
+        ],
+        "next_ru": "Следующая среда меняет уже не только маршрут, но и дыхание: морская цель требует отдельной подготовки.",
+        "task_text_ru": "Получите один образец глубинного сланца из глубинной зоны.",
+        "optional_note_ru": "Образец подтверждает один безопасный спуск; исследовать всю систему пещер не нужно."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Better Caves не даёт отдельной структуры для автоматической проверки, поэтому условие честно сужено до глубинного образца."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Роль мода сверена по локальному JAR; предметная задача не утверждает распознавание конкретного типа пещеры."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "bettercaves",
+          "evidence": [
+            "mods/YungsBetterCaves-1.20.1-Forge-2.0.5.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:deepslate",
+          "evidence": [
+            "docs/registries/quest_content_coverage.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один образец подтверждает глубинный маршрут без требования найти случайную руду."
+      },
+      "layout": {
+        "x": 3,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.atlas.ocean_site",
+      "engine_id": "3051000000000004",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "minecraft:heart_of_the_sea",
+      "tags": [
+        "world",
+        "ocean",
+        "structures"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.atlas.brief",
+            "reason": "Морской рейс использует общий план запаса и возврата.",
+            "evidence": [
+              "authoring/questbook_v2/51_expedition_atlas.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.intro",
+            "reason": "К эпохе P2 у игрока уже есть инструменты и снабжение для более длинного водного маршрута.",
+            "evidence": [
+              "authoring/questbook_v2/12_p2.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.ocean_site.structure",
+          "engine_id": "4051000000000004",
+          "type": "structure",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Найдите один морской объект из списка задачи.",
+            "help": "Подойдёт памятник, дом или океанское поселение; задача не требует зачистки подводной постройки."
+          },
+          "structure": "#industrial_frontier:expedition_ocean"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Морской рейс",
+        "lead_ru": "На воде простая ошибка со снабжением опаснее, потому что берег, воздух и путь домой могут оказаться далеко одновременно.",
+        "purpose_ru": "Морская экспедиция связывает разведку с рыболовством и будущей водной логистикой. Её цель — найти один заметный объект и проверить маршрут, а не зачищать памятник или собирать всю морскую добычу.",
+        "steps_ru": [
+          "Возьмите лодку, запас еды, блоки для аварийной площадки и проверенный способ дышать под водой, если цель находится глубоко.",
+          "Отметьте берег отправления и промежуточную точку до погружения.",
+          "При приближении оцените стражей, вход и расстояние до воздуха. Для зачёта достаточно добраться до структуры."
+        ],
+        "success_ru": "Морская цель засчитана; развивать этот маршрут дальше стоит только при реальной пользе для снабжения.",
+        "diagnostics_ru": [
+          "Если воздуха не хватает даже на разведку входа, отступите и подготовьте более надёжное средство дыхания.",
+          "Если лодка осталась далеко, сначала закрепите безопасную площадку или запасной выход на поверхность.",
+          "Если объект не засчитывается, отметьте точку на карте и приложите к отчёту название из подсказки мира."
+        ],
+        "next_ru": "После моря атлас возвращается к региональной цели: крепость потребует уже постоянной линии снабжения.",
+        "task_text_ru": "Достигните любого морского объекта из указанной группы.",
+        "optional_note_ru": "Посещение не требует боя или полного исследования подводных помещений."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Подтверждение использует общий тег трёх проверенных морских структур."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "ID морских структур подтверждены по JAR; распознавание общего тега требует проверки пользователя."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "betteroceanmonuments",
+          "evidence": [
+            "mods/YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "moogs_structures",
+          "evidence": [
+            "mods/MoogsVoyagerStructures-1.20-5.0.8.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "t_and_t",
+          "evidence": [
+            "mods/Towns-and-Towers-1.12-Fabric+Forge.jar"
+          ]
+        },
+        {
+          "kind": "structure",
+          "id": "industrial_frontier:expedition_ocean",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_ocean.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один морской объект проверяет снабжение и дыхание без обязательной зачистки."
+      },
+      "layout": {
+        "x": 6,
+        "y": -3,
+        "shape": "circle",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.atlas.stronghold_route",
+      "engine_id": "3051000000000005",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "minecraft:ender_eye",
+      "tags": [
+        "world",
+        "stronghold",
+        "regional_logistics"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.atlas.brief",
+            "reason": "Поиск крепости строится на тех же правилах запаса и отмеченного пути, что ранние экспедиции.",
+            "evidence": [
+              "authoring/questbook_v2/51_expedition_atlas.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p5.brief",
+            "reason": "Региональная эпоха даёт подходящий масштаб транспорта и запасов для далёкой крепости.",
+            "evidence": [
+              "authoring/questbook_v2/15_p5.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.stronghold_route.structure",
+          "engine_id": "4051000000000005",
+          "type": "structure",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Найдите перестроенную крепость.",
+            "help": "Око Края помогает выбрать направление, но запасная отметка на карте нужна для возвращения и будущего снабжения."
+          },
+          "structure": "#betterstrongholds:better_strongholds"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Крепость как логистический проект",
+        "lead_ru": "Поздний переход начинается не с портала, а с дороги до места, которое может оказаться очень далеко от города.",
+        "purpose_ru": "Перестроенная крепость — крупная региональная цель. Её выгодно связать с базой отметками, промежуточным запасом и понятным маршрутом, чтобы будущие поездки не повторяли долгий случайный поиск.",
+        "steps_ru": [
+          "Подготовьте несколько глаз Края и проверяйте направление с больших интервалов, чтобы не расходовать их без пользы.",
+          "Отмечайте промежуточные точки и оставьте у поверхности запас еды, блоков и света.",
+          "Найдите вход в крепость и отметьте его; открывать портал или исследовать каждый коридор для зачёта не требуется."
+        ],
+        "success_ru": "Крепость найдена и засчитана; теперь её местоположение можно превратить в постоянный маршрут поздней экспедиции.",
+        "diagnostics_ru": [
+          "Если направление резко изменилось, вернитесь к последней точке броска и уменьшите шаг поиска.",
+          "Если вход находится под сложным рельефом, сделайте отдельную безопасную шахту вместо долгих блужданий по пещерам.",
+          "Если крепость не засчитывается, не разрушайте вход: сохраните координаты и название из подсказки мира для проверки."
+        ],
+        "next_ru": "Эта точка станет одним из условий позднего входа в Край, но сначала атлас предлагает отдельную экспедицию в Незер.",
+        "task_text_ru": "Найдите перестроенную крепость.",
+        "optional_note_ru": "Поиск крепости не повышает эпоху и не требует немедленно входить в Край."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Структура и её тег подтверждены в установленном YUNG's Better Strongholds."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точный тег проверен по JAR; частоту генерации и распознавание проверит пользователь."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "betterstrongholds",
+          "evidence": [
+            "mods/YungsBetterStrongholds-1.20-Forge-4.0.3.jar"
+          ]
+        },
+        {
+          "kind": "structure",
+          "id": "betterstrongholds:stronghold",
+          "evidence": [
+            "mods/YungsBetterStrongholds-1.20-Forge-4.0.3.jar!data/betterstrongholds/worldgen/structure/stronghold.json",
+            "mods/YungsBetterStrongholds-1.20-Forge-4.0.3.jar!data/betterstrongholds/tags/worldgen/structure/better_strongholds.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Крепость ищется один раз и становится постоянной точкой маршрута."
+      },
+      "layout": {
+        "x": 6,
+        "y": 0,
+        "shape": "hexagon",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.atlas.nether_site",
+      "engine_id": "3051000000000006",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "minecraft:blaze_rod",
+      "tags": [
+        "world",
+        "nether",
+        "structures"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.atlas.brief",
+            "reason": "Незер требует того же плана снабжения, но с отдельной защитой от огня и потерянного портала.",
+            "evidence": [
+              "authoring/questbook_v2/51_expedition_atlas.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p4.brief",
+            "reason": "Химическая эпоха даёт практическую причину искать реагенты Незера и лучше готовит защитное снабжение.",
+            "evidence": [
+              "authoring/questbook_v2/14_p4.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.nether_site.structure",
+          "engine_id": "4051000000000006",
+          "type": "structure",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Найдите одну укреплённую цель Незера из списка задачи.",
+            "help": "Подойдёт крепость или малое подземелье; подтверждение не требует боя с каждым обитателем."
+          },
+          "structure": "#industrial_frontier:expedition_nether"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Крепость за порталом",
+        "lead_ru": "В Незере короткое расстояние скрывает высокую цену ошибки: лава, огонь и потерянный портал обрывают рейс быстрее пустого запаса еды.",
+        "purpose_ru": "Укреплённые объекты Незера дают доступ к реагентам и материалам для химии и энергетики. Экспедиция подтверждает маршрут к одной цели, но не выдаёт готовое позднее оборудование и не требует полной зачистки.",
+        "steps_ru": [
+          "Запишите координаты портала с обеих сторон и оставьте у него негорючий аварийный запас.",
+          "Возьмите защиту от огня, блоки для мостов и запасное огниво или другой способ вновь зажечь портал.",
+          "Найдите крепость или подземелье, отметьте безопасный подход и возвращайтесь, если расход защиты превысил половину запаса."
+        ],
+        "success_ru": "Укреплённая цель Незера засчитана; дальнейшее освоение можно связать с реальным спросом химической линии.",
+        "diagnostics_ru": [
+          "Если потеряли портал, сначала вернитесь к последней координатной отметке и не открывайте новые ответвления.",
+          "Если путь пересекает большое озеро лавы, ищите обход или стройте защищённый коридор вместо открытого моста.",
+          "Если цель не засчитывается, зафиксируйте точку и название из подсказки мира, затем безопасно вернитесь через портал."
+        ],
+        "next_ru": "Позднее крепость Верхнего мира и начало P8 откроют отдельный маршрут к изменённому центральному острову Края.",
+        "task_text_ru": "Найдите любую укреплённую цель Незера из указанной группы.",
+        "optional_note_ru": "Для завершения достаточно прибыть к одной цели; полная зачистка крепости не требуется."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Подтверждение использует общий тег крепости и малого подземелья Незера."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "ID целей подтверждены по JAR; распознавание общего тега требует проверки пользователя."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "betterfortresses",
+          "evidence": [
+            "mods/YungsBetterNetherFortresses-1.20-Forge-2.0.6.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "betterdungeons",
+          "evidence": [
+            "mods/YungsBetterDungeons-1.20-Forge-4.0.4.jar"
+          ]
+        },
+        {
+          "kind": "structure",
+          "id": "industrial_frontier:expedition_nether",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_nether.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один маршрут к одной цели знакомит с рисками Незера без обязательной зачистки."
+      },
+      "layout": {
+        "x": 6,
+        "y": 3,
+        "shape": "circle",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.atlas.end_entry",
+      "engine_id": "3051000000000007",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "minecraft:end_stone",
+      "tags": [
+        "world",
+        "end",
+        "late_expedition"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.atlas.stronghold_route",
+            "reason": "Вход в Край начинается с уже найденной и отмеченной крепости.",
+            "evidence": [
+              "authoring/questbook_v2/51_expedition_atlas.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p8.brief",
+            "reason": "По реестру сборки изменённый центральный остров относится к поздней экспедиционной эпохе P8.",
+            "evidence": [
+              "authoring/questbook_v2/18_p8.json",
+              "docs/registries/quest_content_coverage.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.end_entry.dimension",
+          "engine_id": "4051000000000007",
+          "type": "dimension",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Войдите в Край через подготовленный портал.",
+            "help": "Центральный остров изменён; заранее возьмите блоки, дальнобойное средство защиты и способ отметить точку возвращения."
+          },
+          "dimension": "minecraft:the_end"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Изменённый центральный остров",
+        "lead_ru": "Найденная крепость становится входом в позднюю среду, где привычная площадка и расположение угроз уже не гарантированы.",
+        "purpose_ru": "Better End Island перестраивает центральный остров, поэтому старый маршрут из памяти ненадёжен. Цель этого шага — безопасно войти, увидеть новую площадку и сохранить путь назад, а не завершить весь бой одним рейсом.",
+        "steps_ru": [
+          "Оставьте у портала в Верхнем мире запас еды, блоков и обычного снаряжения для повторного входа.",
+          "Возьмите дальнобойное средство защиты, медленное падение или другой проверенный способ пережить сброс с высоты.",
+          "После перехода сначала оцените площадку, края острова и путь к укрытию; бой можно продолжить отдельным подготовленным рейсом."
+        ],
+        "success_ru": "Переход в Край засчитан; устройство изменённого центрального острова теперь можно учитывать в дальнейших планах.",
+        "diagnostics_ru": [
+          "Если площадка опасна сразу после входа, сначала создайте укрытие и только затем осматривайте остров.",
+          "Если снаряжение потеряно, используйте запас у портала и не несите второй дорогой комплект без плана возврата.",
+          "Если эпоха P8 ещё не началась, оставьте ветку закрытой: Край не нужен для обязательного продвижения атласа."
+        ],
+        "next_ru": "После освоения центрального острова можно искать один поздний объект Края из общей экспедиционной группы.",
+        "task_text_ru": "Войдите в Край через подготовленный портал.",
+        "optional_note_ru": "Вход в Край не входит в обязательную промышленную цепочку и может быть отложен."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Better End Island изменяет центральный остров без отдельного обычного ID структуры, поэтому проверяется само измерение."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Содержимое JAR подтверждает шаблоны центрального острова; фактический вход проверяет пользователь."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "betterendisland",
+          "evidence": [
+            "mods/YungsBetterEndIsland-1.20-Forge-2.0.6.jar"
+          ]
+        },
+        {
+          "kind": "dimension",
+          "id": "minecraft:the_end",
+          "evidence": [
+            "mods/YungsBetterEndIsland-1.20-Forge-2.0.6.jar!data/betterendisland/structures/spawn_platform.nbt"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один безопасный вход знакомит с изменённым островом без требования немедленно завершать бой."
+      },
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "shape": "octagon",
+        "size": 1.3
+      }
+    },
+    {
+      "alias": "if.quest.v2.atlas.end_site",
+      "engine_id": "3051000000000008",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "minecraft:purpur_block",
+      "tags": [
+        "world",
+        "end",
+        "structures"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.atlas.end_entry",
+            "reason": "Поиск дальнего объекта Края начинается после безопасного знакомства с центральным островом.",
+            "evidence": [
+              "authoring/questbook_v2/51_expedition_atlas.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.atlas.end_site.structure",
+          "engine_id": "4051000000000008",
+          "type": "structure",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Найдите один поздний объект Края из списка задачи.",
+            "help": "Подойдёт цитадель или один из вариантов руин; искать все редкие структуры не нужно."
+          },
+          "structure": "#industrial_frontier:expedition_end"
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Один объект дальнего Края",
+        "lead_ru": "После центрального острова начинается среда с большими разрывами и редкими целями, где лишний километр особенно дорого обходится.",
+        "purpose_ru": "Поздние структуры Края стоит исследовать ради сведений, образцов материалов и необычных компонентов. Они не должны снабжать готовой технологией следующей эпохи, а атлас не требует искать каждую редкую цитадель или руину.",
+        "steps_ru": [
+          "Возьмите блоки, еду, запасной путь через пустоту и средство безопасного падения.",
+          "Двигайтесь от отмеченной точки по одному направлению и ставьте редкие, но однозначные ориентиры.",
+          "Найдите любой объект из списка, оцените безопасный вход и возвращайтесь с одним полезным образцом вместо полной разборки постройки."
+        ],
+        "success_ru": "Поздняя цель Края засчитана; остальные структуры остаются свободными целями исследования.",
+        "diagnostics_ru": [
+          "Если маршрут уходит слишком далеко, устройте промежуточный запас и вернитесь за основным снаряжением отдельным рейсом.",
+          "Если объект расположен над пустотой, сначала постройте защищённый подход и только затем ищите вход.",
+          "Если цель не засчитывается, поставьте точку на карте и сохраните её название из подсказки мира для отчёта."
+        ],
+        "next_ru": "На этом атлас завершён: дальнейшие походы выбираются по нуждам города, науки и производства, а не ради новых отметок.",
+        "task_text_ru": "Найдите любой поздний объект Края из указанной группы.",
+        "optional_note_ru": "Один объект завершает ветвь; полный поиск редких структур Края не требуется."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Подтверждение использует общий тег трёх локально проверенных структур Края."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "ID структур подтверждены по JAR; распознавание общего тега требует проверки пользователя."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "moogs_structures",
+          "evidence": [
+            "mods/MoogsEndStructures-1.20-2.0.3.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "philipsruins",
+          "evidence": [
+            "mods/PhilipsRuins1.20.1-5.7.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "repurposed_structures",
+          "evidence": [
+            "mods/repurposed_structures-7.1.24+1.20.1-forge.jar"
+          ]
+        },
+        {
+          "kind": "structure",
+          "id": "industrial_frontier:expedition_end",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/expedition_end.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один поздний объект завершает знакомство без коллекционного поиска редких структур."
+      },
+      "layout": {
+        "x": 12,
+        "y": 0,
+        "shape": "diamond",
+        "size": 1.3
+      }
+    }
+  ]
+}

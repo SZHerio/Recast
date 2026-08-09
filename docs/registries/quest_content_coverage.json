@@ -8,17 +8,20 @@
     "compiled_chapters": "config/ftbquests/quests/chapters"
   },
   "expected_counts": {
-    "all_jars": 134,
-    "content_gameplay": 81,
+    "all_jars": 133,
+    "content_gameplay": 80,
     "authoring_runtime": 19,
     "library_dependency": 26,
     "client_optimization": 8
   },
   "inventory_delta": {
     "baseline_active_jars": 133,
-    "current_active_jars": 134,
+    "current_active_jars": 133,
     "post_baseline_additions": [
       "ftb-essentials-forge-2001.2.4.jar"
+    ],
+    "post_baseline_removals": [
+      "JustEnoughResources-1.20.1-1.4.0.247.jar"
     ]
   },
   "ru_authoring_policy": {
@@ -55,7 +58,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Связать дымоходы с Pollution of the Realms и реальными котлами или печами."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 2,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -108,7 +111,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Загрязнение должно зависеть от промышленности и влиять на решения города, а не быть отдельным штрафом."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 10,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -159,7 +162,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Открывать после CC:Tweaked и связывать с AE2, MineColonies и промышленными датчиками."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 4,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -209,7 +212,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Связать воду и удобрения химического города с пищевыми контрактами."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 4,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -300,7 +303,7 @@
         "verification_ru": "Достаточно одного репрезентативного открытия и паспорта рисков; собирать весь каталог не требуется.",
         "integration_ru": "Связать животных с биомами, пищей и экспедициями без охоты за полным каталогом."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 3,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -395,7 +398,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "AE2 принимает управление зрелой фабрикой и не заменяет ранний склад до P5."
       },
-      "current_quest_ref_count": 8,
+      "current_quest_ref_count": 21,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -445,7 +448,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Рыболовство дополняет Farmer's Delight и водную логистику Little Logistics."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 6,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -618,7 +621,7 @@
         "verification_ru": "Достаточно одного репрезентативного открытия и паспорта рисков; собирать весь каталог не требуется.",
         "integration_ru": "Биомы влияют на выбор базы, сезоны и экспедиционную логистику."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 1,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -739,7 +742,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Связать с сельским хозяйством, кухней и снабжением поселения."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 5,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -787,7 +790,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Автомобиль дополняет железные дороги и не заменяет магистральный грузовой поток."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 2,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -936,7 +939,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "CC:Tweaked связывает датчики, ProjectRed, AE2 и городскую диспетчерскую."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 4,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1093,7 +1096,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Мод даёт кухонную инфраструктуру, но не заменяет рецепты Farmer's Delight."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 6,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1192,7 +1195,7 @@
         "verification_ru": "Капстоун обязан доказать устойчивую рабочую линию и наблюдаемый выход, а не наличие одного предмета.",
         "integration_ru": "Create даёт видимую раннюю механику и массовые операции, а точная металлургия остаётся за GregTech."
       },
-      "current_quest_ref_count": 29,
+      "current_quest_ref_count": 52,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1244,7 +1247,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Артиллерия получает материалы от фабрики и строго ограничивается эпохой и разрушительностью."
       },
-      "current_quest_ref_count": 3,
+      "current_quest_ref_count": 10,
       "status": "NARRATIVE_ONLY",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1298,7 +1301,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Использовать в строительных контрактах; не требовать каждый декоративный вариант."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 3,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1345,7 +1348,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Использовать только орбитальную роль и стык с GCYR; планеты не должны дублироваться."
       },
-      "current_quest_ref_count": 3,
+      "current_quest_ref_count": 2,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1434,7 +1437,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Domum Ornamentum обслуживает MineColonies и не конкурирует с мебелью Handcrafted."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 5,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1651,7 +1654,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Открывать после первого ручного здания, чтобы антигринд не заменил обучение."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 2,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1737,7 +1740,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Рецепты должны использовать общие материалы GT и уступать место TaCZ по мере развития."
       },
-      "current_quest_ref_count": 1,
+      "current_quest_ref_count": 2,
       "status": "NARRATIVE_ONLY",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1824,7 +1827,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Еда должна связывать сезонность, сельское хозяйство, логистику и MineColonies."
       },
-      "current_quest_ref_count": 4,
+      "current_quest_ref_count": 9,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1950,7 +1953,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Использовать для геометрии, сохраняя палитры за Rechiseled и мебель за Handcrafted."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 4,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -1992,7 +1995,7 @@
         "verification_ru": "Проверяется только статическая совместимость и работа зависимого игрового контента.",
         "integration_ru": "Компонент не считается игровым доменом, не открывает эпоху и не увеличивает показатель покрытия."
       },
-      "current_quest_ref_count": 24,
+      "current_quest_ref_count": 339,
       "status": "NO_QUEST_REQUIRED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2100,7 +2103,7 @@
         "verification_ru": "Проверяется только статическая совместимость и работа зависимого игрового контента.",
         "integration_ru": "Компонент не считается игровым доменом, не открывает эпоху и не увеличивает показатель покрытия."
       },
-      "current_quest_ref_count": 1,
+      "current_quest_ref_count": 0,
       "status": "NO_QUEST_REQUIRED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2250,7 +2253,7 @@
         "verification_ru": "Капстоун обязан доказать устойчивую рабочую линию и наблюдаемый выход, а не наличие одного предмета.",
         "integration_ru": "GCYR владеет планетами и внеземной геологией, получая материалы из общей промышленной цепочки."
       },
-      "current_quest_ref_count": 35,
+      "current_quest_ref_count": 55,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2386,7 +2389,7 @@
         "verification_ru": "Капстоун обязан доказать устойчивую рабочую линию и наблюдаемый выход, а не наличие одного предмета.",
         "integration_ru": "GTCEu владеет земной геологией и точными процессами, но принимает утверждённые формы из других доменов."
       },
-      "current_quest_ref_count": 5,
+      "current_quest_ref_count": 346,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2543,7 +2546,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Покрывать только утверждённые машины, связывая их с GTEC, GTCEu и поздними материалами."
       },
-      "current_quest_ref_count": 1,
+      "current_quest_ref_count": 2,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2633,7 +2636,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Handcrafted владеет мебелью и не должен дублироваться декоративными поверхностями."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 6,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2681,7 +2684,7 @@
         "verification_ru": "Капстоун обязан доказать устойчивую рабочую линию и наблюдаемый выход, а не наличие одного предмета.",
         "integration_ru": "HBM отвечает за стратегический поздний слой и не дублирует гражданский цикл NuclearCraft."
       },
-      "current_quest_ref_count": 11,
+      "current_quest_ref_count": 19,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2731,7 +2734,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "IE не должен обходить сталь и обогащение GT; он даёт крупную гражданскую инфраструктуру."
       },
-      "current_quest_ref_count": 1,
+      "current_quest_ref_count": 16,
       "status": "NARRATIVE_ONLY",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2778,7 +2781,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Нефтепродукты должны иметь потребителей в транспорте, химии и городской промышленности."
       },
-      "current_quest_ref_count": 2,
+      "current_quest_ref_count": 43,
       "status": "NARRATIVE_ONLY",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -2984,54 +2987,6 @@
       }
     },
     {
-      "jar": "JustEnoughResources-1.20.1-1.4.0.247.jar",
-      "name": "Just Enough Resources (JER)",
-      "modids": [
-        "jeresources"
-      ],
-      "category": "CONTENT_GAMEPLAY",
-      "role": "MANDATORY_INTEGRATION",
-      "home_chapter": "Геология и исследование",
-      "epochs": [
-        "P0",
-        "P1",
-        "P2",
-        "P3"
-      ],
-      "coverage_contract": {
-        "summary_ru": "Игровой домен «Геология и исследование»: его роль нужно объяснить до первого обязательного применения.",
-        "minimum_topics_ru": [
-          "распределение руд и лута",
-          "ограничения данных при кастомном worldgen"
-        ],
-        "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
-        "integration_ru": "JER должен явно уступать реестру GT-worldgen там, где стандартная статистика неприменима."
-      },
-      "current_quest_ref_count": 0,
-      "status": "UNQUESTED",
-      "ru_copy_coverage": {
-        "primary_language": "ru_ru",
-        "status": "FULL_REAUTHOR_REQUIRED",
-        "human_authoring_required": true,
-        "machine_translation_forbidden": true,
-        "placeholders_forbidden": true,
-        "minimum_scope": [
-          "заголовок и вводная",
-          "пошаговое действие",
-          "наблюдаемый признак успеха",
-          "диагностика отказа",
-          "следующий потребитель результата"
-        ],
-        "editorial_checks": {
-          "RU_PRIMARY_DRAFTED": false,
-          "RU_TECH_CHECKED": false,
-          "RU_STYLE_REVIEWED": false,
-          "RU_FLOW_REVIEWED": false
-        },
-        "ru_ready": false
-      }
-    },
-    {
       "jar": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
       "name": "Konkrete",
       "modids": [
@@ -3204,7 +3159,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Экономика должна читать состояние фракций и потребности города, а не создавать бесплатные обходы."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 10,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -3253,7 +3208,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Водный транспорт занимает собственную нишу между местным складом и региональной фабрикой."
       },
-      "current_quest_ref_count": 2,
+      "current_quest_ref_count": 3,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -3378,7 +3333,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Колония потребляет еду, материалы, транспорт, энергию и безопасность общей фабрики."
       },
-      "current_quest_ref_count": 4,
+      "current_quest_ref_count": 38,
       "status": "NARRATIVE_ONLY",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -3721,7 +3676,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Разрешать после ручной сборки первого объекта соответствующего типа."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 2,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -3770,7 +3725,7 @@
         "verification_ru": "Капстоун обязан доказать устойчивую рабочую линию и наблюдаемый выход, а не наличие одного предмета.",
         "integration_ru": "NuclearCraft владеет гражданским топливным циклом и безопасной АЭС."
       },
-      "current_quest_ref_count": 29,
+      "current_quest_ref_count": 182,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4015,7 +3970,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Пневматика дополняет электричество и автоматику, не становясь универсальной заменой GT."
       },
-      "current_quest_ref_count": 1,
+      "current_quest_ref_count": 7,
       "status": "NARRATIVE_ONLY",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4100,7 +4055,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Объяснить границы SU, EU, FE и специализированную роль городской сети."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 4,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4197,7 +4152,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Использовать поверх Integration и Transmission для компактной автоматики."
       },
-      "current_quest_ref_count": 1,
+      "current_quest_ref_count": 5,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4298,7 +4253,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Сигналы управляют Create, транспортом и выбранными промышленными интерфейсами."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 2,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4346,7 +4301,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Передача связывает датчики, логические элементы и контролируемые машины."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 2,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4388,7 +4343,7 @@
         "verification_ru": "Проверяется только статическая совместимость и работа зависимого игрового контента.",
         "integration_ru": "Компонент не считается игровым доменом, не открывает эпоху и не увеличивает показатель покрытия."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 267,
       "status": "NO_QUEST_REQUIRED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4436,7 +4391,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Принимать категорию палитры, а не конкретный декоративный блок."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 3,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4490,7 +4445,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Связать с Create Deco и общей строительной веткой без предметного каталога."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 2,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4739,7 +4694,7 @@
         "verification_ru": "Достаточно одного репрезентативного открытия и паспорта рисков; собирать весь каталог не требуется.",
         "integration_ru": "Сезоны должны влиять на ферму, питание города и планирование контрактов."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 3,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4907,7 +4862,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Расширение закрывает тонкие места P2 и передаёт продукцию в GTCEu."
       },
-      "current_quest_ref_count": 1,
+      "current_quest_ref_count": 3,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -4961,7 +4916,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Structurize обслуживает MineColonies и крупные авторские строительные контракты."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 5,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -5088,7 +5043,7 @@
         "verification_ru": "Факультативная ветвь должна завершаться практическим применением системы, а не галочкой о прочтении.",
         "integration_ru": "Использовать по функциям города, не превращая варианты блоков в коллекционный список."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 3,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -5141,7 +5096,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "TaCZ является единственной основной системой огнестрела и получает боеприпасы из промышленности."
       },
-      "current_quest_ref_count": 2,
+      "current_quest_ref_count": 10,
       "status": "NARRATIVE_ONLY",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -5279,7 +5234,7 @@
         "verification_ru": "Нужен хотя бы один реально работающий процесс с проверяемым входом, выходом и признаком исправной работы.",
         "integration_ru": "Tom's Storage объединяет ранние сундуки и передаёт роль цифровому складу в P5."
       },
-      "current_quest_ref_count": 8,
+      "current_quest_ref_count": 18,
       "status": "PARTIAL",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",
@@ -5880,7 +5835,7 @@
         "verification_ru": "Достаточно одного репрезентативного открытия и паспорта рисков; собирать весь каталог не требуется.",
         "integration_ru": "Крепость становится логистическим проектом перед поздним переходом в Край."
       },
-      "current_quest_ref_count": 0,
+      "current_quest_ref_count": 1,
       "status": "UNQUESTED",
       "ru_copy_coverage": {
         "primary_language": "ru_ru",

@@ -1,0 +1,8 @@
+{
+  "__comment": "Неодимовая пыль из установленных технологических систем; способ получения не должен блокировать академический зачёт.",
+  "replace": false,
+  "values": [
+    "gtceu:neodymium_dust",
+    "nuclearcraft:neodymium_dust"
+  ]
+}

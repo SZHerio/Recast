@@ -3,14 +3,15 @@
 """Build the Recast v2 title-menu image set without launching Minecraft.
 
 The accepted AI artwork lives in ``brand_source``.  This script performs only
-deterministic delivery work: 16:9 framing, alpha-preserving resize, icon
-downsampling, compact nine-slice UI textures and static composition previews.
+deterministic delivery work: 16:9 framing, alpha-preserving resize, pixel-native
+window icons, compact nine-slice UI textures and static composition previews.
 """
 
 from __future__ import annotations
 
 import pathlib
 import sys
+import time
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
@@ -40,11 +41,7 @@ MUTED = (112, 123, 132, 190)
 
 RESAMPLE = Image.Resampling.LANCZOS
 REFERENCE_SIZE = (854, 480)
-PARALLAX_POSITION_MULTIPLIER = 0.1
-MID_LAYOUT = (-24, -16, 902, 512)
-NEAR_LAYOUT = (-28, -18, 910, 516)
-MID_INTENSITY = (0.18, 0.10)
-NEAR_INTENSITY = (0.30, 0.16)
+BACKGROUND_PARALLAX = (0.025, 0.014)
 
 
 def require_sources() -> None:
@@ -55,7 +52,16 @@ def require_sources() -> None:
 
 def save(image: Image.Image, path: pathlib.Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    image.save(path, optimize=True)
+    temporary = path.with_name(f".{path.name}.recast-build.tmp")
+    image.save(temporary, format="PNG", optimize=True)
+    for attempt in range(5):
+        try:
+            temporary.replace(path)
+            return
+        except OSError:
+            if attempt == 4:
+                raise
+            time.sleep(0.1)
 
 
 def fit_16_9(image: Image.Image, size: tuple[int, int] = (2048, 1152)) -> Image.Image:
@@ -166,17 +172,27 @@ def panel_texture(size: tuple[int, int] = (96, 96)) -> Image.Image:
 
 
 def processed_icon(source: Image.Image, size: int) -> Image.Image:
-    if size == 16:
-        # At favicon scale the generated illustration is deliberately reduced to
-        # the same core grammar instead of retaining unreadable micro-detail.
+    if size <= 32:
+        # A window/taskbar icon is its own asset, not a shrunken illustration.
+        # Draw the Recast "R" directly on a 16 px grid and scale it with nearest
+        # neighbour so both Windows-requested sizes keep a clean silhouette.
         icon = Image.new("RGB", (16, 16), DEEP[:3])
         draw = ImageDraw.Draw(icon)
-        draw.line([(8, 1), (14, 4), (14, 11), (8, 15), (2, 11), (2, 4), (8, 1)], fill=STEEL_BRIGHT[:3], width=1)
-        draw.polygon([(8, 3), (10, 5), (10, 10), (12, 12), (9, 12), (9, 14), (7, 14), (7, 12), (4, 12), (6, 10), (6, 5)], fill=TEXT[:3])
-        draw.arc((3, 6, 13, 11), 170, 355, fill=TEXT[:3], width=1)
-        draw.point((13, 8), fill=MOLTEN_BRIGHT[:3])
-        draw.line([(8, 9), (8, 14)], fill=MOLTEN[:3], width=1)
-        return icon
+        draw.line(
+            [(8, 0), (14, 3), (14, 12), (8, 15), (1, 12), (1, 3), (8, 0)],
+            fill=STEEL_BRIGHT[:3],
+            width=1,
+        )
+        draw.rectangle((4, 3, 5, 12), fill=TEXT[:3])
+        draw.rectangle((6, 3, 9, 4), fill=TEXT[:3])
+        draw.rectangle((9, 4, 10, 7), fill=TEXT[:3])
+        draw.rectangle((6, 7, 9, 8), fill=TEXT[:3])
+        draw.rectangle((7, 9, 8, 10), fill=MOLTEN_BRIGHT[:3])
+        draw.rectangle((8, 10, 9, 11), fill=MOLTEN[:3])
+        draw.rectangle((9, 11, 10, 12), fill=MOLTEN[:3])
+        if size == 16:
+            return icon
+        return icon.resize((32, 32), Image.Resampling.NEAREST)
     icon = ImageOps.fit(source.convert("RGB"), (size, size), method=RESAMPLE)
     if size <= 64:
         icon = ImageEnhance.Contrast(icon).enhance(1.16)
@@ -197,21 +213,29 @@ def build_preview(
     cursor: tuple[float, float] = (0.0, 0.0),
 ) -> Image.Image:
     width, height = size
-    scene = ImageOps.fit(base, size, method=RESAMPLE).convert("RGBA")
+    # FancyMenu's image-background parallax grows one always-present composite
+    # before shifting it. Unlike separate image elements, this background
+    # remains the screen background while F11 rebuilds the title screen.
+    parallax_x, parallax_y = BACKGROUND_PARALLAX
+    expanded_size = (
+        round(width * (1.0 + parallax_x)),
+        round(height * (1.0 + parallax_y)),
+    )
+    expanded = ImageOps.fit(base, expanded_size, method=RESAMPLE).convert("RGBA")
+    offset_x = round(-cursor[0] * width * parallax_x / 2.0)
+    offset_y = round(-cursor[1] * height * parallax_y / 2.0)
+    origin = (
+        (width - expanded.width) // 2 + offset_x,
+        (height - expanded.height) // 2 + offset_y,
+    )
+    scene = Image.new("RGBA", size, DEEP)
+    scene.alpha_composite(expanded, origin)
 
     scale_x, scale_y = width / REFERENCE_SIZE[0], height / REFERENCE_SIZE[1]
-    for layer, layout, intensity in (
-        (mid, MID_LAYOUT, MID_INTENSITY),
-        (near, NEAR_LAYOUT, NEAR_INTENSITY),
-    ):
-        x, y, layer_width, layer_height = layout
-        shift_x = -cursor[0] * (REFERENCE_SIZE[0] / 2.0) * intensity[0] * PARALLAX_POSITION_MULTIPLIER
-        shift_y = -cursor[1] * (REFERENCE_SIZE[1] / 2.0) * intensity[1] * PARALLAX_POSITION_MULTIPLIER
-        layer_size = (round(layer_width * scale_x), round(layer_height * scale_y))
-        layer_offset = (round((x + shift_x) * scale_x), round((y + shift_y) * scale_y))
-        scene.alpha_composite(layer.resize(layer_size, RESAMPLE), layer_offset)
+    # Mid/near source planes remain archived. Runtime movement belongs only to
+    # the composite menu_background, so no decorative element can blink alone.
 
-    panel_box = (round(16 * scale_x), round(16 * scale_y), round(294 * scale_x), round(450 * scale_y))
+    panel_box = (round(16 * scale_x), round(16 * scale_y), round(294 * scale_x), round(400 * scale_y))
     panel_scaled = nine_slice_resize(
         panel,
         (panel_box[2], panel_box[3]),
@@ -229,7 +253,7 @@ def build_preview(
     font = ImageFont.truetype(str(font_path), font_size) if font_path.is_file() else ImageFont.load_default()
     small_font = ImageFont.truetype(str(font_path), small_font_size) if font_path.is_file() else ImageFont.load_default()
     draw = ImageDraw.Draw(scene)
-    draw.text((round(35 * scale_x), round(118 * scale_y)), "ИНДУСТРИЯ • ГОРОДА • КОСМОС", font=font, fill=TEXT)
+    draw.text((round(35 * scale_x), round(118 * scale_y)), "ИНДУСТРИЯ · ГОРОДА · КОСМОС", font=font, fill=TEXT)
 
     def draw_button(label: str, x: int, y: int, logical_width: int, state: str = "normal") -> None:
         position = (round(x * scale_x), round(y * scale_y))
@@ -252,13 +276,13 @@ def build_preview(
             fill=TEXT,
         )
 
-    labels = ["ОДИНОЧНАЯ ИГРА", "СЕТЕВАЯ ИГРА", "МОДИФИКАЦИИ", "НАСТРОЙКИ", "ВЫХОД"]
+    labels = ["ОДИНОЧНАЯ ИГРА", "СЕТЕВАЯ ИГРА", "МОДИФИКАЦИИ", "НАСТРОЙКИ", "ВЫЙТИ ИЗ ИГРЫ"]
     for index, label in enumerate(labels):
         draw_button(label, 34, 140 + index * 28, 226)
 
-    draw_button("РУКОВОДСТВО", 34, 286, 109)
+    draw_button("О СБОРКЕ", 34, 286, 109)
     draw_button("АВТОРЫ", 151, 286, 109)
-    draw_button("ЖУРНАЛ ИЗМЕНЕНИЙ", 34, 314, 226)
+    draw_button("ЧТО НОВОГО", 34, 314, 226)
 
     for x, glyph in ((34, "RU"), (62, "A")):
         position = (round(x * scale_x), round(346 * scale_y))
@@ -278,15 +302,8 @@ def build_preview(
             fill=TEXT,
         )
 
-    draw.text((round(94 * scale_x), round(353 * scale_y)), "ЯЗЫК • ДОСТУПНОСТЬ", font=small_font, fill=(190, 205, 216, 255))
-    draw.text((round(34 * scale_x), round(442 * scale_y)), "RECAST • IF-M10-MENU-0001", font=small_font, fill=(152, 162, 172, 255))
-
-    branding_y = height - max(10, round(7 * scale_y))
-    version = "Minecraft 1.20.1 / Forge 47.4.22"
-    copyright_text = "Copyright Mojang AB. Do not distribute!"
-    draw.text((round(2 * scale_x), branding_y), version, font=small_font, fill=(230, 233, 236, 255), anchor="ls")
-    copyright_box = draw.textbbox((0, 0), copyright_text, font=small_font)
-    draw.text((width - (copyright_box[2] - copyright_box[0]) - round(2 * scale_x), branding_y), copyright_text, font=small_font, fill=(230, 233, 236, 255), anchor="ls")
+    draw.text((round(94 * scale_x), round(353 * scale_y)), "ЯЗЫК · ДОСТУПНОСТЬ", font=small_font, fill=(190, 205, 216, 255))
+    draw.text((round(34 * scale_x), round(394 * scale_y)), "RECAST · FORGE 1.20.1", font=small_font, fill=(152, 162, 172, 255))
     return scene.convert("RGB")
 
 
@@ -300,7 +317,7 @@ def build_extremes_preview(
     compact: dict[str, Image.Image],
 ) -> Image.Image:
     sheet = Image.new("RGB", (1920, 1080), DEEP[:3])
-    states = [((-1.0, -1.0), "КУРСОР: ЛЕВЫЙ ВЕРХ"), ((1.0, -1.0), "КУРСОР: ПРАВЫЙ ВЕРХ"), ((-1.0, 1.0), "КУРСОР: ЛЕВЫЙ НИЗ"), ((1.0, 1.0), "КУРСОР: ПРАВЫЙ НИЗ")]
+    states = [((-1.0, -1.0), "КУРСОР · ЛЕВЫЙ ВЕРХ"), ((1.0, -1.0), "КУРСОР · ПРАВЫЙ ВЕРХ"), ((-1.0, 1.0), "КУРСОР · ЛЕВЫЙ НИЗ"), ((1.0, 1.0), "КУРСОР · ПРАВЫЙ НИЗ")]
     label_font_path = ROOT / "assets" / "fonts" / "Lato-Bold.ttf"
     label_font = ImageFont.truetype(str(label_font_path), 18) if label_font_path.is_file() else ImageFont.load_default()
     for index, (cursor, label) in enumerate(states):
@@ -322,7 +339,7 @@ def build_button_states_preview(buttons: dict[str, Image.Image], compact: dict[s
     title_font = ImageFont.truetype(str(font_path), 28) if font_path.is_file() else ImageFont.load_default()
     font = ImageFont.truetype(str(font_path), 22) if font_path.is_file() else ImageFont.load_default()
     small_font = ImageFont.truetype(str(font_path), 18) if font_path.is_file() else ImageFont.load_default()
-    draw.text((48, 28), "RECAST • СОСТОЯНИЯ КНОПОК", font=title_font, fill=TEXT)
+    draw.text((48, 28), "RECAST · СОСТОЯНИЯ КНОПОК", font=title_font, fill=TEXT)
     draw.text((48, 68), "Nine-slice: углы и направляющие сохраняют геометрию", font=small_font, fill=(152, 162, 172))
 
     labels = {"normal": "ОБЫЧНОЕ", "hover": "НАВЕДЕНИЕ", "inactive": "НЕАКТИВНО"}
@@ -340,6 +357,52 @@ def build_button_states_preview(buttons: dict[str, Image.Image], compact: dict[s
         draw.text((790 + (72 - (glyph_box[2] - glyph_box[0])) // 2, y + (72 - (glyph_box[3] - glyph_box[1])) // 2 - glyph_box[1]), glyph, font=font, fill=TEXT)
         draw.text((888, y + 23), labels[state], font=small_font, fill=(190, 205, 216))
     return sheet
+
+
+def build_loading_preview(logo: Image.Image, panel: Image.Image) -> Image.Image:
+    """Render the compact Drippy layout against the real frontier frame."""
+    background = Image.open(FM / "loading_frontier.png").convert("RGBA")
+    scene = ImageOps.fit(background, (1920, 1080), method=RESAMPLE)
+    scale_x, scale_y = 1920 / REFERENCE_SIZE[0], 1080 / REFERENCE_SIZE[1]
+
+    logo_size = (round(260 * scale_x), round(87 * scale_y))
+    logo_image = logo.resize(logo_size, RESAMPLE)
+    scene.alpha_composite(logo_image, ((1920 - logo_size[0]) // 2, round(18 * scale_y)))
+
+    panel_size = (round(520 * scale_x), round(96 * scale_y))
+    panel_image = nine_slice_resize(panel, panel_size, (12, 12), (round(12 * scale_x), round(12 * scale_y)))
+    panel_x = (1920 - panel_size[0]) // 2
+    panel_y = 1080 - round(116 * scale_y)
+    scene.alpha_composite(panel_image, (panel_x, panel_y))
+
+    font_path = ROOT / "assets" / "fonts" / "Lato-Bold.ttf"
+    title_font = ImageFont.truetype(str(font_path), 25) if font_path.is_file() else ImageFont.load_default()
+    body_font = ImageFont.truetype(str(font_path), 19) if font_path.is_file() else ImageFont.load_default()
+    small_font = ImageFont.truetype(str(font_path), 16) if font_path.is_file() else ImageFont.load_default()
+    draw = ImageDraw.Draw(scene)
+    text_x = panel_x + round(28 * scale_x)
+    draw.text((text_x, 1080 - round(103 * scale_y)), "ФРОНТИР НАЧИНАЕТСЯ С НАДЁЖНОГО ЛАГЕРЯ", font=title_font, fill=TEXT)
+    draw.text(
+        (text_x, 1080 - round(82 * scale_y)),
+        "Сначала обеспечьте воду, пищу, кров и карту района.\nМашины не исправят поселение без снабжения.",
+        font=body_font,
+        fill=TEXT,
+        spacing=3,
+    )
+
+    frame = Image.open(FM / "ui" / "loading_frame.png").convert("RGBA")
+    frame_size = (round(468 * scale_x), round(16 * scale_y))
+    frame_image = frame.resize(frame_size, RESAMPLE)
+    frame_x = (1920 - frame_size[0]) // 2
+    frame_y = 1080 - round(46 * scale_y)
+    scene.alpha_composite(frame_image, (frame_x, frame_y))
+    bar_x = (1920 - round(452 * scale_x)) // 2
+    bar_y = 1080 - round(42 * scale_y)
+    bar_width = round(452 * scale_x * 0.68)
+    draw.rectangle((bar_x, bar_y, bar_x + bar_width, bar_y + round(6 * scale_y)), fill=MOLTEN)
+    draw.text((bar_x, 1080 - round(31 * scale_y)), "Собираем производственные цепочки", font=small_font, fill=TEXT)
+    draw.text((bar_x + round(402 * scale_x), 1080 - round(31 * scale_y)), "68%", font=small_font, fill=TEXT)
+    return scene.convert("RGB")
 
 
 def main() -> int:
@@ -393,7 +456,10 @@ def main() -> int:
     button_states_preview = build_button_states_preview(buttons, compact)
     save(button_states_preview, PREVIEW / "recast_title_v2_button_states.png")
 
-    print(f"menu_visuals={len(products)} previews=3")
+    loading_preview = build_loading_preview(logo, panel)
+    save(loading_preview, PREVIEW / "recast_loading_frontier_compact.png")
+
+    print(f"menu_visuals={len(products)} previews=4")
     for path in sorted(products, key=lambda value: value.as_posix()):
         with Image.open(path) as image:
             print(f"  {path.relative_to(ROOT).as_posix()} {image.width}x{image.height} {image.mode}")

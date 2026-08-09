@@ -1,0 +1,81 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/marathon_v2",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.marathon.intro",
+      "old_engine_id": "3073000000000001",
+      "new_alias": "if.quest.v2.marathon.intro",
+      "new_engine_id": "3073000000000001",
+      "policy": "carry",
+      "reason": "Вводная осталась добровольным справочником сравнения и получила единый порядок принятия решения.",
+      "evidence": [
+        "authoring/quests/73_marathon_choices.json",
+        "authoring/questbook_v2/73_marathon_choices.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.marathon.energy",
+      "old_engine_id": "3073000000000002",
+      "new_alias": "if.quest.v2.marathon.energy",
+      "new_engine_id": "3073000000000002",
+      "policy": "carry",
+      "reason": "Сравнение энергетических путей сохранило прежнюю способность и стало учитывать полный топливный цикл.",
+      "evidence": [
+        "authoring/quests/73_marathon_choices.json",
+        "authoring/questbook_v2/73_marathon_choices.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.marathon.logistics",
+      "old_engine_id": "3073000000000003",
+      "new_alias": "if.quest.v2.marathon.logistics",
+      "new_engine_id": "3073000000000003",
+      "policy": "carry",
+      "reason": "Сравнение транспорта сохранило прежний смысл и теперь разделяет последнюю милю, межцеховой путь и дальнюю магистраль.",
+      "evidence": [
+        "authoring/quests/73_marathon_choices.json",
+        "authoring/questbook_v2/73_marathon_choices.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.marathon.nuclear",
+      "old_engine_id": "3073000000000004",
+      "new_alias": "if.quest.v2.marathon.nuclear",
+      "new_engine_id": "3073000000000004",
+      "policy": "carry",
+      "reason": "Сравнение гражданского и канального подходов осталось справочным и получило явные критерии безопасности и масштаба.",
+      "evidence": [
+        "authoring/quests/73_marathon_choices.json",
+        "authoring/questbook_v2/73_marathon_choices.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.marathon.space",
+      "old_engine_id": "3073000000000005",
+      "new_alias": "if.quest.v2.marathon.space",
+      "new_engine_id": "3073000000000005",
+      "policy": "carry",
+      "reason": "Выбор между готовой ракетой и проектируемым двигателем сохранил прежнюю роль и стал объясняться через цель проекта.",
+      "evidence": [
+        "authoring/quests/73_marathon_choices.json",
+        "authoring/questbook_v2/73_marathon_choices.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.marathon.finale",
+      "old_engine_id": "3073000000000006",
+      "new_alias": "if.quest.v2.marathon.finale",
+      "new_engine_id": "3073000000000006",
+      "policy": "carry",
+      "reason": "Финальная памятка сохранила сравнение мегапроекта и колониального наследия без добавления нового условия победы.",
+      "evidence": [
+        "authoring/quests/73_marathon_choices.json",
+        "authoring/questbook_v2/73_marathon_choices.json"
+      ]
+    }
+  ]
+}

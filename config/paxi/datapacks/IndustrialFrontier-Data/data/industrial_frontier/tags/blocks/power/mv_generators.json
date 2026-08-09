@@ -1,0 +1,8 @@
+{
+  "__comment": "Блочная сторона набора источников MV для проверки установленной и открытой машины.",
+  "replace": false,
+  "values": [
+    "gtceu:mv_steam_turbine",
+    "gtceu:mv_gas_turbine"
+  ]
+}

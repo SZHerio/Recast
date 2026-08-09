@@ -2,5 +2,21 @@
   "pack": {
     "pack_format": 15,
     "description": "Recast — русский интерфейс, книга заданий и визуальная система M9"
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "immersivepetroleum",
+        "path": "lang/ru_ru\\.json"
+      },
+      {
+        "namespace": "lightmanscurrency",
+        "path": "lightmanscurrency/model_variants/.*/biomeswevegone/.*"
+      },
+      {
+        "namespace": "lightmanscurrency",
+        "path": "lightmanscurrency/model_variants/.*/quark/.*"
+      }
+    ]
   }
 }

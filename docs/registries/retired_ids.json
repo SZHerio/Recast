@@ -1,5 +1,3410 @@
 {
-  "schema_version": 1,
+  "$schema": "../../authoring/schemas/retired_ids.schema.json",
+  "schema_version": 2,
   "namespace": "industrial_frontier",
-  "retired": []
+  "retired": [
+    {
+      "engine_id": "2023000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.workshop",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "successor_alias": "if.chapter.v2.control",
+      "reason_ru": "Старая глава мастерской объединена с главой управления и давления; её прежний ID больше не обозначает активную главу.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/questbook_v2/23_control_pressure.json"
+      ]
+    },
+    {
+      "engine_id": "3000000000000001",
+      "kind": "quest",
+      "old_alias": "if.quest.start.welcome",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.onboarding.welcome",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/00_start_here.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3000000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.start.wood_tag",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.logs",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/00_start_here.snbt"
+      ],
+      "reason_ru": "Добыча древесины перенесена из введения в P0 и требует новой предметной проверки."
+    },
+    {
+      "engine_id": "3000000000000007",
+      "kind": "quest",
+      "old_alias": "if.quest.start.next",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.onboarding.help",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/00_start_here.snbt"
+      ],
+      "reason_ru": "Старый общий переход заменён справочным узлом; его следует прочитать заново."
+    },
+    {
+      "engine_id": "3010000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p0.camp",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.crafting_table",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/10_p0_expedition.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3010000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p0.prospect",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.prospect",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/10_p0_expedition.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3010000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p0.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/10_p0_expedition.snbt"
+      ],
+      "reason_ru": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам."
+    },
+    {
+      "engine_id": "3011000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.p1.stress",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.stress",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3011000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p1.machine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.mill",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3011000000000007",
+      "kind": "quest",
+      "old_alias": "if.quest.p1.press",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.press",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3011000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p1.buffer",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.line",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3011000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p1.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам."
+    },
+    {
+      "engine_id": "3012000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p2.boiler",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.steam_ready",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3012000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.p2.steam_machine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.steam_machine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3012000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p2.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам."
+    },
+    {
+      "engine_id": "3013000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.p3.generator",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.generator",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3013000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p3.cable",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.cable",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3013000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.p3.buffer",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.buffer",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3013000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p3.machine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.first_machine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3013000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p3.line",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.line",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3013000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p3.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам."
+    },
+    {
+      "engine_id": "3014000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.raw_water",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.raw_water",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.treatment",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.distilled_water",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.sulfur",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.sulfur",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.nitrogen",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.nitrogen",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000007",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.chlorine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.chlorine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.fertiliser",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.fertiliser",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.kitchen_manual",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.kitchen_manual",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000010",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.kitchen_batch",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.kitchen_batch",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000011",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.rations",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.rations",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000012",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.contract",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.contract",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3014000000000013",
+      "kind": "quest",
+      "old_alias": "if.quest.p4.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам."
+    },
+    {
+      "engine_id": "3015000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.bulk_processing",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.bulk_processing",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.ae2_entry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_storage",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.ae2_channels",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_channels",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.ae2_patterns",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_patterns",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.ae2_autocraft",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_autocraft",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.freight_rail",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.freight_rail",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.water_route",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.water_route",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000011",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.last_mile",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.last_mile",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000012",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.reserve",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.reserve",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000013",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.contracts",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.contracts",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3015000000000014",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.balance",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам."
+    },
+    {
+      "engine_id": "3016000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.materials",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.materials",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.alloys",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.alloys",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.purification",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.purification",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.enrichment",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.enrichment",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.dosimetry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.dosimetry",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.reactor",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.reactor",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000010",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.heat_loop",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.heat_loop",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000011",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.turbine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.turbine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000012",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.spent_fuel",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.reprocessing",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3016000000000014",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.city_plant",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам."
+    },
+    {
+      "engine_id": "3017000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.protected_zone",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.protected_zone",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена физическим размещением границы защищённой зоны."
+    },
+    {
+      "engine_id": "3017000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.purex",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.strategic_process",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Объяснение PUREX заменено взаимодействием с установкой и реальным выходом нептуния."
+    },
+    {
+      "engine_id": "3017000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.radiation_model",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.radiation_control",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Теоретическая галочка стала проверкой дозиметра и отдельной тары для отхода."
+    },
+    {
+      "engine_id": "3017000000000007",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.strategic_charge",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.strategic_rules",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново."
+    },
+    {
+      "engine_id": "3017000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.domain_links",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.shared_materials",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Общая справка заменена проверяемым материальным соединением двух программ."
+    },
+    {
+      "engine_id": "3017000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.clearances",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.protected_zone",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Контроль доступа включён в физическую защищённую зону и требует новой приёмки."
+    },
+    {
+      "engine_id": "3017000000000010",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.counterintel",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.strategic_rules",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново."
+    },
+    {
+      "engine_id": "3017000000000011",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.rocket_materials",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.shared_materials",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Ракетные материалы объединены с общим запасом HBM и космической программы."
+    },
+    {
+      "engine_id": "3017000000000012",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.rocket_fuel",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.rocket_fuel",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена отдельными проверками топлива и жидкого кислорода."
+    },
+    {
+      "engine_id": "3017000000000013",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.rocket_electronics",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.shared_electronics",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Ракетная электроника стала общей проверкой схемы EV и маршрутного чипа."
+    },
+    {
+      "engine_id": "3017000000000014",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.spaceport",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.spaceport",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Предметный пропуск заменён размещением площадки и взаимодействием со сканером."
+    },
+    {
+      "engine_id": "3017000000000015",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.suit_oxygen",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.life_support",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Новая задача требует полный комплект скафандра вместо одного общего предметного маркера."
+    },
+    {
+      "engine_id": "3017000000000016",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.first_launch",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.first_launch",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Ручная галочка первого запуска заменена проверяемым посещением лунного измерения."
+    },
+    {
+      "engine_id": "3017000000000017",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.sealing_base",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.colony_habitat",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Герметизация перенесена в постоянный колониальный контур со шлюзом и кислородом."
+    },
+    {
+      "engine_id": "3017000000000018",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.return_flow",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.return_sample",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Старая галочка возврата заменена контрольным лунным образцом без ложной автоматизации."
+    },
+    {
+      "engine_id": "3017000000000019",
+      "kind": "quest",
+      "old_alias": "if.quest.p7.planetary",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.specialisation",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново."
+    },
+    {
+      "engine_id": "3018000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.specialisation",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.specialisation",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново."
+    },
+    {
+      "engine_id": "3018000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.flow",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.automated_flow",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена ручной приёмкой двух рейсов через интерфейс сканера."
+    },
+    {
+      "engine_id": "3018000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.power_beam",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.energy_reserve",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Наличие приёмника расширено размещением, объёмом энергии и ручным испытанием резерва."
+    },
+    {
+      "engine_id": "3018000000000007",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.elevator",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.elevator",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Экономическая справка заменена проверяемым входным блоком добровольного лифта."
+    },
+    {
+      "engine_id": "3018000000000009",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.target_chamber",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.target_chamber",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена физическим размещением контроллера мишенной камеры."
+    },
+    {
+      "engine_id": "3018000000000010",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.fusion_split",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.fusion_material",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Теоретическое разделение ролей заменено реактором LuV и реальным коперницием-291."
+    },
+    {
+      "engine_id": "3018000000000011",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.plasma_forge",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.plasma_forge",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена предметной проверкой плазменной кузницы HBM."
+    },
+    {
+      "engine_id": "3018000000000013",
+      "kind": "quest",
+      "old_alias": "if.quest.p8.diagnosis",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.diagnostics",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Справочная галочка заменена ручной приёмкой раннего сигнала через центральный накопитель."
+    },
+    {
+      "engine_id": "3019000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.p9.swarm_upkeep",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.maintenance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Общая справка об износе стала ручной приёмкой полного цикла обслуживания."
+    },
+    {
+      "engine_id": "3019000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.p9.colony_life",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.colony_autonomy",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Справка о снабжении расширена ручным аудитом жизнеобеспечения и местного ремонта."
+    },
+    {
+      "engine_id": "3019000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.p9.colony_industry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.local_industry",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена сборщиком IV и ручной приёмкой местной запасной части."
+    },
+    {
+      "engine_id": "3019000000000007",
+      "kind": "quest",
+      "old_alias": "if.quest.p9.closed_loop",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.closed_loop",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена трёхцикловой ручной сверкой материального баланса."
+    },
+    {
+      "engine_id": "3019000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.p9.resolution",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.final_choice",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Справочный финал заменён честным выбором любого одного завершённого мегапроекта."
+    },
+    {
+      "engine_id": "3020000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.storage.connector",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.connector",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Старый предметный квест не подтверждал установку связующего блока, поэтому новая практическая задача не закрывается автоматически."
+    },
+    {
+      "engine_id": "3020000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.storage.terminal",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.terminal",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Раньше проверялось только наличие терминала, а новая версия требует открыть подключённый общий список."
+    },
+    {
+      "engine_id": "3020000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.storage.cables",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.cables",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Старая галочка не доказывала получение и установку кабеля, поэтому удалённую зону нужно принять заново."
+    },
+    {
+      "engine_id": "3020000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.storage.crafting",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.crafting",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Старая галочка не подтверждала получение и открытие терминала сборки, поэтому практическая задача получила новый ID."
+    },
+    {
+      "engine_id": "3020000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.storage.level",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.level",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Старая галочка не подтверждала установленный эмиттер уровня и поэтому не переносит завершение новой практической задачи."
+    },
+    {
+      "engine_id": "3021000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.defence.melee",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.melee",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3021000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.defence.firearms",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.firearms",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3021000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.defence.structures",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.reconnaissance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3021000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.defence.cannons",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.artillery",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3022000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.settlement.townhall",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.townhall",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Старая галочка не подтверждала размещение ратуши; новая задача требует поставить блок и открыть его управление."
+    },
+    {
+      "engine_id": "3022000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.settlement.builder",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.builder",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена проверяемыми размещением и открытием хижины строителя, поэтому прежнее завершение нельзя переносить автоматически."
+    },
+    {
+      "engine_id": "3022000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.settlement.supply",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.supply",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Новая задача проверяет реальные блоки склада и курьера вместо обещания наладить снабжение обычной галочкой."
+    },
+    {
+      "engine_id": "3022000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.settlement.guards",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.guards",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Новая ветка требует разместить и открыть башню и казарму; прежняя описательная галочка этой способности не подтверждала."
+    },
+    {
+      "engine_id": "3023000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.workshop.foundry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.steam_workshop",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Старая галочка не подтверждала получение литейной, сепаратора и их включение в рабочий паровой цех."
+    },
+    {
+      "engine_id": "3023000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.workshop.pressure",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.pressure_chamber",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Новая версия требует безопасный контур, рабочую камеру и реальный продукт вместо чтения общей памятки."
+    },
+    {
+      "engine_id": "3023000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.workshop.lithography",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.lithography",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Старая галочка не доказывала изготовление и повторную проверку интегрального элемента."
+    },
+    {
+      "engine_id": "3023000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.workshop.assembly",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.component_assembly",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Новая задача требует рабочую многоблочную линию и полезный заказ, чего прежняя справочная отметка не проверяла."
+    },
+    {
+      "engine_id": "3023000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.workshop.choice",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.acceptance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Старая развилка завершала необязательное чтение, а новая приёмка проверяет поведение единой производственной системы."
+    },
+    {
+      "engine_id": "3024000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.oil.survey",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.seismic_survey",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Старая галочка не подтверждала ни установленный прибор, ни проведённое измерение; новая задача проверяет размещение и использование сейсмического инструмента."
+    },
+    {
+      "engine_id": "3024000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.oil.distillation",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.distillation_tower",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Старая галочка заменена доступом к сформированной башне и отдельными задачами на реальные выходы: нафту, сернистый дизель, смазочную фракцию и битум."
+    },
+    {
+      "engine_id": "3024000000000004",
+      "kind": "quest",
+      "old_alias": "if.quest.oil.crusher",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.crusher",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Старая описательная задача обещала целую группу машин и ранний обход технологий; новая проверяет только сформированную дробилку и закрепляет её гражданскую нишу без обхода стали и обогащения GregTech."
+    },
+    {
+      "engine_id": "3024000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.oil.plastic",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.plastic",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Старая галочка лишь заявляла пластик; новая задача требует получить полиэтиленовую пластину после нафтовой ветви и честно сообщает о необходимости проверить точный межмодовый вход в JEI."
+    },
+    {
+      "engine_id": "3025000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.factions.bases",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.factions.first_base",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/25_factions_live.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3046000000000003",
+      "kind": "quest",
+      "old_alias": "if.quest.ops.ordnance",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.operations.ordnance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/46_operations_and_defence.snbt"
+      ],
+      "reason_ru": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства."
+    },
+    {
+      "engine_id": "3070000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.passports.entity_form_id",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.entity_form_id",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Новая задача требует два конкретных образца и различает вещество, форму и предмет; прежнее завершение нельзя переносить автоматически."
+    },
+    {
+      "engine_id": "3070000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.passports.accepted_inputs",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.accepted_inputs",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Новое условие использует проверенный набор железных самородков и требует реальный предмет вместо прежней общей отметки."
+    },
+    {
+      "engine_id": "3070000000000006",
+      "kind": "quest",
+      "old_alias": "if.quest.passports.create_gt_contract",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.create_gt_contract",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Старая задача проверяла посторонний предмет; новая честно требует общий латунный выход правильного рецепта меди и цинка."
+    },
+    {
+      "engine_id": "3070000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.passports.safe_equivalence",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.safe_equivalence",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Обновлённая задача требует совместимую железную пластину и учит проверять цену обратного превращения."
+    },
+    {
+      "engine_id": "307000000000000A",
+      "kind": "quest",
+      "old_alias": "if.quest.passports.signoff",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.signoff",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Итог теперь включает практические образцы, схемы сплавов и полимеров, поэтому старой отметки недостаточно."
+    },
+    {
+      "engine_id": "3071000000000010",
+      "kind": "quest",
+      "old_alias": "if.quest.elements.index",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.elements.index",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/71_academy_of_elements.snbt"
+      ],
+      "reason_ru": "Итоговый указатель расширен реальными платиновыми и редкоземельными цепочками GTEC и связан с паспортами материалов."
+    },
+    {
+      "engine_id": "4000000000000001",
+      "kind": "task",
+      "old_alias": "if.task.start.welcome.dimension",
+      "parent_old_engine_id": "3000000000000001",
+      "parent_old_alias": "if.quest.start.welcome",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.onboarding.welcome",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/00_start_here.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4000000000000005",
+      "kind": "task",
+      "old_alias": "if.task.start.wood_tag.items",
+      "parent_old_engine_id": "3000000000000005",
+      "parent_old_alias": "if.quest.start.wood_tag",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.logs",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/00_start_here.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4000000000000007",
+      "kind": "task",
+      "old_alias": "if.task.start.next.check",
+      "parent_old_engine_id": "3000000000000007",
+      "parent_old_alias": "if.quest.start.next",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.onboarding.help",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/00_start_here.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4010000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p0.camp",
+      "parent_old_engine_id": "3010000000000003",
+      "parent_old_alias": "if.quest.p0.camp",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.crafting_table",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/10_p0_expedition.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4010000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p0.prospect",
+      "parent_old_engine_id": "3010000000000006",
+      "parent_old_alias": "if.quest.p0.prospect",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.prospect",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/10_p0_expedition.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4010000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p0.exit",
+      "parent_old_engine_id": "3010000000000008",
+      "parent_old_alias": "if.quest.p0.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p0.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/10_p0_expedition.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4011000000000005",
+      "kind": "task",
+      "old_alias": "if.task.p1.stress",
+      "parent_old_engine_id": "3011000000000005",
+      "parent_old_alias": "if.quest.p1.stress",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.stress",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4011000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p1.mill",
+      "parent_old_engine_id": "3011000000000006",
+      "parent_old_alias": "if.quest.p1.machine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.mill",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4011000000000007",
+      "kind": "task",
+      "old_alias": "if.task.p1.press",
+      "parent_old_engine_id": "3011000000000007",
+      "parent_old_alias": "if.quest.p1.press",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.press",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4011000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p1.line",
+      "parent_old_engine_id": "3011000000000008",
+      "parent_old_alias": "if.quest.p1.buffer",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.line",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4011000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p1.exit",
+      "parent_old_engine_id": "3011000000000009",
+      "parent_old_alias": "if.quest.p1.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p1.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4012000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p2.boiler",
+      "parent_old_engine_id": "3012000000000003",
+      "parent_old_alias": "if.quest.p2.boiler",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.steam_ready",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4012000000000004",
+      "kind": "task",
+      "old_alias": "if.task.p2.steam_machine",
+      "parent_old_engine_id": "3012000000000004",
+      "parent_old_alias": "if.quest.p2.steam_machine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.steam_machine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4012000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p2.exit",
+      "parent_old_engine_id": "3012000000000009",
+      "parent_old_alias": "if.quest.p2.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4013000000000002",
+      "kind": "task",
+      "old_alias": "if.task.p3.generator",
+      "parent_old_engine_id": "3013000000000002",
+      "parent_old_alias": "if.quest.p3.generator",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.generator",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4013000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p3.cable",
+      "parent_old_engine_id": "3013000000000003",
+      "parent_old_alias": "if.quest.p3.cable",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.cable",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4013000000000004",
+      "kind": "task",
+      "old_alias": "if.task.p3.buffer",
+      "parent_old_engine_id": "3013000000000004",
+      "parent_old_alias": "if.quest.p3.buffer",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.buffer",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4013000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p3.machine",
+      "parent_old_engine_id": "3013000000000006",
+      "parent_old_alias": "if.quest.p3.machine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.first_machine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4013000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p3.line",
+      "parent_old_engine_id": "3013000000000008",
+      "parent_old_alias": "if.quest.p3.line",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.line",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4013000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p3.exit",
+      "parent_old_engine_id": "3013000000000009",
+      "parent_old_alias": "if.quest.p3.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000002",
+      "kind": "task",
+      "old_alias": "if.task.p4.raw_water",
+      "parent_old_engine_id": "3014000000000002",
+      "parent_old_alias": "if.quest.p4.raw_water",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.raw_water",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p4.treatment",
+      "parent_old_engine_id": "3014000000000003",
+      "parent_old_alias": "if.quest.p4.treatment",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.distilled_water",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000005",
+      "kind": "task",
+      "old_alias": "if.task.p4.sulfur",
+      "parent_old_engine_id": "3014000000000005",
+      "parent_old_alias": "if.quest.p4.sulfur",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.sulfur",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p4.nitrogen",
+      "parent_old_engine_id": "3014000000000006",
+      "parent_old_alias": "if.quest.p4.nitrogen",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.nitrogen",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000007",
+      "kind": "task",
+      "old_alias": "if.task.p4.chlorine",
+      "parent_old_engine_id": "3014000000000007",
+      "parent_old_alias": "if.quest.p4.chlorine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.chlorine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p4.fertiliser",
+      "parent_old_engine_id": "3014000000000008",
+      "parent_old_alias": "if.quest.p4.fertiliser",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.fertiliser",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p4.kitchen_manual",
+      "parent_old_engine_id": "3014000000000009",
+      "parent_old_alias": "if.quest.p4.kitchen_manual",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.kitchen_manual",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000010",
+      "kind": "task",
+      "old_alias": "if.task.p4.kitchen_batch",
+      "parent_old_engine_id": "3014000000000010",
+      "parent_old_alias": "if.quest.p4.kitchen_batch",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.kitchen_batch",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000011",
+      "kind": "task",
+      "old_alias": "if.task.p4.rations",
+      "parent_old_engine_id": "3014000000000011",
+      "parent_old_alias": "if.quest.p4.rations",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.rations",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000012",
+      "kind": "task",
+      "old_alias": "if.task.p4.contract",
+      "parent_old_engine_id": "3014000000000012",
+      "parent_old_alias": "if.quest.p4.contract",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.contract",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4014000000000013",
+      "kind": "task",
+      "old_alias": "if.task.p4.exit",
+      "parent_old_engine_id": "3014000000000013",
+      "parent_old_alias": "if.quest.p4.exit",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p4.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/14_p4_chemical_city.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000002",
+      "kind": "task",
+      "old_alias": "if.task.p5.bulk_processing",
+      "parent_old_engine_id": "3015000000000002",
+      "parent_old_alias": "if.quest.p5.bulk_processing",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.bulk_processing",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p5.ae2_entry",
+      "parent_old_engine_id": "3015000000000003",
+      "parent_old_alias": "if.quest.p5.ae2_entry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_storage",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000004",
+      "kind": "task",
+      "old_alias": "if.task.p5.ae2_channels",
+      "parent_old_engine_id": "3015000000000004",
+      "parent_old_alias": "if.quest.p5.ae2_channels",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_channels",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000005",
+      "kind": "task",
+      "old_alias": "if.task.p5.ae2_patterns",
+      "parent_old_engine_id": "3015000000000005",
+      "parent_old_alias": "if.quest.p5.ae2_patterns",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_patterns",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p5.ae2_autocraft",
+      "parent_old_engine_id": "3015000000000006",
+      "parent_old_alias": "if.quest.p5.ae2_autocraft",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_autocraft",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p5.freight_rail",
+      "parent_old_engine_id": "3015000000000008",
+      "parent_old_alias": "if.quest.p5.freight_rail",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.freight_rail",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p5.water_route",
+      "parent_old_engine_id": "3015000000000009",
+      "parent_old_alias": "if.quest.p5.water_route",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.water_route",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000011",
+      "kind": "task",
+      "old_alias": "if.task.p5.last_mile",
+      "parent_old_engine_id": "3015000000000011",
+      "parent_old_alias": "if.quest.p5.last_mile",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.last_mile",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000012",
+      "kind": "task",
+      "old_alias": "if.task.p5.reserve",
+      "parent_old_engine_id": "3015000000000012",
+      "parent_old_alias": "if.quest.p5.reserve",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.reserve",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000013",
+      "kind": "task",
+      "old_alias": "if.task.p5.contracts",
+      "parent_old_engine_id": "3015000000000013",
+      "parent_old_alias": "if.quest.p5.contracts",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.contracts",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4015000000000014",
+      "kind": "task",
+      "old_alias": "if.task.p5.balance",
+      "parent_old_engine_id": "3015000000000014",
+      "parent_old_alias": "if.quest.p5.balance",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000002",
+      "kind": "task",
+      "old_alias": "if.task.p6.materials",
+      "parent_old_engine_id": "3016000000000002",
+      "parent_old_alias": "if.quest.p6.materials",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.materials",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000004",
+      "kind": "task",
+      "old_alias": "if.task.p6.alloys",
+      "parent_old_engine_id": "3016000000000004",
+      "parent_old_alias": "if.quest.p6.alloys",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.alloys",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000005",
+      "kind": "task",
+      "old_alias": "if.task.p6.purification",
+      "parent_old_engine_id": "3016000000000005",
+      "parent_old_alias": "if.quest.p6.purification",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.purification",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p6.enrichment",
+      "parent_old_engine_id": "3016000000000006",
+      "parent_old_alias": "if.quest.p6.enrichment",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.enrichment",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p6.dosimetry",
+      "parent_old_engine_id": "3016000000000008",
+      "parent_old_alias": "if.quest.p6.dosimetry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.dosimetry",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p6.reactor",
+      "parent_old_engine_id": "3016000000000009",
+      "parent_old_alias": "if.quest.p6.reactor",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.reactor",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000010",
+      "kind": "task",
+      "old_alias": "if.task.p6.heat_loop",
+      "parent_old_engine_id": "3016000000000010",
+      "parent_old_alias": "if.quest.p6.heat_loop",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.heat_loop",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000011",
+      "kind": "task",
+      "old_alias": "if.task.p6.turbine",
+      "parent_old_engine_id": "3016000000000011",
+      "parent_old_alias": "if.quest.p6.turbine",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.turbine",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000012",
+      "kind": "task",
+      "old_alias": "if.task.p6.spent_fuel",
+      "parent_old_engine_id": "3016000000000012",
+      "parent_old_alias": "if.quest.p6.spent_fuel",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.reprocessing",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4016000000000014",
+      "kind": "task",
+      "old_alias": "if.task.p6.city_plant",
+      "parent_old_engine_id": "3016000000000014",
+      "parent_old_alias": "if.quest.p6.city_plant",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.commissioning",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p7.protected_zone",
+      "parent_old_engine_id": "3017000000000003",
+      "parent_old_alias": "if.quest.p7.protected_zone",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.protected_zone",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000005",
+      "kind": "task",
+      "old_alias": "if.task.p7.purex",
+      "parent_old_engine_id": "3017000000000005",
+      "parent_old_alias": "if.quest.p7.purex",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.strategic_process",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p7.radiation_model",
+      "parent_old_engine_id": "3017000000000006",
+      "parent_old_alias": "if.quest.p7.radiation_model",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.radiation_control",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000007",
+      "kind": "task",
+      "old_alias": "if.task.p7.strategic_charge",
+      "parent_old_engine_id": "3017000000000007",
+      "parent_old_alias": "if.quest.p7.strategic_charge",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.strategic_rules",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p7.domain_links",
+      "parent_old_engine_id": "3017000000000008",
+      "parent_old_alias": "if.quest.p7.domain_links",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.shared_materials",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p7.clearances",
+      "parent_old_engine_id": "3017000000000009",
+      "parent_old_alias": "if.quest.p7.clearances",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.protected_zone",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000010",
+      "kind": "task",
+      "old_alias": "if.task.p7.counterintel",
+      "parent_old_engine_id": "3017000000000010",
+      "parent_old_alias": "if.quest.p7.counterintel",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.strategic_rules",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000011",
+      "kind": "task",
+      "old_alias": "if.task.p7.rocket_materials",
+      "parent_old_engine_id": "3017000000000011",
+      "parent_old_alias": "if.quest.p7.rocket_materials",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.shared_materials",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000012",
+      "kind": "task",
+      "old_alias": "if.task.p7.rocket_fuel",
+      "parent_old_engine_id": "3017000000000012",
+      "parent_old_alias": "if.quest.p7.rocket_fuel",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.rocket_fuel",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000013",
+      "kind": "task",
+      "old_alias": "if.task.p7.rocket_electronics",
+      "parent_old_engine_id": "3017000000000013",
+      "parent_old_alias": "if.quest.p7.rocket_electronics",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.shared_electronics",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000014",
+      "kind": "task",
+      "old_alias": "if.task.p7.spaceport",
+      "parent_old_engine_id": "3017000000000014",
+      "parent_old_alias": "if.quest.p7.spaceport",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.spaceport",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000015",
+      "kind": "task",
+      "old_alias": "if.task.p7.suit_oxygen",
+      "parent_old_engine_id": "3017000000000015",
+      "parent_old_alias": "if.quest.p7.suit_oxygen",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.life_support",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000016",
+      "kind": "task",
+      "old_alias": "if.task.p7.first_launch",
+      "parent_old_engine_id": "3017000000000016",
+      "parent_old_alias": "if.quest.p7.first_launch",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.first_launch",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000017",
+      "kind": "task",
+      "old_alias": "if.task.p7.sealing_base",
+      "parent_old_engine_id": "3017000000000017",
+      "parent_old_alias": "if.quest.p7.sealing_base",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.colony_habitat",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000018",
+      "kind": "task",
+      "old_alias": "if.task.p7.return_flow",
+      "parent_old_engine_id": "3017000000000018",
+      "parent_old_alias": "if.quest.p7.return_flow",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p7.return_sample",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4017000000000019",
+      "kind": "task",
+      "old_alias": "if.task.p7.planetary",
+      "parent_old_engine_id": "3017000000000019",
+      "parent_old_alias": "if.quest.p7.planetary",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.specialisation",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000002",
+      "kind": "task",
+      "old_alias": "if.task.p8.specialisation",
+      "parent_old_engine_id": "3018000000000002",
+      "parent_old_alias": "if.quest.p8.specialisation",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.specialisation",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p8.flow",
+      "parent_old_engine_id": "3018000000000003",
+      "parent_old_alias": "if.quest.p8.flow",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.automated_flow",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000006",
+      "kind": "task",
+      "old_alias": "if.task.p8.power_beam",
+      "parent_old_engine_id": "3018000000000006",
+      "parent_old_alias": "if.quest.p8.power_beam",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.energy_reserve",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000007",
+      "kind": "task",
+      "old_alias": "if.task.p8.elevator",
+      "parent_old_engine_id": "3018000000000007",
+      "parent_old_alias": "if.quest.p8.elevator",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.elevator",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000009",
+      "kind": "task",
+      "old_alias": "if.task.p8.target_chamber",
+      "parent_old_engine_id": "3018000000000009",
+      "parent_old_alias": "if.quest.p8.target_chamber",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.target_chamber",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000010",
+      "kind": "task",
+      "old_alias": "if.task.p8.fusion_split",
+      "parent_old_engine_id": "3018000000000010",
+      "parent_old_alias": "if.quest.p8.fusion_split",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.fusion_material",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000011",
+      "kind": "task",
+      "old_alias": "if.task.p8.plasma_forge",
+      "parent_old_engine_id": "3018000000000011",
+      "parent_old_alias": "if.quest.p8.plasma_forge",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.plasma_forge",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4018000000000013",
+      "kind": "task",
+      "old_alias": "if.task.p8.diagnosis",
+      "parent_old_engine_id": "3018000000000013",
+      "parent_old_alias": "if.quest.p8.diagnosis",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p8.diagnostics",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/18_p8_orbital_network.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4019000000000003",
+      "kind": "task",
+      "old_alias": "if.task.p9.swarm_upkeep",
+      "parent_old_engine_id": "3019000000000003",
+      "parent_old_alias": "if.quest.p9.swarm_upkeep",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.maintenance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4019000000000004",
+      "kind": "task",
+      "old_alias": "if.task.p9.colony_life",
+      "parent_old_engine_id": "3019000000000004",
+      "parent_old_alias": "if.quest.p9.colony_life",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.colony_autonomy",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4019000000000005",
+      "kind": "task",
+      "old_alias": "if.task.p9.colony_industry",
+      "parent_old_engine_id": "3019000000000005",
+      "parent_old_alias": "if.quest.p9.colony_industry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.local_industry",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4019000000000007",
+      "kind": "task",
+      "old_alias": "if.task.p9.closed_loop",
+      "parent_old_engine_id": "3019000000000007",
+      "parent_old_alias": "if.quest.p9.closed_loop",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.closed_loop",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4019000000000008",
+      "kind": "task",
+      "old_alias": "if.task.p9.resolution",
+      "parent_old_engine_id": "3019000000000008",
+      "parent_old_alias": "if.quest.p9.resolution",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p9.final_choice",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p7_p9_aliases.json",
+        "config/ftbquests/quests/chapters/19_p9_finale.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4020000000000002",
+      "kind": "task",
+      "old_alias": "if.task.storage.connector",
+      "parent_old_engine_id": "3020000000000002",
+      "parent_old_alias": "if.quest.storage.connector",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.connector",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4020000000000003",
+      "kind": "task",
+      "old_alias": "if.task.storage.terminal",
+      "parent_old_engine_id": "3020000000000003",
+      "parent_old_alias": "if.quest.storage.terminal",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.terminal",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4020000000000004",
+      "kind": "task",
+      "old_alias": "if.task.storage.cables",
+      "parent_old_engine_id": "3020000000000004",
+      "parent_old_alias": "if.quest.storage.cables",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.cables",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4020000000000005",
+      "kind": "task",
+      "old_alias": "if.task.storage.crafting",
+      "parent_old_engine_id": "3020000000000005",
+      "parent_old_alias": "if.quest.storage.crafting",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.crafting",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4020000000000006",
+      "kind": "task",
+      "old_alias": "if.task.storage.level",
+      "parent_old_engine_id": "3020000000000006",
+      "parent_old_alias": "if.quest.storage.level",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.storage.level",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr11_storage_help.json",
+        "config/ftbquests/quests/chapters/20_storage_order.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4021000000000002",
+      "kind": "task",
+      "old_alias": "if.task.defence.melee",
+      "parent_old_engine_id": "3021000000000002",
+      "parent_old_alias": "if.quest.defence.melee",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.melee",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4021000000000003",
+      "kind": "task",
+      "old_alias": "if.task.defence.firearms",
+      "parent_old_engine_id": "3021000000000003",
+      "parent_old_alias": "if.quest.defence.firearms",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.firearms",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4021000000000004",
+      "kind": "task",
+      "old_alias": "if.task.defence.structures",
+      "parent_old_engine_id": "3021000000000004",
+      "parent_old_alias": "if.quest.defence.structures",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.reconnaissance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4021000000000005",
+      "kind": "task",
+      "old_alias": "if.task.defence.cannons",
+      "parent_old_engine_id": "3021000000000005",
+      "parent_old_alias": "if.quest.defence.cannons",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.defence.artillery",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/21_defence_gear.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4022000000000002",
+      "kind": "task",
+      "old_alias": "if.task.settlement.townhall",
+      "parent_old_engine_id": "3022000000000002",
+      "parent_old_alias": "if.quest.settlement.townhall",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.townhall",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4022000000000003",
+      "kind": "task",
+      "old_alias": "if.task.settlement.builder",
+      "parent_old_engine_id": "3022000000000003",
+      "parent_old_alias": "if.quest.settlement.builder",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.builder",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4022000000000004",
+      "kind": "task",
+      "old_alias": "if.task.settlement.supply",
+      "parent_old_engine_id": "3022000000000004",
+      "parent_old_alias": "if.quest.settlement.supply",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.supply",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4022000000000005",
+      "kind": "task",
+      "old_alias": "if.task.settlement.guards",
+      "parent_old_engine_id": "3022000000000005",
+      "parent_old_alias": "if.quest.settlement.guards",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.settlement.guards",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/settlement_v2.json",
+        "config/ftbquests/quests/chapters/22_settlement.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4023000000000002",
+      "kind": "task",
+      "old_alias": "if.task.workshop.foundry",
+      "parent_old_engine_id": "3023000000000002",
+      "parent_old_alias": "if.quest.workshop.foundry",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.steam_workshop",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4023000000000003",
+      "kind": "task",
+      "old_alias": "if.task.workshop.pressure",
+      "parent_old_engine_id": "3023000000000003",
+      "parent_old_alias": "if.quest.workshop.pressure",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.pressure_chamber",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4023000000000004",
+      "kind": "task",
+      "old_alias": "if.task.workshop.lithography",
+      "parent_old_engine_id": "3023000000000004",
+      "parent_old_alias": "if.quest.workshop.lithography",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.lithography",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4023000000000005",
+      "kind": "task",
+      "old_alias": "if.task.workshop.assembly",
+      "parent_old_engine_id": "3023000000000005",
+      "parent_old_alias": "if.quest.workshop.assembly",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.component_assembly",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4023000000000006",
+      "kind": "task",
+      "old_alias": "if.task.workshop.choice",
+      "parent_old_engine_id": "3023000000000006",
+      "parent_old_alias": "if.quest.workshop.choice",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.control.acceptance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr10_control_pressure.json",
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4024000000000002",
+      "kind": "task",
+      "old_alias": "if.task.oil.survey",
+      "parent_old_engine_id": "3024000000000002",
+      "parent_old_alias": "if.quest.oil.survey",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.seismic_survey",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4024000000000003",
+      "kind": "task",
+      "old_alias": "if.task.oil.distillation",
+      "parent_old_engine_id": "3024000000000003",
+      "parent_old_alias": "if.quest.oil.distillation",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.distillation_tower",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4024000000000004",
+      "kind": "task",
+      "old_alias": "if.task.oil.crusher",
+      "parent_old_engine_id": "3024000000000004",
+      "parent_old_alias": "if.quest.oil.crusher",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.crusher",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4024000000000005",
+      "kind": "task",
+      "old_alias": "if.task.oil.plastic",
+      "parent_old_engine_id": "3024000000000005",
+      "parent_old_alias": "if.quest.oil.plastic",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.oil.plastic",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/oil_ecology_v2.json",
+        "config/ftbquests/quests/chapters/24_oil_line.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4025000000000002",
+      "kind": "task",
+      "old_alias": "if.task.factions.bases",
+      "parent_old_engine_id": "3025000000000002",
+      "parent_old_alias": "if.quest.factions.bases",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.factions.first_base",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/25_factions_live.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4046000000000003",
+      "kind": "task",
+      "old_alias": "if.task.ops.ordnance",
+      "parent_old_engine_id": "3046000000000003",
+      "parent_old_alias": "if.quest.ops.ordnance",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.operations.ordnance",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/security_factions_aliases.json",
+        "config/ftbquests/quests/chapters/46_operations_and_defence.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4070000000000002",
+      "kind": "task",
+      "old_alias": "if.task.passports.entity_form_id.item",
+      "parent_old_engine_id": "3070000000000002",
+      "parent_old_alias": "if.quest.passports.entity_form_id",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.entity_form_id",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4070000000000005",
+      "kind": "task",
+      "old_alias": "if.task.passports.accepted_inputs.item",
+      "parent_old_engine_id": "3070000000000005",
+      "parent_old_alias": "if.quest.passports.accepted_inputs",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.accepted_inputs",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4070000000000006",
+      "kind": "task",
+      "old_alias": "if.task.passports.create_gt_contract.item",
+      "parent_old_engine_id": "3070000000000006",
+      "parent_old_alias": "if.quest.passports.create_gt_contract",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.create_gt_contract",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4070000000000008",
+      "kind": "task",
+      "old_alias": "if.task.passports.safe_equivalence.item",
+      "parent_old_engine_id": "3070000000000008",
+      "parent_old_alias": "if.quest.passports.safe_equivalence",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.safe_equivalence",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "407000000000000A",
+      "kind": "task",
+      "old_alias": "if.task.passports.signoff.check",
+      "parent_old_engine_id": "307000000000000A",
+      "parent_old_alias": "if.quest.passports.signoff",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.passports.signoff",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/70_material_passports.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "4071000000000010",
+      "kind": "task",
+      "old_alias": "if.task.elements.index",
+      "parent_old_engine_id": "3071000000000010",
+      "parent_old_alias": "if.quest.elements.index",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.elements.index",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "config/ftbquests/quests/chapters/71_academy_of_elements.snbt"
+      ],
+      "reason_ru": "Этот ID принадлежал старому доказательству или награде квеста, который в Quest Source v2 требует повторной проверки."
+    },
+    {
+      "engine_id": "3012000000000002",
+      "kind": "quest",
+      "old_alias": "if.quest.p2.carbon",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.carbon_feedstock",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "Старый квест проверял только точный обычный уголь. Новый преемник принимает допустимое семейство сырья и требует коксовую печь до продукта."
+    },
+    {
+      "engine_id": "4012000000000002",
+      "kind": "task",
+      "old_alias": "if.task.p2.carbon",
+      "parent_old_engine_id": "3012000000000002",
+      "parent_old_alias": "if.quest.p2.carbon",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p2.carbon_feedstock",
+      "evidence": [
+        "docs/registries/quest_qr0_proof_contracts.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt"
+      ],
+      "reason_ru": "Старое доказательство принимало только minecraft:coal и не подтверждало коксовую установку, поэтому его завершение нельзя переносить на новый этап."
+    },
+    {
+      "engine_id": "3016000000000013",
+      "kind": "quest",
+      "old_alias": "if.quest.p6.isotopes",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.isotopes",
+      "evidence": [
+        "docs/registries/quest_rebuild_baseline.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Старый квест проверял разделитель изотопов, который теперь входит в обязательную топливную цепочку. Факультативный преемник изучает отдельную машину распада."
+    },
+    {
+      "engine_id": "4016000000000013",
+      "kind": "task",
+      "old_alias": "if.task.p6.isotopes",
+      "parent_old_engine_id": "3016000000000013",
+      "parent_old_alias": "if.quest.p6.isotopes",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p6.isotopes",
+      "evidence": [
+        "docs/registries/quest_qr0_proof_contracts.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "reason_ru": "Старое доказательство разделителя изотопов не подтверждает новый ускоритель распада и не должно автоматически закрывать факультативную лабораторию."
+    }
+  ]
 }

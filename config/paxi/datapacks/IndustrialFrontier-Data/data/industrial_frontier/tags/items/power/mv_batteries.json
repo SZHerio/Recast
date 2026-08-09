@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "gtceu:mv_cadmium_battery",
+    "gtceu:mv_lithium_battery",
+    "gtceu:mv_sodium_battery"
+  ]
+}

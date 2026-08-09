@@ -1,6 +1,6 @@
 {
   "$schema": "../../authoring/schemas/quest_rebuild_baseline.schema.json",
-  "schema_version": 1,
+  "schema_version": 2,
   "registry_id": "industrial_frontier:quest_rebuild_baseline/qr0",
   "generated_from": {
     "compiled_chapters": "config/ftbquests/quests/chapters",
@@ -18,9 +18,29 @@
     "chapters": 24,
     "quests": 214
   },
+  "historical_inventory_sha256": "a50a23f9f010b6f934c72bdd9151b66bc25d68eb9b119648c1a6426ba928fee0",
   "content_snapshot": {
     "active_jars": 133,
     "snapshot_kind": "HISTORICAL_PRE_QR2_DELTA"
+  },
+  "active_runtime_contract": {
+    "source_kind": "QUESTBOOK_V2_PROMOTED",
+    "source_dir": "authoring/questbook_v2",
+    "source_schema": "authoring/schemas/quest_source_v2.schema.json",
+    "build_dir": "build/questbook_v2",
+    "build_manifest": "build/questbook_v2/manifest.json",
+    "validation_report": "build/questbook_v2/reports/validation.json",
+    "graph_report": "build/questbook_v2/reports/graph.json",
+    "semantic_audit_report": "build/questbook_v2/reports/quest_semantic_audit_full.json",
+    "runtime_chapters": "config/ftbquests/quests/chapters",
+    "runtime_chapter_groups": "config/ftbquests/quests/chapter_groups.snbt",
+    "expected_counts": {
+      "chapters": 27,
+      "quests": 501,
+      "proofs": 822,
+      "dependency_edges": 668
+    },
+    "runtime_sync_required": true
   },
   "ru_authoring_policy": {
     "primary_language": "ru_ru",

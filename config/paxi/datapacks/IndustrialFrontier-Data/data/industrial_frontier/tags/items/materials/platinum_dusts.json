@@ -1,0 +1,8 @@
+{
+  "__comment": "Платиновая пыль из установленных технологических систем; способ получения не должен блокировать академический зачёт.",
+  "replace": false,
+  "values": [
+    "gtceu:platinum_dust",
+    "nuclearcraft:platinum_dust"
+  ]
+}

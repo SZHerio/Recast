@@ -1,0 +1,2040 @@
+{
+  "schema_version": 2,
+  "source_kind": "quest_chapter",
+  "chapter": {
+    "alias": "if.chapter.v2.control",
+    "engine_id": "2A23000000000001",
+    "filename": "23_control_pressure",
+    "group": {
+      "alias": "if.group.v2.systems",
+      "engine_id": "1000000000000020",
+      "title_ru": "Производственные системы"
+    },
+    "order": 23,
+    "icon": "projectred_fabrication:ic_workbench",
+    "epoch": "SYSTEMS",
+    "tags": [
+      "control",
+      "pressure",
+      "electronics",
+      "automation"
+    ],
+    "hide_until_reached": true,
+    "text_ru": {
+      "title": "Давление и управление",
+      "subtitle": "От парового цеха и простых блокировок до диспетчерской и серийной сборки",
+      "description": [
+        "Эта глава проходит рядом с основной шкалой эпох и связывает несколько производственных языков. Пар обрабатывает сырьё, сжатый воздух приводит исполнительные устройства, проводная логика защищает отдельный участок, а компьютер наблюдает за всей линией.",
+        "У каждого инструмента остаётся своя работа. Здесь не предлагается строить несколько одинаковых фабрик: новые системы появляются только там, где они решают задачу лучше уже освоенных."
+      ]
+    },
+    "editorial": {
+      "voice": "Инженер по автоматике, который объясняет систему через измеримые причины и последствия.",
+      "tone_rules": [
+        "Сначала называть производственную задачу, затем подходящий инструмент.",
+        "Разделять местную защиту оборудования и верхнеуровневое управление.",
+        "Каждое сложное действие сопровождать простым признаком исправной работы."
+      ],
+      "avoid": [
+        "Не объявлять отдельный вид энергии универсальной заменой всем остальным.",
+        "Не требовать писать большую программу до первого понятного сигнала.",
+        "Не выдавать наличие блока за доказательство работающей линии."
+      ]
+    }
+  },
+  "quests": [
+    {
+      "alias": "if.quest.v2.control.overview",
+      "engine_id": "3023000000000001",
+      "epoch": "SYSTEMS",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:comparator",
+      "tags": [
+        "control",
+        "overview"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p2.commissioning",
+            "reason": "Разговор об управлении начинается после запуска первого настоящего цеха.",
+            "evidence": [
+              "authoring/questbook_v2/12_p2.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.overview.read",
+          "engine_id": "4023000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, как распределены роли между системами управления.",
+            "help": "Это вводная памятка; строить все перечисленные устройства прямо сейчас не нужно."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Один завод — несколько уровней управления",
+        "lead_ru": "Надёжная фабрика не поручает одному устройству всё сразу.",
+        "purpose_ru": "Механическая или электрическая машина выполняет процесс. Простая проводная цепь останавливает опасный участок. Диспетчерский компьютер собирает показания и координирует несколько участков. Такое разделение облегчает поиск неисправности и не превращает поломку одного узла в остановку города.",
+        "steps_ru": [
+          "Считайте паровые и пневматические машины исполнительной частью: они непосредственно меняют сырьё или совершают работу.",
+          "Оставляйте аварийную блокировку рядом с машиной, чтобы она действовала даже при выключенном компьютере.",
+          "Передавайте наверх только полезные показания: запас, скорость потока, давление, перегрузку и состояние линии."
+        ],
+        "success_ru": "Вы можете объяснить, что должно продолжить работать при отключении диспетчерского компьютера.",
+        "diagnostics_ru": [
+          "Если без программы нельзя безопасно остановить машину, местная защита спроектирована неверно.",
+          "Если на экран выводятся десятки значений без порогов и подписей, сначала сократите список до тех, по которым принимается решение."
+        ],
+        "next_ru": "Начнём с парового расширения: оно делает вторую эпоху полезнее, не создавая новую энергетическую сеть.",
+        "task_text_ru": "Разберите три уровня: исполнительное устройство, местная защита и диспетчерское управление."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вводная разводит роли систем до знакомства с конкретными устройствами."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Первичный русский текст написан как инженерная памятка; требуется сквозная редактура главы."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+          "evidence": [
+            "Раздел о связности производственных доменов."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Вводная не требует предметов или повторяемой работы."
+      },
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "shape": "gear",
+        "size": 1.6
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.steam_workshop",
+      "engine_id": "3A23000000000002",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "steamadditions:steam_foundry",
+      "tags": [
+        "steam",
+        "foundry",
+        "separation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.overview",
+            "reason": "Сначала определяется роль исполнительных машин.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p2.steam_ready",
+            "reason": "Литейная и сепаратор требуют уже принятого источника пара.",
+            "evidence": [
+              "authoring/questbook_v2/12_p2.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.steam_workshop.foundry",
+          "engine_id": "4A23000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите одну паровую литейную.",
+            "help": "Оборудование не расходуется и после проверки остаётся в цехе."
+          },
+          "item": {
+            "id": "steamadditions:steam_foundry",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.steam_workshop.separator",
+          "engine_id": "4A23000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один паровой сепаратор.",
+            "help": "Сепаратор нужен для учебной линии обогащения пылей. После его получения самостоятельно проведите первую операцию."
+          },
+          "item": {
+            "id": "steamadditions:steam_separator",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Пар должен делать больше",
+        "lead_ru": "Котельная уже построена, поэтому новый цех использует существующий поток пара.",
+        "purpose_ru": "Паровая литейная закрывает раннее плавление, а сепаратор извлекает больше полезной части из подготовленной пыли. Это расширение паровой эпохи, а не параллельная фабрика: сырьё, пар и готовые материалы возвращаются в общий маршрут.",
+        "steps_ru": [
+          "Поставьте обе машины рядом с доступной паровой магистралью, но оставьте отдельные запорные участки.",
+          "Для каждой машины заранее предусмотрите вход, выход и место, откуда будет видно затор.",
+          "Найдите для каждой машины подходящий рецепт, проведите по одной операции и сравните результат с прежним способом обработки."
+        ],
+        "success_ru": "Обе машины получают пар независимо, а их продукты без ручной сортировки возвращаются в общий склад материалов.",
+        "diagnostics_ru": [
+          "Если одна машина лишает пара вторую, разделите подачу и добавьте запас ближе к потребителям.",
+          "Если результат не совпадает с ожиданием, ещё раз проверьте исходную форму материала и выбранный рецепт."
+        ],
+        "next_ru": "Следующий исполнительный контур работает уже не на паре, а на запасе сжатого воздуха.",
+        "task_text_ru": "Получите одну паровую литейную и один паровой сепаратор."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Steam Additions получает собственную нишу внутри P2 и не дублирует весь GregTech."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точные предметы подтверждены локальным архивом Steam Additions; игровой результат ожидает пользовательской проверки."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "steamadditions",
+          "evidence": [
+            "mods/steamadditions-1.5.2.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "steamadditions:steam_foundry",
+          "evidence": [
+            "mods/steamadditions-1.5.2.jar!assets/steamadditions/models/item/steam_foundry.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "steamadditions:steam_separator",
+          "evidence": [
+            "mods/steamadditions-1.5.2.jar!assets/steamadditions/models/item/steam_separator.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 2,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p2/steam_extension",
+        "rationale_ru": "Две разные машины вводят две разные операции; серийная ручная обработка не требуется."
+      },
+      "layout": {
+        "x": 3,
+        "y": -4,
+        "shape": "square",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.pneumatic_loop",
+      "engine_id": "3A23000000000003",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "pneumaticcraft:air_compressor",
+      "tags": [
+        "pneumatic",
+        "pressure",
+        "safety"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.overview",
+            "reason": "Сжатый воздух вводится как отдельный исполнительный контур.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.commissioning",
+            "reason": "Стальной и электрический цех дают материалы для безопасной пневматической установки.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.pneumatic_loop.compressor",
+          "engine_id": "4A23000000000004",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один воздушный компрессор.",
+            "help": "Компрессор не расходуется; перед запуском прочитайте шкалу и предел давления."
+          },
+          "item": {
+            "id": "pneumaticcraft:air_compressor",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.pneumatic_loop.safety",
+          "engine_id": "4A23000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один предохранительный модуль для трубы.",
+            "help": "Он выпускает лишний воздух и не даёт давлению перейти опасную границу. Это последняя защита, а не обычный способ управлять компрессором."
+          },
+          "item": {
+            "id": "pneumaticcraft:safety_tube_module",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Давление хранит энергию",
+        "lead_ru": "Воздух в трубе — не просто ещё один кабель: запас меняется вместе с давлением и объёмом сети.",
+        "purpose_ru": "Пневматика полезна там, где нужны компактные исполнительные устройства, точная сборка или собственная логистика. Её главный риск — попытка быстро накачать маленький контур без ограничения давления и отвода тепла.",
+        "steps_ru": [
+          "Поставьте компрессор на отдельной площадке и оставьте вокруг него место для охлаждения и обслуживания.",
+          "Соедините его с коротким учебным участком трубы, датчиком давления и предохранительным модулем.",
+          "Поднимайте давление постепенно. Остановитесь раньше предела слабейшей детали и запомните нормальный рабочий диапазон."
+        ],
+        "success_ru": "Контур набирает давление без перегрева, предохранитель ограничивает опасный рост, а после остановки утечка не опустошает сеть.",
+        "diagnostics_ru": [
+          "Если давление не растёт, ищите открытый конец, неверно установленный модуль или слишком большой объём сети.",
+          "Если компрессор теряет производительность, проверьте температуру и улучшите отвод тепла до увеличения скорости."
+        ],
+        "next_ru": "Стабильный контур можно подключить к камере давления и получить первый материал, созданный сжатым воздухом.",
+        "task_text_ru": "Соберите короткий безопасный контур из компрессора, трубы, измерения и предохранителя."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Пневматика объясняется через запас, предел и тепло, а не как цветная разновидность кабеля."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точные предметы подтверждены локальным архивом PneumaticCraft; числовой предел намеренно предлагается читать на оборудовании."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "pneumaticcraft",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "pneumaticcraft:air_compressor",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/air_compressor.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "pneumaticcraft:safety_tube_module",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/safety_tube_module.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/pneumatic_safety",
+        "rationale_ru": "Один компрессор и один предохранитель достаточны для безопасного учебного контура."
+      },
+      "layout": {
+        "x": 3,
+        "y": -1,
+        "shape": "hexagon",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.pressure_chamber_setup",
+      "engine_id": "3A2300000000000C",
+      "epoch": "SYSTEMS",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "pneumaticcraft:pressure_chamber_valve",
+      "tags": ["pneumatic", "pressure_chamber", "machine_before_product"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.control.pneumatic_loop", "reason": "Камеру собирают только после проверки безопасного контура давления и до требования сжатого железа.", "evidence": ["authoring/questbook_v2/23_control_pressure.json"]}]},
+      "proofs": [
+        {"alias": "if.task.v2.control.pressure_chamber.use", "engine_id": "4A23000000000006", "type": "use", "status": "verified", "text_ru": {"objective": "Установите клапан камеры давления и откройте собранную камеру.", "help": "Открытие клапана отмечается автоматически; герметичность и показания давления оцените на месте."}, "use": {"block": "pneumaticcraft:pressure_chamber_valve", "count": 1, "item_interaction": false, "check_item": false}}
+      ],
+      "text_ru": {
+        "title_ru": "Сначала — герметичная камера",
+        "lead_ru": "До первого продукта нужно принять корпус, клапан и безопасную подачу воздуха.",
+        "purpose_ru": "Камера давления работает только как замкнутый многоблок. Отдельный setup-узел не позволяет получить сжатое железо другим способом и выдать его за освоение камеры.",
+        "steps_ru": ["Соберите полую камеру размером не меньше трёх блоков по каждой стороне.", "Поставьте хотя бы один клапан, подключите управляемую подачу воздуха и проверьте герметичность.", "Откройте клапан собранной камеры до загрузки первой партии."],
+        "success_ru": "Камера собрана, держит давление и открывается через установленный клапан.",
+        "diagnostics_ru": ["Если давление сразу падает, проверьте каждую грань корпуса и направление интерфейсов.", "Если клапан не открывает интерфейс сформированной камеры, сверьте минимальный размер и замкнутость всех стенок."],
+        "next_ru": "Теперь проведите один рецепт железа и отдельно подтвердите продукт камеры.",
+        "task_text_ru": "Соберите герметичную камеру давления и откройте её клапан."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Setup отделён от продукта по общему правилу machine-before-output."},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Valve ID подтверждён локальным архивом PneumaticCraft."]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "mod", "id": "pneumaticcraft", "evidence": ["mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar"]}, {"kind": "item", "id": "pneumaticcraft:pressure_chamber_valve", "evidence": ["mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/pressure_chamber_valve.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p3/pressure_chamber_setup", "rationale_ru": "Одна долговременная камера является рабочей инфраструктурой; второй корпус не требуется."},
+      "layout": {"x": 6, "y": -1, "shape": "gear", "size": 1.5}
+    },
+    {
+      "alias": "if.quest.v2.control.pressure_chamber",
+      "engine_id": "3A23000000000004",
+      "epoch": "SYSTEMS",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "pneumaticcraft:ingot_iron_compressed",
+      "tags": [
+        "pneumatic",
+        "pressure_chamber",
+        "compressed_iron"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+        "quest": "if.quest.v2.control.pressure_chamber_setup",
+        "reason": "Сжатое железо требуют только после сборки и открытия герметичной камеры.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+    {
+          "alias": "if.task.v2.control.pressure_chamber.output",
+          "engine_id": "4A23000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один слиток сжатого железа из камеры.",
+            "help": "Получив слиток, не считайте опыт законченным: первую операцию обязательно проведите именно в собранной камере."
+          },
+          "item": {
+            "id": "pneumaticcraft:ingot_iron_compressed",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+    "title_ru": "Первый продукт камеры",
+    "lead_ru": "Герметичная камера принята; теперь один реальный рецепт подтвердит её работу.",
+    "purpose_ru": "Сжатое железо должно выйти из уже собранной камеры давления. Первое сырьё можно положить внутрь до герметизации, но постоянной линии нужны отдельные интерфейсы загрузки и выгрузки: открытый корпус каждый раз теряет накопленный воздух.",
+        "steps_ru": [
+      "Положите внутрь железный слиток, поднимите давление до двух бар и дождитесь появления сжатого железа.",
+          "Перед следующими партиями добавьте два интерфейса: один для загрузки, другой для выгрузки, чтобы больше не разбирать стену."
+        ],
+    "success_ru": "Принятая камера выдала слиток сжатого железа без разрушения корпуса.",
+        "diagnostics_ru": [
+          "Если давление сразу падает, проверьте каждую грань корпуса и направление интерфейсов.",
+          "Если рецепт не начинается при двух барах, проверьте, что внутри лежит именно железный слиток и все стенки камеры замкнуты."
+        ],
+        "next_ru": "Теперь исполнительная часть готова; перейдём к проводной защите, которая остановит участок без программы.",
+    "task_text_ru": "Получите первый слиток сжатого железа в принятой камере давления."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+    "editorial_note": "Предметный результат следует отдельному setup-узлу и доказывает настоящую операцию."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверяемый результат выбран по локальному реестру предметов PneumaticCraft."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "pneumaticcraft",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar"
+          ]
+        },
+    {
+          "kind": "item",
+          "id": "pneumaticcraft:ingot_iron_compressed",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/ingot_iron_compressed.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/pressure_chamber",
+        "rationale_ru": "Одного слитка достаточно для знакомства с процессом; массовое ручное производство не требуется."
+      },
+      "layout": {
+    "x": 9,
+        "y": -1,
+        "shape": "square",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.hardwired_interlocks",
+      "engine_id": "3A23000000000005",
+      "epoch": "SYSTEMS",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "projectred_integration:timer_gate",
+      "tags": [
+        "projectred",
+        "interlock",
+        "signal_bus"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.overview",
+            "reason": "Местная защита вводится после разделения уровней управления.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.signal",
+            "reason": "Игрок уже знаком с базовым электрическим сигналом и может перейти к составной логике.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.hardwired_interlocks.wire",
+          "engine_id": "4A23000000000008",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один провод из красного сплава.",
+            "help": "Он проведёт одиночный сигнал вдоль машины или стены."
+          },
+          "item": {
+            "id": "projectred_transmission:red_alloy_wire",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.hardwired_interlocks.timer",
+          "engine_id": "4A23000000000009",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один таймер.",
+            "help": "Таймер даёт повторяемый такт; для аварийной остановки нужен отдельный постоянный сигнал."
+          },
+          "item": {
+            "id": "projectred_integration:timer_gate",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.hardwired_interlocks.bus",
+          "engine_id": "4A2300000000000A",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один обычный жгут проводов любого цвета.",
+            "help": "Подойдёт нейтральный или окрашенный жгут без каркаса. Он переносит несколько независимых каналов по одной трассе; после получения деталей проверьте приоритет аварийного запрета на собранной цепи."
+          },
+          "item_tag": {
+            "id": "projectred_transmission:bundled_wire",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Защита рядом с машиной",
+        "lead_ru": "Таймер, провод и логический элемент реагируют быстрее и понятнее, когда находятся возле своего участка.",
+        "purpose_ru": "Тонкая проводная логика берёт на себя местные блокировки: уровень в запасе, разрешение на пуск, аварийную остановку и последовательность простых действий. Провода и логические элементы могут делить одну клетку, поэтому шкаф управления остаётся компактным.",
+        "steps_ru": [
+          "Соберите учебную цепь, в которой таймер запускает лампу или другой безопасный потребитель.",
+          "Добавьте отдельный выключатель запрета: при его включении выход должен оставаться погашенным независимо от такта.",
+          "Перенесите два разных сигнала по жгуту и подпишите их цвета на входе и выходе."
+        ],
+        "success_ru": "Такт работает только при разрешении, аварийный запрет имеет приоритет, а каналы жгута не перепутаны.",
+        "diagnostics_ru": [
+          "Если цепь мигает в запрещённом состоянии, проверьте порядок логических элементов и точку, где объединяются сигналы.",
+          "Если канал приходит не туда, временно отключите остальные цвета и проследите один сигнал от начала до конца."
+        ],
+        "next_ru": "Ту же логику можно упаковать в интегральную схему, но сначала её нужно спроектировать и изготовить.",
+        "task_text_ru": "Соберите местную блокировку с тактом, отдельным запретом и двумя подписанными каналами."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "ProjectRed закреплён за локальной детерминированной логикой, а не за диспетчерским уровнем."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Предметы подтверждены локальными моделями; функциональная цепь описана для пользовательской приёмки."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "projectred_core",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-core.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "projectred_integration",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-integration.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "projectred_transmission",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-transmission.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "projectred_illumination",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-illumination.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "cb_multipart",
+          "evidence": [
+            "mods/CBMultipart-1.20.1-3.3.0.159-universal.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "cb_microblock",
+          "evidence": [
+            "mods/CBMultipart-1.20.1-3.3.0.159-universal.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "cb_multipart_minecraft",
+          "evidence": [
+            "mods/CBMultipart-1.20.1-3.3.0.159-universal.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "projectred_integration:timer_gate",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-integration.jar!assets/projectred_integration/models/item/timer_gate.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "projectred_transmission:bundled_wire",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-transmission.jar!data/projectred_transmission/tags/items/bundled_wire.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/projectred_interlock",
+        "rationale_ru": "По одному представителю провода, логики и многоканальной линии достаточно для учебного шкафа."
+      },
+      "layout": {
+        "x": 3,
+        "y": 2,
+        "shape": "rsquare",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.lithography_setup",
+      "engine_id": "3A2300000000000D",
+      "epoch": "SYSTEMS",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "projectred_fabrication:ic_workbench",
+      "tags": ["projectred", "fabrication", "machine_before_product"],
+      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.control.hardwired_interlocks", "reason": "Верстак интегральных схем вводят после понятного открытого макета и до требования изготовленного элемента.", "evidence": ["authoring/questbook_v2/23_control_pressure.json"]}, {"quest": "if.quest.v2.p4.commissioning", "reason": "Химический комплекс P4 даёт материалы и организованное производство для изготовления схем.", "evidence": ["authoring/questbook_v2/14_p4.json"]}]},
+      "proofs": [
+        {"alias": "if.task.v2.control.lithography.workbench", "engine_id": "4A2300000000000B", "type": "use", "status": "verified", "text_ru": {"objective": "Установите верстак интегральных схем и откройте его.", "help": "Сначала воспроизведите на верстаке уже проверенную местную блокировку."}, "use": {"block": "projectred_fabrication:ic_workbench", "count": 1, "item_interaction": false, "check_item": false}}
+      ],
+      "text_ru": {
+        "title_ru": "Верстак до готовой схемы",
+        "lead_ru": "Открытый макет уже понятен; теперь подготовьте инструмент переноса, но пока не выдавайте его наличие за изготовленный элемент.",
+        "purpose_ru": "Верстак интегральных схем переносит проверенную логику в компактную форму. Сначала книга принимает установленный инструмент и воспроизведённый макет, а готовый логический элемент проверяет отдельным следующим узлом.",
+        "steps_ru": ["Установите верстак интегральных схем ProjectRed Fabrication.", "Откройте его и повторите логику разрешения и аварийного запрета из предыдущего задания.", "Проверьте все входы на макете и подпишите назначение выводов до изготовления."],
+        "success_ru": "Верстак установлен, открывается, а проверенная открытая логика перенесена в проект.",
+        "diagnostics_ru": ["Если макет не проходит проверку, сравнивайте входы по одному с открытой схемой.", "Если верстак не открывается, проверьте точный блок и свободный доступ к его рабочей стороне."],
+        "next_ru": "Только теперь изготовьте один элемент и проверьте его теми же входными сигналами.",
+        "task_text_ru": "Установите и откройте верстак интегральных схем, затем перенесите на него проверенный макет."
+      },
+      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Верстак вынесен в отдельный setup до fabricated gate."},
+      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Workbench ID подтверждён локальным архивом ProjectRed Fabrication."]},
+      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru", "text_ru.task_text_ru"]}, {"kind": "operation", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
+      "content_refs": [{"kind": "mod", "id": "projectred_fabrication", "evidence": ["mods/ProjectRed-1.20.1-4.21.0-fabrication.jar"]}, {"kind": "item", "id": "projectred_fabrication:ic_workbench", "evidence": ["mods/ProjectRed-1.20.1-4.21.0-fabrication.jar!assets/projectred_fabrication/models/item/ic_workbench.json"]}],
+      "grind": {"class": "TEACHING", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": false, "budget_ref": "industrial_frontier:grind/p4/lithography_setup", "rationale_ru": "Один рабочий верстак остаётся частью диспетчерской лаборатории; дубликат не требуется."},
+      "layout": {"x": 6, "y": 2, "shape": "gear", "size": 1.5}
+    },
+    {
+      "alias": "if.quest.v2.control.lithography",
+      "engine_id": "3A23000000000006",
+      "epoch": "SYSTEMS",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "projectred_fabrication:ic_workbench",
+      "tags": [
+        "projectred",
+        "fabrication",
+        "silicon"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+        "quest": "if.quest.v2.control.lithography_setup",
+        "reason": "Готовый элемент требуют только после установки верстака и переноса проверенного макета.",
+        "evidence": [
+          "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+    {
+          "alias": "if.task.v2.control.lithography.gate",
+          "engine_id": "4A2300000000000C",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один изготовленный логический элемент.",
+            "help": "После получения элемента самостоятельно сравните его поведение с открытым макетом."
+          },
+          "item": {
+            "id": "projectred_fabrication:fabricated_gate",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+    "title_ru": "Из проекта в готовый элемент",
+    "lead_ru": "Верстак и макет приняты; теперь изготовьте компактный элемент и сравните его с открытой логикой.",
+    "purpose_ru": "Фотолитография сжимает проверенную логику в один элемент. Она не исправляет плохой проект: поэтому этот узел проверяет готовый результат только после отдельной приёмки верстака и макета.",
+        "steps_ru": [
+      "Используйте проект, подготовленный на принятом верстаке интегральных схем.",
+      "Получив готовый элемент, установите его вместо открытой цепи и повторите тот же безопасный опыт."
+        ],
+        "success_ru": "Компактный элемент повторяет поведение открытого макета: разрешение запускает такт, а запрет всегда его гасит.",
+        "diagnostics_ru": [
+          "Если заготовка признана негодной, вернитесь к макету и проверьте питание, выводы и неполные соединения.",
+          "Если готовый элемент ведёт себя иначе, сравнивайте входы по одному, не меняя сразу всю установку."
+        ],
+        "next_ru": "Проводная логика управляет сигналом; теперь построим учебную силовую сеть, которую можно измерить и защитить.",
+    "task_text_ru": "Изготовьте и проверьте один интегральный логический элемент по принятому проекту."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+    "editorial_note": "Готовый элемент следует отдельному setup-узлу и не может завершить обучение одним открытием верстака."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точные предметы подтверждены локальным архивом ProjectRed Fabrication."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "projectred_fabrication",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-fabrication.jar"
+          ]
+        },
+    {
+          "kind": "item",
+          "id": "projectred_fabrication:fabricated_gate",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-fabrication.jar!assets/projectred_fabrication/models/item/fabricated_gate.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p4/lithography",
+        "rationale_ru": "Один готовый элемент достаточен для освоения полного цикла и повторной проверки логики."
+      },
+      "layout": {
+    "x": 9,
+        "y": 2,
+        "shape": "hexagon",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.measured_power",
+      "engine_id": "3A23000000000007",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "powergrid:multimeter",
+      "tags": [
+        "powergrid",
+        "measurement",
+        "motor"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.overview",
+            "reason": "Учебная силовая сеть строится после разделения исполнительной и управляющей частей.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.generator",
+            "reason": "Игрок уже получил электричество и готов перейти от факта питания к измерениям.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.measured_power.meter",
+          "engine_id": "4A2300000000000D",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один мультиметр.",
+            "help": "Измеряйте сеть до подключения двигателя, а затем повторите измерение под нагрузкой."
+          },
+          "item": {
+            "id": "powergrid:multimeter",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.measured_power.fuse",
+          "engine_id": "4A2300000000000E",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один держатель предохранителя.",
+            "help": "Предохранитель ставится до нагрузки и должен оставаться доступным для замены."
+          },
+          "item": {
+            "id": "powergrid:fuse_holder",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.measured_power.motor",
+          "engine_id": "4A2300000000000F",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите электрический двигатель и откройте его рабочий узел.",
+            "help": "Сначала подключите измерение и защиту, только затем подавайте питание. Открытие двигателя не заменяет опыт под нагрузкой."
+          },
+          "use": {
+            "block": "powergrid:electric_motor",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Ток видно по последствиям",
+        "lead_ru": "Надпись «подключено» не говорит, выдержит ли сеть двигатель и что произойдёт при заклинивании.",
+        "purpose_ru": "Учебная силовая сеть делает напряжение, ток, сопротивление и защиту наблюдаемыми величинами. Она не заменяет основную промышленную энергосеть: её задача — показать поведение цепи и дать электромеханические узлы там, где они действительно нужны.",
+        "steps_ru": [
+          "Соберите небольшой источник, провод, выключатель, предохранитель и двигатель в одну доступную для осмотра цепь.",
+          "Измерьте состояние без нагрузки, затем подключите двигатель и снова снимите показания.",
+          "Создайте безопасную перегрузку только способом, предусмотренным руководством, и убедитесь, что защита разрывает цепь раньше повреждения остальных частей."
+        ],
+        "success_ru": "Двигатель работает под защитой, а вы можете по измерениям отличить нормальную нагрузку от опасной.",
+        "diagnostics_ru": [
+          "Если двигатель не вращается, проверьте замкнутость цепи, полярность, предел источника и исправность предохранителя.",
+          "Если провод или узел нагревается, отключите питание и уменьшите нагрузку до изменения конструкции."
+        ],
+        "next_ru": "Измеряемую сеть можно наблюдать программно, но сначала нужен простой компьютер с понятным входом и выходом.",
+        "task_text_ru": "Соберите измеряемую и защищённую цепь с одним электрическим двигателем."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Power Grid получает роль электротехнической лаборатории и специального привода, не вытесняя сеть EU."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точные предметы подтверждены локальным архивом Power Grid; режим перегрузки оставлен за встроенным руководством и пользовательским тестом."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "powergrid",
+          "evidence": [
+            "mods/powergrid-mc1.20.1-0.5.5.1.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "powergrid:multimeter",
+          "evidence": [
+            "mods/powergrid-mc1.20.1-0.5.5.1.jar!assets/powergrid/models/item/multimeter.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "powergrid:electric_motor",
+          "evidence": [
+            "mods/powergrid-mc1.20.1-0.5.5.1.jar!assets/powergrid/models/item/electric_motor.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/measured_power",
+        "rationale_ru": "По одному измерителю, защитному узлу и двигателю образуют полноценный учебный стенд без серийной сборки."
+      },
+      "layout": {
+        "x": 3,
+        "y": 5,
+        "shape": "diamond",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.computer_station",
+      "engine_id": "3A23000000000008",
+      "epoch": "SYSTEMS",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "computercraft:computer_normal",
+      "tags": [
+        "computercraft",
+        "programming",
+        "supervision"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.hardwired_interlocks",
+            "reason": "Программное управление строится поверх уже работающей местной защиты.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p4.commissioning",
+            "reason": "В химическом комплексе уже несколько производственных участков, которым полезна общая диспетчерская.",
+            "evidence": [
+              "authoring/questbook_v2/14_p4.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.computer_station.computer",
+          "engine_id": "4A23000000000010",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите обычный компьютер и откройте его терминал.",
+            "help": "Для первого опыта достаточно короткой программы; копировать большой готовый проект не требуется. Открытие компьютера отмечается автоматически, а правильность сообщений проверьте сами."
+          },
+          "use": {
+            "block": "computercraft:computer_normal",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.computer_station.monitor",
+          "engine_id": "4A23000000000011",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один обычный монитор.",
+            "help": "Монитор будет показывать состояние учебного входа понятными словами."
+          },
+          "item": {
+            "id": "computercraft:monitor_normal",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первый экран говорит правду",
+        "lead_ru": "Диспетчерская начинается не с красивой панели, а с одного входа, одного решения и одного понятного сообщения.",
+        "purpose_ru": "Программируемый компьютер наблюдает за установкой и согласует работу нескольких участков. Первая программа читает безопасный сигнал от местной цепи и выводит понятное сообщение: «линия разрешена» или «линия остановлена». Она не обходит аварийный выключатель и не управляет машиной напрямую.",
+        "steps_ru": [
+          "Подведите к компьютеру сигнал от учебной блокировки и убедитесь, что он меняется вручную.",
+          "Напишите короткую программу, которая читает этот вход и выводит на монитор два различимых состояния.",
+          "Перезагрузите компьютер и проверьте, что программа либо запускается ожидаемо, либо оставляет установку в безопасном состоянии."
+        ],
+        "success_ru": "Монитор верно показывает оба состояния, а отключение компьютера не снимает местный запрет.",
+        "diagnostics_ru": [
+          "Если вход не меняется, сначала проверьте проводную цепь без программы и только потом код.",
+          "Если после перезагрузки экран пуст, проверьте имя файла запуска и выведите простое сообщение до обращения к устройствам."
+        ],
+        "next_ru": "После одного честного сигнала подключим измерители и склад через специализированные периферийные устройства.",
+        "task_text_ru": "Покажите на мониторе два состояния местной блокировки, не передавая компьютеру право аварийного отключения."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Первый программный урок ограничен одним наблюдаемым сигналом и безопасным поведением при отказе."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точные блоки подтверждены локальным архивом CC: Tweaked; выполнение программы принимает пользователь."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "computercraft",
+          "evidence": [
+            "mods/cc-tweaked-1.20.1-forge-1.120.0.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "computercraft:computer_normal",
+          "evidence": [
+            "mods/cc-tweaked-1.20.1-forge-1.120.0.jar!assets/computercraft/models/item/computer_normal.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "computercraft:monitor_normal",
+          "evidence": [
+            "mods/cc-tweaked-1.20.1-forge-1.120.0.jar!assets/computercraft/models/item/monitor_normal.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p4/first_program",
+        "rationale_ru": "Один компьютер и один монитор достаточны для первого наблюдаемого сигнала."
+      },
+      "layout": {
+        "x": 6,
+        "y": 5,
+        "shape": "square",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.factory_supervision",
+      "engine_id": "3A23000000000009",
+      "epoch": "SYSTEMS",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "advancedperipherals:me_bridge",
+      "tags": [
+        "advanced_peripherals",
+        "ae2",
+        "monitoring"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.computer_station",
+            "reason": "Специализированные устройства подключаются после первого понятного программного сигнала.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.control.measured_power",
+            "reason": "Автоматическое наблюдение должно опираться на уже понятные ручные измерения.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p5.ae2_storage",
+            "reason": "МЭ-мост имеет смысл только рядом с принятой цифровой сетью хранения.",
+            "evidence": [
+              "authoring/questbook_v2/15_p5.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.factory_supervision.energy",
+          "engine_id": "4A23000000000012",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите детектор энергии и откройте его настройки.",
+            "help": "Сначала сравните его показание с ручным измерением. Открытие настроек не подтверждает правильность числа на экране."
+          },
+          "use": {
+            "block": "advancedperipherals:energy_detector",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.factory_supervision.storage",
+          "engine_id": "4A23000000000013",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите мост цифровой сети рядом с хранилищем и откройте его.",
+            "help": "Устройство занимает канал; оставьте запас и не начинайте с автоматического извлечения предметов. Открытие отмечается автоматически, а предупреждение проверьте изменением запаса."
+          },
+          "use": {
+            "block": "advancedperipherals:me_bridge",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Диспетчерская видит поток и запас",
+        "lead_ru": "Два показателя уже дают полезное решение: работает ли питание и хватит ли материала на следующую партию.",
+        "purpose_ru": "Специализированные периферийные устройства соединяют компьютер с реальными системами. Детектор энергии сообщает о потоке, а мост цифровой сети читает содержимое склада. На первом этапе диспетчерская только наблюдает и предупреждает; автоматическое перемещение ценных материалов появится лишь после устойчивого чтения.",
+        "steps_ru": [
+          "Подключите детектор энергии к безопасному участку и выведите на монитор текущее значение вместе с единицей измерения.",
+          "Подключите мост цифровой сети, прочитайте количество одного массового материала и задайте понятный порог пополнения.",
+          "Остановите поток или уберите часть запаса, чтобы убедиться: предупреждение появляется по реальной причине и исчезает после восстановления."
+        ],
+        "success_ru": "Экран различает нормальную работу, отсутствие потока и малый запас, а компьютер пока ничего не извлекает сам.",
+        "diagnostics_ru": [
+          "Если устройство не найдено, проверьте кабель, сторону подключения и имя периферии до изменения программы.",
+          "Если склад возвращает пустой ответ, проверьте канал цифровой сети, питание и точное имя выбранного материала."
+        ],
+        "next_ru": "Надёжное наблюдение позволяет перейти к поздней серийной сборке компонентов и считать её частью общей фабрики.",
+        "task_text_ru": "Выведите на один экран поток энергии и запас выбранного материала, затем проверьте оба предупреждения."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Периферия начинает с чтения и сигнализации; опасная запись намеренно отложена."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Точные блоки и назначение сверены с локальным руководством Advanced Peripherals; программа проверяется пользователем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "advancedperipherals",
+          "evidence": [
+            "mods/AdvancedPeripherals-1.20.1-0.7.48r.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "advancedperipherals:energy_detector",
+          "evidence": [
+            "mods/AdvancedPeripherals-1.20.1-0.7.48r.jar!assets/advancedperipherals/models/item/energy_detector.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "advancedperipherals:me_bridge",
+          "evidence": [
+            "mods/AdvancedPeripherals-1.20.1-0.7.48r.jar!assets/advancedperipherals/models/item/me_bridge.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p5/factory_supervision",
+        "rationale_ru": "Два устройства дают два независимых наблюдаемых показателя; повторная ручная работа не требуется."
+      },
+      "layout": {
+        "x": 9,
+        "y": 5,
+        "shape": "hexagon",
+        "size": 1.5
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.component_assembly",
+      "engine_id": "3A2300000000000A",
+      "epoch": "SYSTEMS",
+      "role": "automation",
+      "requirement": "required",
+      "icon": "gtnn:component_assembly_line",
+      "tags": [
+        "gtnn",
+        "component_assembly",
+        "late_factory"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.factory_supervision",
+            "reason": "Серийная линия вводится после наблюдения за потоком энергии и запасом материалов.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p7.commissioning",
+            "reason": "Поздняя сборка компонентов требует материалов и энергетики стратегической эпохи.",
+            "evidence": [
+              "authoring/questbook_v2/17_p7.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.component_assembly.use",
+          "engine_id": "4A23000000000014",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите контроллер линии сборки компонентов и откройте его.",
+            "help": "Корпуса должны соответствовать уровню рецепта; контроллер сам по себе не образует рабочую конструкцию."
+          },
+          "use": {
+            "block": "gtnn:component_assembly_line",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Серийная сборка вместо ручной каторги",
+        "lead_ru": "Поздние моторы, насосы и манипуляторы нужны партиями; повторять их вручную уже не обучение.",
+        "purpose_ru": "Поздняя линия сборки компонентов получает одну ясную роль: массово выпускать типовые детали для новых заводских участков. Она не заменяет обычную сборочную машину в малых заказах, а уровень её корпусов ограничивает доступные рецепты.",
+        "steps_ru": [
+          "Выберите один компонент, который регулярно расходуется в проектах вашей текущей эпохи, и оцените размер разумной партии.",
+          "Соберите конструкцию с корпусами подходящего уровня, разведите входы и оставьте отдельный выход для готовой партии.",
+          "Проведите один заказ, затем выведите его расход и остаток сырья на диспетчерский экран."
+        ],
+        "success_ru": "Линия выпускает выбранный компонент без ручной перекладки, не превышает уровень корпусов и оставляет понятный запас сырья.",
+        "diagnostics_ru": [
+          "Если конструкция не собирается, проверьте уровень и расположение каждого корпуса по встроенному описанию.",
+          "Если рецепт не принимается, сравните его уровень с корпусом и убедитесь, что все входные формы поданы в нужные люки."
+        ],
+        "next_ru": "Осталось принять всю цепочку как единую систему; после этого она сможет обслуживать орбитальную автоматизацию.",
+        "task_text_ru": "Соберите линию компонентов и выполните на ней один полезный серийный заказ."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "GT-- назначен владельцем массовой поздней сборки компонентов, что прямо снижает ручной гринд."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Контроллер подтверждён локальным архивом GT--; конкретный рецепт оставлен игроку по текущей эпохе."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "gtnn",
+          "evidence": [
+            "mods/gtnn-1.20.1-1.3.9.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtnn:component_assembly_line",
+          "evidence": [
+            "mods/gtnn-1.20.1-1.3.9.jar!assets/gtnn/models/item/component_assembly_line.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p7/component_assembly",
+        "rationale_ru": "Одного полезного заказа достаточно для проверки автоматизации; запас невостребованных компонентов не нужен."
+      },
+      "layout": {
+        "x": 12,
+        "y": 5,
+        "shape": "diamond",
+        "size": 1.6
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.acceptance",
+      "engine_id": "3A2300000000000B",
+      "epoch": "SYSTEMS",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "advancedperipherals:energy_detector",
+      "tags": [
+        "control",
+        "acceptance",
+        "p8_bridge"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.steam_workshop",
+            "reason": "Паровое расширение должно вернуть продукты в общий поток.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.control.pressure_chamber",
+            "reason": "Пневматический контур должен выдать реальный продукт.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.control.lithography",
+            "reason": "Местная логика должна пройти путь от макета до готового элемента.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.control.measured_power",
+            "reason": "Силовая цепь должна быть измеримой и защищённой.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.control.factory_supervision",
+            "reason": "Диспетчерская должна видеть поток энергии и запас материала.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.control.component_assembly",
+            "reason": "Поздняя серийная сборка завершает производственный контур.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.acceptance.signoff",
+          "engine_id": "4A23000000000015",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Проведите ручную приёмку по шести признакам и подтвердите результат.",
+            "help": "Отметьте задание только после проверки пара, давления, блокировки, защиты, диспетчерской и серийной линии."
+          }
+        },
+        {
+          "alias": "if.task.v2.control.acceptance.monitor",
+          "engine_id": "4A23000000000016",
+          "type": "use",
+          "status": "verified",
+          "text_ru": {
+            "objective": "После ручной приёмки откройте обычный или улучшенный диспетчерский монитор.",
+            "help": "Открытие монитора любого уровня дополняет, но не заменяет шесть проверок поведения системы."
+          },
+          "use": {
+            "block_tag": "computercraft:monitor",
+            "count": 1,
+            "item_interaction": false,
+            "check_item": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Фабрика умеет остановиться",
+        "lead_ru": "Автоматизация считается зрелой не тогда, когда всё движется, а когда отказ одного уровня не скрывает опасность на другом.",
+        "purpose_ru": "Итоговая приёмка связывает исполнительные машины, местную защиту, измерение, наблюдение и серийное производство. Проведите её вручную: только настоящий опыт покажет, что аварийный запрет имеет приоритет, а показания соответствуют работе установки.",
+        "steps_ru": [
+          "Остановите подачу пара и убедитесь, что это не ломает соседние энергетические контуры.",
+          "Остановите компрессор и убедитесь, что давление остаётся в безопасных пределах, а состояние камеры легко определить по приборам.",
+          "Включите местный запрет: управляемый участок должен остановиться даже при работающем компьютере.",
+          "Отключите диспетчерский компьютер: защита остаётся активной, а после возврата питания показания восстанавливаются.",
+          "Создайте малый запас выбранного материала и убедитесь, что предупреждение появляется до остановки серийной линии.",
+          "Верните систему в нормальное состояние и проведите один полезный заказ без ручной перекладки."
+        ],
+        "success_ru": "Каждый уровень выполняет свою роль, неисправность видна, безопасная остановка не зависит от программы, а выпуск партии контролируется по реальному запасу.",
+        "diagnostics_ru": [
+          "Если проверка одного отказа вызывает непредсказуемые последствия, разберите её по уровням и временно отключите автоматические команды.",
+          "Если показание расходится с наблюдаемым результатом, доверяйте физическому состоянию установки и проверяйте источник данных."
+        ],
+        "next_ru": "После этой приёмки откроется связанная с ней орбитальная автоматизация; городская ветвь и остальные этапы от неё не зависят.",
+        "task_text_ru": "Вручную проверьте безопасную остановку, достоверность показаний и один серийный заказ."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Ручная отметка честно названа приёмкой поведения и не маскируется под автоматическую проверку."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Шесть признаков соответствуют шести обязательным концам главы; требуется сквозная редактура после сборки всего графа."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "prerequisites",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.control.steam_workshop",
+          "evidence": [
+            "Паровая исполнительная ветвь."
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.control.pressure_chamber",
+          "evidence": [
+            "Пневматическая исполнительная ветвь."
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.control.lithography",
+          "evidence": [
+            "Ветвь местной логики."
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.control.measured_power",
+          "evidence": [
+            "Измеримая силовая ветвь."
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.control.factory_supervision",
+          "evidence": [
+            "Диспетчерская ветвь."
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.control.component_assembly",
+          "evidence": [
+            "Серийная поздняя сборка."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Приёмка использует уже построенные узлы и один полезный заказ; новые партии предметов не требуются."
+      },
+      "layout": {
+        "x": 15,
+        "y": 1,
+        "shape": "diamond",
+        "size": 1.8
+      }
+    }
+  ]
+}

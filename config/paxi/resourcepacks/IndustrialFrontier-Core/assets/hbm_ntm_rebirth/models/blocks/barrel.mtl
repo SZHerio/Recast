@@ -1,0 +1,12 @@
+# Compatibility copy for HBM NTM Rebirth 0.4.1beta.
+# The bundled OBJ resolves this file relative to models/blocks, while the mod
+# ships it under models/block/legacy_blocks.
+newmtl Default_OBJ
+Ns 32
+Ni 1.5
+d 1
+illum 2
+Kd 0.8 0.8 0.8
+Ka 0.0 0.0 0.0
+Ks 0.2 0.2 0.2
+map_Kd #default

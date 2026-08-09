@@ -1,0 +1,359 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/security_factions_v2",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.defence.intro",
+      "old_engine_id": "3021000000000001",
+      "new_alias": "if.quest.v2.defence.ladder",
+      "new_engine_id": "3021000000000001",
+      "policy": "carry",
+      "reason": "Старое введение в оборону сохранило роль обзора оружейной лестницы по эпохам.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/21_defence_gear.json",
+        "authoring/questbook_v2/21_defence_gear.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.defence.melee",
+      "old_engine_id": "3021000000000002",
+      "new_alias": "if.quest.v2.defence.melee",
+      "new_engine_id": "3B4E5CE2A065CDA5",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/21_defence_gear.json",
+        "authoring/questbook_v2/21_defence_gear.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.defence.firearms",
+      "old_engine_id": "3021000000000003",
+      "new_alias": "if.quest.v2.defence.firearms",
+      "new_engine_id": "3FA752DA7EDD595F",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/21_defence_gear.json",
+        "authoring/questbook_v2/21_defence_gear.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.defence.structures",
+      "old_engine_id": "3021000000000004",
+      "new_alias": "if.quest.v2.defence.reconnaissance",
+      "new_engine_id": "3204C3EB1C4E9763",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/21_defence_gear.json",
+        "authoring/questbook_v2/21_defence_gear.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.defence.cannons",
+      "old_engine_id": "3021000000000005",
+      "new_alias": "if.quest.v2.defence.artillery",
+      "new_engine_id": "33408C8AD3BED444",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/21_defence_gear.json",
+        "authoring/questbook_v2/21_defence_gear.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.defence.discipline",
+      "old_engine_id": "3021000000000006",
+      "new_alias": "if.quest.v2.defence.discipline",
+      "new_engine_id": "3021000000000006",
+      "policy": "carry",
+      "reason": "Правила безопасного обращения с оружием сохранили своё обязательное учебное назначение.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/21_defence_gear.json",
+        "authoring/questbook_v2/21_defence_gear.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.factions.intro",
+      "old_engine_id": "3025000000000001",
+      "new_alias": "if.quest.v2.factions.overview",
+      "new_engine_id": "3025000000000001",
+      "policy": "carry",
+      "reason": "Общий обзор внешних сил остался началом фракционной главы и получил шесть ответвлений.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/25_factions_live.json",
+        "authoring/questbook_v2/25_factions_live.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.factions.bases",
+      "old_engine_id": "3025000000000002",
+      "new_alias": "if.quest.v2.factions.first_base",
+      "new_engine_id": "3A8CF713DE372BBC",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/25_factions_live.json",
+        "authoring/questbook_v2/25_factions_live.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.factions.talks",
+      "old_engine_id": "3025000000000003",
+      "new_alias": "if.quest.v2.factions.envoy",
+      "new_engine_id": "3025000000000003",
+      "policy": "carry",
+      "reason": "Разговор с представителем фракции сохранил роль первого безопасного дипломатического контакта.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/25_factions_live.json",
+        "authoring/questbook_v2/25_factions_live.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.factions.reputation",
+      "old_engine_id": "3025000000000004",
+      "new_alias": "if.quest.v2.factions.reputation",
+      "new_engine_id": "3025000000000004",
+      "policy": "carry",
+      "reason": "Шкала отношения от −100 до +100 сохранила прежнее назначение и получила честный список причин изменений.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/25_factions_live.json",
+        "authoring/questbook_v2/25_factions_live.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.factions.treaties",
+      "old_engine_id": "3025000000000005",
+      "new_alias": "if.quest.v2.factions.treaties",
+      "new_engine_id": "3025000000000005",
+      "policy": "carry",
+      "reason": "Договоры остались отдельным состоянием отношений с собственными порогами и последствиями разрыва.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/25_factions_live.json",
+        "authoring/questbook_v2/25_factions_live.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.factions.operations",
+      "old_engine_id": "3025000000000006",
+      "new_alias": "if.quest.v2.factions.operations",
+      "new_engine_id": "3025000000000006",
+      "policy": "carry",
+      "reason": "Обзор внешних операций сохранил роль перехода от отношений к угрозам и обороне.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/25_factions_live.json",
+        "authoring/questbook_v2/25_factions_live.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.intro",
+      "old_engine_id": "3045000000000001",
+      "new_alias": "if.quest.v2.diplomacy.social_state",
+      "new_engine_id": "3045000000000001",
+      "policy": "carry",
+      "reason": "Введение сохранило назначение и теперь яснее разделяет эпоху, отношение, принадлежность и договор.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.epoch",
+      "old_engine_id": "3045000000000002",
+      "new_alias": "if.quest.v2.diplomacy.epoch",
+      "new_engine_id": "3045000000000002",
+      "policy": "carry",
+      "reason": "Единая технологическая эпоха осталась главным ориентиром для оснащения баз и отрядов.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.reputation",
+      "old_engine_id": "3045000000000003",
+      "new_alias": "if.quest.v2.diplomacy.reputation",
+      "new_engine_id": "3045000000000003",
+      "policy": "carry",
+      "reason": "Подробная шкала отношения сохранила прежний идентификатор и учебную роль.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.affiliation",
+      "old_engine_id": "3045000000000004",
+      "new_alias": "if.quest.v2.diplomacy.affiliation",
+      "new_engine_id": "3045000000000004",
+      "policy": "carry",
+      "reason": "Формальная принадлежность осталась отдельной от репутации и договоров характеристикой.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.operation",
+      "old_engine_id": "3045000000000005",
+      "new_alias": "if.quest.v2.diplomacy.operation",
+      "new_engine_id": "3045000000000005",
+      "policy": "carry",
+      "reason": "Операция сохранила роль практического последствия плохих отношений и нарушения мира.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.treaty",
+      "old_engine_id": "3045000000000006",
+      "new_alias": "if.quest.v2.diplomacy.treaty",
+      "new_engine_id": "3045000000000006",
+      "policy": "carry",
+      "reason": "Пороги и последствия договоров остались самостоятельной дипломатической ступенью.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.loot",
+      "old_engine_id": "3045000000000007",
+      "new_alias": "if.quest.v2.diplomacy.loot",
+      "new_engine_id": "3045000000000007",
+      "policy": "carry",
+      "reason": "Правило разумной добычи на базах сохранено как честно обозначенная проектная цель.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.diplomacy.recovery",
+      "old_engine_id": "3045000000000008",
+      "new_alias": "if.quest.v2.diplomacy.recovery",
+      "new_engine_id": "3045000000000008",
+      "policy": "carry",
+      "reason": "Восстановление после конфликта сохранило роль заключительного безопасного разбора последствий.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/45_diplomacy_security.json",
+        "authoring/questbook_v2/45_diplomacy_security.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.ops.intro",
+      "old_engine_id": "3046000000000001",
+      "new_alias": "if.quest.v2.operations.trigger",
+      "new_engine_id": "3046000000000001",
+      "policy": "carry",
+      "reason": "Введение в операции сохранило назначение и теперь начинает с фактических условий появления угрозы.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/46_operations_and_defence.json",
+        "authoring/questbook_v2/46_operations_and_defence.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.ops.squads",
+      "old_engine_id": "3046000000000002",
+      "new_alias": "if.quest.v2.operations.squad_tiers",
+      "new_engine_id": "3046000000000002",
+      "policy": "carry",
+      "reason": "Ступени отрядов сохранили прежний рубеж и получили точное описание действующего снаряжения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/46_operations_and_defence.json",
+        "authoring/questbook_v2/46_operations_and_defence.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.ops.ordnance",
+      "old_engine_id": "3046000000000003",
+      "new_alias": "if.quest.v2.operations.ordnance",
+      "new_engine_id": "3BBDBA95E9A3BABA",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/46_operations_and_defence.json",
+        "authoring/questbook_v2/46_operations_and_defence.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.ops.operations",
+      "old_engine_id": "3046000000000004",
+      "new_alias": "if.quest.v2.operations.operation_types",
+      "new_engine_id": "3046000000000004",
+      "policy": "carry",
+      "reason": "Каталог операций сохранил прежний идентификатор и теперь точно привязан к эпохам.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/46_operations_and_defence.json",
+        "authoring/questbook_v2/46_operations_and_defence.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.ops.treaties",
+      "old_engine_id": "3046000000000005",
+      "new_alias": "if.quest.v2.operations.operation_diplomacy",
+      "new_engine_id": "3046000000000005",
+      "policy": "carry",
+      "reason": "Связь договоров с операциями сохранена и дополнена отдельным окном срочных переговоров.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/46_operations_and_defence.json",
+        "authoring/questbook_v2/46_operations_and_defence.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.ops.recovery",
+      "old_engine_id": "3046000000000006",
+      "new_alias": "if.quest.v2.operations.recovery",
+      "new_engine_id": "3046000000000006",
+      "policy": "carry",
+      "reason": "Разбор последствий сохранил финальную роль и теперь отделяет работающие эффекты от будущих задумок.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/46_operations_and_defence.json",
+        "authoring/questbook_v2/46_operations_and_defence.json"
+      ]
+    }
+  ]
+}

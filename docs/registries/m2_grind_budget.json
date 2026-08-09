@@ -223,28 +223,27 @@
       "gate": "M4_GATED_CONTENT"
     },
     {
-      "component_id": "industrial_frontier:component/p4/city_ration_batch",
+      "component_id": "industrial_frontier:component/p4/technical_supply_batch",
       "epoch": 4,
       "status": "GATED_NOT_INSTALLED",
-      "title_ru": "Стандартная партия городского рациона",
-      "title_en": "Standard City Ration Batch",
+      "title_ru": "Контрольная партия технического снабжения",
+      "title_en": "Technical Supply Control Batch",
       "mandatory": true,
       "required_refs": [
-        "industrial_frontier:process/future/city_demand_contracts",
+        "industrial_frontier:substance/ammonia",
         "industrial_frontier:substance/drinking_water"
       ],
-      "bootstrap_route_ru": "Первая партия собирается из нескольких понятных пищевых групп и питьевой воды; она проверяет снабжение, а не сотни одинаковых кликов.",
-      "automation_route_ru": "С P4 установленный Create Central Kitchen связывает кухню Farmer's Delight с пакетной механикой Create; городской спрос начинается только после сборки проверяемого продовольственного резерва.",
+      "bootstrap_route_ru": "Первая поставка объединяет аммиак для технологической линии и питьевую воду для рабочей смены. Она проверяет два независимых потока без привязки к городской кампании.",
+      "automation_route_ru": "С P4 насосы, химическая линия и упаковка регулярно комплектуют общий технический заказ. Городская ветвь может потреблять те же продукты, но не открывает эпоху.",
       "automation_epoch": 4,
       "mass_demand_epoch": 4,
-      "budget_ref": "industrial_frontier:grind/p4/city_rations",
+      "budget_ref": "industrial_frontier:grind/p4/technical_supply",
       "evidence_refs": [
-        "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md",
-        "docs/registries/curseforge_sources.json",
-        "kubejs/server_scripts/40_balance/m4_municipal_contracts.js",
-        "kubejs/server_scripts/40_balance/m4_city_signals.js"
+        "docs/CURSEFORGE_CHEMISTRY_AUDIT.md",
+        "docs/GLOBAL_TECH_CITY_CURSEFORGE_AUDIT.md#water",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
       ],
-      "gate": "M10_CITY_RATION_BINDING_AND_GRIND_TEST"
+      "gate": "M4_TECHNICAL_SUPPLY_BINDING_AND_GRIND_TEST"
     },
     {
       "component_id": "industrial_frontier:component/p5/me_entry_set",
@@ -278,9 +277,9 @@
       "mandatory": true,
       "required_refs": [
         "industrial_frontier:process/ae2/autocrafting",
-        "industrial_frontier:process/future/city_demand_contracts"
+        "industrial_frontier:process/create/visible_batch_processing"
       ],
-      "bootstrap_route_ru": "Первый узел вручную связывает один склад, один производственный заказ и один городской пункт назначения без повторной ручной разгрузки.",
+      "bootstrap_route_ru": "Первый узел вручную связывает один склад, один производственный заказ и один удалённый производственный участок без повторной ручной разгрузки.",
       "automation_route_ru": "С P5 маршрутизация, запрос и комплектование груза автоматизированы до регионального массового спроса.",
       "automation_epoch": 5,
       "mass_demand_epoch": 5,
@@ -408,12 +407,12 @@
       "title_en": "Colony Supply Manifest",
       "mandatory": true,
       "required_refs": [
-        "industrial_frontier:process/future/city_demand_contracts",
+        "industrial_frontier:process/future/rocket_and_planetary_logistics",
         "industrial_frontier:substance/drinking_water",
         "industrial_frontier:substance/oxygen"
       ],
-      "bootstrap_route_ru": "Первый манифест вручную объединяет воду, кислород и городской груз в одну проверяемую поставку вместо сотен отдельных предметных ворот.",
-      "automation_route_ru": "С P8 городские склады автоматически комплектуют регулярные колониальные рейсы по целевому запасу.",
+      "bootstrap_route_ru": "Первый манифест вручную объединяет воду, кислород и стандартный экспедиционный груз в одну проверяемую поставку вместо сотен отдельных предметных ворот.",
+      "automation_route_ru": "С P8 орбитальные и планетарные склады автоматически комплектуют регулярные колониальные рейсы по целевому запасу.",
       "automation_epoch": 8,
       "mass_demand_epoch": 8,
       "budget_ref": "industrial_frontier:grind/p8/colony_supply",
@@ -770,13 +769,13 @@
       "gate": "M4_GATED_CONTENT"
     },
     {
-      "chain_id": "industrial_frontier:grind/p4/city_rations",
+      "chain_id": "industrial_frontier:grind/p4/technical_supply",
       "epoch": 4,
-      "title_ru": "Стандартные городские рационы",
+      "title_ru": "Техническое снабжение удалённого объекта",
       "status": "ACTIVE_M2",
-      "goal_ru": "Автоматизировать питание города без жажды, порчи и нескольких nutrition-шкал.",
+      "goal_ru": "Собрать и затем автоматизировать проверяемую поставку аммиака и питьевой воды для удалённого производственного объекта.",
       "critical_component_refs": [
-        "industrial_frontier:component/p4/city_ration_batch"
+        "industrial_frontier:component/p4/technical_supply_batch"
       ],
       "training_batches": 2,
       "repeated_manual_operations": 6,
@@ -784,7 +783,7 @@
       "active_minutes": 5,
       "passive_minutes": 2,
       "rng_percent": 100,
-      "deterministic_alternative_ru": "Рацион принимает категории ингредиентов и имеет гарантированный рецепт.",
+      "deterministic_alternative_ru": "Оба ресурса производятся известными технологическими маршрутами и не зависят от случайной добычи.",
       "automation_epoch": 4,
       "mass_demand_epoch": 4,
       "returned_tools_or_catalysts": true,
@@ -792,12 +791,11 @@
         "MICROCRAFT"
       ],
       "result": "EXPLAIN",
-      "decision_ru": "Farmer's Delight и Create Central Kitchen установлены. Шесть ручных операций и шесть переносов остаются объяснимым учебным максимумом первой партии, но не нормой серийного снабжения; точные числа ждут пользовательского замера.",
+      "decision_ru": "Шесть ручных операций и шесть переносов остаются учебным максимумом для первых двух поставок, но не нормой серийного снабжения. После проверки маршрутов комплектование должно перейти на насосы, упаковку и автоматическую выдачу заказа; точные числа ждут пользовательского замера.",
       "evidence_refs": [
-        "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md",
-        "docs/registries/curseforge_sources.json",
-        "kubejs/server_scripts/40_balance/m4_municipal_contracts.js",
-        "kubejs/server_scripts/40_balance/m4_city_signals.js"
+        "docs/CURSEFORGE_CHEMISTRY_AUDIT.md",
+        "docs/GLOBAL_TECH_CITY_CURSEFORGE_AUDIT.md#water",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
       ],
       "gate": "M10_USER_GRIND_TEST"
     },

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "gtceu:luv_lapotronic_battery",
+    "gtceu:luv_vanadium_battery"
+  ]
+}

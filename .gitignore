@@ -43,3 +43,11 @@ usernamecache.json.bak
 # --- Клиентские папки, не относящиеся к сборке ---
 /resourcepacks/
 shaderpacks/
+
+# --- Локальные артефакты статических проверок ---
+/tmp/
+/build/questbook_v2/
+/build/tmp_mod_inspect/
+/build/uv-cache/
+**/__pycache__/
+*.pyc

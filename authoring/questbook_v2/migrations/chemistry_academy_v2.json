@@ -1,0 +1,270 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/chemistry_academy_v2",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.passports.intro",
+      "old_engine_id": "3070000000000001",
+      "new_alias": "if.quest.v2.passports.intro",
+      "new_engine_id": "3070000000000001",
+      "policy": "carry",
+      "reason": "Вводная сохранила прежнюю учебную цель: объяснить назначение паспорта материала.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "authoring/questbook_v2/70_material_passports.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.entity_form_id",
+      "old_engine_id": "3070000000000002",
+      "new_alias": "if.quest.v2.passports.entity_form_id",
+      "new_engine_id": "3A70000000000001",
+      "policy": "review",
+      "reason": "Новая задача требует два конкретных образца и различает вещество, форму и предмет; прежнее завершение нельзя переносить автоматически.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "docs/registries/quest_acceptance_sets.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.anatomy",
+      "old_engine_id": "3070000000000003",
+      "new_alias": "if.quest.v2.passports.anatomy",
+      "new_engine_id": "3070000000000003",
+      "policy": "carry",
+      "reason": "Раздел по-прежнему учит читать состав и поля паспорта материала.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "docs/registries/m2_substance_passports.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.worldgen_owner",
+      "old_engine_id": "3070000000000004",
+      "new_alias": "if.quest.v2.passports.worldgen_owner",
+      "new_engine_id": "3070000000000004",
+      "policy": "carry",
+      "reason": "Учебная цель не изменилась: один природный источник обслуживает общую дальнейшую переработку.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "docs/registries/m2_domain_process_ownership.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.accepted_inputs",
+      "old_engine_id": "3070000000000005",
+      "new_alias": "if.quest.v2.passports.accepted_inputs",
+      "new_engine_id": "3A70000000000002",
+      "policy": "review",
+      "reason": "Новое условие использует проверенный набор железных самородков и требует реальный предмет вместо прежней общей отметки.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "docs/registries/quest_acceptance_sets.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.create_gt_contract",
+      "old_engine_id": "3070000000000006",
+      "new_alias": "if.quest.v2.passports.create_gt_contract",
+      "new_engine_id": "3A70000000000003",
+      "policy": "review",
+      "reason": "Старая задача проверяла посторонний предмет; новая честно требует общий латунный выход правильного рецепта меди и цинка.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.specialized_forms",
+      "old_engine_id": "3070000000000007",
+      "new_alias": "if.quest.v2.passports.specialized_forms",
+      "new_engine_id": "3070000000000007",
+      "policy": "carry",
+      "reason": "Раздел сохранил прежнее назначение: объяснить строгие границы растворов, топлива и чистых соединений.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "docs/registries/m2_substance_passports.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.safe_equivalence",
+      "old_engine_id": "3070000000000008",
+      "new_alias": "if.quest.v2.passports.safe_equivalence",
+      "new_engine_id": "3A70000000000004",
+      "policy": "review",
+      "reason": "Обновлённая задача требует совместимую железную пластину и учит проверять цену обратного превращения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "docs/registries/quest_acceptance_sets.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.bypass_audit",
+      "old_engine_id": "3070000000000009",
+      "new_alias": "if.quest.v2.passports.bypass_audit",
+      "new_engine_id": "3070000000000009",
+      "policy": "carry",
+      "reason": "Диагностическая способность сохранилась: находить рецепты, нарушающие эпоху, массу или обязательную стадию.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "docs/registries/m2_bypass_decisions.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.passports.signoff",
+      "old_engine_id": "307000000000000A",
+      "new_alias": "if.quest.v2.passports.signoff",
+      "new_engine_id": "3A70000000000007",
+      "policy": "review",
+      "reason": "Итог теперь включает практические образцы, схемы сплавов и полимеров, поэтому старой отметки недостаточно.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/70_material_passports.json",
+        "authoring/questbook_v2/70_material_passports.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.intro",
+      "old_engine_id": "3071000000000001",
+      "new_alias": "if.quest.v2.elements.intro",
+      "new_engine_id": "3071000000000001",
+      "policy": "carry",
+      "reason": "Вводная сохранила роль справочной карты элементов и производственных циклов.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/71_academy_of_elements.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.purity",
+      "old_engine_id": "3071000000000002",
+      "new_alias": "if.quest.v2.elements.purity",
+      "new_engine_id": "3071000000000002",
+      "policy": "carry",
+      "reason": "Раздел по-прежнему объясняет ступени чистоты и смысл разделительных операций.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "docs/registries/m2_substance_passports.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.carbon",
+      "old_engine_id": "3071000000000003",
+      "new_alias": "if.quest.v2.elements.carbon",
+      "new_engine_id": "3071000000000003",
+      "policy": "carry",
+      "reason": "Углерод сохранил прежнюю учебную роль связующего элемента топлива, металлургии и химии.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/12_p2.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.sulfur",
+      "old_engine_id": "3071000000000004",
+      "new_alias": "if.quest.v2.elements.sulfur",
+      "new_engine_id": "3071000000000004",
+      "policy": "carry",
+      "reason": "Серная ветвь сохранила способность объяснять производство, потребление и возврат кислоты.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/14_p4.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.nitrogen",
+      "old_engine_id": "3071000000000005",
+      "new_alias": "if.quest.v2.elements.nitrogen",
+      "new_engine_id": "3071000000000005",
+      "policy": "carry",
+      "reason": "Азотный раздел по-прежнему ведёт от воздуха через аммиак к кислоте и удобрениям.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/14_p4.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.chlorine",
+      "old_engine_id": "3071000000000006",
+      "new_alias": "if.quest.v2.elements.chlorine",
+      "new_engine_id": "3071000000000006",
+      "policy": "carry",
+      "reason": "Хлорная ветвь сохранила прежнюю способность объяснять совместные продукты электролиза.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/14_p4.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.water",
+      "old_engine_id": "3071000000000007",
+      "new_alias": "if.quest.v2.elements.water",
+      "new_engine_id": "3071000000000007",
+      "policy": "carry",
+      "reason": "Водный раздел сохранил прежнюю цель: разделять сырую, подготовленную и отработанную воду.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/14_p4.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.silicon",
+      "old_engine_id": "3071000000000008",
+      "new_alias": "if.quest.v2.elements.silicon",
+      "new_engine_id": "3071000000000008",
+      "policy": "carry",
+      "reason": "Кремниевый раздел по-прежнему объясняет ценность чистого и повторяемого потока для электроники.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/15_p5.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.nuclear",
+      "old_engine_id": "3071000000000009",
+      "new_alias": "if.quest.v2.elements.nuclear",
+      "new_engine_id": "3071000000000009",
+      "policy": "carry",
+      "reason": "Ядерный раздел сохранил прежнюю цель: показать полный путь материала от очистки до хранения остатка.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/16_p6.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.elements.index",
+      "old_engine_id": "3071000000000010",
+      "new_alias": "if.quest.v2.elements.index",
+      "new_engine_id": "3A71000000000005",
+      "policy": "review",
+      "reason": "Итоговый указатель расширен реальными платиновыми и редкоземельными цепочками GTEC и связан с паспортами материалов.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/71_academy_of_elements.json",
+        "authoring/questbook_v2/71_academy_of_elements.json",
+        "mods/gtec-1.20.1-0.2.2.jar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "mvs:campsite",
+    "philipsruins:ancient_ruins",
+    "repurposed_structures:mansion_birch",
+    "towns_and_towers:village_badlands",
+    "betterdeserttemples:desert_temple",
+    "betterdungeons:small_dungeon",
+    "betterjungletemples:jungle_temple",
+    "betterwitchhuts:witch_hut"
+  ]
+}

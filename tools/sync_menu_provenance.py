@@ -152,13 +152,22 @@ ASSET_SPECS: dict[str, dict[str, object]] = {
 }
 
 for size in (16, 32, 64, 128, 256):
-    ASSET_SPECS[f"config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/textures/gui/icon_{size}.png"] = {
+    icon_spec = {
         "asset_id": f"industrial_frontier:asset/gui/icon_{size}",
         "resource_location": f"industrial_frontier:textures/gui/icon_{size}.png",
         "source_type": "PROJECT_GENERATED",
-        "source_artwork_id": "industrial_frontier:source/brand/mark",
-        "source_note": "Size-specific orbital-foundry icon built by tools/build_menu_visuals.py; small variants receive controlled contrast and sharpening.",
     }
+    if size <= 32:
+        icon_spec["source_note"] = (
+            "Dedicated Recast micro-mark drawn directly on a 16px grid by tools/build_menu_visuals.py; "
+            "the 32px delivery uses nearest-neighbour scaling and is not a downsampled illustration."
+        )
+    else:
+        icon_spec["source_artwork_id"] = "industrial_frontier:source/brand/mark"
+        icon_spec["source_note"] = (
+            "Size-specific orbital-foundry icon built from the accepted source artwork by tools/build_menu_visuals.py."
+        )
+    ASSET_SPECS[f"config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/textures/gui/icon_{size}.png"] = icon_spec
 
 ASSET_SPECS["config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/textures/gui/mark.png"] = {
     "asset_id": "industrial_frontier:asset/gui/mark",
@@ -243,7 +252,8 @@ def main() -> int:
     registry["assets"] = sorted(old_assets.values(), key=lambda entry: entry["path"])
     registry["generator"]["method"] = (
         "Deterministic Pillow rendering for symbols and UI states; accepted ImageGen artwork is reframed and alpha-preserved by "
-        "tools/build_menu_visuals.py; FancyMenu delivery copies are byte-identical to canonical resource-pack assets."
+        "tools/build_menu_visuals.py; 16/32px window icons are direct pixel-grid micro-marks; FancyMenu delivery copies are "
+        "byte-identical to canonical resource-pack assets."
     )
 
     REGISTRY_PATH.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

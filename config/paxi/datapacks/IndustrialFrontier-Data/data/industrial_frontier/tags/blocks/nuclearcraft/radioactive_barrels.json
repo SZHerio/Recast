@@ -1,0 +1,10 @@
+{
+  "__comment": "Семейство хранилищ NuclearCraft от базовой до элитной бочки. Итоговая приёмка принимает безопасный апгрейд.",
+  "replace": false,
+  "values": [
+    "nuclearcraft:basic_barrel",
+    "nuclearcraft:advanced_barrel",
+    "nuclearcraft:du_barrel",
+    "nuclearcraft:elite_barrel"
+  ]
+}

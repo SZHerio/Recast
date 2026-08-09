@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "gtceu:lv_macerator",
+    "gtceu:mv_macerator",
+    "gtceu:hv_macerator",
+    "gtceu:ev_macerator",
+    "gtceu:iv_macerator",
+    "gtceu:luv_macerator",
+    "gtceu:zpm_macerator",
+    "gtceu:uv_macerator"
+  ]
+}

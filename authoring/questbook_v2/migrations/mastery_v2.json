@@ -1,0 +1,93 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/mastery_v2",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.mastery.intro",
+      "old_engine_id": "3072000000000001",
+      "new_alias": "if.quest.v2.mastery.intro",
+      "new_engine_id": "3072000000000001",
+      "policy": "carry",
+      "reason": "Вводная сохранила роль добровольного пособия и получила полный порядок наблюдения за линией.",
+      "evidence": [
+        "authoring/quests/72_mastery_distributed_factory.json",
+        "authoring/questbook_v2/72_mastery_distributed_factory.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.mastery.where_it_stopped",
+      "old_engine_id": "3072000000000002",
+      "new_alias": "if.quest.v2.mastery.where_it_stopped",
+      "new_engine_id": "3072000000000002",
+      "policy": "carry",
+      "reason": "Способность искать первый переполненный промежуточный запас сохранена и объяснена пошагово.",
+      "evidence": [
+        "authoring/quests/72_mastery_distributed_factory.json",
+        "authoring/questbook_v2/72_mastery_distributed_factory.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.mastery.reserve_math",
+      "old_engine_id": "3072000000000003",
+      "new_alias": "if.quest.v2.mastery.reserve_math",
+      "new_engine_id": "3072000000000003",
+      "policy": "carry",
+      "reason": "Памятка по расчёту резерва сохранила прежний смысл и теперь связывает объём со временем восстановления.",
+      "evidence": [
+        "authoring/quests/72_mastery_distributed_factory.json",
+        "authoring/questbook_v2/72_mastery_distributed_factory.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.mastery.expand_without_rebuild",
+      "old_engine_id": "3072000000000004",
+      "new_alias": "if.quest.v2.mastery.expand_without_rebuild",
+      "new_engine_id": "3072000000000004",
+      "policy": "carry",
+      "reason": "Совет оставлять место под расширение сохранён и дополнен проходами и точками обслуживания.",
+      "evidence": [
+        "authoring/quests/72_mastery_distributed_factory.json",
+        "authoring/questbook_v2/72_mastery_distributed_factory.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.mastery.boring_work",
+      "old_engine_id": "3072000000000005",
+      "new_alias": "if.quest.v2.mastery.boring_work",
+      "new_engine_id": "3072000000000005",
+      "policy": "carry",
+      "reason": "Правило автоматизации повторяющейся ручной работы сохранено без добавления нового доказательства.",
+      "evidence": [
+        "authoring/quests/72_mastery_distributed_factory.json",
+        "authoring/questbook_v2/72_mastery_distributed_factory.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.mastery.power_discipline",
+      "old_engine_id": "3072000000000006",
+      "new_alias": "if.quest.v2.mastery.power_discipline",
+      "new_engine_id": "3072000000000006",
+      "policy": "carry",
+      "reason": "Памятка сохранила идею приоритетного отключения нагрузки и получила безопасный порядок восстановления.",
+      "evidence": [
+        "authoring/quests/72_mastery_distributed_factory.json",
+        "authoring/questbook_v2/72_mastery_distributed_factory.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.mastery.handover",
+      "old_engine_id": "3072000000000007",
+      "new_alias": "if.quest.v2.mastery.handover",
+      "new_engine_id": "3072000000000007",
+      "policy": "carry",
+      "reason": "Назначение передачи смены не изменилось; новая версия перечисляет минимальный состав понятной инструкции.",
+      "evidence": [
+        "authoring/quests/72_mastery_distributed_factory.json",
+        "authoring/questbook_v2/72_mastery_distributed_factory.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "gtceu:lv_ore_washer",
+    "gtceu:mv_ore_washer",
+    "gtceu:hv_ore_washer",
+    "gtceu:ev_ore_washer",
+    "gtceu:iv_ore_washer",
+    "gtceu:luv_ore_washer",
+    "gtceu:zpm_ore_washer",
+    "gtceu:uv_ore_washer"
+  ]
+}

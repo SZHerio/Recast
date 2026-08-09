@@ -12,6 +12,11 @@ layout-meta {
 }
 
 customization {
+  action = setscale
+  scale = 2.0
+}
+
+customization {
   action = autoscale
   basewidth = 854
   baseheight = 480

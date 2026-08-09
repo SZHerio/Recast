@@ -1,0 +1,8 @@
+{
+  "__comment": "Буксиры Little Logistics: паровой и электрический варианты выполняют одну роль в грузовом конвое.",
+  "replace": false,
+  "values": [
+    "littlelogistics:tug",
+    "littlelogistics:energy_tug"
+  ]
+}

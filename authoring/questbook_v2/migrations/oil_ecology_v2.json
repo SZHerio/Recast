@@ -1,0 +1,79 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/oil_ecology_v2",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.oil.intro",
+      "old_engine_id": "3024000000000001",
+      "new_alias": "if.quest.v2.oil.intro",
+      "new_engine_id": "3024000000000001",
+      "policy": "carry",
+      "reason": "Вводная сохранила прежнюю способность: объяснить роль нефти и порядок изучения участка; производственные обещания вынесены в отдельные проверяемые задачи.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/24_oil_line.json",
+        "authoring/questbook_v2/24_oil_ecology.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.oil.survey",
+      "old_engine_id": "3024000000000002",
+      "new_alias": "if.quest.v2.oil.seismic_survey",
+      "new_engine_id": "3A24000000000001",
+      "policy": "review",
+      "reason": "Старая галочка не подтверждала ни установленный прибор, ни проведённое измерение; новая задача проверяет размещение и использование сейсмического инструмента.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/24_oil_line.json",
+        "mods/ImmersivePetroleum-1.20.1-4.3.1-36b.jar!data/immersivepetroleum/recipes/seismic_survey_tool.json",
+        "authoring/questbook_v2/24_oil_ecology.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.oil.distillation",
+      "old_engine_id": "3024000000000003",
+      "new_alias": "if.quest.v2.oil.distillation_tower",
+      "new_engine_id": "3A24000000000007",
+      "policy": "review",
+      "reason": "Старая галочка заменена доступом к сформированной башне и отдельными задачами на реальные выходы: нафту, сернистый дизель, смазочную фракцию и битум.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/24_oil_line.json",
+        "mods/ImmersivePetroleum-1.20.1-4.3.1-36b.jar!data/immersivepetroleum/recipes/distillationtower/oil.json",
+        "authoring/questbook_v2/24_oil_ecology.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.oil.crusher",
+      "old_engine_id": "3024000000000004",
+      "new_alias": "if.quest.v2.oil.crusher",
+      "new_engine_id": "3A24000000000012",
+      "policy": "review",
+      "reason": "Старая описательная задача обещала целую группу машин и ранний обход технологий; новая проверяет только сформированную дробилку и закрепляет её гражданскую нишу без обхода стали и обогащения GregTech.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/24_oil_line.json",
+        "mods/ImmersiveEngineering-1.20.1-10.2.0-183.jar!assets/immersiveengineering/models/item/crusher.json",
+        "authoring/questbook_v2/24_oil_ecology.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.oil.plastic",
+      "old_engine_id": "3024000000000005",
+      "new_alias": "if.quest.v2.oil.plastic",
+      "new_engine_id": "3A24000000000014",
+      "policy": "review",
+      "reason": "Старая галочка лишь заявляла пластик; новая задача требует получить полиэтиленовую пластину после нафтовой ветви и честно сообщает о необходимости проверить точный межмодовый вход в JEI.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/24_oil_line.json",
+        "kubejs/exported/gtceu_item_census.json",
+        "docs/registries/m2_domain_process_ownership.json",
+        "authoring/questbook_v2/24_oil_ecology.json"
+      ]
+    }
+  ]
+}

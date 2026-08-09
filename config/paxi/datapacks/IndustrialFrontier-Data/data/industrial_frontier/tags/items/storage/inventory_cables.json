@@ -1,0 +1,8 @@
+{
+  "__comment": "Обычный и облицованный кабели Tom's Simple Storage выполняют одну сетевую роль.",
+  "replace": false,
+  "values": [
+    "toms_storage:ts.inventory_cable",
+    "toms_storage:ts.inventory_cable_framed"
+  ]
+}

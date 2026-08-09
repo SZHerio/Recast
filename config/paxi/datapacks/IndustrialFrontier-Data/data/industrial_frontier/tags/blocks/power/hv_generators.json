@@ -1,0 +1,8 @@
+{
+  "__comment": "Блочная сторона набора источников HV для проверки установленной и открытой машины.",
+  "replace": false,
+  "values": [
+    "gtceu:hv_steam_turbine",
+    "gtceu:hv_gas_turbine"
+  ]
+}

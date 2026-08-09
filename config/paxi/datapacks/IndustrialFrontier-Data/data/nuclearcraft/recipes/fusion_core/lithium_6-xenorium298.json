@@ -1,0 +1,15 @@
+{
+  "type": "nuclearcraft:fusion_core",
+  "inputFluids": [
+    { "amount": 360, "fluid": "nuclearcraft:lithium_6" },
+    { "amount": 360, "fluid": "nuclearcraft:xenorium_298" }
+  ],
+  "outputFluids": [
+    { "amount": 3000, "fluid": "nuclearcraft:helium" },
+    { "amount": 3000, "fluid": "nuclearcraft:helium" }
+  ],
+  "powerModifier": 510400.0,
+  "radiation": 1.5,
+  "temperature": 14536.0,
+  "timeModifier": 65.0
+}

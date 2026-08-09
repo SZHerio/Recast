@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/quest_world_structure_sets.schema.json",
+  "title": "Industrial Frontier representative world structure sets",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "registry_id",
+    "status",
+    "policy_ru",
+    "sets"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "minLength": 1 },
+    "schema_version": { "const": 1 },
+    "registry_id": { "const": "industrial_frontier:quest/world_structure_sets" },
+    "status": { "const": "STATIC_IDS_CONFIRMED_USER_RUNTIME_PENDING" },
+    "policy_ru": { "$ref": "#/$defs/russianText" },
+    "sets": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/structureSet" }
+    }
+  },
+  "$defs": {
+    "russianText": {
+      "type": "string",
+      "minLength": 12,
+      "pattern": "[А-Яа-яЁё]"
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "source_jar"],
+      "properties": {
+        "id": { "$ref": "#/$defs/identifier" },
+        "source_jar": { "type": "string", "pattern": "^[^/\\]+\\.jar$" }
+      }
+    },
+    "structureSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["set_id", "title_ru", "capability_ru", "tag_id", "tag_file", "values", "runtime_gate"],
+      "properties": {
+        "set_id": { "type": "string", "pattern": "^industrial_frontier:quest_set/world/[a-z0-9_/-]+$" },
+        "title_ru": { "$ref": "#/$defs/russianText" },
+        "capability_ru": { "$ref": "#/$defs/russianText" },
+        "tag_id": { "$ref": "#/$defs/identifier" },
+        "tag_file": { "type": "string", "pattern": "^config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/worldgen/structure/[a-z0-9_/-]+\\.json$" },
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/entry" }
+        },
+        "runtime_gate": { "const": "USER_STRUCTURE_TASK_MATCH_PENDING" }
+      }
+    }
+  }
+}

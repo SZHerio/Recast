@@ -139,6 +139,35 @@
       "copy_status": "RU_PRIMARY_REVIEWED"
     },
     {
+      "set_id": "industrial_frontier:quest_set/p0/iron_pickaxes",
+      "title_ru": "Первая железная кирка",
+      "capability_ru": "Изготовить железную кирку и подтвердить, что первая партия металла уже превращена в рабочий инструмент; ванильная и GregTech-версия считаются равнозначными.",
+      "epoch": 0,
+      "semantic_role": "UTILITY",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:quest_components/iron_pickaxes",
+      "values": [
+        "minecraft:iron_pickaxe",
+        "gtceu:iron_pickaxe"
+      ],
+      "excluded": [
+        {
+          "value": "minecraft:stone_pickaxe",
+          "reason_ru": "Каменная кирка не подтверждает получение и практическое применение первой партии железа."
+        },
+        {
+          "value": "minecraft:diamond_pickaxe",
+          "reason_ru": "Алмазная кирка относится к другому материалу и не должна обходить учебную цепочку железа."
+        }
+      ],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_components/iron_pickaxes.json",
+        "kubejs/exported/gtceu_item_census.json"
+      ],
+      "runtime_gate": "USER_RECIPE_AND_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
       "set_id": "industrial_frontier:quest_set/p0/raw_water",
       "title_ru": "Доступ к обычной воде",
       "capability_ru": "Получить доступ к воде как к ресурсу лагеря; пригодность для питья и промышленная очистка проверяются отдельными задачами.",
@@ -216,19 +245,22 @@
     {
       "set_id": "industrial_frontier:quest_set/p2/coking_feedstock",
       "title_ru": "Угольное сырьё для коксовой линии",
-      "capability_ru": "Получить обычный уголь или сырой уголь GTCEu, который можно подготовить к коксованию; древесный уголь остаётся топливом, но не закрывает этот технологический маршрут.",
+      "capability_ru": "Подготовить обычный уголь, который установленная коксовая печь принимает напрямую; другие углеродные формы требуют отдельной переработки и не подменяют этот шаг.",
       "epoch": 2,
       "semantic_role": "SOURCE",
       "implementation": "ITEM_TAG",
       "tag_id": "industrial_frontier:quest_sources/coking_feedstock",
       "values": [
-        "minecraft:coal",
-        "gtceu:raw_coal"
+        "minecraft:coal"
       ],
       "excluded": [
         {
           "value": "minecraft:charcoal",
           "reason_ru": "Древесный уголь пригоден как раннее топливо, но не подтверждает освоение месторождения и сырьевой ветви кокса."
+        },
+        {
+          "value": "gtceu:raw_coal",
+          "reason_ru": "Сырой уголь GTCEu не входит в прямой вход установленного рецепта коксовой печи; сначала его нужно переработать в обычный уголь."
         },
         {
           "value": "gtceu:coke_gem",
@@ -238,6 +270,75 @@
       "evidence_refs": [
         "kubejs/exported/gtceu_item_census.json",
         "config/gtceu.yaml"
+      ],
+      "runtime_gate": "USER_RECIPE_AND_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p5/purified_iron_bearing_ores",
+      "title_ru": "Очищенные железосодержащие руды",
+      "capability_ru": "Принять очищенный продукт любого раннего железосодержащего минерала и не заставлять игрока переходить на ванильную железную руду ради одной проверки.",
+      "epoch": 5,
+      "semantic_role": "INTERMEDIATE",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:quest_sources/purified_iron_bearing_ores",
+      "values": [
+        "gtceu:purified_iron_ore",
+        "gtceu:purified_yellow_limonite_ore",
+        "gtceu:purified_magnetite_ore",
+        "gtceu:purified_basaltic_mineral_sand_ore",
+        "gtceu:purified_granitic_mineral_sand_ore",
+        "gtceu:purified_pyrite_ore",
+        "gtceu:purified_goethite_ore",
+        "gtceu:purified_hematite_ore"
+      ],
+      "excluded": [
+        {
+          "value": "gtceu:purified_copper_ore",
+          "reason_ru": "Очищенная форма сама по себе недостаточна: минерал должен относиться к подтверждённой железосодержащей ветви."
+        },
+        {
+          "value": "gtceu:crushed_magnetite_ore",
+          "reason_ru": "Раздробленная руда находится на предыдущей ступени обработки и не подтверждает работу полной линии очистки."
+        }
+      ],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/quest_sources/purified_iron_bearing_ores.json",
+        "kubejs/exported/gtceu_item_census.json"
+      ],
+      "runtime_gate": "USER_RECIPE_AND_TASK_MATCH_PENDING",
+      "copy_status": "RU_PRIMARY_REVIEWED"
+    },
+    {
+      "set_id": "industrial_frontier:quest_set/p6/lead_plates",
+      "title_ru": "Совместимые свинцовые пластины",
+  "capability_ru": "Принять обычную свинцовую пластину GregTech, NuclearCraft, Immersive Engineering или HBM как одну материальную форму защитного контура без искусственного повторного изготовления.",
+      "epoch": 6,
+      "semantic_role": "PRODUCT",
+      "implementation": "ITEM_TAG",
+      "tag_id": "industrial_frontier:materials/lead_plates",
+  "values": [
+    "gtceu:lead_plate",
+    "nuclearcraft:lead_plate",
+    "immersiveengineering:plate_lead",
+    "hbm_ntm_rebirth:plate_lead"
+      ],
+      "excluded": [
+        {
+          "value": "gtceu:double_lead_plate",
+          "reason_ru": "Двойная пластина является другой материальной формой и не должна автоматически считаться двумя обычными пластинами."
+        },
+        {
+          "value": "gtceu:lead_ingot",
+          "reason_ru": "Слиток ещё не подтверждает освоение пластинчатой формы, используемой в защитном оборудовании."
+        }
+      ],
+      "evidence_refs": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/materials/lead_plates.json",
+        "kubejs/exported/gtceu_item_census.json",
+    "mods/NuclearCraft-1.20.1-1.2.33.jar!data/forge/tags/items/plates/lead.json",
+    "mods/ImmersiveEngineering-1.20.1-10.2.0-183.jar",
+    "mods/HBM-NTM-Rebirth-1.20.1-1.0.7.1.jar"
       ],
       "runtime_gate": "USER_RECIPE_AND_TASK_MATCH_PENDING",
       "copy_status": "RU_PRIMARY_REVIEWED"

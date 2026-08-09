@@ -43,7 +43,7 @@
         "minecraft": { "const": "1.20.1" },
         "loader": { "type": "string" },
         "fancymenu": { "const": "3.9.9" },
-        "parallax_position_multiplier": { "const": 0.1 },
+        "parallax_position_multiplier": { "const": 1.0 },
         "layout_path": { "type": "string" },
         "builder_path": { "type": "string" },
         "validator_path": { "type": "string" },

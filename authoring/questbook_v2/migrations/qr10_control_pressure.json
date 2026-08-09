@@ -1,0 +1,81 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/qr10_control_pressure",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.workshop.intro",
+      "old_engine_id": "3023000000000001",
+      "new_alias": "if.quest.v2.control.overview",
+      "new_engine_id": "3023000000000001",
+      "policy": "carry",
+      "reason": "Вводная сохранила прежний смысл выбора специализированных систем и стала точнее объяснять их роли.",
+      "evidence": [
+        "authoring/quests/23_pressure_silicon.json",
+        "authoring/questbook_v2/23_control_pressure.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.workshop.foundry",
+      "old_engine_id": "3023000000000002",
+      "new_alias": "if.quest.v2.control.steam_workshop",
+      "new_engine_id": "3A23000000000002",
+      "policy": "review",
+      "reason": "Старая галочка не подтверждала получение литейной, сепаратора и их включение в рабочий паровой цех.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "authoring/questbook_v2/23_control_pressure.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.workshop.pressure",
+      "old_engine_id": "3023000000000003",
+      "new_alias": "if.quest.v2.control.pressure_chamber",
+      "new_engine_id": "3A23000000000004",
+      "policy": "review",
+      "reason": "Новая версия требует безопасный контур, рабочую камеру и реальный продукт вместо чтения общей памятки.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "authoring/questbook_v2/23_control_pressure.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.workshop.lithography",
+      "old_engine_id": "3023000000000004",
+      "new_alias": "if.quest.v2.control.lithography",
+      "new_engine_id": "3A23000000000006",
+      "policy": "review",
+      "reason": "Старая галочка не доказывала изготовление и повторную проверку интегрального элемента.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "authoring/questbook_v2/23_control_pressure.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.workshop.assembly",
+      "old_engine_id": "3023000000000005",
+      "new_alias": "if.quest.v2.control.component_assembly",
+      "new_engine_id": "3A2300000000000A",
+      "policy": "review",
+      "reason": "Новая задача требует рабочую многоблочную линию и полезный заказ, чего прежняя справочная отметка не проверяла.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "authoring/questbook_v2/23_control_pressure.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.workshop.choice",
+      "old_engine_id": "3023000000000006",
+      "new_alias": "if.quest.v2.control.acceptance",
+      "new_engine_id": "3A2300000000000B",
+      "policy": "review",
+      "reason": "Старая развилка завершала необязательное чтение, а новая приёмка проверяет поведение единой производственной системы.",
+      "evidence": [
+        "config/ftbquests/quests/chapters/23_pressure_silicon.snbt",
+        "authoring/questbook_v2/23_control_pressure.json"
+      ]
+    }
+  ]
+}

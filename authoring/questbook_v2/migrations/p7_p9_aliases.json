@@ -1,0 +1,563 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/qr3_p7_p9",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.p7.intro",
+      "old_engine_id": "3017000000000001",
+      "new_alias": "if.quest.v2.p7.brief",
+      "new_engine_id": "3017000000000001",
+      "policy": "carry",
+      "reason": "Вводная по-прежнему объясняет две связанные программы и подтверждается чтением.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.hbm_entry",
+      "old_engine_id": "3017000000000002",
+      "new_alias": "if.quest.v2.p7.hbm_entry",
+      "new_engine_id": "3017000000000002",
+      "policy": "carry",
+      "reason": "Вход HBM сохранил ту же сборочную машину и тот же предметный критерий.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.protected_zone",
+      "old_engine_id": "3017000000000003",
+      "new_alias": "if.quest.v2.p7.protected_zone",
+      "new_engine_id": "3A17000000000003",
+      "policy": "review",
+      "reason": "Старая галочка заменена физическим размещением границы защищённой зоны.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.rbmk",
+      "old_engine_id": "3017000000000004",
+      "new_alias": "if.quest.v2.p7.rbmk",
+      "new_engine_id": "3017000000000004",
+      "policy": "carry",
+      "reason": "Факультативный вход РБМК сохранил консоль и прежний предметный критерий.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.purex",
+      "old_engine_id": "3017000000000005",
+      "new_alias": "if.quest.v2.p7.strategic_process",
+      "new_engine_id": "3A17000000000005",
+      "policy": "review",
+      "reason": "Объяснение PUREX заменено взаимодействием с установкой и реальным выходом нептуния.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.radiation_model",
+      "old_engine_id": "3017000000000006",
+      "new_alias": "if.quest.v2.p7.radiation_control",
+      "new_engine_id": "3A17000000000004",
+      "policy": "review",
+      "reason": "Теоретическая галочка стала проверкой дозиметра и отдельной тары для отхода.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.strategic_charge",
+      "old_engine_id": "3017000000000007",
+      "new_alias": "if.quest.v2.p7.strategic_rules",
+      "new_engine_id": "3D7ABD69A00ED421",
+      "policy": "review",
+      "reason": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.domain_links",
+      "old_engine_id": "3017000000000008",
+      "new_alias": "if.quest.v2.p7.shared_materials",
+      "new_engine_id": "3A17000000000001",
+      "policy": "review",
+      "reason": "Общая справка заменена проверяемым материальным соединением двух программ.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.clearances",
+      "old_engine_id": "3017000000000009",
+      "new_alias": "if.quest.v2.p7.protected_zone",
+      "new_engine_id": "3A17000000000003",
+      "policy": "review",
+      "reason": "Контроль доступа включён в физическую защищённую зону и требует новой приёмки.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.counterintel",
+      "old_engine_id": "3017000000000010",
+      "new_alias": "if.quest.v2.p7.strategic_rules",
+      "new_engine_id": "3D7ABD69A00ED421",
+      "policy": "review",
+      "reason": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.rocket_materials",
+      "old_engine_id": "3017000000000011",
+      "new_alias": "if.quest.v2.p7.shared_materials",
+      "new_engine_id": "3A17000000000001",
+      "policy": "review",
+      "reason": "Ракетные материалы объединены с общим запасом HBM и космической программы.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.rocket_fuel",
+      "old_engine_id": "3017000000000012",
+      "new_alias": "if.quest.v2.p7.rocket_fuel",
+      "new_engine_id": "3A17000000000006",
+      "policy": "review",
+      "reason": "Старая галочка заменена отдельными проверками топлива и жидкого кислорода.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.rocket_electronics",
+      "old_engine_id": "3017000000000013",
+      "new_alias": "if.quest.v2.p7.shared_electronics",
+      "new_engine_id": "3A17000000000002",
+      "policy": "review",
+      "reason": "Ракетная электроника стала общей проверкой схемы EV и маршрутного чипа.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.spaceport",
+      "old_engine_id": "3017000000000014",
+      "new_alias": "if.quest.v2.p7.spaceport",
+      "new_engine_id": "3A17000000000007",
+      "policy": "review",
+      "reason": "Предметный пропуск заменён размещением площадки и взаимодействием со сканером.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.suit_oxygen",
+      "old_engine_id": "3017000000000015",
+      "new_alias": "if.quest.v2.p7.life_support",
+      "new_engine_id": "3A17000000000008",
+      "policy": "review",
+      "reason": "Новая задача требует полный комплект скафандра вместо одного общего предметного маркера.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.first_launch",
+      "old_engine_id": "3017000000000016",
+      "new_alias": "if.quest.v2.p7.first_launch",
+      "new_engine_id": "3A17000000000009",
+      "policy": "review",
+      "reason": "Ручная галочка первого запуска заменена проверяемым посещением лунного измерения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.sealing_base",
+      "old_engine_id": "3017000000000017",
+      "new_alias": "if.quest.v2.p8.colony_habitat",
+      "new_engine_id": "3A18000000000003",
+      "policy": "review",
+      "reason": "Герметизация перенесена в постоянный колониальный контур со шлюзом и кислородом.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.return_flow",
+      "old_engine_id": "3017000000000018",
+      "new_alias": "if.quest.v2.p7.return_sample",
+      "new_engine_id": "3A17000000000010",
+      "policy": "review",
+      "reason": "Старая галочка возврата заменена контрольным лунным образцом без ложной автоматизации.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.planetary",
+      "old_engine_id": "3017000000000019",
+      "new_alias": "if.quest.v2.p8.specialisation",
+      "new_engine_id": "362248ECEC2D19D8",
+      "policy": "review",
+      "reason": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/18_p8.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.deep_path",
+      "old_engine_id": "3017000000000020",
+      "new_alias": "if.quest.v2.p7.deep_path",
+      "new_engine_id": "3017000000000020",
+      "policy": "carry",
+      "reason": "Факультативный стол проектирования двигателя и предметный критерий не изменились.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p7.emergency",
+      "old_engine_id": "3017000000000021",
+      "new_alias": "if.quest.v2.p7.emergency",
+      "new_engine_id": "3017000000000021",
+      "policy": "carry",
+      "reason": "Аварийный регламент сохранил справочную роль и проверку прочитанной инструкции.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/17_p7_strategic_space.json",
+        "authoring/questbook_v2/17_p7.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.intro",
+      "old_engine_id": "3018000000000001",
+      "new_alias": "if.quest.v2.p8.brief",
+      "new_engine_id": "3018000000000001",
+      "policy": "carry",
+      "reason": "Вводная сохранила орбитальную сеть как связь производств и проверку чтения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.specialisation",
+      "old_engine_id": "3018000000000002",
+      "new_alias": "if.quest.v2.p8.specialisation",
+      "new_engine_id": "362248ECEC2D19D8",
+      "policy": "review",
+      "reason": "Несколько старых квестов сведены в одну новую цель. Выполнение одного из них не доказывает весь объединённый результат, поэтому цель проверяется заново.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.flow",
+      "old_engine_id": "3018000000000003",
+      "new_alias": "if.quest.v2.p8.automated_flow",
+      "new_engine_id": "3A18000000000001",
+      "policy": "review",
+      "reason": "Старая галочка заменена ручной приёмкой двух рейсов через интерфейс сканера.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.survey_satellite",
+      "old_engine_id": "3018000000000004",
+      "new_alias": "if.quest.v2.p8.survey_satellite",
+      "new_engine_id": "3018000000000004",
+      "policy": "carry",
+      "reason": "Спутник разведки и точный предметный критерий остались без изменения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.navigation_grid",
+      "old_engine_id": "3018000000000005",
+      "new_alias": "if.quest.v2.p8.navigation_grid",
+      "new_engine_id": "3018000000000005",
+      "policy": "carry",
+      "reason": "Первый навигационный спутник и его предметный критерий сохранились.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.power_beam",
+      "old_engine_id": "3018000000000006",
+      "new_alias": "if.quest.v2.p8.energy_reserve",
+      "new_engine_id": "3A18000000000005",
+      "policy": "review",
+      "reason": "Наличие приёмника расширено размещением, объёмом энергии и ручным испытанием резерва.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.elevator",
+      "old_engine_id": "3018000000000007",
+      "new_alias": "if.quest.v2.p8.elevator",
+      "new_engine_id": "3A1800000000000A",
+      "policy": "review",
+      "reason": "Экономическая справка заменена проверяемым входным блоком добровольного лифта.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.accelerator",
+      "old_engine_id": "3018000000000008",
+      "new_alias": "if.quest.v2.p8.accelerator",
+      "new_engine_id": "3018000000000008",
+      "policy": "carry",
+      "reason": "Контроллер линейного ускорителя и предметная проверка остались прежними.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.target_chamber",
+      "old_engine_id": "3018000000000009",
+      "new_alias": "if.quest.v2.p8.target_chamber",
+      "new_engine_id": "3A18000000000007",
+      "policy": "review",
+      "reason": "Старая галочка заменена физическим размещением контроллера мишенной камеры.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.fusion_split",
+      "old_engine_id": "3018000000000010",
+      "new_alias": "if.quest.v2.p8.fusion_material",
+      "new_engine_id": "3A18000000000008",
+      "policy": "review",
+      "reason": "Теоретическое разделение ролей заменено реактором LuV и реальным коперницием-291.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.plasma_forge",
+      "old_engine_id": "3018000000000011",
+      "new_alias": "if.quest.v2.p8.plasma_forge",
+      "new_engine_id": "3A1800000000000B",
+      "policy": "review",
+      "reason": "Старая галочка заменена предметной проверкой плазменной кузницы HBM.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.renewables",
+      "old_engine_id": "3018000000000012",
+      "new_alias": "if.quest.v2.p8.renewables",
+      "new_engine_id": "3018000000000012",
+      "policy": "carry",
+      "reason": "Памятка о смешанной энергетике сохранила справочную роль и проверку чтения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p8.diagnosis",
+      "old_engine_id": "3018000000000013",
+      "new_alias": "if.quest.v2.p8.diagnostics",
+      "new_engine_id": "3A18000000000006",
+      "policy": "review",
+      "reason": "Справочная галочка заменена ручной приёмкой раннего сигнала через центральный накопитель.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/18_p8_orbital_network.json",
+        "authoring/questbook_v2/18_p8.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.intro",
+      "old_engine_id": "3019000000000001",
+      "new_alias": "if.quest.v2.p9.brief",
+      "new_engine_id": "3019000000000001",
+      "policy": "carry",
+      "reason": "Финальная вводная сохранила критерий самостоятельной цивилизации и проверку чтения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.swarm_line",
+      "old_engine_id": "3019000000000002",
+      "new_alias": "if.quest.v2.p9.swarm_line",
+      "new_engine_id": "3019000000000002",
+      "policy": "carry",
+      "reason": "Первый спутник роя и точный предметный критерий сохранились без изменения.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.swarm_upkeep",
+      "old_engine_id": "3019000000000003",
+      "new_alias": "if.quest.v2.p9.maintenance",
+      "new_engine_id": "3A19000000000003",
+      "policy": "review",
+      "reason": "Общая справка об износе стала ручной приёмкой полного цикла обслуживания.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.colony_life",
+      "old_engine_id": "3019000000000004",
+      "new_alias": "if.quest.v2.p9.colony_autonomy",
+      "new_engine_id": "3A19000000000006",
+      "policy": "review",
+      "reason": "Справка о снабжении расширена ручным аудитом жизнеобеспечения и местного ремонта.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.colony_industry",
+      "old_engine_id": "3019000000000005",
+      "new_alias": "if.quest.v2.p9.local_industry",
+      "new_engine_id": "3A19000000000001",
+      "policy": "review",
+      "reason": "Старая галочка заменена сборщиком IV и ручной приёмкой местной запасной части.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.quantum",
+      "old_engine_id": "3019000000000006",
+      "new_alias": "if.quest.v2.p9.quantum",
+      "new_engine_id": "3019000000000006",
+      "policy": "carry",
+      "reason": "Квантовый трансформатор и его точный предметный критерий сохранились.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.closed_loop",
+      "old_engine_id": "3019000000000007",
+      "new_alias": "if.quest.v2.p9.closed_loop",
+      "new_engine_id": "3A19000000000002",
+      "policy": "review",
+      "reason": "Старая галочка заменена трёхцикловой ручной сверкой материального баланса.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.p9.resolution",
+      "old_engine_id": "3019000000000008",
+      "new_alias": "if.quest.v2.p9.final_choice",
+      "new_engine_id": "3A19000000000008",
+      "policy": "review",
+      "reason": "Справочный финал заменён честным выбором любого одного завершённого мегапроекта.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/19_p9_finale.json",
+        "authoring/questbook_v2/19_p9.json"
+      ]
+    }
+  ]
+}

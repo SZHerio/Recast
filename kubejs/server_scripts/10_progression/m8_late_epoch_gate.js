@@ -43,6 +43,19 @@ ServerEvents.recipes((event) => {
     S: 'gtceu:iv_sensor'
   }).id('industrial_frontier:m8/nuclearcraft/linear_accelerator')
 
+  // В NuclearCraft 1.2.33 источник Ca-48 зарегистрирован и работает в
+  // ускорителе, но ни один survival-рецепт его не производит. Без этого моста
+  // ветвь Copernicium физически непроходима. IV-центрифуга моделирует одну
+  // промышленную каскадную сепарацию: стек кальция проходит через четыре
+  // расходных фильтра, десять обогащённых источников уходят в ускоритель, а
+  // основная масса кальция возвращается в оборот. Один запуск даёт ровно
+  // 50 000 000 ионов — точный расход одной мишени, поэтому ручного гринда нет.
+  event.recipes.gtceu.centrifuge('industrial_frontier:m8/isotopes/calcium_48_source_batch')
+    .itemInputs('64x gtceu:calcium_dust', '4x gtceu:item_filter')
+    .itemOutputs('10x nuclearcraft:source_calcium_48', '54x gtceu:calcium_dust')
+    .duration(2400)
+    .EUt(7680)
+
   event.shaped('nuclearcraft:ring_accelerator_controller', [
     'PEP',
     'AFA',

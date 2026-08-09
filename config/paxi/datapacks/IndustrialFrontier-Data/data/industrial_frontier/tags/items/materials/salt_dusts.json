@@ -1,0 +1,5 @@
+{
+  "__comment": "Совместимые пыли соли для приготовления рассола.",
+  "replace": false,
+  "values": ["#forge:dusts/salt"]
+}

@@ -1,0 +1,5 @@
+{
+  "__comment": "Совместимые пыли серы для ранней сернокислотной ветви.",
+  "replace": false,
+  "values": ["#forge:dusts/sulfur"]
+}

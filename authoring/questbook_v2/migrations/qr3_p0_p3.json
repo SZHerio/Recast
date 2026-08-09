@@ -9,13 +9,15 @@
       "old_alias": "if.quest.start.welcome",
       "old_engine_id": "3000000000000001",
       "new_alias": "if.quest.v2.onboarding.welcome",
-      "new_engine_id": "3000000000000001",
-      "policy": "carry",
-      "reason": "Смысл приветствия сохранён; ранее завершённое чтение не требуется повторять.",
+      "new_engine_id": "358E19D16CFF1CF8",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/00_start_here.json",
-        "authoring/questbook_v2/00_onboarding.json"
+        "authoring/questbook_v2/00_onboarding.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -126,13 +128,15 @@
       "old_alias": "if.quest.p0.camp",
       "old_engine_id": "3010000000000003",
       "new_alias": "if.quest.v2.p0.crafting_table",
-      "new_engine_id": "3010000000000003",
-      "policy": "carry",
-      "reason": "Старое задание лагеря проверяло верстак; теперь это действие выделено и логично расположено.",
+      "new_engine_id": "38A095554A2A0333",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/10_p0_expedition.json",
-        "authoring/questbook_v2/10_p0.json"
+        "authoring/questbook_v2/10_p0.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -165,13 +169,15 @@
       "old_alias": "if.quest.p0.prospect",
       "old_engine_id": "3010000000000006",
       "new_alias": "if.quest.v2.p0.prospect",
-      "new_engine_id": "3010000000000006",
-      "policy": "carry",
-      "reason": "Разведка железосодержащего сырья сохранена, но больше не привязана к одной руде.",
+      "new_engine_id": "35DDD1065975E5CA",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/10_p0_expedition.json",
-        "authoring/questbook_v2/10_p0.json"
+        "authoring/questbook_v2/10_p0.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -191,17 +197,20 @@
       "old_alias": "if.quest.p0.exit",
       "old_engine_id": "3010000000000008",
       "new_alias": "if.quest.v2.p0.commissioning",
-      "new_engine_id": "3010000000000008",
-      "policy": "carry",
-      "reason": "Старое завершение P0 уже подтверждало готовность лагеря; существующий прогресс сохраняется.",
+      "new_engine_id": "3DD22A44EA12FD23",
+      "policy": "review",
+      "reason": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/10_p0_expedition.json",
-        "authoring/questbook_v2/10_p0.json"
+        "authoring/questbook_v2/10_p0.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
-      "old_alias": "if.quest.p1.intro",
+      "old_alias": "if.quest.p1.rotation",
+      "old_runtime_alias": "if.quest.p1.intro",
       "old_engine_id": "3011000000000001",
       "new_alias": "if.quest.v2.p1.intro",
       "new_engine_id": "3011000000000001",
@@ -214,7 +223,8 @@
       ]
     },
     {
-      "old_alias": "if.quest.p1.andesite",
+      "old_alias": "if.quest.p1.alloy",
+      "old_runtime_alias": "if.quest.p1.andesite",
       "old_engine_id": "3011000000000002",
       "new_alias": "if.quest.v2.p1.andesite_alloy",
       "new_engine_id": "3011000000000002",
@@ -227,7 +237,8 @@
       ]
     },
     {
-      "old_alias": "if.quest.p1.rotation",
+      "old_alias": "if.quest.p1.line",
+      "old_runtime_alias": "if.quest.p1.rotation",
       "old_engine_id": "3011000000000003",
       "new_alias": "if.quest.v2.p1.rotation",
       "new_engine_id": "3011000000000003",
@@ -256,65 +267,77 @@
       "old_alias": "if.quest.p1.stress",
       "old_engine_id": "3011000000000005",
       "new_alias": "if.quest.v2.p1.stress",
-      "new_engine_id": "3011000000000005",
-      "policy": "carry",
-      "reason": "Контроль нагрузки сети сохранил прежнюю цель и получил проверку взаимодействия.",
+      "new_engine_id": "3538CE73ECF70BAD",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/11_p1_mechanised.json",
-        "authoring/questbook_v2/11_p1.json"
+        "authoring/questbook_v2/11_p1.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
-      "old_alias": "if.quest.p1.mill",
+      "old_alias": "if.quest.p1.machine",
+      "old_runtime_alias": "if.quest.p1.mill",
       "old_engine_id": "3011000000000006",
       "new_alias": "if.quest.v2.p1.mill",
-      "new_engine_id": "3011000000000006",
-      "policy": "carry",
-      "reason": "Мельница остаётся первым рабочим узлом переработки Create.",
+      "new_engine_id": "313F53950BC8F23B",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/11_p1_mechanised.json",
-        "authoring/questbook_v2/11_p1.json"
+        "authoring/questbook_v2/11_p1.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
       "old_alias": "if.quest.p1.press",
       "old_engine_id": "3011000000000007",
       "new_alias": "if.quest.v2.p1.press",
-      "new_engine_id": "3011000000000007",
-      "policy": "carry",
-      "reason": "Механический пресс сохранил назначение рабочего узла формования.",
+      "new_engine_id": "3A8FB34E62555188",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/11_p1_mechanised.json",
-        "authoring/questbook_v2/11_p1.json"
+        "authoring/questbook_v2/11_p1.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
-      "old_alias": "if.quest.p1.line",
+      "old_alias": "if.quest.p1.buffer",
+      "old_runtime_alias": "if.quest.p1.line",
       "old_engine_id": "3011000000000008",
       "new_alias": "if.quest.v2.p1.line",
-      "new_engine_id": "3011000000000008",
-      "policy": "carry",
-      "reason": "Сборка первой механической линии сохранила смысл; новые проверки уточняют работу узлов.",
+      "new_engine_id": "3E36137316A04963",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/11_p1_mechanised.json",
-        "authoring/questbook_v2/11_p1.json"
+        "authoring/questbook_v2/11_p1.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
       "old_alias": "if.quest.p1.exit",
       "old_engine_id": "3011000000000009",
       "new_alias": "if.quest.v2.p1.commissioning",
-      "new_engine_id": "3011000000000009",
-      "policy": "carry",
-      "reason": "Старое завершение P1 уже означало готовую механическую линию.",
+      "new_engine_id": "3BBFA9E08F6D1A38",
+      "policy": "review",
+      "reason": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/11_p1_mechanised.json",
-        "authoring/questbook_v2/11_p1.json"
+        "authoring/questbook_v2/11_p1.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -334,39 +357,45 @@
       "old_alias": "if.quest.p2.carbon",
       "old_engine_id": "3012000000000002",
       "new_alias": "if.quest.v2.p2.carbon_feedstock",
-      "new_engine_id": "3012000000000002",
-      "policy": "carry",
-      "reason": "Углеродное сырьё остаётся входом коксования, а допустимый набор теперь сформулирован явно.",
+      "new_engine_id": "3A12000000000006",
+      "policy": "review",
+      "reason": "Старая отметка подтверждала только уголь. Новый этап дополнительно требует собрать и открыть коксовую печь до получения продукта, поэтому завершение нельзя переносить автоматически.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/12_p2_steam_metallurgy.json",
-        "authoring/questbook_v2/12_p2.json"
+        "authoring/questbook_v2/12_p2.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
       "old_alias": "if.quest.p2.boiler",
       "old_engine_id": "3012000000000003",
       "new_alias": "if.quest.v2.p2.steam_ready",
-      "new_engine_id": "3012000000000003",
-      "policy": "carry",
-      "reason": "Получение рабочего пара сохранило цель, но позволяет выбрать подходящий котёл.",
+      "new_engine_id": "393761C7620D9B07",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/12_p2_steam_metallurgy.json",
-        "authoring/questbook_v2/12_p2.json"
+        "authoring/questbook_v2/12_p2.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
       "old_alias": "if.quest.p2.steam_machine",
       "old_engine_id": "3012000000000004",
       "new_alias": "if.quest.v2.p2.steam_machine",
-      "new_engine_id": "3012000000000004",
-      "policy": "carry",
-      "reason": "Первая паровая машина сохранила прежнее назначение переработки.",
+      "new_engine_id": "30207E5CA3429C20",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/12_p2_steam_metallurgy.json",
-        "authoring/questbook_v2/12_p2.json"
+        "authoring/questbook_v2/12_p2.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -425,13 +454,15 @@
       "old_alias": "if.quest.p2.exit",
       "old_engine_id": "3012000000000009",
       "new_alias": "if.quest.v2.p2.commissioning",
-      "new_engine_id": "3012000000000009",
-      "policy": "carry",
-      "reason": "Старое завершение P2 уже подтверждало готовность парового цеха.",
+      "new_engine_id": "3E35ACD2C187646B",
+      "policy": "review",
+      "reason": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/12_p2_steam_metallurgy.json",
-        "authoring/questbook_v2/12_p2.json"
+        "authoring/questbook_v2/12_p2.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -451,39 +482,45 @@
       "old_alias": "if.quest.p3.generator",
       "old_engine_id": "3013000000000002",
       "new_alias": "if.quest.v2.p3.generator",
-      "new_engine_id": "3013000000000002",
-      "policy": "carry",
-      "reason": "Паровая турбина LV сохранила роль первого источника EU.",
+      "new_engine_id": "336E199F22435704",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/13_p3_electrification.json",
-        "authoring/questbook_v2/13_p3.json"
+        "authoring/questbook_v2/13_p3.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
       "old_alias": "if.quest.p3.cable",
       "old_engine_id": "3013000000000003",
       "new_alias": "if.quest.v2.p3.cable",
-      "new_engine_id": "3013000000000003",
-      "policy": "carry",
-      "reason": "Оловянный кабель остаётся первым проводником сети LV.",
+      "new_engine_id": "3F3E8024F482B958",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/13_p3_electrification.json",
-        "authoring/questbook_v2/13_p3.json"
+        "authoring/questbook_v2/13_p3.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
       "old_alias": "if.quest.p3.buffer",
       "old_engine_id": "3013000000000004",
       "new_alias": "if.quest.v2.p3.buffer",
-      "new_engine_id": "3013000000000004",
-      "policy": "carry",
-      "reason": "Аккумуляторный буфер сохранил роль узла запаса и диагностики.",
+      "new_engine_id": "3BBD1D3385C43666",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/13_p3_electrification.json",
-        "authoring/questbook_v2/13_p3.json"
+        "authoring/questbook_v2/13_p3.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -503,13 +540,15 @@
       "old_alias": "if.quest.p3.machine",
       "old_engine_id": "3013000000000006",
       "new_alias": "if.quest.v2.p3.first_machine",
-      "new_engine_id": "3013000000000006",
-      "policy": "carry",
-      "reason": "Первая машина LV сохранила прежний технологический рубеж.",
+      "new_engine_id": "3F36DF1551176542",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/13_p3_electrification.json",
-        "authoring/questbook_v2/13_p3.json"
+        "authoring/questbook_v2/13_p3.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
@@ -529,26 +568,30 @@
       "old_alias": "if.quest.p3.line",
       "old_engine_id": "3013000000000008",
       "new_alias": "if.quest.v2.p3.line",
-      "new_engine_id": "3013000000000008",
-      "policy": "carry",
-      "reason": "Полная сеть LV сохранила назначение итоговой производственной линии.",
+      "new_engine_id": "32C669D0E2429C33",
+      "policy": "review",
+      "reason": "В Quest Source v2 изменился способ проверки результата. Старое завершение не переносится автоматически, чтобы новый этап не был засчитан без доказательства.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/13_p3_electrification.json",
-        "authoring/questbook_v2/13_p3.json"
+        "authoring/questbook_v2/13_p3.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     },
     {
       "old_alias": "if.quest.p3.exit",
       "old_engine_id": "3013000000000009",
       "new_alias": "if.quest.v2.p3.commissioning",
-      "new_engine_id": "3013000000000009",
-      "policy": "carry",
-      "reason": "Старое завершение P3 уже означало готовый электрический цех.",
+      "new_engine_id": "3B7F69E8E054CA03",
+      "policy": "review",
+      "reason": "Старая ручная отметка не доказывает ввод системы в эксплуатацию. Новый допуск нужно пройти по исполняемым проверкам.",
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/13_p3_electrification.json",
-        "authoring/questbook_v2/13_p3.json"
+        "authoring/questbook_v2/13_p3.json",
+        "docs/registries/quest_rebuild_baseline.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md#12-миграция-и-совместимость-миров"
       ]
     }
   ]

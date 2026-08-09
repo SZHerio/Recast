@@ -1,0 +1,74 @@
+{
+  "source_kind": "quest_migration",
+  "schema_version": 2,
+  "migration_id": "industrial_frontier:quest_migration/settlement_v2",
+  "from_book": "industrial_frontier:quest_source_v1",
+  "to_book": "industrial_frontier:quest_source_v2",
+  "mappings": [
+    {
+      "old_alias": "if.quest.settlement.intro",
+      "old_engine_id": "3022000000000001",
+      "new_alias": "if.quest.v2.settlement.intro",
+      "new_engine_id": "3022000000000001",
+      "policy": "carry",
+      "reason": "Вводная сохранила прежнюю способность: объяснить, зачем промышленной базе нужен живой функциональный город.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/22_settlement.json",
+        "authoring/questbook_v2/22_settlement.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.settlement.townhall",
+      "old_engine_id": "3022000000000002",
+      "new_alias": "if.quest.v2.settlement.townhall",
+      "new_engine_id": "3A22000000000015",
+      "policy": "review",
+      "reason": "Старая галочка не подтверждала размещение ратуши; новая задача требует поставить блок и открыть его управление.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/22_settlement.json",
+        "authoring/questbook_v2/22_settlement.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.settlement.builder",
+      "old_engine_id": "3022000000000003",
+      "new_alias": "if.quest.v2.settlement.builder",
+      "new_engine_id": "3A22000000000016",
+      "policy": "review",
+      "reason": "Старая галочка заменена проверяемыми размещением и открытием хижины строителя, поэтому прежнее завершение нельзя переносить автоматически.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/22_settlement.json",
+        "authoring/questbook_v2/22_settlement.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.settlement.supply",
+      "old_engine_id": "3022000000000004",
+      "new_alias": "if.quest.v2.settlement.supply",
+      "new_engine_id": "3A22000000000017",
+      "policy": "review",
+      "reason": "Новая задача проверяет реальные блоки склада и курьера вместо обещания наладить снабжение обычной галочкой.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/22_settlement.json",
+        "authoring/questbook_v2/22_settlement.json"
+      ]
+    },
+    {
+      "old_alias": "if.quest.settlement.guards",
+      "old_engine_id": "3022000000000005",
+      "new_alias": "if.quest.v2.settlement.guards",
+      "new_engine_id": "3A22000000000018",
+      "policy": "review",
+      "reason": "Новая ветка требует разместить и открыть башню и казарму; прежняя описательная галочка этой способности не подтверждала.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/22_settlement.json",
+        "authoring/questbook_v2/22_settlement.json"
+      ]
+    }
+  ]
+}

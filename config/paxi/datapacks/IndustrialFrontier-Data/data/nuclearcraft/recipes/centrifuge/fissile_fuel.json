@@ -1,0 +1,16 @@
+{
+  "type": "nuclearcraft:centrifuge",
+  "inputFluids": [
+    { "amount": 500, "fluid": "nuclearcraft:fissile_fuel" }
+  ],
+  "outputFluids": [
+    { "amount": 300, "fluid": "nuclearcraft:uranium_238" },
+    { "amount": 80, "fluid": "nuclearcraft:uranium_235" },
+    { "amount": 80, "fluid": "nuclearcraft:uranium_233" },
+    { "amount": 10, "fluid": "nuclearcraft:hydrofluoric_acid" },
+    { "amount": 10, "fluid": "nuclearcraft:sulfuric_acid" }
+  ],
+  "powerModifier": 1.0,
+  "radiation": 1.0,
+  "timeModifier": 1.9
+}

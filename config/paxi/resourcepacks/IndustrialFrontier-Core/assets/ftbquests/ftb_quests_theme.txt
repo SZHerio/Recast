@@ -73,7 +73,7 @@ dependency_line_requires_color: #FFFFB05C
 dependency_line_required_for_color: #FF72CAE8
 dependency_line_selected_speed: 1.25D
 dependency_line_unselected_speed: 0.35D
-dependency_line_thickness: 1.5D
+dependency_line_thickness: 0.18D
 quest_spacing: 1.0D
 pinned_quest_size: 0.75D
 

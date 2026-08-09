@@ -49,9 +49,15 @@ function ifHandleCommissioning(event, completedEpoch) {
   }
 }
 
-for (let epoch = 0; epoch <= 9; epoch++) {
-  const commissioningEpoch = epoch
-  FTBQuestsEvents.completed(`#if_commissioning_p${commissioningEpoch}`, (event) => {
-    ifHandleCommissioning(event, commissioningEpoch)
+function ifRegisterCommissioningListener(completedEpoch) {
+  FTBQuestsEvents.completed(`#if_commissioning_p${completedEpoch}`, (event) => {
+    ifHandleCommissioning(event, completedEpoch)
   })
+}
+
+// Rhino в KubeJS повторно объявляет блочную const-переменную при каждой
+// итерации for. Передаём номер эпохи через отдельную функцию, чтобы все десять
+// обработчиков регистрировались без ошибки redeclaration.
+for (let epoch = 0; epoch <= 9; epoch++) {
+  ifRegisterCommissioningListener(epoch)
 }

@@ -1,0 +1,9 @@
+{
+  "__comment": "Любой штатный респиратор AdPother подтверждает готовность личной защиты; более дорогую уже изготовленную модель не нужно заменять железной ради квеста.",
+  "replace": false,
+  "values": [
+    "adpother:iron_respirator",
+    "adpother:gold_respirator",
+    "adpother:diamond_respirator"
+  ]
+}

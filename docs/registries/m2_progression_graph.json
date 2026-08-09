@@ -264,25 +264,22 @@
     {
       "node_id": "industrial_frontier:epoch/p4",
       "epoch": 4,
-      "title_ru": "Химический город",
-      "title_en": "Chemical City",
+      "title_ru": "Химическая индустрия",
+      "title_en": "Chemical Industry",
       "status": "GATED_CONTENT_NOT_IMPLEMENTED",
-      "fantasy_ru": "Управлять жидкостями, газами и коммунальными потоками.",
-      "required_outcome_ru": "Серная, азотная и хлорная химия, удобрения, водоподготовка и первый городской контракт.",
+      "fantasy_ru": "Управлять жидкостями, газами и технологическими потоками.",
+      "required_outcome_ru": "Серная, азотная и хлорная химия, удобрения, водоподготовка и первый общий технический заказ.",
       "installed_domain_refs": [
         "industrial_frontier:domain/industrial_chemistry_metallurgy",
         "industrial_frontier:domain/integration_authoring"
       ],
-      "gated_domain_refs": [
-        "industrial_frontier:domain/living_city"
-      ],
+      "gated_domain_refs": [],
       "canonical_proofs": [
         "MATERIAL_CHAIN",
         "INFRASTRUCTURE_OR_THROUGHPUT"
       ],
       "contract_refs": [
-        "industrial_frontier:contract/petroleum_to_chemistry",
-        "industrial_frontier:contract/industry_to_living_city"
+        "industrial_frontier:contract/petroleum_to_chemistry"
       ],
       "required_substance_refs": [
         "industrial_frontier:substance/sulfur",
@@ -319,8 +316,7 @@
       ],
       "infrastructure_refs": [
         "industrial_frontier:process/gtceu/industrial_chemistry",
-        "industrial_frontier:energy/gtceu_eu",
-        "industrial_frontier:process/future/city_demand_contracts"
+        "industrial_frontier:energy/gtceu_eu"
       ],
       "extended_refs": [
         "docs/registries/m2_extended_domains.json#/construction/epoch_palettes?epoch=p4",
@@ -331,21 +327,20 @@
         "industrial_frontier:grind/p4/sulfuric_acid",
         "industrial_frontier:grind/p4/nitrogen_chlorine_chemistry",
         "industrial_frontier:grind/p4/water_treatment",
-        "industrial_frontier:grind/p4/city_rations"
+        "industrial_frontier:grind/p4/technical_supply"
       ],
       "critical_component_refs": [
         "industrial_frontier:component/p4/sulfuric_acid_batch",
         "industrial_frontier:component/p4/chlor_alkali_batch",
         "industrial_frontier:component/p4/water_treatment_train",
-        "industrial_frontier:component/p4/city_ration_batch"
+        "industrial_frontier:component/p4/technical_supply_batch"
       ],
       "evidence_refs": [
         "industrial_frontier:evidence/progression/master_epochs",
         "industrial_frontier:evidence/progression/federation"
       ],
       "gate_refs": [
-        "industrial_frontier:gate/progression/p0_p5_content",
-        "industrial_frontier:gate/progression/future_domains"
+        "industrial_frontier:gate/progression/p0_p5_content"
       ]
     },
     {
@@ -354,16 +349,14 @@
       "title_ru": "Региональная фабрика и логистика",
       "title_en": "Regional Factory and Logistics",
       "status": "GATED_CONTENT_NOT_IMPLEMENTED",
-      "fantasy_ru": "Масштабировать город и связать промышленные районы.",
+      "fantasy_ru": "Масштабировать фабрику и связать промышленные районы.",
       "required_outcome_ru": "Массовая переработка, магистральная логистика и автоматический склад.",
       "installed_domain_refs": [
         "industrial_frontier:domain/mechanical_engineering",
         "industrial_frontier:domain/industrial_chemistry_metallurgy",
         "industrial_frontier:domain/digital_factory"
       ],
-      "gated_domain_refs": [
-        "industrial_frontier:domain/living_city"
-      ],
+      "gated_domain_refs": [],
       "canonical_proofs": [
         "INFRASTRUCTURE_OR_THROUGHPUT",
         "MATERIAL_CHAIN"
@@ -406,8 +399,7 @@
         "industrial_frontier:evidence/progression/federation"
       ],
       "gate_refs": [
-        "industrial_frontier:gate/progression/p0_p5_content",
-        "industrial_frontier:gate/progression/future_domains"
+        "industrial_frontier:gate/progression/p0_p5_content"
       ]
     },
     {
@@ -422,8 +414,7 @@
         "industrial_frontier:domain/industrial_chemistry_metallurgy"
       ],
       "gated_domain_refs": [
-        "industrial_frontier:domain/civil_nuclear_industry",
-        "industrial_frontier:domain/living_city"
+        "industrial_frontier:domain/civil_nuclear_industry"
       ],
       "canonical_proofs": [
         "MATERIAL_CHAIN",
@@ -501,8 +492,7 @@
       ],
       "contract_refs": [
         "industrial_frontier:contract/civil_nuclear_to_strategic_nuclear",
-        "industrial_frontier:contract/mature_industry_to_space",
-        "industrial_frontier:contract/city_life_support_to_space"
+        "industrial_frontier:contract/mature_industry_to_space"
       ],
       "required_substance_refs": [
         "industrial_frontier:substance/plutonium",
@@ -554,7 +544,6 @@
       "gated_domain_refs": [
         "industrial_frontier:domain/civil_nuclear_industry",
         "industrial_frontier:domain/strategic_nuclear_program",
-        "industrial_frontier:domain/living_city",
         "industrial_frontier:domain/planetary_spaceflight"
       ],
       "canonical_proofs": [
@@ -563,8 +552,7 @@
         "MATERIAL_CHAIN"
       ],
       "contract_refs": [
-        "industrial_frontier:contract/mature_industry_to_space",
-        "industrial_frontier:contract/city_life_support_to_space"
+        "industrial_frontier:contract/mature_industry_to_space"
       ],
       "required_substance_refs": [
         "industrial_frontier:substance/rocket_fuel",
@@ -577,8 +565,7 @@
       ],
       "infrastructure_refs": [
         "industrial_frontier:process/future/rocket_and_planetary_logistics",
-        "industrial_frontier:process/ae2/autocrafting",
-        "industrial_frontier:process/future/city_demand_contracts"
+        "industrial_frontier:process/ae2/autocrafting"
       ],
       "extended_refs": [
         "docs/registries/m2_extended_domains.json#/construction/epoch_palettes?epoch=p8",
@@ -608,7 +595,7 @@
       "title_en": "Interplanetary Civilization",
       "status": "GATED_NOT_INSTALLED",
       "fantasy_ru": "Завершить не предмет, а устойчивую распределённую систему.",
-      "required_outcome_ru": "Финальный мегапроект с непрерывным снабжением, городской нагрузкой и замкнутыми циклами.",
+      "required_outcome_ru": "Финальный мегапроект с непрерывным снабжением, измеримой промышленной нагрузкой и замкнутыми циклами.",
       "installed_domain_refs": [
         "industrial_frontier:domain/mechanical_engineering",
         "industrial_frontier:domain/industrial_chemistry_metallurgy",
@@ -618,7 +605,6 @@
       "gated_domain_refs": [
         "industrial_frontier:domain/civil_nuclear_industry",
         "industrial_frontier:domain/strategic_nuclear_program",
-        "industrial_frontier:domain/living_city",
         "industrial_frontier:domain/planetary_spaceflight"
       ],
       "canonical_proofs": [
@@ -638,7 +624,6 @@
       ],
       "infrastructure_refs": [
         "industrial_frontier:process/future/rocket_and_planetary_logistics",
-        "industrial_frontier:process/future/city_demand_contracts",
         "industrial_frontier:process/ae2/autocrafting",
         "industrial_frontier:energy/gtceu_eu"
       ],
@@ -3044,8 +3029,8 @@
     },
     {
       "dependency_id": "industrial_frontier:dependency/e0167",
-      "from_ref": "industrial_frontier:process/future/city_demand_contracts",
-      "to_ref": "industrial_frontier:component/p4/city_ration_batch",
+      "from_ref": "industrial_frontier:substance/ammonia",
+      "to_ref": "industrial_frontier:component/p4/technical_supply_batch",
       "relation": "COMPONENT_REQUIRES",
       "status": "GATED_BINDING",
       "recipe_policy_pointer": null,
@@ -3058,13 +3043,13 @@
       ],
       "gate_refs": [
         "industrial_frontier:gate/progression/dependency_static",
-        "industrial_frontier:gate/progression/future_domains"
+        "industrial_frontier:gate/progression/p0_p5_content"
       ]
     },
     {
       "dependency_id": "industrial_frontier:dependency/e0168",
       "from_ref": "industrial_frontier:substance/drinking_water",
-      "to_ref": "industrial_frontier:component/p4/city_ration_batch",
+      "to_ref": "industrial_frontier:component/p4/technical_supply_batch",
       "relation": "COMPONENT_REQUIRES",
       "status": "GATED_BINDING",
       "recipe_policy_pointer": null,
@@ -3077,7 +3062,7 @@
       ],
       "gate_refs": [
         "industrial_frontier:gate/progression/dependency_static",
-        "industrial_frontier:gate/progression/future_domains"
+        "industrial_frontier:gate/progression/p0_p5_content"
       ]
     },
     {
@@ -3158,7 +3143,7 @@
     },
     {
       "dependency_id": "industrial_frontier:dependency/e0173",
-      "from_ref": "industrial_frontier:process/future/city_demand_contracts",
+      "from_ref": "industrial_frontier:process/create/visible_batch_processing",
       "to_ref": "industrial_frontier:component/p5/regional_logistics_node",
       "relation": "COMPONENT_REQUIRES",
       "status": "GATED_BINDING",
@@ -3172,7 +3157,7 @@
       ],
       "gate_refs": [
         "industrial_frontier:gate/progression/dependency_static",
-        "industrial_frontier:gate/progression/future_domains"
+        "industrial_frontier:gate/progression/p0_p5_content"
       ]
     },
     {
@@ -3386,7 +3371,7 @@
     },
     {
       "dependency_id": "industrial_frontier:dependency/e0185",
-      "from_ref": "industrial_frontier:process/future/city_demand_contracts",
+      "from_ref": "industrial_frontier:process/future/rocket_and_planetary_logistics",
       "to_ref": "industrial_frontier:component/p8/colony_supply_manifest",
       "relation": "COMPONENT_REQUIRES",
       "status": "GATED_BINDING",

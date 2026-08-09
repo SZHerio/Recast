@@ -1,0 +1,5 @@
+{
+  "__comment": "Пластины нержавеющей стали, совместимые с материальной ступенью HV.",
+  "replace": false,
+  "values": ["#forge:plates/stainless_steel"]
+}

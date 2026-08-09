@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "gtceu:purified_iron_ore",
+    "gtceu:purified_yellow_limonite_ore",
+    "gtceu:purified_magnetite_ore",
+    "gtceu:purified_basaltic_mineral_sand_ore",
+    "gtceu:purified_granitic_mineral_sand_ore",
+    "gtceu:purified_pyrite_ore",
+    "gtceu:purified_goethite_ore",
+    "gtceu:purified_hematite_ore"
+  ]
+}
