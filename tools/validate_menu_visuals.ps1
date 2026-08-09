@@ -197,9 +197,9 @@ foreach ($state in @('normal', 'hover', 'inactive')) {
     Assert-Png "config/fancymenu/assets/ui/button_$state.png" 48 24 'RGBA'
     Assert-Png "config/fancymenu/assets/ui/icon_button_$state.png" 24 24 'RGBA'
 }
-Assert-Png 'pack_icon.png' 256 256 'RGB'
-Assert-Png 'config/fancymenu/assets/icon_16.png' 16 16 'RGB'
-Assert-Png 'config/fancymenu/assets/icon_32.png' 32 32 'RGB'
+Assert-Png 'pack_icon.png' 256 256 'RGBA'
+Assert-Png 'config/fancymenu/assets/icon_16.png' 16 16 'RGBA'
+Assert-Png 'config/fancymenu/assets/icon_32.png' 32 32 'RGBA'
 Assert-Png 'docs/visual_previews/recast_title_v2_center.png' 1920 1080 'RGB'
 Assert-Png 'docs/visual_previews/recast_title_v2_cursor_extremes.png' 1920 1080 'RGB'
 Assert-Png 'docs/visual_previews/recast_title_v2_button_states.png' 1280 480 'RGB'
@@ -217,10 +217,10 @@ try {
             Add-MenuError "FancyMenu window-icon configuration is missing token: $token"
         }
     }
-    if ([string]$registry.icon.window_icon_design -ne 'DIRECT_16PX_GRID_NOT_DOWNSAMPLED_ARTWORK') {
-        Add-MenuError 'Window-icon registry must require the direct pixel-grid design.'
+    if ([string]$registry.icon.window_icon_design -ne 'SMOOTH_ALPHA_MASTER_LANCZOS_DOWNSCALE') {
+        Add-MenuError 'Window-icon registry must require the smooth transparent high-resolution master.'
     }
-    Add-MenuPass 'FancyMenu points the window and taskbar to dedicated 16px/32px pixel-native icons.'
+    Add-MenuPass 'FancyMenu points the window and taskbar to smooth transparent 16px/32px icon derivatives.'
 }
 catch {
     Add-MenuError "Window-icon configuration validation failed: $($_.Exception.Message)"
@@ -269,16 +269,18 @@ try {
             }
         }
     }
-    foreach ($hiddenId in @('recast_service_hint', 'recast_build_label')) {
-        $hiddenBlock = Get-ElementBlock $layout $hiddenId
-        if ([string]::IsNullOrWhiteSpace($hiddenBlock) -or (Get-BlockSetting $hiddenBlock 'is_hidden') -ne 'true') {
-            Add-MenuError "Clutter element '$hiddenId' must remain hidden on the compact title screen."
+    foreach ($removedId in @('recast_service_hint', 'recast_build_label')) {
+        if (-not [string]::IsNullOrWhiteSpace((Get-ElementBlock $layout $removedId))) {
+            Add-MenuError "Clutter element '$removedId' must be physically absent because text_v2 ignores is_hidden."
         }
     }
-    foreach ($widgetId in @('minecraft_logo_widget', 'minecraft_splash_widget', 'minecraft_branding_widget', 'title_screen_copyright_button')) {
+    foreach ($widgetId in @('minecraft_logo_widget', 'minecraft_splash_widget', 'minecraft_branding_widget')) {
         if ($layout -notmatch "(?s)element_type\s*=\s*vanilla_button\s+instance_identifier\s*=\s*$([regex]::Escape($widgetId))\s+is_hidden\s*=\s*true") {
             Add-MenuError "Vanilla title widget '$widgetId' must be hidden by its real FancyMenu 3.9.9 identifier."
         }
+    }
+    if ($layout -notmatch '(?s)instance_identifier\s*=\s*title_screen_copyright_button\s+anchor_point\s*=\s*top-left\s+x\s*=\s*-1000\s+y\s*=\s*-1000\s+width\s*=\s*1\s+height\s*=\s*1\s+stay_on_screen\s*=\s*false') {
+        Add-MenuError 'Copyright widget must be moved off-screen; FancyMenu 3.9.9 intentionally refuses to hide it.'
     }
     Add-MenuPass 'FancyMenu moving background, native 480x270-safe panel and exact hidden-widget contracts validated.'
 }

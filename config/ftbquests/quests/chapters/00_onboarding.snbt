@@ -10,149 +10,149 @@
 	quests: [
 		{
 			description: [
-				"Сборка соединяет разведку, производство, химию, снабжение города и космос в одну причинную цепочку. Новый мод появляется тогда, когда решает понятную задачу общего проекта."
-				"Прочитайте вводную и обратите внимание на подписи обязательных и необязательных ветвей."
-				"Поставьте отметку после того, как общий маршрут станет понятен."
-				"Задание отмечено, а вы знаете, что главная линия ведёт между эпохами и не требует сдавать дорогие машины."
-				"Прочитайте вводную и подтвердите готовность начать."
-				"Если назначение боковой ветви неясно, откройте её первый узел: там прямо указана её роль."
-				"Эта отметка проверяет только знакомство с замыслом сборки; предметы здесь не нужны."
-				"Дальше разберём, как читать связи между заданиями и где книга хранит подсказки."
+				"{industrial_frontier.quest.v2.onboarding.welcome.purpose}"
+				"{industrial_frontier.quest.v2.onboarding.welcome.step.1}"
+				"{industrial_frontier.quest.v2.onboarding.welcome.step.2}"
+				"{industrial_frontier.quest.v2.onboarding.welcome.success}"
+				"{industrial_frontier.quest.v2.onboarding.welcome.task}"
+				"{industrial_frontier.quest.v2.onboarding.welcome.diagnostic.1}"
+				"{industrial_frontier.quest.v2.onboarding.welcome.proof_help.1}"
+				"{industrial_frontier.quest.v2.onboarding.welcome.next}"
 			]
 			icon: "minecraft:compass"
 			id: "358E19D16CFF1CF8"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Экспедиция вырастет в фабрику, город, химический комплекс и космическую программу."
+			subtitle: "{industrial_frontier.quest.v2.onboarding.welcome.lead}"
 			tags: ["mainline", "reading"]
 			tasks: [
 				{
 					id: "4C2E6CABD3F57001"
-					title: "Прочитайте вводную и подтвердите готовность начать."
+					title: "{industrial_frontier.task.v2.onboarding.welcome.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Один промышленный мир"
+			title: "{industrial_frontier.quest.v2.onboarding.welcome.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["358E19D16CFF1CF8"]
 			description: [
-				"Понятная карта зависимостей позволяет заранее планировать добычу и строительство. Стрелка означает зависимость, а ромб отмечает проверяемое завершение эпохи."
-				"Найдите линию от предыдущего задания и посмотрите, какие узлы она открывает."
-				"Сравните объединение, где нужны все входы, и явно подписанный выбор, где достаточно одного пути."
-				"Вы различаете главную линию, необязательное ответвление, объединение результатов и эпохальный ромб."
-				"Прочитайте правила связей и подтвердите знакомство с ними."
-				"Если линия не видна, откройте предыдущий узел и завершите его условие."
-				"Наведите указатель на закрытый узел, чтобы увидеть незавершённые зависимости."
-				"Если линия не видна, откройте предыдущий узел: скрытая задача появляется после выполнения зависимости."
-				"Теперь откроем справочник рецептов и научимся проверять входы и применения предметов."
+				"{industrial_frontier.quest.v2.onboarding.reading.purpose}"
+				"{industrial_frontier.quest.v2.onboarding.reading.step.1}"
+				"{industrial_frontier.quest.v2.onboarding.reading.step.2}"
+				"{industrial_frontier.quest.v2.onboarding.reading.success}"
+				"{industrial_frontier.quest.v2.onboarding.reading.task}"
+				"{industrial_frontier.quest.v2.onboarding.reading.diagnostic.1}"
+				"{industrial_frontier.quest.v2.onboarding.reading.diagnostic.2}"
+				"{industrial_frontier.quest.v2.onboarding.reading.proof_help.1}"
+				"{industrial_frontier.quest.v2.onboarding.reading.next}"
 			]
 			icon: "minecraft:writable_book"
 			id: "3000000000000002"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Линии показывают причину порядка, форма узла — его роль, а текст объясняет механику."
+			subtitle: "{industrial_frontier.quest.v2.onboarding.reading.lead}"
 			tags: ["mainline", "reading"]
 			tasks: [
 				{
 					id: "4000000000000002"
-					title: "Прочитайте правила связей и подтвердите знакомство с ними."
+					title: "{industrial_frontier.task.v2.onboarding.reading.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Как читать маршрут"
+			title: "{industrial_frontier.quest.v2.onboarding.reading.title}"
 			x: 2d
 			y: 0d
 		}
 		{
 			dependencies: ["3000000000000002"]
 			description: [
-				"Просмотр рецепта отвечает на вопрос «как получить», а просмотр применений показывает, куда предмет идёт дальше. Эта пара защищает от устаревших подсказок после балансировки."
-				"Выберите знакомый предмет и откройте его рецепт."
-				"Затем откройте список применений того же предмета и найдите хотя бы один следующий продукт."
-				"Вы можете отдельно открыть получение и применения предмета и понимаете, какой экран нужен для текущего вопроса."
-				"Откройте рецепт и применения одного предмета, затем подтвердите чтение."
-				"Если список скрыт, проверьте назначенные клавиши JEI и конфликт сочетаний."
-				"Если рецепт отсутствует, проверьте форму материала: руда, сырой минерал, пыль, слиток и пластина не равнозначны."
-				"Если список скрыт, проверьте назначенные клавиши JEI и конфликт сочетаний в настройках управления."
-				"Следом научимся читать сам блок и искать источник ресурса в мире."
+				"{industrial_frontier.quest.v2.onboarding.jei.purpose}"
+				"{industrial_frontier.quest.v2.onboarding.jei.step.1}"
+				"{industrial_frontier.quest.v2.onboarding.jei.step.2}"
+				"{industrial_frontier.quest.v2.onboarding.jei.success}"
+				"{industrial_frontier.quest.v2.onboarding.jei.task}"
+				"{industrial_frontier.quest.v2.onboarding.jei.diagnostic.1}"
+				"{industrial_frontier.quest.v2.onboarding.jei.diagnostic.2}"
+				"{industrial_frontier.quest.v2.onboarding.jei.proof_help.1}"
+				"{industrial_frontier.quest.v2.onboarding.jei.next}"
 			]
 			icon: "minecraft:knowledge_book"
 			id: "3000000000000003"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Книга объясняет принцип, а JEI показывает действующую форму рецепта в вашей версии сборки."
+			subtitle: "{industrial_frontier.quest.v2.onboarding.jei.lead}"
 			tags: ["mainline", "interface"]
 			tasks: [
 				{
 					id: "4000000000000003"
-					title: "Откройте в JEI рецепт и применения знакомого предмета, затем подтвердите чтение."
+					title: "{industrial_frontier.task.v2.onboarding.jei.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "JEI: рецепт и применения"
+			title: "{industrial_frontier.quest.v2.onboarding.jei.title}"
 			x: 4d
 			y: 0d
 		}
 		{
 			dependencies: ["3000000000000003"]
 			description: [
-				"Полевые инструменты сокращают слепые эксперименты. Jade читает сведения выбранного блока, JEI показывает переработку найденного материала, а квестовая ветвь фиксирует реальные правила генерации сборки."
-				"Наведитесь на знакомый блок и прочитайте его название и доступные сведения Jade."
-				"Прочитайте вводный раздел P0 о технических жилах: сначала наблюдение в мире, затем маршрут найденного минерала в JEI."
-				"Вы знаете, как проверить блок перед собой и где искать подтверждённый маршрут нужного ресурса."
-				"Прочитайте блок через Jade и правило поиска технических жил."
-				"Если Jade скрыт, проверьте режим отображения и назначенную клавишу в его настройках."
-				"Если подсказка из другого справочника расходится с миром, доверяйте наблюдаемой GTCEu-жиле, квестовой геологии и фактическим рецептам JEI."
-				"Если подсказка Jade не видна, проверьте режим отображения и конфликт клавиш. Геологические маршруты описаны в начале P0."
-				"После полевых инструментов отделим общий прогресс команды от личных решений."
+				"{industrial_frontier.quest.v2.onboarding.field_tools.purpose}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.step.1}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.step.2}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.success}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.task}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.diagnostic.1}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.diagnostic.2}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.proof_help.1}"
+				"{industrial_frontier.quest.v2.onboarding.field_tools.next}"
 			]
 			icon: "minecraft:spyglass"
 			id: "3A00000000000001"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Jade отвечает на вопрос «что передо мной», а квестовая геология объясняет, как искать технические жилы."
+			subtitle: "{industrial_frontier.quest.v2.onboarding.field_tools.lead}"
 			tags: ["mainline", "interface", "geology"]
 			tasks: [
 				{
 					id: "4A00000000000001"
-					title: "Осмотрите знакомый блок через Jade и прочитайте правило поиска технических жил."
+					title: "{industrial_frontier.task.v2.onboarding.field_tools.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Jade и полевая геология"
+			title: "{industrial_frontier.quest.v2.onboarding.field_tools.title}"
 			x: 6d
 			y: 0d
 		}
 		{
 			dependencies: ["3000000000000002"]
 			description: [
-				"Разделение общего, мирового и личного состояния предотвращает дублирование фабрик и сохраняет смысл будущих дипломатических решений."
-				"Запомните: производственные открытия и эпохи относятся к команде, а состояние поселений и крупных событий — к миру."
-				"Репутация, диалоговые обещания и последствия выбора принадлежат персонажу."
-				"Вы понимаете, что вступление в команду не копирует чужую репутацию, но позволяет делить производственный прогресс."
-				"Прочитайте различие между состоянием команды, мира и персонажа."
-				"Если общий квест не обновился у союзника, сначала проверьте состав команды и синхронизацию FTB Quests."
-				"Перед сменой команды завершите общие производственные задачи, чтобы не запутать принадлежность прогресса."
-				"В одиночной игре правило всё равно определяет владельца будущих репутационных и мировых событий."
-				"В заключительном узле собраны правила восстановления и передачи хорошего отчёта об ошибке."
+				"{industrial_frontier.quest.v2.onboarding.team.purpose}"
+				"{industrial_frontier.quest.v2.onboarding.team.step.1}"
+				"{industrial_frontier.quest.v2.onboarding.team.step.2}"
+				"{industrial_frontier.quest.v2.onboarding.team.success}"
+				"{industrial_frontier.quest.v2.onboarding.team.task}"
+				"{industrial_frontier.quest.v2.onboarding.team.diagnostic.1}"
+				"{industrial_frontier.quest.v2.onboarding.team.diagnostic.2}"
+				"{industrial_frontier.quest.v2.onboarding.team.proof_help.1}"
+				"{industrial_frontier.quest.v2.onboarding.team.next}"
 			]
 			icon: "minecraft:player_head"
 			id: "3000000000000004"
 			shape: "circle"
 			size: 1d
-			subtitle: "Заводы строятся вместе, но репутация, обещания и предательство остаются личными решениями."
+			subtitle: "{industrial_frontier.quest.v2.onboarding.team.lead}"
 			tags: ["mainline", "state"]
 			tasks: [
 				{
 					id: "4000000000000004"
-					title: "Прочитайте различие между состоянием команды, мира и персонажа."
+					title: "{industrial_frontier.task.v2.onboarding.team.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Команда и личный выбор"
+			title: "{industrial_frontier.quest.v2.onboarding.team.title}"
 			x: 6d
 			y: 2d
 		}
@@ -162,39 +162,39 @@
 				"3000000000000004"
 			]
 			description: [
-				"Единый порядок проверки помогает отличить ошибочный вход, неправильную сторону, нехватку энергии и отсутствие места для выхода. Он же делает отчёт об ошибке воспроизводимым."
-				"Сначала сверьте предмет и рецепт в JEI, затем прочитайте выбранный блок через Jade."
-				"Проверьте вход, выход, питание и свободное место в таком порядке."
-				"Если проблема остаётся, запишите название задания, предметы, наблюдаемое поведение и приложите журнал без догадок о причине."
-				"Вы знаете порядок первичной проверки и можете перейти к P0 без обязательной добычи во вводной главе."
-				"Прочитайте порядок диагностики и подтвердите переход к P0."
-				"Не меняйте сразу несколько частей установки: после каждого исправления повторите один и тот же короткий тест."
-				"Если задача не засчитывается, положите проверяемый предмет в основной инвентарь и перечитайте точный текст условия."
-				"Если узел закрыт, завершите параллельные уроки полевых инструментов и командного состояния."
-				"Откройте P0 «Экспедиция»: там начнётся цепочка от брёвен и досок к верстаку, лагерю и железу."
+				"{industrial_frontier.quest.v2.onboarding.help.purpose}"
+				"{industrial_frontier.quest.v2.onboarding.help.step.1}"
+				"{industrial_frontier.quest.v2.onboarding.help.step.2}"
+				"{industrial_frontier.quest.v2.onboarding.help.step.3}"
+				"{industrial_frontier.quest.v2.onboarding.help.success}"
+				"{industrial_frontier.quest.v2.onboarding.help.task}"
+				"{industrial_frontier.quest.v2.onboarding.help.diagnostic.1}"
+				"{industrial_frontier.quest.v2.onboarding.help.diagnostic.2}"
+				"{industrial_frontier.quest.v2.onboarding.help.proof_help.1}"
+				"{industrial_frontier.quest.v2.onboarding.help.next}"
 			]
 			icon: "minecraft:recovery_compass"
 			id: "3A00000000000002"
 			shape: "diamond"
 			size: 1.5d
-			subtitle: "Хорошая диагностика начинается с самого дешёвого наблюдения, а не с разборки всей линии."
+			subtitle: "{industrial_frontier.quest.v2.onboarding.help.lead}"
 			tags: ["mainline", "help", "transition"]
 			tasks: [
 				{
 					id: "4A00000000000002"
-					title: "Прочитайте порядок диагностики и подтвердите переход к P0."
+					title: "{industrial_frontier.task.v2.onboarding.help.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Если что-то не работает"
+			title: "{industrial_frontier.quest.v2.onboarding.help.title}"
 			x: 8d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Шесть коротких уроков об интерфейсе, источниках информации и помощи"
-		"Вводная глава ничего не требует добывать или строить. Она показывает, как читать квестбук, проверять рецепт, осматривать механизм и найти источник ресурса."
-		"Практическое выживание начинается в P0. Так обучение интерфейсу не становится искусственным ресурсным воротом."
+		"{industrial_frontier.chapter.v2.onboarding.subtitle.1}"
+		"{industrial_frontier.chapter.v2.onboarding.subtitle.2}"
+		"{industrial_frontier.chapter.v2.onboarding.subtitle.3}"
 	]
-	title: "Перед стартом"
+	title: "{industrial_frontier.chapter.v2.onboarding.title}"
 }

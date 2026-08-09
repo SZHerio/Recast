@@ -13,66 +13,66 @@
 			hide_until_deps_complete: true
 			dependencies: ["3BAFBFB90BC9F168"]
 			description: [
-				"Перед выбором сформулируйте нагрузку, расстояние, требуемый запас, доступное сырьё, допустимый риск и способ восстановления. Одинаковая система может быть прекрасной для постоянной базовой нагрузки и неудобной для редких пиков или далёкой колонии."
-				"Опишите задачу одним предложением без названия мода или конкретной машины."
-				"Назовите ограничение, которое нельзя нарушить: место, мощность, безопасность, дальность или время обслуживания."
-				"Сравните не меньше двух вариантов по полной цепочке от сырья до отхода или конечного потребителя."
-				"Выбор можно объяснить условиями проекта, а не только привычкой или максимальной цифрой из подсказки."
-				"Ознакомьтесь с методом сравнения технологий для длинной кампании."
-				"Если один вариант выигрывает по всем пунктам, проверьте, учли ли вы топливо, инфраструктуру, отходы и восстановление после остановки."
-				"Если задача сформулирована как название желаемой машины, вернитесь к тому, какой поток или услугу она должна обеспечить."
-				"Выбирать путь и строить новую систему ради этой отметки не требуется."
-				"Начните с источника энергии: именно его режим работы определит запас и поведение всей фабрики."
-				"Справочник не меняет технологическую эпоху и не навязывает окончательный выбор."
+				"{industrial_frontier.quest.v2.marathon.intro.purpose}"
+				"{industrial_frontier.quest.v2.marathon.intro.step.1}"
+				"{industrial_frontier.quest.v2.marathon.intro.step.2}"
+				"{industrial_frontier.quest.v2.marathon.intro.step.3}"
+				"{industrial_frontier.quest.v2.marathon.intro.success}"
+				"{industrial_frontier.quest.v2.marathon.intro.task}"
+				"{industrial_frontier.quest.v2.marathon.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.marathon.intro.diagnostic.2}"
+				"{industrial_frontier.quest.v2.marathon.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.intro.next}"
+				"{industrial_frontier.quest.v2.marathon.intro.optional_note}"
 			]
 			icon: "minecraft:filled_map"
 			id: "3073000000000001"
 			optional: true
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Лучшее решение зависит от того, какую проблему вы действительно пытаетесь решить."
+			subtitle: "{industrial_frontier.quest.v2.marathon.intro.lead}"
 			tags: ["marathon", "decision_framework", "optional"]
 			tasks: [
 				{
 					id: "4073000000000001"
-					title: "Прочитайте правила сравнения поздних технологий."
+					title: "{industrial_frontier.task.v2.marathon.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Сначала вопрос, потом технология"
+			title: "{industrial_frontier.quest.v2.marathon.intro.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3073000000000001"]
 			description: [
-				"Паровая система понятна и хорошо подходит раннему постоянному производству. Жидкое топливо удобно перевозить и использовать для гибкой нагрузки, но требует устойчивой добычи и переработки. Атомная станция даёт большую базовую мощность, зато нуждается в подготовке топлива, охлаждении, защите и полном маршруте отработанных материалов."
-				"Разделите постоянную нагрузку и краткие пики потребления."
-				"Сравните для каждого источника не только генератор, но и добычу, переработку, хранение и отходы."
-				"Оставьте резерв или второй независимый источник для безопасной остановки критических процессов."
-				"Выбранный источник соответствует режиму нагрузки и имеет понятные цепочки снабжения, остановки и восстановления."
-				"Ознакомьтесь с выбором энергетической системы по режиму нагрузки."
-				"Если большая установка простаивает большую часть времени, возможно, для пиков лучше отдельный быстрый источник и запас энергии."
-				"Если топливо поступает одним маршрутом, оцените, сколько времени станция проработает после его остановки."
-				"Памятка не требует строить по одной станции каждого типа."
-				"После генерации определите, как сырьё и продукты будут перемещаться между удалёнными участками."
-				"Разные источники можно сочетать, если у каждого есть отдельная роль."
+				"{industrial_frontier.quest.v2.marathon.energy.purpose}"
+				"{industrial_frontier.quest.v2.marathon.energy.step.1}"
+				"{industrial_frontier.quest.v2.marathon.energy.step.2}"
+				"{industrial_frontier.quest.v2.marathon.energy.step.3}"
+				"{industrial_frontier.quest.v2.marathon.energy.success}"
+				"{industrial_frontier.quest.v2.marathon.energy.task}"
+				"{industrial_frontier.quest.v2.marathon.energy.diagnostic.1}"
+				"{industrial_frontier.quest.v2.marathon.energy.diagnostic.2}"
+				"{industrial_frontier.quest.v2.marathon.energy.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.energy.next}"
+				"{industrial_frontier.quest.v2.marathon.energy.optional_note}"
 			]
 			icon: "gtceu:lv_battery_buffer_4x"
 			id: "3073000000000002"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Источники энергии отличаются не только мощностью, но и тем, насколько быстро запускаются, какое снабжение требуют и что оставляют после работы."
+			subtitle: "{industrial_frontier.quest.v2.marathon.energy.lead}"
 			tags: ["marathon", "energy", "comparison", "optional"]
 			tasks: [
 				{
 					id: "4073000000000002"
-					title: "Прочитайте сравнение паровой, жидкотопливной и атомной энергетики."
+					title: "{industrial_frontier.task.v2.marathon.energy.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Пар, жидкое топливо или атом"
+			title: "{industrial_frontier.quest.v2.marathon.energy.title}"
 			x: 3d
 			y: -3d
 		}
@@ -83,33 +83,33 @@
 				"39399468A06BC9EC"
 			]
 			description: [
-				"Трубы и конвейеры удобны на коротком постоянном участке. Поезда перевозят крупные партии по предсказуемому расписанию и требуют станций с буферами. Водный транспорт полезен там, где география уже даёт маршрут. Цифровая сеть управляет заказами и хранением, но не должна скрывать отсутствие физического резерва и пути восстановления."
-				"Разделите последнюю милю, межцеховой маршрут и дальнюю магистраль."
-				"Для каждого участка укажите размер партии, время между поставками и запас на случай задержки."
-				"Выберите места погрузки и разгрузки так, чтобы транспорт можно было обслуживать, не останавливая весь завод."
-				"Каждый транспорт решает определённый участок пути, а смена способа перевозки происходит через понятный буфер."
-				"Ознакомьтесь с выбором транспорта по расстоянию и размеру партии."
-				"Если мелкие трубы тянутся через половину региона, вынесите дальний участок в пакетную перевозку."
-				"Если поезд ждёт заполнения бесконечно, уменьшите размер партии или добавьте расписание с ограничением времени."
-				"Выберите транспорт по роли; строить демонстрационный маршрут каждого вида не нужно."
-				"Следующая памятка сравнит два подхода к атомной станции и их требования к безопасности."
-				"Сочетание нескольких транспортных слоёв является нормальной архитектурой, если границы между ними видимы."
+				"{industrial_frontier.quest.v2.marathon.logistics.purpose}"
+				"{industrial_frontier.quest.v2.marathon.logistics.step.1}"
+				"{industrial_frontier.quest.v2.marathon.logistics.step.2}"
+				"{industrial_frontier.quest.v2.marathon.logistics.step.3}"
+				"{industrial_frontier.quest.v2.marathon.logistics.success}"
+				"{industrial_frontier.quest.v2.marathon.logistics.task}"
+				"{industrial_frontier.quest.v2.marathon.logistics.diagnostic.1}"
+				"{industrial_frontier.quest.v2.marathon.logistics.diagnostic.2}"
+				"{industrial_frontier.quest.v2.marathon.logistics.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.logistics.next}"
+				"{industrial_frontier.quest.v2.marathon.logistics.optional_note}"
 			]
 			icon: "create:track"
 			id: "3073000000000003"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Один способ перемещения не обязан одинаково хорошо работать внутри станка, между цехами и между удалёнными базами."
+			subtitle: "{industrial_frontier.quest.v2.marathon.logistics.lead}"
 			tags: ["marathon", "logistics", "comparison", "optional"]
 			tasks: [
 				{
 					id: "4073000000000003"
-					title: "Прочитайте сравнение поездов, водного транспорта, труб и цифровой сети."
+					title: "{industrial_frontier.task.v2.marathon.logistics.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Каждому расстоянию — свой транспорт"
+			title: "{industrial_frontier.quest.v2.marathon.logistics.title}"
 			x: 3d
 			y: -1d
 		}
@@ -120,33 +120,33 @@
 				"3BAFBFB90BC9F168"
 			]
 			description: [
-				"Гражданская модульная схема удобна для понятной цепочки топлива, тепла, турбины и переработки. Канальный комплекс оправдан как поздний стратегический объект с отдельной площадкой, большим запасом материалов и жёсткой процедурой запуска. Они не должны дублировать друг друга без новой роли."
-				"Определите, нужна ли стабильная городская энергия или отдельный стратегический объект поздней игры."
-				"Сравните требования к топливу, охлаждению, защите, площади, управлению и хранилищу отходов."
-				"До строительства выберите безопасный маршрут остановки и место для всех радиоактивных продуктов."
-				"Вы можете объяснить, почему выбранная реакторная архитектура соответствует масштабу и назначению объекта."
-				"Ознакомьтесь с выбором реакторной архитектуры по назначению объекта."
-				"Если сравнение сводится к максимальной мощности, добавьте цену топлива, защиты, охлаждения и восстановления после остановки."
-				"Если обе установки выполняют одну и ту же роль, оставьте одну, а ресурсы направьте на резерв и безопасность."
-				"Альтернативный реактор остаётся добровольным проектом и не нужен для отметки."
-				"После наземной энергетики сравните готовую ракетную систему и двигатель, который нужно проектировать самостоятельно."
-				"Канальная программа остаётся поздней факультативной веткой, если основную энергетику уже закрывает гражданская станция."
+				"{industrial_frontier.quest.v2.marathon.nuclear.purpose}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.step.1}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.step.2}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.step.3}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.success}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.task}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.diagnostic.1}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.diagnostic.2}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.next}"
+				"{industrial_frontier.quest.v2.marathon.nuclear.optional_note}"
 			]
 			icon: "nuclearcraft:fission_reactor_controller"
 			id: "3073000000000004"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Модульная энергетическая установка и крупный канальный комплекс требуют разного масштаба, обслуживания и отношения к риску."
+			subtitle: "{industrial_frontier.quest.v2.marathon.nuclear.lead}"
 			tags: ["marathon", "nuclear", "comparison", "optional"]
 			tasks: [
 				{
 					id: "4073000000000004"
-					title: "Прочитайте сравнение гражданской модульной и канальной атомной архитектуры."
+					title: "{industrial_frontier.task.v2.marathon.nuclear.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Два реактора — две задачи"
+			title: "{industrial_frontier.quest.v2.marathon.nuclear.title}"
 			x: 3d
 			y: 1d
 		}
@@ -157,33 +157,33 @@
 				"3A17000000000011"
 			]
 			description: [
-				"Готовая ракетная система подходит, когда важнее добраться до новой среды, организовать груз и вернуться. Проектируемый двигатель нужен игроку, который хочет разбирать тягу на камеру, подачу топлива, турбонасос и сопло. Оба пути полезны, если их цели названы заранее."
-				"Решите, является ли целью экспедиция или конструирование силовой установки."
-				"Для экспедиции оцените груз, запас возвращения и наземное снабжение площадки."
-				"Для двигателя отдельно проверьте подачу топлива, работу узлов, охлаждение и безопасное испытание."
-				"Выбранный путь отвечает вашей цели и имеет понятный критерий готовности до старта."
-				"Ознакомьтесь с выбором космической системы по цели проекта."
-				"Если проект двигателя задерживает нужную экспедицию, выполните первый полёт готовой системой, а исследовательскую ветку оставьте отдельной."
-				"Если готовая ракета превращается в одноразовую кнопку, добавьте план груза, наземной инфраструктуры и возвращения."
-				"Собирать обе системы ради справочника не требуется."
-				"Последний выбор касается уже не транспорта, а того, каким должен стать итог всей промышленной программы."
-				"Проектирование двигателя развивает инженерную глубину, но не блокирует основной космический маршрут."
+				"{industrial_frontier.quest.v2.marathon.space.purpose}"
+				"{industrial_frontier.quest.v2.marathon.space.step.1}"
+				"{industrial_frontier.quest.v2.marathon.space.step.2}"
+				"{industrial_frontier.quest.v2.marathon.space.step.3}"
+				"{industrial_frontier.quest.v2.marathon.space.success}"
+				"{industrial_frontier.quest.v2.marathon.space.task}"
+				"{industrial_frontier.quest.v2.marathon.space.diagnostic.1}"
+				"{industrial_frontier.quest.v2.marathon.space.diagnostic.2}"
+				"{industrial_frontier.quest.v2.marathon.space.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.space.next}"
+				"{industrial_frontier.quest.v2.marathon.space.optional_note}"
 			]
 			icon: "gcyr:basic_rocket_motor"
 			id: "3073000000000005"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Первый путь быстрее приводит к полёту, второй превращает сам двигатель в инженерный проект."
+			subtitle: "{industrial_frontier.quest.v2.marathon.space.lead}"
 			tags: ["marathon", "space", "comparison", "optional"]
 			tasks: [
 				{
 					id: "4073000000000005"
-					title: "Прочитайте сравнение готовой ракеты и проектируемого двигателя."
+					title: "{industrial_frontier.task.v2.marathon.space.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Готовая ракета или свой двигатель"
+			title: "{industrial_frontier.quest.v2.marathon.space.title}"
 			x: 3d
 			y: 3d
 		}
@@ -197,41 +197,41 @@
 				"3A19000000000008"
 			]
 			description: [
-				"Мегапроект проверяет максимальный масштаб, плотность энергии и способность удерживать огромный поток в одной системе. Колониальная сеть проверяет другое: автономность, повторяемость, восстановление и жизнь вдали от главной базы. Ни одна цель не отменяет ценность другой."
-				"Сформулируйте, что вы хотите оставить после завершения кампании: единичное инженерное чудо или работающую сеть поселений."
-				"Для мегапроекта определите главный поток, предел энергии и способ восстановиться после остановки."
-				"Для сети колоний задайте минимальный набор воды, еды, энергии, ремонта, связи и местного производства."
-				"Финальная цель выражает характер вашей промышленной программы и имеет понятные признаки завершения."
-				"Ознакомьтесь с двумя подходами к финальному наследию кампании."
-				"Если мегапроект существует только как дорогой рецепт, добавьте ему постоянную роль в энергетике, производстве или снабжении."
-				"Если колония полностью зависит от ежедневных поставок с главной базы, сначала закройте один жизненно важный местный цикл."
-				"Финальная памятка не требует отказываться от уже выбранного окончания."
-				"Справочник завершён. Вы можете выбрать одну цель, сочетать их по очереди или остановиться на устойчивом мире, который уже построили."
-				"Это размышление после основной линии, а не дополнительное условие победы."
+				"{industrial_frontier.quest.v2.marathon.finale.purpose}"
+				"{industrial_frontier.quest.v2.marathon.finale.step.1}"
+				"{industrial_frontier.quest.v2.marathon.finale.step.2}"
+				"{industrial_frontier.quest.v2.marathon.finale.step.3}"
+				"{industrial_frontier.quest.v2.marathon.finale.success}"
+				"{industrial_frontier.quest.v2.marathon.finale.task}"
+				"{industrial_frontier.quest.v2.marathon.finale.diagnostic.1}"
+				"{industrial_frontier.quest.v2.marathon.finale.diagnostic.2}"
+				"{industrial_frontier.quest.v2.marathon.finale.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.finale.next}"
+				"{industrial_frontier.quest.v2.marathon.finale.optional_note}"
 			]
 			icon: "minecraft:nether_star"
 			id: "3073000000000006"
 			optional: true
 			shape: "diamond"
 			size: 1.6d
-			subtitle: "Поздняя фабрика может сосредоточить всё производство в одном мегапроекте или превратить накопленные знания в сеть устойчивых поселений."
+			subtitle: "{industrial_frontier.quest.v2.marathon.finale.lead}"
 			tags: ["marathon", "finale", "legacy", "optional"]
 			tasks: [
 				{
 					id: "4073000000000006"
-					title: "Прочитайте сравнение мегапроекта и сети самостоятельных колоний."
+					title: "{industrial_frontier.task.v2.marathon.finale.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Один великий объект или множество живых миров"
+			title: "{industrial_frontier.quest.v2.marathon.finale.title}"
 			x: 6d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Как сравнивать энергетику, логистику, атомные схемы, космические двигатели и поздние цели"
-		"Поздняя игра предлагает несколько способов решить одну задачу. Этот справочник помогает выбрать подходящий путь по условиям вашей фабрики, а не по обещанию единственного лучшего варианта."
-		"Все памятки необязательны. Выбранная технология должна соответствовать доступному сырью, масштабу, риску, месту и тому, насколько легко вы сможете обслуживать её через десятки часов."
+		"{industrial_frontier.chapter.v2.marathon.subtitle.1}"
+		"{industrial_frontier.chapter.v2.marathon.subtitle.2}"
+		"{industrial_frontier.chapter.v2.marathon.subtitle.3}"
 	]
-	title: "Выбор для длинной кампании"
+	title: "{industrial_frontier.chapter.v2.marathon.title}"
 }

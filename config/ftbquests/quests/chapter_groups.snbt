@@ -2,35 +2,35 @@
 	chapter_groups: [
 		{
 			id: "1000000000000001"
-			title: "Начать здесь"
+			title: "{industrial_frontier.group.v2.start.title}"
 		}
 		{
 			id: "1000000000000002"
-			title: "Помощь"
+			title: "{industrial_frontier.group.v2.help.title}"
 		}
 		{
 			id: "1000000000000003"
-			title: "Город и общество"
+			title: "{industrial_frontier.group.v2.city.title}"
 		}
 		{
 			id: "1000000000000004"
-			title: "Главная линия"
+			title: "{industrial_frontier.group.v2.mainline.title}"
 		}
 		{
 			id: "1000000000000005"
-			title: "Безопасность и внешние силы"
+			title: "{industrial_frontier.group.v2.security.title}"
 		}
 		{
 			id: "1000000000000020"
-			title: "Производственные системы"
+			title: "{industrial_frontier.group.v2.systems.title}"
 		}
 		{
 			id: "1000000000000050"
-			title: "Мир и экспедиции"
+			title: "{industrial_frontier.group.v2.world.title}"
 		}
 		{
 			id: "1A70000000000001"
-			title: "Академия"
+			title: "{industrial_frontier.group.v2.academy.title}"
 		}
 	]
 }

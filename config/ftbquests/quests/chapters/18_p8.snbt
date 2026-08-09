@@ -13,77 +13,77 @@
 			hide_until_deps_complete: true
 			dependencies: ["3A17000000000011"]
 			description: [
-				"P8 разделён на три связанные задачи: выбрать уникальную роль удалённого цеха, наладить транспорт без сопровождения и обеспечить колонии самостоятельную безопасную работу. Ускорительный комплекс добавляет четвёртый вопрос — материал, который оправдывает позднюю энергетику."
-				"Вы различаете рейс, поток, колонию и высокоэнергетический процесс и знаете, чем они будут проверяться."
-				"Прочитайте вводную карту P8."
-				"Отметка подтверждает только чтение; работу линий доказывают последующие задачи."
-				"Сначала определите специализацию удалённого цеха и разверните спутники разведки и навигации."
+				"{industrial_frontier.quest.v2.p8.brief.purpose}"
+				"{industrial_frontier.quest.v2.p8.brief.success}"
+				"{industrial_frontier.quest.v2.p8.brief.task}"
+				"{industrial_frontier.quest.v2.p8.brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.brief.next}"
 			]
 			icon: "gcyr:gps_satellite"
 			id: "3018000000000001"
 			shape: "gear"
 			size: 2d
-			subtitle: "Лунный образец вернулся, но единичный рейс ещё не образует промышленную сеть."
+			subtitle: "{industrial_frontier.quest.v2.p8.brief.lead}"
 			tags: ["root", "mainline"]
 			tasks: [
 				{
 					id: "4018000000000001"
-					title: "Прочитайте критерии распределённой сети P8."
+					title: "{industrial_frontier.task.v2.p8.brief.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Космос становится частью завода"
+			title: "{industrial_frontier.quest.v2.p8.brief.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3018000000000001"]
 			description: [
-				"Выберите один продукт или услугу, ради которых удалённая площадка действительно нужна: особое сырьё, дешёвый вывод на орбиту, выгодную солнечную мощность либо локальную химию. Обычные земные материалы не оправдывают постоянные рейсы."
-				"Сравните доступность сырья, энергии и побочных продуктов на Земле и выбранной планете."
-				"Запишите основной выход цеха, требуемые входы, частоту рейса и допустимый размер буфера."
-				"У цеха есть один названный основной выход и понятная причина производить его вдали от Земли."
-				"Определите уникальный выход удалённого цеха."
-				"Если маршрут возит больше обычных материалов, чем уникального продукта, измените специализацию или перенесите переработку ближе к источнику."
-				"Если рейс нужен после каждой операции, сначала увеличьте локальный буфер и укрупните партии."
-				"Отметьте задачу после выбора продукта, которого нет смысла производить тем же способом на Земле."
-				"Орбитальная разведка должна подтвердить место, а навигационная группировка — сделать маршрут повторяемым."
+				"{industrial_frontier.quest.v2.p8.specialisation.purpose}"
+				"{industrial_frontier.quest.v2.p8.specialisation.step.1}"
+				"{industrial_frontier.quest.v2.p8.specialisation.step.2}"
+				"{industrial_frontier.quest.v2.p8.specialisation.success}"
+				"{industrial_frontier.quest.v2.p8.specialisation.task}"
+				"{industrial_frontier.quest.v2.p8.specialisation.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.specialisation.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.specialisation.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.specialisation.next}"
 			]
 			icon: "gcyr:proxima_centauri_b_turf"
 			id: "362248ECEC2D19D8"
 			shape: "square"
 			size: 1d
-			subtitle: "Расстояние должно окупаться уникальной функцией, иначе космос превращается в дорогую ручную перевозку."
+			subtitle: "{industrial_frontier.quest.v2.p8.specialisation.lead}"
 			tags: ["planning", "planetary"]
 			tasks: [
 				{
 					id: "412D3D7CA669DF42"
-					title: "Выберите уникальный продукт первого удалённого цеха."
+					title: "{industrial_frontier.task.v2.p8.specialisation.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Планета — цех, а не новая шахта"
+			title: "{industrial_frontier.quest.v2.p8.specialisation.title}"
 			x: 3d
 			y: -3d
 		}
 		{
 			dependencies: ["3018000000000001"]
 			description: [
-				"Спутник поиска руды сокращает ручную разведку и помогает выбрать площадку рядом с нужным сырьём. Это только первый учебный аппарат, поэтому его наличие ещё не означает, что орбитальная служба уже действует."
-				"Соберите один аппарат и заранее определите планету, на которой его данные полезнее наземного поиска."
-				"Подготовьте отдельный запуск и место для записи результатов разведки."
-				"В инвентаре находится один спутник поиска руды GCYR, готовый к выводу."
-				"Соберите один спутник поиска руды GCYR."
-				"Если рецепт недоступен, проверьте электронику и материалы P8, а не заменяйте аппарат обычной картой."
-				"Если после запуска нет данных, проверьте выбранную цель, орбиту и питание наземного приёмника."
-				"Предмет подтверждает готовность аппарата к выводу, но не его нахождение на орбите."
-				"Добавьте спутник позиционирования: разведданные бесполезны без повторяемого маршрута."
+				"{industrial_frontier.quest.v2.p8.survey_satellite.purpose}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.step.1}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.step.2}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.success}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.task}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.survey_satellite.next}"
 			]
 			icon: "gcyr:ore_finder_satellite"
 			id: "3018000000000004"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Удалённый цех начинается с данных, а не с бесконечного обхода поверхности."
+			subtitle: "{industrial_frontier.quest.v2.p8.survey_satellite.lead}"
 			tags: ["orbital", "survey"]
 			tasks: [
 				{
@@ -93,32 +93,32 @@
 						id: "gcyr:ore_finder_satellite"
 					}
 					consume_items: false
-					title: "Соберите спутник поиска руды GCYR."
+					title: "{industrial_frontier.task.v2.p8.survey_satellite.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Сначала увидеть ресурс сверху"
+			title: "{industrial_frontier.quest.v2.p8.survey_satellite.title}"
 			x: 3d
 			y: 3d
 		}
 		{
 			dependencies: ["3018000000000004"]
 			description: [
-				"Спутник позиционирования даёт опорную точку для рейсов и возврата. Для реальной группировки потребуется несколько аппаратов и наземный контроль, однако учебная задача просит только первый и честно не объявляет сеть законченной."
-				"Соберите первый спутник и назначьте ему участок будущего грузового маршрута."
-				"Проверьте, что точка отправления и точка назначения хранятся отдельно и имеют безопасные площадки возврата."
-				"Первый спутник позиционирования готов к выводу, а обе конечные точки маршрута определены."
-				"Соберите первый спутник позиционирования GCYR."
-				"Если рейс возвращается не туда, очистите старую запись и заново задайте обе площадки."
-				"Если один аппарат не даёт устойчивого покрытия, расширяйте группировку, а не называйте единичную точку сетью."
-				"Один аппарат подтверждает начало группировки, но не полное покрытие маршрута."
-				"Специализация и орбитальные данные теперь позволяют строить автоматический грузовой поток."
+				"{industrial_frontier.quest.v2.p8.navigation_grid.purpose}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.step.1}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.step.2}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.success}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.task}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.navigation_grid.next}"
 			]
 			icon: "gcyr:gps_satellite"
 			id: "3018000000000005"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Разведка нашла цель; теперь координаты должны стать общей службой, а не записью в одном чипе."
+			subtitle: "{industrial_frontier.quest.v2.p8.navigation_grid.lead}"
 			tags: ["orbital", "navigation"]
 			tasks: [
 				{
@@ -128,11 +128,11 @@
 						id: "gcyr:gps_satellite"
 					}
 					consume_items: false
-					title: "Соберите спутник позиционирования GCYR."
+					title: "{industrial_frontier.task.v2.p8.navigation_grid.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Маршрут должен повторяться"
+			title: "{industrial_frontier.quest.v2.p8.navigation_grid.title}"
 			x: 6d
 			y: 3d
 		}
@@ -144,23 +144,23 @@
 				"3A2300000000000B"
 			]
 			description: [
-				"Автоматическим считается полный цикл: локальный цех наполняет отправной буфер, транспорт уходит без вашего присутствия, приёмная сторона разгружает груз и оставляет запас для следующего рейса. Задание засчитывается после открытия сканера, но перед этим нужно проверить два контрольных рейса по уровням обоих буферов."
-				"Задайте минимальный и максимальный уровень обоих буферов, чтобы рейс не ходил пустым."
-				"Запустите цикл, покиньте обе площадки и дождитесь доставки в приёмный буфер."
-				"Повторите цикл без ручной перекладки предметов, сравните остатки топлива и только затем откройте сканер."
-				"Вы сравнили уровни буферов после двух рейсов и открыли сканер для заключительной проверки маршрута."
-				"После двух контрольных рейсов откройте интерфейс сканера ракеты GCYR."
-				"Если рейс уходит пустым, проверьте условие отправки и сторону извлечения из буфера."
-				"Если груз прибыл, но линия остановилась, проверьте разгрузку, обратный маршрут и резерв топлива."
-				"Если линия работает только рядом с площадкой, проверьте, остаётся ли удалённая область загруженной во время рейса."
-				"Задача фиксирует итоговую сверку в сканере. Два рейса без сопровождения вы принимаете по фактическим уровням отправного и приёмного буферов."
-				"Поток доставит оборудование на Проксиму, но колония должна пережить остановку этого маршрута."
+				"{industrial_frontier.quest.v2.p8.automated_flow.purpose}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.step.1}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.step.2}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.step.3}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.success}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.task}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.automated_flow.next}"
 			]
 			icon: "gcyr:rocket_scanner"
 			id: "3A18000000000001"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Первый рейс научил маршруту; теперь пора убрать постоянное сопровождение из транспортной петли."
+			subtitle: "{industrial_frontier.quest.v2.p8.automated_flow.lead}"
 			tags: ["planetary", "automation", "flow"]
 			tasks: [
 				{
@@ -170,65 +170,65 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "После двух контрольных рейсов откройте сканер ракеты GCYR."
+					title: "{industrial_frontier.task.v2.p8.automated_flow.scanner.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Груз идёт без сопровождения"
+			title: "{industrial_frontier.quest.v2.p8.automated_flow.title}"
 			x: 9d
 			y: 0d
 		}
 		{
 			dependencies: ["3A18000000000001"]
 			description: [
-				"Первое прибытие нужно для обследования рельефа, источников энергии и путей расширения. Не ставьте жилой модуль вплотную к посадочной зоне: факел, шум и аварийный аппарат не должны пересекать обитаемый контур."
-				"Возьмите аварийный запас воздуха, энергии, еды и топлива для обратного рейса."
-				"После посадки отметьте отдельные зоны для космопорта, жилья, промышленности и будущего источника энергии."
-				"Вы прибыли на Проксиму Центавра b и выбрали площадку с разделёнными функциональными зонами."
-				"Посетите Проксиму Центавра b."
-				"Если маршрут не принимает цель, проверьте класс двигателя, запись точки и запас топлива на обратный путь."
-				"Если место не позволяет развести зоны, перенесите лагерь до строительства герметичного контура."
-				"Посещение измерения подтверждает прибытие, но ещё не доказывает пригодность базы для жизни."
-				"Соберите шлюз и подачу кислорода, затем докажите, что колония выдерживает потерю снабжения."
+				"{industrial_frontier.quest.v2.p8.colony_arrival.purpose}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.step.1}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.step.2}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.success}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.task}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.colony_arrival.next}"
 			]
 			icon: "gcyr:proxima_centauri_b_grassy_turf"
 			id: "3A18000000000002"
 			shape: "octagon"
 			size: 1.25d
-			subtitle: "Транспортный контур готов; теперь выберите место, которое можно превратить из посадочной зоны в город."
+			subtitle: "{industrial_frontier.quest.v2.p8.colony_arrival.lead}"
 			tags: ["colony", "arrival"]
 			tasks: [
 				{
 					id: "4A18000000000002"
 					dimension: "gcyr:proxima_centauri_b"
-					title: "Доберитесь до Проксимы Центавра b."
+					title: "{industrial_frontier.task.v2.p8.colony_arrival.dimension.objective}"
 					type: "dimension"
 				}
 			]
-			title: "Первая площадка у другой звезды"
+			title: "{industrial_frontier.quest.v2.p8.colony_arrival.title}"
 			x: 12d
 			y: 1d
 		}
 		{
 			dependencies: ["3A18000000000002"]
 			description: [
-				"Шлюз ограничивает обмен со внешней средой, распределитель поддерживает атмосферу внутри. Между ними нужны герметичная оболочка, измеримый запас кислорода и безопасный выход при отказе питания."
-				"Постройте небольшой герметичный модуль и отделите вход шлюзом."
-				"Разместите распределитель, подведите энергию и кислород через собственные буферы."
-				"Проверьте помещение в штатном режиме и после краткого отключения внешней подачи."
-				"Шлюз и IV-распределитель размещены в одном обитаемом контуре, а его ресурсы имеют собственные буферы."
-				"Разместите шлюз и IV-распределитель кислорода GCYR."
-				"Если помещение не заполняется воздухом, проверьте оболочку, объём, питание и подачу кислорода по очереди."
-				"Если шлюз открывает сразу обе стороны, перестройте тамбур и проверьте порядок дверей."
-				"Шлюз отделяет обитаемый объём от внешней среды, но не создаёт воздух сам."
-				"Подойдёт любой распределитель из списка задачи не ниже IV; герметичность и запас проверяются отдельно."
-				"Оборудование присутствует; следующая задача проверит жизнеспособность колонии при остановке рейсов."
+				"{industrial_frontier.quest.v2.p8.colony_habitat.purpose}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.step.1}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.step.2}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.step.3}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.success}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.task}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.colony_habitat.next}"
 			]
 			icon: "gcyr:airlock_door"
 			id: "3A18000000000003"
 			shape: "hexagon"
 			size: 1.25d
-			subtitle: "Посадочная площадка выбрана; теперь создайте помещение, где воздух не зависит от открытой двери и баллона на спине."
+			subtitle: "{industrial_frontier.quest.v2.p8.colony_habitat.lead}"
 			tags: ["colony", "life_support", "construction"]
 			tasks: [
 				{
@@ -238,7 +238,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Разместите дверь шлюза GCYR."
+					title: "{industrial_frontier.task.v2.p8.colony_habitat.airlock.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -248,11 +248,11 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Разместите распределитель кислорода GCYR уровня IV или выше."
+					title: "{industrial_frontier.task.v2.p8.colony_habitat.oxygen.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Обитаемый контур"
+			title: "{industrial_frontier.quest.v2.p8.colony_habitat.title}"
 			x: 15d
 			y: 2d
 		}
@@ -262,23 +262,23 @@
 				"3A18000000000003"
 			]
 			description: [
-				"Приёмник луча даёт основное питание там, где местная генерация дорога. Накопитель и локальный источник держат шлюз, кислород и связь во время обрыва. Задание проверяет размещение приёмника и объём энергии; работу переключения под нагрузкой нужно проверить самостоятельно."
-				"Разместите приёмник вне жилого помещения и подведите энергию через измеримый буфер."
-				"Отделите критическую шину жизнеобеспечения от промышленной нагрузки."
-				"Накопите контрольный объём, отключите луч на короткий интервал и убедитесь, что воздух, шлюз и связь продолжают работать от резерва."
-				"Приёмник размещён, контрольный объём энергии передан, а испытание показало работу критической шины от резерва."
-				"Разместите приёмник и передайте 1 000 000 FE резервной энергии."
-				"Если резерв разряжается мгновенно, измерьте постоянную нагрузку и отделите неважные потребители."
-				"Если переключение вызывает обрыв, проверьте направление энергии, предел входа и приоритет критической шины."
-				"Блок подтверждает точку приёма, но не доказывает передачу и резервирование."
-				"Задание подтверждает объём резерва. Переключение под нагрузкой проверьте самостоятельно по трём шагам описания."
-				"Энергия и транспорт должны попасть в общую телеметрию, а колония — пройти проверку жизнеспособности."
+				"{industrial_frontier.quest.v2.p8.energy_reserve.purpose}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.step.1}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.step.2}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.step.3}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.success}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.task}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.energy_reserve.next}"
 			]
 			icon: "gcyr:beam_receiver"
 			id: "3A18000000000005"
 			shape: "hexagon"
 			size: 1.25d
-			subtitle: "Колония получила обитаемый модуль, но дальний источник энергии может исчезнуть вместе со связью."
+			subtitle: "{industrial_frontier.quest.v2.p8.energy_reserve.lead}"
 			tags: ["colony", "energy", "reserve"]
 			tasks: [
 				{
@@ -288,17 +288,17 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Разместите приёмник лучевой энергии GCYR."
+					title: "{industrial_frontier.task.v2.p8.energy_reserve.receiver.objective}"
 					type: "questsadditions:place"
 				}
 				{
 					id: "4A18000000000007"
 					value: 1000000L
-					title: "Передайте 1 000 000 FE резервной энергии."
+					title: "{industrial_frontier.task.v2.p8.energy_reserve.energy.objective}"
 					type: "forge_energy"
 				}
 			]
-			title: "Луч не заменяет резерв"
+			title: "{industrial_frontier.quest.v2.p8.energy_reserve.title}"
 			x: 15d
 			y: -1d
 		}
@@ -308,23 +308,23 @@
 				"3A18000000000005"
 			]
 			description: [
-				"Испытательный интервал проходит при отключённом грузовом маршруте. Воздух и вода должны возвращаться в контур, пища — производиться на месте, энергия — иметь резерв. Задание завершается открытием распределителя после того, как вы самостоятельно сверите четыре запаса."
-				"Заполните подписанные буферы воздуха, воды, еды и энергии до контрольных уровней."
-				"Остановите импорт с Земли на испытательный интервал, не отключая местное производство."
-				"Сравните начальные и конечные уровни, устраните расходующий запас поток и только затем откройте распределитель кислорода."
-				"Колония выдержала испытательный интервал по четырём запасам, а распределитель открыт для заключительной проверки обитаемого контура."
-				"После испытательного интервала откройте IV-распределитель кислорода."
-				"Если падает кислород, ищите утечку и недостаток местного восполнения отдельно."
-				"Если воды хватает, но прекращается еда, проверьте орошение, освещение и побочные продукты фермы."
-				"Если всё работает только при открытом рейсе, это снабжаемый форпост, а не жизнеспособная колония."
-				"Подойдёт любой распределитель из списка задачи. Воздух, воду, пищу, энергию и отключённый импорт проверьте самостоятельно по описанным шагам."
-				"Теперь свяжите транспорт и энергетику телеметрией, чтобы отказ был заметен до исчерпания запасов."
+				"{industrial_frontier.quest.v2.p8.colony_viability.purpose}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.step.1}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.step.2}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.step.3}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.success}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.task}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.colony_viability.next}"
 			]
 			icon: "gcyr:iv_oxygen_spreader"
 			id: "3A18000000000004"
 			shape: "octagon"
 			size: 1.5d
-			subtitle: "Шлюз и кислородный блок создают помещение; колонию создаёт способность жить во время обрыва снабжения."
+			subtitle: "{industrial_frontier.quest.v2.p8.colony_viability.lead}"
 			tags: ["colony", "viability", "resilience"]
 			tasks: [
 				{
@@ -334,11 +334,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "После испытательного интервала откройте распределитель кислорода уровня IV или выше."
+					title: "{industrial_frontier.task.v2.p8.colony_viability.oxygen_audit.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Колония переживает задержку рейса"
+			title: "{industrial_frontier.quest.v2.p8.colony_viability.title}"
 			x: 18d
 			y: 2d
 		}
@@ -348,22 +348,22 @@
 				"3A18000000000005"
 			]
 			description: [
-				"Каждое плечо получает входной и выходной буфер, нижний порог и понятный сигнал. После контрольной остановки откройте центральный накопитель; своевременность сигнала оцените по оставшемуся запасу."
-				"Выведите на один экран уровни отправного, транзитного и приёмного буферов."
-				"Задайте нижний порог выше нуля с учётом времени одного полного рейса."
-				"Остановите отправку, убедитесь, что сигнал появился раньше исчерпания запаса, и откройте накопитель."
-				"Вы увидели сигнал до опустошения приёмного буфера и открыли центральный накопитель для сверки остатка."
-				"После проверки раннего сигнала откройте интерфейс ME-накопителя AE2."
-				"Если сигнал приходит после остановки потребителя, увеличьте буфер или поднимите порог."
-				"Если сообщение не указывает участок, разделите датчики отправки, транспорта и приёмки."
-				"Открытие интерфейса завершает проверку центрального склада. Сравните момент появления сигнала с оставшимся запасом в буфере."
-				"Наблюдаемая сеть готова принять ускорительный комплекс и его высокоэнергетическую нагрузку."
+				"{industrial_frontier.quest.v2.p8.diagnostics.purpose}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.step.1}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.step.2}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.step.3}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.success}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.task}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.diagnostics.next}"
 			]
 			icon: "ae2:drive"
 			id: "3A18000000000006"
 			shape: "gear"
 			size: 1.25d
-			subtitle: "Дальний поток бесполезен, если о его остановке узнают только у пустого склада."
+			subtitle: "{industrial_frontier.quest.v2.p8.diagnostics.lead}"
 			tags: ["diagnostics", "logistics", "energy"]
 			tasks: [
 				{
@@ -373,75 +373,75 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "После проверки сигнала откройте интерфейс ME-накопителя AE2."
+					title: "{industrial_frontier.task.v2.p8.diagnostics.drive.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Узнать об обрыве заранее"
+			title: "{industrial_frontier.quest.v2.p8.diagnostics.title}"
 			x: 16.5d
 			y: 0d
 		}
 		{
 			dependencies: ["3A18000000000001"]
 			description: [
-				"Для четырёх элитных пластин нужна последовательность базовая → улучшенная → обеднённо-урановая → элитная. Кремниевую заготовку последовательно обрабатывают прессом, мануфактурой и облучателем, а процессоры и кристаллическое связующее выпускает сборщик NuclearCraft. Экстремальный сплав возвращает к принятой плавильне сплавов P6; корпус собирается обычным крафтом. Датчик IV приходит из освоенной электроники P7."
-				"Для четырёх базовых пластин приготовьте четыре свинцовых слитка и четыре графитовые пыли. Затем добавьте четыре слитка прочного сплава и две красные пыли — получите четыре улучшенные пластины."
-				"На четыре обеднённо-урановые пластины понадобятся четыре улучшенные пластины, шестнадцать единиц урана-238 и шестнадцать серных пылей. Для следующей ступени добавьте шестнадцать слитков бора и шестнадцать пылей кристаллического связующего."
-				"Для шестнадцати пылей кристаллического связующего выполните восемь запусков сборщика. На каждый запуск подайте по одной пыли родохрозита, сульфата кальция, магния и обсидиана; выход равен двум пылям связующего."
-				"Дважды сплавьте кристалл кремния с графитовой пылью — получите четыре слитка карбида кремния. Три слитка пресс превратит в одну монокристаллическую заготовку, мануфактура разрежет её на две пластины, а два запуска облучателя дадут два кристалла n-типа. Четвёртый слиток карбида кремния останется в запасе."
-				"Два базовых процессора означают два запуска сборщика: на каждый подайте один кристалл n-типа, четыре красные пыли, слиток золота и слиток серебра."
-				"Для экстремального сплава сначала соедините графитовую и алмазную пыли в принятой плавильне сплавов — получите два слитка твёрдого углерода. Затем один слиток прочного сплава и один слиток твёрдого углерода дадут два экстремальных слитка; один останется в запасе."
-				"Четыре кобальтовые пластины и четыре слитка прочного сплава дают четыре корпуса ускорителя. Для контроллера нужен один; остальные три пригодятся для дальнейших узлов. Всего на четыре улучшенные пластины, корпуса и экстремальный сплав нужно девять слитков прочного сплава; доплавьте их из ферробора и лития партиями по два."
-				"Вложенные материалы контроллера сведены к точным партиям; следующим шагом остаётся установить три новых станка электронного участка."
-				"Прочитайте точную карту вложенных материалов одного контроллера ускорителя."
-				"Если форма материала отличается, откройте тег из рецепта: совместимые слитки и пыли не обязаны принадлежать одному моду."
-				"Если не сходится число прочных слитков, проверьте общий расход: четыре на улучшенные пластины, четыре на корпуса и один на экстремальный сплав."
-				"Если не хватает кристаллического связующего, проверьте восемь одинаковых запусков сборщика и свободный выходной слот."
-				"Это не просьба сделать лишний комплект. Галочка означает, что вы сверили четыре цепочки ниже и отвели для них место в производстве."
-				"Соберите и откройте пресс, облучатель и сборщик NuclearCraft, прежде чем требовать готовые электронные компоненты."
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.purpose}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.step.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.step.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.step.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.step.4}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.step.5}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.step.6}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.step.7}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.success}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.task}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_component_map.next}"
 			]
 			icon: "nuclearcraft:plate_elite"
 			id: "3A1800000000002C"
 			shape: "circle"
 			size: 1d
-			subtitle: "Поздний контроллер состоит не из пяти загадочных значков. Разложим его вложенные рецепты до уже знакомых материалов и одного нового станка."
+			subtitle: "{industrial_frontier.quest.v2.p8.accelerator_component_map.lead}"
 			tags: ["accelerator", "materials", "guide", "source_before_product"]
 			tasks: [
 				{
 					id: "4A18000000000059"
-					title: "Разберите карту материалов контроллера и подтвердите понятный маршрут каждой группы."
+					title: "{industrial_frontier.task.v2.p8.accelerator_component_map.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Карта материалов ускорителя"
+			title: "{industrial_frontier.quest.v2.p8.accelerator_component_map.title}"
 			x: 9d
 			y: -4d
 		}
 		{
 			dependencies: ["3A1800000000002C"]
 			description: [
-				"Пресс и облучатель закрывают путь к кремнию n-типа, а сборщик выпускает процессоры и кристаллическое связующее. Все три машины должны существовать и быть доступны до проверки готовых компонентов."
-				"Поставьте пресс, облучатель и сборщик рядом с защищённой линией FE; принятая в P6 мануфактура будет разрезать монокристаллическую заготовку между прессом и облучателем."
-				"Подведите энергию к правильной стороне каждой новой машины, откройте три интерфейса и заранее освободите выходные слоты."
-				"Сначала выполните кремниевый маршрут из карты материалов, затем восемь партий связующего и две партии процессоров."
-				"Пресс, облучатель и сборщик установлены, получают питание и готовы провести всю электронную партию контроллера."
-				"Соберите, установите и откройте пресс, облучатель и сборщик до выпуска электронных компонентов."
-				"Если машина не принимает энергию, проверьте её сторону подключения и прямой выход GT-кабеля в FE-потребитель; обратное преобразование FE в EU здесь не используется."
-				"Если заготовка не режется, используйте уже принятую мануфактуру NuclearCraft и рецепт монокристаллической заготовки, а не измельчение слитка карбида кремния."
-				"Если рецепт процессора не виден, откройте применение кремния n-типа и выберите вкладку сборщика NuclearCraft."
-				"Он превращает три слитка карбида кремния в монокристаллическую заготовку."
-				"Станок должен быть готов до обработки первой партии карбида кремния."
-				"Он легирует две кремниевые пластины и даёт два кристалла n-типа."
-				"Обе кремниевые пластины проходят облучение по одной; держите выход свободным."
-				"Это отдельная машина NuclearCraft, а не сборщик GregTech и не автоматический верстак."
-				"Проверка взаимодействия подтверждает, что станок установлен и доступен до заказа двух процессоров."
-				"Проведите электронную партию и соберите остальные группы спецификации контроллера."
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.purpose}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.step.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.step.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.step.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.success}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.task}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.proof_help.4}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.proof_help.5}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.proof_help.6}"
+				"{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.next}"
 			]
 			icon: "nuclearcraft:assembler"
 			id: "3A1800000000002D"
 			shape: "gear"
 			size: 1d
-			subtitle: "Базовый процессор начинается с карбида кремния: заготовку прессуют, режут, облучают и только затем собирают с проводящими материалами."
+			subtitle: "{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.lead}"
 			tags: ["accelerator", "machine_before_operation", "nuclearcraft"]
 			tasks: [
 				{
@@ -451,7 +451,7 @@
 						id: "nuclearcraft:pressurizer"
 					}
 					consume_items: false
-					title: "Соберите один пресс NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.accelerator_assembler_setup.pressurizer_item.objective}"
 					type: "item"
 				}
 				{
@@ -461,7 +461,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите пресс, подведите питание и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p8.accelerator_assembler_setup.pressurizer_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -471,7 +471,7 @@
 						id: "nuclearcraft:irradiator"
 					}
 					consume_items: false
-					title: "Соберите один облучатель NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.accelerator_assembler_setup.irradiator_item.objective}"
 					type: "item"
 				}
 				{
@@ -481,7 +481,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите облучатель, подведите питание и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p8.accelerator_assembler_setup.irradiator_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -491,7 +491,7 @@
 						id: "nuclearcraft:assembler"
 					}
 					consume_items: false
-					title: "Соберите один сборщик NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.accelerator_assembler_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -501,36 +501,36 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите сборщик, подведите питание и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p8.accelerator_assembler_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Электронный участок NuclearCraft"
+			title: "{industrial_frontier.quest.v2.p8.accelerator_assembler_setup.title}"
 			x: 10.5d
 			y: -4d
 		}
 		{
 			dependencies: ["3A1800000000002D"]
 			description: [
-				"Pack-рецепт линейного ускорителя связывает NuclearCraft с уровнем IV GregTech. Четыре элитные пластины, слиток экстремального сплава, два процессора, корпус и датчик IV образуют один контроллер без скрытых компонентов."
-				"Соберите пять групп спецификации в отдельном ящике проекта."
-				"Проверьте, что экстремальный сплав представлен совместимым слитком, а датчик имеет уровень IV."
-				"Полная спецификация одного контроллера ускорителя лежит в проектном запасе."
-				"Подготовьте полный набор компонентов одного контроллера линейного ускорителя."
-				"Если рецепт не собирается, сверьте количество четырёх пластин и двух процессоров."
-				"Если датчик недоступен, вернитесь к принятой IV-инфраструктуре P7."
-				"Четыре пластины образуют внешние углы рецепта контроллера."
-				"Подойдёт форма, входящая в общий тег слитков экстремального сплава."
-				"Они отвечают за управление источником и выходом пучка."
-				"Это центральная конструкционная часть рецепта контроллера."
-				"Датчик фиксирует технологическую границу ускорительного комплекса."
-				"Соберите контроллер, но не пытайтесь запускать одиночный блок как готовый ускоритель."
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.purpose}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.step.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.step.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.success}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.task}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.proof_help.4}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.proof_help.5}"
+				"{industrial_frontier.quest.v2.p8.accelerator_bom.next}"
 			]
 			icon: "nuclearcraft:linear_accelerator_controller"
 			id: "3A18000000000013"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Контроллер поздней машины не должен появляться из непрочитанного рецепта: сначала разберите его на пять понятных групп."
+			subtitle: "{industrial_frontier.quest.v2.p8.accelerator_bom.lead}"
 			tags: ["accelerator", "materials", "source_before_product"]
 			tasks: [
 				{
@@ -541,7 +541,7 @@
 						id: "nuclearcraft:plate_elite"
 					}
 					consume_items: false
-					title: "Подготовьте четыре элитные пластины NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.accelerator_bom.plate.objective}"
 					type: "item"
 				}
 				{
@@ -553,7 +553,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/extreme_ingots)"
 						}
 					}
-					title: "Подготовьте один слиток экстремального сплава."
+					title: "{industrial_frontier.task.v2.p8.accelerator_bom.extreme.objective}"
 					type: "item"
 				}
 				{
@@ -564,7 +564,7 @@
 						id: "nuclearcraft:basic_processor"
 					}
 					consume_items: false
-					title: "Подготовьте два базовых процессора NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.accelerator_bom.processor.objective}"
 					type: "item"
 				}
 				{
@@ -574,7 +574,7 @@
 						id: "nuclearcraft:accelerator_casing"
 					}
 					consume_items: false
-					title: "Подготовьте один корпус ускорителя."
+					title: "{industrial_frontier.task.v2.p8.accelerator_bom.casing.objective}"
 					type: "item"
 				}
 				{
@@ -584,32 +584,32 @@
 						id: "gtceu:iv_sensor"
 					}
 					consume_items: false
-					title: "Подготовьте один датчик IV GregTech."
+					title: "{industrial_frontier.task.v2.p8.accelerator_bom.sensor.objective}"
 					type: "item"
 				}
 			]
-			title: "Спецификация контроллера ускорителя"
+			title: "{industrial_frontier.quest.v2.p8.accelerator_bom.title}"
 			x: 12d
 			y: -4d
 		}
 		{
 			dependencies: ["3A18000000000013"]
 			description: [
-				"Линейный ускоритель разгоняет частицы для реакции в отдельной мишени. Контроллер лишь задаёт структуру: результат зависит от корпуса, вакуума, энергии, параметров пучка и совместимой приёмной камеры."
-				"Соберите контроллер из принятой спецификации P8 и подготовьте отдельную высоковольтную линию."
-				"До сборки корпуса оставьте прямой участок для пучка и безопасную зону вокруг будущей мишени."
-				"В инвентаре находится контроллер линейного ускорителя NuclearCraft."
-				"Соберите контроллер линейного ускорителя NuclearCraft."
-				"Если рецепт закрыт, проверьте датчик IV и формы экстремального сплава."
-				"Если структура не собирается, сверяйте корпус и внутренний канал послойно, начиная от контроллера."
-				"Контроллер подтверждает вход в ветвь, но не заменяет корпус, вакуум, луч и приёмную камеру."
-				"Параллельно подготовьте топливную мишень, источник кальция-48 и низкотемпературный контур пучка."
+				"{industrial_frontier.quest.v2.p8.accelerator.purpose}"
+				"{industrial_frontier.quest.v2.p8.accelerator.step.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator.step.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator.success}"
+				"{industrial_frontier.quest.v2.p8.accelerator.task}"
+				"{industrial_frontier.quest.v2.p8.accelerator.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator.next}"
 			]
 			icon: "nuclearcraft:linear_accelerator_controller"
 			id: "3018000000000008"
 			shape: "hexagon"
 			size: 1.25d
-			subtitle: "Распределённая сеть снимает логистический риск; теперь можно принять нагрузку, которую не выдерживает одиночный цех."
+			subtitle: "{industrial_frontier.quest.v2.p8.accelerator.lead}"
 			tags: ["nuclearcraft", "accelerator"]
 			tasks: [
 				{
@@ -619,34 +619,34 @@
 						id: "nuclearcraft:linear_accelerator_controller"
 					}
 					consume_items: false
-					title: "Соберите контроллер линейного ускорителя NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.accelerator.controller.objective}"
 					type: "item"
 				}
 			]
-			title: "Линейный ускоритель"
+			title: "{industrial_frontier.quest.v2.p8.accelerator.title}"
 			x: 15d
 			y: -4d
 		}
 		{
 			dependencies: ["3A18000000000001"]
 			description: [
-				"Центрифуга IV обслуживает две независимые программы. Сборка закрывает отсутствующий игровой маршрут кальция одним промышленным процессом с расходными фильтрами, а штатные рецепты GregTech разделяют водород, дейтерий и тритий. Один экземпляр переиспользуется, поэтому ветви не требуют дубликатов."
-				"Соберите одну центрифугу IV и подключите её к принятой сети через правильный кабель."
-				"Подготовьте раздельные входные и выходные буферы для кальциевой и водородной программ."
-				"Откройте интерфейс до загрузки первой партии."
-				"Общая центрифуга IV установлена и готова к кальциевому разделению и водородным изотопам."
-				"Соберите, установите и откройте общую изотопную центрифугу IV."
-				"Если машина не включается, проверьте напряжение IV и ориентацию входной стороны."
-				"Если кальциевый рецепт не виден, убедитесь, что активен добавленный сборкой рецепт P8; водородные рецепты являются штатными рецептами GregTech."
-				"Она обслуживает две ветви: добавленное сборкой разделение кальция и штатное разделение водородных изотопов. Более ранняя центрифуга NuclearCraft для суспензий её не заменяет."
-				"Подключите её к принятой сети IV, подготовьте два входа и два свободных выхода."
-				"Параллельно подготовьте кальций с фильтрами и водород для дейтерия с тритием."
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.purpose}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.step.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.step.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.step.3}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.success}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.task}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_separator_setup.next}"
 			]
 			icon: "gtceu:iv_centrifuge"
 			id: "3A1800000000001F"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Ускорителю нужен кальций-48, а реактору синтеза — дейтерий с тритием; обе ветви используют одну принятую машину."
+			subtitle: "{industrial_frontier.quest.v2.p8.calcium_separator_setup.lead}"
 			tags: ["isotopes", "shared_service", "machine_before_product"]
 			tasks: [
 				{
@@ -656,7 +656,7 @@
 						id: "gtceu:iv_centrifuge"
 					}
 					consume_items: false
-					title: "Соберите центрифугу IV GregTech."
+					title: "{industrial_frontier.task.v2.p8.calcium_separator_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -666,33 +666,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте центрифугу IV."
+					title: "{industrial_frontier.task.v2.p8.calcium_separator_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Общая изотопная центрифуга IV"
+			title: "{industrial_frontier.quest.v2.p8.calcium_separator_setup.title}"
 			x: 18d
 			y: -4d
 		}
 		{
 			dependencies: ["3A1800000000001F"]
 			description: [
-				"64 кальциевые пыли и четыре расходных фильтра дают десять источников кальция-48 и возвращают 54 пыли обычного кальция. Фактический расход равен десяти пылям и четырём кассетам, а не целому стеку без возврата."
-				"Соберите один полный стек кальциевой пыли и четыре предметных фильтра."
-				"Освободите два выхода центрифуги: для десяти источников и для 54 возвращаемых пылей."
-				"Точная входная партия и оба выходных буфера готовы."
-				"Подготовьте 64 кальциевые пыли и четыре предметных фильтра."
-				"Если кальциевой пыли меньше стека, пополните её обычной химической линией, а не заменяйте кальцитом."
-				"Если выход заблокирован, освободите место и для источников, и для возвратного кальция."
-				"Из стека в продукты уйдут десять единиц, а 54 вернутся после разделения."
-				"В этом pack-рецепте они являются расходными кассетами каскадного разделения."
-				"Запустите центрифугу один раз и примите все десять источников."
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.step.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.step.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.success}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.task}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_inputs.next}"
 			]
 			icon: "gtceu:calcium_dust"
 			id: "3A18000000000020"
 			shape: "circle"
 			size: 1d
-			subtitle: "Машина принята; теперь зафиксируйте точный масштаб единственной учебной партии."
+			subtitle: "{industrial_frontier.quest.v2.p8.calcium_inputs.lead}"
 			tags: ["accelerator", "calcium_48", "source_before_product"]
 			tasks: [
 				{
@@ -703,7 +703,7 @@
 						id: "gtceu:calcium_dust"
 					}
 					consume_items: false
-					title: "Подготовьте 64 кальциевые пыли GregTech."
+					title: "{industrial_frontier.task.v2.p8.calcium_inputs.dust.objective}"
 					type: "item"
 				}
 				{
@@ -714,32 +714,32 @@
 						id: "gtceu:item_filter"
 					}
 					consume_items: false
-					title: "Подготовьте четыре предметных фильтра GregTech."
+					title: "{industrial_frontier.task.v2.p8.calcium_inputs.filters.objective}"
 					type: "item"
 				}
 			]
-			title: "Партия кальциевого обогащения"
+			title: "{industrial_frontier.quest.v2.p8.calcium_inputs.title}"
 			x: 21d
 			y: -4d
 		}
 		{
 			dependencies: ["3A18000000000020"]
 			description: [
-				"Один цикл IV выдаёт десять источников кальция-48. Каждый источник содержит 5 000 000 ионов, поэтому итоговые 50 000 000 совпадают с расходом одной реакции на берклии-248 без лишней партии."
-				"Запустите принятый рецепт сборки в центрифуге IV один раз."
-				"Отведите десять источников отдельно, а 54 возвращённые кальциевые пыли верните на склад."
-				"Получены ровно десять источников кальция-48 для одного ускорительного прогона."
-				"Получите десять источников кальция-48 одним циклом IV-центрифуги."
-				"Если вышло меньше десяти, проверьте полный стек кальция, четыре фильтра и свободный возвратный выход."
-				"Не расходуйте источники до настройки охлаждения и пучка."
-				"Каждый источник даёт 5 000 000 ионов; десять источников образуют точные 50 000 000 для одной реакции."
-				"Подготовьте низкотемпературный гелиевый контур и компоненты сформированного ускорителя."
+				"{industrial_frontier.quest.v2.p8.calcium_sources.purpose}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.step.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.step.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.success}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.task}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_sources.next}"
 			]
 			icon: "nuclearcraft:source_calcium_48"
 			id: "3A18000000000021"
 			shape: "circle"
 			size: 1d
-			subtitle: "Оригинальный мод оставил предмет без игрового рецепта; добавленный сборкой процесс теперь должен выдать точный пучковый запас."
+			subtitle: "{industrial_frontier.quest.v2.p8.calcium_sources.lead}"
 			tags: ["accelerator", "calcium_48", "pack_bridge"]
 			tasks: [
 				{
@@ -750,35 +750,35 @@
 						id: "nuclearcraft:source_calcium_48"
 					}
 					consume_items: false
-					title: "Получите десять источников кальция-48 NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.calcium_sources.items.objective}"
 					type: "item"
 				}
 			]
-			title: "Десять источников кальция-48"
+			title: "{industrial_frontier.quest.v2.p8.calcium_sources.title}"
 			x: 24d
 			y: -4d
 		}
 		{
 			dependencies: ["3018000000000008"]
 			description: [
-				"Насос NuclearCraft с плотным гелиевым коллектором выдаёт 2500 мБ гелия за одну операцию. Этого достаточно для первой партии жидкого гелия и остаётся запас на обслуживание контура."
-				"Соберите и установите один насос NuclearCraft."
-				"Подключите питание, свободный выход и подготовьте плотный гелиевый коллектор."
-				"Откройте интерфейс до запуска."
-				"Насос принят, а плотный коллектор готов дать первую гелиевую партию."
-				"Установите насос и подготовьте плотный гелиевый коллектор."
-				"Если насос не открывается, проверьте питание и рабочую сторону."
-				"Если рецепт не виден, убедитесь, что используете именно плотный гелиевый коллектор."
-				"Он преобразует установленный коллектор в стабильный гелиевый поток."
-				"Подключите питание и отдельный выход гелия до загрузки коллектора."
-				"Одна операция с ним даёт 2500 мБ гелия — больше необходимого литра и оставляет резерв."
-				"Получите 2500 мБ гелия и отделите литр для сверхохладителя."
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.purpose}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.step.1}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.step.2}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.step.3}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.success}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.task}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.helium_pump_setup.next}"
 			]
 			icon: "nuclearcraft:pump"
 			id: "3A18000000000022"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Низкотемпературный ускоритель не должен зависеть от неописанного ведра гелия."
+			subtitle: "{industrial_frontier.quest.v2.p8.helium_pump_setup.lead}"
 			tags: ["accelerator", "cooling", "machine_before_product"]
 			tasks: [
 				{
@@ -788,7 +788,7 @@
 						id: "nuclearcraft:pump"
 					}
 					consume_items: false
-					title: "Соберите насос NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.helium_pump_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -798,7 +798,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте насос NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.helium_pump_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -808,66 +808,66 @@
 						id: "nuclearcraft:dense_helium_collector"
 					}
 					consume_items: false
-					title: "Подготовьте один плотный гелиевый коллектор."
+					title: "{industrial_frontier.task.v2.p8.helium_pump_setup.collector.objective}"
 					type: "item"
 				}
 			]
-			title: "Насос и плотный гелиевый коллектор"
+			title: "{industrial_frontier.quest.v2.p8.helium_pump_setup.title}"
 			x: 18d
 			y: -6d
 		}
 		{
 			dependencies: ["3A18000000000022"]
 			description: [
-				"Одна операция даёт 2500 мБ гелия. Сверхохладитель израсходует 1000 мБ, а оставшиеся 1500 мБ станут резервом пуска и обслуживания."
-				"Запустите насос с плотным гелиевым коллектором."
-				"Отведите 2500 мБ гелия в подписанный резервуар и отделите литр для следующей машины."
-				"В гелиевом контуре находятся 2500 мБ газа."
-				"Получите 2500 мБ гелия насосом NuclearCraft."
-				"Если гелий не выходит, проверьте коллектор, питание и свободный резервуар."
-				"Не смешивайте газ с горячим или жидким гелием: это разные жидкости NuclearCraft."
-				"Один запуск насоса с плотным коллектором даёт весь объём; 1000 мБ уйдут в сверхохладитель."
-				"Соберите сверхохладитель и превратите один литр газа в 100 мБ жидкого гелия."
+				"{industrial_frontier.quest.v2.p8.helium.purpose}"
+				"{industrial_frontier.quest.v2.p8.helium.step.1}"
+				"{industrial_frontier.quest.v2.p8.helium.step.2}"
+				"{industrial_frontier.quest.v2.p8.helium.success}"
+				"{industrial_frontier.quest.v2.p8.helium.task}"
+				"{industrial_frontier.quest.v2.p8.helium.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.helium.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.helium.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.helium.next}"
 			]
 			icon: "nuclearcraft:helium_bucket"
 			id: "3A18000000000023"
 			shape: "circle"
 			size: 1d
-			subtitle: "Насос и коллектор приняты; теперь подтвердите реальный газовый поток."
+			subtitle: "{industrial_frontier.quest.v2.p8.helium.lead}"
 			tags: ["accelerator", "cooling", "processed_form"]
 			tasks: [
 				{
 					id: "4A18000000000046"
 					fluid: "nuclearcraft:helium"
 					amount: 2500L
-					title: "Получите 2500 мБ гелия NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.helium.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Гелиевый запас"
+			title: "{industrial_frontier.quest.v2.p8.helium.title}"
 			x: 21d
 			y: -6d
 		}
 		{
 			dependencies: ["3A18000000000023"]
 			description: [
-				"Сверхохладитель превращает 1000 мБ гелия в 100 мБ жидкого гелия. Машина отделена от выхода отдельным узлом, поэтому продукт не появляется в графе раньше рабочего места."
-				"Соберите и установите один сверхохладитель."
-				"Подведите 1000 мБ из принятого гелиевого запаса и отдельный криогенный резервуар."
-				"Откройте интерфейс до запуска."
-				"Сверхохладитель установлен и готов к одной полной партии."
-				"Соберите, установите и откройте сверхохладитель NuclearCraft."
-				"Если машина не запускается, проверьте точный газовый вход и свободный жидкостный выход."
-				"Не подключайте выход к обычной гелиевой трубе."
-				"Один аппарат обслуживает первый ускоритель; запасной не нужен."
-				"Подключите вход газового гелия и отдельный криогенный выход."
-				"Проведите одну операцию и примите 100 мБ жидкого гелия."
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.purpose}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.step.1}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.step.2}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.step.3}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.success}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.task}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.supercooler_setup.next}"
 			]
 			icon: "nuclearcraft:supercooler"
 			id: "3A18000000000024"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Газовый запас принят; теперь сначала установите машину, а затем требуйте криогенный продукт."
+			subtitle: "{industrial_frontier.quest.v2.p8.supercooler_setup.lead}"
 			tags: ["accelerator", "cooling", "machine_before_product"]
 			tasks: [
 				{
@@ -877,7 +877,7 @@
 						id: "nuclearcraft:supercooler"
 					}
 					consume_items: false
-					title: "Соберите сверхохладитель NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.supercooler_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -887,70 +887,70 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте сверхохладитель."
+					title: "{industrial_frontier.task.v2.p8.supercooler_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Сверхохладитель до жидкого гелия"
+			title: "{industrial_frontier.quest.v2.p8.supercooler_setup.title}"
 			x: 24d
 			y: -6d
 		}
 		{
 			dependencies: ["3A18000000000024"]
 			description: [
-				"1000 мБ газового гелия дают 100 мБ жидкого. В ускорителе каждый миллибакет снимает тепло и возвращается газом, поэтому первый запас нужно вести в замкнутый отдельный контур."
-				"Подайте 1000 мБ принятого гелия в сверхохладитель."
-				"Отведите 100 мБ жидкого гелия в криогенный резервуар ускорителя."
-				"Получены 100 мБ жидкого гелия для первой настройки магнитов."
-				"Получите 100 мБ жидкого гелия в сверхохладителе."
-				"Если выхода нет, проверьте полный литр газа и свободный криогенный резервуар."
-				"Если магниты перегреваются, не увеличивайте пучок: сначала доведите охлаждение выше тепловой нагрузки."
-				"Одна операция расходует 1000 мБ газового гелия; выход предназначен для низкотемпературных магнитов ускорителя."
-				"Соберите RF-секции, квадруполи, порты и непрерывный канал пучка."
+				"{industrial_frontier.quest.v2.p8.liquid_helium.purpose}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.step.1}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.step.2}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.success}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.task}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.liquid_helium.next}"
 			]
 			icon: "nuclearcraft:liquid_helium_bucket"
 			id: "3A18000000000025"
 			shape: "circle"
 			size: 1d
-			subtitle: "Сверхохладитель принят; теперь нужен настоящий хладагент, а не обещание охлаждения."
+			subtitle: "{industrial_frontier.quest.v2.p8.liquid_helium.lead}"
 			tags: ["accelerator", "cooling", "processed_form"]
 			tasks: [
 				{
 					id: "4A18000000000049"
 					fluid: "nuclearcraft:liquid_helium"
 					amount: 100L
-					title: "Получите 100 мБ жидкого гелия."
+					title: "{industrial_frontier.task.v2.p8.liquid_helium.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Жидкий гелий для магнитов"
+			title: "{industrial_frontier.quest.v2.p8.liquid_helium.title}"
 			x: 27d
 			y: -6d
 		}
 		{
 			dependencies: ["3018000000000008"]
 			description: [
-				"Минимальный учебный проект использует один RF-кольцевой комплект, два ниобий-титановых квадруполя, непрерывный канал и раздельные служебные порты. Количество корпуса и охладителей зависит от фактической длины и тепла, поэтому их проверяет следующая приёмка, а не искусственный фиксированный стек."
-				"Соберите шесть перечисленных групп компонентов."
-				"Разметьте источник на одном торце, выход пучка на другом и три служебных порта для энергии и гелиевого контура."
-				"Не ставьте магниты без готового жидкого гелия: их предел температуры — 10 K."
-				"Ключевые внутренние системы минимального ускорителя подготовлены до сборки корпуса."
-				"Подготовьте RF-секцию, два квадруполя, канал и пять портов ускорителя."
-				"Если компонент недоступен, проверьте его recipe и IV-материалы до начала корпуса."
-				"Если план длиннее минимума, увеличьте канал, корпус и охлаждение пропорционально, но не уменьшайте два квадруполя."
-				"Один кольцевой комплект из восьми усилителей задаёт 200 000 единиц ускоряющего напряжения."
-				"Два квадруполя по четыре магнита дают начальную фокусировку 4,0 и сохраняют запас выше требуемых 2,0."
-				"Он ставится на исходном торце непрерывного канала."
-				"Он соединит ускоритель с входным портом мишенной камеры."
-				"Выделите отдельные порты для энергии, входа жидкого гелия и выхода газового гелия."
-				"Минимальная длина линейного ускорителя — шесть при внешнем сечении 5×5; для более длинной машины добавьте блоки сверх задания."
-				"Соберите внешний корпус 5×5 длиной не менее шести, сформируйте машину и проверьте тепловой баланс."
+				"{industrial_frontier.quest.v2.p8.accelerator_components.purpose}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.step.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.step.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.step.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.success}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.task}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.proof_help.4}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.proof_help.5}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.proof_help.6}"
+				"{industrial_frontier.quest.v2.p8.accelerator_components.next}"
 			]
 			icon: "nuclearcraft:basic_rf_amplifier"
 			id: "3A18000000000026"
 			shape: "diamond"
 			size: 1.2d
-			subtitle: "Контроллер без RF-секции, магнитов и портов не является машиной."
+			subtitle: "{industrial_frontier.quest.v2.p8.accelerator_components.lead}"
 			tags: ["accelerator", "structure", "components"]
 			tasks: [
 				{
@@ -961,7 +961,7 @@
 						id: "nuclearcraft:basic_rf_amplifier"
 					}
 					consume_items: false
-					title: "Подготовьте восемь базовых RF-усилителей."
+					title: "{industrial_frontier.task.v2.p8.accelerator_components.rf.objective}"
 					type: "item"
 				}
 				{
@@ -972,7 +972,7 @@
 						id: "nuclearcraft:niobium_titanium_electromagnet"
 					}
 					consume_items: false
-					title: "Подготовьте восемь ниобий-титановых электромагнитов."
+					title: "{industrial_frontier.task.v2.p8.accelerator_components.magnets.objective}"
 					type: "item"
 				}
 				{
@@ -982,7 +982,7 @@
 						id: "nuclearcraft:accelerator_ion_source_port"
 					}
 					consume_items: false
-					title: "Подготовьте один ионный порт источника."
+					title: "{industrial_frontier.task.v2.p8.accelerator_components.source_port.objective}"
 					type: "item"
 				}
 				{
@@ -992,7 +992,7 @@
 						id: "nuclearcraft:accelerator_beam_port"
 					}
 					consume_items: false
-					title: "Подготовьте один выходной порт пучка."
+					title: "{industrial_frontier.task.v2.p8.accelerator_components.beam_port.objective}"
 					type: "item"
 				}
 				{
@@ -1003,7 +1003,7 @@
 						id: "nuclearcraft:accelerator_port"
 					}
 					consume_items: false
-					title: "Подготовьте три служебных порта ускорителя."
+					title: "{industrial_frontier.task.v2.p8.accelerator_components.service_ports.objective}"
 					type: "item"
 				}
 				{
@@ -1014,11 +1014,11 @@
 						id: "nuclearcraft:particle_beam"
 					}
 					consume_items: false
-					title: "Подготовьте не менее шести блоков канала пучка."
+					title: "{industrial_frontier.task.v2.p8.accelerator_components.beam.objective}"
 					type: "item"
 				}
 			]
-			title: "Внутренние системы ускорителя"
+			title: "{industrial_frontier.quest.v2.p8.accelerator_components.title}"
 			x: 27d
 			y: -4d
 		}
@@ -1028,24 +1028,24 @@
 				"3A18000000000025"
 			]
 			description: [
-				"Линейный ускоритель имеет внешнее сечение 5×5 и длину не менее шести. Непрерывный канал соединяет источник с выходом, RF-секция разгоняет, два квадруполя фокусируют, а жидкий гелий удерживает ниобий-титановые магниты ниже 10 K. Недостаточное охлаждение может разрушить перегретые компоненты."
-				"Соберите корпус и стекло вокруг непрерывного канала пучка."
-				"Установите один RF-кольцевой комплект, два квадруполя, источник, выход и три служебных порта."
-				"Подайте жидкий гелий, отведите газовый возврат, подключите энергию и держите красный камень выключенным."
-				"Откройте сформированный контроллер, сравните охлаждение с максимальным теплом и подтвердите безопасный запас."
-				"Ускоритель сформирован, открывается и устойчиво держит магниты ниже 10 K без пучка."
-				"Сформируйте ускоритель 5×5×6 или длиннее и подтвердите устойчивое охлаждение."
-				"Если структура не формируется, проверьте сплошной канал и торцевые порты послойно."
-				"Если температура растёт, немедленно снимите сигнал красного камня и увеличьте поток или число охладителей."
-				"Одиночный контроллер не подходит: интерфейс должен принадлежать собранной структуре."
-				"Отметьте только после сборки внешнего сечения 5×5 и длины не менее шести, непрерывного канала, RF-кольца, двух квадруполей, источника, выхода, трёх служебных портов и охлаждения не ниже максимальной тепловой нагрузки в интерфейсе при температуре магнитов ниже 10 K."
-				"Загрузите десять источников кальция-48 и настройте пучок ровно на параметры мишени."
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.purpose}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.step.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.step.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.step.3}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.step.4}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.success}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.task}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.accelerator_structure.next}"
 			]
 			icon: "nuclearcraft:linear_accelerator_controller"
 			id: "3A18000000000027"
 			shape: "octagon"
 			size: 1.5d
-			subtitle: "Все ключевые части готовы; теперь проект должен стать одной работающей структурой."
+			subtitle: "{industrial_frontier.quest.v2.p8.accelerator_structure.lead}"
 			tags: ["accelerator", "structure", "commissioning"]
 			tasks: [
 				{
@@ -1055,16 +1055,16 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер сформированного линейного ускорителя."
+					title: "{industrial_frontier.task.v2.p8.accelerator_structure.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
 					id: "4A18000000000051"
-					title: "Подтвердите геометрию и устойчивое охлаждение ускорителя."
+					title: "{industrial_frontier.task.v2.p8.accelerator_structure.confirm.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Сформированный и холодный ускоритель"
+			title: "{industrial_frontier.quest.v2.p8.accelerator_structure.title}"
 			x: 30d
 			y: -4d
 		}
@@ -1074,24 +1074,24 @@
 				"3A18000000000021"
 			]
 			description: [
-				"Мишень берклия принимает 50 000 000 ионов кальция-48 со средней энергией 40 000, максимумом 50 000 и фокусом не ниже 2,0. Десять источников дают точное количество, сигнал силой 3 при одном базовом RF-кольце — точную энергию, а два квадруполя сохраняют запас фокусировки."
-				"Загрузите десять источников в ионный порт."
-				"Поддерживайте жидкий гелий и температуру магнитов ниже 10 K."
-				"Установите сигнал красного камня силой 3, проверьте среднюю энергию 40 000, количество 50 000 000 и фокус не ниже 2,0."
-				"Остановите пучок после проверки до подключения мишенной камеры."
-				"Пучок кальция-48 имеет точное количество и энергию, достаточную фокусировку и устойчивое охлаждение."
-				"Настройте 50 000 000 ионов кальция-48 на энергию 40 000 и фокус не ниже 2,0."
-				"Если энергия выше 50 000, уменьшите сигнал до безопасного значения до подачи мишени."
-				"Если фокус падает ниже 2,0, проверьте оба квадруполя, непрерывность канала и тепловой режим."
-				"Загрузите все десять источников в ионный порт только после устойчивой холодной приёмки."
-				"Один базовый RF-кольцевой комплект даёт 200 000 напряжения; для заряда +1 сигнал красного камня силой 3 задаёт энергию 40 000. Два ниобий-титановых квадруполя дают запас начальной фокусировки 4,0 до потерь. Не подтверждайте при температуре 10 K или выше."
-				"Соедините выход пучка с сформированной мишенной камерой и загрузите берклий-248."
+				"{industrial_frontier.quest.v2.p8.calcium_beam.purpose}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.step.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.step.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.step.3}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.step.4}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.success}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.task}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.calcium_beam.next}"
 			]
 			icon: "nuclearcraft:source_calcium_48"
 			id: "3A18000000000028"
 			shape: "octagon"
 			size: 1.4d
-			subtitle: "Холодная структура и десять источников готовы; теперь нужны точные параметры, а не просто светящийся канал."
+			subtitle: "{industrial_frontier.quest.v2.p8.calcium_beam.lead}"
 			tags: ["accelerator", "beam", "commissioning"]
 			tasks: [
 				{
@@ -1101,40 +1101,40 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер ускорителя с загруженными источниками."
+					title: "{industrial_frontier.task.v2.p8.calcium_beam.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
 					id: "4A18000000000053"
-					title: "Подтвердите пучок кальция-48: 50 000 000 ионов, энергия 40 000, фокус не ниже 2,0."
+					title: "{industrial_frontier.task.v2.p8.calcium_beam.confirm.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Пучок кальция-48 настроен"
+			title: "{industrial_frontier.quest.v2.p8.calcium_beam.title}"
 			x: 33d
 			y: -4d
 		}
 		{
 			dependencies: ["3A18000000000001"]
 			description: [
-				"Каждая переработанная металлическая сборка LEU-235 даёт по одной единице плутония-239, плутония-242 и америция-243. Для всей цепи нужны три совокупных цикла; первый уже был частью P6, поэтому при сохранённых выходах остаются два повторения."
-				"Проверьте защищённый склад продуктов P6 и отделите три нужных изотопа."
-				"При необходимости сформуйте, выжгите и переработайте ещё две металлические сборки LEU-235 теми же принятыми машинами."
-				"Накопите по три единицы каждого из трёх изотопов и не расходуйте америций-243."
-				"На защищённом складе лежат по три единицы плутония-239, плутония-242 и америция-243."
-				"Накопите по три единицы плутония-239, плутония-242 и америция-243."
-				"Если выход P6 был потерян, потребуется один дополнительный цикл; книга прямо показывает итоговый запас и не считает утраченный материал существующим."
-				"Не используйте высокообогащённую форму: этот маршрут рассчитан на металлический LEU-235."
-				"Одна единица уже появляется в учебном цикле P6; повторите выгорание и переработку LEU-235 ещё два раза, если сохранили первый выход."
-				"Они выходят вместе с плутонием-239 при каждой переработке металлического LEU-235."
-				"Сохраните все три: они станут основной долей второй переходной топливной смеси."
-				"Расплавьте одну единицу плутония-239 и три единицы плутония-242 для первой переходной смеси."
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.step.3}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.success}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.task}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.bk_leu_campaign.next}"
 			]
 			icon: "nuclearcraft:plutonium_239"
 			id: "3A18000000000014"
 			shape: "circle"
 			size: 1d
-			subtitle: "Берклий-248 не добывается рудой: его путь начинается с масштабирования уже принятого уранового цикла."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_leu_campaign.lead}"
 			tags: ["accelerator", "isotopes", "fuel_cycle"]
 			tasks: [
 				{
@@ -1145,7 +1145,7 @@
 						id: "nuclearcraft:plutonium_239"
 					}
 					consume_items: false
-					title: "Накопите три единицы плутония-239 NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.bk_leu_campaign.pu239.objective}"
 					type: "item"
 				}
 				{
@@ -1156,7 +1156,7 @@
 						id: "nuclearcraft:plutonium_242"
 					}
 					consume_items: false
-					title: "Накопите три единицы плутония-242 NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.bk_leu_campaign.pu242.objective}"
 					type: "item"
 				}
 				{
@@ -1167,104 +1167,104 @@
 						id: "nuclearcraft:americium_243"
 					}
 					consume_items: false
-					title: "Накопите три единицы америция-243 NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.bk_leu_campaign.am243.objective}"
 					type: "item"
 				}
 			]
-			title: "Три цикла LEU для мишени"
+			title: "{industrial_frontier.quest.v2.p8.bk_leu_campaign.title}"
 			x: 18d
 			y: -1d
 		}
 		{
 			dependencies: ["3A18000000000014"]
 			description: [
-				"Одна единица плутония-239 даёт 90 мБ, а три единицы плутония-242 — 270 мБ. Следующий рецепт израсходует только 30 мБ первого потока и все 270 мБ второго, поэтому остаток плутония-239 сохранится."
-				"Расплавьте одну единицу плутония-239 и отведите 90 мБ в защищённый буфер."
-				"Отдельно расплавьте три единицы плутония-242 и накопите 270 мБ."
-				"Два жидких изотопных потока подготовлены и не смешаны преждевременно."
-				"Получите 90 мБ плутония-239 и 270 мБ плутония-242."
-				"Если плавитель не принимает изотоп, убедитесь, что используете металлическую форму без покрытия."
-				"Не сливайте потоки в одну обычную трубу до дозирования химическим реактором."
-				"Расплавьте одну металлическую единицу в ранее принятом плавителе NuclearCraft."
-				"Расплавьте три металлические единицы по 90 мБ каждая."
-				"Дозируйте 30 мБ плутония-239 и 270 мБ плутония-242 в одну низкообогащённую смесь."
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.success}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.task}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.next}"
 			]
 			icon: "nuclearcraft:plutonium_239_bucket"
 			id: "3A18000000000015"
 			shape: "circle"
 			size: 1d
-			subtitle: "Твёрдый запас принят; химический реактор смешивает не предметы, а два дозированных жидких потока."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.lead}"
 			tags: ["accelerator", "isotopes", "melting"]
 			tasks: [
 				{
 					id: "4A18000000000031"
 					fluid: "nuclearcraft:plutonium_239"
 					amount: 90L
-					title: "Получите 90 мБ плутония-239."
+					title: "{industrial_frontier.task.v2.p8.bk_plutonium_liquids.pu239.objective}"
 					type: "fluid"
 				}
 				{
 					id: "4A18000000000032"
 					fluid: "nuclearcraft:plutonium_242"
 					amount: 270L
-					title: "Получите 270 мБ плутония-242."
+					title: "{industrial_frontier.task.v2.p8.bk_plutonium_liquids.pu242.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Жидкие изотопы плутония"
+			title: "{industrial_frontier.quest.v2.p8.bk_plutonium_liquids.title}"
 			x: 21d
 			y: -1d
 		}
 		{
 			dependencies: ["3A18000000000015"]
 			description: [
-				"Химический реактор расходует 30 мБ плутония-239 и 270 мБ плутония-242, выдавая 90 мБ низкообогащённого топлива LEP-239. Оставшиеся 60 мБ плутония-239 сохраните отдельно."
-				"Дозируйте в химический реактор ровно 30 и 270 мБ двух принятых изотопов."
-				"Отведите 90 мБ топлива в защищённый буфер, а остаток плутония-239 не смешивайте с ним."
-				"Получены 90 мБ жидкого LEP-239 для одной металлической сборки."
-				"Смешайте 30 мБ плутония-239 и 270 мБ плутония-242 в 90 мБ LEP-239."
-				"Если реакции нет, проверьте порядок жидкостей, свободный выход и точные объёмы."
-				"Не подавайте все 90 мБ плутония-239: рецепт использует только треть этого объёма."
-				"Подайте 30 мБ плутония-239 и 270 мБ плутония-242 в принятый химический реактор NuclearCraft."
-				"Передайте принятую смесь в формовщик слитков."
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.success}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.task}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_mix.next}"
 			]
 			icon: "nuclearcraft:fuel_plutonium_lep_239_bucket"
 			id: "3A18000000000016"
 			shape: "circle"
 			size: 1d
-			subtitle: "Изотопные потоки готовы; теперь соедините их в точной пропорции."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_plutonium_mix.lead}"
 			tags: ["accelerator", "isotopes", "fuel"]
 			tasks: [
 				{
 					id: "4A18000000000033"
 					fluid: "nuclearcraft:fuel_plutonium_lep_239"
 					amount: 90L
-					title: "Получите 90 мБ жидкого топлива LEP-239."
+					title: "{industrial_frontier.task.v2.p8.bk_plutonium_mix.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Плутониевая переходная смесь"
+			title: "{industrial_frontier.quest.v2.p8.bk_plutonium_mix.title}"
 			x: 24d
 			y: -1d
 		}
 		{
 			dependencies: ["3A18000000000016"]
 			description: [
-				"Формовщик слитков превращает ровно 90 мБ жидкого LEP-239 в одну металлическую топливную сборку. Ветка сознательно выбирает металлическую форму и не требует дополнительных покрытий."
-				"Подайте принятые 90 мБ смеси в формовщик слитков."
-				"Отведите одну металлическую сборку в защищённый контейнер реакторного участка."
-				"Одна металлическая сборка LEP-239 готова к контролируемому выгоранию."
-				"Сформуйте одну металлическую сборку LEP-239."
-				"Если формовщик не запускается, проверьте точный объём и отсутствие другой жидкости во входе."
-				"Не превращайте сборку в оксидную или нитридную форму: текущий маршрут и проверки используют металлическую."
-				"Передайте уже принятые 90 мБ смеси в ранее освоенный формовщик слитков NuclearCraft."
-				"Выжгите эту единственную сборку в уже принятом реакторе P6."
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.success}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.task}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.next}"
 			]
 			icon: "nuclearcraft:fuel_plutonium_lep_239"
 			id: "3A18000000000017"
 			shape: "circle"
 			size: 1d
-			subtitle: "Жидкая смесь принята; теперь ей нужна форма, которую понимает реактор деления."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.lead}"
 			tags: ["accelerator", "fuel", "forming"]
 			tasks: [
 				{
@@ -1274,33 +1274,33 @@
 						id: "nuclearcraft:fuel_plutonium_lep_239"
 					}
 					consume_items: false
-					title: "Сформуйте одну металлическую сборку LEP-239."
+					title: "{industrial_frontier.task.v2.p8.bk_plutonium_fuel.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Металлическая сборка LEP-239"
+			title: "{industrial_frontier.quest.v2.p8.bk_plutonium_fuel.title}"
 			x: 27d
 			y: -1d
 		}
 		{
 			dependencies: ["3A18000000000017"]
 			description: [
-				"Металлический LEP-239 после полного цикла превращается в металлическое отработанное топливо. Используйте принятые защиту, тепловой контур и аварийное отключение P6; новый реактор ради этой ступени не нужен."
-				"Загрузите одну сборку LEP-239 в остановленный и проверенный реактор."
-				"Запустите цикл под контролем красного камня и дождитесь полного выгорания."
-				"Выгрузите остаток в защищённый буфер."
-				"Отработанная металлическая сборка LEP-239 находится в защищённом буфере."
-				"Выжгите одну металлическую сборку LEP-239."
-				"Если реактор не принимает топливо, проверьте металлическую форму и свободную топливную ячейку."
-				"Не открывайте активную зону до полного останова и проверки дозиметром."
-				"Загрузите свежую сборку в принятый реактор, проверьте тепловой баланс и дождитесь полного выгорания."
-				"Переработайте остаток и примите америций-242 вместе с накопленным америцием-243."
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.step.3}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.success}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.task}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_burn.next}"
 			]
 			icon: "nuclearcraft:depleted_fuel_plutonium_lep_239"
 			id: "3A18000000000018"
 			shape: "circle"
 			size: 1d
-			subtitle: "Свежая сборка существует; только реакторное выгорание создаёт нужные более тяжёлые изотопы."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_plutonium_burn.lead}"
 			tags: ["accelerator", "fuel_cycle", "reactor"]
 			tasks: [
 				{
@@ -1310,34 +1310,34 @@
 						id: "nuclearcraft:depleted_fuel_plutonium_lep_239"
 					}
 					consume_items: false
-					title: "Получите одну отработанную металлическую сборку LEP-239."
+					title: "{industrial_frontier.task.v2.p8.bk_plutonium_burn.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Выгорание плутониевой ступени"
+			title: "{industrial_frontier.quest.v2.p8.bk_plutonium_burn.title}"
 			x: 30d
 			y: -1d
 		}
 		{
 			dependencies: ["3A18000000000018"]
 			description: [
-				"Один цикл переработки металлического LEP-239 добавляет одну единицу америция-242 и одну единицу америция-243. Вместе с тремя сохранёнными единицами америция-243 это даёт полный запас для следующей смеси и один резервный остаток."
-				"Переработайте принятую отработанную сборку в машине P6."
-				"Сохраните америций-242 и объедините новый америций-243 с тремя единицами из LEU-кампании."
-				"Остальные продукты также разнесите по подписанным защищённым буферам."
-				"Получены америций-242 и совокупные четыре единицы америция-243."
-				"Переработайте LEP-239 и получите америций-242 вместе с четвёртой единицей америция-243."
-				"Если америций-242 не засчитывается, откройте состав pack-тега: задача принимает все формы установленного изотопного тега."
-				"Не выбрасывайте кюрий и плутоний-242: они являются ценными продуктами того же цикла."
-				"Переработчик выдаёт её через общий изотопный тег; любая форма из pack-тега подходит для следующего плавления."
-				"Три сохранены после LEU-кампании, ещё одна выходит из переработки LEP-239; следующая смесь израсходует три."
-				"Расплавьте одну единицу америция-242 и три единицы америция-243."
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.step.3}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.success}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.task}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.next}"
 			]
 			icon: "nuclearcraft:americium_242"
 			id: "3A18000000000019"
 			shape: "circle"
 			size: 1d
-			subtitle: "Отработанная плутониевая сборка принята; переработчик должен выделить следующий редкий изотоп."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.lead}"
 			tags: ["accelerator", "fuel_cycle", "reprocessing"]
 			tasks: [
 				{
@@ -1349,7 +1349,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/americium_242_isotopes)"
 						}
 					}
-					title: "Получите одну совместимую форму америция-242."
+					title: "{industrial_frontier.task.v2.p8.bk_plutonium_reprocess.am242.objective}"
 					type: "item"
 				}
 				{
@@ -1360,104 +1360,104 @@
 						id: "nuclearcraft:americium_243"
 					}
 					consume_items: false
-					title: "Доведите запас америция-243 до четырёх единиц."
+					title: "{industrial_frontier.task.v2.p8.bk_plutonium_reprocess.am243.objective}"
 					type: "item"
 				}
 			]
-			title: "Переход к америцию"
+			title: "{industrial_frontier.quest.v2.p8.bk_plutonium_reprocess.title}"
 			x: 33d
 			y: -1d
 		}
 		{
 			dependencies: ["3A18000000000019"]
 			description: [
-				"Одна единица америция-242 даёт 90 мБ, а три единицы америция-243 — 270 мБ. Химический реактор израсходует 30 мБ первого потока и все 270 мБ второго; остаток америция-242 сохранится."
-				"Расплавьте одну принятую единицу америция-242 в 90 мБ."
-				"В отдельном потоке расплавьте три единицы америция-243 в 270 мБ."
-				"Два америциевых потока готовы к точному дозированию."
-				"Получите 90 мБ америция-242 и 270 мБ америция-243."
-				"Если плавитель не принимает форму америция-242, выберите совместимый вариант из pack-тега предыдущей задачи."
-				"Не смешивайте потоки до химического реактора."
-				"Расплавьте одну принятую единицу америция-242 в машине NuclearCraft."
-				"Расплавьте три из четырёх накопленных единиц; четвёртая останется в резерве."
-				"Дозируйте 30 мБ америция-242 и 270 мБ америция-243."
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.success}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.task}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_liquids.next}"
 			]
 			icon: "nuclearcraft:americium_242_bucket"
 			id: "3A1800000000001A"
 			shape: "circle"
 			size: 1d
-			subtitle: "Оба твёрдых изотопа приняты; теперь подготовьте точные жидкие доли второй переходной смеси."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_americium_liquids.lead}"
 			tags: ["accelerator", "isotopes", "melting"]
 			tasks: [
 				{
 					id: "4A18000000000038"
 					fluid: "nuclearcraft:americium_242"
 					amount: 90L
-					title: "Получите 90 мБ америция-242."
+					title: "{industrial_frontier.task.v2.p8.bk_americium_liquids.am242.objective}"
 					type: "fluid"
 				}
 				{
 					id: "4A18000000000039"
 					fluid: "nuclearcraft:americium_243"
 					amount: 270L
-					title: "Получите 270 мБ америция-243."
+					title: "{industrial_frontier.task.v2.p8.bk_americium_liquids.am243.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Жидкие изотопы америция"
+			title: "{industrial_frontier.quest.v2.p8.bk_americium_liquids.title}"
 			x: 36d
 			y: -1d
 		}
 		{
 			dependencies: ["3A1800000000001A"]
 			description: [
-				"30 мБ америция-242 и 270 мБ америция-243 дают 90 мБ низкообогащённого топлива LEA-242. Лишние 60 мБ америция-242 останутся в защищённом резерве."
-				"Дозируйте в химический реактор 30 мБ америция-242 и 270 мБ америция-243."
-				"Отведите 90 мБ топлива отдельно от остатка первого изотопа."
-				"Получены 90 мБ жидкого LEA-242."
-				"Смешайте 30 мБ америция-242 и 270 мБ америция-243 в 90 мБ LEA-242."
-				"Если реакции нет, проверьте точные объёмы и свободный выход."
-				"Не подавайте все 90 мБ америция-242: две трети должны остаться."
-				"Подайте 30 мБ америция-242 и 270 мБ америция-243 в принятый химический реактор."
-				"Сформуйте из принятой жидкости одну металлическую сборку."
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.success}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.task}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_mix.next}"
 			]
 			icon: "nuclearcraft:fuel_americium_lea_242_bucket"
 			id: "3A1800000000001B"
 			shape: "circle"
 			size: 1d
-			subtitle: "Два жидких изотопа готовы; соедините их в последнюю топливную ступень перед берклием."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_americium_mix.lead}"
 			tags: ["accelerator", "isotopes", "fuel"]
 			tasks: [
 				{
 					id: "4A1800000000003A"
 					fluid: "nuclearcraft:fuel_americium_lea_242"
 					amount: 90L
-					title: "Получите 90 мБ жидкого топлива LEA-242."
+					title: "{industrial_frontier.task.v2.p8.bk_americium_mix.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Америциевая переходная смесь"
+			title: "{industrial_frontier.quest.v2.p8.bk_americium_mix.title}"
 			x: 39d
 			y: -1d
 		}
 		{
 			dependencies: ["3A1800000000001B"]
 			description: [
-				"Формовщик слитков превращает 90 мБ жидкого LEA-242 в одну металлическую сборку. Дополнительные покрытия для этого канонического маршрута не нужны."
-				"Подайте принятые 90 мБ в формовщик слитков."
-				"Перенесите готовую металлическую сборку в защищённый реакторный буфер."
-				"Одна металлическая сборка LEA-242 готова к последнему выгоранию."
-				"Сформуйте одну металлическую сборку LEA-242."
-				"Если формовщик не стартует, очистите вход от предыдущего топлива."
-				"Не меняйте форму сборки: дальнейшие проверки рассчитаны на металлический вариант."
-				"Передайте принятые 90 мБ жидкого топлива в ранее освоенный формовщик слитков."
-				"Выжгите одну сборку и переработайте остаток ради берклия-248."
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.success}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.task}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_fuel.next}"
 			]
 			icon: "nuclearcraft:fuel_americium_lea_242"
 			id: "3A1800000000001C"
 			shape: "circle"
 			size: 1d
-			subtitle: "Жидкая смесь существует; придайте ей точную реакторную форму."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_americium_fuel.lead}"
 			tags: ["accelerator", "fuel", "forming"]
 			tasks: [
 				{
@@ -1467,33 +1467,33 @@
 						id: "nuclearcraft:fuel_americium_lea_242"
 					}
 					consume_items: false
-					title: "Сформуйте одну металлическую сборку LEA-242."
+					title: "{industrial_frontier.task.v2.p8.bk_americium_fuel.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Металлическая сборка LEA-242"
+			title: "{industrial_frontier.quest.v2.p8.bk_americium_fuel.title}"
 			x: 42d
 			y: -1d
 		}
 		{
 			dependencies: ["3A1800000000001C"]
 			description: [
-				"Полное выгорание металлического LEA-242 создаёт отработанное топливо, которое переработчик разделит на берклий-248 и сопутствующие изотопы. Реактор используется повторно, без постройки второго комплекса."
-				"Загрузите одну сборку в остановленный и проверенный реактор."
-				"Выполните полный безопасный цикл и дождитесь выгорания."
-				"После останова выгрузите остаток в защищённый контейнер."
-				"Отработанная металлическая сборка LEA-242 готова к переработке."
-				"Выжгите одну металлическую сборку LEA-242."
-				"Если цикл не запускается, проверьте форму топлива и тепловой запас."
-				"Не выгружайте активную сборку до полного останова и проверки дозиметром."
-				"Выжгите принятую сборку в безопасно настроенном реакторе P6 и выгрузите остаток после полного останова."
-				"Проведите одну переработку и выделите берклий-248."
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.purpose}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.step.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.step.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.step.3}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.success}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.task}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.bk_americium_burn.next}"
 			]
 			icon: "nuclearcraft:depleted_fuel_americium_lea_242"
 			id: "3A1800000000001D"
 			shape: "circle"
 			size: 1d
-			subtitle: "Америциевая сборка готова; её отработанный состав содержит требуемый берклий."
+			subtitle: "{industrial_frontier.quest.v2.p8.bk_americium_burn.lead}"
 			tags: ["accelerator", "fuel_cycle", "reactor"]
 			tasks: [
 				{
@@ -1503,33 +1503,33 @@
 						id: "nuclearcraft:depleted_fuel_americium_lea_242"
 					}
 					consume_items: false
-					title: "Получите одну отработанную металлическую сборку LEA-242."
+					title: "{industrial_frontier.task.v2.p8.bk_americium_burn.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Последнее выгорание перед мишенью"
+			title: "{industrial_frontier.quest.v2.p8.bk_americium_burn.title}"
 			x: 45d
 			y: -1d
 		}
 		{
 			dependencies: ["3A1800000000001D"]
 			description: [
-				"Один цикл переработки металлического LEA-242 выдаёт одну единицу берклия-248. Это штатный производственный маршрут NuclearCraft из трёх LEU-циклов, одной плутониевой и одной америциевой ступени; ни один этап не заменён бесплатным крафтом."
-				"Переработайте принятую отработанную сборку LEA-242."
-				"Отделите берклий-248 от америция, кюрия и остальных сопутствующих продуктов."
-				"Перенесите мишень в экранированный контейнер камеры."
-				"Одна мишень берклия-248 готова к облучению кальцием-48."
-				"Переработайте LEA-242 и получите одну мишень берклия-248."
-				"Если берклий не появился, проверьте точную серию отработанного топлива."
-				"Сохраните все сопутствующие изотопы: они не являются мусором и не должны смешиваться с обычными отходами."
-				"Переработайте принятую отработанную сборку LEA-242; один цикл выдаёт ровно одну единицу берклия-248."
-				"Параллельно подготовьте десять источников кальция-48 и сформируйте устойчивый пучок."
+				"{industrial_frontier.quest.v2.p8.berkelium_target.purpose}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.step.1}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.step.2}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.step.3}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.success}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.task}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.berkelium_target.next}"
 			]
 			icon: "nuclearcraft:berkelium_248"
 			id: "3A1800000000001E"
 			shape: "octagon"
 			size: 1.2d
-			subtitle: "Последняя сборка выгорела; теперь переработчик должен выделить единственную мишень ускорителя."
+			subtitle: "{industrial_frontier.quest.v2.p8.berkelium_target.lead}"
 			tags: ["accelerator", "target", "reprocessing"]
 			tasks: [
 				{
@@ -1539,36 +1539,36 @@
 						id: "nuclearcraft:berkelium_248"
 					}
 					consume_items: false
-					title: "Получите одну металлическую мишень берклия-248."
+					title: "{industrial_frontier.task.v2.p8.berkelium_target.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Берклиевая мишень"
+			title: "{industrial_frontier.quest.v2.p8.berkelium_target.title}"
 			x: 48d
 			y: -1d
 		}
 		{
 			dependencies: ["3A18000000000001"]
 			description: [
-				"Смеситель IV соединяет три части палладиевой пыли с одной частью родиевой и выдаёт четыре части палладия с родиевым покрытием. Для восьми пластин нужны две загрузки: шесть частей палладия и две части родия."
-				"Соберите, установите и откройте смеситель IV."
-				"Подготовьте шесть порций палладиевой и две порции родиевой пыли для двух загрузок."
-				"Сверьте рецепт в JEI, подключите смеситель к сети IV и оставьте свободным предметный выход."
-				"Смеситель IV и оба металлических входа готовы к двум партиям — ровно восьми частям палладия с родиевым покрытием."
-				"Установите смеситель IV и подготовьте шесть порций палладиевой и две порции родиевой пыли."
-				"Если рецепт не появляется, проверьте форму обоих материалов: на входе нужна именно пыль."
-				"Если машина показывает недостаток напряжения, проверьте, что она подключена к принятому контуру IV, а не HV или EV."
-				"Рецепт палладия с родиевым покрытием работает на ступени IV; более ранний смеситель его не выполнит."
-				"Подключите его к принятой сети IV и оставьте свободным предметный выход."
-				"Это две точные загрузки смесителя. Подойдёт любая совместимая палладиевая пыль из общего словаря материалов."
-				"Это две точные загрузки смесителя. Подойдёт любая совместимая родиевая пыль из общего словаря материалов."
-				"Получите материал, сформуйте восемь пластин и только затем переходите к границе LuV."
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.purpose}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.step.1}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.step.2}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.step.3}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.success}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.task}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.proof_help.4}"
+				"{industrial_frontier.quest.v2.p8.rpp_mixer_setup.next}"
 			]
 			icon: "gtceu:iv_mixer"
 			id: "3A18000000000012"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Корпусной материал LuV не появляется из одного палладия: сначала нужна точная смесь с родием в оборудовании IV."
+			subtitle: "{industrial_frontier.quest.v2.p8.rpp_mixer_setup.lead}"
 			tags: ["mainline", "metallurgy", "luv", "machine_before_product", "source_before_product"]
 			tasks: [
 				{
@@ -1578,7 +1578,7 @@
 						id: "gtceu:iv_mixer"
 					}
 					consume_items: false
-					title: "Соберите смеситель IV GregTech."
+					title: "{industrial_frontier.task.v2.p8.rpp_mixer_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -1588,7 +1588,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте смеситель IV."
+					title: "{industrial_frontier.task.v2.p8.rpp_mixer_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -1601,7 +1601,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/palladium_dusts)"
 						}
 					}
-					title: "Подготовьте шесть порций палладиевой пыли."
+					title: "{industrial_frontier.task.v2.p8.rpp_mixer_setup.palladium.objective}"
 					type: "item"
 				}
 				{
@@ -1614,33 +1614,33 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/rhodium_dusts)"
 						}
 					}
-					title: "Подготовьте две порции родиевой пыли."
+					title: "{industrial_frontier.task.v2.p8.rpp_mixer_setup.rhodium.objective}"
 					type: "item"
 				}
 			]
-			title: "Смесь палладия и родия"
+			title: "{industrial_frontier.quest.v2.p8.rpp_mixer_setup.title}"
 			x: 12d
 			y: -7d
 		}
 		{
 			dependencies: ["3A18000000000012"]
 			description: [
-				"Палладий с родиевым покрытием — материальная граница LuV. Сначала подтверждается реальный материал, затем сеть, буфер, компоненты, сборщик и только после них установка синтеза."
-				"Проведите две подготовленные загрузки в принятом смесителе IV: каждая даст четыре части материала."
-				"Используйте уже освоенную формовочную инфраструктуру."
-				"Сформуйте восемь пластин и оставьте их в инвентаре до отметки."
-				"Восемь пластин палладия с родиевым покрытием готовы к реальным узлам LuV."
-				"Получите восемь совместимых пластин палладия с родиевым покрытием до ввода LuV."
-				"Если покрытие не получается, проверьте чистоту обоих металлов и точную химическую форму входов."
-				"Если пластина не считается, откройте список тега совместимых форм."
-				"Это одна реальная корпусная партия LuV. Задача принимает совместимую форму материала и не расходует её."
-				"Теперь можно строить границу сети LuV и короткий ниобий-титановый участок."
+				"{industrial_frontier.quest.v2.p8.luv_materials.purpose}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.step.1}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.step.2}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.step.3}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.success}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.task}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.luv_materials.next}"
 			]
 			icon: "gtceu:rhodium_plated_palladium_plate"
 			id: "3A18000000000011"
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "LuV требует собственной стойкой контактной и корпусной базы до трансформатора и реактора синтеза."
+			subtitle: "{industrial_frontier.quest.v2.p8.luv_materials.lead}"
 			tags: ["mainline", "metallurgy", "luv", "material_bridge"]
 			tasks: [
 				{
@@ -1653,35 +1653,35 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/rhodium_plated_palladium_plates)"
 						}
 					}
-					title: "Подготовьте восемь совместимых пластин палладия с родиевым покрытием."
+					title: "{industrial_frontier.task.v2.p8.luv_materials.rpp.objective}"
 					type: "item"
 				}
 			]
-			title: "Родиевое покрытие открывает LuV"
+			title: "{industrial_frontier.quest.v2.p8.luv_materials.title}"
 			x: 15d
 			y: -7d
 		}
 		{
 			dependencies: ["3A18000000000011"]
 			description: [
-				"Трансформатор с маркировкой IV в режиме повышения принимает 4 A IV и выдаёт 1 A LuV. Низкая сторона касается выходной лицевой стороны буфера с четырьмя заряженными ячейками, а высокая сторона начинает ниобий-титановый контур LuV."
-				"Поставьте низкую сторону трансформатора IV прямо у выходной лицевой стороны четырёхсекционного буфера IV."
-				"Переключите отвёрткой режим повышения 4 A IV → 1 A LuV и откройте интерфейс."
-				"От высокой стороны проложите короткий участок одинарного ниобий-титанового кабеля; реактор подключайте только после буфера LuV."
-				"Граница IV→LuV установлена и готова к локальному резерву LuV."
-				"Установите трансформатор IV→LuV в режиме повышения и подготовьте четыре ниобий-титановых кабеля LuV."
-				"Если заряд не проходит, проверьте четыре непустые ячейки, выходную сторону буфера и режим трансформатора."
-				"Если сеть отключается, убедитесь, что ниобий-титановый кабель находится только на стороне LuV."
-				"Именно трансформатор IV преобразует 4 A IV в 1 A LuV. Трансформатор с маркировкой LuV ведёт уже к ZPM."
-				"Поставьте его прямо у выходной стороны заряженного буфера IV и переключите отвёрткой в режим повышения: 4 A IV на входе, 1 A LuV на выходе."
-				"Четырёх кабелей достаточно для первого короткого участка LuV."
-				"Добавьте аккумуляторный буфер LuV."
+				"{industrial_frontier.quest.v2.p8.luv_transformer.purpose}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.step.1}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.step.2}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.step.3}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.success}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.task}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.luv_transformer.next}"
 			]
 			icon: "gtceu:iv_transformer_1a"
 			id: "3A1800000000000C"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Реактор синтеза нельзя ставить в книгу раньше сети, которая его обслуживает."
+			subtitle: "{industrial_frontier.quest.v2.p8.luv_transformer.lead}"
 			tags: ["mainline", "luv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -1691,7 +1691,7 @@
 						id: "gtceu:iv_transformer_1a"
 					}
 					consume_items: false
-					title: "Соберите одноамперный трансформатор ступени IV."
+					title: "{industrial_frontier.task.v2.p8.luv_transformer.item.objective}"
 					type: "item"
 				}
 				{
@@ -1701,7 +1701,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте трансформатор IV→LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_transformer.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -1712,35 +1712,35 @@
 						id: "gtceu:niobium_titanium_single_cable"
 					}
 					consume_items: false
-					title: "Подготовьте четыре одинарных ниобий-титановых кабеля."
+					title: "{industrial_frontier.task.v2.p8.luv_transformer.cable.objective}"
 					type: "item"
 				}
 			]
-			title: "Граница IV→LuV"
+			title: "{industrial_frontier.quest.v2.p8.luv_transformer.title}"
 			x: 18d
 			y: -7d
 		}
 		{
 			dependencies: ["3A1800000000000C"]
 			description: [
-				"Буфер собирает энергию через вставленный аккумулятор и делает недостаток питания заметным до запуска дорогого цикла. Пустой корпус резервом не является."
-				"Поставьте буфер на стороне LuV."
-				"Вставьте хотя бы один совместимый аккумулятор LuV, откройте интерфейс и дождитесь устойчивого заряда."
-				"Проверьте заряд вручную до подключения реактора: задача не считывает энергию внутри предмета."
-				"Буфер LuV установлен, содержит аккумулятор и доступен."
-				"Соберите буфер LuV, вставьте хотя бы один совместимый аккумулятор, зарядите его и откройте интерфейс."
-				"Если заряд не поступает, проверьте сторону трансформатора."
-				"Если резерв падает без запуска, найдите скрытую нагрузку на линии."
-				"Он хранит локальный резерв до запуска реактора."
-				"Пустой корпус буфера не хранит энергию. Подойдёт лапотронный или ванадиевый аккумулятор LuV из списка задачи."
-				"Проверьте направление и аккумуляторы подходящей ступени до подключения нагрузки."
-				"Теперь подтвердим схему и корпус LuV."
+				"{industrial_frontier.quest.v2.p8.luv_buffer.purpose}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.step.1}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.step.2}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.step.3}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.success}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.task}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.luv_buffer.next}"
 			]
 			icon: "gtceu:luv_battery_buffer_4x"
 			id: "3A1800000000000D"
 			shape: "square"
 			size: 1d
-			subtitle: "Граница LuV готова; пуск реактора не должен гасить остальную сеть."
+			subtitle: "{industrial_frontier.quest.v2.p8.luv_buffer.lead}"
 			tags: ["mainline", "luv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -1750,7 +1750,7 @@
 						id: "gtceu:luv_battery_buffer_4x"
 					}
 					consume_items: false
-					title: "Соберите четырёхсекционный аккумуляторный буфер LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_buffer.item.objective}"
 					type: "item"
 				}
 				{
@@ -1762,7 +1762,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/luv_batteries)"
 						}
 					}
-					title: "Подготовьте хотя бы один совместимый аккумулятор LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_buffer.battery.objective}"
 					type: "item"
 				}
 				{
@@ -1772,33 +1772,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте аккумуляторный буфер LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_buffer.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Резерв перед синтезом"
+			title: "{industrial_frontier.quest.v2.p8.luv_buffer.title}"
 			x: 21d
 			y: -7d
 		}
 		{
 			dependencies: ["3A1800000000000D"]
 			description: [
-				"Схема управляет операцией, корпус принимает силовую и конструкционную часть машины."
-				"Выберите любую схему семейства LuV."
-				"Соберите один корпус LuV и предъявите оба предмета."
-				"Схема и корпус LuV готовы к сборке оборудования."
-				"Получите одну схему семейства LuV и один корпус машины LuV."
-				"Если схема не принимается, проверьте её уровень."
-				"Если корпус закрыт, проследите рецепт до первого отсутствующего компонента."
-				"Подойдёт любая схема из семейства LuV."
-				"Корпус подтверждает компонентную базу до сборщика и реактора."
-				"Теперь установите сборщик LuV."
+				"{industrial_frontier.quest.v2.p8.luv_components.purpose}"
+				"{industrial_frontier.quest.v2.p8.luv_components.step.1}"
+				"{industrial_frontier.quest.v2.p8.luv_components.step.2}"
+				"{industrial_frontier.quest.v2.p8.luv_components.success}"
+				"{industrial_frontier.quest.v2.p8.luv_components.task}"
+				"{industrial_frontier.quest.v2.p8.luv_components.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.luv_components.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.luv_components.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.luv_components.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.luv_components.next}"
 			]
 			icon: "gtceu:luv_machine_hull"
 			id: "3A1800000000000E"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Питание принято; теперь высокоэнергетические машины должны опираться на компоненты своей ступени."
+			subtitle: "{industrial_frontier.quest.v2.p8.luv_components.lead}"
 			tags: ["mainline", "luv", "components", "tier_bridge"]
 			tasks: [
 				{
@@ -1810,7 +1810,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(gtceu:circuits/luv)"
 						}
 					}
-					title: "Получите одну схему уровня LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_components.circuit.objective}"
 					type: "item"
 				}
 				{
@@ -1820,33 +1820,33 @@
 						id: "gtceu:luv_machine_hull"
 					}
 					consume_items: false
-					title: "Получите один корпус машины LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_components.hull.objective}"
 					type: "item"
 				}
 			]
-			title: "Схема и корпус LuV"
+			title: "{industrial_frontier.quest.v2.p8.luv_components.title}"
 			x: 24d
 			y: -7d
 		}
 		{
 			dependencies: ["3A1800000000000E"]
 			description: [
-				"Сборщик LuV связывает компонентную базу с высокоэнергетическим оборудованием. Книга проверяет его получение и установку до реактора."
-				"Соберите один сборщик LuV."
-				"Подключите его к буферу, откройте интерфейс и проверьте свободный выход."
-				"Сборщик LuV установлен и готов к компонентам реактора."
-				"Соберите, установите и откройте сборщик LuV."
-				"Если машина не включается, проверьте напряжение и ориентацию трансформатора."
-				"Если рецепт не запускается, сверьте уровень компонентов."
-				"Один сборщик достаточен для компонентной цепочки реактора."
-				"Подключите его через принятые трансформатор, буфер и кабель, затем проверьте входы и выход."
-				"Теперь соберите и сформируйте реактор синтеза LuV."
+				"{industrial_frontier.quest.v2.p8.luv_assembly.purpose}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.step.1}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.step.2}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.success}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.task}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.luv_assembly.next}"
 			]
 			icon: "gtceu:luv_assembler"
 			id: "3A1800000000000F"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Питание и компоненты готовы; теперь нужна рабочая машина до контроллера реактора."
+			subtitle: "{industrial_frontier.quest.v2.p8.luv_assembly.lead}"
 			tags: ["mainline", "luv", "machine_before_product", "tier_bridge"]
 			tasks: [
 				{
@@ -1856,7 +1856,7 @@
 						id: "gtceu:luv_assembler"
 					}
 					consume_items: false
-					title: "Соберите сборщик LuV GregTech."
+					title: "{industrial_frontier.task.v2.p8.luv_assembly.item.objective}"
 					type: "item"
 				}
 				{
@@ -1866,34 +1866,34 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте сборщик LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_assembly.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Сборщик LuV в работе"
+			title: "{industrial_frontier.quest.v2.p8.luv_assembly.title}"
 			x: 27d
 			y: -7d
 		}
 		{
 			dependencies: ["3A1800000000000F"]
 			description: [
-				"Контроллер без корпуса не является реактором. Соберите структуру по схеме GTCEu, разведите входы дейтерия и трития, отдельный выход плазмы и накопите во внутреннем буфере контроллера не менее 40 000 000 EU. Сам цикл потребляет 4096 EU/t."
-				"Соберите контроллер и разметьте структуру с доступом к обслуживанию."
-				"Завершите корпус, входы и выход, подключите локальный резерв LuV."
-				"Откройте контроллер, убедитесь, что структура сформирована и внутренний заряд достиг 40 000 000 EU; изотопы до этого не подавайте."
-				"Реактор синтеза LuV сформирован, контроллер доступен, входы и выход подготовлены, а пусковой порог 40 000 000 EU известен."
-				"Соберите реактор LuV, откройте контроллер и вручную подтвердите внутренний заряд не менее 40 000 000 EU."
-				"Если структура не формируется, проверьте размеры, ориентацию контроллера и типы корпусов."
-				"Если цикл не стартует, дождитесь не менее 40 000 000 EU во внутреннем буфере и проверьте устойчивые 4096 EU/t до подачи изотопов."
-				"Предмет — только начало: после него нужно сформировать структуру и открыть контроллер."
-				"Открытие подтверждает доступ к контроллеру. Перед изотопами вручную проверьте сформированную структуру, рабочие 4096 EU/t и не менее 40 000 000 EU внутреннего заряда."
-				"Подайте по 125 мБ дейтерия и трития, проведите один цикл и получите 125 мБ плазмы гелия."
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.purpose}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.step.1}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.step.2}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.step.3}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.success}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.task}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.luv_fusion_setup.next}"
 			]
 			icon: "gtceu:luv_fusion_reactor"
 			id: "3A18000000000010"
 			shape: "hexagon"
 			size: 1.2d
-			subtitle: "Сборщик LuV принят; теперь построим установку, которая действительно выполнит реакцию."
+			subtitle: "{industrial_frontier.quest.v2.p8.luv_fusion_setup.lead}"
 			tags: ["mainline", "luv", "fusion", "machine_before_product"]
 			tasks: [
 				{
@@ -1903,7 +1903,7 @@
 						id: "gtceu:luv_fusion_reactor"
 					}
 					consume_items: false
-					title: "Соберите контроллер реактора синтеза LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_fusion_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -1913,11 +1913,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Соберите структуру и откройте контроллер реактора синтеза LuV."
+					title: "{industrial_frontier.task.v2.p8.luv_fusion_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Реактор синтеза до продукта"
+			title: "{industrial_frontier.quest.v2.p8.luv_fusion_setup.title}"
 			x: 30d
 			y: -7d
 		}
@@ -1927,26 +1927,26 @@
 				"3A1800000000001E"
 			]
 			description: [
-				"Мишенная камера NuclearCraft — нечётный куб со стороной от 5 до 11 блоков. В центре располагается камера наблюдения, а сквозь внутренний объём проходит непрерывный канал частиц. Входной порт пучка смотрит точно на выход ускорителя; отдельные служебные порты подают питание, загружают мишень и забирают продукт. Линия не должна смотреть в проход или жилую зону."
-				"Выберите нечётный размер от 5×5×5 до 11×11×11 и соберите оболочку из корпуса и стекла мишенной камеры."
-				"Поставьте центральную камеру наблюдения и проведите через внутренний объём непрерывную линию частиц."
-				"На стороне ускорителя установите входной порт пучка; добавьте служебные порты питания, загрузки мишени и вывода продукта."
-				"Соедините выход ускорителя со входом камеры без поворотов и разрывов, откройте сформированный контроллер и проверьте аварийное снятие питания."
-				"Мишенная камера сформирована, открывается через контроллер и принимает непрерывную линию пучка вместе с отдельными служебными каналами."
-				"Разместите контроллер, сформируйте мишенную камеру, откройте её и подтвердите геометрию с портами."
-				"Если камера не формируется, проверьте нечётный размер 5–11, ориентацию контроллера, центральную камеру наблюдения и непрерывный внутренний канал."
-				"Если пучок не достигает мишени, проверьте прямую ось от выходного порта ускорителя до входного порта камеры и отсутствие лишних блоков в канале."
-				"Если продукту некуда выходить, освободите служебный порт и назначьте раздельные стороны для мишени и результата."
-				"Размещение подтверждает начало приёмной структуры; фактический продукт проверяет следующая задача."
-				"Одиночный контроллер не подходит: интерфейс должен принадлежать полностью собранной камере, подключённой к прямой линии пучка."
-				"Отметьте только после сборки нечётного корпуса от 5×5×5 до 11×11×11, центральной камеры наблюдения, входного порта пучка, служебных портов питания и ввода-вывода предметов. Между выходом ускорителя и входом камеры не должно быть разрыва."
-				"Запустите одну реакцию с кальцием-48 и беркелием-248 и выделите коперниций-291."
+				"{industrial_frontier.quest.v2.p8.target_chamber.purpose}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.step.1}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.step.2}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.step.3}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.step.4}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.success}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.task}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.target_chamber.next}"
 			]
 			icon: "nuclearcraft:target_chamber_controller"
 			id: "3A18000000000007"
 			shape: "hexagon"
 			size: 1.25d
-			subtitle: "Пучок кальция-48 стабилен, беркелий-248 получен; теперь их должна свести сформированная, а не декоративная камера."
+			subtitle: "{industrial_frontier.quest.v2.p8.target_chamber.lead}"
 			tags: ["nuclearcraft", "target", "safety"]
 			tasks: [
 				{
@@ -1956,7 +1956,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Разместите контроллер мишенной камеры NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.target_chamber.place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -1966,38 +1966,38 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Сформируйте мишенную камеру и откройте её контроллер."
+					title: "{industrial_frontier.task.v2.p8.target_chamber.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
 					id: "4A18000000000055"
-					title: "Подтвердите геометрию, порты и непрерывную ось мишенной камеры."
+					title: "{industrial_frontier.task.v2.p8.target_chamber.confirm.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Пучку нужна мишень"
+			title: "{industrial_frontier.quest.v2.p8.target_chamber.title}"
 			x: 51d
 			y: -2d
 		}
 		{
 			dependencies: ["3A18000000000007"]
 			description: [
-				"Рецепт мишенной камеры требует один беркелий-248 и 50 000 000 ионов кальция-48. Средняя энергия пучка должна составлять 40 000, допустимый максимум — 50 000, а фокус — не ниже 2,0. Это отдельная ускорительная ветвь: реактор синтеза GregTech для неё не нужен."
-				"Загрузите один беркелий-248 в принятый вход мишенной камеры и освободите выход продукта."
-				"Подайте непрерывный пучок кальция-48 с запасом 50 000 000 ионов, средней энергией 40 000 и фокусом не ниже 2,0."
-				"Включите камеру под аварийным контролем, дождитесь одной реакции и заберите коперниций-291."
-				"Одна мишень и одна полная партия кальциевого пучка дали коперниций-291; ускорительный маршрут доказан продуктом."
-				"Проведите одну мишенную реакцию и получите коперниций-291."
-				"Если камера не принимает рецепт, проверьте точный изотоп беркелия-248, число ионов, среднюю энергию 40 000 и фокус не ниже 2,0."
-				"Если реакция завершилась без доступного результата, освободите предметный выход камеры и проверьте его сторону."
-				"Мишенная камера выдаёт металлический образец; его оксидная, нитридная, циркониевая и TRISO-форма тоже засчитываются после преобразования."
-				"Ускорительная ветвь завершена. Параллельно доведите реактор LuV до плазмы гелия."
+				"{industrial_frontier.quest.v2.p8.copernicium.purpose}"
+				"{industrial_frontier.quest.v2.p8.copernicium.step.1}"
+				"{industrial_frontier.quest.v2.p8.copernicium.step.2}"
+				"{industrial_frontier.quest.v2.p8.copernicium.step.3}"
+				"{industrial_frontier.quest.v2.p8.copernicium.success}"
+				"{industrial_frontier.quest.v2.p8.copernicium.task}"
+				"{industrial_frontier.quest.v2.p8.copernicium.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.copernicium.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.copernicium.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.copernicium.next}"
 			]
 			icon: "nuclearcraft:copernicium_291"
 			id: "3A18000000000029"
 			shape: "octagon"
 			size: 1.4d
-			subtitle: "Кальциевый пучок и беркелиевая мишень готовы; одна правильно настроенная камера должна дать измеримый продукт."
+			subtitle: "{industrial_frontier.quest.v2.p8.copernicium.lead}"
 			tags: ["nuclearcraft", "accelerator", "isotope", "machine_output"]
 			tasks: [
 				{
@@ -2009,84 +2009,84 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/copernicium/291)"
 						}
 					}
-					title: "Получите один образец коперниция-291 в любой химической форме NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.fusion_material.copernicium.objective}"
 					type: "item"
 				}
 			]
-			title: "Коперниций из одной точной реакции"
+			title: "{industrial_frontier.quest.v2.p8.copernicium.title}"
 			x: 54d
 			y: -2d
 		}
 		{
 			dependencies: ["3A1800000000001F"]
 			description: [
-				"Штатный рецепт центрифуги GregTech превращает 160 мБ водорода в 40 мБ дейтерия. Двадцать циклов используют 3200 мБ водорода и дают 800 мБ дейтерия — достаточно, чтобы часть превратить в тритий и сохранить продуктивный остаток обеих форм."
-				"Получите 3200 мБ водорода уже освоенной химической линией и поместите его в отдельный буфер."
-				"Подключите буфер к общей центрифуге IV, но сохраните отдельные выходы водорода, дейтерия и трития."
-				"3200 мБ водорода готовы к двадцати циклам первого изотопного разделения."
-				"Подготовьте 3200 мБ водорода для изотопного разделения."
-				"Если объём меньше 3200 мБ, не начинайте серию: неполная партия оставит слишком мало дейтерия после получения трития."
-				"Если центрифуга не видит рецепт, проверьте жидкость GregTech и свободный выход дейтерия."
-				"Двадцать центрифужных циклов по 160 мБ дадут 800 мБ дейтерия. Из этой партии 640 мБ позже уйдут на четыре тритиевых цикла."
-				"Проведите двадцать водородных и четыре дейтериевых цикла, затем сохраните по 160 мБ дейтерия и трития."
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.purpose}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.step.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.step.2}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.success}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.task}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_hydrogen.next}"
 			]
 			icon: "gtceu:hydrogen_bucket"
 			id: "3A1800000000002A"
 			shape: "square"
 			size: 1d
-			subtitle: "Плазменный рецепт использует дейтерий и тритий, но оба должны иметь явный исходный поток."
+			subtitle: "{industrial_frontier.quest.v2.p8.fusion_hydrogen.lead}"
 			tags: ["gtceu", "fusion", "isotopes", "source_before_product"]
 			tasks: [
 				{
 					id: "4A18000000000056"
 					fluid: "gtceu:hydrogen"
 					amount: 3200L
-					title: "Подготовьте 3200 мБ водорода GregTech."
+					title: "{industrial_frontier.task.v2.p8.fusion_hydrogen.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Водород до тяжёлых изотопов"
+			title: "{industrial_frontier.quest.v2.p8.fusion_hydrogen.title}"
 			x: 30d
 			y: -10d
 		}
 		{
 			dependencies: ["3A1800000000002A"]
 			description: [
-				"Сначала двадцать циклов превращают 3200 мБ водорода в 800 мБ дейтерия. Затем четыре цикла используют 640 мБ дейтерия и дают 160 мБ трития. В результате остаётся по 160 мБ обеих форм — больше требуемых 125 мБ, с небольшим диагностическим запасом."
-				"Проведите двадцать циклов: по 160 мБ водорода на вход и по 40 мБ дейтерия на выход."
-				"Отделите 640 мБ полученного дейтерия и проведите четыре цикла по 160 мБ, собирая по 40 мБ трития."
-				"Оставьте в раздельных буферах 160 мБ дейтерия и 160 мБ трития; не соединяйте их до готовности реактора."
-				"Раздельные буферы содержат по 160 мБ дейтерия и трития, поэтому одна плазменная загрузка обеспечена с небольшим запасом."
-				"Получите и сохраните по 160 мБ дейтерия и трития после двадцати и четырёх циклов центрифуги."
-				"Если дейтерия осталось меньше 160 мБ, пересчитайте двадцать первых и четыре вторых цикла; часть жидкости могла остаться в трубе."
-				"Если тритий не выходит, проверьте, что второй рецепт получает именно дейтерий, а не исходный водород."
-				"Двадцать водородных циклов дают 800 мБ. Четыре следующих цикла расходуют 640 мБ на тритий и оставляют ровно 160 мБ дейтерия."
-				"Четыре центрифужных цикла по 160 мБ дейтерия дают четыре порции по 40 мБ трития."
-				"Когда реактор LuV сформирован и заряжен, подайте по 125 мБ каждого изотопа."
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.purpose}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.step.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.step.2}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.step.3}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.success}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.task}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.fusion_isotopes.next}"
 			]
 			icon: "gtceu:deuterium_bucket"
 			id: "3A1800000000002B"
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Исходный водород принят; теперь изотопный баланс можно выполнить без скрытой недостачи топлива."
+			subtitle: "{industrial_frontier.quest.v2.p8.fusion_isotopes.lead}"
 			tags: ["gtceu", "fusion", "isotopes", "machine_output"]
 			tasks: [
 				{
 					id: "4A18000000000057"
 					fluid: "gtceu:deuterium"
 					amount: 160L
-					title: "Сохраните не меньше 160 мБ дейтерия."
+					title: "{industrial_frontier.task.v2.p8.fusion_isotopes.deuterium.objective}"
 					type: "fluid"
 				}
 				{
 					id: "4A18000000000058"
 					fluid: "gtceu:tritium"
 					amount: 160L
-					title: "Получите 160 мБ трития."
+					title: "{industrial_frontier.task.v2.p8.fusion_isotopes.tritium.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Двадцать плюс четыре цикла"
+			title: "{industrial_frontier.quest.v2.p8.fusion_isotopes.title}"
 			x: 33d
 			y: -10d
 		}
@@ -2096,32 +2096,32 @@
 				"3A18000000000010"
 			]
 			description: [
-				"Реактор синтеза GregTech соединяет 125 мБ дейтерия и 125 мБ трития в 125 мБ плазмы гелия. Для старта его внутренний буфер должен содержать не менее 40 000 000 EU, а во время короткого цикла сеть обязана непрерывно выдавать 4096 EU/t."
-				"Освободите плазменный выход, накопите во внутреннем буфере контроллера не менее 40 000 000 EU и убедитесь, что сеть держит 4096 EU/t."
-				"Подайте ровно по 125 мБ дейтерия и трития через раздельные входы."
-				"Проведите один цикл и отведите 125 мБ плазмы гелия в отдельную жаростойкую ёмкость."
-				"Действующий реактор LuV выдал 125 мБ плазмы гелия из одной точной изотопной загрузки."
-				"Получите 125 мБ плазмы гелия в сформированном реакторе синтеза LuV."
-				"Если синтез не стартует, проверьте внутренний заряд 40 000 000 EU; если цикл обрывается, обеспечьте устойчивые 4096 EU/t и отключите некритическую нагрузку."
-				"Одна партия дейтерия и трития даёт 125 мБ плазмы гелия. Обычный гелий эту проверку не заменяет."
-				"Плазменная ветвь готова. Для общей приёмки завершите также коперниций, колонию и диагностику сети."
+				"{industrial_frontier.quest.v2.p8.fusion_material.purpose}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.step.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.step.2}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.step.3}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.success}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.task}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.fusion_material.next}"
 			]
 			icon: "gtceu:helium_plasma_bucket"
 			id: "3A18000000000008"
 			shape: "octagon"
 			size: 1.5d
-			subtitle: "Реактор LuV сформирован и заряжен; теперь он должен дать плазму, а не остаться дорогим корпусом."
+			subtitle: "{industrial_frontier.quest.v2.p8.fusion_material.lead}"
 			tags: ["gtceu", "fusion", "plasma", "machine_output"]
 			tasks: [
 				{
 					id: "4A18000000000022"
 					fluid: "gtceu:helium_plasma"
 					amount: 125L
-					title: "Получите 125 мБ плазмы гелия в реакторе синтеза GregTech."
+					title: "{industrial_frontier.task.v2.p8.fusion_material.helium_plasma.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Первый рабочий цикл синтеза"
+			title: "{industrial_frontier.quest.v2.p8.fusion_material.title}"
 			x: 36d
 			y: -7d
 		}
@@ -2131,23 +2131,23 @@
 				"3A18000000000005"
 			]
 			description: [
-				"Лифт дорог при строительстве, но снижает стоимость каждого последующего подъёма. Он выгоден только при устойчивом грузопотоке и не требуется для перехода в P9."
-				"Сравните стоимость планируемого лифта с расходом топлива нескольких десятков рейсов."
-				"Соберите входной блок только после выбора места, энергопитания и безопасной зоны трассы."
-				"Первый блок космического лифта готов, а решение о строительстве опирается на измеренный грузопоток."
-				"Соберите один блок космического лифта GCYR."
-				"Если лифт не окупается при текущем потоке, отложите проект и продолжайте рейсы."
-				"Если трасса не формируется, проверьте свободное вертикальное пространство и требования опор."
-				"Предмет подтверждает начало добровольного мегапроекта, но не готовую трассу."
-				"Используйте лифт как факультативное ускорение орбитальной логистики, не как обязательный налог."
-				"Космический лифт необязателен: автоматические ракеты уже закрывают основной транспортный критерий."
+				"{industrial_frontier.quest.v2.p8.elevator.purpose}"
+				"{industrial_frontier.quest.v2.p8.elevator.step.1}"
+				"{industrial_frontier.quest.v2.p8.elevator.step.2}"
+				"{industrial_frontier.quest.v2.p8.elevator.success}"
+				"{industrial_frontier.quest.v2.p8.elevator.task}"
+				"{industrial_frontier.quest.v2.p8.elevator.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.elevator.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.elevator.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.elevator.next}"
+				"{industrial_frontier.quest.v2.p8.elevator.optional_note}"
 			]
 			icon: "gcyr:space_elevator"
 			id: "3A1800000000000A"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Регулярные рейсы уже работают; космический лифт может убрать топливо из самого частого плеча."
+			subtitle: "{industrial_frontier.quest.v2.p8.elevator.lead}"
 			tags: ["orbital", "optional", "infrastructure"]
 			tasks: [
 				{
@@ -2157,34 +2157,34 @@
 						id: "gcyr:space_elevator"
 					}
 					consume_items: false
-					title: "Соберите блок космического лифта GCYR."
+					title: "{industrial_frontier.task.v2.p8.elevator.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Постоянный путь на орбиту"
+			title: "{industrial_frontier.quest.v2.p8.elevator.title}"
 			x: 18d
 			y: 5d
 		}
 		{
 			dependencies: ["3A18000000000008"]
 			description: [
-				"Плазменная кузница входит в длинную лазерную ветвь HBM и требует собственной инфраструктуры. Она не дублирует обязательный реактор GregTech: один путь производит материалы, другой выбирают ради энергетического масштаба."
-				"Соберите плазменную кузницу и изучите полную структуру до заказа дорогих компонентов."
-				"Отведите отдельное место под лазерную установку, турбину, охлаждение и аварийный резерв."
-				"Плазменная кузница HBM готова к добровольному строительству энергетического комплекса."
-				"Соберите плазменную кузницу HBM."
-				"Если лестница упирается в сверхпроводник или квантовую схему, сначала автоматизируйте их серийное производство."
-				"Если площадки не хватает, перенесите проект до сборки корпуса: позднее перемещение будет дорогим."
-				"Кузница открывает крупную энергетическую ветвь и не нужна для обязательного материала P8."
-				"Эта специализация может питать финальные проекты P9, но основной переход не зависит от неё."
-				"Энергетическая термоядерная ветвь HBM добровольна; обязательный путь P8 проверяет материалы и устойчивую сеть."
+				"{industrial_frontier.quest.v2.p8.plasma_forge.purpose}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.step.1}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.step.2}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.success}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.task}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.next}"
+				"{industrial_frontier.quest.v2.p8.plasma_forge.optional_note}"
 			]
 			icon: "hbm_ntm_rebirth:fusion_plasma_forge"
 			id: "3A1800000000000B"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Материальная роль уже закрыта; HBM предлагает отдельную крупную установку для энергии."
+			subtitle: "{industrial_frontier.quest.v2.p8.plasma_forge.lead}"
 			tags: ["hbm", "optional", "fusion", "energy"]
 			tasks: [
 				{
@@ -2194,43 +2194,43 @@
 						id: "hbm_ntm_rebirth:fusion_plasma_forge"
 					}
 					consume_items: false
-					title: "Соберите плазменную кузницу HBM."
+					title: "{industrial_frontier.task.v2.p8.plasma_forge.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Синтез как энергетический проект"
+			title: "{industrial_frontier.quest.v2.p8.plasma_forge.title}"
 			x: 36d
 			y: -5d
 		}
 		{
 			dependencies: ["3A18000000000005"]
 			description: [
-				"Возобновляемый источник закрывает предсказуемую базовую нагрузку, накопитель сглаживает паузы, а управляемый источник принимает пик. Производительность солнечной линии зависит от места, поэтому одинаковая схема на разных планетах даёт разный результат."
-				"Измерьте базовую нагрузку колонии и длительность худшей паузы местной генерации."
-				"Подберите накопитель под паузу, а резервный источник — под критическую пиковую нагрузку."
-				"Вы можете объяснить роль каждого источника и не рассчитываете устойчивость по средней мощности."
-				"Прочитайте памятку о смешанной энергетике."
-				"Если накопитель постоянно пуст, базовая генерация меньше средней нагрузки либо не принимает избыток."
-				"Если резерв включается слишком часто, проверьте пороги и реальные пики промышленной линии."
-				"Отметка подтверждает чтение; она не выдаёт солнечные панели за готовую энергосистему."
-				"Расчёт пригодится при выборе финального проекта P9 и его аварийного резерва."
-				"Это факультативный расчёт для оптимизации; обязательная проверка резерва уже находится в основной линии."
+				"{industrial_frontier.quest.v2.p8.renewables.purpose}"
+				"{industrial_frontier.quest.v2.p8.renewables.step.1}"
+				"{industrial_frontier.quest.v2.p8.renewables.step.2}"
+				"{industrial_frontier.quest.v2.p8.renewables.success}"
+				"{industrial_frontier.quest.v2.p8.renewables.task}"
+				"{industrial_frontier.quest.v2.p8.renewables.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.renewables.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.renewables.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.renewables.next}"
+				"{industrial_frontier.quest.v2.p8.renewables.optional_note}"
 			]
 			icon: "gtceu:iv_solar_panel"
 			id: "3018000000000012"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Колония уже переживает обрыв луча; теперь можно снизить постоянную нагрузку местной генерацией."
+			subtitle: "{industrial_frontier.quest.v2.p8.renewables.lead}"
 			tags: ["energy", "optional", "planning"]
 			tasks: [
 				{
 					id: "4018000000000012"
-					title: "Прочитайте памятку о базовой и пиковой мощности."
+					title: "{industrial_frontier.task.v2.p8.renewables.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "База, пик и накопитель"
+			title: "{industrial_frontier.quest.v2.p8.renewables.title}"
 			x: 21d
 			y: -10d
 		}
@@ -2242,24 +2242,24 @@
 				"3A18000000000029"
 			]
 			description: [
-				"Это единственная точка перехода P8 → P9. Предыдущие обязательные задания уже проверили грузовой поток, жизнеспособность колонии, раннее предупреждение, коперниций из мишенной камеры и плазму из реактора LuV. Здесь вы предъявляете коперниций и открываете два контрольных интерфейса. Космический лифт и плазменная кузница остаются добровольными."
-				"Положите коперниций-291 в инвентарь и убедитесь, что его маршрут можно повторить."
-				"На проверенной колонии откройте распределитель кислорода."
-				"Откройте центральный накопитель сети для заключительной сверки."
-				"Материал предъявлен, а оба контрольных интерфейса открыты после завершения обязательных ветвей, поэтому P9 открывается один раз."
-				"Предъявите коперниций и откройте распределитель кислорода и ME-накопитель."
-				"Если коперниций не засчитывается, проверьте точный изотоп и завершение мишенной реакции."
-				"Если интерфейс не засчитывается, убедитесь, что взаимодействуете с блоком GCYR или AE2 из соответствующей завершённой ветви."
-				"Материал подтверждает конец ускорительной ветви и не изымается; преобразовывать его обратно в металл ради приёмки не нужно."
-				"Подойдёт любой распределитель из списка задачи; улучшение оборудования не должно мешать приёмке."
-				"Открытие интерфейса завершает проверку после обязательного задания о раннем предупреждении."
-				"P9 проверит замкнутые циклы, местное производство, обслуживание и устойчивый финальный мегапроект."
+				"{industrial_frontier.quest.v2.p8.commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p8.commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p8.commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p8.commissioning.step.3}"
+				"{industrial_frontier.quest.v2.p8.commissioning.success}"
+				"{industrial_frontier.quest.v2.p8.commissioning.task}"
+				"{industrial_frontier.quest.v2.p8.commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p8.commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p8.commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p8.commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p8.commissioning.proof_help.3}"
+				"{industrial_frontier.quest.v2.p8.commissioning.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/epochs/p8.png"
 			id: "3A18000000000009"
 			shape: "gear"
 			size: 2d
-			subtitle: "Удалённый цех прошёл два контрольных рейса, колония поддерживает критические системы, ускоритель дал новый материал, а реактор LuV — плазму."
+			subtitle: "{industrial_frontier.quest.v2.p8.commissioning.lead}"
 			tags: ["if_commissioning_p8", "commissioning"]
 			tasks: [
 				{
@@ -2271,7 +2271,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/copernicium/291)"
 						}
 					}
-					title: "Предъявите один образец коперниция-291 в любой химической форме NuclearCraft."
+					title: "{industrial_frontier.task.v2.p8.commissioning.copernicium.objective}"
 					type: "item"
 				}
 				{
@@ -2281,7 +2281,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте распределитель кислорода уровня IV или выше в проверенной колонии."
+					title: "{industrial_frontier.task.v2.p8.commissioning.oxygen.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -2291,19 +2291,19 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте центральный ME-накопитель сети."
+					title: "{industrial_frontier.task.v2.p8.commissioning.storage.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Сеть P8 принята"
+			title: "{industrial_frontier.quest.v2.p8.commissioning.title}"
 			x: 57d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Первый рейс превращается в наблюдаемую логистику, а форпост — в жизнеспособную колонию"
-		"Восьмая эпоха проверяет не дальность полёта, а способность связывать удалённые производства. Спутники дают разведку и навигацию, транспорт работает без постоянного присутствия игрока, а каждый участок сообщает об остановке раньше, чем опустеет следующий склад."
-		"Параллельно ускорительный комплекс открывает материал, которого не дают обычная печь и реактор. Космическая и высокоэнергетическая ветви сходятся в общей энергии, телеметрии и единственной приёмке P8."
+		"{industrial_frontier.chapter.v2.p8.subtitle.1}"
+		"{industrial_frontier.chapter.v2.p8.subtitle.2}"
+		"{industrial_frontier.chapter.v2.p8.subtitle.3}"
 	]
-	title: "P8 — Орбитально-планетарная сеть"
+	title: "{industrial_frontier.chapter.v2.p8.title}"
 }

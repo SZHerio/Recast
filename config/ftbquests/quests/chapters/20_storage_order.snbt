@@ -13,54 +13,54 @@
 			hide_until_deps_complete: true
 			dependencies: ["3E36137316A04963"]
 			description: [
-				"Рабочий склад выполняет три задачи: принимает поток без затора, показывает остатки и быстро отдаёт нужное. Автоматическая сборка появится позднее; сейчас цель проще — перестать обходить контейнеры вручную."
-				"Выделите рядом несколько контейнеров для сырья, деталей и готовой продукции."
-				"Оставьте место для связующего блока и терминала со стороны рабочего прохода."
-				"Не смешивайте вход производственной линии с её выходом в одном неразмеченном контейнере."
-				"У склада есть понятные зоны, свободный проход и место для первой общей точки доступа."
-				"Разберитесь, какие задачи решает рабочий склад."
-				"Если один сундук принимает всё подряд, сначала разделите хотя бы сырьё и готовые детали."
-				"Если к контейнерам нельзя подойти без обхода машин, перенесите точку доступа до расширения склада."
-				"Отметьте пункт после чтения; никаких предметов для него не требуется."
-				"Следующий шаг объединит соседние контейнеры, не заменяя их новым дорогим хранилищем."
+				"{industrial_frontier.quest.v2.storage.intro.purpose}"
+				"{industrial_frontier.quest.v2.storage.intro.step.1}"
+				"{industrial_frontier.quest.v2.storage.intro.step.2}"
+				"{industrial_frontier.quest.v2.storage.intro.step.3}"
+				"{industrial_frontier.quest.v2.storage.intro.success}"
+				"{industrial_frontier.quest.v2.storage.intro.task}"
+				"{industrial_frontier.quest.v2.storage.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.storage.intro.diagnostic.2}"
+				"{industrial_frontier.quest.v2.storage.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.intro.next}"
 			]
 			icon: "minecraft:chest"
 			id: "3020000000000001"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Десятки сундуков перестают быть дешёвыми, когда поиск одной детали останавливает всю смену."
+			subtitle: "{industrial_frontier.quest.v2.storage.intro.lead}"
 			tags: ["storage", "planning"]
 			tasks: [
 				{
 					id: "4020000000000001"
-					title: "Прочитайте три правила рабочего склада."
+					title: "{industrial_frontier.task.v2.storage.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Склад — это тоже машина"
+			title: "{industrial_frontier.quest.v2.storage.intro.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3020000000000001"]
 			description: [
-				"Контейнеры остаются обычными и сохраняют свою вместимость. В сеть входит непрерывная группа блоков, которая касается связующего блока; любой разрыв исключает всё, что лежит за ним."
-				"Изготовьте связующий блок инвентарей и поставьте его у края складской группы."
-				"Разместите рядом два или три обычных контейнера так, чтобы между ними не было разрыва."
-				"Положите разные предметы в крайние контейнеры: это поможет проверить сеть через терминал."
-				"Связующий блок установлен, а все учебные контейнеры образуют одну непрерывную группу."
-				"Изготовьте и установите связующий блок инвентарей."
-				"Если дальний сундук позже не появится в списке, проверьте каждый контакт от него до связующего блока."
-				"Если блок не удаётся изготовить, откройте его рецепт: для него уже нужны андезитовый сплав и детали механической эпохи."
-				"Блок должен остаться у вас для сборки учебного склада."
-				"Хотя бы один сундук должен касаться блока или непрерывной цепочки подключённых контейнеров."
-				"Теперь нужен терминал, который покажет объединённые запасы одним списком."
+				"{industrial_frontier.quest.v2.storage.connector.purpose}"
+				"{industrial_frontier.quest.v2.storage.connector.step.1}"
+				"{industrial_frontier.quest.v2.storage.connector.step.2}"
+				"{industrial_frontier.quest.v2.storage.connector.step.3}"
+				"{industrial_frontier.quest.v2.storage.connector.success}"
+				"{industrial_frontier.quest.v2.storage.connector.task}"
+				"{industrial_frontier.quest.v2.storage.connector.diagnostic.1}"
+				"{industrial_frontier.quest.v2.storage.connector.diagnostic.2}"
+				"{industrial_frontier.quest.v2.storage.connector.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.connector.proof_help.2}"
+				"{industrial_frontier.quest.v2.storage.connector.next}"
 			]
 			icon: "toms_storage:ts.inventory_connector"
 			id: "3A20000000000002"
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "Связующий блок не переносит предметы: он даёт одной системе доступ к соседним инвентарям."
+			subtitle: "{industrial_frontier.quest.v2.storage.connector.lead}"
 			tags: ["storage", "network", "toms_storage"]
 			tasks: [
 				{
@@ -70,7 +70,7 @@
 						id: "toms_storage:ts.inventory_connector"
 					}
 					consume_items: false
-					title: "Получите один связующий блок инвентарей."
+					title: "{industrial_frontier.task.v2.storage.connector.item.objective}"
 					type: "item"
 				}
 				{
@@ -80,35 +80,35 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите связующий блок рядом с контейнерами."
+					title: "{industrial_frontier.task.v2.storage.connector.place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Один учёт для нескольких сундуков"
+			title: "{industrial_frontier.quest.v2.storage.connector.title}"
 			x: 3d
 			y: 0d
 		}
 		{
 			dependencies: ["3A20000000000002"]
 			description: [
-				"Поставленный рядом с сетью терминал показывает содержимое подключённых контейнеров. Через него можно забрать или положить предмет, не открывая каждый сундук отдельно."
-				"Изготовьте терминал хранения и установите его в рабочем проходе рядом с подключённой сетью."
-				"Откройте терминал и найдите предметы, заранее разложенные по двум разным контейнерам."
-				"Заберите один предмет через общий список, затем верните его обратно."
-				"Терминал показывает запасы из нескольких контейнеров, а поиск находит нужный предмет."
-				"Получите терминал и откройте общий список склада."
-				"Если виден только один контейнер, ищите разрыв между ним и остальной группой."
-				"Если терминал открывается пустым, проверьте его положение относительно связующего блока и кабельной сети."
-				"Если предмет не находится по полному названию, попробуйте короткую часть слова и очистите лишний фильтр."
-				"Терминал является точкой доступа и не заменяет сами контейнеры."
-				"Если окно пусто, сначала проверьте связь терминала со связующим блоком."
-				"После проверки общего списка склад можно разделить на помещения, не теряя единую точку доступа."
+				"{industrial_frontier.quest.v2.storage.terminal.purpose}"
+				"{industrial_frontier.quest.v2.storage.terminal.step.1}"
+				"{industrial_frontier.quest.v2.storage.terminal.step.2}"
+				"{industrial_frontier.quest.v2.storage.terminal.step.3}"
+				"{industrial_frontier.quest.v2.storage.terminal.success}"
+				"{industrial_frontier.quest.v2.storage.terminal.task}"
+				"{industrial_frontier.quest.v2.storage.terminal.diagnostic.1}"
+				"{industrial_frontier.quest.v2.storage.terminal.diagnostic.2}"
+				"{industrial_frontier.quest.v2.storage.terminal.diagnostic.3}"
+				"{industrial_frontier.quest.v2.storage.terminal.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.terminal.proof_help.2}"
+				"{industrial_frontier.quest.v2.storage.terminal.next}"
 			]
 			icon: "toms_storage:ts.storage_terminal"
 			id: "3A20000000000003"
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "Терминал заменяет перебор сундуков поиском, но ничего не производит и не переносит сам."
+			subtitle: "{industrial_frontier.quest.v2.storage.terminal.lead}"
 			tags: ["storage", "terminal", "toms_storage"]
 			tasks: [
 				{
@@ -118,7 +118,7 @@
 						id: "toms_storage:ts.storage_terminal"
 					}
 					consume_items: false
-					title: "Получите терминал хранения."
+					title: "{industrial_frontier.task.v2.storage.terminal.item.objective}"
 					type: "item"
 				}
 				{
@@ -128,11 +128,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте установленный терминал хранения."
+					title: "{industrial_frontier.task.v2.storage.terminal.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Весь склад одним списком"
+			title: "{industrial_frontier.quest.v2.storage.terminal.title}"
 			x: 6d
 			y: 0d
 		}
@@ -143,23 +143,23 @@
 				"3E35ACD2C187646B"
 			]
 			description: [
-				"Кабель продолжает складскую сеть на расстоянии. На дальнем конце кабельный соединитель ставится вплотную к отдельному контейнеру или группе контейнеров. Благодаря этому руду, химию и рабочее место не приходится держать в одной комнате."
-				"Изготовьте шесть кабелей и выберите короткий путь до отдельного контейнера."
-				"Проложите непрерывную линию от основной сети и поставьте кабельный соединитель вплотную к удалённому контейнеру."
-				"Положите в удалённый контейнер заметный предмет и найдите его через прежний терминал."
-				"Предмет из удалённой зоны виден в общем списке, а основная точка доступа осталась на рабочем месте."
-				"Получите кабели и начните удалённое складское ответвление."
-				"Если удалённый предмет не виден, пройдите кабель от начала до конца и найдите разрыв или неверный соединитель."
-				"Если сеть получилась слишком длинной, перенесите контейнер или поставьте промежуточный складской узел вместо бесконечной линии."
-				"Один рецепт даёт шесть кабелей — достаточно для короткого учебного ответвления."
-				"Для отметки достаточно установить первый кабель; дальний контейнер подключите через кабельный соединитель и проверьте терминалом."
-				"В электрическую эпоху к этой же сети добавится терминал, который собирает предметы прямо из складских запасов."
+				"{industrial_frontier.quest.v2.storage.cables.purpose}"
+				"{industrial_frontier.quest.v2.storage.cables.step.1}"
+				"{industrial_frontier.quest.v2.storage.cables.step.2}"
+				"{industrial_frontier.quest.v2.storage.cables.step.3}"
+				"{industrial_frontier.quest.v2.storage.cables.success}"
+				"{industrial_frontier.quest.v2.storage.cables.task}"
+				"{industrial_frontier.quest.v2.storage.cables.diagnostic.1}"
+				"{industrial_frontier.quest.v2.storage.cables.diagnostic.2}"
+				"{industrial_frontier.quest.v2.storage.cables.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.cables.proof_help.2}"
+				"{industrial_frontier.quest.v2.storage.cables.next}"
 			]
 			icon: "toms_storage:ts.inventory_cable"
 			id: "3A20000000000004"
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "Кабель позволяет убрать шумное или опасное сырьё из мастерской и сохранить общий поиск."
+			subtitle: "{industrial_frontier.quest.v2.storage.cables.lead}"
 			tags: ["storage", "cables", "layout"]
 			tasks: [
 				{
@@ -172,7 +172,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:storage/inventory_cables)"
 						}
 					}
-					title: "Получите шесть кабелей инвентаря."
+					title: "{industrial_frontier.task.v2.storage.cables.item.objective}"
 					type: "item"
 				}
 				{
@@ -182,11 +182,11 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите хотя бы один кабель инвентаря."
+					title: "{industrial_frontier.task.v2.storage.cables.place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Удалённая зона склада"
+			title: "{industrial_frontier.quest.v2.storage.cables.title}"
 			x: 9d
 			y: -2d
 		}
@@ -197,24 +197,24 @@
 				"3B7F69E8E054CA03"
 			]
 			description: [
-				"Этот терминал соединяет общий список склада с обычной сеткой изготовления. Он ускоряет повторяющуюся ручную сборку, но не хранит шаблоны и не выполняет заказ без участия игрока."
-				"Изготовьте терминал сборки и подключите его к существующей складской сети."
-				"Положите ингредиенты простого рецепта в разные подключённые контейнеры."
-				"Откройте терминал и соберите один полезный предмет, не перекладывая ингредиенты в свой инвентарь заранее."
-				"Сетка сборки видит складские ингредиенты, а готовый предмет получен через терминал."
-				"Получите и откройте терминал сборки."
-				"Если ингредиенты не видны, сначала найдите их через обычный терминал хранения."
-				"Если часть рецепта отсутствует, проверьте удалённую зону и цепочку кабеля."
-				"Если вы ожидали автоматическую партию, помните: шаблоны и самостоятельные заказы появятся только в цифровой складской сети."
-				"Он берёт доступные ингредиенты из подключённых контейнеров, но не запускает рецепт сам."
-				"Проверьте, что в сетке доступны ингредиенты из подключённого склада."
-				"Теперь склад можно использовать как источник для производства по уровню запасов."
+				"{industrial_frontier.quest.v2.storage.crafting.purpose}"
+				"{industrial_frontier.quest.v2.storage.crafting.step.1}"
+				"{industrial_frontier.quest.v2.storage.crafting.step.2}"
+				"{industrial_frontier.quest.v2.storage.crafting.step.3}"
+				"{industrial_frontier.quest.v2.storage.crafting.success}"
+				"{industrial_frontier.quest.v2.storage.crafting.task}"
+				"{industrial_frontier.quest.v2.storage.crafting.diagnostic.1}"
+				"{industrial_frontier.quest.v2.storage.crafting.diagnostic.2}"
+				"{industrial_frontier.quest.v2.storage.crafting.diagnostic.3}"
+				"{industrial_frontier.quest.v2.storage.crafting.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.crafting.proof_help.2}"
+				"{industrial_frontier.quest.v2.storage.crafting.next}"
 			]
 			icon: "toms_storage:ts.crafting_terminal"
 			id: "3A20000000000005"
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "Терминал сборки убирает перекладывание ингредиентов, но решение и нажатие всё ещё остаются за вами."
+			subtitle: "{industrial_frontier.quest.v2.storage.crafting.lead}"
 			tags: ["storage", "crafting", "p3"]
 			tasks: [
 				{
@@ -224,7 +224,7 @@
 						id: "toms_storage:ts.crafting_terminal"
 					}
 					consume_items: false
-					title: "Получите терминал сборки."
+					title: "{industrial_frontier.task.v2.storage.crafting.item.objective}"
 					type: "item"
 				}
 				{
@@ -234,11 +234,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте установленный терминал сборки."
+					title: "{industrial_frontier.task.v2.storage.crafting.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Сборка из общих запасов"
+			title: "{industrial_frontier.quest.v2.storage.crafting.title}"
 			x: 9d
 			y: 2d
 		}
@@ -250,24 +250,24 @@
 				"3014000000000001"
 			]
 			description: [
-				"Это первый контур производства по потребности. Эмиттер не создаёт предметы сам: он сравнивает выбранный запас с заданной границей и меняет сигнал. Настройте схему так, чтобы производство работало при нехватке и останавливалось после пополнения."
-				"Изготовьте эмиттер уровня, подключите его к складской сети и выберите простой расходный предмет."
-				"Задайте небольшой порог, выберите подходящее направление сигнала и сначала выведите его на лампу."
-				"Уберите часть запаса ниже порога, затем верните предметы и сравните оба состояния сигнала."
-				"Сигнал меняется при переходе через порог и может безопасно разрешать или останавливать производство."
-				"Получите и установите эмиттер уровня."
-				"Если сигнал не меняется, проверьте выбранный предмет, режим сравнения и видимость контейнера в терминале."
-				"Если линия работает в обратную сторону, инвертируйте редстоун-сигнал один раз, а не меняйте два соседних условия."
-				"Если машина часто включается и выключается, увеличьте запас или добавьте промежуточный буфер."
-				"Он сравнивает количество выбранного предмета с заданным порогом."
-				"Выберите недорогой расходник и порог, который легко проверить вручную."
-				"В эпоху региональной логистики этот принцип станет частью общего резерва, а цифровая сеть добавит шаблоны и автоматические заказы."
+				"{industrial_frontier.quest.v2.storage.level.purpose}"
+				"{industrial_frontier.quest.v2.storage.level.step.1}"
+				"{industrial_frontier.quest.v2.storage.level.step.2}"
+				"{industrial_frontier.quest.v2.storage.level.step.3}"
+				"{industrial_frontier.quest.v2.storage.level.success}"
+				"{industrial_frontier.quest.v2.storage.level.task}"
+				"{industrial_frontier.quest.v2.storage.level.diagnostic.1}"
+				"{industrial_frontier.quest.v2.storage.level.diagnostic.2}"
+				"{industrial_frontier.quest.v2.storage.level.diagnostic.3}"
+				"{industrial_frontier.quest.v2.storage.level.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.level.proof_help.2}"
+				"{industrial_frontier.quest.v2.storage.level.next}"
 			]
 			icon: "toms_storage:ts.level_emitter"
 			id: "3A20000000000006"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Эмиттер превращает количество на складе в редстоун-сигнал, направление которого можно настроить под нужную линию."
+			subtitle: "{industrial_frontier.quest.v2.storage.level.lead}"
 			tags: ["storage", "redstone", "stock_control"]
 			tasks: [
 				{
@@ -277,7 +277,7 @@
 						id: "toms_storage:ts.level_emitter"
 					}
 					consume_items: false
-					title: "Получите один эмиттер уровня."
+					title: "{industrial_frontier.task.v2.storage.level.item.objective}"
 					type: "item"
 				}
 				{
@@ -287,11 +287,11 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите эмиттер уровня у складской сети."
+					title: "{industrial_frontier.task.v2.storage.level.place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Производство по уровню запаса"
+			title: "{industrial_frontier.quest.v2.storage.level.title}"
 			x: 12d
 			y: 0d
 		}
@@ -302,41 +302,41 @@
 				"3E1AB571E2C45782"
 			]
 			description: [
-				"Обычные контейнеры дёшевы, наглядны и хорошо подходят для массового сырья, топлива и временных остатков. Цифровая сеть сильна там, где нужны компактные ячейки, доставка машинам, шаблоны и автоматические заказы."
-				"Оставьте массовое сырьё и большие буферы в обычных контейнерах."
-				"Перенесите в цифровую сеть детали, которые участвуют в шаблонах и часто нужны разным производствам."
-				"Связывайте системы через ограниченные входы и выходы, чтобы один случайный предмет не заполнил цифровое хранилище."
-				"У каждой системы есть понятная роль, а дорогие ячейки не расходуются на бесконтрольный вал сырья."
-				"Разберите роли обычного склада и цифровой сети."
-				"Если цифровые ячейки быстро заполняются, найдите массовый материал без отдельного внешнего запаса."
-				"Если предмет постоянно приходится переносить вручную, решите, является ли он сырьём или участником автоматического заказа."
-				"Отметьте пункт после чтения памятки; переносить ради неё все предметы не нужно."
-				"Вернитесь к региональной логистике и продолжите настройку шаблонов, каналов и восстановления цифровой сети."
-				"Это добровольная архитектурная памятка; она не нужна для перехода к следующей эпохе."
+				"{industrial_frontier.quest.v2.storage.handover.purpose}"
+				"{industrial_frontier.quest.v2.storage.handover.step.1}"
+				"{industrial_frontier.quest.v2.storage.handover.step.2}"
+				"{industrial_frontier.quest.v2.storage.handover.step.3}"
+				"{industrial_frontier.quest.v2.storage.handover.success}"
+				"{industrial_frontier.quest.v2.storage.handover.task}"
+				"{industrial_frontier.quest.v2.storage.handover.diagnostic.1}"
+				"{industrial_frontier.quest.v2.storage.handover.diagnostic.2}"
+				"{industrial_frontier.quest.v2.storage.handover.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.handover.next}"
+				"{industrial_frontier.quest.v2.storage.handover.optional_note}"
 			]
 			icon: "ae2:controller"
 			id: "3020000000000007"
 			optional: true
 			shape: "diamond"
 			size: 1.5d
-			subtitle: "Цифровое хранилище не делает прежний склад бесполезным: две системы выгодно обслуживают разные потоки."
+			subtitle: "{industrial_frontier.quest.v2.storage.handover.lead}"
 			tags: ["storage", "ae2", "architecture"]
 			tasks: [
 				{
 					id: "4020000000000007"
-					title: "Прочитайте схему разделения двух складов."
+					title: "{industrial_frontier.task.v2.storage.handover.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Обычный склад и цифровая сеть"
+			title: "{industrial_frontier.quest.v2.storage.handover.title}"
 			x: 15d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"От связанных сундуков до склада, который показывает запасы, помогает собирать предметы и подаёт сигнал производству"
-		"Склад — часть фабрики. Если сырьё нельзя быстро найти, линия простаивает так же, как при нехватке энергии или транспорта."
-		"Ветка начинается после первой механической линии и развивается вместе с кампанией. Сначала вы объедините обычные контейнеры, позже добавите удалённые участки, сборку из запасов и контроль уровня."
+		"{industrial_frontier.chapter.v2.storage.subtitle.1}"
+		"{industrial_frontier.chapter.v2.storage.subtitle.2}"
+		"{industrial_frontier.chapter.v2.storage.subtitle.3}"
 	]
-	title: "Хранение и порядок"
+	title: "{industrial_frontier.chapter.v2.storage.title}"
 }

@@ -41,15 +41,21 @@ $runtimeFull = Resolve-UnderRoot $rootFull 'config/ftbquests/quests' -MustExist
 $runtimeChapters = Resolve-UnderRoot $rootFull 'config/ftbquests/quests/chapters' -MustExist
 $runtimeGroups = Resolve-UnderRoot $rootFull 'config/ftbquests/quests/chapter_groups.snbt' -MustExist
 $runtimeData = Resolve-UnderRoot $rootFull 'config/ftbquests/quests/data.snbt' -MustExist
+$runtimeLang = Resolve-UnderRoot $rootFull 'config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/lang/ru_ru.json' -MustExist
 
 $manifestPath = Join-Path $buildFull 'manifest.json'
 $manifest = Get-Content -Raw -Encoding UTF8 -LiteralPath $manifestPath | ConvertFrom-Json
 if ([int]$manifest.schema_version -ne 2 -or [string]$manifest.status -ne 'STAGED') {
     throw 'Questbook build manifest is not a staged schema-v2 build.'
 }
-if ([string]$manifest.text_mode -ne 'ru-inline') {
-    throw 'Questbook promotion requires the natural-Russian inline build.'
+if ([string]$manifest.text_mode -ne 'staging-lang') {
+    throw 'Questbook promotion requires staging-lang so the FTB Quests login payload stays below Minecraft''s 1 MiB limit.'
 }
+
+$buildLangRelative = 'localization/ru_ru.json'
+$buildLangEntry = $manifest.files.PSObject.Properties[$buildLangRelative]
+if ($null -eq $buildLangEntry) { throw 'Localized questbook build is missing localization/ru_ru.json.' }
+Assert-ManifestFile $buildFull $buildLangRelative ([string]$buildLangEntry.Value)
 
 $runtimeFiles = @($manifest.files.PSObject.Properties | Where-Object {
     $_.Name -eq 'chapter_groups.snbt' -or $_.Name.StartsWith('chapters/')
@@ -59,8 +65,12 @@ foreach ($entry in $runtimeFiles) {
 }
 $expectedChapters = @($runtimeFiles | Where-Object { $_.Name.StartsWith('chapters/') }).Count
 if ($expectedChapters -lt 1) { throw 'Staged build contains no quest chapters.' }
+$stagedSyncBytes = [long](Get-Item -LiteralPath (Join-Path $buildFull 'chapter_groups.snbt')).Length + [long]((Get-ChildItem -LiteralPath (Join-Path $buildFull 'chapters') -Filter '*.snbt' -File | Measure-Object Length -Sum).Sum)
+if ($stagedSyncBytes -gt 850000) {
+    throw "Staged quest SNBT is $stagedSyncBytes bytes; refusing promotion above the 850000-byte safety budget for Minecraft's 1 MiB custom-payload limit."
+}
 if ($CheckOnly) {
-    Write-Host "[QUEST-PROMOTE][PASS] staged manifest and $expectedChapters chapter hashes are valid."
+    Write-Host "[QUEST-PROMOTE][PASS] staged manifest and $expectedChapters chapter hashes are valid; sync_snbt_bytes=$stagedSyncBytes."
     Write-Host '[QUEST-PROMOTE][PASS] check-only mode; runtime was not modified and Minecraft was not launched.'
     return
 }
@@ -69,10 +79,12 @@ $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
 $stageRoot = Resolve-UnderRoot $rootFull ("tmp/questbook_v2_promote_${stamp}_$PID")
 $stageChapters = Join-Path $stageRoot 'chapters'
 $stageGroups = Join-Path $stageRoot 'chapter_groups.snbt'
+$stageLang = Join-Path $stageRoot 'ru_ru.json'
 $backupRoot = Resolve-UnderRoot $rootFull "backups/questbook_runtime_before_v2_$stamp"
 $backupChapters = Join-Path $backupRoot 'chapters'
 $backupGroups = Join-Path $backupRoot 'chapter_groups.snbt'
 $backupData = Join-Path $backupRoot 'data.snbt'
+$backupLang = Join-Path $backupRoot 'ru_ru.json'
 
 New-Item -ItemType Directory -Path $stageChapters -Force | Out-Null
 $buildChapters = Join-Path $buildFull 'chapters'
@@ -80,6 +92,15 @@ foreach ($chapter in @(Get-ChildItem -LiteralPath $buildChapters -Filter '*.snbt
     Copy-Item -LiteralPath $chapter.FullName -Destination $stageChapters -ErrorAction Stop
 }
 Copy-Item -LiteralPath (Join-Path $buildFull 'chapter_groups.snbt') -Destination $stageGroups -ErrorAction Stop
+
+$existingLang = Get-Content -Raw -Encoding UTF8 -LiteralPath $runtimeLang | ConvertFrom-Json
+$questLang = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $buildFull $buildLangRelative) | ConvertFrom-Json
+$mergedLang = [ordered]@{}
+foreach ($property in @($existingLang.PSObject.Properties)) { $mergedLang[$property.Name] = $property.Value }
+foreach ($property in @($questLang.PSObject.Properties)) { $mergedLang[$property.Name] = $property.Value }
+$sortedLang = [ordered]@{}
+foreach ($key in @($mergedLang.Keys | Sort-Object)) { $sortedLang[$key] = $mergedLang[$key] }
+[System.IO.File]::WriteAllText($stageLang, ($sortedLang | ConvertTo-Json -Depth 20) + "`n", [System.Text.UTF8Encoding]::new($false))
 
 $stagedCount = @(Get-ChildItem -LiteralPath $stageChapters -Filter '*.snbt' -File).Count
 if ($stagedCount -ne $expectedChapters) {
@@ -89,6 +110,7 @@ if ($stagedCount -ne $expectedChapters) {
 New-Item -ItemType Directory -Path $backupRoot | Out-Null
 Copy-Item -LiteralPath $runtimeGroups -Destination $backupGroups
 Copy-Item -LiteralPath $runtimeData -Destination $backupData
+Copy-Item -LiteralPath $runtimeLang -Destination $backupLang
 $oldChapterCount = @(Get-ChildItem -LiteralPath $runtimeChapters -Filter '*.snbt' -File).Count
 
 $promoted = $false
@@ -96,6 +118,7 @@ try {
     Move-Item -LiteralPath $runtimeChapters -Destination $backupChapters
     Move-Item -LiteralPath $stageChapters -Destination $runtimeChapters
     Copy-Item -LiteralPath $stageGroups -Destination $runtimeGroups -Force
+    Copy-Item -LiteralPath $stageLang -Destination $runtimeLang -Force
 
     $runtimeCount = @(Get-ChildItem -LiteralPath $runtimeChapters -Filter '*.snbt' -File).Count
     if ($runtimeCount -ne $expectedChapters) {
@@ -113,6 +136,12 @@ try {
             throw "Runtime hash mismatch after promotion: $($entry.Name)"
         }
     }
+    $promotedLang = Get-Content -Raw -Encoding UTF8 -LiteralPath $runtimeLang | ConvertFrom-Json
+    foreach ($property in @($questLang.PSObject.Properties)) {
+        if ([string]$promotedLang.PSObject.Properties[$property.Name].Value -ne [string]$property.Value) {
+            throw "Runtime localization mismatch after promotion: $($property.Name)"
+        }
+    }
     $promoted = $true
 }
 finally {
@@ -127,6 +156,9 @@ finally {
         if (Test-Path -LiteralPath $backupGroups) {
             Copy-Item -LiteralPath $backupGroups -Destination $runtimeGroups -Force
         }
+        if (Test-Path -LiteralPath $backupLang) {
+            Copy-Item -LiteralPath $backupLang -Destination $runtimeLang -Force
+        }
     }
 }
 
@@ -136,4 +168,4 @@ if ($promoted -and (Test-Path -LiteralPath $stageRoot)) {
 
 Write-Host "[QUEST-PROMOTE][PASS] old_chapters=$oldChapterCount new_chapters=$expectedChapters"
 Write-Host "[QUEST-PROMOTE][PASS] backup=$backupRoot"
-Write-Host '[QUEST-PROMOTE][PASS] data.snbt preserved; Minecraft was not launched.'
+Write-Host '[QUEST-PROMOTE][PASS] data.snbt preserved; localized Russian quest text promoted outside the login payload; Minecraft was not launched.'

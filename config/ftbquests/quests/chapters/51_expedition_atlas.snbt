@@ -12,68 +12,68 @@
 		{
 			dependencies: ["3050000000000001"]
 			description: [
-				"Экспедиция планируется как небольшая логистическая операция: цель, запас, путь отхода и предел риска. Руины и поселения дают сведения, образцы и контакты, но готовая машина будущей эпохи не считается нормальной добычей."
-				"Выберите одну ветвь атласа по текущей эпохе и отметьте точку возвращения до выхода."
-				"Возьмите еду, свет, запасной инструмент и только то защитное снаряжение, которое действительно нужно выбранной среде."
-				"При первом подходе найдите вход и путь отхода. Зачистка всей постройки не требуется для исследования."
-				"Вы понимаете, какой запас нужен выбранной цели и при каком условии следует повернуть назад."
-				"Прочитайте памятку и выберите одну экспедиционную цель."
-				"Если цель долго не находится, расширяйте карту последовательными полосами и возвращайтесь до исчерпания половины запаса."
-				"Если вход опасен, отметьте место и вернитесь позже; найденная структура не обязана быть пройдена в тот же рейс."
-				"Галочка подтверждает только чтение; каждое посещение дальше проверяется отдельной задачей."
-				"Первой целью станет любой показательный объект Верхнего мира: лагерь, руины, поселение, храм или подземелье."
-				"Весь атлас является боковой ветвью и не задерживает промышленное развитие."
+				"{industrial_frontier.quest.v2.atlas.brief.purpose}"
+				"{industrial_frontier.quest.v2.atlas.brief.step.1}"
+				"{industrial_frontier.quest.v2.atlas.brief.step.2}"
+				"{industrial_frontier.quest.v2.atlas.brief.step.3}"
+				"{industrial_frontier.quest.v2.atlas.brief.success}"
+				"{industrial_frontier.quest.v2.atlas.brief.task}"
+				"{industrial_frontier.quest.v2.atlas.brief.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.brief.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.brief.next}"
+				"{industrial_frontier.quest.v2.atlas.brief.optional_note}"
 			]
 			icon: "minecraft:filled_map"
 			id: "3051000000000001"
 			optional: true
 			shape: "hexagon"
 			size: 1.4d
-			subtitle: "Неизвестная постройка становится полезной только тогда, когда до неё можно добраться, осмотреть её и вернуться с результатом."
+			subtitle: "{industrial_frontier.quest.v2.atlas.brief.lead}"
 			tags: ["world", "expedition", "planning"]
 			tasks: [
 				{
 					id: "4051000000000001"
-					title: "Прочитайте правила снабжения экспедиции."
+					title: "{industrial_frontier.task.v2.atlas.brief.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Маршрут важнее сундука"
+			title: "{industrial_frontier.quest.v2.atlas.brief.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3051000000000001"]
 			description: [
-				"Один объект показывает сразу несколько ролей мировых структур. Лагерь даёт ориентир, руины рассказывают о месте, поселение открывает контакт и торговлю, а храм или подземелье добавляет риск, который нужно оценить до входа."
-				"Выберите одно направление и отмечайте крупные постройки на карте, не сворачивая к каждой мелкой находке."
-				"У руин проверьте устойчивость пути, у поселения не путайте внешнюю торговлю со своей колонией, а у храма или подземелья сначала ищите ловушки и выход."
-				"Забирайте образцы, инструменты и сведения, которые пригодятся сейчас. Готовая техника будущей эпохи не должна заменять производство."
-				"Наземная цель засчитана, поэтому остальные семейства построек можно исследовать только по желанию."
-				"Найдите любой наземный объект из указанной группы."
-				"Если постройка выглядит подходящей, но не засчитывается, сохраните её координаты и видимое название в коротком отчёте."
-				"Если внутри слишком опасно, отступите: задача подтверждает прибытие и не требует полной зачистки."
-				"Если добыча кажется слишком сильной для вашей эпохи, сохраните её как образец и не стройте на ней обязательную цепочку."
-				"Подойдут лагерь, руины, поселение, храм или небольшое подземелье из списка задачи; искать все варианты не нужно."
-				"Отдельная ветвь спускается под землю, где большие пещеры требуют собственного способа навигации."
-				"Для завершения нужен один объект, а не полный список руин, храмов и поселений."
+				"{industrial_frontier.quest.v2.atlas.overworld_site.purpose}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.step.1}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.step.2}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.step.3}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.success}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.task}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.diagnostic.3}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.next}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.optional_note}"
 			]
 			icon: "minecraft:map"
 			id: "3051000000000002"
 			optional: true
 			shape: "circle"
 			size: 1.2d
-			subtitle: "Наземная экспедиция позволяет освоить правила атласа без портала, подводного снаряжения и поздней техники."
+			subtitle: "{industrial_frontier.quest.v2.atlas.overworld_site.lead}"
 			tags: ["world", "overworld", "structures"]
 			tasks: [
 				{
 					id: "4051000000000002"
 					structure: "#industrial_frontier:expedition_overworld"
-					title: "Найдите один наземный объект из общей группы экспедиций."
+					title: "{industrial_frontier.task.v2.atlas.overworld_site.structure.objective}"
 					type: "structure"
 				}
 			]
-			title: "Первая цель на карте"
+			title: "{industrial_frontier.quest.v2.atlas.overworld_site.title}"
 			x: 3d
 			y: -3d
 		}
@@ -84,25 +84,25 @@
 				"35DDD1065975E5CA"
 			]
 			description: [
-				"Подземная разведка нужна для поиска удобных подходов к жилам GregTech, а не для случайного сбора каждой руды по пути. Генерацию месторождений по-прежнему определяет геологическая система сборки; форма пещер лишь меняет доступ к ним."
-				"Оставляйте метки только на развилках и направляйте их к выходу; сплошная цепочка факелов хуже показывает направление."
-				"Не спускайтесь в новую шахту без блока, воды, еды и запасной кирки."
-				"Доберитесь до глубинной зоны, возьмите один образец сланца и возвращайтесь тем же отмеченным путём."
-				"В инвентаре есть образец глубинного сланца, подтверждающий достижение глубинной зоны."
-				"Получите один образец глубинного сланца из глубинной зоны."
-				"Если потеряли направление, вернитесь к последней понятной развилке вместо случайного движения вниз."
-				"Если пещера слишком опасна, прокопайте короткий контролируемый обход и отметьте место для следующей вылазки."
-				"Если жила не находится, используйте правила геологической разведки из P0; размер пещеры не гарантирует месторождение."
-				"Образец подтверждает, что вы добрались до глубинной зоны; искать конкретную руду для этой задачи не нужно."
-				"Следующая среда меняет уже не только маршрут, но и дыхание: морская цель требует отдельной подготовки."
-				"Образец подтверждает один безопасный спуск; исследовать всю систему пещер не нужно."
+				"{industrial_frontier.quest.v2.atlas.cave_survey.purpose}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.step.1}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.step.2}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.step.3}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.success}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.task}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.diagnostic.3}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.next}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.optional_note}"
 			]
 			icon: "minecraft:deepslate"
 			id: "3051000000000003"
 			optional: true
 			shape: "diamond"
 			size: 1.2d
-			subtitle: "Расширенные пещеры открывают дальние проходы, но легко скрывают обратную дорогу за десятком похожих развилок."
+			subtitle: "{industrial_frontier.quest.v2.atlas.cave_survey.lead}"
 			tags: ["world", "caves", "geology"]
 			tasks: [
 				{
@@ -112,11 +112,11 @@
 						id: "minecraft:deepslate"
 					}
 					consume_items: false
-					title: "Принесите один образец глубинного сланца."
+					title: "{industrial_frontier.task.v2.atlas.cave_survey.sample.objective}"
 					type: "item"
 				}
 			]
-			title: "Большая пещера — это маршрут"
+			title: "{industrial_frontier.quest.v2.atlas.cave_survey.title}"
 			x: 3d
 			y: 0d
 		}
@@ -127,35 +127,35 @@
 				"3012000000000001"
 			]
 			description: [
-				"Морская экспедиция связывает разведку с рыболовством и будущей водной логистикой. Её цель — найти один заметный объект и проверить маршрут, а не зачищать памятник или собирать всю морскую добычу."
-				"Возьмите лодку, запас еды, блоки для аварийной площадки и проверенный способ дышать под водой, если цель находится глубоко."
-				"Отметьте берег отправления и промежуточную точку до погружения."
-				"При приближении оцените стражей, вход и расстояние до воздуха. Для зачёта достаточно добраться до структуры."
-				"Морская цель засчитана; развивать этот маршрут дальше стоит только при реальной пользе для снабжения."
-				"Достигните любого морского объекта из указанной группы."
-				"Если воздуха не хватает даже на разведку входа, отступите и подготовьте более надёжное средство дыхания."
-				"Если лодка осталась далеко, сначала закрепите безопасную площадку или запасной выход на поверхность."
-				"Если объект не засчитывается, отметьте точку на карте и приложите к отчёту название из подсказки мира."
-				"Подойдёт памятник, дом или океанское поселение; задача не требует зачистки подводной постройки."
-				"После моря атлас возвращается к региональной цели: крепость потребует уже постоянной линии снабжения."
-				"Посещение не требует боя или полного исследования подводных помещений."
+				"{industrial_frontier.quest.v2.atlas.ocean_site.purpose}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.step.1}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.step.2}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.step.3}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.success}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.task}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.diagnostic.3}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.next}"
+				"{industrial_frontier.quest.v2.atlas.ocean_site.optional_note}"
 			]
 			icon: "minecraft:heart_of_the_sea"
 			id: "3051000000000004"
 			optional: true
 			shape: "circle"
 			size: 1.2d
-			subtitle: "На воде простая ошибка со снабжением опаснее, потому что берег, воздух и путь домой могут оказаться далеко одновременно."
+			subtitle: "{industrial_frontier.quest.v2.atlas.ocean_site.lead}"
 			tags: ["world", "ocean", "structures"]
 			tasks: [
 				{
 					id: "4051000000000004"
 					structure: "#industrial_frontier:expedition_ocean"
-					title: "Найдите один морской объект из списка задачи."
+					title: "{industrial_frontier.task.v2.atlas.ocean_site.structure.objective}"
 					type: "structure"
 				}
 			]
-			title: "Морской рейс"
+			title: "{industrial_frontier.quest.v2.atlas.ocean_site.title}"
 			x: 6d
 			y: -3d
 		}
@@ -166,35 +166,35 @@
 				"3015000000000001"
 			]
 			description: [
-				"Перестроенная крепость — крупная региональная цель. Её выгодно связать с базой отметками, промежуточным запасом и понятным маршрутом, чтобы будущие поездки не повторяли долгий случайный поиск."
-				"Подготовьте несколько глаз Края и проверяйте направление с больших интервалов, чтобы не расходовать их без пользы."
-				"Отмечайте промежуточные точки и оставьте у поверхности запас еды, блоков и света."
-				"Найдите вход в крепость и отметьте его; открывать портал или исследовать каждый коридор для зачёта не требуется."
-				"Крепость найдена и засчитана; теперь её местоположение можно превратить в постоянный маршрут поздней экспедиции."
-				"Найдите перестроенную крепость."
-				"Если направление резко изменилось, вернитесь к последней точке броска и уменьшите шаг поиска."
-				"Если вход находится под сложным рельефом, сделайте отдельную безопасную шахту вместо долгих блужданий по пещерам."
-				"Если крепость не засчитывается, не разрушайте вход: сохраните координаты и название из подсказки мира для проверки."
-				"Око Края помогает выбрать направление, но запасная отметка на карте нужна для возвращения и будущего снабжения."
-				"Эта точка станет одним из условий позднего входа в Край, но сначала атлас предлагает отдельную экспедицию в Незер."
-				"Поиск крепости не повышает эпоху и не требует немедленно входить в Край."
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.purpose}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.step.1}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.step.2}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.step.3}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.success}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.task}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.diagnostic.3}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.next}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.optional_note}"
 			]
 			icon: "minecraft:ender_eye"
 			id: "3051000000000005"
 			optional: true
 			shape: "hexagon"
 			size: 1.2d
-			subtitle: "Поздний переход начинается не с портала, а с дороги до места, которое может оказаться очень далеко от города."
+			subtitle: "{industrial_frontier.quest.v2.atlas.stronghold_route.lead}"
 			tags: ["world", "stronghold", "regional_logistics"]
 			tasks: [
 				{
 					id: "4051000000000005"
 					structure: "#betterstrongholds:better_strongholds"
-					title: "Найдите перестроенную крепость."
+					title: "{industrial_frontier.task.v2.atlas.stronghold_route.structure.objective}"
 					type: "structure"
 				}
 			]
-			title: "Крепость как логистический проект"
+			title: "{industrial_frontier.quest.v2.atlas.stronghold_route.title}"
 			x: 6d
 			y: 0d
 		}
@@ -205,35 +205,35 @@
 				"3014000000000001"
 			]
 			description: [
-				"Укреплённые объекты Незера дают доступ к реагентам и материалам для химии и энергетики. Экспедиция подтверждает маршрут к одной цели, но не выдаёт готовое позднее оборудование и не требует полной зачистки."
-				"Запишите координаты портала с обеих сторон и оставьте у него негорючий аварийный запас."
-				"Возьмите защиту от огня, блоки для мостов и запасное огниво или другой способ вновь зажечь портал."
-				"Найдите крепость или подземелье, отметьте безопасный подход и возвращайтесь, если расход защиты превысил половину запаса."
-				"Укреплённая цель Незера засчитана; дальнейшее освоение можно связать с реальным спросом химической линии."
-				"Найдите любую укреплённую цель Незера из указанной группы."
-				"Если потеряли портал, сначала вернитесь к последней координатной отметке и не открывайте новые ответвления."
-				"Если путь пересекает большое озеро лавы, ищите обход или стройте защищённый коридор вместо открытого моста."
-				"Если цель не засчитывается, зафиксируйте точку и название из подсказки мира, затем безопасно вернитесь через портал."
-				"Подойдёт крепость или малое подземелье; подтверждение не требует боя с каждым обитателем."
-				"Позднее крепость Верхнего мира и начало P8 откроют отдельный маршрут к изменённому центральному острову Края."
-				"Для завершения достаточно прибыть к одной цели; полная зачистка крепости не требуется."
+				"{industrial_frontier.quest.v2.atlas.nether_site.purpose}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.step.1}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.step.2}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.step.3}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.success}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.task}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.diagnostic.3}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.next}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.optional_note}"
 			]
 			icon: "minecraft:blaze_rod"
 			id: "3051000000000006"
 			optional: true
 			shape: "circle"
 			size: 1.2d
-			subtitle: "В Незере короткое расстояние скрывает высокую цену ошибки: лава, огонь и потерянный портал обрывают рейс быстрее пустого запаса еды."
+			subtitle: "{industrial_frontier.quest.v2.atlas.nether_site.lead}"
 			tags: ["world", "nether", "structures"]
 			tasks: [
 				{
 					id: "4051000000000006"
 					structure: "#industrial_frontier:expedition_nether"
-					title: "Найдите одну укреплённую цель Незера из списка задачи."
+					title: "{industrial_frontier.task.v2.atlas.nether_site.structure.objective}"
 					type: "structure"
 				}
 			]
-			title: "Крепость за порталом"
+			title: "{industrial_frontier.quest.v2.atlas.nether_site.title}"
 			x: 6d
 			y: 3d
 		}
@@ -244,79 +244,79 @@
 				"3018000000000001"
 			]
 			description: [
-				"Better End Island перестраивает центральный остров, поэтому старый маршрут из памяти ненадёжен. Цель этого шага — безопасно войти, увидеть новую площадку и сохранить путь назад, а не завершить весь бой одним рейсом."
-				"Оставьте у портала в Верхнем мире запас еды, блоков и обычного снаряжения для повторного входа."
-				"Возьмите дальнобойное средство защиты, медленное падение или другой проверенный способ пережить сброс с высоты."
-				"После перехода сначала оцените площадку, края острова и путь к укрытию; бой можно продолжить отдельным подготовленным рейсом."
-				"Переход в Край засчитан; устройство изменённого центрального острова теперь можно учитывать в дальнейших планах."
-				"Войдите в Край через подготовленный портал."
-				"Если площадка опасна сразу после входа, сначала создайте укрытие и только затем осматривайте остров."
-				"Если снаряжение потеряно, используйте запас у портала и не несите второй дорогой комплект без плана возврата."
-				"Если эпоха P8 ещё не началась, оставьте ветку закрытой: Край не нужен для обязательного продвижения атласа."
-				"Центральный остров изменён; заранее возьмите блоки, дальнобойное средство защиты и способ отметить точку возвращения."
-				"После освоения центрального острова можно искать один поздний объект Края из общей экспедиционной группы."
-				"Вход в Край не входит в обязательную промышленную цепочку и может быть отложен."
+				"{industrial_frontier.quest.v2.atlas.end_entry.purpose}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.step.1}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.step.2}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.step.3}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.success}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.task}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.diagnostic.3}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.next}"
+				"{industrial_frontier.quest.v2.atlas.end_entry.optional_note}"
 			]
 			icon: "minecraft:end_stone"
 			id: "3051000000000007"
 			optional: true
 			shape: "octagon"
 			size: 1.3d
-			subtitle: "Найденная крепость становится входом в позднюю среду, где привычная площадка и расположение угроз уже не гарантированы."
+			subtitle: "{industrial_frontier.quest.v2.atlas.end_entry.lead}"
 			tags: ["world", "end", "late_expedition"]
 			tasks: [
 				{
 					id: "4051000000000007"
 					dimension: "minecraft:the_end"
-					title: "Войдите в Край через подготовленный портал."
+					title: "{industrial_frontier.task.v2.atlas.end_entry.dimension.objective}"
 					type: "dimension"
 				}
 			]
-			title: "Изменённый центральный остров"
+			title: "{industrial_frontier.quest.v2.atlas.end_entry.title}"
 			x: 9d
 			y: 0d
 		}
 		{
 			dependencies: ["3051000000000007"]
 			description: [
-				"Поздние структуры Края стоит исследовать ради сведений, образцов материалов и необычных компонентов. Они не должны снабжать готовой технологией следующей эпохи, а атлас не требует искать каждую редкую цитадель или руину."
-				"Возьмите блоки, еду, запасной путь через пустоту и средство безопасного падения."
-				"Двигайтесь от отмеченной точки по одному направлению и ставьте редкие, но однозначные ориентиры."
-				"Найдите любой объект из списка, оцените безопасный вход и возвращайтесь с одним полезным образцом вместо полной разборки постройки."
-				"Поздняя цель Края засчитана; остальные структуры остаются свободными целями исследования."
-				"Найдите любой поздний объект Края из указанной группы."
-				"Если маршрут уходит слишком далеко, устройте промежуточный запас и вернитесь за основным снаряжением отдельным рейсом."
-				"Если объект расположен над пустотой, сначала постройте защищённый подход и только затем ищите вход."
-				"Если цель не засчитывается, поставьте точку на карте и сохраните её название из подсказки мира для отчёта."
-				"Подойдёт цитадель или один из вариантов руин; искать все редкие структуры не нужно."
-				"На этом атлас завершён: дальнейшие походы выбираются по нуждам города, науки и производства, а не ради новых отметок."
-				"Один объект завершает ветвь; полный поиск редких структур Края не требуется."
+				"{industrial_frontier.quest.v2.atlas.end_site.purpose}"
+				"{industrial_frontier.quest.v2.atlas.end_site.step.1}"
+				"{industrial_frontier.quest.v2.atlas.end_site.step.2}"
+				"{industrial_frontier.quest.v2.atlas.end_site.step.3}"
+				"{industrial_frontier.quest.v2.atlas.end_site.success}"
+				"{industrial_frontier.quest.v2.atlas.end_site.task}"
+				"{industrial_frontier.quest.v2.atlas.end_site.diagnostic.1}"
+				"{industrial_frontier.quest.v2.atlas.end_site.diagnostic.2}"
+				"{industrial_frontier.quest.v2.atlas.end_site.diagnostic.3}"
+				"{industrial_frontier.quest.v2.atlas.end_site.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.end_site.next}"
+				"{industrial_frontier.quest.v2.atlas.end_site.optional_note}"
 			]
 			icon: "minecraft:purpur_block"
 			id: "3051000000000008"
 			optional: true
 			shape: "diamond"
 			size: 1.3d
-			subtitle: "После центрального острова начинается среда с большими разрывами и редкими целями, где лишний километр особенно дорого обходится."
+			subtitle: "{industrial_frontier.quest.v2.atlas.end_site.lead}"
 			tags: ["world", "end", "structures"]
 			tasks: [
 				{
 					id: "4051000000000008"
 					structure: "#industrial_frontier:expedition_end"
-					title: "Найдите один поздний объект Края из списка задачи."
+					title: "{industrial_frontier.task.v2.atlas.end_site.structure.objective}"
 					type: "structure"
 				}
 			]
-			title: "Один объект дальнего Края"
+			title: "{industrial_frontier.quest.v2.atlas.end_site.title}"
 			x: 12d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Подготовка маршрута, один показательный объект каждого класса и разумный предел добычи"
-		"Структуры мира дают ориентиры, разведданные, материалы и внешние контакты, но не заменяют собственное производство."
-		"Каждая ветвь принимает один объект подходящего класса. Обходить все храмы, руины, деревни и подземелья не потребуется."
-		"Сложность маршрута растёт вместе с эпохой: ранняя наземная разведка открыта почти сразу, а Край остаётся поздней и полностью необязательной экспедицией."
+		"{industrial_frontier.chapter.v2.expedition_atlas.subtitle.1}"
+		"{industrial_frontier.chapter.v2.expedition_atlas.subtitle.2}"
+		"{industrial_frontier.chapter.v2.expedition_atlas.subtitle.3}"
+		"{industrial_frontier.chapter.v2.expedition_atlas.subtitle.4}"
 	]
-	title: "Экспедиционный атлас"
+	title: "{industrial_frontier.chapter.v2.expedition_atlas.title}"
 }

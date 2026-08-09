@@ -13,62 +13,62 @@
 			hide_until_deps_complete: true
 			dependencies: ["3012000000000001"]
 			description: [
-				"Каждый раздел отвечает на четыре вопроса: откуда приходит элемент, в какие полезные соединения он переходит, какие процессы их потребляют и что нужно вернуть или безопасно сохранить. Такой взгляд заранее показывает общие реагенты, места для буферов и возможные замкнутые циклы."
-				"Открывайте тематический раздел после соответствующей практической ветви основной книги."
-				"Прослеживайте вход, промежуточные соединения, основной продукт и остатки."
-				"Для точных количеств, напряжения и времени всегда сверяйтесь с действующим рецептом в окне просмотра рецептов."
-				"Вы используете академию как карту причин и связей, а просмотр рецептов — как источник точных параметров конкретного процесса."
-				"Ознакомьтесь с правилами чтения карты химических циклов."
-				"Если вещество появляется без понятного источника, вернитесь к паспорту материала и найдите основную производственную отрасль."
-				"Если цепочка переполнена, проследите не только основной продукт, но и второй выход каждой машины."
-				"Отметка подтверждает знакомство со справочной главой и ничего не расходует."
-				"Сначала разберём чистоту — свойство, которое отличает рудный концентрат от материала для тонкой химии и электроники."
+				"{industrial_frontier.quest.v2.elements.intro.purpose}"
+				"{industrial_frontier.quest.v2.elements.intro.step.1}"
+				"{industrial_frontier.quest.v2.elements.intro.step.2}"
+				"{industrial_frontier.quest.v2.elements.intro.step.3}"
+				"{industrial_frontier.quest.v2.elements.intro.success}"
+				"{industrial_frontier.quest.v2.elements.intro.task}"
+				"{industrial_frontier.quest.v2.elements.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.intro.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.intro.next}"
 			]
 			icon: "minecraft:book"
 			id: "3071000000000001"
 			shape: "hexagon"
 			size: 1.6d
-			subtitle: "Большая химия становится понятнее, если смотреть не на список машин, а на путь вещества между ними."
+			subtitle: "{industrial_frontier.quest.v2.elements.intro.lead}"
 			tags: ["root", "reference", "chemistry"]
 			tasks: [
 				{
 					id: "4071000000000001"
-					title: "Прочитайте, как пользоваться картой элементов и производственных циклов."
+					title: "{industrial_frontier.task.v2.elements.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Следуйте за элементом"
+			title: "{industrial_frontier.quest.v2.elements.intro.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3071000000000001"]
 			description: [
-				"Руда, концентрат, технический продукт и высокочистое вещество могут содержать один основной элемент, но решают разные задачи. Обогащение отделяет пустую породу, химическая очистка убирает близкие примеси, а тонкое разделение готовит материал для электроники, катализаторов или изотопных процессов."
-				"Смотрите, какую именно форму и чистоту принимает следующий механизм."
-				"Не пропускайте промывку, растворение или разделение только потому, что название элемента уже появилось раньше."
-				"Храните промежуточные продукты раздельно, чтобы нечистая партия не вернулась в чистый участок."
-				"Вы можете объяснить назначение каждой стадии очистки через примесь, форму или требование следующего процесса."
-				"Ознакомьтесь со ступенями чистоты промышленного материала."
-				"Если чистый материал не принимается, сравните его форму с входом рецепта: пыль, раствор и слиток не равнозначны."
-				"Если стадия ничего не меняет по составу, форме, выходу или безопасности, проверьте, не является ли она лишним дублем."
-				"Это теоретическая основа; отдельный образец чистого вещества пока не требуется."
-				"На углероде видно, как один элемент выполняет сразу три промышленные роли."
+				"{industrial_frontier.quest.v2.elements.purity.purpose}"
+				"{industrial_frontier.quest.v2.elements.purity.step.1}"
+				"{industrial_frontier.quest.v2.elements.purity.step.2}"
+				"{industrial_frontier.quest.v2.elements.purity.step.3}"
+				"{industrial_frontier.quest.v2.elements.purity.success}"
+				"{industrial_frontier.quest.v2.elements.purity.task}"
+				"{industrial_frontier.quest.v2.elements.purity.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.purity.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.purity.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.purity.next}"
 			]
 			icon: "gtceu:purified_iron_ore"
 			id: "3071000000000002"
 			shape: "circle"
 			size: 1d
-			subtitle: "Больше обработки нужно не ради длины цепочки, а ради удаления примесей, которые мешают следующему процессу."
+			subtitle: "{industrial_frontier.quest.v2.elements.purity.lead}"
 			tags: ["chemistry", "purity", "separation"]
 			tasks: [
 				{
 					id: "4071000000000002"
-					title: "Прочитайте, зачем промышленности нужны разные ступени чистоты."
+					title: "{industrial_frontier.task.v2.elements.purity.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Чистота — часть рецепта"
+			title: "{industrial_frontier.quest.v2.elements.purity.title}"
 			x: 3d
 			y: 0d
 		}
@@ -79,31 +79,31 @@
 				"3A12000000000001"
 			]
 			description: [
-				"В ранней промышленности углерод прежде всего даёт тепло и кокс. В металлургии он участвует в восстановлении и меняет свойства стали. В химическом городе углеводородные фракции становятся сырьём для растворителей и полимеров. Эти роли связаны элементом, но не делают все углеродсодержащие предметы взаимозаменяемыми."
-				"Отделяйте топливный запас от углерода, который нужен как реагент или компонент материала."
-				"При планировании коксовой линии учитывайте не только кокс, но и побочные жидкие и газовые продукты, если выбранный рецепт их выдаёт."
-				"Не отправляйте ценное нефтехимическое сырьё в котёл, пока не сравните его последующие применения."
-				"Вы выбираете назначение углеродного потока по ценности следующего продукта, а не только по способности гореть."
-				"Ознакомьтесь с топливной, металлургической и химической ролями углерода."
-				"Если металлургия останавливается при полном топливном складе, проверьте, не нужен ли отдельный восстановитель или другая форма углерода."
-				"Если химическая ветвь голодает, проверьте, не сжигается ли её сырьё в общей энергетической сети."
-				"Кокс уже был получен в основной ветви, поэтому повторная партия не нужна."
-				"Серная ветвь покажет, как кислота соединяет добычу, очистку и возврат реагента."
+				"{industrial_frontier.quest.v2.elements.carbon.purpose}"
+				"{industrial_frontier.quest.v2.elements.carbon.step.1}"
+				"{industrial_frontier.quest.v2.elements.carbon.step.2}"
+				"{industrial_frontier.quest.v2.elements.carbon.step.3}"
+				"{industrial_frontier.quest.v2.elements.carbon.success}"
+				"{industrial_frontier.quest.v2.elements.carbon.task}"
+				"{industrial_frontier.quest.v2.elements.carbon.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.carbon.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.carbon.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.carbon.next}"
 			]
 			icon: "gtceu:coke_gem"
 			id: "3071000000000003"
 			shape: "circle"
 			size: 1d
-			subtitle: "Один углеродный поток может греть котёл, восстанавливать металл или стать основой органического продукта."
+			subtitle: "{industrial_frontier.quest.v2.elements.carbon.lead}"
 			tags: ["chemistry", "carbon", "fuel"]
 			tasks: [
 				{
 					id: "4071000000000003"
-					title: "Прочитайте о трёх промышленных ролях углерода."
+					title: "{industrial_frontier.task.v2.elements.carbon.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Углерод: тепло, металл, химия"
+			title: "{industrial_frontier.quest.v2.elements.carbon.title}"
 			x: 6d
 			y: -6d
 		}
@@ -114,31 +114,31 @@
 				"37A5A8A5636C1101"
 			]
 			description: [
-				"Сера проходит через подготовку и окисление к серной кислоте, после чего кислота участвует в переработке руд, получении соединений и очистке смесей. Полезная фабрика учитывает не только подачу свежей кислоты, но и возврат, загрязнение и безопасный отвод остатка."
-				"Держите запас свежей кислоты отдельно от использованных и смешанных растворов."
-				"Перед расширением найдите крупнейшего потребителя и настройте буфер под его размер партии."
-				"Если рецепт возвращает часть реагента, отводите её в отдельную очистку или обратно в начало только после проверки состава."
-				"Вы рассматриваете серную кислоту как обслуживающий поток нескольких отраслей и заранее планируете её возврат."
-				"Ознакомьтесь с производством, потреблением и возвратом серной кислоты."
-				"Если кислотный цех переполняется, проверьте выходы использованных растворов у потребителей."
-				"Если потребитель простаивает при полном баке, убедитесь, что в нём нужная кислота, а не похожий серосодержащий раствор."
-				"Основная ветвь уже подтвердила кислоту; здесь изучается её место в общем цикле."
-				"Азотная ветвь свяжет воздух, аммиак, кислоту и сельское хозяйство."
+				"{industrial_frontier.quest.v2.elements.sulfur.purpose}"
+				"{industrial_frontier.quest.v2.elements.sulfur.step.1}"
+				"{industrial_frontier.quest.v2.elements.sulfur.step.2}"
+				"{industrial_frontier.quest.v2.elements.sulfur.step.3}"
+				"{industrial_frontier.quest.v2.elements.sulfur.success}"
+				"{industrial_frontier.quest.v2.elements.sulfur.task}"
+				"{industrial_frontier.quest.v2.elements.sulfur.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.sulfur.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.sulfur.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.sulfur.next}"
 			]
 			icon: "gtceu:sulfuric_acid_bucket"
 			id: "3071000000000004"
 			shape: "circle"
 			size: 1d
-			subtitle: "Серная кислота — не финальный трофей, а рабочий реагент для множества разделительных процессов."
+			subtitle: "{industrial_frontier.quest.v2.elements.sulfur.lead}"
 			tags: ["chemistry", "sulfur", "acid"]
 			tasks: [
 				{
 					id: "4071000000000004"
-					title: "Прочитайте карту серы и серной кислоты."
+					title: "{industrial_frontier.task.v2.elements.sulfur.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Сера и кислотный контур"
+			title: "{industrial_frontier.quest.v2.elements.sulfur.title}"
 			x: 6d
 			y: -3d
 		}
@@ -150,31 +150,31 @@
 				"3F5500A5915B1BB6"
 			]
 			description: [
-				"Азотная ветвь начинается с воздуха. Выделенный азот соединяется с водородом и превращается в аммиак, а затем поток расходится к азотной кислоте и удобрениям. Кислота обслуживает химию и разделение, удобрение — сельское хозяйство и продовольствие города."
-				"Разделите участок подготовки азота, подачу водорода, синтез аммиака и кислотное производство на собственные буферы."
-				"Не отдавайте весь аммиак одному потребителю: оставьте понятное распределение между кислотой и удобрениями."
-				"Масштабируйте ветвь по устойчивому спросу города, а не ради единственного учебного образца."
-				"Вы видите одну азотную систему с двумя важными выходами и можете объяснить, почему оба нужны городу."
-				"Ознакомьтесь с азотным путём от воздуха до городских потребителей."
-				"Если кислота и удобрение поочерёдно голодают, причина обычно в общем промежуточном запасе без ограничения выдачи."
-				"Если линия воздуха не запускается, проверьте энергию, свободные газовые выходы и выбранную ступень разделения."
-				"Практические продукты уже получены в химическом городе; повторять их не нужно."
-				"Хлорная ветвь научит работать с несколькими равноценными продуктами одной реакции."
+				"{industrial_frontier.quest.v2.elements.nitrogen.purpose}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.step.1}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.step.2}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.step.3}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.success}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.task}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.next}"
 			]
 			icon: "gtceu:nitric_acid_bucket"
 			id: "3071000000000005"
 			shape: "circle"
 			size: 1d
-			subtitle: "Воздух кажется бесплатным, но разделение, сжатие и превращение азота требуют настоящего оборудования и энергии."
+			subtitle: "{industrial_frontier.quest.v2.elements.nitrogen.lead}"
 			tags: ["chemistry", "nitrogen", "fertiliser"]
 			tasks: [
 				{
 					id: "4071000000000005"
-					title: "Прочитайте путь азота от воздуха до кислоты и удобрения."
+					title: "{industrial_frontier.task.v2.elements.nitrogen.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Азот: воздух становится сырьём"
+			title: "{industrial_frontier.quest.v2.elements.nitrogen.title}"
 			x: 6d
 			y: 0d
 		}
@@ -185,31 +185,31 @@
 				"39016A3285565221"
 			]
 			description: [
-				"Хлор-щелочной процесс ценен сразу несколькими продуктами. Хлор нужен органической и неорганической химии, щёлочь — нейтрализации и обработке, водород — другим синтезам. Успешная линия заранее знает потребителя или безопасный буфер для каждого выхода."
-				"Выделите отдельные ёмкости для хлора и водорода, а щёлочь храните в подходящей форме."
-				"Ограничьте заполнение входного рассола, чтобы аварийный запас выходов оставался свободным."
-				"Свяжите хлор с производством хлорсодержащих материалов, а щёлочь — с нейтрализацией и другими доступными рецептами."
-				"Все продукты реакции имеют назначение или запас, поэтому линия не останавливается из-за забытого второго выхода."
-				"Ознакомьтесь с балансом трёх продуктов хлор-щелочной линии."
-				"Если машина внезапно остановилась, первым делом проверьте свободное место у каждого продукта, а не только наличие энергии."
-				"Если щёлочь исчезает бесследно, проверьте, не включено ли слишком широкое удаление побочных продуктов."
-				"Отметка относится к карте потоков; новые химикаты для неё не нужны."
-				"Вода объединит химию с коммунальной инфраструктурой и покажет полный путь от забора до возврата."
+				"{industrial_frontier.quest.v2.elements.chlorine.purpose}"
+				"{industrial_frontier.quest.v2.elements.chlorine.step.1}"
+				"{industrial_frontier.quest.v2.elements.chlorine.step.2}"
+				"{industrial_frontier.quest.v2.elements.chlorine.step.3}"
+				"{industrial_frontier.quest.v2.elements.chlorine.success}"
+				"{industrial_frontier.quest.v2.elements.chlorine.task}"
+				"{industrial_frontier.quest.v2.elements.chlorine.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.chlorine.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.chlorine.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.chlorine.next}"
 			]
 			icon: "gtceu:chlorine_bucket"
 			id: "3071000000000006"
 			shape: "circle"
 			size: 1d
-			subtitle: "Хлор, водород и щёлочь рождаются вместе, поэтому переполненный выход останавливает всю установку."
+			subtitle: "{industrial_frontier.quest.v2.elements.chlorine.lead}"
 			tags: ["chemistry", "chlorine", "coproducts"]
 			tasks: [
 				{
 					id: "4071000000000006"
-					title: "Прочитайте о совместном производстве хлора, водорода и щёлочи."
+					title: "{industrial_frontier.task.v2.elements.chlorine.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Хлорная линия без «лишних» продуктов"
+			title: "{industrial_frontier.quest.v2.elements.chlorine.title}"
 			x: 6d
 			y: 3d
 		}
@@ -220,31 +220,31 @@
 				"3014000000000004"
 			]
 			description: [
-				"Вода проходит забор, подготовку, распределение, использование и возврат. Орошению обычно не нужна та же чистота, что чувствительной химии или теплообмену. Загрязнённый поток нельзя незаметно вернуть в чистый бак: сначала нужно понять, какие примеси внёс процесс."
-				"Разделите магистрали сырой, подготовленной и отработанной воды."
-				"Назначьте чистую воду только тем потребителям, которым действительно мешают примеси."
-				"Для каждого стока определите повторное использование, очистку или отдельное безопасное хранение."
-				"Водная система снабжает производство нужным качеством и не смешивает чистый запас с неизвестным стоком."
-				"Ознакомьтесь с раздельными контурами сырой, чистой и отработанной воды."
-				"Если чувствительный рецепт не запускается, сравните вид воды на входе с точным рецептом в окне просмотра рецептов."
-				"Если чистой воды постоянно не хватает, проверьте, не подаётся ли она в орошение или другое нечувствительное потребление."
-				"Водный баланс уже подтверждён основной ветвью; здесь требуется только чтение."
-				"Высокочистый кремний покажет, почему вода и чистая логистика особенно важны для электроники."
+				"{industrial_frontier.quest.v2.elements.water.purpose}"
+				"{industrial_frontier.quest.v2.elements.water.step.1}"
+				"{industrial_frontier.quest.v2.elements.water.step.2}"
+				"{industrial_frontier.quest.v2.elements.water.step.3}"
+				"{industrial_frontier.quest.v2.elements.water.success}"
+				"{industrial_frontier.quest.v2.elements.water.task}"
+				"{industrial_frontier.quest.v2.elements.water.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.water.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.water.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.water.next}"
 			]
 			icon: "gtceu:distilled_water_bucket"
 			id: "3071000000000007"
 			shape: "circle"
 			size: 1d
-			subtitle: "Сырая вода, дистиллированная вода и технологический сток выглядят похоже, но принадлежат разным контурам."
+			subtitle: "{industrial_frontier.quest.v2.elements.water.lead}"
 			tags: ["chemistry", "water", "utilities"]
 			tasks: [
 				{
 					id: "4071000000000007"
-					title: "Прочитайте полный путь промышленной воды."
+					title: "{industrial_frontier.task.v2.elements.water.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Вода — не один общий бак"
+			title: "{industrial_frontier.quest.v2.elements.water.title}"
 			x: 6d
 			y: 6d
 		}
@@ -255,31 +255,31 @@
 				"3B135BC312CBE262"
 			]
 			description: [
-				"Путь кремния начинается с распространённого сырья, но полезная электронная форма появляется только после последовательной подготовки. Чем тоньше компонент, тем важнее не смешивать промежуточные продукты и не подменять высокочистый материал обычной пылью с тем же названием элемента."
-				"Проследите рецепт выбранного электронного компонента от подготовленного кремния назад к исходному сырью."
-				"Разведите хранение обычной, очищенной и подготовленной формы, если рецепты их различают."
-				"После стабилизации рецепта добавьте его в систему автоматической сборки, но оставьте вне сети запас исходных материалов для восстановления после сбоя."
-				"Электронная линия получает одну предсказуемую форму кремния и может повторять партию без ручной подмены входов."
-				"Ознакомьтесь с принципами чистого и повторяемого кремниевого потока."
-				"Если шаблон автоматической сборки не работает, сравните указанную в нём форму кремния с фактическим выходом подготовительной линии."
-				"Если рецепт требует неизвестную ступень чистоты, откройте применения этого материала вместо замены похожей пылью."
-				"Не ищите отдельную машину с названием «очиститель кремния»: следуйте фактической цепочке доступных рецептов."
-				"Ядерная химия доведёт различия состава, чистоты и формы до самого строгого производственного цикла."
+				"{industrial_frontier.quest.v2.elements.silicon.purpose}"
+				"{industrial_frontier.quest.v2.elements.silicon.step.1}"
+				"{industrial_frontier.quest.v2.elements.silicon.step.2}"
+				"{industrial_frontier.quest.v2.elements.silicon.step.3}"
+				"{industrial_frontier.quest.v2.elements.silicon.success}"
+				"{industrial_frontier.quest.v2.elements.silicon.task}"
+				"{industrial_frontier.quest.v2.elements.silicon.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.silicon.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.silicon.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.silicon.next}"
 			]
 			icon: "gtceu:silicon_dust"
 			id: "3071000000000008"
 			shape: "circle"
 			size: 1d
-			subtitle: "Электроника чувствительна не к красоте цеха, а к правильной форме материала, чистоте и повторяемости партии."
+			subtitle: "{industrial_frontier.quest.v2.elements.silicon.lead}"
 			tags: ["chemistry", "silicon", "electronics"]
 			tasks: [
 				{
 					id: "4071000000000008"
-					title: "Прочитайте, почему кремниевой электронике нужна чистая и стабильная линия."
+					title: "{industrial_frontier.task.v2.elements.silicon.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Кремний: ценность чистого потока"
+			title: "{industrial_frontier.quest.v2.elements.silicon.title}"
 			x: 9d
 			y: 6d
 		}
@@ -290,31 +290,31 @@
 				"3A16000000000004"
 			]
 			description: [
-				"Гражданский ядерный цикл включает подготовку сырья, очистку, обогащение, изготовление топлива, работу реактора, выдержку, переработку и хранение остатка. Каждая стадия меняет состав, форму или безопасность материала; ни одну из них нельзя честно заменить одной универсальной пылью."
-				"Держите свежее топливо, отработавшие сборки и продукты переработки в раздельных защищённых потоках."
-				"Считайте переработку способом вернуть полезную часть, а не способом заставить отходы исчезнуть."
-				"Планируйте хранилище до первого запуска, оставляя место для остановки и вывоза аварийной партии."
-				"Вы рассматриваете реактор как один узел полного материального цикла и знаете судьбу продукта после выработки энергии."
-				"Ознакомьтесь со всеми стадиями ядерного материального цикла."
-				"Если станция работает только при удалении отхода, она ещё не имеет законченного материального маршрута."
-				"Если переработка не запускается, сравните точный вид отработавшего топлива с входом машины и проверьте свободные выходы."
-				"Топливо и отходы уже подтверждены основной ветвью; повторять опасные операции не требуется."
-				"Теперь можно перейти к расширенной химии разделения, где сходные металлы приходится отделять друг от друга длинной последовательностью реакций."
+				"{industrial_frontier.quest.v2.elements.nuclear.purpose}"
+				"{industrial_frontier.quest.v2.elements.nuclear.step.1}"
+				"{industrial_frontier.quest.v2.elements.nuclear.step.2}"
+				"{industrial_frontier.quest.v2.elements.nuclear.step.3}"
+				"{industrial_frontier.quest.v2.elements.nuclear.success}"
+				"{industrial_frontier.quest.v2.elements.nuclear.task}"
+				"{industrial_frontier.quest.v2.elements.nuclear.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.nuclear.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.nuclear.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.nuclear.next}"
 			]
 			icon: "nuclearcraft:basic_barrel"
 			id: "3071000000000009"
 			shape: "octagon"
 			size: 1.2d
-			subtitle: "Энергия появляется в середине цепочки, а ответственность за материал продолжается после остановки реактора."
+			subtitle: "{industrial_frontier.quest.v2.elements.nuclear.lead}"
 			tags: ["chemistry", "nuclear", "closed_cycle"]
 			tasks: [
 				{
 					id: "4071000000000009"
-					title: "Прочитайте полный материальный путь гражданского ядерного цикла."
+					title: "{industrial_frontier.task.v2.elements.nuclear.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Ядерный цикл не заканчивается реактором"
+			title: "{industrial_frontier.quest.v2.elements.nuclear.title}"
 			x: 12d
 			y: 6d
 		}
@@ -327,55 +327,55 @@
 				"37AAC2C4C2466FEF"
 			]
 			description: [
-				"Расширенная химия добавляет три большие семьи процессов: разделение платиновых металлов, переработку монацита и переработку бастнезита. В них растворение, осаждение, центрифугирование, электролиз и нагрев последовательно выделяют близкие вещества из общей смеси."
-				"Сначала откройте рецепт конечного металла и двигайтесь назад до исходного концентрата."
-				"Выпишите главные реагенты и отметьте, какие из них возвращаются или появляются снова на поздней стадии."
-				"Для каждого промежуточного продукта предусмотрите отдельный небольшой буфер и свободный выход."
-				"Не стройте всю линию за один подход: сначала проверьте одну стадию и только затем соединяйте её со следующей."
-				"Вы видите три семьи рецептов и понимаете, что их ценность состоит в разделении смеси, а не в искусственном удлинении пути."
-				"Ознакомьтесь с платиновой, монацитовой и бастнезитовой семьями процессов."
-				"Если название промежуточного вещества отсутствует в справке, найдите его через применения соседнего продукта."
-				"Если линия встала при наличии реагентов, проверьте все выходы: малый осадок или газ часто блокирует основную партию."
-				"Точные промежуточные вещества и машины смотрите в действующих рецептах: они могут отличаться между версиями сборки."
-				"Сначала проследим платиновую ветвь до одного образца чистой платины, затем — редкоземельную до неодима."
+				"{industrial_frontier.quest.v2.elements.gtec_brief.purpose}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.step.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.step.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.step.3}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.step.4}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.success}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.next}"
 			]
 			icon: "gtceu:platinum_dust"
 			id: "3A71000000000001"
 			shape: "hexagon"
 			size: 1.6d
-			subtitle: "Ценная руда редко содержит один удобный металл; главное умение здесь — разделить смесь и не потерять сопутствующие элементы."
+			subtitle: "{industrial_frontier.quest.v2.elements.gtec_brief.lead}"
 			tags: ["chemistry", "gtec", "separation", "rare_metals"]
 			tasks: [
 				{
 					id: "4A71000000000001"
-					title: "Прочитайте карту трёх расширенных химических цепочек."
+					title: "{industrial_frontier.task.v2.elements.gtec_brief.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Расширенная химия разделения"
+			title: "{industrial_frontier.quest.v2.elements.gtec_brief.title}"
 			x: 12d
 			y: 0d
 		}
 		{
 			dependencies: ["3A71000000000001"]
 			description: [
-				"Платиновая цепочка начинается с металлического сырья, переводит его в растворимые и осаждаемые соединения, а затем разделяет платину, палладий, родий, рутений, осмий и иридий. Один конечный образец подтверждает только наличие платины; последовательность стадий нужно проследить по действующим рецептам."
-				"Откройте применения платинового сырья и найдите ветвь химического разделения."
-				"Пройдите назад от платиновой пыли через очищенную соль и разделение чернового платинового материала."
-				"На каждой стадии сохраните сопутствующий осадок или раствор: в нём может находиться другой платиновый металл."
-				"Получите одну платиновую пыль и оставьте её в инвентаре для завершения задания."
-				"У вас есть один конечный образец платины, а карта линии показывает, куда уходят остальные металлы общей смеси."
-				"Получите одну платиновую пыль и проследите её цепочку до исходной смеси."
-				"Если вы получили платину другим способом, образец подойдёт для отметки, но для учебной цели всё равно проследите платиновую ветвь разделения."
-				"Если процесс остановился, проверьте малые выходы и ёмкости с растворами прежде, чем увеличивать подачу сырья."
-				"Для отметки достаточно конечного образца; путь его получения книга не различает."
-				"Бастнезитовая ветвь применяет ту же логику к редкоземельной смеси и выводит нас к неодиму."
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.purpose}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.step.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.step.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.step.3}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.step.4}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.success}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.next}"
 			]
 			icon: "gtceu:platinum_dust"
 			id: "3A71000000000002"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Платиновая пыль ценна не сама по себе: длинная ветвь учит отделять несколько близких металлов и сохранять каждый полезный остаток."
+			subtitle: "{industrial_frontier.quest.v2.elements.gtec_pgm.lead}"
 			tags: ["chemistry", "gtec", "platinum", "separation"]
 			tasks: [
 				{
@@ -387,34 +387,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/platinum_dusts)"
 						}
 					}
-					title: "Получите одну платиновую пыль."
+					title: "{industrial_frontier.task.v2.elements.gtec_pgm.platinum.objective}"
 					type: "item"
 				}
 			]
-			title: "Платина из общей смеси"
+			title: "{industrial_frontier.quest.v2.elements.gtec_pgm.title}"
 			x: 15d
 			y: -2d
 		}
 		{
 			dependencies: ["3A71000000000001"]
 			description: [
-				"Бастнезитовая цепочка последовательно подготавливает смесь редкоземельных соединений и доводит неодимовое соединение до неодимовой пыли. Монацит образует соседнюю семью разделения. Точные названия и формы промежуточных веществ берите из действующих рецептов, а не угадывайте по памяти."
-				"Откройте рецепт неодимовой пыли и найдите стадию переработки неодимового оксида."
-				"Двигайтесь назад по бастнезитовой ветви и отметьте отдельные выходы редкоземельной смеси."
-				"Сохраняйте остатки до тех пор, пока не станет понятно, какой следующий рецепт их использует."
-				"Получите одну неодимовую пыль; массовый запас для завершения справки не нужен."
-				"У вас есть один образец неодима, а редкоземельная смесь разобрана как семейство ценных выходов, а не как руда одного металла."
-				"Получите одну неодимовую пыль и проследите её бастнезитовую ветвь."
-				"Если неодим получен другой цепочкой, образец подойдёт для отметки, но для учебной цели отдельно проследите бастнезитовую ветвь."
-				"Если неизвестный остаток копится, откройте его применения, прежде чем настраивать удаление или переплавку."
-				"Для отметки достаточно конечного образца; весь путь разделения проверьте сами."
-				"Теперь объединим два примера в общее правило баланса реагентов, остатков и буферов — без новых производственных партий."
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.purpose}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.step.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.step.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.step.3}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.step.4}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.success}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.next}"
 			]
 			icon: "gtceu:neodymium_dust"
 			id: "3A71000000000003"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Редкоземельная руда ценна сразу несколькими элементами, поэтому грубое извлечение одного продукта оставляет половину смысла в отходах."
+			subtitle: "{industrial_frontier.quest.v2.elements.gtec_rare_earth.lead}"
 			tags: ["chemistry", "gtec", "rare_earth", "separation"]
 			tasks: [
 				{
@@ -426,11 +426,11 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/neodymium_dusts)"
 						}
 					}
-					title: "Получите одну неодимовую пыль."
+					title: "{industrial_frontier.task.v2.elements.gtec_rare_earth.neodymium.objective}"
 					type: "item"
 				}
 			]
-			title: "Неодим из редкоземельной смеси"
+			title: "{industrial_frontier.quest.v2.elements.gtec_rare_earth.title}"
 			x: 15d
 			y: 2d
 		}
@@ -440,32 +440,32 @@
 				"3A71000000000003"
 			]
 			description: [
-				"Платиновые и редкоземельные процессы устойчивы, когда каждая стадия получает ограниченную партию, все выходы имеют место назначения, а возвращаемые реагенты не смешиваются со свежими без контроля. Масштабировать следует самое медленное полезное звено, а не всю линию сразу."
-				"Поставьте небольшие отдельные буферы между стадиями вместо одного общего склада химикатов."
-				"Ограничьте подачу исходной руды, пока не проверена судьба каждого осадка, раствора и газа."
-				"Возвращайте реагент только в тот процесс, где совпадают его состав и чистота."
-				"После нескольких партий найдите самое медленное звено и расширяйте именно его."
-				"Линия не останавливается от забытого выхода, не выбрасывает ценные остатки и наращивается по измеренному узкому месту."
-				"Ознакомьтесь с правилами буферов, возврата реагентов и обращения с остатками."
-				"Если вся цепочка то запускается, то замирает, уменьшите размер входной партии и проверьте заполнение промежуточных буферов."
-				"Если свежий реагент расходуется слишком быстро, найдите предусмотренный возврат и убедитесь, что он не уходит в общий сток."
-				"Итог не требует ещё одной партии редких металлов."
-				"Итоговый указатель соберёт все элементы и циклы в карту для проектирования следующего завода."
+				"{industrial_frontier.quest.v2.elements.gtec_balance.purpose}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.step.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.step.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.step.3}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.step.4}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.success}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.next}"
 			]
 			icon: "gtceu:large_chemical_reactor"
 			id: "3A71000000000004"
 			shape: "octagon"
 			size: 1.2d
-			subtitle: "Сложную химию губит не количество стадий, а отсутствие буферов, маршрута остатков и понятного возврата реагентов."
+			subtitle: "{industrial_frontier.quest.v2.elements.gtec_balance.lead}"
 			tags: ["chemistry", "gtec", "balance", "closed_cycle"]
 			tasks: [
 				{
 					id: "4A71000000000004"
-					title: "Прочитайте правила устойчивой работы длинной химической цепочки."
+					title: "{industrial_frontier.task.v2.elements.gtec_balance.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Длинная цепочка без вечных заторов"
+			title: "{industrial_frontier.quest.v2.elements.gtec_balance.title}"
 			x: 18d
 			y: 0d
 		}
@@ -478,41 +478,41 @@
 				"3A70000000000007"
 			]
 			description: [
-				"Углерод связывает энергию, металлургию и органическую химию. Сера и азот дают рабочие кислоты. Хлорная линия производит несколько равноправных веществ. Вода обслуживает чистоту и коммунальные потоки. Кремний требует стабильной подготовки. Ядерный цикл отвечает за материал после реактора, а расширенная химия раскрывает глубокое разделение редких смесей."
-				"Перед строительством нового цеха назовите исходное вещество, нужную форму и основную производственную отрасль."
-				"Отметьте свежие реагенты, возвращаемые реагенты, полезные попутные продукты и опасные остатки."
-				"Выберите один небольшой размер партии и предусмотрите автоматизацию до массового спроса."
-				"Свяжите выход хотя бы с одним реальным потребителем, прежде чем расширять производство."
-				"Вы проектируете химическую фабрику как сеть связанных циклов и можете простыми словами объяснить назначение каждого крупного потока."
-				"Ознакомьтесь с итоговой картой и используйте её при проектировании химических линий."
-				"Если продукт копится без применения, найдите потребителя или уменьшите подачу сырья до появления спроса."
-				"Если цех зависит от ручного переноса редкой промежуточной пыли, добавьте отдельный буфер и автоматическую доставку до расширения."
-				"Это последняя справочная отметка; она не влияет на переход между эпохами."
-				"Возвращайтесь к этому указателю при открытии нового материала, а точные параметры всегда берите из действующих рецептов."
+				"{industrial_frontier.quest.v2.elements.index.purpose}"
+				"{industrial_frontier.quest.v2.elements.index.step.1}"
+				"{industrial_frontier.quest.v2.elements.index.step.2}"
+				"{industrial_frontier.quest.v2.elements.index.step.3}"
+				"{industrial_frontier.quest.v2.elements.index.step.4}"
+				"{industrial_frontier.quest.v2.elements.index.success}"
+				"{industrial_frontier.quest.v2.elements.index.task}"
+				"{industrial_frontier.quest.v2.elements.index.diagnostic.1}"
+				"{industrial_frontier.quest.v2.elements.index.diagnostic.2}"
+				"{industrial_frontier.quest.v2.elements.index.proof_help.1}"
+				"{industrial_frontier.quest.v2.elements.index.next}"
 			]
 			icon: "minecraft:written_book"
 			id: "3A71000000000005"
 			shape: "hexagon"
 			size: 1.6d
-			subtitle: "Теперь любой новый процесс можно разместить на общей карте сырья, реагентов, продуктов и возвратных потоков."
+			subtitle: "{industrial_frontier.quest.v2.elements.index.lead}"
 			tags: ["chemistry", "index", "summary"]
 			tasks: [
 				{
 					id: "4A71000000000005"
-					title: "Прочитайте итоговый указатель химических потоков."
+					title: "{industrial_frontier.task.v2.elements.index.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Карта химического завода"
+			title: "{industrial_frontier.quest.v2.elements.index.title}"
 			x: 21d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Живая карта химии: от углерода, воды и кислот до редких земель и атомного топлива"
-		"Эта глава объясняет не отдельные предметы, а движение элементов через завод. Углерод становится топливом, восстановителем и полимерным сырьём; хлор рождается вместе с водородом и щёлочью; вода проходит путь от источника до очистки и возврата."
-		"Каждый раздел привязан к уже существующей производственной ветви. Здесь не нужно повторять большие партии: чтение открывается после соответствующей практики, а задания по расширенной химии требуют только по одному конечному образцу."
-		"Академия остаётся справочной. Она не блокирует основную линию, городскую кампанию или переход между эпохами, но помогает проектировать химические цеха как связанные циклы, а не как россыпь машин."
+		"{industrial_frontier.chapter.v2.academy_of_elements.subtitle.1}"
+		"{industrial_frontier.chapter.v2.academy_of_elements.subtitle.2}"
+		"{industrial_frontier.chapter.v2.academy_of_elements.subtitle.3}"
+		"{industrial_frontier.chapter.v2.academy_of_elements.subtitle.4}"
 	]
-	title: "Академия элементов и циклов"
+	title: "{industrial_frontier.chapter.v2.academy_of_elements.title}"
 }

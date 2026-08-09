@@ -13,50 +13,50 @@
 			hide_until_deps_complete: true
 			dependencies: ["3DD22A44EA12FD23"]
 			description: [
-				"Разделение величин помогает проектировать линию до установки машин. Вал переносит вращение, передача меняет скорость, а запас единиц нагрузки (SU) определяет, сколько потребителей выдержит источник."
-				"Прочитайте определения направления, скорости вращения и единиц нагрузки SU."
-				"Наметьте путь от будущего источника через валы к первой машине."
-				"Вы можете объяснить, почему быстро вращающийся вал всё равно способен остановиться при перегрузке."
-				"Прочитайте различие между вращением, скоростью и нагрузкой."
-				"Если линия позже встанет, сначала проверяйте наличие вращения, затем направление и только потом запас единиц нагрузки."
-				"Если термины смешиваются, вернитесь к трём определениям в тексте и не переходите к мощности."
-				"Первым материалом привода станет небольшая партия андезитового сплава."
+				"{industrial_frontier.quest.v2.p1.intro.purpose}"
+				"{industrial_frontier.quest.v2.p1.intro.step.1}"
+				"{industrial_frontier.quest.v2.p1.intro.step.2}"
+				"{industrial_frontier.quest.v2.p1.intro.success}"
+				"{industrial_frontier.quest.v2.p1.intro.task}"
+				"{industrial_frontier.quest.v2.p1.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.intro.next}"
 			]
 			icon: "create:cogwheel"
 			id: "3011000000000001"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Create передаёт вращение, а не электричество: направление, скорость и доступная нагрузка решают разные задачи."
+			subtitle: "{industrial_frontier.quest.v2.p1.intro.lead}"
 			tags: ["mainline", "mechanics"]
 			tasks: [
 				{
 					id: "4011000000000001"
-					title: "Прочитайте различие между вращением, скоростью и нагрузкой."
+					title: "{industrial_frontier.task.v2.p1.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Три величины механики"
+			title: "{industrial_frontier.quest.v2.p1.intro.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3011000000000001"]
 			description: [
-				"Андезитовый сплав связывает железную ветвь P0 с механикой Create. В P1 он становится общим материалом валов, передач и корпусов."
-				"Откройте действующий рецепт андезитового сплава в JEI и подготовьте две учебные партии."
-				"Получите восемь единиц и сохраните их для следующих механизмов."
-				"В инвентаре есть восемь сплавов, которых достаточно для начала линии без обязательного массового производства."
-				"Получите восемь андезитовых сплавов."
-				"Если привычный рецепт не работает, используйте только вариант, который показывает локальный JEI."
-				"Не делайте большой запас вручную: после запуска линии этот материал должен перейти к серийному маршруту."
-				"Задача не расходует сплав; партия пойдёт на вал, передачи и первые машины."
-				"Из сплава соберём простую передачу вращения и отдельно — источник мощности."
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.purpose}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.step.1}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.step.2}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.success}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.task}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.andesite_alloy.next}"
 			]
 			icon: "create:andesite_alloy"
 			id: "3011000000000002"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Восемь андезитовых сплавов — рабочая партия для учебной линии, а не складская квота."
+			subtitle: "{industrial_frontier.quest.v2.p1.andesite_alloy.lead}"
 			tags: ["mainline", "materials"]
 			tasks: [
 				{
@@ -67,31 +67,31 @@
 						id: "create:andesite_alloy"
 					}
 					consume_items: false
-					title: "Получите восемь андезитовых сплавов."
+					title: "{industrial_frontier.task.v2.p1.andesite_alloy.items.objective}"
 					type: "item"
 				}
 			]
-			title: "Сплав для первого привода"
+			title: "{industrial_frontier.quest.v2.p1.andesite_alloy.title}"
 			x: 2d
 			y: 0d
 		}
 		{
 			dependencies: ["3011000000000002"]
 			description: [
-				"Четыре колеса позволяют увидеть направление передачи и оставить запас на поворот линии. Скорость и направление нужно читать до подключения машины."
-				"Соберите четыре малых зубчатых колеса."
-				"Спланируйте короткую передачу без лишних ступеней и оставьте доступ к валам для диагностики."
-				"Набор передачи готов, а будущий маршрут от источника к машине можно проследить визуально."
-				"Получите четыре малых зубчатых колеса."
-				"Если соседние колёса вращаются не в ожидаемую сторону, проследите каждое зацепление от источника вместо случайной перестановки."
-				"Колёса останутся у вас и войдут в учебную передачу."
-				"Когда готовы и источник, и передача, установим стрессометр и измерим доступную нагрузку."
+				"{industrial_frontier.quest.v2.p1.rotation.purpose}"
+				"{industrial_frontier.quest.v2.p1.rotation.step.1}"
+				"{industrial_frontier.quest.v2.p1.rotation.step.2}"
+				"{industrial_frontier.quest.v2.p1.rotation.success}"
+				"{industrial_frontier.quest.v2.p1.rotation.task}"
+				"{industrial_frontier.quest.v2.p1.rotation.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.rotation.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.rotation.next}"
 			]
 			icon: "create:cogwheel"
 			id: "3011000000000003"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Зубчатое колесо меняет маршрут вращения и связывает источник с потребителем."
+			subtitle: "{industrial_frontier.quest.v2.p1.rotation.lead}"
 			tags: ["mainline", "powertrain"]
 			tasks: [
 				{
@@ -102,33 +102,33 @@
 						id: "create:cogwheel"
 					}
 					consume_items: false
-					title: "Получите четыре малых зубчатых колеса."
+					title: "{industrial_frontier.task.v2.p1.rotation.cogwheels.objective}"
 					type: "item"
 				}
 			]
-			title: "Передать вращение"
+			title: "{industrial_frontier.quest.v2.p1.rotation.title}"
 			x: 4d
 			y: -1d
 		}
 		{
 			dependencies: ["3011000000000002"]
 			description: [
-				"Подойдут обычное или большое водяное колесо либо подшипник ветряной мельницы. Творческий двигатель исключён, потому что отменяет урок нагрузки."
-				"Сравните доступное место и выберите водяной либо ветряной привод."
-				"Получите один подходящий источник и установите его по инструкции выбранного механизма."
-				"Убедитесь, что от источника можно вывести доступный вал к будущему стрессометру."
-				"Получен один подходящий источник; после установки его вращение можно передать в измеряемую сеть."
-				"Получите один механический источник мощности Create из списка задачи."
-				"Если предмет не считается, откройте полный список подходящих источников в условии задачи."
-				"Если установленный привод не вращается, проверьте воду или конструкцию ветряной мельницы по выбранному маршруту."
-				"Подойдут обычное или большое водяное колесо либо подшипник ветряной мельницы; творческий двигатель исключён."
-				"Соединим выбранный источник с передачей и поставим прибор, который покажет запас нагрузки."
+				"{industrial_frontier.quest.v2.p1.power.purpose}"
+				"{industrial_frontier.quest.v2.p1.power.step.1}"
+				"{industrial_frontier.quest.v2.p1.power.step.2}"
+				"{industrial_frontier.quest.v2.p1.power.step.3}"
+				"{industrial_frontier.quest.v2.p1.power.success}"
+				"{industrial_frontier.quest.v2.p1.power.task}"
+				"{industrial_frontier.quest.v2.p1.power.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.power.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.power.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.power.next}"
 			]
 			icon: "create:water_wheel"
 			id: "3011000000000004"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Вода и ветер дают разные планировочные решения, поэтому книга проверяет функцию, а не один навязанный блок."
+			subtitle: "{industrial_frontier.quest.v2.p1.power.lead}"
 			tags: ["mainline", "power_source"]
 			tasks: [
 				{
@@ -140,11 +140,11 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_components/mechanical_power_source)"
 						}
 					}
-					title: "Получите один механический источник мощности Create из списка задачи."
+					title: "{industrial_frontier.task.v2.p1.power.source.objective}"
 					type: "item"
 				}
 			]
-			title: "Выбрать источник вращения"
+			title: "{industrial_frontier.quest.v2.p1.power.title}"
 			x: 4d
 			y: 1d
 		}
@@ -154,22 +154,22 @@
 				"3011000000000004"
 			]
 			description: [
-				"Прибор помогает отличить отсутствие вращения от перегрузки. Запас мощности планируется до подключения следующей машины, а не после остановки всей линии."
-				"Соберите стрессометр и установите его в доступном месте на вращающемся валу."
-				"Откройте показание до подключения машин и ещё раз после первого потребителя."
-				"Прибор установлен и показывает изменение нагрузки после подключения потребителя."
-				"Получите, установите и прочитайте один стрессометр."
-				"Если показание отсутствует, проверьте, что вал действительно вращается и прибор связан с сетью."
-				"Если сеть перегружена, временно отключите потребитель и увеличьте источник либо снизьте скорость."
-				"Прибор останется частью вашей линии."
-				"Если интерфейс не открывается, убедитесь, что прибор включён в вращающуюся сеть."
-				"Завершите параллельную ветвь мельницы; затем подключим чашу для пакетной обработки."
+				"{industrial_frontier.quest.v2.p1.stress.purpose}"
+				"{industrial_frontier.quest.v2.p1.stress.step.1}"
+				"{industrial_frontier.quest.v2.p1.stress.step.2}"
+				"{industrial_frontier.quest.v2.p1.stress.success}"
+				"{industrial_frontier.quest.v2.p1.stress.task}"
+				"{industrial_frontier.quest.v2.p1.stress.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.stress.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.stress.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.stress.proof_help.2}"
+				"{industrial_frontier.quest.v2.p1.stress.next}"
 			]
 			icon: "create:stressometer"
 			id: "3538CE73ECF70BAD"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Стрессометр заменяет догадки числом: он показывает, сколько SU использует подключённая сеть."
+			subtitle: "{industrial_frontier.quest.v2.p1.stress.lead}"
 			tags: ["mainline", "diagnostics", "su"]
 			tasks: [
 				{
@@ -179,7 +179,7 @@
 						id: "create:stressometer"
 					}
 					consume_items: false
-					title: "Получите один стрессометр."
+					title: "{industrial_frontier.task.v2.p1.stress.item.objective}"
 					type: "item"
 				}
 				{
@@ -189,11 +189,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите стрессометр и прочитайте его показание."
+					title: "{industrial_frontier.task.v2.p1.stress.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Нагрузка измеряется"
+			title: "{industrial_frontier.quest.v2.p1.stress.title}"
 			x: 6d
 			y: -1d
 		}
@@ -203,22 +203,22 @@
 				"3011000000000004"
 			]
 			description: [
-				"Это первый потребитель, на котором видно различие между ручной операцией и машинным процессом. Вход должен поступать сверху, а выходу нужно свободное место."
-				"Установите мельницу под доступной передачей и подключите её к вращению."
-				"Откройте интерфейс, положите одну учебную порцию подходящего входа и предусмотрите место для результата."
-				"Мельница установлена, интерфейс доступен, а учебная порция проходит от входа к выходу без ручного повторения рецепта."
-				"Получите, установите и откройте одну мельницу."
-				"Если процесс не начинается, проверьте вращение, правильный вход и наличие рецепта в JEI."
-				"Если продукт не выходит, освободите выход и временно уберите автоматическую подачу."
-				"Мельница не расходуется при проверке."
-				"Проверьте, что взаимодействуете с установленной мельницей Create."
-				"Рядом появится чаша — общий узел для пакетного смешивания и обработки."
+				"{industrial_frontier.quest.v2.p1.mill.purpose}"
+				"{industrial_frontier.quest.v2.p1.mill.step.1}"
+				"{industrial_frontier.quest.v2.p1.mill.step.2}"
+				"{industrial_frontier.quest.v2.p1.mill.success}"
+				"{industrial_frontier.quest.v2.p1.mill.task}"
+				"{industrial_frontier.quest.v2.p1.mill.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.mill.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.mill.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.mill.proof_help.2}"
+				"{industrial_frontier.quest.v2.p1.mill.next}"
 			]
 			icon: "create:millstone"
 			id: "313F53950BC8F23B"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Мельница превращает постоянное вращение в повторяемую обработку одного входа."
+			subtitle: "{industrial_frontier.quest.v2.p1.mill.lead}"
 			tags: ["mainline", "processing"]
 			tasks: [
 				{
@@ -228,7 +228,7 @@
 						id: "create:millstone"
 					}
 					consume_items: false
-					title: "Получите одну мельницу."
+					title: "{industrial_frontier.task.v2.p1.mill.item.objective}"
 					type: "item"
 				}
 				{
@@ -238,11 +238,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите мельницу и откройте её интерфейс."
+					title: "{industrial_frontier.task.v2.p1.mill.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Первая вращательная обработка"
+			title: "{industrial_frontier.quest.v2.p1.mill.title}"
 			x: 8d
 			y: 1d
 		}
@@ -252,23 +252,23 @@
 				"313F53950BC8F23B"
 			]
 			description: [
-				"Пакетная обработка уменьшает ручные перекладывания и создаёт понятное место для входного и выходного буфера. Один узел позже обслужит смешивание, прессование и нагрев."
-				"Установите чашу так, чтобы сверху оставалось место для рабочего механизма."
-				"Откройте интерфейс и посмотрите, где появляются входы и готовый результат."
-				"Просмотрите обучающую сцену Ponder «Партия, буфер и узкое место»."
-				"Чаша установлена, интерфейс прочитан, а место под входной и выходной поток предусмотрено заранее."
-				"Получите, установите и откройте одну чашу Create."
-				"Если рецепт не определяется, проверьте полный набор входов, свободный выход и требуемое тепло."
-				"Если предметы застревают, временно отключите автоматическую подачу и проверьте одну учебную партию."
-				"Чаша останется центральным узлом пакетной обработки."
-				"Если окно не открывается, проверьте, что установлена именно чаша Create."
-				"Над чашей поставим механический пресс и получим первый общий рабочий узел нескольких процессов."
+				"{industrial_frontier.quest.v2.p1.basin.purpose}"
+				"{industrial_frontier.quest.v2.p1.basin.step.1}"
+				"{industrial_frontier.quest.v2.p1.basin.step.2}"
+				"{industrial_frontier.quest.v2.p1.basin.step.3}"
+				"{industrial_frontier.quest.v2.p1.basin.success}"
+				"{industrial_frontier.quest.v2.p1.basin.task}"
+				"{industrial_frontier.quest.v2.p1.basin.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.basin.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.basin.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.basin.proof_help.2}"
+				"{industrial_frontier.quest.v2.p1.basin.next}"
 			]
 			icon: "create:basin"
 			id: "3A11000000000001"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Чаша собирает входы в одной точке и позволяет отделить подачу материалов от работы механизма над ней."
+			subtitle: "{industrial_frontier.quest.v2.p1.basin.lead}"
 			tags: ["mainline", "batch_processing"]
 			tasks: [
 				{
@@ -278,7 +278,7 @@
 						id: "create:basin"
 					}
 					consume_items: false
-					title: "Получите одну чашу Create."
+					title: "{industrial_frontier.task.v2.p1.basin.item.objective}"
 					type: "item"
 				}
 				{
@@ -288,11 +288,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите чашу и откройте её интерфейс."
+					title: "{industrial_frontier.task.v2.p1.basin.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Чаша как пакетный узел"
+			title: "{industrial_frontier.quest.v2.p1.basin.title}"
 			x: 10d
 			y: 1d
 		}
@@ -302,22 +302,22 @@
 				"3538CE73ECF70BAD"
 			]
 			description: [
-				"Пресс вводит общий исполнительный механизм для нескольких производств. Правильная высота, вращение и свободный выход важнее декоративной симметрии."
-				"Установите пресс над чашей или другой рабочей зоной с правильным зазором."
-				"Подведите вращение и проверьте одну учебную операцию по действующему рецепту JEI."
-				"Пресс установлен, подключён и способен выполнить одну учебную операцию без ручной перестановки механизма."
-				"Получите, установите и используйте один механический пресс."
-				"Если пресс не двигается, проверьте вращение и запас SU."
-				"Если движения есть, но рецепта нет, проверьте высоту, набор входов и требуемый режим обработки."
-				"Пресс останется частью линии."
-				"Разместите пресс над рабочей зоной и убедитесь, что выбран нужный блок."
-				"Теперь соединим мельницу, чашу и пресс лентой и разделим входной и выходной поток."
+				"{industrial_frontier.quest.v2.p1.press.purpose}"
+				"{industrial_frontier.quest.v2.p1.press.step.1}"
+				"{industrial_frontier.quest.v2.p1.press.step.2}"
+				"{industrial_frontier.quest.v2.p1.press.success}"
+				"{industrial_frontier.quest.v2.p1.press.task}"
+				"{industrial_frontier.quest.v2.p1.press.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.press.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.press.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.press.proof_help.2}"
+				"{industrial_frontier.quest.v2.p1.press.next}"
 			]
 			icon: "create:mechanical_press"
 			id: "3A8FB34E62555188"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Один механический пресс обслуживает отдельные заготовки и пакетную работу над чашей."
+			subtitle: "{industrial_frontier.quest.v2.p1.press.lead}"
 			tags: ["mainline", "processing"]
 			tasks: [
 				{
@@ -327,7 +327,7 @@
 						id: "create:mechanical_press"
 					}
 					consume_items: false
-					title: "Получите один механический пресс."
+					title: "{industrial_frontier.task.v2.p1.press.item.objective}"
 					type: "item"
 				}
 				{
@@ -337,11 +337,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите пресс и взаимодействуйте с ним."
+					title: "{industrial_frontier.task.v2.p1.press.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Пресс над рабочей зоной"
+			title: "{industrial_frontier.quest.v2.p1.press.title}"
 			x: 12d
 			y: 0d
 		}
@@ -352,26 +352,26 @@
 				"3538CE73ECF70BAD"
 			]
 			description: [
-				"Первая автоматизация должна переносить материалы между доступными рабочими узлами. Входной буфер сглаживает подачу, чаша или мельница выполняют процесс, а отдельный выход не даёт продукту забить маршрут."
-				"Получите восемь соединителей ленты и разметьте короткий маршрут без пересечения входа и выхода."
-				"Соедините подачу с мельницей, чашей и прессом по нужному процессу."
-				"Откройте каждый установленный рабочий узел и вручную проследите одну учебную партию от входа до выхода."
-				"Комплект ленты получен, а мельница, чаша и пресс доступны для осмотра. Проведите одну учебную партию сами и убедитесь, что она доходит от входа до выхода."
-				"Получите восемь соединителей ленты и откройте мельницу, чашу и пресс собранной линии."
-				"Если предмет стоит, проверьте направление ленты и свободное место следующего узла."
-				"Если вся сеть остановилась, прочитайте стрессометр и временно отключите один потребитель."
-				"Если вход попадает в выход, разделите буферы физически до увеличения скорости."
-				"Партия остаётся у вас и предназначена для входного и выходного участков."
-				"Взаимодействуйте с установленной мельницей Create."
-				"Проверьте доступ к входам и выходу установленной чаши."
-				"Убедитесь, что взаимодействуете с установленным механическим прессом Create."
-				"После появления потока можно добавить необязательное пакетное хранилище или сразу ввести P1 в строй."
+				"{industrial_frontier.quest.v2.p1.line.purpose}"
+				"{industrial_frontier.quest.v2.p1.line.step.1}"
+				"{industrial_frontier.quest.v2.p1.line.step.2}"
+				"{industrial_frontier.quest.v2.p1.line.step.3}"
+				"{industrial_frontier.quest.v2.p1.line.success}"
+				"{industrial_frontier.quest.v2.p1.line.task}"
+				"{industrial_frontier.quest.v2.p1.line.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.line.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.line.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p1.line.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.line.proof_help.2}"
+				"{industrial_frontier.quest.v2.p1.line.proof_help.3}"
+				"{industrial_frontier.quest.v2.p1.line.proof_help.4}"
+				"{industrial_frontier.quest.v2.p1.line.next}"
 			]
 			icon: "create:belt_connector"
 			id: "3E36137316A04963"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Лента убирает ручную передачу между узлами, но требует ясного направления и свободного выхода."
+			subtitle: "{industrial_frontier.quest.v2.p1.line.lead}"
 			tags: ["mainline", "automation", "logistics"]
 			tasks: [
 				{
@@ -382,7 +382,7 @@
 						id: "create:belt_connector"
 					}
 					consume_items: false
-					title: "Получите восемь соединителей механической ленты."
+					title: "{industrial_frontier.task.v2.p1.line.belts.objective}"
 					type: "item"
 				}
 				{
@@ -392,7 +392,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте мельницу, включённую в линию."
+					title: "{industrial_frontier.task.v2.p1.line.mill_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -402,7 +402,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте чашу, включённую в линию."
+					title: "{industrial_frontier.task.v2.p1.line.basin_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -412,34 +412,34 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Взаимодействуйте с прессом над рабочей зоной."
+					title: "{industrial_frontier.task.v2.p1.line.press_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Линия от входа до выхода"
+			title: "{industrial_frontier.quest.v2.p1.line.title}"
 			x: 14d
 			y: 0d
 		}
 		{
 			dependencies: ["3E36137316A04963"]
 			description: [
-				"Пакетный рецепт сохраняет стоимость четырёх обычных сундуков и убирает только повторные клики. Это удобное расширение, а не ворота механической эпохи."
-				"Разложите восемь подходящих брёвен кольцом на верстаке, оставив центр пустым."
-				"Получите четыре сундука и поставьте отдельные буферы до и после рабочей зоны."
-				"Четыре сундука готовы; линия получает раздельный запас входа и выхода без ресурсной скидки."
-				"Получите четыре сундука пакетным рецептом из восьми брёвен."
-				"Если рецепт не собирается, проверьте пустой центр и убедитесь, что все брёвна входят в список рецепта."
-				"Если линия продолжает вставать, проверьте не размер сундука, а направление передачи и свободный выход."
-				"Разложите брёвна кольцом на верстаке; центральная ячейка остаётся пустой."
-				"Буферы можно расширять по мере пропускной способности; для перехода к P2 достаточно основной линии."
-				"Это улучшение повышает устойчивость линии, но не блокирует ввод P1 в строй."
+				"{industrial_frontier.quest.v2.p1.bulk_storage.purpose}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.step.1}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.step.2}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.success}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.task}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.next}"
+				"{industrial_frontier.quest.v2.p1.bulk_storage.optional_note}"
 			]
 			icon: "minecraft:chest"
 			id: "3000000000000006"
 			optional: true
 			shape: "circle"
 			size: 1.1d
-			subtitle: "Теперь сундуки решают реальную задачу: отделяют подачу сырья от готового продукта линии."
+			subtitle: "{industrial_frontier.quest.v2.p1.bulk_storage.lead}"
 			tags: ["optional", "anti_grind", "storage"]
 			tasks: [
 				{
@@ -450,11 +450,11 @@
 						id: "minecraft:chest"
 					}
 					consume_items: false
-					title: "Получите четыре сундука пакетным рецептом из восьми брёвен."
+					title: "{industrial_frontier.task.v2.p1.bulk_storage.chests.objective}"
 					type: "item"
 				}
 			]
-			title: "Буферы одной партией"
+			title: "{industrial_frontier.quest.v2.p1.bulk_storage.title}"
 			x: 16d
 			y: -2d
 		}
@@ -465,23 +465,23 @@
 				"3A20000000000003"
 			]
 			description: [
-				"Приёмка P1 подтверждает, что механика снимает повторяемую ручную работу, а общий склад сокращает поиск деталей между операциями. Пакетный рецепт сундуков остаётся необязательным удобством и не подменяет складской терминал."
-				"Откройте стрессометр и убедитесь, что диагностический прибор остаётся доступным."
-				"Взаимодействуйте с механическим прессом после завершения узла полной линии."
-				"Перед переходом убедитесь, что связующий блок и терминал общего склада уже установлены и проверены в складской ветви."
-				"Диагностический прибор, рабочий пресс и терминал общего склада доступны; команда переходит в P2."
-				"После завершения механической линии и общего склада откройте стрессометр и взаимодействуйте с механическим прессом."
-				"Если переход закрыт, завершите узел полной линии и складскую ветвь до терминала, затем повторно откройте оба механических блока."
-				"Если механизм доступен, но партия не проходит, исправьте направление потока, перегрузку и забитый выход до перехода."
-				"Прибор должен оставаться доступным для проверки нагрузки после сборки линии."
-				"Проверьте установленный механический пресс после завершения узла линии."
-				"В P2 механическое производство подготовит входы для пара, кокса, стали и латуни."
+				"{industrial_frontier.quest.v2.p1.commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p1.commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p1.commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p1.commissioning.step.3}"
+				"{industrial_frontier.quest.v2.p1.commissioning.success}"
+				"{industrial_frontier.quest.v2.p1.commissioning.task}"
+				"{industrial_frontier.quest.v2.p1.commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p1.commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p1.commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p1.commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p1.commissioning.next}"
 			]
 			icon: "create:mechanical_press"
 			id: "3BBFA9E08F6D1A38"
 			shape: "diamond"
 			size: 1.6d
-			subtitle: "Источник, передача, измерение нагрузки, материальный поток и единая точка доступа к запасам уже работают как одна система."
+			subtitle: "{industrial_frontier.quest.v2.p1.commissioning.lead}"
 			tags: ["mainline", "if_commissioning_p1"]
 			tasks: [
 				{
@@ -491,7 +491,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте стрессометр действующей механической сети."
+					title: "{industrial_frontier.task.v2.p1.commissioning.stress_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -501,19 +501,19 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Взаимодействуйте с прессом собранной линии."
+					title: "{industrial_frontier.task.v2.p1.commissioning.press_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Линия и общий склад готовы"
+			title: "{industrial_frontier.quest.v2.p1.commissioning.title}"
 			x: 18d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Вращение, нагрузка, пакетная обработка и первая линия без ручной передачи каждой детали"
-		"Create вводится как механический слой общего производства. Игрок сначала создаёт привод, затем учится передавать вращение и измерять нагрузку."
-		"Мельница, чаша и пресс складываются в короткую линию. Хранилище появляется как необязательный ответ на реальную очередь входов и выходов."
+		"{industrial_frontier.chapter.v2.p1.subtitle.1}"
+		"{industrial_frontier.chapter.v2.p1.subtitle.2}"
+		"{industrial_frontier.chapter.v2.p1.subtitle.3}"
 	]
-	title: "P1 — Механизация"
+	title: "{industrial_frontier.chapter.v2.p1.title}"
 }

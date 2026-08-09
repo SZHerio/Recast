@@ -13,31 +13,31 @@
 			hide_until_deps_complete: true
 			dependencies: ["3E36137316A04963"]
 			description: [
-				"Паспорт связывает вещество с его источником, допустимыми формами, чистотой, основным способом производства и последующими потребителями. Благодаря этому железная пластина остаётся частью железного потока, а раствор кислоты не превращается в любую другую форму лишь по сходству названий."
-				"При встрече с новым материалом сначала найдите его исходное сырьё и основной производственный маршрут."
-				"Затем посмотрите, в какой форме материал нужен следующему механизму: слиток, пластина, пыль, жидкость или специальная деталь."
-				"В конце проверьте побочные продукты: полезный остаток следует вернуть в производство, опасный — отвести в отдельное хранилище."
-				"Вы читаете цепочку как движение одного вещества между формами, а не как набор случайных рецептов."
-				"Ознакомьтесь с назначением паспортов материалов."
-				"Если два предмета называются похоже, но не принимаются одним механизмом, сравните их форму и назначение, а не только название."
-				"Если короткий рецепт обходит целую отрасль, вероятнее всего перед вами нежелательная параллельная цепочка."
-				"Отметьте пункт после чтения; никаких предметов для него не требуется."
-				"Начнём с самого важного различия: вещество, форма и конкретный предмет — это три разных уровня описания."
+				"{industrial_frontier.quest.v2.passports.intro.purpose}"
+				"{industrial_frontier.quest.v2.passports.intro.step.1}"
+				"{industrial_frontier.quest.v2.passports.intro.step.2}"
+				"{industrial_frontier.quest.v2.passports.intro.step.3}"
+				"{industrial_frontier.quest.v2.passports.intro.success}"
+				"{industrial_frontier.quest.v2.passports.intro.task}"
+				"{industrial_frontier.quest.v2.passports.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.intro.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.intro.next}"
 			]
 			icon: "minecraft:book"
 			id: "3070000000000001"
 			shape: "hexagon"
 			size: 1.6d
-			subtitle: "Название предмета ещё не говорит, откуда он взялся и куда его безопасно применять."
+			subtitle: "{industrial_frontier.quest.v2.passports.intro.lead}"
 			tags: ["root", "reference", "materials"]
 			tasks: [
 				{
 					id: "4070000000000001"
-					title: "Прочитайте, зачем каждому важному материалу нужен понятный паспорт."
+					title: "{industrial_frontier.task.v2.passports.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Зачем материалу паспорт"
+			title: "{industrial_frontier.quest.v2.passports.intro.title}"
 			x: 0d
 			y: 0d
 		}
@@ -48,23 +48,23 @@
 				"3012000000000006"
 			]
 			description: [
-				"Вещество отвечает на вопрос «из чего это сделано», форма — «в каком виде материал подготовлен», а конкретный предмет — «какой объект лежит в инвентаре». Такое разделение позволяет принимать совместимые железные слитки, не разрешая подменять ими пластины, пыль или детали машин."
-				"Положите рядом один железный слиток и одну железную пластину."
-				"Сравните их применения в просмотре рецептов: часть цепочек начинается со слитка, а сборка механизмов чаще требует уже обработанную пластину."
-				"Обратите внимание: для задания подходят несколько взаимозаменяемых вариантов одной формы, поэтому вам не нужно искать единственного производителя железа."
-				"У вас есть по одному образцу одного вещества в двух разных формах, и вы понимаете, почему они не взаимозаменяемы во всех рецептах."
-				"Подготовьте один железный слиток и одну железную пластину."
-				"Если слиток не засчитывается, убедитесь, что это именно железо, а не руда, необработанный металл или сплав."
-				"Если пластина не засчитывается, найдите её применения: похожая по цвету деталь может быть листом другого материала."
-				"Подойдёт любой взаимозаменяемый железный слиток."
-				"Подойдёт любая железная пластина из числа взаимозаменяемых вариантов."
-				"Теперь разберём поля паспорта, которые описывают путь материала от источника до отходов."
+				"{industrial_frontier.quest.v2.passports.entity_form_id.purpose}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.step.1}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.step.2}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.step.3}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.success}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.task}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.proof_help.2}"
+				"{industrial_frontier.quest.v2.passports.entity_form_id.next}"
 			]
 			icon: "minecraft:iron_ingot"
 			id: "3A70000000000001"
 			shape: "circle"
 			size: 1d
-			subtitle: "Железо осталось железом, но слиток и пластина выполняют разные производственные роли."
+			subtitle: "{industrial_frontier.quest.v2.passports.entity_form_id.lead}"
 			tags: ["materials", "identity", "iron"]
 			tasks: [
 				{
@@ -76,7 +76,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_ingots)"
 						}
 					}
-					title: "Подготовьте один подходящий железный слиток."
+					title: "{industrial_frontier.task.v2.passports.entity_form_id.ingot.objective}"
 					type: "item"
 				}
 				{
@@ -88,42 +88,42 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_plates)"
 						}
 					}
-					title: "Подготовьте одну подходящую железную пластину."
+					title: "{industrial_frontier.task.v2.passports.entity_form_id.plate.objective}"
 					type: "item"
 				}
 			]
-			title: "Вещество, форма, предмет"
+			title: "{industrial_frontier.quest.v2.passports.entity_form_id.title}"
 			x: 3d
 			y: 0d
 		}
 		{
 			dependencies: ["3A70000000000001"]
 			description: [
-				"Для каждого важного вещества нужны семь сведений: источник, доступные формы, требуемая чистота, основная производственная отрасль, допустимые заменители, последующие потребители и судьба отходов. Вместе они образуют короткую карту производства, по которой можно искать ошибку или планировать расширение."
-				"Источник показывает, что добывать или из какой смеси выделять вещество."
-				"Формы и чистота объясняют, почему внешне похожий предмет подходит не всегда."
-				"Основная производственная отрасль указывает, где проходит главный маршрут, а потребители и отходы связывают его со следующими цехами."
-				"Увидев новый материал, вы можете последовательно найти его источник, нужную форму, обработку и дальнейшее применение."
-				"Ознакомьтесь с семью основными полями паспорта."
-				"Если цепочка обрывается, сначала проверьте форму и чистоту продукта, затем свободный выход для побочного вещества."
-				"Если существуют два одинаково выгодных основных маршрута, в паспорте ещё недостаточно чётко выбрана главная производственная отрасль."
-				"Отметка подтверждает чтение справки, а не изготовление предмета."
-				"Первое правило относится к миру: одна и та же руда не должна бесконтрольно появляться в нескольких вариантах."
+				"{industrial_frontier.quest.v2.passports.anatomy.purpose}"
+				"{industrial_frontier.quest.v2.passports.anatomy.step.1}"
+				"{industrial_frontier.quest.v2.passports.anatomy.step.2}"
+				"{industrial_frontier.quest.v2.passports.anatomy.step.3}"
+				"{industrial_frontier.quest.v2.passports.anatomy.success}"
+				"{industrial_frontier.quest.v2.passports.anatomy.task}"
+				"{industrial_frontier.quest.v2.passports.anatomy.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.anatomy.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.anatomy.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.anatomy.next}"
 			]
 			icon: "minecraft:writable_book"
 			id: "3070000000000003"
 			shape: "circle"
 			size: 1d
-			subtitle: "Хороший паспорт отвечает не только на вопрос «что это», но и на вопрос «что с этим делать дальше»."
+			subtitle: "{industrial_frontier.quest.v2.passports.anatomy.lead}"
 			tags: ["materials", "reference", "anatomy"]
 			tasks: [
 				{
 					id: "4070000000000003"
-					title: "Прочитайте, какие сведения входят в паспорт материала."
+					title: "{industrial_frontier.task.v2.passports.anatomy.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Из чего состоит паспорт"
+			title: "{industrial_frontier.quest.v2.passports.anatomy.title}"
 			x: 6d
 			y: 0d
 		}
@@ -134,53 +134,53 @@
 				"35DDD1065975E5CA"
 			]
 			description: [
-				"Для каждого природного ресурса сборка выбирает один основной источник. Остальные производственные системы могут использовать полученное вещество в своих машинах и формах, но не должны создавать параллельные месторождения с отдельной, более выгодной переработкой."
-				"Считайте месторождение началом общего потока, доступного всем подходящим способам дальнейшей обработки."
-				"После добычи выбирайте обработку по нужному выходу: обогащение, пыль, слиток, пластина или химическое соединение."
-				"Если просмотр рецептов показывает обходной путь из отключённой руды, сообщите о нём как о нарушении баланса, а не стройте вокруг него фабрику."
-				"Вы различаете основной природный источник и системы, которые только продолжают обработку добытого материала."
-				"Ознакомьтесь с правилом единого природного источника."
-				"Две руды с одинаковым веществом и разными выходами обычно означают непредусмотренный обход."
-				"Несколько форм одного уже добытого металла допустимы, если переходы между ними не создают материал из ничего."
-				"Здесь нужно понять устройство сборки; добывать новую руду не требуется."
-				"Следующий шаг — понять, почему рецепты принимают категорию совместимых входов, а не один случайный предмет."
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.purpose}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.step.1}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.step.2}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.step.3}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.success}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.task}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.worldgen_owner.next}"
 			]
 			icon: "gtceu:iron_ore"
 			id: "3070000000000004"
 			shape: "circle"
 			size: 1d
-			subtitle: "Несколько одинаковых руд в одном мире дают не выбор, а лишний шум и обходы баланса."
+			subtitle: "{industrial_frontier.quest.v2.passports.worldgen_owner.lead}"
 			tags: ["materials", "worldgen", "ownership"]
 			tasks: [
 				{
 					id: "4070000000000004"
-					title: "Прочитайте правило единого природного источника."
+					title: "{industrial_frontier.task.v2.passports.worldgen_owner.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Один источник, много форм"
+			title: "{industrial_frontier.quest.v2.passports.worldgen_owner.title}"
 			x: 9d
 			y: -3d
 		}
 		{
 			dependencies: ["3070000000000004"]
 			description: [
-				"В одну группу объединяются только предметы с одинаковыми веществом, формой и производственной функцией. Это делает цепочки удобнее, но не стирает разницу между самородком, слитком и пластиной."
-				"Получите один железный самородок любым доступным честным способом."
-				"Посмотрите его применения и сравните с другим железным самородком, если в сборке есть ещё один вариант."
-				"Заметьте, что совместимость относится к этой форме и не распространяется автоматически на все железные предметы."
-				"Вы убедились, что взаимозаменяемость работает без привязки к конкретному производителю железного самородка."
-				"Подготовьте один совместимый железный самородок."
-				"Если предмет не принимается, убедитесь, что это железный самородок, а не маленькая кучка пыли или фрагмент руды."
-				"Если совместимость даёт более выгодное обратное превращение, такой переход следует считать обходом и проверить отдельно."
-				"Подойдёт любой взаимозаменяемый железный самородок."
-				"Теперь применим те же правила к настоящему межотраслевому договору между механической обработкой и металлургией."
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.purpose}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.step.1}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.step.2}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.step.3}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.success}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.task}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.accepted_inputs.next}"
 			]
 			icon: "minecraft:iron_nugget"
 			id: "3A70000000000002"
 			shape: "circle"
 			size: 1d
-			subtitle: "Рецепту важно получить железный самородок, а игроку не нужно угадывать единственного автора предмета."
+			subtitle: "{industrial_frontier.quest.v2.passports.accepted_inputs.lead}"
 			tags: ["materials", "compatibility", "iron"]
 			tasks: [
 				{
@@ -192,11 +192,11 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_nuggets)"
 						}
 					}
-					title: "Подготовьте один подходящий железный самородок."
+					title: "{industrial_frontier.task.v2.passports.accepted_inputs.nugget.objective}"
 					type: "item"
 				}
 			]
-			title: "Совместимый вход без охоты за маркой"
+			title: "{industrial_frontier.quest.v2.passports.accepted_inputs.title}"
 			x: 9d
 			y: 3d
 		}
@@ -207,22 +207,22 @@
 				"3012000000000007"
 			]
 			description: [
-				"Латунь закреплена как сплав трёх частей меди и одной части цинка. Нагретый смеситель сохраняет наглядную механическую операцию, но выдаёт общий латунный слиток. Так механическая обработка и металлургия выполняют разные роли внутри одной цепочки вместо двух конкурирующих рецептов."
-				"В просмотре рецептов найдите нагретое смешивание трёх медных и одного цинкового слитка."
-				"Убедитесь, что партия выдаёт четыре латунных слитка: масса и доли металлов при этом сохраняются."
-				"Подготовьте один слиток из этой общей партии; остальные можно сразу отправить на пластины и детали."
-				"У вас есть общий латунный слиток, а механическая и металлургическая части рецепта работают как одна производственная операция."
-				"Подготовьте один общий латунный слиток после правильного смешивания меди и цинка."
-				"Если рецепт просит медь и цинк поровну, вы нашли старый параллельный вариант, который не соответствует составу сплава."
-				"Если выходит отдельный вариант латунного слитка, найдите рецепт с общим выходом и сообщите о сохранившемся обходе."
-				"Нужен латунный слиток, который сборка использует как общий выход металлургии."
-				"Не все формы можно объединять так же свободно: топливо, растворы и реакторные материалы требуют более строгих границ."
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.purpose}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.step.1}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.step.2}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.step.3}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.success}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.task}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.create_gt_contract.next}"
 			]
 			icon: "gtceu:brass_ingot"
 			id: "3A70000000000003"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Нагретый механический смеситель показывает саму операцию, а общий металлургический выход сохраняет единый материал."
+			subtitle: "{industrial_frontier.quest.v2.passports.create_gt_contract.lead}"
 			tags: ["materials", "brass", "integration"]
 			tasks: [
 				{
@@ -232,42 +232,42 @@
 						id: "gtceu:brass_ingot"
 					}
 					consume_items: false
-					title: "Подготовьте один общий слиток латуни."
+					title: "{industrial_frontier.task.v2.passports.create_gt_contract.brass.objective}"
 					type: "item"
 				}
 			]
-			title: "Один состав латуни"
+			title: "{industrial_frontier.quest.v2.passports.create_gt_contract.title}"
 			x: 12d
 			y: 3d
 		}
 		{
 			dependencies: ["3070000000000003"]
 			description: [
-				"Химические и ядерные процессы зависят от концентрации, примесей, состояния вещества и конструкции формы. Свободная замена разрушила бы разделение, обогащение, изготовление топлива и обращение с отходами. Поэтому специальные продукты объединяются только при прямом и проверенном совпадении функции."
-				"Читайте полное название продукта и его состояние: жидкость, пыль, раствор, изотопная смесь или готовое топливо."
-				"Смотрите не только на состав, но и на машину, в которую поступает материал: именно она определяет нужную подготовку."
-				"Не используйте обратное превращение, если оно возвращает больше исходного вещества или снимает обязательную стадию очистки."
-				"Вы не подменяете технологически подготовленный продукт похожим предметом и сохраняете смысл сложной цепочки."
-				"Ознакомьтесь с ограничениями для растворов, топлива и чистых соединений."
-				"Если рецепт принимает необработанную руду там, где ожидается чистое соединение, проверьте, не сохранился ли сторонний обход."
-				"Если две формы имеют одинаковый элемент, но разные применения, считайте их разными продуктами до прямого подтверждения совместимости."
-				"Никакой предмет собирать не нужно; это правило безопасности для поздних цепочек."
-				"После этого можно сформулировать безопасные правила обмена обычных металлических форм."
+				"{industrial_frontier.quest.v2.passports.specialized_forms.purpose}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.step.1}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.step.2}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.step.3}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.success}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.task}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.specialized_forms.next}"
 			]
 			icon: "gtceu:sulfuric_acid_bucket"
 			id: "3070000000000007"
 			shape: "circle"
 			size: 1d
-			subtitle: "Кислота, раствор соли, чистая пыль и топливная таблетка могут содержать один элемент, но это не один и тот же продукт."
+			subtitle: "{industrial_frontier.quest.v2.passports.specialized_forms.lead}"
 			tags: ["materials", "chemistry", "specialized"]
 			tasks: [
 				{
 					id: "4070000000000007"
-					title: "Прочитайте, почему специальные формы материала нельзя заменять по одному названию."
+					title: "{industrial_frontier.task.v2.passports.specialized_forms.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Особая форма — особая работа"
+			title: "{industrial_frontier.quest.v2.passports.specialized_forms.title}"
 			x: 9d
 			y: 0d
 		}
@@ -277,22 +277,22 @@
 				"3070000000000007"
 			]
 			description: [
-				"Безопасная замена сохраняет одно вещество, одну форму и одну производственную функцию. Для обычной железной пластины это позволяет использовать взаимозаменяемый вариант из другой производственной системы. Для раствора, топлива или детали с особыми свойствами такого вывода уже недостаточно."
-				"Подготовьте одну железную пластину из числа взаимозаменяемых вариантов."
-				"Убедитесь, что её применения соответствуют обычной железной пластине, а обратные переходы не приносят лишний металл."
-				"Для массовой линии выберите один постоянный выход, чтобы склад и автоматическая сборка не дробили запас между дубликатами."
-				"Пластина подходит по веществу, форме и функции, а её замена не создаёт выгоды из одного лишь различия производителей."
-				"Подготовьте одну совместимую железную пластину и сравните её применения."
-				"Если один вариант плавится или разбирается выгоднее другого, не считайте их безопасно равнозначными."
-				"Если автоматическая сборка путает похожие предметы, закрепите общий выход, а взаимозаменяемые варианты разрешите только на входе."
-				"Подойдёт любая взаимозаменяемая железная пластина; она не будет израсходована."
-				"Визуальный состав сплава поможет связать это правило с настоящим рецептом латуни."
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.purpose}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.step.1}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.step.2}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.step.3}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.success}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.task}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.safe_equivalence.next}"
 			]
 			icon: "gtceu:iron_plate"
 			id: "3A70000000000004"
 			shape: "circle"
 			size: 1d
-			subtitle: "Совместимость удобна только тогда, когда она не меняет цену, выход и назначение материала."
+			subtitle: "{industrial_frontier.quest.v2.passports.safe_equivalence.lead}"
 			tags: ["materials", "equivalence", "iron"]
 			tasks: [
 				{
@@ -304,33 +304,33 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_plates)"
 						}
 					}
-					title: "Подготовьте одну совместимую железную пластину."
+					title: "{industrial_frontier.task.v2.passports.safe_equivalence.plate.objective}"
 					type: "item"
 				}
 			]
-			title: "Когда замена безопасна"
+			title: "{industrial_frontier.quest.v2.passports.safe_equivalence.title}"
 			x: 12d
 			y: 0d
 		}
 		{
 			dependencies: ["3A70000000000003"]
 			description: [
-				"Встроенная схема показывает состав сплава прямо в подсказке материала. Для латуни она напоминает о меди и цинке, а производственный рецепт должен сохранять установленное отношение трёх частей к одной. Изображение объясняет состав, но не заменяет проверку расхода и выхода в рецепте."
-				"Наведите курсор на латунный слиток в инвентаре или списке рецептов и рассмотрите схему состава."
-				"Если схема скрыта, используйте назначенную в настройках клавишу дополнительной информации."
-				"Сопоставьте изображённые компоненты с нагретым смешиванием трёх медных и одного цинкового слитка."
-				"Вы связываете состав латуни с реальным расходом меди и цинка, а не принимаете схему за отдельный рецепт."
-				"Возьмите один латунный слиток и сопоставьте схему состава с его рецептом."
-				"Если схема не видна, проверьте клиентские настройки показа молекул и сплавов, затем снова откройте подсказку."
-				"Если изображение и рецепт расходятся, доверяйте фактическому рецепту и сообщите о несогласованной справочной схеме."
-				"Для отметки достаточно иметь образец; саму схему рассмотрите в подсказке предмета."
-				"На полимерах станет видно ещё одно различие: похожая форма предмета может скрывать совершенно разное строение вещества."
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.purpose}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.step.1}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.step.2}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.step.3}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.success}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.task}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.moldraw_alloy.next}"
 			]
 			icon: "gtceu:brass_ingot"
 			id: "3A70000000000005"
 			shape: "diamond"
 			size: 1.1d
-			subtitle: "Схема состава полезна не как украшение, а как быстрая сверка рецепта с веществом."
+			subtitle: "{industrial_frontier.quest.v2.passports.moldraw_alloy.lead}"
 			tags: ["materials", "alloy", "visual_reference"]
 			tasks: [
 				{
@@ -340,11 +340,11 @@
 						id: "gtceu:brass_ingot"
 					}
 					consume_items: false
-					title: "Возьмите один латунный слиток для чтения схемы состава."
+					title: "{industrial_frontier.task.v2.passports.moldraw_alloy.brass.objective}"
 					type: "item"
 				}
 			]
-			title: "Состав сплава перед глазами"
+			title: "{industrial_frontier.quest.v2.passports.moldraw_alloy.title}"
 			x: 15d
 			y: 3d
 		}
@@ -356,23 +356,23 @@
 				"39016A3285565221"
 			]
 			description: [
-				"Встроенные схемы показывают повторяющееся строение двух полимеров. Полиэтилен опирается на углеводородное сырьё, а поливинилхлорид содержит хлор и связывает нефтехимию с хлор-щелочной линией. Поэтому их пластины нельзя объединять в одну безымянную категорию пластика."
-				"Положите рядом по одной пластине каждого полимера и откройте их подсказки."
-				"Сравните структурные схемы и найдите хлор в поливинилхлориде."
-				"Затем откройте рецепты: схема объясняет строение, а описание процесса показывает настоящие реагенты, машины и выход."
-				"Вы различаете два полимера по строению, сырью и применению, хотя оба представлены пластиной."
-				"Подготовьте две полимерные пластины и сравните их структурные схемы с рецептами."
-				"Если отображается только одна схема, проверьте настройки показа молекул и повторно наведите курсор на второй материал."
-				"Если рецепт поливинилхлорида не связан с хлорной ветвью, проверьте выбранный маршрут в просмотре рецептов и сообщите о подозрительном обходе."
-				"Первый образец показывает углеводородный полимер без хлора."
-				"Второй образец нужен для сравнения строения и производственной цепочки."
-				"Осталось научиться быстро находить обходы, которые нарушают одно из правил паспорта."
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.purpose}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.step.1}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.step.2}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.step.3}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.success}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.task}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.proof_help.2}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.next}"
 			]
 			icon: "gtceu:polyvinyl_chloride_plate"
 			id: "3A70000000000006"
 			shape: "diamond"
 			size: 1.1d
-			subtitle: "Одинаковая форма пластины не делает полиэтилен и поливинилхлорид одним материалом."
+			subtitle: "{industrial_frontier.quest.v2.passports.moldraw_polymer.lead}"
 			tags: ["materials", "polymer", "visual_reference"]
 			tasks: [
 				{
@@ -382,7 +382,7 @@
 						id: "gtceu:polyethylene_plate"
 					}
 					consume_items: false
-					title: "Подготовьте одну полиэтиленовую пластину."
+					title: "{industrial_frontier.task.v2.passports.moldraw_polymer.polyethylene.objective}"
 					type: "item"
 				}
 				{
@@ -392,11 +392,11 @@
 						id: "gtceu:polyvinyl_chloride_plate"
 					}
 					consume_items: false
-					title: "Подготовьте одну поливинилхлоридную пластину."
+					title: "{industrial_frontier.task.v2.passports.moldraw_polymer.pvc.objective}"
 					type: "item"
 				}
 			]
-			title: "Две пластины, две молекулы"
+			title: "{industrial_frontier.quest.v2.passports.moldraw_polymer.title}"
 			x: 18d
 			y: 3d
 		}
@@ -407,74 +407,74 @@
 				"3A70000000000003"
 			]
 			description: [
-				"Перед использованием необычно выгодного рецепта сравните его с паспортом вещества. Важно не запретить всякую альтернативу, а отличить честный выбор оборудования от пути, который обесценивает целую эпоху, умножает материал или стирает опасные отходы."
-				"Доступна ли нужная форма в той же эпохе, что и основной маршрут?"
-				"Сохраняются ли масса, состав и количество продукта при прямом и обратном превращении?"
-				"Не исчезают ли обязательные реагенты, энергия, тепло, чистота или побочные продукты?"
-				"Остаётся ли смысл автоматизировать основной процесс после появления этого рецепта?"
-				"Можно ли повторять цикл без внешнего сырья и получать прибыль из ничего?"
-				"Вы можете объяснить, почему альтернативный рецепт честен или какое именно правило паспорта он нарушает."
-				"Ознакомьтесь с пятью вопросами для оценки подозрительного рецепта."
-				"Если сомнение вызывает только другая машина при тех же затратах и выходе, это может быть полезная альтернатива, а не обход."
-				"Если цикл возвращает больше исходного материала, остановите его и сохраните список шагов для исправления."
-				"Отметьте пункт после чтения памятки; отдельную фабрику строить не нужно."
-				"Итоговый конспект соберёт все правила раздела в одну рабочую привычку."
+				"{industrial_frontier.quest.v2.passports.bypass_audit.purpose}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.step.1}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.step.2}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.step.3}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.step.4}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.step.5}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.success}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.task}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.next}"
 			]
 			icon: "minecraft:spyglass"
 			id: "3070000000000009"
 			shape: "octagon"
 			size: 1.2d
-			subtitle: "Обход выдаёт тот же результат раньше, дешевле или без обязательного побочного потока."
+			subtitle: "{industrial_frontier.quest.v2.passports.bypass_audit.lead}"
 			tags: ["materials", "diagnostics", "balance"]
 			tasks: [
 				{
 					id: "4070000000000009"
-					title: "Прочитайте короткий порядок поиска производственных обходов."
+					title: "{industrial_frontier.task.v2.passports.bypass_audit.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Пять вопросов к подозрительному рецепту"
+			title: "{industrial_frontier.quest.v2.passports.bypass_audit.title}"
 			x: 15d
 			y: 0d
 		}
 		{
 			dependencies: ["3070000000000009"]
 			description: [
-				"Сначала определите вещество и нужную форму. Затем найдите природный источник и основную производственную отрасль. Проверьте чистоту, совместимые входы, массовый выход, потребителей и отходы. Только после этого выбирайте оборудование и масштаб."
-				"Не требуйте предмет одного производителя, если существуют взаимозаменяемые варианты."
-				"Закрепляйте один общий выход там, где склад и автоматическая сборка не должны видеть дубликаты."
-				"Сохраняйте специальные растворы, топлива и чистые соединения раздельно."
-				"Перед массовым запуском исключите цикл, который создаёт материал или пропускает обязательную стадию."
-				"Вы умеете читать паспорт материала и связывать несколько производственных систем в одну цепочку без случайных дубликатов и лишней работы."
-				"Ознакомьтесь с итоговой памяткой и используйте её при проектировании новых линий."
-				"Если фабрика постоянно путает предметы, вернитесь к форме и общему выходу."
-				"Если производство кажется неоправданно длинным, проверьте назначение каждой стадии: полезная стадия меняет форму, чистоту, состав или безопасность."
-				"Отметьте задание после чтения; дополнительных предметов оно не требует."
-				"В соседнем разделе академии те же правила применяются к углероду, кислотам, воде, редким землям и ядерному циклу."
+				"{industrial_frontier.quest.v2.passports.signoff.purpose}"
+				"{industrial_frontier.quest.v2.passports.signoff.step.1}"
+				"{industrial_frontier.quest.v2.passports.signoff.step.2}"
+				"{industrial_frontier.quest.v2.passports.signoff.step.3}"
+				"{industrial_frontier.quest.v2.passports.signoff.step.4}"
+				"{industrial_frontier.quest.v2.passports.signoff.success}"
+				"{industrial_frontier.quest.v2.passports.signoff.task}"
+				"{industrial_frontier.quest.v2.passports.signoff.diagnostic.1}"
+				"{industrial_frontier.quest.v2.passports.signoff.diagnostic.2}"
+				"{industrial_frontier.quest.v2.passports.signoff.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.signoff.next}"
 			]
 			icon: "minecraft:written_book"
 			id: "3A70000000000007"
 			shape: "hexagon"
 			size: 1.6d
-			subtitle: "Перед новой фабрикой достаточно задать несколько правильных вопросов, чтобы не переделывать её позже."
+			subtitle: "{industrial_frontier.quest.v2.passports.signoff.lead}"
 			tags: ["materials", "summary", "reference"]
 			tasks: [
 				{
 					id: "4A70000000000009"
-					title: "Прочитайте итоговую памятку материаловеда."
+					title: "{industrial_frontier.task.v2.passports.signoff.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Рабочая привычка материаловеда"
+			title: "{industrial_frontier.quest.v2.passports.signoff.title}"
 			x: 18d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Как отличать вещество, форму и конкретный предмет, не ломая производственный баланс"
-		"Один и тот же материал встречается в слитках, пластинах, пыли, растворах и специальных деталях. Эти формы похожи по названию, но далеко не всегда выполняют одну работу."
-		"Глава учит читать паспорт материала: откуда он берётся, какие формы считаются равнозначными, какая отрасль отвечает за основное производство и куда уходят побочные продукты. Практические задания требуют только одного-двух образцов и не заставляют делать лишние партии."
-		"Это справочная ветвь. Она помогает понимать рецепты всех эпох, но не мешает запускать следующую эпоху или развивать город."
+		"{industrial_frontier.chapter.v2.material_passports.subtitle.1}"
+		"{industrial_frontier.chapter.v2.material_passports.subtitle.2}"
+		"{industrial_frontier.chapter.v2.material_passports.subtitle.3}"
+		"{industrial_frontier.chapter.v2.material_passports.subtitle.4}"
 	]
-	title: "Паспорта материалов"
+	title: "{industrial_frontier.chapter.v2.material_passports.title}"
 }

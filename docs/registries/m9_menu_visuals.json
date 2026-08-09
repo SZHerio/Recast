@@ -150,7 +150,7 @@
   "icon": {
     "source_path": "brand_source/orbital_foundry_icon_v2.png",
     "concept": "ORBITAL_FOUNDRY_WITH_RECAST_MICROMARK",
-    "window_icon_design": "DIRECT_16PX_GRID_NOT_DOWNSAMPLED_ARTWORK",
+    "window_icon_design": "SMOOTH_ALPHA_MASTER_LANCZOS_DOWNSCALE",
     "runtime_sizes": [
       16,
       32,

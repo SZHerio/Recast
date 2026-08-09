@@ -13,132 +13,132 @@
 			hide_until_deps_complete: true
 			dependencies: ["39399468A06BC9EC"]
 			description: [
-				"Справочник учит замечать такие участки до полной остановки. Он не оценивает красоту планировки и не требует единственно правильной схемы: важны понятный поток, доступ к обслуживанию и возможность восстановить работу после сбоя."
-				"Выберите одну действующую линию, которую вы хорошо знаете."
-				"Проследите путь материала от входного запаса до готового продукта."
-				"Отметьте места, где поток можно увидеть, измерить или безопасно остановить."
-				"Вы воспринимаете линию как последовательность наблюдаемых участков, а не как единую непонятную конструкцию."
-				"Ознакомьтесь с назначением справочника."
-				"Если путь материала теряется за стенами, добавьте подписи или доступные точки осмотра до следующего расширения."
-				"Если остановка одного станка сразу глушит всё производство, найдите место для небольшого промежуточного запаса."
-				"Отметка подтверждает только чтение; перестраивать действующую фабрику не требуется."
-				"Первая практическая памятка поможет найти участок, на котором поток остановился."
-				"Глава не участвует в приёмке эпох и предназначена для добровольного совершенствования фабрики."
+				"{industrial_frontier.quest.v2.mastery.intro.purpose}"
+				"{industrial_frontier.quest.v2.mastery.intro.step.1}"
+				"{industrial_frontier.quest.v2.mastery.intro.step.2}"
+				"{industrial_frontier.quest.v2.mastery.intro.step.3}"
+				"{industrial_frontier.quest.v2.mastery.intro.success}"
+				"{industrial_frontier.quest.v2.mastery.intro.task}"
+				"{industrial_frontier.quest.v2.mastery.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.mastery.intro.diagnostic.2}"
+				"{industrial_frontier.quest.v2.mastery.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.intro.next}"
+				"{industrial_frontier.quest.v2.mastery.intro.optional_note}"
 			]
 			icon: "create:clipboard"
 			id: "3072000000000001"
 			optional: true
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Большая фабрика редко ломается целиком: обычно один участок перестаёт успевать за остальными."
+			subtitle: "{industrial_frontier.quest.v2.mastery.intro.lead}"
 			tags: ["mastery", "introduction", "optional"]
 			tasks: [
 				{
 					id: "4072000000000001"
-					title: "Прочитайте, как пользоваться справочником производственного мастера."
+					title: "{industrial_frontier.task.v2.mastery.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Это пособие, а не экзамен"
+			title: "{industrial_frontier.quest.v2.mastery.intro.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3072000000000001"]
 			description: [
-				"Если входной материал доходит до буфера, а следующий участок его не забирает, проверку нужно продолжать вниз по потоку. Первый запас, который растёт вместо обычного колебания, сужает поиск до ближайшей машины, транспорта или выхода."
-				"Начните с готового продукта и двигайтесь против потока, пока не встретите пустой участок."
-				"Затем пройдите от сырья вперёд и найдите первый буфер, который заполнен сильнее обычного."
-				"Проверьте после него питание, свободный выход, транспорт и доступность следующего рецепта — именно в таком порядке."
-				"Причина остановки сведена к одному участку, а не к предположению о всей фабрике сразу."
-				"Ознакомьтесь с поиском узкого места по состоянию промежуточных запасов."
-				"Если все входы пусты, проблема находится выше по потоку: проверьте добычу, поставку и фильтры."
-				"Если все буферы полны, начните с выхода готового продукта и проверьте, не заблокирован ли потребитель."
-				"Для памятки не нужно намеренно останавливать исправную линию."
-				"Когда место сбоя найдено, можно определить, какой резерв переживёт обычную задержку без лишнего склада."
-				"Метод подходит для предметов и жидкостей, если у каждого участка есть видимая точка контроля."
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.purpose}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.step.1}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.step.2}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.step.3}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.success}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.task}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.diagnostic.1}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.diagnostic.2}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.next}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.optional_note}"
 			]
 			icon: "minecraft:comparator"
 			id: "3072000000000002"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Переполненный промежуточный запас обычно показывает не место поломки, а границу перед ней."
+			subtitle: "{industrial_frontier.quest.v2.mastery.where_it_stopped.lead}"
 			tags: ["mastery", "diagnostics", "buffers", "optional"]
 			tasks: [
 				{
 					id: "4072000000000002"
-					title: "Прочитайте порядок поиска первого остановившегося участка."
+					title: "{industrial_frontier.task.v2.mastery.where_it_stopped.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Ищите первый непустой буфер"
+			title: "{industrial_frontier.quest.v2.mastery.where_it_stopped.title}"
 			x: 3d
 			y: 0d
 		}
 		{
 			dependencies: ["3072000000000002"]
 			description: [
-				"Полезный размер определяется временем восстановления. Если потребитель расходует десять единиц в минуту, а доставка иногда задерживается на три минуты, резерв должен покрыть эту паузу с небольшим запасом. Увеличение пропускной способности транспорта само по себе не заменяет такую страховку."
-				"Оцените обычный расход потребителя за минуту."
-				"Умножьте его на самую долгую нормальную задержку поставки или обслуживания."
-				"Добавьте небольшой запас и настройте сигнал до полного опустошения, чтобы успеть отреагировать."
-				"Размер промежуточного запаса объясняется временем, которое он даёт на восстановление линии."
-				"Ознакомьтесь с расчётом запаса по времени восстановления."
-				"Если склад постоянно переполнен, уменьшите вход или расширьте потребление вместо установки нового хранилища вслепую."
-				"Если линия останавливается до сигнала, поднимите порог предупреждения, а не только общий объём."
-				"Точный расчёт необязателен: безопасная оценка лучше ложной точности."
-				"После расчёта резерва проверьте, можно ли расширить участок без сноса соседних линий."
-				"Это инженерная оценка, а не обязательная формула квеста."
+				"{industrial_frontier.quest.v2.mastery.reserve_math.purpose}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.step.1}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.step.2}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.step.3}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.success}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.task}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.diagnostic.1}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.diagnostic.2}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.next}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.optional_note}"
 			]
 			icon: "create:item_vault"
 			id: "3072000000000003"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Буфер нужен не для того, чтобы спрятать бесконечный запас, а чтобы линия пережила обычную задержку поставки или ремонта."
+			subtitle: "{industrial_frontier.quest.v2.mastery.reserve_math.lead}"
 			tags: ["mastery", "buffers", "capacity", "optional"]
 			tasks: [
 				{
 					id: "4072000000000003"
-					title: "Прочитайте простой способ подобрать размер резерва."
+					title: "{industrial_frontier.task.v2.mastery.reserve_math.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Резерв покупает время"
+			title: "{industrial_frontier.quest.v2.mastery.reserve_math.title}"
 			x: 6d
 			y: 0d
 		}
 		{
 			dependencies: ["3072000000000003"]
 			description: [
-				"Хорошая планировка оставляет свободную сторону для второго ряда оборудования, общий коридор снабжения и отдельный проход обслуживания. Это позволяет удвоить участок по необходимости, не разрушая соседние производства."
-				"Определите сторону, в которую сможет расти каждый обязательный участок."
-				"Разведите транспортный коридор и проход игрока так, чтобы расширение не перекрыло ни один из них."
-				"Оставьте доступ к фильтрам, кабелям и точкам отключения с внешней стороны линии."
-				"Для следующей машины, её питания и выхода существует понятное место без переноса действующего ряда."
-				"Ознакомьтесь с модульным расширением производственного участка."
-				"Если расширение требует снести стену, проверьте, не проще ли вынести новый участок в соседний модуль и связать его транспортом."
-				"Если проходы пересекаются с конвейерами, отделите обслуживание по высоте или перенесите общий транспортный коридор."
-				"Существующий цех можно оставить как есть, если он уже имеет безопасный запас места."
-				"Свободное место бесполезно, если производство всё ещё держится на повторяющейся ручной операции."
-				"Совет не требует перестраивать уже надёжную компактную линию."
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.purpose}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.step.1}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.step.2}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.step.3}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.success}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.task}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.diagnostic.1}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.diagnostic.2}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.next}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.optional_note}"
 			]
 			icon: "minecraft:scaffolding"
 			id: "3072000000000004"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Самая дорогая часть расширения — не новая машина, а перенос работающих труб, кабелей и проходов вокруг неё."
+			subtitle: "{industrial_frontier.quest.v2.mastery.expand_without_rebuild.lead}"
 			tags: ["mastery", "layout", "expansion", "optional"]
 			tasks: [
 				{
 					id: "4072000000000004"
-					title: "Прочитайте памятку о расширении без полной перестройки."
+					title: "{industrial_frontier.task.v2.mastery.expand_without_rebuild.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Оставьте место второму ряду"
+			title: "{industrial_frontier.quest.v2.mastery.expand_without_rebuild.title}"
 			x: 9d
 			y: 0d
 		}
@@ -149,66 +149,66 @@
 				"3B135BC312CBE262"
 			]
 			description: [
-				"Автоматизировать стоит не самый дорогой рецепт, а часто повторяемое действие с понятными входом и выходом. Сначала добейтесь одного успешного ручного цикла, затем добавьте подачу, ограниченный выход и способ остановить линию без потери материалов."
-				"Запишите ручное действие, которое повторилось второй раз без нового решения с вашей стороны."
-				"Проверьте, известны ли все побочные продукты и условия запуска."
-				"Автоматизируйте одну небольшую партию и оставьте ручной доступ для восстановления после ошибки."
-				"Повторяемая операция выполняется без постоянного участия игрока и не переполняет следующий участок."
-				"Ознакомьтесь с выбором повторяемой операции для автоматизации."
-				"Если автоматизация производит лишнее, добавьте ограничение по запасу или запускайте её только по заказу."
-				"Если после сбоя невозможно вмешаться вручную, верните доступный вход, выход и кнопку безопасной остановки."
-				"Не нужно автоматизировать разовый рецепт только ради завершения памятки."
-				"Автоматизированная линия должна переживать нехватку энергии без случайного отключения самых важных потребителей."
-				"Разовые и экспериментальные рецепты можно оставить ручными."
+				"{industrial_frontier.quest.v2.mastery.boring_work.purpose}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.step.1}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.step.2}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.step.3}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.success}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.task}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.diagnostic.1}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.diagnostic.2}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.next}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.optional_note}"
 			]
 			icon: "ae2:pattern_provider"
 			id: "3072000000000005"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Ручная работа полезна для первого знакомства с рецептом, но постоянное перекладывание одной и той же партии скрывает настоящую стоимость производства."
+			subtitle: "{industrial_frontier.quest.v2.mastery.boring_work.lead}"
 			tags: ["mastery", "automation", "manual_work", "optional"]
 			tasks: [
 				{
 					id: "4072000000000005"
-					title: "Прочитайте правило выбора первой ручной операции для автоматизации."
+					title: "{industrial_frontier.task.v2.mastery.boring_work.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Второй повтор — повод остановиться"
+			title: "{industrial_frontier.quest.v2.mastery.boring_work.title}"
 			x: 12d
 			y: -2d
 		}
 		{
 			dependencies: ["3072000000000005"]
 			description: [
-				"Разделите потребителей хотя бы на три группы: жизненно важные службы, основное производство и необязательные ускорители. Каждая группа получает отдельную точку отключения, а запас энергии сохраняется для управления, охлаждения и завершения опасного процесса."
-				"Определите оборудование, которое нельзя обесточивать посреди цикла без риска или потери партии."
-				"Вынесите декоративные нагрузки и необязательные ускорители в первую отключаемую группу."
-				"Подпишите точки отключения и оставьте доступ к ним без прохода через опасную зону."
-				"При нехватке мощности можно снять второстепенную нагрузку, сохранив управление и безопасное завершение процессов."
-				"Ознакомьтесь с приоритетным отключением нагрузки."
-				"Если вся сеть отключается одновременно, разделите её до общего узкого участка или установите отдельные буферы для критических служб."
-				"Если после восстановления происходит новый провал, включайте группы по очереди и дождитесь заполнения запаса."
-				"Проверка аварийного режима проводится только по вашему желанию и не входит в задачу."
-				"Последняя памятка объяснит, какие сведения нужны, чтобы другой игрок смог обслужить эту систему без автора."
-				"Схема приоритетов полезна даже при большом избытке генерации, потому что упрощает поиск неисправности."
+				"{industrial_frontier.quest.v2.mastery.power_discipline.purpose}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.step.1}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.step.2}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.step.3}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.success}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.task}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.diagnostic.1}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.diagnostic.2}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.next}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.optional_note}"
 			]
 			icon: "minecraft:lever"
 			id: "3072000000000006"
 			optional: true
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "При дефиците энергии порядок кабелей не должен решать, останутся ли работать вода, управление и безопасная остановка."
+			subtitle: "{industrial_frontier.quest.v2.mastery.power_discipline.lead}"
 			tags: ["mastery", "power", "load_shedding", "optional"]
 			tasks: [
 				{
 					id: "4072000000000006"
-					title: "Прочитайте порядок отключения нагрузки при нехватке энергии."
+					title: "{industrial_frontier.task.v2.mastery.power_discipline.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Отключайте нагрузку по важности"
+			title: "{industrial_frontier.quest.v2.mastery.power_discipline.title}"
 			x: 12d
 			y: 2d
 		}
@@ -218,41 +218,41 @@
 				"3072000000000004"
 			]
 			description: [
-				"Короткая инструкция должна отвечать на пять вопросов: что линия производит, откуда получает сырьё, где виден нормальный запас, как её безопасно остановить и с какого участка начинать поиск сбоя. Этого достаточно, чтобы вернуться после перерыва или передать обслуживание другому игроку."
-				"Подпишите вход, основной продукт, побочные выходы и аварийное отключение."
-				"Запишите нормальное состояние ключевых буферов простыми словами: пустой, колеблется или держит запас."
-				"Укажите первый безопасный шаг при остановке и место, где хранятся запасные инструменты или детали."
-				"Игрок, который не строил линию, может понять её назначение и начать диагностику без разбора стен."
-				"Ознакомьтесь с правилами передачи производственной линии другой смене."
-				"Если инструкция длиннее самой процедуры запуска, вынесите редкие подробности в отдельную заметку, а у линии оставьте краткий порядок действий."
-				"Если подпись использует только ваши сокращения, замените их названием материала, участка или наблюдаемого состояния."
-				"Писать отдельную книгу ради отметки необязательно; применяйте памятку к действительно сложным линиям."
-				"Справочник завершён; возвращайтесь к нужной памятке после каждого крупного расширения или необычного сбоя."
-				"Документация не влияет на смену эпох, но заметно сокращает время восстановления после перерыва."
+				"{industrial_frontier.quest.v2.mastery.handover.purpose}"
+				"{industrial_frontier.quest.v2.mastery.handover.step.1}"
+				"{industrial_frontier.quest.v2.mastery.handover.step.2}"
+				"{industrial_frontier.quest.v2.mastery.handover.step.3}"
+				"{industrial_frontier.quest.v2.mastery.handover.success}"
+				"{industrial_frontier.quest.v2.mastery.handover.task}"
+				"{industrial_frontier.quest.v2.mastery.handover.diagnostic.1}"
+				"{industrial_frontier.quest.v2.mastery.handover.diagnostic.2}"
+				"{industrial_frontier.quest.v2.mastery.handover.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.handover.next}"
+				"{industrial_frontier.quest.v2.mastery.handover.optional_note}"
 			]
 			icon: "minecraft:writable_book"
 			id: "3072000000000007"
 			optional: true
 			shape: "diamond"
 			size: 1.5d
-			subtitle: "Даже автор линии забывает назначение временного рычага, странного обхода и сундука с единственным фильтром."
+			subtitle: "{industrial_frontier.quest.v2.mastery.handover.lead}"
 			tags: ["mastery", "documentation", "handover", "optional"]
 			tasks: [
 				{
 					id: "4072000000000007"
-					title: "Прочитайте минимальный состав понятной инструкции для смены."
+					title: "{industrial_frontier.task.v2.mastery.handover.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Через месяц это станет чужой фабрикой"
+			title: "{industrial_frontier.quest.v2.mastery.handover.title}"
 			x: 15d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Поиск узких мест, расчёт резервов, расширение без перестройки и передача смены"
-		"Эта глава не открывает эпохи и не требует строить ещё одну фабрику ради отметки. Она собирает приёмы, которые помогают обслуживать уже работающие линии."
-		"Читайте памятки по мере появления знакомых проблем: простаивающего станка, переполненного промежуточного склада, нехватки энергии или линии, назначение которой спустя неделю уже невозможно вспомнить."
+		"{industrial_frontier.chapter.v2.mastery.subtitle.1}"
+		"{industrial_frontier.chapter.v2.mastery.subtitle.2}"
+		"{industrial_frontier.chapter.v2.mastery.subtitle.3}"
 	]
-	title: "Фабрика, которую можно понять"
+	title: "{industrial_frontier.chapter.v2.mastery.title}"
 }

@@ -13,48 +13,48 @@
 			hide_until_deps_complete: true
 			dependencies: ["39399468A06BC9EC"]
 			description: [
-				"Эпоха идёт по физической причинности: материалы, очистка, перевод химической формы, обогащение, топливо, оборудование активной зоны, дозиметрия, реактор, тепло, турбина, отработанное топливо, переработка и хранение."
-				"Вы понимаете, почему контроллер реактора не заменяет топливо, защиту, теплоотвод и маршрут отходов."
-				"Прочитайте физический порядок гражданского ядерного цикла."
-				"Отметка подтверждает чтение схемы, а не готовность станции."
-				"Первым шагом станция соберёт конструкционные и защитные материалы, а не реакторный контроллер."
+				"{industrial_frontier.quest.v2.p6.brief.purpose}"
+				"{industrial_frontier.quest.v2.p6.brief.success}"
+				"{industrial_frontier.quest.v2.p6.brief.task}"
+				"{industrial_frontier.quest.v2.p6.brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.brief.next}"
 			]
 			icon: "nuclearcraft:fission_reactor_controller"
 			id: "3016000000000001"
 			shape: "gear"
 			size: 2d
-			subtitle: "Региональная фабрика может снабжать большой объект; теперь важно не перепутать порядок ядерного цикла."
+			subtitle: "{industrial_frontier.quest.v2.p6.brief.lead}"
 			tags: ["root", "nuclear"]
 			tasks: [
 				{
 					id: "4016000000000001"
-					title: "Прочитайте физический порядок ядерного цикла."
+					title: "{industrial_frontier.task.v2.p6.brief.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Реактор — середина цепочки"
+			title: "{industrial_frontier.quest.v2.p6.brief.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3016000000000001"]
 			description: [
-				"Графит управляет нейтронами в реакторной архитектуре, свинец снижает внешнее облучение. Эти материалы не взаимозаменяемы и не являются топливом."
-				"Получите один графитовый блок и две свинцовые пластины."
-				"Храните свинец отдельно от пищевой и жилой зоны даже до появления радиоактивных материалов."
-				"Графит и свинцовые пластины готовы как два разных класса материалов станции."
-				"Получите графитовый блок NuclearCraft и две свинцовые пластины из списка задачи."
-				"Если пластина не засчиталась, откройте список задачи и убедитесь, что используете обычную свинцовую пластину GregTech или NuclearCraft, а не слиток и не двойную пластину."
-				"Графитовую пыль и графитовый блок не считайте одной формой без отдельного рецепта."
-				"Графит является отдельным материалом реакторного контура, а не топливом."
-				"Подойдёт свинцовая пластина GregTech, NuclearCraft, Immersive Engineering или HBM: все четыре формы входят в общий защитный материал. Полный костюм появится перед сборкой реактора."
-				"Из этих материалов собирается первый комплект машин ядерной подготовки."
+				"{industrial_frontier.quest.v2.p6.materials.purpose}"
+				"{industrial_frontier.quest.v2.p6.materials.step.1}"
+				"{industrial_frontier.quest.v2.p6.materials.step.2}"
+				"{industrial_frontier.quest.v2.p6.materials.success}"
+				"{industrial_frontier.quest.v2.p6.materials.task}"
+				"{industrial_frontier.quest.v2.p6.materials.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.materials.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.materials.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.materials.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.materials.next}"
 			]
 			icon: "nuclearcraft:graphite_block"
 			id: "38443CC596A66B7C"
 			shape: "circle"
 			size: 1d
-			subtitle: "Перед радиоактивной химией нужно подготовить то, из чего строятся защита и оборудование."
+			subtitle: "{industrial_frontier.quest.v2.p6.materials.lead}"
 			tags: ["materials", "shielding"]
 			tasks: [
 				{
@@ -64,7 +64,7 @@
 						id: "nuclearcraft:graphite_block"
 					}
 					consume_items: false
-					title: "Получите один графитовый блок NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.materials.graphite.objective}"
 					type: "item"
 				}
 				{
@@ -77,32 +77,32 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/lead_plates)"
 						}
 					}
-					title: "Получите две свинцовые пластины из списка задачи."
+					title: "{industrial_frontier.task.v2.p6.materials.lead.objective}"
 					type: "item"
 				}
 			]
-			title: "Материалы до топлива"
+			title: "{industrial_frontier.quest.v2.p6.materials.title}"
 			x: 3d
 			y: 0d
 		}
 		{
 			dependencies: ["38443CC596A66B7C"]
 			description: [
-				"Мануфактура измельчает материалы и готовит нужные формы для следующих машин. Она открывает технологическую линию NuclearCraft, но не заменяет очистку растворов или разделение изотопов."
-				"Соберите мануфактуру по рецепту с высоковольтными компонентами."
-				"До установки подготовьте для неё отдельное место с входным и выходным буферами."
-				"Мануфактура собрана, а для неё подготовлено место вдали от чистого топливного участка."
-				"Получите одну мануфактуру NuclearCraft."
-				"Если рецепт недоступен, проверьте текущую эпоху: ядерное оборудование открывается только на этом этапе."
-				"Если машина не работает после установки, проверьте питание, форму входного материала и свободный выход."
-				"Мануфактура готовит формы материалов, но не очищает и не обогащает уран сама."
-				"Следом потребуется установка для специальных сплавов и образец жаропрочного сплава."
+				"{industrial_frontier.quest.v2.p6.entry.purpose}"
+				"{industrial_frontier.quest.v2.p6.entry.step.1}"
+				"{industrial_frontier.quest.v2.p6.entry.step.2}"
+				"{industrial_frontier.quest.v2.p6.entry.success}"
+				"{industrial_frontier.quest.v2.p6.entry.task}"
+				"{industrial_frontier.quest.v2.p6.entry.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.entry.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.entry.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.entry.next}"
 			]
 			icon: "nuclearcraft:manufactory"
 			id: "3016000000000003"
 			shape: "gear"
 			size: 1d
-			subtitle: "Материалы собраны; теперь им нужна отдельная технологическая зона."
+			subtitle: "{industrial_frontier.quest.v2.p6.entry.lead}"
 			tags: ["machine", "preparation"]
 			tasks: [
 				{
@@ -112,34 +112,34 @@
 						id: "nuclearcraft:manufactory"
 					}
 					consume_items: false
-					title: "Получите одну мануфактуру NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.entry.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Цех подготовки сырья"
+			title: "{industrial_frontier.quest.v2.p6.entry.title}"
 			x: 6d
 			y: 0d
 		}
 		{
 			dependencies: ["3016000000000003"]
 			description: [
-				"Плавильня NuclearCraft соединяет исходные материалы в специализированные сплавы. Этот узел проверяет сам аппарат до того, как книга потребует жаропрочный продукт."
-				"Соберите и установите одну плавильню сплавов NuclearCraft."
-				"Подведите питание и подготовьте раздельную подачу двух ингредиентов."
-				"Откройте интерфейс и проверьте свободный предметный выход."
-				"Плавильня сплавов установлена, открывается и готова к первой учебной партии."
-				"Соберите, установите и откройте одну плавильню сплавов NuclearCraft."
-				"Если машина не включается, проверьте питание и допустимый уровень подключения."
-				"Если рецепт не появляется, сверьте в JEI точные формы обоих входных материалов."
-				"Эта машина готовит специализированные сплавы для реакторного и радиохимического оборудования."
-				"Подключите питание, подготовьте два предметных входа и оставьте свободным выход готового сплава."
-				"Проведите одну малую партию и получите два слитка жаропрочного сплава."
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.success}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.task}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.next}"
 			]
 			icon: "nuclearcraft:alloy_smelter"
 			id: "3A1600000000001E"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Подготовительный цех готов, но реакторные материалы требуют отдельной машины с двумя контролируемыми входами."
+			subtitle: "{industrial_frontier.quest.v2.p6.alloy_smelter_setup.lead}"
 			tags: ["alloys", "machine", "machine_before_product"]
 			tasks: [
 				{
@@ -149,7 +149,7 @@
 						id: "nuclearcraft:alloy_smelter"
 					}
 					consume_items: false
-					title: "Получите одну плавильню сплавов NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.alloys.machine.objective}"
 					type: "item"
 				}
 				{
@@ -159,32 +159,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте плавильню сплавов."
+					title: "{industrial_frontier.task.v2.p6.alloy_smelter_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Плавильня сплавов"
+			title: "{industrial_frontier.quest.v2.p6.alloy_smelter_setup.title}"
 			x: 8d
 			y: 2d
 		}
 		{
 			dependencies: ["3A1600000000001E"]
 			description: [
-				"Жаропрочный сплав подтверждает реальную работу уже установленной плавильни. Два слитка дают малую учебную партию без преждевременного серийного производства."
-				"Подайте в принятую плавильню ингредиенты рецепта жаропрочного сплава."
-				"Получите два слитка и оставьте один как образец для проверки дальнейших применений."
-				"Два слитка жаропрочного сплава подтверждают фактический выпуск первой партии."
-				"Получите два слитка жаропрочного сплава в принятой плавильне."
-				"Если сплав не получается, сверьте точные формы ингредиентов и уровень энергии."
-				"Если машина работает, но выход пуст, проверьте свободный слот и соответствие рецепта текущей версии."
-				"Проверяется готовый сплав NuclearCraft, а не только наличие машины."
-				"Подготовленный машинный участок может принимать урановую суспензию на очистку."
+				"{industrial_frontier.quest.v2.p6.alloys.purpose}"
+				"{industrial_frontier.quest.v2.p6.alloys.step.1}"
+				"{industrial_frontier.quest.v2.p6.alloys.step.2}"
+				"{industrial_frontier.quest.v2.p6.alloys.success}"
+				"{industrial_frontier.quest.v2.p6.alloys.task}"
+				"{industrial_frontier.quest.v2.p6.alloys.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.alloys.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.alloys.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.alloys.next}"
 			]
 			icon: "nuclearcraft:alloy_smelter"
 			id: "367768A6A9219BCB"
 			shape: "circle"
 			size: 1d
-			subtitle: "Плавильня принята; теперь она должна выдать материал, рассчитанный на более жёсткие условия."
+			subtitle: "{industrial_frontier.quest.v2.p6.alloys.lead}"
 			tags: ["alloys", "machine"]
 			tasks: [
 				{
@@ -195,115 +195,115 @@
 						id: "nuclearcraft:tough_alloy_ingot"
 					}
 					consume_items: false
-					title: "Получите два слитка жаропрочного сплава."
+					title: "{industrial_frontier.task.v2.p6.alloys.product.objective}"
 					type: "item"
 				}
 			]
-			title: "Сплав для тяжёлой службы"
+			title: "{industrial_frontier.quest.v2.p6.alloys.title}"
 			x: 9d
 			y: 0d
 		}
 		{
 			dependencies: ["367768A6A9219BCB"]
 			description: [
-				"Сначала 1000 мБ хлора и 1000 мБ водорода дадут 1000 мБ соляной кислоты в ранее принятом химическом реакторе GregTech. Затем 750 мБ этой кислоты смешаются с 250 мБ уже освоенной азотной кислоты в реакторе NuclearCraft."
-				"Отведите по 1000 мБ хлора и водорода из ранее освоенных химических линий в разные подписанные буферы."
-				"Отделите 250 мБ азотной кислоты из принятой ветви P5 и не смешивайте её заранее."
-				"Проверьте, что ранее принятый химический реактор HV из P5 доступен и имеет чистый выход соляной кислоты."
-				"Хлор, водород и азотная кислота подготовлены в точных объёмах и раздельных ёмкостях."
-				"Подготовьте 1000 мБ хлора, 1000 мБ водорода и 250 мБ азотной кислоты в отдельных буферах."
-				"Если одного газа не хватает, вернитесь к хлор-щёлочной и азотной линиям, а не подменяйте жидкость похожим ведром."
-				"Если азотная кислота недоступна, завершите её честный HV-маршрут через аммиак и крупный химический реактор."
-				"Это точный расход одной операции соляной кислоты. Используйте сохранённый поток хлор-щёлочной линии P4."
-				"Держите его отдельно от хлора до контролируемой загрузки ранее принятого химического реактора."
-				"Это точный расход рецепта NuclearCraft. Оставьте кислоту в отдельном совместимом резервуаре до приготовления царской водки."
-				"Теперь соедините хлор и водород в 1000 мБ соляной кислоты."
+				"{industrial_frontier.quest.v2.p6.acid_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.step.1}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.step.2}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.step.3}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.success}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.task}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.proof_help.3}"
+				"{industrial_frontier.quest.v2.p6.acid_inputs.next}"
 			]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "3A16000000000024"
 			shape: "square"
 			size: 1d
-			subtitle: "Урановая руда не должна появляться раньше кислотной цепи, которая делает её переработку возможной."
+			subtitle: "{industrial_frontier.quest.v2.p6.acid_inputs.lead}"
 			tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
 			tasks: [
 				{
 					id: "4A16000000000040"
 					fluid: "gtceu:chlorine"
 					amount: 1000L
-					title: "Подготовьте 1000 мБ хлора GregTech."
+					title: "{industrial_frontier.task.v2.p6.acid_inputs.chlorine.objective}"
 					type: "fluid"
 				}
 				{
 					id: "4A16000000000041"
 					fluid: "gtceu:hydrogen"
 					amount: 1000L
-					title: "Подготовьте 1000 мБ водорода GregTech."
+					title: "{industrial_frontier.task.v2.p6.acid_inputs.hydrogen.objective}"
 					type: "fluid"
 				}
 				{
 					id: "4A16000000000042"
 					fluid: "gtceu:nitric_acid"
 					amount: 250L
-					title: "Отделите 250 мБ азотной кислоты GregTech."
+					title: "{industrial_frontier.task.v2.p6.acid_inputs.nitric.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Три потока перед царской водкой"
+			title: "{industrial_frontier.quest.v2.p6.acid_inputs.title}"
 			x: 10d
 			y: 3.5d
 		}
 		{
 			dependencies: ["3A16000000000024"]
 			description: [
-				"1000 мБ хлора и 1000 мБ водорода дают 1000 мБ соляной кислоты в химическом реакторе GregTech. Следующий рецепт возьмёт 750 мБ, поэтому 250 мБ останутся полезным резервом."
-				"Подайте подготовленные хлор и водород в ранее принятый химический реактор GregTech."
-				"Отведите 1000 мБ соляной кислоты в чистый подписанный резервуар."
-				"В отдельном резервуаре находятся 1000 мБ соляной кислоты; расход следующей операции полностью покрыт."
-				"Получите 1000 мБ соляной кислоты из хлора и водорода."
-				"Если рецепт не появляется, проверьте по 1000 мБ обоих газов и свободный жидкостный выход."
-				"Если вышла другая кислота, очистите реактор и трубопровод перед повторной загрузкой."
-				"Одна операция из 1000 мБ хлора и 1000 мБ водорода даёт ровно 1000 мБ кислоты; 750 мБ пойдут дальше, 250 мБ останутся в резерве."
-				"Теперь установите химический реактор NuclearCraft до приготовления царской водки."
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.purpose}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.step.1}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.step.2}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.success}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.task}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.next}"
 			]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "3A16000000000025"
 			shape: "circle"
 			size: 1d
-			subtitle: "Два газовых входа готовы; теперь подтвердите их собственный продукт до реактора NuclearCraft."
+			subtitle: "{industrial_frontier.quest.v2.p6.hydrochloric_acid.lead}"
 			tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
 			tasks: [
 				{
 					id: "4A16000000000043"
 					fluid: "gtceu:hydrochloric_acid"
 					amount: 1000L
-					title: "Получите 1000 мБ соляной кислоты GregTech."
+					title: "{industrial_frontier.task.v2.p6.hydrochloric_acid.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Соляная кислота до смеси"
+			title: "{industrial_frontier.quest.v2.p6.hydrochloric_acid.title}"
 			x: 12d
 			y: 3.5d
 		}
 		{
 			dependencies: ["3A16000000000025"]
 			description: [
-				"Химический реактор NuclearCraft соединит 250 мБ азотной и 750 мБ соляной кислоты в 1000 мБ царской водки. Тот же аппарат позже смешает жидкие изотопы, поэтому второй корпус ради квеста не понадобится."
-				"Соберите и установите один химический реактор NuclearCraft."
-				"Подключите раздельные кислотные входы и чистый выходной резервуар."
-				"Откройте интерфейс и сверьте рецепт до подачи кислот."
-				"Химический реактор NuclearCraft установлен и готов к первой кислотной операции."
-				"Соберите, установите и откройте химический реактор NuclearCraft до приготовления царской водки."
-				"Если машина не принимает жидкость, проверьте, что используются азотная и соляная кислоты из совместимых общих тегов."
-				"Если выход заблокирован, очистите резервуар от другой жидкости."
-				"Не путайте его с реактором GregTech: эта машина сначала приготовит царскую водку, а позже будет переиспользована для топливной смеси."
-				"Подготовьте два кислотных входа и отдельный чистый выход царской водки."
-				"Теперь проведите одну операцию и получите 1000 мБ царской водки."
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.success}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.task}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.next}"
 			]
 			icon: "nuclearcraft:chemical_reactor"
 			id: "3A16000000000026"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Обе кислоты готовы; их смесь нельзя требовать раньше собственной машины."
+			subtitle: "{industrial_frontier.quest.v2.p6.chemical_reactor_setup.lead}"
 			tags: ["fuel_cycle", "chemistry", "machine_before_product"]
 			tasks: [
 				{
@@ -313,7 +313,7 @@
 						id: "nuclearcraft:chemical_reactor"
 					}
 					consume_items: false
-					title: "Соберите химический реактор NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.fuel_setup.reactor_item.objective}"
 					type: "item"
 				}
 				{
@@ -323,65 +323,65 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте химический реактор NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.fuel_setup.reactor_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Реактор NuclearCraft до царской водки"
+			title: "{industrial_frontier.quest.v2.p6.chemical_reactor_setup.title}"
 			x: 12d
 			y: 1.5d
 		}
 		{
 			dependencies: ["3A16000000000026"]
 			description: [
-				"250 мБ азотной и 750 мБ соляной кислоты дают 1000 мБ царской водки. Первый цикл выщелачивания потребит только 250 мБ, поэтому оставшиеся 750 мБ станут реальным запасом, а не лишним гриндом."
-				"Подайте 250 мБ азотной и 750 мБ соляной кислоты в принятый реактор NuclearCraft."
-				"Отведите 1000 мБ царской водки в отдельную совместимую ёмкость."
-				"В отдельной ёмкости находятся 1000 мБ царской водки; одна четверть предназначена первой урановой руде."
-				"Получите 1000 мБ царской водки из 250 мБ азотной и 750 мБ соляной кислоты."
-				"Если рецепт не появляется, проверьте точные объёмы и совместимые формы обеих кислот."
-				"Если выход заблокирован, полностью очистите ёмкость от другой жидкости."
-				"Смешайте 250 мБ азотной и 750 мБ соляной кислоты. Выщелачиватель израсходует 250 мБ, а 750 мБ останутся для следующих партий."
-				"Теперь добудьте одну совместимую урановую руду и только затем собирайте выщелачиватель."
+				"{industrial_frontier.quest.v2.p6.aqua_regia.purpose}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.step.1}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.step.2}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.success}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.task}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.aqua_regia.next}"
 			]
 			icon: "nuclearcraft:aqua_regia_acid_bucket"
 			id: "3A16000000000027"
 			shape: "circle"
 			size: 1d
-			subtitle: "Реактор принят, обе кислоты измерены; теперь подтвердите их общий продукт до радиоактивного сырья."
+			subtitle: "{industrial_frontier.quest.v2.p6.aqua_regia.lead}"
 			tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
 			tasks: [
 				{
 					id: "4A16000000000023"
 					fluid: "nuclearcraft:aqua_regia_acid"
 					amount: 1000L
-					title: "Получите 1000 мБ царской водки NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.slurry.aqua_regia.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Царская водка до урановой руды"
+			title: "{industrial_frontier.quest.v2.p6.aqua_regia.title}"
 			x: 11d
 			y: -0.5d
 		}
 		{
 			dependencies: ["3A16000000000027"]
 			description: [
-				"Задача принимает общую категорию урановых руд, поэтому совместимые источники NuclearCraft, Immersive Engineering и HBM одинаково подходят для следующего выщелачивания. Один образец потребит 250 мБ из ранее подтверждённых 1000 мБ царской водки."
-				"Добудьте одну урановую руду из списка задачи и перенесите её в защищённый входной буфер."
-				"Отмерьте рядом 250 мБ из ранее приготовленной царской водки, оставив остальной реагент в подписанном резерве."
-				"Не запускайте реакцию до сборки и проверки выщелачивателя."
-				"Одна подходящая урановая руда готова, а её кислотный реагент уже подтверждён предыдущей задачей."
-				"Подготовьте одну урановую руду из списка после приёмки кислотного реагента."
-				"Если похожий камень не засчитывается, откройте список задачи и проверьте, что это именно руда, а не сырой кусок, пыль или декоративный блок."
-				"Если выщелачивание позже не стартует, проверьте, что отмерены 250 мБ царской водки NuclearCraft, а не одной из исходных кислот."
-				"Подойдёт любая урановая руда из показанного общего тега, включая совместимые варианты NuclearCraft, Immersive Engineering и HBM."
-				"Теперь соберите выщелачиватель и подготовьте кислотный контур до подачи руды."
+				"{industrial_frontier.quest.v2.p6.feedstock.purpose}"
+				"{industrial_frontier.quest.v2.p6.feedstock.step.1}"
+				"{industrial_frontier.quest.v2.p6.feedstock.step.2}"
+				"{industrial_frontier.quest.v2.p6.feedstock.step.3}"
+				"{industrial_frontier.quest.v2.p6.feedstock.success}"
+				"{industrial_frontier.quest.v2.p6.feedstock.task}"
+				"{industrial_frontier.quest.v2.p6.feedstock.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.feedstock.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.feedstock.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.feedstock.next}"
 			]
 			icon: "nuclearcraft:uranium_chunk"
 			id: "3A16000000000010"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Царская водка уже приготовлена; только теперь радиоактивное сырьё входит в линию."
+			subtitle: "{industrial_frontier.quest.v2.p6.feedstock.lead}"
 			tags: ["fuel_cycle", "source", "uranium", "one_of"]
 			tasks: [
 				{
@@ -393,34 +393,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/uranium_ores)"
 						}
 					}
-					title: "Получите одну урановую руду из списка задачи."
+					title: "{industrial_frontier.task.v2.p6.feedstock.ore.objective}"
 					type: "item"
 				}
 			]
-			title: "Сначала — урановое сырьё"
+			title: "{industrial_frontier.quest.v2.p6.feedstock.title}"
 			x: 10d
 			y: -2d
 		}
 		{
 			dependencies: ["3A16000000000010"]
 			description: [
-				"Выщелачиватель NuclearCraft растворяет полезный компонент руды в царской водке. Входная руда, кислота и выходная суспензия должны храниться раздельно; один общий резервуар здесь создаёт не удобство, а аварию маршрутизации."
-				"Соберите и поставьте выщелачиватель в защищённой зоне."
-				"Подведите отдельный вход царской водки, вход руды и свободный выход суспензии."
-				"Откройте интерфейс и сверьте рецепт до загрузки радиоактивного сырья."
-				"Выщелачиватель установлен, открывается и имеет раздельные входы и выход."
-				"Соберите, установите и откройте выщелачиватель NuclearCraft."
-				"Если рецепт не появляется, проверьте, что входной предмет относится к урановой руде, а жидкость является царской водкой."
-				"Если машина не выдаёт продукт, освободите выходной резервуар и проверьте питание."
-				"Одна установка закроет учебную партию; запасная машина не требуется."
-				"Открытие интерфейса подтверждает размещённую машину до выпуска урановой суспензии."
-				"Подайте одну руду и 250 мБ царской водки, затем отделите полученную урановую суспензию."
+				"{industrial_frontier.quest.v2.p6.leaching_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.success}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.task}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.leaching_setup.next}"
 			]
 			icon: "nuclearcraft:leacher"
 			id: "3A16000000000011"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Урановая руда есть; следующий результат появится только в принятой химической установке."
+			subtitle: "{industrial_frontier.quest.v2.p6.leaching_setup.lead}"
 			tags: ["fuel_cycle", "leaching", "machine_before_product"]
 			tasks: [
 				{
@@ -430,7 +430,7 @@
 						id: "nuclearcraft:leacher"
 					}
 					consume_items: false
-					title: "Соберите выщелачиватель NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.leaching_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -440,66 +440,66 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте выщелачиватель."
+					title: "{industrial_frontier.task.v2.p6.leaching_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Выщелачиватель до суспензии"
+			title: "{industrial_frontier.quest.v2.p6.leaching_setup.title}"
 			x: 12d
 			y: -2d
 		}
 		{
 			dependencies: ["3A16000000000011"]
 			description: [
-				"Подготовленные ранее урановая руда и 250 мБ царской водки дают 1000 мБ урановой суспензии. Это ещё грязный промежуточный поток: не смешивайте его с очищенной суспензией следующего этапа."
-				"Загрузите ранее подготовленную урановую руду и 250 мБ царской водки в принятый выщелачиватель."
-				"Выведите 1000 мБ исходной суспензии в подписанный резервуар «грязный поток»."
-				"В отдельном резервуаре находятся 1000 мБ исходной урановой суспензии."
-				"Получите 1000 мБ урановой суспензии из заранее подготовленных руды и царской водки."
-				"Если выщелачиватель не принимает кислоту, проверьте точное название жидкости и сторону ввода."
-				"Если вышло меньше ожидаемого, сверьте рецепт установленной версии и убедитесь, что выход не был занят другой жидкостью."
-				"Нужна исходная суспензия NuclearCraft; очищенная жидкость будет отдельным следующим результатом."
-				"Перед очисткой соберите и откройте центрифугу NuclearCraft."
+				"{industrial_frontier.quest.v2.p6.slurry.purpose}"
+				"{industrial_frontier.quest.v2.p6.slurry.step.1}"
+				"{industrial_frontier.quest.v2.p6.slurry.step.2}"
+				"{industrial_frontier.quest.v2.p6.slurry.success}"
+				"{industrial_frontier.quest.v2.p6.slurry.task}"
+				"{industrial_frontier.quest.v2.p6.slurry.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.slurry.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.slurry.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.slurry.next}"
 			]
 			icon: "nuclearcraft:uranium_slurry_bucket"
 			id: "3A16000000000012"
 			shape: "circle"
 			size: 1d
-			subtitle: "Машина принята; теперь одна малая партия свяжет добытую руду с жидкостной радиохимией."
+			subtitle: "{industrial_frontier.quest.v2.p6.slurry.lead}"
 			tags: ["fuel_cycle", "leaching", "product"]
 			tasks: [
 				{
 					id: "4A16000000000024"
 					fluid: "nuclearcraft:uranium_slurry"
 					amount: 1000L
-					title: "Получите 1000 мБ урановой суспензии."
+					title: "{industrial_frontier.task.v2.p6.slurry.product.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Уран переходит в раствор"
+			title: "{industrial_frontier.quest.v2.p6.slurry.title}"
 			x: 14d
 			y: -2d
 		}
 		{
 			dependencies: ["3A16000000000012"]
 			description: [
-				"Центрифуга NuclearCraft выдаёт очищенную урановую суспензию и возвращает несколько химических потоков. Все выходы должны иметь свободные ёмкости: блокировка одного остатка остановит основной продукт."
-				"Соберите и поставьте центрифугу в защищённом жидкостном контуре."
-				"Назначьте отдельный выход очищенной суспензии и буферы для соляной, азотной и кальций-сульфатной частей."
-				"Откройте интерфейс и сверьте рецепт исходной урановой суспензии."
-				"Центрифуга установлена, открывается и готова принять исходную суспензию без заблокированных выходов."
-				"Соберите, установите и откройте центрифугу NuclearCraft."
-				"Если рецепт не стартует, проверьте, что на входе исходная, а не уже очищенная суспензия."
-				"Если машина останавливается в конце цикла, освободите каждый побочный жидкостный выход."
-				"Она разделит суспензию на очищенный поток и несколько кислотных остатков."
-				"До запуска подготовьте выход очищенной суспензии и отдельные ёмкости для кислотных остатков."
-				"Теперь проведите одну партию и отделите очищенную суспензию."
+				"{industrial_frontier.quest.v2.p6.purification_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.success}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.task}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.purification_setup.next}"
 			]
 			icon: "nuclearcraft:centrifuge"
 			id: "3A16000000000013"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Грязная суспензия готова, но требовать чистый продукт можно только после приёмки разделяющей машины."
+			subtitle: "{industrial_frontier.quest.v2.p6.purification_setup.lead}"
 			tags: ["fuel_cycle", "purification", "machine_before_product"]
 			tasks: [
 				{
@@ -509,7 +509,7 @@
 						id: "nuclearcraft:centrifuge"
 					}
 					consume_items: false
-					title: "Соберите центрифугу NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.purification_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -519,66 +519,66 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте центрифугу."
+					title: "{industrial_frontier.task.v2.p6.purification_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Центрифуга до очистки"
+			title: "{industrial_frontier.quest.v2.p6.purification_setup.title}"
 			x: 14d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000013"]
 			description: [
-				"Очистка удаляет примеси, но ещё не меняет изотопный состав. Исходная и очищенная суспензии являются разными жидкостями и требуют отдельных ёмкостей."
-				"Подайте ранее полученную урановую суспензию в принятую центрифугу NuclearCraft."
-				"Выведите очищенную жидкость в отдельный резервуар; оставьте место для хвостов процесса."
-				"В чистом резервуаре находится 800 мБ очищенной урановой суспензии NuclearCraft — полный выход одного учебного цикла."
-				"Получите 800 мБ очищенной урановой суспензии."
-				"Если очистка стоит, проверьте реагент, энергию и свободный выход для побочного потока."
-				"Если задача не обновляется, убедитесь, что в резервуаре именно очищенная, а не исходная урановая суспензия."
-				"Задача проверяет очищенную суспензию NuclearCraft, а не исходную жидкость."
-				"Теперь очищенной суспензии нужно придать химическую форму, подходящую для разделения изотопов."
+				"{industrial_frontier.quest.v2.p6.purification.purpose}"
+				"{industrial_frontier.quest.v2.p6.purification.step.1}"
+				"{industrial_frontier.quest.v2.p6.purification.step.2}"
+				"{industrial_frontier.quest.v2.p6.purification.success}"
+				"{industrial_frontier.quest.v2.p6.purification.task}"
+				"{industrial_frontier.quest.v2.p6.purification.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.purification.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.purification.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.purification.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/process/gtceu/uranium_preparation.png"
 			id: "308477F0C074B847"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Машины готовы; теперь отделим химические примеси до изотопного разделения."
+			subtitle: "{industrial_frontier.quest.v2.p6.purification.lead}"
 			tags: ["fuel_cycle", "purification"]
 			tasks: [
 				{
 					id: "48E07C0707994F62"
 					fluid: "nuclearcraft:uranium_clean_slurry"
 					amount: 800L
-					title: "Получите 800 мБ очищенной урановой суспензии."
+					title: "{industrial_frontier.task.v2.p6.purification.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Очищенная урановая суспензия"
+			title: "{industrial_frontier.quest.v2.p6.purification.title}"
 			x: 12d
 			y: 0d
 		}
 		{
 			dependencies: ["308477F0C074B847"]
 			description: [
-				"Кристаллизатор переводит очищенную суспензию в урановую пыль. Позднее тот же экземпляр вернётся в цепочку и превратит оксид в жёлтый кек — второй кристаллизатор ради квеста не нужен."
-				"Соберите и установите один кристаллизатор в защищённом контуре."
-				"Подведите очищенную суспензию и отдельный твёрдый выход."
-				"Откройте интерфейс до первой партии."
-				"Кристаллизатор установлен и готов выделить урановую пыль из очищенной суспензии."
-				"Соберите, установите и откройте один кристаллизатор NuclearCraft."
-				"Если машина не принимает суспензию, проверьте, что это именно очищенная форма."
-				"Если выход заблокирован, освободите предметный буфер и проверьте сторону вывода."
-				"Он сначала выделит урановую пыль из очищенной суспензии, а затем превратит оксид в жёлтый кек."
-				"Одна машина выполняет две последовательные операции; второй кристаллизатор ради задания не нужен."
-				"Проведите одну малую партию до урановой пыли, затем вводите обогатитель жидкости."
+				"{industrial_frontier.quest.v2.p6.conversion_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.success}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.task}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.conversion_setup.next}"
 			]
 			icon: "nuclearcraft:crystallizer"
 			id: "3A16000000000014"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Чистая суспензия ещё не подходит для разделения изотопов. Сначала одна машина должна выделить твёрдую урановую пыль."
+			subtitle: "{industrial_frontier.quest.v2.p6.conversion_setup.lead}"
 			tags: ["fuel_cycle", "conversion", "machine_before_product"]
 			tasks: [
 				{
@@ -588,7 +588,7 @@
 						id: "nuclearcraft:crystallizer"
 					}
 					consume_items: false
-					title: "Соберите кристаллизатор NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.conversion_setup.crystallizer_item.objective}"
 					type: "item"
 				}
 				{
@@ -598,33 +598,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте кристаллизатор."
+					title: "{industrial_frontier.task.v2.p6.conversion_setup.crystallizer_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Кристаллизатор NuclearCraft"
+			title: "{industrial_frontier.quest.v2.p6.conversion_setup.title}"
 			x: 13d
 			y: 2d
 		}
 		{
 			dependencies: ["3A16000000000014"]
 			description: [
-				"Этот шаг отделяет работу кристаллизатора от следующей машины. Так сразу видно, на каком именно переходе остановилась линия: суспензия не вошла, пыль не вышла или её забрал неверный транспорт."
-				"Разделите 800 мБ очищенной урановой суспензии на две загрузки по 400 мБ."
-				"Проведите обе загрузки через установленный кристаллизатор и выведите по две порции пыли с каждой."
-				"Оставьте все четыре порции в отдельном подписанном буфере для следующих четырёх циклов конверсии."
-				"Кристаллизатор за две загрузки выдал четыре порции урановой пыли — ровно на четыре следующих цикла."
-				"Получите четыре порции урановой пыли из 800 мБ очищенной суспензии."
-				"Если процесс не начинается, проверьте, что во входе именно очищенная урановая суспензия."
-				"Если пыль не появляется в буфере, проверьте свободное место и сторону предметного вывода."
-				"800 мБ очищенной суспензии дают две загрузки кристаллизатора по две порции. Подойдёт урановая пыль из совместимого словаря материалов."
-				"Теперь соберите обогатитель жидкости: он соединит урановую пыль с кислородом и даст оксид урана."
+				"{industrial_frontier.quest.v2.p6.uranium_dust.purpose}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.step.1}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.step.2}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.step.3}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.success}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.task}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.uranium_dust.next}"
 			]
 			icon: "nuclearcraft:uranium_dust"
 			id: "3A16000000000019"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Очищенная суспензия стала безопаснее для дальнейшей обработки, но обогатитель жидкости принимает твёрдую урановую пыль."
+			subtitle: "{industrial_frontier.quest.v2.p6.uranium_dust.lead}"
 			tags: ["fuel_cycle", "conversion", "source_before_product"]
 			tasks: [
 				{
@@ -637,34 +637,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/uranium_dusts)"
 						}
 					}
-					title: "Получите четыре порции урановой пыли."
+					title: "{industrial_frontier.task.v2.p6.uranium_dust.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Твёрдая форма урана"
+			title: "{industrial_frontier.quest.v2.p6.uranium_dust.title}"
 			x: 15d
 			y: 2d
 		}
 		{
 			dependencies: ["3A16000000000019"]
 			description: [
-				"Обогатитель жидкости соединяет урановую пыль с кислородом. Это химическая конверсия формы, а не изотопное обогащение: уран-235 и уран-238 будут разделяться позже."
-				"Соберите и установите один обогатитель жидкости NuclearCraft."
-				"Подведите урановую пыль и отдельную линию кислорода."
-				"Назначьте чистую ёмкость под выход оксида урана и откройте интерфейс машины."
-				"Обогатитель жидкости установлен и готов переводить урановую пыль в оксид."
-				"Соберите, установите и откройте один обогатитель жидкости NuclearCraft."
-				"Если рецепт не появляется, проверьте наличие именно урановой пыли и кислорода, а не воздуха или другой газовой смеси."
-				"Если машина простаивает при заполненном входе, освободите выходную ёмкость от другой жидкости."
-				"Он принимает урановую пыль и кислород, а выдаёт жидкий оксид урана."
-				"Подведите отдельный кислородный вход и не смешивайте выход оксида с исходной суспензией."
-				"Получите малую партию оксида, затем верните её в уже установленный кристаллизатор для получения жёлтого кека."
+				"{industrial_frontier.quest.v2.p6.enricher_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.success}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.task}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.enricher_setup.next}"
 			]
 			icon: "nuclearcraft:fluid_enricher"
 			id: "3A1600000000001A"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Урановая пыль подтверждена. Следующая машина переводит её в жидкий оксид, не меняя изотопный состав."
+			subtitle: "{industrial_frontier.quest.v2.p6.enricher_setup.lead}"
 			tags: ["fuel_cycle", "conversion", "machine_before_product"]
 			tasks: [
 				{
@@ -674,7 +674,7 @@
 						id: "nuclearcraft:fluid_enricher"
 					}
 					consume_items: false
-					title: "Соберите обогатитель жидкости NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.conversion_setup.enricher_item.objective}"
 					type: "item"
 				}
 				{
@@ -684,65 +684,65 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте обогатитель жидкости."
+					title: "{industrial_frontier.task.v2.p6.conversion_setup.enricher_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Обогатитель жидкости"
+			title: "{industrial_frontier.quest.v2.p6.enricher_setup.title}"
 			x: 17d
 			y: 2d
 		}
 		{
 			dependencies: ["3A1600000000001A"]
 			description: [
-				"Обогатитель жидкости соединяет одну урановую пыль с кислородом и выдаёт 270 мБ оксида урана. Это только смена химической формы: изотопный состав ещё не меняется, а жёлтый кек будет отдельным следующим результатом."
-				"Подайте одну ранее полученную урановую пыль и кислород в обогатитель жидкости."
-				"Отведите первые 270 мБ оксида урана в чистую подписанную ёмкость."
-				"В отдельной ёмкости находятся первые 270 мБ оксида урана NuclearCraft."
-				"Получите 270 мБ оксида урана NuclearCraft."
-				"Если рецепт не запускается, проверьте, что во входе лежит урановая пыль, а в жидкостной линии находится кислород."
-				"Если выход заблокирован, убедитесь, что ёмкость не занята другой жидкостью."
-				"Конверсия меняет химическую форму, но ещё не создаёт обогащённое топливо."
-				"Верните оксид в уже установленный кристаллизатор и накопите жёлтый кек для одной загрузки разделителя."
+				"{industrial_frontier.quest.v2.p6.conversion.purpose}"
+				"{industrial_frontier.quest.v2.p6.conversion.step.1}"
+				"{industrial_frontier.quest.v2.p6.conversion.step.2}"
+				"{industrial_frontier.quest.v2.p6.conversion.success}"
+				"{industrial_frontier.quest.v2.p6.conversion.task}"
+				"{industrial_frontier.quest.v2.p6.conversion.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.conversion.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.conversion.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.conversion.next}"
 			]
 			icon: "nuclearcraft:uranium_oxide_bucket"
 			id: "3A16000000000001"
 			shape: "circle"
 			size: 1d
-			subtitle: "Обогатитель жидкости принят; теперь подтвердите его первый химический выход отдельно от следующей кристаллизации."
+			subtitle: "{industrial_frontier.quest.v2.p6.conversion.lead}"
 			tags: ["fuel_cycle", "conversion"]
 			tasks: [
 				{
 					id: "4A16000000000003"
 					fluid: "nuclearcraft:uranium_oxide"
 					amount: 270L
-					title: "Получите 270 мБ оксида урана NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.conversion.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Урановая пыль становится оксидом"
+			title: "{industrial_frontier.quest.v2.p6.conversion.title}"
 			x: 19d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000001"]
 			description: [
-				"Каждые 90 мБ оксида урана дают одну единицу жёлтого кека. Первый цикл обогатителя уже выдал 270 мБ; выполните ещё три, чтобы получить суммарно 1080 мБ. Кристаллизатор изготовит двенадцать единиц кека: десять пойдут в разделитель, две останутся резервом."
-				"После уже подтверждённого первого цикла выполните ещё три конверсии и доведите общий объём оксида до 1080 мБ."
-				"Подайте оксид в уже установленный кристаллизатор и проведите двенадцать операций по 90 мБ; второй корпус машины для задания не нужен."
-				"Отложите десять единиц жёлтого кека для разделителя, а две оставшиеся подпишите как резерв."
-				"Подготовлены десять единиц жёлтого кека для одной полной загрузки изотопного разделителя."
-				"Получите десять единиц жёлтого кека, повторно используя установленный кристаллизатор."
-				"Если кристаллизатор не принимает поток, убедитесь, что это оксид урана, а не очищенная суспензия."
-				"Если после трёх дополнительных циклов обогатителя общий объём меньше 1080 мБ, проверьте, сохранились ли 270 мБ из предыдущего узла."
-				"Первый цикл оксида уже выполнен. Ещё три дадут общий объём 1080 мБ; кристаллизатор изготовит двенадцать единиц кека, две из которых останутся резервом."
-				"Теперь можно собирать изотопный разделитель: его сырьё уже подготовлено полностью."
+				"{industrial_frontier.quest.v2.p6.yellowcake.purpose}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.step.1}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.step.2}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.step.3}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.success}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.task}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.yellowcake.next}"
 			]
 			icon: "nuclearcraft:yellowcake_dust"
 			id: "3A1600000000001F"
 			shape: "circle"
 			size: 1d
-			subtitle: "Оксид получен. Теперь тот же кристаллизатор переводит жидкость в твёрдую форму для изотопного разделителя."
+			subtitle: "{industrial_frontier.quest.v2.p6.yellowcake.lead}"
 			tags: ["fuel_cycle", "conversion", "crystallizer_reuse", "source_before_product"]
 			tasks: [
 				{
@@ -755,34 +755,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/yellowcake_dusts)"
 						}
 					}
-					title: "Получите десять единиц жёлтого кека NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.conversion.yellowcake.objective}"
 					type: "item"
 				}
 			]
-			title: "Повторная кристаллизация"
+			title: "{industrial_frontier.quest.v2.p6.yellowcake.title}"
 			x: 21d
 			y: 0d
 		}
 		{
 			dependencies: ["3A1600000000001F"]
 			description: [
-				"Изотопный разделитель NuclearCraft различает уран-235 и уран-238 по массе. Центрифуга уже выполнила другую работу — очистила суспензию — и не должна ошибочно изображаться машиной обогащения."
-				"Соберите и поставьте изотопный разделитель в защищённой зоне."
-				"Подготовьте отдельные выходы урана-235 и урана-238."
-				"Откройте интерфейс и сверьте рецепт на десять единиц жёлтого кека до загрузки."
-				"Изотопный разделитель установлен, открывается и имеет два раздельных выходных буфера."
-				"Соберите, установите и откройте изотопный разделитель NuclearCraft."
-				"Если машина не принимает материал, убедитесь, что подаёте жёлтый кек, а не оксидную жидкость или обычную урановую пыль."
-				"Если цикл не завершается, освободите оба предметных выхода."
-				"Именно он принимает жёлтый кек и выдаёт разные изотопы; центрифуга из этапа очистки эту операцию не заменяет."
-				"Подготовьте два отдельных выходных буфера до загрузки десяти единиц жёлтого кека."
-				"Проведите одну загрузку и сохраните хотя бы по одному образцу каждого изотопа."
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.success}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.task}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.enrichment_setup.next}"
 			]
 			icon: "nuclearcraft:isotope_separator"
 			id: "3A16000000000015"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Жёлтый кек готов; теперь книга вводит правильную машину разделения, прежде чем просить продукты."
+			subtitle: "{industrial_frontier.quest.v2.p6.enrichment_setup.lead}"
 			tags: ["fuel_cycle", "enrichment", "machine_before_product"]
 			tasks: [
 				{
@@ -792,7 +792,7 @@
 						id: "nuclearcraft:isotope_separator"
 					}
 					consume_items: false
-					title: "Соберите изотопный разделитель NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.enrichment_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -802,33 +802,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте изотопный разделитель."
+					title: "{industrial_frontier.task.v2.p6.enrichment_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Изотопный разделитель до обогащения"
+			title: "{industrial_frontier.quest.v2.p6.enrichment_setup.title}"
 			x: 21d
 			y: -2d
 		}
 		{
 			dependencies: ["3A16000000000015"]
 			description: [
-				"Изотопный разделитель выдаёт уран-235 и уран-238, потому что обычная химическая реакция этого не умеет. Оба выхода нужны учёту: один войдёт в топливо, второй останется материалом и разбавителем."
-				"Загрузите десять единиц жёлтого кека в принятый изотопный разделитель."
-				"Выведите уран-235 и уран-238 в разные защищённые буферы."
-				"Одна загрузка разделена, а два изотопных продукта находятся в раздельных запасах."
-				"Получите один уран-235 и один уран-238 в изотопном разделителе."
-				"Если изотопный разделитель не запускается, проверьте количество жёлтого кека и энергию."
-				"Если один выход забит, освободите оба буфера: процесс не может выбрасывать второй изотоп."
-				"Подойдёт металл, оксид, нитрид или циркониевый сплав с этим изотопом; обычный урановый слиток не засчитывается."
-				"Уран-238 остаётся полезным разбавителем для топливной смеси. Форма должна совпадать с формой урана-235 в выбранном рецепте топлива."
-				"Одна полная загрузка уже дала достаточно обоих изотопов для первой партии LEU-235; теперь установите плавитель."
+				"{industrial_frontier.quest.v2.p6.enrichment.purpose}"
+				"{industrial_frontier.quest.v2.p6.enrichment.step.1}"
+				"{industrial_frontier.quest.v2.p6.enrichment.step.2}"
+				"{industrial_frontier.quest.v2.p6.enrichment.success}"
+				"{industrial_frontier.quest.v2.p6.enrichment.task}"
+				"{industrial_frontier.quest.v2.p6.enrichment.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.enrichment.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.enrichment.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.enrichment.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.enrichment.next}"
 			]
 			icon: "nuclearcraft:isotope_separator"
 			id: "368B35F2402D0C6F"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Жёлтый кек и правильная машина готовы; различить изотопы теперь можно только по массе."
+			subtitle: "{industrial_frontier.quest.v2.p6.enrichment.lead}"
 			tags: ["fuel_cycle", "enrichment"]
 			tasks: [
 				{
@@ -840,7 +840,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/235)"
 						}
 					}
-					title: "Получите один образец урана-235 в любой химической форме NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.enrichment.u235.objective}"
 					type: "item"
 				}
 				{
@@ -852,34 +852,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/238)"
 						}
 					}
-					title: "Сохраните один образец урана-238 в любой химической форме NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.enrichment.u238.objective}"
 					type: "item"
 				}
 			]
-			title: "Разделение изотопов урана"
+			title: "{industrial_frontier.quest.v2.p6.enrichment.title}"
 			x: 23d
 			y: 0d
 		}
 		{
 			dependencies: ["368B35F2402D0C6F"]
 			description: [
-				"Плавитель последовательно готовит жидкие потоки урана-235 и урана-238. Это один аппарат для двух малых партий: второй плавитель ради квеста не требуется."
-				"Соберите, поставьте и откройте один плавитель NuclearCraft."
-				"Назначьте отдельные подписанные резервуары для жидкого урана-235 и урана-238."
-				"После первой партии полностью освободите внутренний выход перед сменой изотопа."
-				"Плавитель установлен и готов по очереди переводить оба твёрдых изотопа в жидкость."
-				"Соберите, установите и откройте один плавитель NuclearCraft."
-				"Если плавитель не принимает предмет, проверьте номер изотопа и его химическую форму."
-				"Если следующий изотоп не загружается, полностью выведите предыдущую жидкость и проверьте чистоту выходного резервуара."
-				"Одна машина последовательно переведёт оба твёрдых изотопа в жидкие потоки."
-				"Перед сменой изотопа полностью выведите предыдущую жидкость в подписанный резервуар."
-				"Сначала переведите часть обоих изотопов в жидкость и подтвердите точные объёмы первой топливной партии."
+				"{industrial_frontier.quest.v2.p6.fuel_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.success}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.task}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_setup.next}"
 			]
 			icon: "nuclearcraft:melter"
 			id: "3A16000000000016"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Изотопы разделены в твёрдом виде. Перед точным смешением каждый поток нужно отдельно преобразовать в жидкость."
+			subtitle: "{industrial_frontier.quest.v2.p6.fuel_setup.lead}"
 			tags: ["fuel_cycle", "fuel", "machine_before_product"]
 			tasks: [
 				{
@@ -889,7 +889,7 @@
 						id: "nuclearcraft:melter"
 					}
 					consume_items: false
-					title: "Соберите плавитель NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.fuel_setup.melter_item.objective}"
 					type: "item"
 				}
 				{
@@ -899,74 +899,74 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте плавитель."
+					title: "{industrial_frontier.task.v2.p6.fuel_setup.melter_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Жидкие изотопы"
+			title: "{industrial_frontier.quest.v2.p6.fuel_setup.title}"
 			x: 25d
 			y: 2d
 		}
 		{
 			dependencies: ["3A16000000000016"]
 			description: [
-				"Одна единица каждого изотопа плавится в 90 мБ жидкости. Первая смесь LEU-235 потребует 30 мБ урана-235 и 270 мБ урана-238, поэтому расплавьте одну единицу урана-235 и три единицы урана-238; излишек урана-235 не смешивайте с другим потоком."
-				"Расплавьте одну единицу урана-235 и полностью отведите 90 мБ в подписанный резервуар."
-				"Очистите внутренний выход плавителя, затем расплавьте три единицы урана-238 и отведите 270 мБ во второй резервуар."
-				"Отметьте 30 мБ урана-235 и все 270 мБ урана-238 как вход первой топливной партии; оставшиеся 60 мБ урана-235 сохраните."
-				"Два раздельных резервуара содержат не менее 30 мБ урана-235 и 270 мБ урана-238 для первой смеси."
-				"Подготовьте 30 мБ жидкого урана-235 и 270 мБ жидкого урана-238 в разных резервуарах."
-				"Если жидкость не засчитывается, проверьте номер изотопа и убедитесь, что это чистый расплав, а не топливная смесь."
-				"Если второй изотоп не выходит, полностью освободите плавитель и трубопровод после первой партии."
-				"Одна твёрдая единица плавится в 90 мБ; 30 мБ пойдут в первую топливную смесь, остаток сохраните отдельно."
-				"Для первой смеси нужны три расплавленные единицы урана-238 по 90 мБ каждая."
-				"Теперь установите химический реактор NuclearCraft и подключите к нему оба подтверждённых потока."
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.purpose}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.step.1}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.step.2}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.step.3}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.success}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.task}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.liquid_isotopes.next}"
 			]
 			icon: "nuclearcraft:uranium_235_bucket"
 			id: "3A16000000000022"
 			shape: "circle"
 			size: 1d
-			subtitle: "Плавитель готов. Теперь твёрдые продукты разделителя нужно расплавить до измеримых жидких объёмов перед химическим реактором."
+			subtitle: "{industrial_frontier.quest.v2.p6.liquid_isotopes.lead}"
 			tags: ["fuel_cycle", "fuel", "source_before_processed"]
 			tasks: [
 				{
 					id: "4A1600000000003D"
 					fluid: "nuclearcraft:uranium_235"
 					amount: 30L
-					title: "Подготовьте не менее 30 мБ жидкого урана-235."
+					title: "{industrial_frontier.task.v2.p6.liquid_isotopes.u235.objective}"
 					type: "fluid"
 				}
 				{
 					id: "4A1600000000003E"
 					fluid: "nuclearcraft:uranium_238"
 					amount: 270L
-					title: "Подготовьте 270 мБ жидкого урана-238."
+					title: "{industrial_frontier.task.v2.p6.liquid_isotopes.u238.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Два жидких изотопных потока"
+			title: "{industrial_frontier.quest.v2.p6.liquid_isotopes.title}"
 			x: 27d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000022"]
 			description: [
-				"Химический реактор NuclearCraft принимает жидкие уран-235 и уран-238 и выдаёт жидкую смесь LEU-235. Второй корпус ради этой операции не нужен: важны очистка кислотного контура и новые раздельные входы."
-				"Полностью удалите из реактора и труб остатки царской водки и исходных кислот."
-				"Подключите отдельные входы для урана-235 и урана-238."
-				"Назначьте чистую ёмкость под жидкую топливную смесь, откройте реактор и сверьте объёмы перед запуском."
-				"Ранее принятый химический реактор очищен, открыт и готов смешивать два изотопных потока в LEU-235."
-				"Очистите, перенастройте и откройте ранее принятый химический реактор NuclearCraft."
-				"Если реакция не начинается, проверьте номера изотопов, их жидкую форму и точные объёмы обоих входов."
-				"Если результат не выходит, убедитесь, что выходная ёмкость пуста и предназначена для топливной смеси."
-				"Второй реактор не нужен. Удалите остатки кислот, затем подключите два изотопных входа и отдельный выход жидкой смеси."
-				"Сначала проведите одну смесь и подтвердите 90 мБ жидкого LEU-235; только затем собирайте формовщик."
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.success}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.task}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.next}"
 			]
 			icon: "nuclearcraft:chemical_reactor"
 			id: "3A1600000000001B"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Тот же реактор уже готовил царскую водку; теперь его нужно очистить и безопасно переключить на жидкие изотопы."
+			subtitle: "{industrial_frontier.quest.v2.p6.fuel_reactor_setup.lead}"
 			tags: ["fuel_cycle", "fuel", "machine_before_product"]
 			tasks: [
 				{
@@ -976,66 +976,66 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Очистите и снова откройте ранее принятый химический реактор NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.fuel_reactor_setup.reuse.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Перенастройка реактора под LEU-235"
+			title: "{industrial_frontier.quest.v2.p6.fuel_reactor_setup.title}"
 			x: 27d
 			y: 2d
 		}
 		{
 			dependencies: ["3A1600000000001B"]
 			description: [
-				"30 мБ урана-235 и 270 мБ урана-238 дают 90 мБ жидкой смеси LEU-235. Это уже топливный состав, но ещё не твёрдая единица для загрузки в активную зону."
-				"Подайте 30 мБ жидкого урана-235 и 270 мБ жидкого урана-238 в принятый химический реактор."
-				"Отведите 90 мБ смеси LEU-235 в чистую защищённую ёмкость."
-				"В отдельной ёмкости находятся 90 мБ жидкой смеси LEU-235."
-				"Получите 90 мБ жидкой топливной смеси LEU-235."
-				"Если реакция не начинается, проверьте номера изотопов и точные объёмы обоих входов."
-				"Если выход заблокирован, убедитесь, что ёмкость пуста и не содержит чистый урановый расплав."
-				"Подайте 30 мБ урана-235 и 270 мБ урана-238 в принятый химический реактор; выход не смешивайте с чистыми изотопами."
-				"Теперь соберите формовщик слитков и только после его приёмки переводите смесь в твёрдое топливо."
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.purpose}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.step.1}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.step.2}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.success}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.task}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.liquid_fuel.next}"
 			]
 			icon: "nuclearcraft:fuel_uranium_leu_235_bucket"
 			id: "3A16000000000023"
 			shape: "circle"
 			size: 1d
-			subtitle: "Химический реактор принят; теперь одна точная операция должна связать два изотопных потока с будущим топливом."
+			subtitle: "{industrial_frontier.quest.v2.p6.liquid_fuel.lead}"
 			tags: ["fuel_cycle", "fuel", "source_before_processed"]
 			tasks: [
 				{
 					id: "4A1600000000003F"
 					fluid: "nuclearcraft:fuel_uranium_leu_235"
 					amount: 90L
-					title: "Получите 90 мБ жидкой топливной смеси LEU-235."
+					title: "{industrial_frontier.task.v2.p6.liquid_fuel.leu235.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Жидкая смесь LEU-235"
+			title: "{industrial_frontier.quest.v2.p6.liquid_fuel.title}"
 			x: 29d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000023"]
 			description: [
-				"Формовщик слитков завершает химическую линию: принимает жидкую смесь LEU-235 и выдаёт твёрдую единицу топлива. Он не заменяет реакторную ячейку и не является самой активной зоной."
-				"Соберите, установите и откройте формовщик слитков NuclearCraft."
-				"Подведите выход химического реактора к жидкостному входу формовщика."
-				"Оставьте свободный предметный выход и отдельный защищённый буфер для готового топлива."
-				"Формовщик установлен и готов выдавать твёрдое LEU-235 из жидкой смеси."
-				"Соберите, установите и откройте формовщик слитков NuclearCraft."
-				"Если машина простаивает, убедитесь, что на входе именно топливная смесь LEU-235, а не один из исходных изотопов."
-				"Если цикл завершён без предмета, проверьте свободный выходной слот и направление предметного вывода."
-				"Он превращает одну порцию жидкой топливной смеси в твёрдую единицу топлива."
-				"Оставьте свободный предметный выход до подачи жидкой топливной смеси."
-				"Проведите одну учебную партию и сохраните первую единицу LEU-235 в защищённом запасе."
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.success}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.task}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_former_setup.next}"
 			]
 			icon: "nuclearcraft:ingot_former"
 			id: "3A1600000000001C"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "90 мБ топливной смеси подтверждены. Для загрузки в активную зону ей нужна твёрдая форма."
+			subtitle: "{industrial_frontier.quest.v2.p6.fuel_former_setup.lead}"
 			tags: ["fuel_cycle", "fuel", "machine_before_product"]
 			tasks: [
 				{
@@ -1045,7 +1045,7 @@
 						id: "nuclearcraft:ingot_former"
 					}
 					consume_items: false
-					title: "Соберите формовщик слитков NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.fuel_setup.former_item.objective}"
 					type: "item"
 				}
 				{
@@ -1055,32 +1055,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте формовщик слитков."
+					title: "{industrial_frontier.task.v2.p6.fuel_setup.former_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Формовка топлива"
+			title: "{industrial_frontier.quest.v2.p6.fuel_former_setup.title}"
 			x: 29d
 			y: 2d
 		}
 		{
 			dependencies: ["3A1600000000001C"]
 			description: [
-				"Химический реактор принимает 30 мБ урана-235 и 270 мБ урана-238 и выдаёт 90 мБ топливной смеси. Формовщик слитков превращает эти 90 мБ в одну единицу топлива. Топливо остаётся загружаемым материалом, а реакторная ячейка — отдельным оборудованием."
-				"Передайте уже принятые 90 мБ жидкой смеси LEU-235 в формовщик слитков."
-				"Получите одну единицу топлива и оставьте её в защищённом буфере; повторно смешивать изотопы для этой задачи не нужно."
-				"В защищённом запасе находится одна единица низкообогащённого уранового топлива."
-				"Получите одну единицу низкообогащённого уранового топлива с ураном-235."
-				"Если реакция не начинается, проверьте номер изотопа, жидкую форму и точные объёмы обоих входов."
-				"Не пытайтесь засчитать твёрдотопливную ячейку реактора: это блок активной зоны, а не топливо."
-				"Подойдёт металлическое, оксидное, нитридное, циркониевое или TRISO-топливо LEU-235. Твёрдотопливная ячейка реактора его не заменяет."
-				"Теперь можно подготовить физическую ячейку активной зоны, куда это топливо будет загружено."
+				"{industrial_frontier.quest.v2.p6.fuel_form.purpose}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.step.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.step.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.success}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.task}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_form.next}"
 			]
 			icon: "nuclearcraft:fuel_uranium_leu_235"
 			id: "3A16000000000002"
 			shape: "circle"
 			size: 1d
-			subtitle: "Изотопы разделены; теперь из них можно приготовить рабочую топливную смесь."
+			subtitle: "{industrial_frontier.quest.v2.p6.fuel_form.lead}"
 			tags: ["fuel_cycle", "fuel"]
 			tasks: [
 				{
@@ -1092,31 +1092,31 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:reactor_fuel/uranium/leu-235)"
 						}
 					}
-					title: "Получите одну единицу низкообогащённого уранового топлива с ураном-235 в любой форме NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.fuel_form.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Низкообогащённое урановое топливо"
+			title: "{industrial_frontier.quest.v2.p6.fuel_form.title}"
 			x: 31d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000002"]
 			description: [
-				"Твёрдотопливная ячейка — часть многоблочной конструкции. Она принимает топливо через реакторный контур и не становится топливом сама по себе."
-				"Соберите один блок твёрдотопливной ячейки и сохраните его до сборки реактора."
-				"У вас отдельно находятся низкообогащённое урановое топливо и блок ячейки активной зоны."
-				"Получите один блок твёрдотопливной ячейки реактора."
-				"Если ожидаете готовое топливо от изготовления блока, вернитесь к предыдущему заданию: это разные предметы."
-				"Не размещайте ячейку в окончательной структуре до подготовки дозиметрии и защиты."
-				"Это оборудование активной зоны; топливо с ураном-235 было отдельным предыдущим результатом."
-				"Перед сборкой реактора станция обязана получить измеритель и полный защитный комплект."
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.purpose}"
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.step.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.success}"
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.task}"
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.next}"
 			]
 			icon: "nuclearcraft:fission_reactor_solid_fuel_cell"
 			id: "3016000000000007"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Топливо готово; теперь нужен блок, который держит его внутри реактора."
+			subtitle: "{industrial_frontier.quest.v2.p6.fuel_cell_hardware.lead}"
 			tags: ["fuel_cycle", "reactor_hardware"]
 			tasks: [
 				{
@@ -1126,36 +1126,36 @@
 						id: "nuclearcraft:fission_reactor_solid_fuel_cell"
 					}
 					consume_items: false
-					title: "Получите один блок твёрдотопливной ячейки реактора."
+					title: "{industrial_frontier.task.v2.p6.fuel_cell_hardware.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Ячейка активной зоны"
+			title: "{industrial_frontier.quest.v2.p6.fuel_cell_hardware.title}"
 			x: 34d
 			y: 0d
 		}
 		{
 			dependencies: ["3016000000000007"]
 			description: [
-				"Радиацию нельзя вовремя увидеть или почувствовать. Счётчик даёт измерение, полный защитный костюм снижает воздействие, а расстояние и экраны дополняют личную защиту."
-				"Соберите счётчик Гейгера и все четыре части защитного костюма."
-				"Организуйте у входа чистую точку хранения и не носите загрязнённый комплект в жилую зону."
-				"Прибор и полный защитный комплект доступны до начала сборки активной зоны."
-				"Получите счётчик Гейгера и полный защитный костюм NuclearCraft."
-				"Если защита не работает, проверьте, что надеты все четыре части и они не повреждены."
-				"Если показания растут, увеличьте расстояние и поставьте экраны; костюм не заменяет проектирование."
-				"Прибор показывает радиацию, которую нельзя надёжно оценить по внешнему виду."
-				"Для зачёта безопасного комплекта нужны все четыре части."
-				"Одна часть не заменяет полный комплект."
-				"Храните комплект у входа в контролируемую зону."
-				"Проверьте целостность всего комплекта перед входом."
-				"Только теперь можно размещать контроллер и ячейку первого реактора."
+				"{industrial_frontier.quest.v2.p6.dosimetry.purpose}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.step.1}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.step.2}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.success}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.task}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.3}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.4}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.5}"
+				"{industrial_frontier.quest.v2.p6.dosimetry.next}"
 			]
 			icon: "nuclearcraft:geiger_counter"
 			id: "3358E71B3626219E"
 			shape: "octagon"
 			size: 1.2d
-			subtitle: "Топливо и ячейка готовы; следующий обязательный предмет — прибор, а не контроллер реактора."
+			subtitle: "{industrial_frontier.quest.v2.p6.dosimetry.lead}"
 			tags: ["safety", "dosimetry"]
 			tasks: [
 				{
@@ -1165,7 +1165,7 @@
 						id: "nuclearcraft:geiger_counter"
 					}
 					consume_items: false
-					title: "Получите счётчик Гейгера."
+					title: "{industrial_frontier.task.v2.p6.dosimetry.counter.objective}"
 					type: "item"
 				}
 				{
@@ -1175,7 +1175,7 @@
 						id: "nuclearcraft:hazmat_mask"
 					}
 					consume_items: false
-					title: "Получите маску защитного костюма."
+					title: "{industrial_frontier.task.v2.p6.dosimetry.mask.objective}"
 					type: "item"
 				}
 				{
@@ -1185,7 +1185,7 @@
 						id: "nuclearcraft:hazmat_chest"
 					}
 					consume_items: false
-					title: "Получите куртку защитного костюма."
+					title: "{industrial_frontier.task.v2.p6.dosimetry.chest.objective}"
 					type: "item"
 				}
 				{
@@ -1195,7 +1195,7 @@
 						id: "nuclearcraft:hazmat_pants"
 					}
 					consume_items: false
-					title: "Получите штаны защитного костюма."
+					title: "{industrial_frontier.task.v2.p6.dosimetry.pants.objective}"
 					type: "item"
 				}
 				{
@@ -1205,33 +1205,33 @@
 						id: "nuclearcraft:hazmat_boots"
 					}
 					consume_items: false
-					title: "Получите ботинки защитного костюма."
+					title: "{industrial_frontier.task.v2.p6.dosimetry.boots.objective}"
 					type: "item"
 				}
 			]
-			title: "Измерение до пуска"
+			title: "{industrial_frontier.quest.v2.p6.dosimetry.title}"
 			x: 37d
 			y: 0d
 		}
 		{
 			dependencies: ["3358E71B3626219E"]
 			description: [
-				"Одна угольная пыль и 5000 мБ обычной воды являются точными входами одной операции в уже принятом обогатителе жидкостей NuclearCraft. Квест не привязывает угольную пыль к одному моду."
-				"Отберите одну совместимую угольную пыль."
-				"Подведите к ранее принятому обогатителю жидкостей 5000 мБ обычной воды, оставив выход чистым."
-				"Оба исходных потока первой партии технической воды подготовлены отдельно."
-				"Подготовьте одну совместимую угольную пыль и 5000 мБ обычной воды."
-				"Если угольная пыль не принимается, откройте список предметов тега в интерфейсе задания и выберите один из них."
-				"Не заменяйте обычную воду дистиллированной: этот рецепт использует ровно воду Minecraft."
-				"Подойдёт любая угольная пыль, которую установленный рецепт NuclearCraft принимает через общий тег Forge."
-				"Именно обычная вода вместе с угольной пылью образует первую партию технической воды."
-				"Проведите одну операцию в обогатителе жидкостей и примите её выход отдельно от исходной воды."
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.step.1}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.step.2}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.success}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.task}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.technical_water_inputs.next}"
 			]
 			icon: "nuclearcraft:technical_water_bucket"
 			id: "3A16000000000028"
 			shape: "circle"
 			size: 1d
-			subtitle: "Реакторному паровому контуру нужна отдельная рабочая жидкость, а не вода из бытовой сети."
+			subtitle: "{industrial_frontier.quest.v2.p6.technical_water_inputs.lead}"
 			tags: ["water", "reactor", "source_before_product"]
 			tasks: [
 				{
@@ -1243,72 +1243,72 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/coal_dusts)"
 						}
 					}
-					title: "Подготовьте одну угольную пыль из совместимого тега."
+					title: "{industrial_frontier.task.v2.p6.technical_water_inputs.coal.objective}"
 					type: "item"
 				}
 				{
 					id: "4A16000000000046"
 					fluid: "minecraft:water"
 					amount: 5000L
-					title: "Подготовьте 5000 мБ обычной воды."
+					title: "{industrial_frontier.task.v2.p6.technical_water_inputs.water.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Сырьё для технической воды"
+			title: "{industrial_frontier.quest.v2.p6.technical_water_inputs.title}"
 			x: 40d
 			y: -3d
 		}
 		{
 			dependencies: ["3A16000000000028"]
 			description: [
-				"Техническая вода NuclearCraft — самостоятельная жидкость. Одна операция обогатителя жидкостей превращает подготовленную угольную пыль и 5000 мБ воды в 5000 мБ теплоносителя без промежуточного гринда."
-				"Загрузите одну принятую угольную пыль и 5000 мБ обычной воды в обогатитель жидкостей NuclearCraft."
-				"Отведите весь выход в подписанный резервуар реакторного контура."
-				"В отдельном резервуаре находятся 5000 мБ технической воды NuclearCraft."
-				"Получите 5000 мБ технической воды в обогатителе жидкостей NuclearCraft."
-				"Если операция не начинается, проверьте свободный выход, питание и точный входной вид воды."
-				"Если жидкость смешалась с другой водой, очистите линию и назначьте отдельный резервуар."
-				"Проведите одну операцию в ранее принятом обогатителе жидкостей: 1 угольная пыль + 5000 мБ воды дают 5000 мБ технической воды."
-				"Теперь соберите безопасный корпус кипящего реактора и подготовьте его к контролируемому пуску."
+				"{industrial_frontier.quest.v2.p6.technical_water.purpose}"
+				"{industrial_frontier.quest.v2.p6.technical_water.step.1}"
+				"{industrial_frontier.quest.v2.p6.technical_water.step.2}"
+				"{industrial_frontier.quest.v2.p6.technical_water.success}"
+				"{industrial_frontier.quest.v2.p6.technical_water.task}"
+				"{industrial_frontier.quest.v2.p6.technical_water.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.technical_water.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.technical_water.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.technical_water.next}"
 			]
 			icon: "nuclearcraft:technical_water_bucket"
 			id: "3A16000000000029"
 			shape: "circle"
 			size: 1d
-			subtitle: "Сырьё принято; теперь отделите полученный теплоноситель от обычной воды."
+			subtitle: "{industrial_frontier.quest.v2.p6.technical_water.lead}"
 			tags: ["water", "reactor", "processed_form"]
 			tasks: [
 				{
 					id: "4A16000000000047"
 					fluid: "nuclearcraft:technical_water"
 					amount: 5000L
-					title: "Получите 5000 мБ технической воды NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.technical_water.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Рабочая вода реакторного контура"
+			title: "{industrial_frontier.quest.v2.p6.technical_water.title}"
 			x: 43d
 			y: -3d
 		}
 		{
 			dependencies: ["3A16000000000029"]
 			description: [
-				"Контроллер и топливная ячейка задают начало реактора, но безопасная работа зависит от полной геометрии и теплового баланса. Это задание проверяет размещение двух ключевых блоков, а не обещает пуск."
-				"Спроектируйте малый реактор с запасом теплоотвода до размещения топлива."
-				"Поставьте контроллер и одну твёрдотопливную ячейку в составе будущей структуры."
-				"Контроллер и ячейка размещены, а конструкция остаётся выключенной до отдельной приёмки режима кипения."
-				"Поставьте контроллер реактора и одну твёрдотопливную ячейку."
-				"Если структура не собирается, проверьте размеры, корпус, порты и допустимые внутренние блоки."
-				"Не загружайте топливо, пока расчёт тепловыделения не ниже отвода с заметным запасом."
-				"Контроллер является частью многоблока и сам не доказывает безопасный пуск."
-				"Соблюдайте геометрию, замедлитель, поглотители и теплоотвод по руководству NuclearCraft."
-				"Сформируйте корпус, настройте режим кипения и только затем загрузите одну принятую топливную сборку."
+				"{industrial_frontier.quest.v2.p6.reactor.purpose}"
+				"{industrial_frontier.quest.v2.p6.reactor.step.1}"
+				"{industrial_frontier.quest.v2.p6.reactor.step.2}"
+				"{industrial_frontier.quest.v2.p6.reactor.success}"
+				"{industrial_frontier.quest.v2.p6.reactor.task}"
+				"{industrial_frontier.quest.v2.p6.reactor.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.reactor.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.reactor.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.reactor.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.reactor.next}"
 			]
 			icon: "nuclearcraft:fission_reactor_controller"
 			id: "35B8D3144F0654A2"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Прибор и защита готовы; можно переходить от компонентов к многоблочной конструкции."
+			subtitle: "{industrial_frontier.quest.v2.p6.reactor.lead}"
 			tags: ["reactor", "place"]
 			tasks: [
 				{
@@ -1318,7 +1318,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Поставьте контроллер реактора деления."
+					title: "{industrial_frontier.task.v2.p6.reactor.controller.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -1328,35 +1328,35 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Разместите одну твёрдотопливную ячейку в активной зоне."
+					title: "{industrial_frontier.task.v2.p6.reactor.cell.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Первый корпус реактора"
+			title: "{industrial_frontier.quest.v2.p6.reactor.title}"
 			x: 46d
 			y: 0d
 		}
 		{
 			dependencies: ["35B8D3144F0654A2"]
 			description: [
-				"В режиме кипения сам реактор превращает техническую воду в пар высокого давления: отдельный пустой теплообменник не создаёт для этого тепло. Задание фиксирует сформированную структуру, назначенные порты, загруженную топливную сборку и осознанный пуск под управлением красного камня."
-				"Сформируйте реактор и откройте его контроллер."
-				"Выберите режим кипения, назначьте вход технической воды и отдельный выход пара высокого давления."
-				"Проверьте охлаждение и тепловой баланс, загрузите ровно одну ранее принятую сборку LEU-235 и подключите аварийное отключение красным камнем."
-				"Запустите установку только после того, как вход и выход свободны; затем вручную подтвердите приёмку."
-				"Сформированный кипящий реактор настроен, загружен одной сборкой и запущен под контролируемым отключением."
-				"Откройте сформированный реактор и вручную подтвердите безопасную настройку режима кипения."
-				"Если режим кипения не работает, проверьте тип реактора, назначение портов и наличие именно технической воды."
-				"Если температура растёт без устойчивого отвода, немедленно остановите реактор и увеличьте запас охлаждения до нового пуска."
-				"Интерфейс должен принадлежать собранному многоблоку, а не одиночному контроллеру."
-				"Отметьте задачу вручную только после выбора режима кипения, назначения входа технической воды и выхода пара, загрузки одной принятой сборки LEU-235 и проверки безопасного теплового баланса."
-				"Примите первый пар высокого давления непосредственно с выходного порта реактора."
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.step.3}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.step.4}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.success}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.task}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.reactor_commissioning.next}"
 			]
 			icon: "nuclearcraft:fission_reactor_controller"
 			id: "3A1600000000002A"
 			shape: "octagon"
 			size: 1.3d
-			subtitle: "Корпус построен, но между размещённым контроллером и настоящим паром есть обязательная инженерная приёмка."
+			subtitle: "{industrial_frontier.quest.v2.p6.reactor_commissioning.lead}"
 			tags: ["reactor", "commissioning", "boiling"]
 			tasks: [
 				{
@@ -1366,38 +1366,38 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер сформированного реактора."
+					title: "{industrial_frontier.task.v2.p6.reactor_commissioning.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
 					id: "4A16000000000049"
-					title: "Подтвердите настройку кипящего реактора перед пуском."
+					title: "{industrial_frontier.task.v2.p6.reactor_commissioning.confirm.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Пуск кипящего реактора"
+			title: "{industrial_frontier.quest.v2.p6.reactor_commissioning.title}"
 			x: 49d
 			y: 0d
 		}
 		{
 			dependencies: ["3A1600000000002B"]
 			description: [
-				"Теплообменник NuclearCraft принимает пар низкого качества и возвращает техническую воду в соотношении один к одному. Этот путь работает с пустого теплового буфера: в отличие от обратного рецепта вода→пар, конденсация сама добавляет тепло в теплообменник и не требует скрытого горячего контура."
-				"Поставьте контроллер отдельного теплообменника и соберите многоблок по руководству NuclearCraft."
-				"Назначьте вход пара низкого качества и отдельный выход технической воды, затем откройте контроллер до подачи потока."
-				"Конденсационный теплообменник сформирован; вход отработавшего пара и выход возвращаемой воды разведены."
-				"Поставьте и откройте конденсационный теплообменник NuclearCraft."
-				"Если многоблок не собирается, проверьте геометрию, корпус и расположение портов."
-				"Если техническая вода не появляется, проверьте, что подаёте именно пар низкого качества, а выходной резервуар свободен."
-				"Контроллер должен войти в отдельный многоблок с входом пара низкого качества и выходом возвращаемой технической воды."
-				"Интерфейс должен открываться у сформированного многоблока до подачи пара низкого качества."
-				"Пропустите принятую порцию пара через конденсатор и вручную подтвердите возврат в реакторный резервуар."
+				"{industrial_frontier.quest.v2.p6.heat_loop.purpose}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.step.1}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.step.2}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.success}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.task}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.heat_loop.next}"
 			]
 			icon: "nuclearcraft:heat_exchanger_controller"
 			id: "3415FA3A4B96A721"
 			shape: "diamond"
 			size: 1.2d
-			subtitle: "После двух проходов через турбину пар ещё можно вернуть в водяной контур, а не выбрасывать."
+			subtitle: "{industrial_frontier.quest.v2.p6.heat_loop.lead}"
 			tags: ["heat", "closed_loop"]
 			tasks: [
 				{
@@ -1407,7 +1407,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Поставьте контроллер теплообменника NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.heat_loop.place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -1417,66 +1417,66 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер собранного теплообменника."
+					title: "{industrial_frontier.task.v2.p6.heat_loop.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Конденсатор обратного потока"
+			title: "{industrial_frontier.quest.v2.p6.heat_loop.title}"
 			x: 64d
 			y: 0d
 		}
 		{
 			dependencies: ["3A1600000000002A"]
 			description: [
-				"Кипящий реактор NuclearCraft превращает техническую воду в пар высокого давления напрямую, по десять миллибакетов на десять. Накопление 1000 мБ подтверждает устойчивый поток, а не наличие пустого контроллера или заранее налитой жидкости."
-				"Подайте техническую воду NuclearCraft во входной порт принятого кипящего реактора."
-				"Запустите одну топливную сборку под контролем красного камня и отведите 1000 мБ пара высокого давления в отдельный подписанный резервуар."
-				"Подготовлены 1000 мБ пара высокого давления для первого турбинного прогона."
-				"Получите 1000 мБ пара высокого давления на выходе кипящего реактора."
-				"Если пар не появляется, проверьте, что подаёте техническую воду, а не обычную или дистиллированную."
-				"Если процесс остановился, освободите выходную линию от другой жидкости."
-				"Подайте техническую воду в настроенный кипящий реактор и отведите пар с его выходного порта в чистую линию."
-				"Теперь соберите и откройте турбину до подачи подготовленного пара."
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.purpose}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.step.1}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.step.2}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.success}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.task}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.high_pressure_steam.next}"
 			]
 			icon: "nuclearcraft:high_pressure_steam_bucket"
 			id: "3A16000000000020"
 			shape: "circle"
 			size: 1d
-			subtitle: "Реактор принят в режиме кипения; теперь нужен настоящий выходной поток для турбинного участка."
+			subtitle: "{industrial_frontier.quest.v2.p6.high_pressure_steam.lead}"
 			tags: ["heat", "steam", "source_before_processed"]
 			tasks: [
 				{
 					id: "4A1600000000003B"
 					fluid: "nuclearcraft:high_pressure_steam"
 					amount: 1000L
-					title: "Получите 1000 мБ пара высокого давления."
+					title: "{industrial_frontier.task.v2.p6.high_pressure_steam.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Пар прямо из кипящего реактора"
+			title: "{industrial_frontier.quest.v2.p6.high_pressure_steam.title}"
 			x: 52d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000020"]
 			description: [
-				"Контроллер, вал, лопатки, обмотки и порты образуют отдельный многоблок. Размещение и открытие контроллера доказывают готовность оборудования, но не подменяют следующую проверку выхода пара низкого давления."
-				"Соберите турбину с валом, лопатками, обмотками и портами по руководству NuclearCraft."
-				"Подключите нагрузку, назначьте вход пара высокого давления и отдельный выход низкого давления."
-				"Поставьте и откройте контроллер до подачи рабочего потока."
-				"Турбина сформирована, контроллер открывается, а вход, выход и нагрузка подготовлены."
-				"Поставьте и откройте контроллер собранной турбины NuclearCraft."
-				"Если многоблок не собирается, проверьте длину вала, расположение лопаток, обмоток и портов."
-				"Если контроллер не открывается как сформированный, сверьте размеры и ориентацию всех внутренних деталей."
-				"Контроллер должен войти в многоблок с валом, лопатками, обмотками и портами."
-				"До подачи пара убедитесь, что многоблок сформирован, вход и выход назначены, а нагрузка подключена."
-				"Подайте подготовленный пар высокого давления и отдельно подтвердите выход низкого давления."
+				"{industrial_frontier.quest.v2.p6.turbine_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.success}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.task}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.turbine_setup.next}"
 			]
 			icon: "nuclearcraft:turbine_controller"
 			id: "3A16000000000021"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Входной пар подготовлен; теперь сначала примите саму турбину, а уже затем проверяйте её выход."
+			subtitle: "{industrial_frontier.quest.v2.p6.turbine_setup.lead}"
 			tags: ["power", "turbine", "machine_before_product"]
 			tasks: [
 				{
@@ -1486,7 +1486,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Поставьте контроллер турбины NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.turbine.place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -1496,98 +1496,98 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер собранной турбины."
+					title: "{industrial_frontier.task.v2.p6.turbine_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Турбина до рабочего прогона"
+			title: "{industrial_frontier.quest.v2.p6.turbine_setup.title}"
 			x: 55d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000021"]
 			description: [
-				"Турбина преобразует энергию пара высокого давления и выпускает поток более низкого давления. Этот узел проверяет только результат уже собранной машины: 1000 мБ выходного пара доказывают реальный рабочий прогон."
-				"Подайте ранее подготовленный пар высокого давления в принятую турбину."
-				"Отведите выход низкого давления в отдельный контур конденсации и накопите 1000 мБ."
-				"На выходе принятой турбины накоплены 1000 мБ пара низкого давления."
-				"Получите 1000 мБ пара низкого давления на выходе принятой турбины."
-				"Если турбина не собирается, проверьте длину вала, расположение лопаток, обмоток и портов."
-				"Если структура собрана, но выхода нет, проверьте нужный вид пара, свободный выход и подключение нагрузки."
-				"Турбина превращает пар высокого давления в пар низкого давления; оставьте выход свободным."
-				"Пропустите принятый пар через ту же турбину второй раз, чтобы получить поток для конденсации."
+				"{industrial_frontier.quest.v2.p6.turbine.purpose}"
+				"{industrial_frontier.quest.v2.p6.turbine.step.1}"
+				"{industrial_frontier.quest.v2.p6.turbine.step.2}"
+				"{industrial_frontier.quest.v2.p6.turbine.success}"
+				"{industrial_frontier.quest.v2.p6.turbine.task}"
+				"{industrial_frontier.quest.v2.p6.turbine.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.turbine.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.turbine.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.turbine.next}"
 			]
 			icon: "nuclearcraft:turbine_controller"
 			id: "338A637EDDC24C44"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Турбина принята; теперь станция должна снять полезную работу с подготовленного пара."
+			subtitle: "{industrial_frontier.quest.v2.p6.turbine.lead}"
 			tags: ["power", "turbine"]
 			tasks: [
 				{
 					id: "484FF829167E8BED"
 					fluid: "nuclearcraft:low_pressure_steam"
 					amount: 1000L
-					title: "Получите 1000 мБ пара низкого давления на выходе турбины."
+					title: "{industrial_frontier.task.v2.p6.turbine.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Пар прошёл турбину"
+			title: "{industrial_frontier.quest.v2.p6.turbine.title}"
 			x: 58d
 			y: 0d
 		}
 		{
 			dependencies: ["338A637EDDC24C44"]
 			description: [
-				"Та же турбина NuclearCraft принимает пар низкого давления и выпускает пар низкого качества. Второй проход снижает энергетический потенциал потока, но сохраняет весь объём для последующей конденсации."
-				"Переключите вход принятой турбины на отдельный резервуар пара низкого давления."
-				"Отведите выход в чистый резервуар и накопите 1000 мБ пара низкого качества."
-				"Второй турбинный проход дал 1000 мБ пара низкого качества для конденсатора."
-				"Получите 1000 мБ пара низкого качества вторым проходом через турбину."
-				"Если процесс не начинается, проверьте точный входной вид пара и свободный выход."
-				"Не смешивайте три ступени пара в одной трубе: высокое, низкое давление и низкое качество — разные жидкости."
-				"Верните принятый пар низкого давления во вход турбины: второй проход переводит его в пар низкого качества в соотношении один к одному."
-				"Соберите теплообменник как конденсатор и верните поток в техническую воду."
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.purpose}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.step.1}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.step.2}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.success}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.task}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.low_quality_steam.next}"
 			]
 			icon: "nuclearcraft:low_quality_steam_bucket"
 			id: "3A1600000000002B"
 			shape: "circle"
 			size: 1d
-			subtitle: "Пар низкого давления ещё содержит пригодную энергию и не должен сразу уходить в сброс."
+			subtitle: "{industrial_frontier.quest.v2.p6.low_quality_steam.lead}"
 			tags: ["power", "turbine", "closed_loop"]
 			tasks: [
 				{
 					id: "4A1600000000004A"
 					fluid: "nuclearcraft:low_quality_steam"
 					amount: 1000L
-					title: "Получите 1000 мБ пара низкого качества."
+					title: "{industrial_frontier.task.v2.p6.low_quality_steam.output.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Вторая ступень турбины"
+			title: "{industrial_frontier.quest.v2.p6.low_quality_steam.title}"
 			x: 61d
 			y: 0d
 		}
 		{
 			dependencies: ["3415FA3A4B96A721"]
 			description: [
-				"Рецепт конденсации переводит один миллибакет пара низкого качества в один миллибакет технической воды и добавляет тепло во внутренний буфер теплообменника. Ручная отметка фиксирует происхождение и фактический возврат жидкости, которые обычная задача на наличие жидкости отличить не умеет."
-				"Подайте 1000 мБ принятого пара низкого качества в сформированный теплообменник."
-				"Отведите 1000 мБ полученной технической воды в отдельную трубу и верните её в резервуар подачи реактора."
-				"Убедитесь, что обратная линия не может затолкнуть воду в паровой выход, и только затем поставьте отметку."
-				"Один литр технической воды реально прошёл конденсатор и вернулся в реакторный резервуар."
-				"Верните через конденсатор 1000 мБ технической воды и подтвердите замыкание контура."
-				"Если вода не выходит, проверьте, что вход содержит именно пар низкого качества и выход свободен."
-				"Если поток идёт назад, установите одностороннюю арматуру или разнесите входной и обратный резервуары."
-				"Проверка взаимодействия подтверждает, что конденсация выполняется на уже принятой установке, а не отмечается без рабочего аппарата."
-				"Сначала пропустите 1000 мБ пара низкого качества через принятый теплообменник, получите 1000 мБ технической воды и физически верните её в резервуар подачи. Жидкостная задача здесь не используется намеренно: она могла бы засчитать старый исходный запас."
-				"Теперь станция доказала полный тепловой цикл; дождитесь выгорания единственной учебной сборки."
+				"{industrial_frontier.quest.v2.p6.condensate_return.purpose}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.step.1}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.step.2}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.step.3}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.success}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.task}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.condensate_return.next}"
 			]
 			icon: "nuclearcraft:technical_water_bucket"
 			id: "3A1600000000002C"
 			shape: "circle"
 			size: 1d
-			subtitle: "Собранный конденсатор должен не просто существовать, а замкнуть материальный поток станции."
+			subtitle: "{industrial_frontier.quest.v2.p6.condensate_return.lead}"
 			tags: ["closed_loop", "water", "commissioning"]
 			tasks: [
 				{
@@ -1597,37 +1597,37 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте сформированный теплообменник перед возвратом воды."
+					title: "{industrial_frontier.task.v2.p6.condensate_return.use.objective}"
 					type: "questsadditions:use"
 				}
 				{
 					id: "4A1600000000004B"
-					title: "Подтвердите возврат 1000 мБ конденсата в реакторный резервуар."
+					title: "{industrial_frontier.task.v2.p6.condensate_return.confirm.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Вода вернулась в цикл"
+			title: "{industrial_frontier.quest.v2.p6.condensate_return.title}"
 			x: 67d
 			y: 0d
 		}
 		{
 			dependencies: ["3A1600000000002C"]
 			description: [
-				"Отработанное топливо не является пустой оболочкой. В нём остаётся уран и появляются другие изотопы, поэтому его нужно хранить отдельно и учитывать даже после сборки переработчика."
-				"Дождитесь выгорания одной топливной сборки с низкообогащённым ураном-235 и выгрузите остаток штатным путём."
-				"Перенесите его в обозначенный защищённый буфер до переработки."
-				"В защищённом запасе лежит образец отработанного низкообогащённого уранового топлива."
-				"Получите один образец отработанного низкообогащённого уранового топлива."
-				"Если топливо не выгружается, проверьте порт, свободный выход и состояние реактора."
-				"Сам переработчик топливных остатков не засчитывается: нужен реальный продукт выгорания."
-				"Форма зависит от загруженного топлива. Задача проверяет именно отработанный материал, а не наличие переработчика."
-				"Только теперь переработчик сможет вернуть часть изотопов в цикл."
+				"{industrial_frontier.quest.v2.p6.spent_fuel.purpose}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.step.1}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.step.2}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.success}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.task}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.spent_fuel.next}"
 			]
 			icon: "nuclearcraft:depleted_fuel_uranium_leu_235"
 			id: "3A16000000000003"
 			shape: "octagon"
 			size: 1.2d
-			subtitle: "Станция выдала энергию; теперь нужно принять то, что осталось после выгорания."
+			subtitle: "{industrial_frontier.quest.v2.p6.spent_fuel.lead}"
 			tags: ["fuel_cycle", "spent_fuel"]
 			tasks: [
 				{
@@ -1639,34 +1639,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:depleted_reactor_fuel/uranium/leu-235)"
 						}
 					}
-					title: "Получите один образец отработанного топлива LEU-235 в любой форме NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.spent_fuel.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Что остаётся после выгорания"
+			title: "{industrial_frontier.quest.v2.p6.spent_fuel.title}"
 			x: 70d
 			y: 0d
 		}
 		{
 			dependencies: ["3A16000000000003"]
 			description: [
-				"Переработчик NuclearCraft разделяет одну единицу отработанного топлива на несколько продуктов. Книга сначала проверяет получение и установку машины, а результаты операции выносит в следующий узел."
-				"Соберите и установите один переработчик топлива NuclearCraft."
-				"Подключите питание и подготовьте раздельные защищённые выходные буферы."
-				"Откройте интерфейс до загрузки первой единицы отработанного топлива."
-				"Переработчик установлен, открывается и готов принять первую учебную загрузку."
-				"Соберите, установите и откройте один переработчик топлива NuclearCraft."
-				"Если машина не открывается, проверьте установку, питание и доступ к рабочей стороне."
-				"Если рецепт не виден, убедитесь, что подготовлено именно отработанное топливо нужной серии."
-				"Машина принимает отработанное топливо; её наличие ещё не заменяет отдельную проверку восстановленных продуктов."
-				"До загрузки оставьте место для всех продуктов рецепта и назначьте раздельные защищённые выходы."
-				"Проведите один цикл и отдельно подтвердите восстановленные уран-238 и плутоний-239."
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.purpose}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.step.1}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.step.2}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.step.3}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.success}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.task}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.reprocessor_setup.next}"
 			]
 			icon: "nuclearcraft:fuel_reprocessor"
 			id: "3A1600000000001D"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Отработанное топливо получено. До проверки возвращённых изотопов нужна отдельная принятая машина с готовыми выходами."
+			subtitle: "{industrial_frontier.quest.v2.p6.reprocessor_setup.lead}"
 			tags: ["fuel_cycle", "reprocessing", "machine_before_product"]
 			tasks: [
 				{
@@ -1676,7 +1676,7 @@
 						id: "nuclearcraft:fuel_reprocessor"
 					}
 					consume_items: false
-					title: "Получите один переработчик топлива NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.reprocessing.machine.objective}"
 					type: "item"
 				}
 				{
@@ -1686,33 +1686,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте переработчик топлива."
+					title: "{industrial_frontier.task.v2.p6.reprocessor_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Переработчик топлива"
+			title: "{industrial_frontier.quest.v2.p6.reprocessor_setup.title}"
 			x: 73d
 			y: -2d
 		}
 		{
 			dependencies: ["3A1600000000001D"]
 			description: [
-				"Переработчик разделяет отработанное низкообогащённое урановое топливо на несколько продуктов. Этот узел проверяет результат операции: уран-238 и плутоний-239 должны действительно выйти из уже установленной машины."
-				"Подайте одну единицу отработанного низкообогащённого уранового топлива в переработчик."
-				"Разведите выходы и сохраните как минимум четыре единицы урана-238 и одну единицу плутония-239."
-				"Восстановленные уран-238 и плутоний-239 находятся в раздельных защищённых запасах."
-				"Получите четыре единицы урана-238 и одну единицу плутония-239 из отработанного топлива."
-				"Если процесс не запускается, проверьте точный вид отработанного топлива и питание машины."
-				"Если выход заблокирован, освободите место для всех шести продуктов действующего рецепта, а не только двух проверяемых."
-				"Один цикл возвращает четыре единицы урана-238. Металл, оксид, нитрид и циркониевый сплав засчитываются как формы одного изотопа."
-				"Металл, оксид, нитрид и циркониевый сплав засчитываются как формы одного изотопа. Храните продукт отдельно от топлива следующей загрузки."
-				"Оставшиеся радиоактивные продукты нужно поместить в выделенное хранилище, а не вернуть в общий склад."
+				"{industrial_frontier.quest.v2.p6.reprocessing.purpose}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.step.1}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.step.2}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.success}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.task}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.reprocessing.next}"
 			]
 			icon: "nuclearcraft:fuel_reprocessor"
 			id: "3A40ABAB6D92B027"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Переработчик принят; теперь один реальный цикл должен вернуть конкретные изотопные материалы."
+			subtitle: "{industrial_frontier.quest.v2.p6.reprocessing.lead}"
 			tags: ["fuel_cycle", "reprocessing"]
 			tasks: [
 				{
@@ -1725,7 +1725,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/238)"
 						}
 					}
-					title: "Получите четыре единицы урана-238 в форме, соответствующей переработанному топливу."
+					title: "{industrial_frontier.task.v2.p6.reprocessing.u238.objective}"
 					type: "item"
 				}
 				{
@@ -1737,32 +1737,32 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/plutonium/239)"
 						}
 					}
-					title: "Получите одну единицу плутония-239 в форме, соответствующей переработанному топливу."
+					title: "{industrial_frontier.task.v2.p6.reprocessing.pu239.objective}"
 					type: "item"
 				}
 			]
-			title: "Переработка отработанного топлива"
+			title: "{industrial_frontier.quest.v2.p6.reprocessing.title}"
 			x: 73d
 			y: 0d
 		}
 		{
 			dependencies: ["3A40ABAB6D92B027"]
 			description: [
-				"Выделенная бочка создаёт физическую границу между ядерным циклом и общим складом. Она не отменяет экранирование, маркировку, дозиметрию и учёт содержимого."
-				"Выберите защищённое место с ограниченным доступом, не связанное с жилой зоной."
-				"Поставьте базовую бочку NuclearCraft и оставьте вокруг место для экрана и проверки счётчиком."
-				"Отдельное хранилище размещено в контролируемой зоне и не подключено к случайной общей сортировке."
-				"Поставьте базовую бочку NuclearCraft в отдельной защищённой зоне."
-				"Если уровень радиации снаружи растёт, увеличьте расстояние и толщину экрана."
-				"Если AE2 автоматически забирает содержимое, уберите общий импорт и сделайте отдельный контролируемый интерфейс."
-				"Размещайте хранилище вдали от жилья и общего склада, с контролируемым доступом."
-				"Теперь весь гражданский цикл можно предъявить технической комиссии."
+				"{industrial_frontier.quest.v2.p6.waste_storage.purpose}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.step.1}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.step.2}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.success}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.task}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.waste_storage.next}"
 			]
 			icon: "nuclearcraft:basic_barrel"
 			id: "3A16000000000004"
 			shape: "octagon"
 			size: 1.2d
-			subtitle: "Переработка вернула полезные изотопы, но не превратила весь остаток в безопасный материал."
+			subtitle: "{industrial_frontier.quest.v2.p6.waste_storage.lead}"
 			tags: ["waste", "storage"]
 			tasks: [
 				{
@@ -1772,35 +1772,35 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Поставьте одну базовую бочку NuclearCraft в защищённой зоне."
+					title: "{industrial_frontier.task.v2.p6.waste_storage.place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Хранилище остаточных продуктов"
+			title: "{industrial_frontier.quest.v2.p6.waste_storage.title}"
 			x: 76d
 			y: 0d
 		}
 		{
 			dependencies: ["3A40ABAB6D92B027"]
 			description: [
-				"Ускоритель распада превращает долгоживущий исходный изотоп в другой материал. Это отдельная операция, а не повтор уже обязательного разделения урана."
-				"Соберите один ускоритель распада и установите его в защищённой части ядерного участка."
-				"Подведите питание, откройте интерфейс и проверьте, что выход не соединён с чистым складом."
-				"Ускоритель распада установлен и готов к одной контролируемой исследовательской партии."
-				"Соберите, установите и откройте ускоритель распада NuclearCraft."
-				"Если машина не получает питание, проверьте допустимую ступень и подключение к сети."
-				"Не соединяйте выход лаборатории с общим складом: сначала выделите маркированную тару для радиоактивной пыли."
-				"Разделитель изотопов уже работал в обязательной топливной цепочке. Здесь нужна другая машина: ускоритель распада."
-				"Поставьте машину в защищённой зоне, подключите питание и заранее подготовьте отдельный выход для радиоактивного продукта."
-				"Следующий факультативный шаг проведёт одну партию урана-238 до пыли радия."
-				"Исследовательская линия расширяет каталог материалов, но не блокирует ввод первой гражданской АЭС."
+				"{industrial_frontier.quest.v2.p6.isotopes.purpose}"
+				"{industrial_frontier.quest.v2.p6.isotopes.step.1}"
+				"{industrial_frontier.quest.v2.p6.isotopes.step.2}"
+				"{industrial_frontier.quest.v2.p6.isotopes.success}"
+				"{industrial_frontier.quest.v2.p6.isotopes.task}"
+				"{industrial_frontier.quest.v2.p6.isotopes.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.isotopes.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.isotopes.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.isotopes.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.isotopes.next}"
+				"{industrial_frontier.quest.v2.p6.isotopes.optional_note}"
 			]
 			icon: "nuclearcraft:decay_hastener"
 			id: "3A16000000000017"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Базовый топливный цикл уже замкнут. Теперь можно отдельно изучить распад тяжёлого изотопа, не задерживая ввод первой АЭС."
+			subtitle: "{industrial_frontier.quest.v2.p6.isotopes.lead}"
 			tags: ["optional", "isotopes", "decay", "machine_before_product"]
 			tasks: [
 				{
@@ -1810,7 +1810,7 @@
 						id: "nuclearcraft:decay_hastener"
 					}
 					consume_items: false
-					title: "Соберите один ускоритель распада NuclearCraft."
+					title: "{industrial_frontier.task.v2.p6.isotopes.machine.objective}"
 					type: "item"
 				}
 				{
@@ -1820,35 +1820,35 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите ускоритель распада и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p6.isotopes.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Лаборатория радиоактивного распада"
+			title: "{industrial_frontier.quest.v2.p6.isotopes.title}"
 			x: 73d
 			y: 3d
 		}
 		{
 			dependencies: ["3A16000000000017"]
 			description: [
-				"Одна партия урана-238 показывает работу отдельного пути радиоактивного распада. Большой запас не нужен: цель — понять вход, машину, выход и безопасное хранение."
-				"Отделите одну небольшую партию урана-238 от рабочего топливного запаса."
-				"Проведите её через ускоритель распада по фактическому рецепту JEI."
-				"Заберите пыль радия в маркированную тару и не смешивайте её с обычной пылью металлов."
-				"Получена одна учтённая пыль радия; факультативная линия доказана машиной и продуктом."
-				"Проведите одну небольшую партию урана-238 через ускоритель распада и получите пыль радия."
-				"Если рецепт не начинается, проверьте, что на входе именно уран-238, а не природная урановая пыль или готовое топливо."
-				"Если продукт не выходит, освободите отдельный выход и проверьте питание машины."
-				"Подайте уран-238 в принятый ускоритель распада. Задача принимает совместимую пыль радия из общего тега материала."
-				"Полученный материал можно оставить исследовательскому участку; обязательная магистраль P6 от него не зависит."
-				"Это факультативное исследование: оно не требуется для допуска к P7."
+				"{industrial_frontier.quest.v2.p6.decay_product.purpose}"
+				"{industrial_frontier.quest.v2.p6.decay_product.step.1}"
+				"{industrial_frontier.quest.v2.p6.decay_product.step.2}"
+				"{industrial_frontier.quest.v2.p6.decay_product.step.3}"
+				"{industrial_frontier.quest.v2.p6.decay_product.success}"
+				"{industrial_frontier.quest.v2.p6.decay_product.task}"
+				"{industrial_frontier.quest.v2.p6.decay_product.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.decay_product.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.decay_product.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.decay_product.next}"
+				"{industrial_frontier.quest.v2.p6.decay_product.optional_note}"
 			]
 			icon: "nuclearcraft:radium_dust"
 			id: "3A16000000000018"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Машина принята; теперь лаборатория должна выдать реальный продукт, а не остаться декоративным станком."
+			subtitle: "{industrial_frontier.quest.v2.p6.decay_product.lead}"
 			tags: ["optional", "isotopes", "decay", "product"]
 			tasks: [
 				{
@@ -1860,36 +1860,36 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/radium_dusts)"
 						}
 					}
-					title: "Получите одну пыль радия из урана-238."
+					title: "{industrial_frontier.task.v2.p6.decay_product.radium.objective}"
 					type: "item"
 				}
 			]
-			title: "Контролируемая партия радия"
+			title: "{industrial_frontier.quest.v2.p6.decay_product.title}"
 			x: 76d
 			y: 3d
 		}
 		{
 			dependencies: ["3A16000000000004"]
 			description: [
-				"Это единственная приёмка, которая открывает следующую технологическую эпоху. Контрольный обход подтверждает доступ к ключевым участкам станции. Мощность, температуру и радиационный фон нужно проверять отдельно по приборам и окнам оборудования."
-				"Откройте контроллер реактора и проверьте состояние активной зоны."
-				"Откройте контроллер турбины и убедитесь, что тепловой маршрут заканчивается отдельным энергетическим узлом."
-				"Затем откройте переработчик топлива и бочку, предназначенную для радиоактивных материалов."
-				"Реактор, турбина, переработка и хранилище доступны одним контрольным маршрутом; приёмка открывает следующую эпоху."
-				"Откройте контроллер реактора, контроллер турбины, переработчик топлива и бочку для радиоактивных материалов."
-				"Если один из контроллеров не открывается, проверьте целостность соответствующей многоблочной конструкции."
-				"Если переработчику или бочке нечего принимать, вернитесь к ветке отработанного топлива и проверьте, не смешаны ли свежее топливо, выгруженная сборка и продукты переработки."
-				"Проверьте состояние активной зоны и помните, что реактор — только один из узлов всей станции."
-				"Проверьте отдельный участок преобразования пара в энергию."
-				"Контрольный обход должен включать оборудование, которое принимает отработанное топливо после выгрузки."
-				"Последняя точка обхода — отдельное хранилище остатков. Улучшенная, обеднённо-урановая или элитная бочка не должна мешать приёмке."
-				"Следующая эпоха разделит гражданскую атомную основу на стратегическую промышленность и первую космическую программу."
+				"{industrial_frontier.quest.v2.p6.commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p6.commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p6.commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p6.commissioning.step.3}"
+				"{industrial_frontier.quest.v2.p6.commissioning.success}"
+				"{industrial_frontier.quest.v2.p6.commissioning.task}"
+				"{industrial_frontier.quest.v2.p6.commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p6.commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p6.commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p6.commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p6.commissioning.proof_help.3}"
+				"{industrial_frontier.quest.v2.p6.commissioning.proof_help.4}"
+				"{industrial_frontier.quest.v2.p6.commissioning.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/process/future/civil_nuclear_cycle.png"
 			id: "3BAFBFB90BC9F168"
 			shape: "gear"
 			size: 2d
-			subtitle: "Топливный и тепловой маршруты собраны; теперь пройдём от реактора до переработки и хранилища."
+			subtitle: "{industrial_frontier.quest.v2.p6.commissioning.lead}"
 			tags: ["if_commissioning_p6", "commissioning"]
 			tasks: [
 				{
@@ -1899,7 +1899,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер реактора деления."
+					title: "{industrial_frontier.task.v2.p6.commissioning.reactor.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -1909,7 +1909,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер турбины."
+					title: "{industrial_frontier.task.v2.p6.commissioning.turbine.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -1919,7 +1919,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте переработчик топлива."
+					title: "{industrial_frontier.task.v2.p6.commissioning.reprocessor.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -1929,19 +1929,19 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте базовую или более защищённую бочку для радиоактивных материалов."
+					title: "{industrial_frontier.task.v2.p6.commissioning.storage.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Гражданская АЭС принята"
+			title: "{industrial_frontier.quest.v2.p6.commissioning.title}"
 			x: 79d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Полный путь от подготовленного сырья до энергии, отработанного топлива и контролируемого хранения"
-		"Атомная станция начинается задолго до реактора. Сырьё очищают, переводят в подходящее соединение, разделяют изотопы, готовят топливо и только затем собирают активную зону."
-		"После пуска работа не заканчивается: тепло проходит замкнутый контур и турбину, а отработанное топливо попадает в отдельную цепочку переработки и хранения."
+		"{industrial_frontier.chapter.v2.p6.subtitle.1}"
+		"{industrial_frontier.chapter.v2.p6.subtitle.2}"
+		"{industrial_frontier.chapter.v2.p6.subtitle.3}"
 	]
-	title: "P6 — Гражданская атомная индустрия"
+	title: "{industrial_frontier.chapter.v2.p6.title}"
 }

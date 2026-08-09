@@ -13,354 +13,354 @@
 			hide_until_deps_complete: true
 			dependencies: ["3010000000000005"]
 			description: [
-				"Команда /if_threat status показывает эпоху, отношение шести фракций, действующие договоры и важные события, которые мир запомнил. /if_threat faction с названием стороны открывает её досье. /if_threat growth объясняет уровень баз, отрядов и доступные виды операций."
-				"Начните с /if_threat status и посмотрите, с кем отношения уже отличаются от нуля."
-				"Откройте досье интересующей стороны командой /if_threat faction и её коротким именем."
-				"Сравните отчёт /if_threat growth со своей текущей эпохой."
-				"Вы знаете, где отдельно проверить отношение, договор, памятный поступок и доступный уровень внешней силы."
-				"Ознакомьтесь с тремя отчётами о фракциях."
-				"Если команда не подсказывает продолжение, начните вводить /if_threat и выберите готовый вариант из списка."
-				"Если эпоха в отчёте не совпадает с вашим продвижением, сначала проверьте итоговое задание предыдущего этапа основной кампании."
-				"Галочка подтверждает знакомство с командами и не меняет отношение ни одной стороны."
-				"Дальше можно изучить досье сторон или отправиться на поиски первой настоящей базы."
+				"{industrial_frontier.quest.v2.factions.overview.purpose}"
+				"{industrial_frontier.quest.v2.factions.overview.step.1}"
+				"{industrial_frontier.quest.v2.factions.overview.step.2}"
+				"{industrial_frontier.quest.v2.factions.overview.step.3}"
+				"{industrial_frontier.quest.v2.factions.overview.success}"
+				"{industrial_frontier.quest.v2.factions.overview.task}"
+				"{industrial_frontier.quest.v2.factions.overview.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.overview.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.overview.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.overview.next}"
 			]
 			icon: "minecraft:compass"
 			id: "3025000000000001"
 			shape: "gear"
 			size: 1.6d
-			subtitle: "Отношения, договоры и эпоха хранятся отдельно, поэтому одного числа недостаточно, чтобы понять положение дел."
+			subtitle: "{industrial_frontier.quest.v2.factions.overview.lead}"
 			tags: ["factions", "status"]
 			tasks: [
 				{
 					id: "4025000000000001"
-					title: "Прочитайте, где смотреть состояние отношений и развитие фракций."
+					title: "{industrial_frontier.task.v2.factions.overview.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Три отчёта о внешнем мире"
+			title: "{industrial_frontier.quest.v2.factions.overview.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3025000000000001"]
 			description: [
-				"Землемер поддерживает распределённую промышленность, если она не отравляет соседей и не подчиняет себе город. Для него новая колония начинается с воды, пищи, жилья и дороги, а победа измеряется тем, работают ли эти службы после кризиса."
-				"Ожидайте от их баз читаемую уличную сетку, амбар, мастерскую, колодец и места укрытия."
-				"В бою они предпочитают удержание территории, эвакуацию жителей и контратаку после истощения противника."
-				"Лучшие основания для сотрудничества — орошение, снабжение квартала, ремонт дороги и защита поселения."
-				"Вы отличаете Землемер от армии или корпорации: его главным объектом остаётся работающий гражданский город."
-				"Ознакомьтесь с хозяйством, городом и обороной Землемера."
-				"Не принимайте практичную форму и простые материалы за слабость: их архитектура рассчитана на ремонт местными силами."
-				"Не обещайте защиту поселения, если ваш собственный запас еды и воды не переживёт длительный кризис."
-				"Досье объясняет характер стороны и не заключает договор автоматически."
-				"Землемер естественно сходится с Лигой и умеренным Корнем, но спорит с теми, кто ставит реквизицию или прибыль выше городских служб."
-				"Досье необязательно; оно помогает заранее понять мотивы стороны и возможные причины конфликта."
+				"{industrial_frontier.quest.v2.factions.zemlemer.purpose}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.step.1}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.step.2}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.step.3}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.success}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.task}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.next}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.optional_note}"
 			]
 			icon: "minecraft:bell"
 			id: "3A25000000000007"
 			optional: true
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Содружество выросло из фермерских коммун, мастерских и геодезистов, которым пришлось вместе защищать воду и дороги."
+			subtitle: "{industrial_frontier.quest.v2.factions.zemlemer.lead}"
 			tags: ["factions", "zemlemer", "city"]
 			tasks: [
 				{
 					id: "4A25000000000007"
-					title: "Прочитайте досье Землемера."
+					title: "{industrial_frontier.task.v2.factions.zemlemer.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Землемер: город как служба"
+			title: "{industrial_frontier.quest.v2.factions.zemlemer.title}"
 			x: 3d
 			y: -4d
 		}
 		{
 			dependencies: ["3025000000000001"]
 			description: [
-				"Меридиан считает тяжёлую промышленность основой цивилизации. Он предлагает крупные заказы, лицензии и быстрый рост, но требует измеримого качества, соблюдения сроков и контроля риска вместо устных обещаний."
-				"На их базах ищите прямоугольную заводскую сетку, склады, ветку, проходную и диспетчерскую."
-				"Их охрана действует стандартными отделениями и прежде всего защищает производство и транспорт."
-				"Перед любым крупным обязательством оцените запас мощности, сырья и возможность повторять поставку."
-				"Вы понимаете цену сотрудничества: Меридиан ускоряет индустрию, но превращает срыв поставки в политическую проблему."
-				"Ознакомьтесь с промышленной моделью и договорной дисциплиной Меридиана."
-				"Не принимайте единый стандарт за дружбу: консорциум ставит надёжность выше личной симпатии."
-				"Не соглашайтесь на объём, который держится на ручном переносе или одном случайном месторождении."
-				"Знакомство с досье не делает вас поставщиком консорциума."
-				"Меридиан легко работает с Лигой и Гелиосом, но сталкивается с Корнем из-за загрязнения, контроля земли и секретности производств."
-				"Досье необязательно и не создаёт контракт без отдельного согласия."
+				"{industrial_frontier.quest.v2.factions.meridian.purpose}"
+				"{industrial_frontier.quest.v2.factions.meridian.step.1}"
+				"{industrial_frontier.quest.v2.factions.meridian.step.2}"
+				"{industrial_frontier.quest.v2.factions.meridian.step.3}"
+				"{industrial_frontier.quest.v2.factions.meridian.success}"
+				"{industrial_frontier.quest.v2.factions.meridian.task}"
+				"{industrial_frontier.quest.v2.factions.meridian.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.meridian.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.meridian.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.meridian.next}"
+				"{industrial_frontier.quest.v2.factions.meridian.optional_note}"
 			]
 			icon: "minecraft:rail"
 			id: "3A25000000000008"
 			optional: true
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Консорциум продолжает традиции инженерных гильдий, заводов, железнодорожных компаний и бюро стандартов."
+			subtitle: "{industrial_frontier.quest.v2.factions.meridian.lead}"
 			tags: ["factions", "meridian", "industry"]
 			tasks: [
 				{
 					id: "4A25000000000008"
-					title: "Прочитайте досье Меридиана."
+					title: "{industrial_frontier.task.v2.factions.meridian.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Меридиан: порядок по контракту"
+			title: "{industrial_frontier.quest.v2.factions.meridian.title}"
 			x: 3d
 			y: -2.4d
 		}
 		{
 			dependencies: ["3025000000000001"]
 			description: [
-				"Лига зарабатывает посредничеством, фрахтом, складами и арбитражем. Она не стремится владеть каждым заводом или городом; ей важнее открытый маршрут, стандартная тара и договор, которому доверяют обе стороны."
-				"На стоянке Лиги ищите склад, ремонтный двор, причал или ветку и несколько путей выхода."
-				"Их охрана спасает груз и отходит, а не ведёт дорогую войну за каждый метр земли."
-				"Ваш лучший вклад — карта, исправный транспорт, безопасная перевалка и предсказуемое время доставки."
-				"Вы видите в Лиге логистическую сеть, а не ещё одного владельца территории или тяжёлой фабрики."
-				"Ознакомьтесь с экономикой маршрутов и конвойной доктриной Лиги."
-				"Не путайте нейтральный рынок с безусловной дружбой: нарушение гарантии для Лиги опаснее обычного спора о цене."
-				"Если маршрут зависит от единственного моста или причала, сначала подготовьте обход, а затем обещайте срок."
-				"Досье объясняет интересы Лиги, но не страхует ваш груз само по себе."
-				"Лига охотно связывает Полисы и Меридиан, но непримиримо относится к пиратству, блокаде и поддельным распискам."
-				"Досье необязательно и не заменяет реальный торговый договор."
+				"{industrial_frontier.quest.v2.factions.free_caravans.purpose}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.step.1}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.step.2}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.step.3}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.success}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.task}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.next}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.optional_note}"
 			]
 			icon: "minecraft:minecart"
 			id: "3A25000000000009"
 			optional: true
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Караваны, речники, железнодорожные артели и картографы объединились потому, что ни один рынок не живёт без дороги."
+			subtitle: "{industrial_frontier.quest.v2.factions.free_caravans.lead}"
 			tags: ["factions", "free_caravans", "trade"]
 			tasks: [
 				{
 					id: "4A25000000000009"
-					title: "Прочитайте досье Лиги Вольных Караванов."
+					title: "{industrial_frontier.task.v2.factions.free_caravans.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Лига: ценность маршрута"
+			title: "{industrial_frontier.quest.v2.factions.free_caravans.title}"
 			x: 3d
 			y: -0.8d
 		}
 		{
 			dependencies: ["3025000000000001"]
 			description: [
-				"Гелиос ценит точные технологии, но опасается их бесконтрольного распространения. Он предпочитает защищённые анклавы, несколько уровней допуска и малые профессиональные группы вместо открытого города и массовой войны."
-				"В их архитектуре обращайте внимание на шлюзы, сенсоры, раздельные зоны и резервную энергию."
-				"Ранние ячейки используют только снаряжение вашей эпохи; настоящий стратегический арсенал не появляется раньше P7."
-				"Доверие строится вокруг данных, карантина, контроля утечек и доказуемой безопасности опасной технологии."
-				"Вы понимаете, почему Гелиос может помочь остановить катастрофу и одновременно требовать ограничить доступ к её технологии."
-				"Ознакомьтесь с системой допуска и стратегией сдерживания Гелиоса."
-				"Не принимайте секретность за техническое превосходство в ранней игре: снаряжение ячейки ограничено вашей эпохой."
-				"Перед передачей образца оцените, какие знания и будущие решения вы отдаёте вместе с предметом."
-				"Знакомство с досье не выдаёт допуск к закрытым объектам."
-				"Гелиос сотрудничает с Меридианом в сложных проектах, но конфликтует с радикалами Корня и всеми, кто распространяет опасные технологии без контроля."
-				"Досье необязательно и не открывает закрытые технологии P7."
+				"{industrial_frontier.quest.v2.factions.helios.purpose}"
+				"{industrial_frontier.quest.v2.factions.helios.step.1}"
+				"{industrial_frontier.quest.v2.factions.helios.step.2}"
+				"{industrial_frontier.quest.v2.factions.helios.step.3}"
+				"{industrial_frontier.quest.v2.factions.helios.success}"
+				"{industrial_frontier.quest.v2.factions.helios.task}"
+				"{industrial_frontier.quest.v2.factions.helios.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.helios.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.helios.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.helios.next}"
+				"{industrial_frontier.quest.v2.factions.helios.optional_note}"
 			]
 			icon: "minecraft:spyglass"
 			id: "3A2500000000000A"
 			optional: true
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Директорат происходит от изолированных исследовательских, оборонных и космических программ, переживших потерю внешнего снабжения."
+			subtitle: "{industrial_frontier.quest.v2.factions.helios.lead}"
 			tags: ["factions", "helios", "research"]
 			tasks: [
 				{
 					id: "4A2500000000000A"
-					title: "Прочитайте досье Гелиоса."
+					title: "{industrial_frontier.task.v2.factions.helios.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Гелиос: знание под контролем"
+			title: "{industrial_frontier.quest.v2.factions.helios.title}"
 			x: 3d
 			y: 0.8d
 		}
 		{
 			dependencies: ["3025000000000001"]
 			description: [
-				"Пепельный Корень не отрицает машины. Умеренные принимают чистые замкнутые процессы и полезные инструменты, но выступают против сброса отходов, захвата воды и стратегических производств без согласия соседей."
-				"Их базы ищите по водосбору, семенному складу, лечебнице, скрытым тропам и запасным выходам."
-				"В бою они нарушают снабжение и уходят, вместо того чтобы держать открытый фронт."
-				"Сотрудничество строится на очистке воды, восстановлении почвы, честном отчёте о выбросах и защите общин."
-				"Вы отличаете экологическое требование от запрета технологий и понимаете, почему внутри движения возможен раскол."
-				"Ознакомьтесь с экологической программой и внутренним расколом Корня."
-				"Не называйте любой протест луддизмом: сначала выясните, какой сброс отходов или спор о земле стал причиной конфликта."
-				"Не обещайте замкнутый цикл, пока не знаете, куда уходит каждый побочный продукт."
-				"Досье не выбирает за вас сторону между умеренными и радикалами."
-				"Корень способен сотрудничать с Полисами и Лигой, но враждует с загрязняющими проектами Меридиана, секретными объектами Гелиоса и выжженной землёй Шрама."
-				"Досье необязательно и не делает одну ветвь движения единственным каноном."
+				"{industrial_frontier.quest.v2.factions.ash_root.purpose}"
+				"{industrial_frontier.quest.v2.factions.ash_root.step.1}"
+				"{industrial_frontier.quest.v2.factions.ash_root.step.2}"
+				"{industrial_frontier.quest.v2.factions.ash_root.step.3}"
+				"{industrial_frontier.quest.v2.factions.ash_root.success}"
+				"{industrial_frontier.quest.v2.factions.ash_root.task}"
+				"{industrial_frontier.quest.v2.factions.ash_root.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.ash_root.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.ash_root.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.ash_root.next}"
+				"{industrial_frontier.quest.v2.factions.ash_root.optional_note}"
 			]
 			icon: "minecraft:oak_sapling"
 			id: "3A2500000000000B"
 			optional: true
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Движение собрало переселенцев из зон аварий, лесные общины, агрономов, медиков и ремонтные артели."
+			subtitle: "{industrial_frontier.quest.v2.factions.ash_root.lead}"
 			tags: ["factions", "ash_root", "ecology"]
 			tasks: [
 				{
 					id: "4A2500000000000B"
-					title: "Прочитайте досье Пепельного Корня."
+					title: "{industrial_frontier.task.v2.factions.ash_root.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Корень: промышленность с пределом"
+			title: "{industrial_frontier.quest.v2.factions.ash_root.title}"
 			x: 3d
 			y: 2.4d
 		}
 		{
 			dependencies: ["3025000000000001"]
 			description: [
-				"Шрам живёт разбором техники на детали, выкупом, наёмной охраной и чёрным рынком. У него нет единой вечной политики: власть конкретного капитана держится на добыче, долге и доле, поэтому разные артели способны торговать, воевать или наниматься."
-				"Их базы собираются из повторно использованных модулей, тайников, ремонтного двора и узких зон огня."
-				"В бою они ищут слабое место, захватывают ценное и отходят до дорогой войны на истощение."
-				"Любую сделку оценивайте по имени капитана, обещанной доле и тому, кто отвечает за нарушение."
-				"Вы не считаете Шрам безликой армией: опасность и возможность сделки зависят от конкретной артели и её интереса."
-				"Ознакомьтесь с устройством артели, её добычей и тактикой налёта."
-				"Не полагайтесь на общий знак артели, если договор заключён только с одним капитаном."
-				"Не храните единственный резерв у очевидного входа: налётчики прежде всего ищут узкое место снабжения."
-				"Знакомство с артелью не отменяет вражду конкретного отряда."
-				"Шрам конфликтует почти со всеми из-за налётов и хищений, но отдельный капитан может стать наёмником, посредником или постоянным врагом."
-				"Досье необязательно; конкретные капитаны и разветвлённые сделки остаются задумкой для будущих сюжетных контрактов."
+				"{industrial_frontier.quest.v2.factions.scar.purpose}"
+				"{industrial_frontier.quest.v2.factions.scar.step.1}"
+				"{industrial_frontier.quest.v2.factions.scar.step.2}"
+				"{industrial_frontier.quest.v2.factions.scar.step.3}"
+				"{industrial_frontier.quest.v2.factions.scar.success}"
+				"{industrial_frontier.quest.v2.factions.scar.task}"
+				"{industrial_frontier.quest.v2.factions.scar.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.scar.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.scar.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.scar.next}"
+				"{industrial_frontier.quest.v2.factions.scar.optional_note}"
 			]
 			icon: "minecraft:tripwire_hook"
 			id: "3A2500000000000C"
 			optional: true
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "В артели сошлись разорившиеся старатели, дезертиры, контрабандисты, сборщики лома и экипажи погибших колоний."
+			subtitle: "{industrial_frontier.quest.v2.factions.scar.lead}"
 			tags: ["factions", "scar", "mercenaries"]
 			tasks: [
 				{
 					id: "4A2500000000000C"
-					title: "Прочитайте досье артели Шрам."
+					title: "{industrial_frontier.task.v2.factions.scar.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Шрам: долг, добыча и капитан"
+			title: "{industrial_frontier.quest.v2.factions.scar.title}"
 			x: 3d
 			y: 4d
 		}
 		{
 			dependencies: ["3025000000000001"]
 			description: [
-				"Шесть типов баз встречаются редко и соответствуют хозяйству своих владельцев. При первом посещении база считается обжитой, а её уровень выбирается по вашей эпохе, а не по возрасту мира."
-				"Возьмите карту, еду и недорогой комплект для дальней разведки."
-				"Ищите не только стены: водный узел, склад, вышка или ремонтный двор часто лучше выдают назначение базы."
-				"После входа дождитесь сообщения о стороне и отметьте координаты."
-				"Книга распознала одну из шести баз, а при первом посещении вы получили сообщение о её владельце и текущем уровне."
-				"Доберитесь до любой базы фракции."
-				"Если база не отзывается сразу, побудьте внутри до десяти секунд: сообщение может появиться с небольшой задержкой."
-				"Если сообщение не появляется, запишите координаты и предполагаемого владельца, чтобы позже сверить, относится ли постройка к фракционным базам."
-				"Подходят базы всех шести сторон из общего тега структур."
-				"На обжитой базе появляется посланник, через которого доступны досье и простые договоры."
+				"{industrial_frontier.quest.v2.factions.first_base.purpose}"
+				"{industrial_frontier.quest.v2.factions.first_base.step.1}"
+				"{industrial_frontier.quest.v2.factions.first_base.step.2}"
+				"{industrial_frontier.quest.v2.factions.first_base.step.3}"
+				"{industrial_frontier.quest.v2.factions.first_base.success}"
+				"{industrial_frontier.quest.v2.factions.first_base.task}"
+				"{industrial_frontier.quest.v2.factions.first_base.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.first_base.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.first_base.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.first_base.next}"
 			]
 			icon: "minecraft:campfire"
 			id: "3A8CF713DE372BBC"
 			shape: "gear"
 			size: 1.4d
-			subtitle: "Досье объясняет мотивы, но настоящий контакт начинается только у постройки, которую можно отметить на карте."
+			subtitle: "{industrial_frontier.quest.v2.factions.first_base.lead}"
 			tags: ["factions", "bases", "first_contact"]
 			tasks: [
 				{
 					id: "46E7754074BDA2B0"
 					structure: "#industrial_frontier:faction_base"
-					title: "Доберитесь до любой базы фракции."
+					title: "{industrial_frontier.task.v2.factions.first_base.structure.objective}"
 					type: "structure"
 				}
 			]
-			title: "Первая база в мире"
+			title: "{industrial_frontier.quest.v2.factions.first_base.title}"
 			x: 6d
 			y: 0d
 		}
 		{
 			dependencies: ["3A8CF713DE372BBC"]
 			description: [
-				"Посланник открывает короткое досье и меню договоров. Доступные кнопки зависят от отношения и эпохи. Разветвлённые характерные разговоры, торг, вербовка и сложные сюжетные решения пока остаются задумкой и не считаются пропущенной частью сюжета."
-				"Найдите посланника внутри обжитой базы и откройте разговор обычным взаимодействием."
-				"Сначала запросите досье стороны, затем посмотрите доступные договоры."
-				"Если нужной кнопки нет, сравните своё отношение и эпоху с порогом в списке договоров."
-				"Вы понимаете, что нынешний разговор даёт досье и договор, а отсутствие сложной реплики не скрывает обязательное задание."
-				"Ознакомьтесь с действующими возможностями посланника."
-				"Если посланник не появился, вернитесь к центру базы и дождитесь следующей проверки присутствия."
-				"Если меню договора пусто, откройте /if_threat treaty list и проверьте порог отношения и эпохи."
-				"Галочка отмечает чтение. Разговор с персонажем книга пока не подтверждает автоматически."
-				"Перед первым договором разберитесь, какие поступки действительно меняют отношение уже сейчас."
+				"{industrial_frontier.quest.v2.factions.envoy.purpose}"
+				"{industrial_frontier.quest.v2.factions.envoy.step.1}"
+				"{industrial_frontier.quest.v2.factions.envoy.step.2}"
+				"{industrial_frontier.quest.v2.factions.envoy.step.3}"
+				"{industrial_frontier.quest.v2.factions.envoy.success}"
+				"{industrial_frontier.quest.v2.factions.envoy.task}"
+				"{industrial_frontier.quest.v2.factions.envoy.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.envoy.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.envoy.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.envoy.next}"
 			]
 			icon: "minecraft:paper"
 			id: "3025000000000003"
 			shape: "circle"
 			size: 1.2d
-			subtitle: "Easy NPC создаёт именного представителя стороны, но нынешний посланник пока не является полноценным сюжетным героем."
+			subtitle: "{industrial_frontier.quest.v2.factions.envoy.lead}"
 			tags: ["factions", "envoy", "dialogue"]
 			tasks: [
 				{
 					id: "4025000000000003"
-					title: "Прочитайте, что умеет нынешний посланник."
+					title: "{industrial_frontier.task.v2.factions.envoy.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Посланник без притворства"
+			title: "{industrial_frontier.quest.v2.factions.envoy.title}"
 			x: 9d
 			y: -1.5d
 		}
 		{
 			dependencies: ["3025000000000003"]
 			description: [
-				"Уже сейчас учитываются заключение и разрыв договора, убийство посланника, мирный исход операции и силовое отражение. Обычная торговля, передача ресурсов и защита поселений пока не меняют отношение: для них ещё нет отдельных работающих заданий."
-				"После заметного события прочитайте сообщение: в нём должны быть сторона, изменение, новое значение и причина."
-				"Проверьте итог через /if_threat status."
-				"Помните, что крупный поступок частично влияет на союзников и противников задетой стороны."
-				"Вы можете восстановить причину каждого уже работающего изменения и не ждёте скрытой награды за действие, которое пока не учитывается."
-				"Узнайте, какие поступки уже меняют отношение фракций."
-				"Если число изменилось без сообщения, запишите событие и значение до и после."
-				"Если одноразовая причина начисляется повторно, укажите сторону и точную последовательность действий."
-				"Не нужно намеренно портить отношения ради выполнения этого задания."
-				"Репутация открывает возможность договора, но сам договор остаётся отдельным состоянием с собственными последствиями."
+				"{industrial_frontier.quest.v2.factions.reputation.purpose}"
+				"{industrial_frontier.quest.v2.factions.reputation.step.1}"
+				"{industrial_frontier.quest.v2.factions.reputation.step.2}"
+				"{industrial_frontier.quest.v2.factions.reputation.step.3}"
+				"{industrial_frontier.quest.v2.factions.reputation.success}"
+				"{industrial_frontier.quest.v2.factions.reputation.task}"
+				"{industrial_frontier.quest.v2.factions.reputation.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.reputation.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.reputation.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.reputation.next}"
 			]
 			icon: "minecraft:emerald"
 			id: "3025000000000004"
 			shape: "diamond"
 			size: 1.2d
-			subtitle: "Шкала от −100 до +100 не движется сама по себе: каждое изменение должно назвать поступок и величину."
+			subtitle: "{industrial_frontier.quest.v2.factions.reputation.lead}"
 			tags: ["factions", "reputation"]
 			tasks: [
 				{
 					id: "4025000000000004"
-					title: "Прочитайте, какие изменения отношения уже подключены."
+					title: "{industrial_frontier.task.v2.factions.reputation.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Отношение меняется по причине"
+			title: "{industrial_frontier.quest.v2.factions.reputation.title}"
 			x: 12d
 			y: -1.5d
 		}
 		{
 			dependencies: ["3025000000000004"]
 			description: [
-				"Перемирие, союз и дань уже останавливают подготовку враждебной операции этой стороны. Подписание даёт восемь пунктов отношения, а разрыв отменяет договор, отнимает сорок пунктов и навсегда оставляет отметку о предательстве. Скидки по торговому договору и прибытие союзного отряда пока не работают."
-				"Посмотрите пороги командой /if_threat treaty list."
-				"Перед подписанием проверьте сторону, тип договора и свою эпоху."
-				"После подписания откройте /if_threat status и убедитесь, что соглашение появилось в списке."
-				"Вы понимаете, какие соглашения действительно предотвращают операцию, и не ждёте от договора ещё не созданных торговых или военных преимуществ."
-				"Ознакомьтесь с порогами и действующими последствиями договоров."
-				"Если договор не подписывается, команда прямо покажет недостающую репутацию или эпоху."
-				"Если разорванный договор не оставил штраф и памятный след, зафиксируйте сторону и тип соглашения."
-				"Заключать договор ради этой справки не требуется."
-				"При плохом отношении и отсутствии защищающего договора сторона может начать плановую операцию."
+				"{industrial_frontier.quest.v2.factions.treaties.purpose}"
+				"{industrial_frontier.quest.v2.factions.treaties.step.1}"
+				"{industrial_frontier.quest.v2.factions.treaties.step.2}"
+				"{industrial_frontier.quest.v2.factions.treaties.step.3}"
+				"{industrial_frontier.quest.v2.factions.treaties.success}"
+				"{industrial_frontier.quest.v2.factions.treaties.task}"
+				"{industrial_frontier.quest.v2.factions.treaties.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.treaties.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.treaties.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.treaties.next}"
 			]
 			icon: "minecraft:writable_book"
 			id: "3025000000000005"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Хорошее отношение даёт право говорить, но не заключает соглашение за вас."
+			subtitle: "{industrial_frontier.quest.v2.factions.treaties.lead}"
 			tags: ["factions", "treaties"]
 			tasks: [
 				{
 					id: "4025000000000005"
-					title: "Прочитайте, какие последствия договоров уже действуют."
+					title: "{industrial_frontier.task.v2.factions.treaties.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Договор — отдельное решение"
+			title: "{industrial_frontier.quest.v2.factions.treaties.title}"
 			x: 15d
 			y: -1.5d
 		}
@@ -370,71 +370,71 @@
 				"3A2500000000000D"
 			]
 			description: [
-				"Событие проходит через планирование, разведку, объявление и четырёхминутное окно переговоров. Только затем возможны подготовка и активная стадия. Команда /if_threat operation status показывает текущее положение, а /if_threat operation negotiate принимает мирное решение в своё окно."
-				"При первом сообщении проверьте сторону и название операции."
-				"Следите за стадией через /if_threat operation status, не ожидая появления отряда без предупреждения."
-				"Если хотите договориться, используйте команду только во время открытого окна переговоров."
-				"Вы знаете, что активной стадии предшествуют предупреждение и переговоры, а нейтральная сторона ничего против вас не планирует."
-				"Ознакомьтесь с порядком предупреждения и переговоров."
-				"Если операция началась при отношении выше −11, запишите сторону и значение из отчёта."
-				"Если активная стадия наступила без окна переговоров, сохраните порядок сообщений для проверки."
-				"Провоцировать враждебность или ждать случайного события не требуется."
-				"Полная глава операций отдельно разбирает события разных эпох, действующие отряды и восстановление после столкновения."
+				"{industrial_frontier.quest.v2.factions.operations.purpose}"
+				"{industrial_frontier.quest.v2.factions.operations.step.1}"
+				"{industrial_frontier.quest.v2.factions.operations.step.2}"
+				"{industrial_frontier.quest.v2.factions.operations.step.3}"
+				"{industrial_frontier.quest.v2.factions.operations.success}"
+				"{industrial_frontier.quest.v2.factions.operations.task}"
+				"{industrial_frontier.quest.v2.factions.operations.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.operations.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.operations.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.operations.next}"
 			]
 			icon: "minecraft:bell"
 			id: "3025000000000006"
 			shape: "octagon"
 			size: 1.3d
-			subtitle: "Операция возможна только у стороны с отношением −11 или ниже; пока вы вне мира, новая угроза не планируется и начатый отсчёт не движется."
+			subtitle: "{industrial_frontier.quest.v2.factions.operations.lead}"
 			tags: ["factions", "operations", "warning"]
 			tasks: [
 				{
 					id: "4025000000000006"
-					title: "Прочитайте краткий порядок плановой операции."
+					title: "{industrial_frontier.task.v2.factions.operations.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Сначала предупреждение"
+			title: "{industrial_frontier.quest.v2.factions.operations.title}"
 			x: 18d
 			y: -1.5d
 		}
 		{
 			dependencies: ["3A8CF713DE372BBC"]
 			description: [
-				"Сейчас действует такая лестница: P0 — ранний лагерь; P1–P2 — укреплённый лагерь; P3 — постоянная база; P4–P5 — промышленный аванпост; P6 — военный комплекс; P7–P8 — высокотехнологичный объект; P9 — стратегический центр. Выбранный уровень сохраняется для этого места и выводится в сообщении."
-				"Введите /if_threat growth и сравните название текущего уровня со своей эпохой."
-				"Не ждите, что уже найденная постройка сама заменит дерево на бетон или добавит новые комнаты после повышения эпохи."
-				"Не ожидайте отдельный поздний склад или улучшенную добычу только из-за названия уровня: такие изменения пока не связаны с базой."
-				"Оценивайте фактическую постройку по тому, что в ней действительно есть: входы, пути отхода, склад, мастерская, укрытия, а на поздних уровнях — источник энергии."
-				"Вы знаете все семь названий, понимаете их связь с эпохой и не принимаете сохранённый уровень за автоматическую перестройку базы."
-				"Разберитесь, что уже означает уровень базы и чего он пока не меняет."
-				"Если отчёт показывает неверный уровень, сначала сравните сохранённую эпоху с итоговым заданием основной кампании."
-				"Если архитектура не соответствует громкому названию, перед вами ограничение нынешних баз, а не спрятанная комната или пропущенный этап."
-				"Отметка не повышает уровень найденной базы и не перестраивает её."
-				"Именной посланник уже появляется на обжитой базе независимо от её уровня; через него доступны досье и простые договоры."
+				"{industrial_frontier.quest.v2.factions.base_growth.purpose}"
+				"{industrial_frontier.quest.v2.factions.base_growth.step.1}"
+				"{industrial_frontier.quest.v2.factions.base_growth.step.2}"
+				"{industrial_frontier.quest.v2.factions.base_growth.step.3}"
+				"{industrial_frontier.quest.v2.factions.base_growth.step.4}"
+				"{industrial_frontier.quest.v2.factions.base_growth.success}"
+				"{industrial_frontier.quest.v2.factions.base_growth.task}"
+				"{industrial_frontier.quest.v2.factions.base_growth.diagnostic.1}"
+				"{industrial_frontier.quest.v2.factions.base_growth.diagnostic.2}"
+				"{industrial_frontier.quest.v2.factions.base_growth.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.base_growth.next}"
 			]
 			icon: "minecraft:stone_bricks"
 			id: "3A2500000000000D"
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "При первом посещении база получает уровень вашей эпохи, но её постройка пока не меняется вместе с этим названием."
+			subtitle: "{industrial_frontier.quest.v2.factions.base_growth.lead}"
 			tags: ["factions", "bases", "growth"]
 			tasks: [
 				{
 					id: "4A2500000000000D"
-					title: "Прочитайте, как семь уровней базы соотносятся с технологическими эпохами."
+					title: "{industrial_frontier.task.v2.factions.base_growth.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Уровень базы пока остаётся названием"
+			title: "{industrial_frontier.quest.v2.factions.base_growth.title}"
 			x: 9d
 			y: 1.5d
 		}
 	]
 	subtitle: [
-		"Шесть сил с разной экономикой, архитектурой, отношением к городу и способом решать конфликты"
-		"Фракции здесь отличаются не цветом формы. Одна защищает коммунальные службы, другая строит контракты вокруг тяжёлой промышленности, третья живёт маршрутами, а четвёртая оценивает риск опасных технологий."
-		"Сейчас работают базы, посланники, досье, репутация, договоры и плановые операции. Разветвлённые сюжетные диалоги, вербовка специалистов и сложные контракты остаются отдельной задумкой; эта глава не просит искать ещё не написанные реплики."
+		"{industrial_frontier.chapter.v2.factions.subtitle.1}"
+		"{industrial_frontier.chapter.v2.factions.subtitle.2}"
+		"{industrial_frontier.chapter.v2.factions.subtitle.3}"
 	]
-	title: "Фракции живого мира"
+	title: "{industrial_frontier.chapter.v2.factions.title}"
 }

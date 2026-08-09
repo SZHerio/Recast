@@ -13,51 +13,51 @@
 			hide_until_deps_complete: true
 			dependencies: ["3E35ACD2C187646B"]
 			description: [
-				"На этом этапе вы работаете с низким напряжением LV. Источник, кабель, буфер и машина должны поддерживать эту ступень, иначе сеть будет работать неправильно или повредит оборудование."
-				"Разберите отдельно напряжение, силу тока и ёмкость аккумуляторов."
-				"Наметьте короткую цепь: паровая турбина LV, кабель LV, аккумуляторный буфер LV и одна машина LV."
-				"Вы понимаете, почему большой запас энергии не защищает машину от неверного напряжения и почему слишком слабый кабель ограничивает всю сеть."
-				"Разберитесь, чем отличаются напряжение, сила тока и запас энергии."
-				"Перед подключением сравните ступень источника, кабеля, буфера и машины. Если хотя бы один элемент рассчитан на другую ступень, сначала исправьте схему."
-				"Если термины пока смешиваются, не подключайте машину. Ещё раз сравните ступени источника, кабеля, буфера и потребителя."
-				"Первым источником электричества станет паровая турбина LV."
+				"{industrial_frontier.quest.v2.p3.intro.purpose}"
+				"{industrial_frontier.quest.v2.p3.intro.step.1}"
+				"{industrial_frontier.quest.v2.p3.intro.step.2}"
+				"{industrial_frontier.quest.v2.p3.intro.success}"
+				"{industrial_frontier.quest.v2.p3.intro.task}"
+				"{industrial_frontier.quest.v2.p3.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.intro.next}"
 			]
 			icon: "minecraft:redstone_torch"
 			id: "3013000000000001"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "В GTCEu энергия измеряется в EU. Ступень напряжения определяет, какие машины можно подключить, сила тока — сколько энергии выдержит кабель, а аккумуляторы задают только запас."
+			subtitle: "{industrial_frontier.quest.v2.p3.intro.lead}"
 			tags: ["mainline", "briefing"]
 			tasks: [
 				{
 					id: "4013000000000001"
-					title: "Разберитесь, чем отличаются напряжение, сила тока и запас энергии."
+					title: "{industrial_frontier.task.v2.p3.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Как не сжечь первую сеть"
+			title: "{industrial_frontier.quest.v2.p3.intro.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3013000000000001"]
 			description: [
-				"Турбина вырабатывает энергию, но не хранит её. Для устойчивой работы ей нужны постоянная подача пара и электрический выход ступени LV."
-				"Соберите турбину LV и установите её рядом с паровой магистралью, оставив доступ к сторонам."
-				"Откройте интерфейс, подведите пар и не подключайте потребитель до установки подходящего кабеля."
-				"Турбина установлена, получает пар и готова передавать энергию по кабелю LV."
-				"Получите, установите и откройте одну паровую турбину LV."
-				"Если турбина не работает, сначала проверьте запас пара и сторону его ввода."
-				"Если пар есть, но сеть пуста, проверьте электрический выход и соединение кабеля."
-				"Турбина останется источником первой сети."
-				"Проверьте доступ к паровому входу и электрическому выходу."
-				"Теперь проведём энергию по оловянному кабелю LV."
+				"{industrial_frontier.quest.v2.p3.generator.purpose}"
+				"{industrial_frontier.quest.v2.p3.generator.step.1}"
+				"{industrial_frontier.quest.v2.p3.generator.step.2}"
+				"{industrial_frontier.quest.v2.p3.generator.success}"
+				"{industrial_frontier.quest.v2.p3.generator.task}"
+				"{industrial_frontier.quest.v2.p3.generator.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.generator.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.generator.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.generator.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.generator.next}"
 			]
 			icon: "gtceu:lv_steam_turbine"
 			id: "336E199F22435704"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Паровая турбина превращает пар из уже знакомого котельного контура в энергию EU для первой сети GTCEu."
+			subtitle: "{industrial_frontier.quest.v2.p3.generator.lead}"
 			tags: ["mainline", "eu_source", "lv"]
 			tasks: [
 				{
@@ -67,7 +67,7 @@
 						id: "gtceu:lv_steam_turbine"
 					}
 					consume_items: false
-					title: "Получите одну паровую турбину LV."
+					title: "{industrial_frontier.task.v2.p3.generator.item.objective}"
 					type: "item"
 				}
 				{
@@ -77,33 +77,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите турбину LV и откройте её интерфейс."
+					title: "{industrial_frontier.task.v2.p3.generator.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Пар становится электричеством"
+			title: "{industrial_frontier.quest.v2.p3.generator.title}"
 			x: 2d
 			y: 0d
 		}
 		{
 			dependencies: ["336E199F22435704"]
 			description: [
-				"Сначала нужна короткая и обозримая линия. Так проще найти разрыв или неверно подключённую сторону, а материалы не уйдут на лишние десятки блоков."
-				"Получите восемь одинарных оловянных кабелей."
-				"Проложите короткий доступный участок от турбины к месту будущего аккумуляторного буфера."
-				"Кабельная трасса начата, а оставшейся партии хватит, чтобы подключить буфер и первую машину рядом с турбиной."
-				"Изготовьте восемь одинарных оловянных кабелей и установите хотя бы один."
-				"Если сеть не получает питание, проверьте непрерывность трассы и правильные стороны блоков."
-				"Если кабель перегружен, уменьшите число потребителей или выберите проводник с подходящей пропускной способностью."
-				"Партия предназначена для короткой учебной сети LV."
-				"Размещайте кабель между источником и будущим буфером, не подключая неверный класс машины."
-				"Между источником и машиной поставим аккумуляторный буфер LV."
+				"{industrial_frontier.quest.v2.p3.cable.purpose}"
+				"{industrial_frontier.quest.v2.p3.cable.step.1}"
+				"{industrial_frontier.quest.v2.p3.cable.step.2}"
+				"{industrial_frontier.quest.v2.p3.cable.success}"
+				"{industrial_frontier.quest.v2.p3.cable.task}"
+				"{industrial_frontier.quest.v2.p3.cable.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.cable.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.cable.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.cable.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.cable.next}"
 			]
 			icon: "gtceu:tin_single_cable"
 			id: "3F3E8024F482B958"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Одинарный оловянный кабель подходит для сети LV, но выдерживает только указанную в подсказке силу тока."
+			subtitle: "{industrial_frontier.quest.v2.p3.cable.lead}"
 			tags: ["mainline", "cable", "lv"]
 			tasks: [
 				{
@@ -114,7 +114,7 @@
 						id: "gtceu:tin_single_cable"
 					}
 					consume_items: false
-					title: "Получите восемь одинарных оловянных кабелей."
+					title: "{industrial_frontier.task.v2.p3.cable.items.objective}"
 					type: "item"
 				}
 				{
@@ -124,35 +124,35 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите хотя бы один одинарный оловянный кабель."
+					title: "{industrial_frontier.task.v2.p3.cable.place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Кабель — ограничение, не декор"
+			title: "{industrial_frontier.quest.v2.p3.cable.title}"
 			x: 4d
 			y: 0d
 		}
 		{
 			dependencies: ["3F3E8024F482B958"]
 			description: [
-				"Буфер хранит энергию только через вставленные аккумуляторы и не повышает допустимое напряжение. Он также делает состояние сети видимым: разряженный элемент указывает на проблему источника, заряженный при стоящей машине — на остановленный выход."
-				"Установите буфер LV между турбиной и будущим потребителем."
-				"Вставьте хотя бы один совместимый аккумулятор LV, зарядите его от турбины и откройте интерфейс."
-				"Проверьте направление сторон: пустой корпус без аккумулятора не питает машину."
-				"Буфер установлен между турбиной и будущей машиной, содержит аккумулятор и может передавать энергию потребителю."
-				"Получите буфер LV, вставьте хотя бы один совместимый аккумулятор, зарядите его и откройте интерфейс."
-				"Если буфер пуст, проверьте турбину, пар и кабель до входа."
-				"Если буфер полный, а машина не работает, проверьте выходную сторону, кабель и класс напряжения потребителя."
-				"Буфер останется между источником и потребителем."
-				"Пустой корпус буфера не передаёт энергию. Подойдёт кадмиевый, литиевый или натриевый аккумулятор LV из списка задачи."
-				"Проверьте стороны сети и ячейки аккумуляторов."
-				"Теперь подготовим редстоун и три основные детали первой машины LV."
+				"{industrial_frontier.quest.v2.p3.buffer.purpose}"
+				"{industrial_frontier.quest.v2.p3.buffer.step.1}"
+				"{industrial_frontier.quest.v2.p3.buffer.step.2}"
+				"{industrial_frontier.quest.v2.p3.buffer.step.3}"
+				"{industrial_frontier.quest.v2.p3.buffer.success}"
+				"{industrial_frontier.quest.v2.p3.buffer.task}"
+				"{industrial_frontier.quest.v2.p3.buffer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.buffer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.buffer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.buffer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.buffer.proof_help.3}"
+				"{industrial_frontier.quest.v2.p3.buffer.next}"
 			]
 			icon: "gtceu:lv_battery_buffer_4x"
 			id: "3BBD1D3385C43666"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Аккумуляторный буфер сглаживает разницу между выработкой турбины и потреблением машины."
+			subtitle: "{industrial_frontier.quest.v2.p3.buffer.lead}"
 			tags: ["mainline", "buffer", "lv"]
 			tasks: [
 				{
@@ -162,7 +162,7 @@
 						id: "gtceu:lv_battery_buffer_4x"
 					}
 					consume_items: false
-					title: "Получите аккумуляторный буфер LV на четыре элемента."
+					title: "{industrial_frontier.task.v2.p3.buffer.item.objective}"
 					type: "item"
 				}
 				{
@@ -174,7 +174,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/lv_batteries)"
 						}
 					}
-					title: "Подготовьте хотя бы один совместимый аккумулятор LV."
+					title: "{industrial_frontier.task.v2.p3.buffer.battery.objective}"
 					type: "item"
 				}
 				{
@@ -184,31 +184,31 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите буфер и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p3.buffer.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Буфер между источником и нагрузкой"
+			title: "{industrial_frontier.quest.v2.p3.buffer.title}"
 			x: 6d
 			y: 0d
 		}
 		{
 			dependencies: ["3013000000000001"]
 			description: [
-				"Восемь единиц хватит на первые схемы и управляющие детали. Редстоун передаёт сигналы и входит в рецепты, но не заменяет силовой кабель EU."
-				"Получите восемь единиц принятой редстоуновой пыли."
-				"Сохраните её для базовых электронных схем и не прокладывайте редстоун вместо кабеля EU."
-				"Редстоуновый запас готов, а различие между управляющим материалом и силовой сетью понятно."
-				"Получите восемь единиц подходящей редстоуновой пыли."
-				"Если похожая пыль не засчитывается, откройте задание и сверяйтесь со списком допустимых вариантов."
-				"Задание принимает несколько совместимых вариантов и не расходует предметы."
-				"Редстоун, сталь и медь понадобятся в первых компонентах LV."
+				"{industrial_frontier.quest.v2.p3.signal.purpose}"
+				"{industrial_frontier.quest.v2.p3.signal.step.1}"
+				"{industrial_frontier.quest.v2.p3.signal.step.2}"
+				"{industrial_frontier.quest.v2.p3.signal.success}"
+				"{industrial_frontier.quest.v2.p3.signal.task}"
+				"{industrial_frontier.quest.v2.p3.signal.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.signal.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.signal.next}"
 			]
 			icon: "minecraft:redstone"
 			id: "3013000000000005"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Редстоун здесь становится сырьём электроники, а не заменой силового кабеля."
+			subtitle: "{industrial_frontier.quest.v2.p3.signal.lead}"
 			tags: ["mainline", "electronics"]
 			tasks: [
 				{
@@ -221,11 +221,11 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/redstone_dusts)"
 						}
 					}
-					title: "Получите восемь единиц подходящей редстоуновой пыли."
+					title: "{industrial_frontier.task.v2.p3.signal.dust.objective}"
 					type: "item"
 				}
 			]
-			title: "Редстоун для первых схем"
+			title: "{industrial_frontier.quest.v2.p3.signal.title}"
 			x: 4d
 			y: 2d
 		}
@@ -235,24 +235,24 @@
 				"3013000000000005"
 			]
 			description: [
-				"Вы изготовите только те детали, которые сразу понадобятся первой машине: две схемы, два двигателя и один корпус."
-				"По действующим рецептам JEI получите две базовые электронные схемы."
-				"Соберите два двигателя LV и один корпус машины LV."
-				"Не делайте большой запас вручную. Когда деталей понадобится больше, сначала наладьте их повторяемое производство."
-				"Две схемы, два двигателя и один корпус находятся в инвентаре и готовы стать первой LV-машиной."
-				"Получите две базовые схемы, два двигателя LV и один корпус машины LV."
-				"Если рецепт обрывается, откройте применения последнего доступного компонента и проверьте правильный класс LV."
-				"Если рецепт требует много одинаковых ручных операций, остановитесь на указанной партии: сейчас важнее запустить первую машину."
-				"Подойдёт любая схема класса LV из списка задачи: рецептам первой электрической ступени важен уровень схемы, а не конкретная технологическая разновидность."
-				"Двигатели останутся в машинном цехе."
-				"Корпус станет основой первого электрического потребителя."
-				"Из компонентов соберём электрическую печь — первый обязательный потребитель сети."
+				"{industrial_frontier.quest.v2.p3.components.purpose}"
+				"{industrial_frontier.quest.v2.p3.components.step.1}"
+				"{industrial_frontier.quest.v2.p3.components.step.2}"
+				"{industrial_frontier.quest.v2.p3.components.step.3}"
+				"{industrial_frontier.quest.v2.p3.components.success}"
+				"{industrial_frontier.quest.v2.p3.components.task}"
+				"{industrial_frontier.quest.v2.p3.components.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.components.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.components.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.components.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.components.proof_help.3}"
+				"{industrial_frontier.quest.v2.p3.components.next}"
 			]
 			icon: "gtceu:basic_electronic_circuit"
 			id: "3A13000000000003"
 			shape: "gear"
 			size: 1.4d
-			subtitle: "Электрическая машина складывается из управления, движения и защищённого корпуса — это три разные функции."
+			subtitle: "{industrial_frontier.quest.v2.p3.components.lead}"
 			tags: ["mainline", "components", "lv"]
 			tasks: [
 				{
@@ -265,7 +265,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(gtceu:circuits/lv)"
 						}
 					}
-					title: "Получите две схемы класса LV."
+					title: "{industrial_frontier.task.v2.p3.components.circuit.objective}"
 					type: "item"
 				}
 				{
@@ -276,7 +276,7 @@
 						id: "gtceu:lv_electric_motor"
 					}
 					consume_items: false
-					title: "Получите два электрических двигателя LV."
+					title: "{industrial_frontier.task.v2.p3.components.motor.objective}"
 					type: "item"
 				}
 				{
@@ -286,34 +286,34 @@
 						id: "gtceu:lv_machine_hull"
 					}
 					consume_items: false
-					title: "Получите один корпус машины LV."
+					title: "{industrial_frontier.task.v2.p3.components.hull.objective}"
 					type: "item"
 				}
 			]
-			title: "Схема, двигатель и корпус"
+			title: "{industrial_frontier.quest.v2.p3.components.title}"
 			x: 8d
 			y: 1d
 		}
 		{
 			dependencies: ["3A13000000000003"]
 			description: [
-				"Печь выбрана как простой первый потребитель: её легко проверить, а источник, кабель и буфер остаются теми же для следующих машин."
-				"Соберите электрическую печь LV из подготовленных компонентов."
-				"Установите её после аккумуляторного буфера и откройте интерфейс."
-				"Сверьте один доступный рецепт, но не подключайте машину к напряжению другого класса."
-				"Печь установлена и доступна; первая сеть имеет конкретного потребителя LV."
-				"Получите, установите и откройте одну электрическую печь LV."
-				"Если машина не получает питание, проверьте выход буфера, кабель и сторону подключения."
-				"Если интерфейс активен, но рецепт не идёт, проверьте вход, свободный выход и достаточный запас энергии."
-				"Машина останется первым потребителем сети."
-				"Проверьте входную сторону кабеля и свободный выход."
-				"Первая машина готова. Теперь проверим всю цепь от подачи пара до завершённой операции."
+				"{industrial_frontier.quest.v2.p3.first_machine.purpose}"
+				"{industrial_frontier.quest.v2.p3.first_machine.step.1}"
+				"{industrial_frontier.quest.v2.p3.first_machine.step.2}"
+				"{industrial_frontier.quest.v2.p3.first_machine.step.3}"
+				"{industrial_frontier.quest.v2.p3.first_machine.success}"
+				"{industrial_frontier.quest.v2.p3.first_machine.task}"
+				"{industrial_frontier.quest.v2.p3.first_machine.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.first_machine.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.first_machine.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.first_machine.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.first_machine.next}"
 			]
 			icon: "gtceu:lv_electric_furnace"
 			id: "3F36DF1551176542"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Электрическая печь превращает набор компонентов в понятную рабочую нагрузку для сети."
+			subtitle: "{industrial_frontier.quest.v2.p3.first_machine.lead}"
 			tags: ["mainline", "lv_machine"]
 			tasks: [
 				{
@@ -323,7 +323,7 @@
 						id: "gtceu:lv_electric_furnace"
 					}
 					consume_items: false
-					title: "Получите одну электрическую печь LV."
+					title: "{industrial_frontier.task.v2.p3.first_machine.item.objective}"
 					type: "item"
 				}
 				{
@@ -333,33 +333,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите электрическую печь LV и откройте её интерфейс."
+					title: "{industrial_frontier.task.v2.p3.first_machine.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Первый потребитель LV"
+			title: "{industrial_frontier.quest.v2.p3.first_machine.title}"
 			x: 10d
 			y: 1d
 		}
 		{
 			dependencies: ["3A13000000000003"]
 			description: [
-				"Это необязательное расширение. Стройте мацератор, если дробление уже стало узким местом; переход в следующую эпоху от него не зависит."
-				"Соберите мацератор LV, установите его после буфера и откройте интерфейс."
-				"Мацератор доступен как второй потребитель сети и может заменить часть парового маршрута."
-				"Получите, установите и откройте один электрический мацератор LV."
-				"Если подключение останавливает сеть, проверьте суммарную нагрузку и не запускайте обе машины одновременно без достаточного источника."
-				"Машина необязательна для перехода, но расширяет рудный поток."
-				"Подключайте его только к сети соответствующего класса."
-				"Расширяйте сеть только после измерения реальной нагрузки."
-				"Машина необязательна для P3; выбирайте её, если рудная переработка уже стала узким местом."
+				"{industrial_frontier.quest.v2.p3.optional_macerator.purpose}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.step.1}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.success}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.task}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.next}"
+				"{industrial_frontier.quest.v2.p3.optional_macerator.optional_note}"
 			]
 			icon: "gtceu:lv_macerator"
 			id: "3A13000000000001"
 			optional: true
 			shape: "circle"
 			size: 1.1d
-			subtitle: "Мацератор LV переносит знакомый рудный процесс с пара на управляемую электрическую сеть."
+			subtitle: "{industrial_frontier.quest.v2.p3.optional_macerator.lead}"
 			tags: ["optional", "lv_machine", "ore_processing"]
 			tasks: [
 				{
@@ -369,7 +369,7 @@
 						id: "gtceu:lv_macerator"
 					}
 					consume_items: false
-					title: "Получите один электрический мацератор LV."
+					title: "{industrial_frontier.task.v2.p3.optional_macerator.item.objective}"
 					type: "item"
 				}
 				{
@@ -379,33 +379,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите мацератор LV и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p3.optional_macerator.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Электрическое дробление"
+			title: "{industrial_frontier.quest.v2.p3.optional_macerator.title}"
 			x: 10d
 			y: 3d
 		}
 		{
 			dependencies: ["3A13000000000003"]
 			description: [
-				"Это необязательное расширение. Кузнечный молот стоит строить тогда, когда ручное формование действительно стало узким местом."
-				"Соберите кузнечный молот LV, подключите после буфера и откройте его интерфейс."
-				"Формовочная машина доступна как дополнительный потребитель сети LV."
-				"Получите, установите и откройте один электрический кузнечный молот LV."
-				"Если сеть проседает при запуске молота, остановите параллельные машины и проверьте источник, буфер и кабель."
-				"Молот необязателен и остаётся частью формовочного цеха."
-				"Проверьте электрическую сторону и свободный выход."
-				"После снятия узкого места вернитесь к приёмке основной электрической линии."
-				"Машина необязательна для перехода; стройте её, когда ручное или паровое формование действительно ограничивает производство."
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.purpose}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.step.1}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.success}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.task}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.next}"
+				"{industrial_frontier.quest.v2.p3.optional_forge_hammer.optional_note}"
 			]
 			icon: "gtceu:lv_forge_hammer"
 			id: "3A13000000000002"
 			optional: true
 			shape: "circle"
 			size: 1.1d
-			subtitle: "Кузнечный молот LV снимает повторяемую ручную работу с пластинами и заготовками."
+			subtitle: "{industrial_frontier.quest.v2.p3.optional_forge_hammer.lead}"
 			tags: ["optional", "lv_machine", "forming"]
 			tasks: [
 				{
@@ -415,7 +415,7 @@
 						id: "gtceu:lv_forge_hammer"
 					}
 					consume_items: false
-					title: "Получите один электрический кузнечный молот LV."
+					title: "{industrial_frontier.task.v2.p3.optional_forge_hammer.item.objective}"
 					type: "item"
 				}
 				{
@@ -425,11 +425,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите кузнечный молот LV и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p3.optional_forge_hammer.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Электрическое формование"
+			title: "{industrial_frontier.quest.v2.p3.optional_forge_hammer.title}"
 			x: 12d
 			y: 3d
 		}
@@ -439,30 +439,30 @@
 				"3F3E8024F482B958"
 			]
 			description: [
-				"Одностороннее правило не позволяет обходить промышленное развитие и исключает замкнутые энергетические петли. Основная фабрика по-прежнему питается сетью GTCEu."
-				"Запомните разрешённое направление: EU можно передать совместимому потребителю FE."
-				"Не рассчитывайте вернуть FE в сеть GTCEu: обратное направление отключено."
-				"Вы знаете, в каком направлении можно передавать энергию между системами EU и FE."
-				"Прочитайте направление моста EU→FE и подтвердите запрет обратной петли."
-				"Если FE-механизм не получает энергию, проверьте совместимость выбранного выхода и сторону подключения."
-				"Если схема требует передать FE обратно в EU, измените её: разрешённого обратного преобразователя нет."
-				"Если схема требует FE→EU, перестройте её: такой обратный конвертер отключён."
-				"Соберём основную LV-линию и проверим доступ к источнику, буферу и потребителю."
+				"{industrial_frontier.quest.v2.p3.bridge.purpose}"
+				"{industrial_frontier.quest.v2.p3.bridge.step.1}"
+				"{industrial_frontier.quest.v2.p3.bridge.step.2}"
+				"{industrial_frontier.quest.v2.p3.bridge.success}"
+				"{industrial_frontier.quest.v2.p3.bridge.task}"
+				"{industrial_frontier.quest.v2.p3.bridge.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.bridge.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.bridge.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.bridge.next}"
 			]
 			icon: "minecraft:lever"
 			id: "3013000000000007"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Сеть GTCEu использует EU, а многие другие механизмы — Forge Energy, или FE. В этой сборке энергию можно передавать из EU в совместимый FE-механизм, но не обратно."
+			subtitle: "{industrial_frontier.quest.v2.p3.bridge.lead}"
 			tags: ["mainline", "energy_bridge", "anti_loop"]
 			tasks: [
 				{
 					id: "4013000000000007"
-					title: "Прочитайте направление моста EU→FE и подтвердите запрет обратной петли."
+					title: "{industrial_frontier.task.v2.p3.bridge.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Две энергетические системы"
+			title: "{industrial_frontier.quest.v2.p3.bridge.title}"
 			x: 10d
 			y: -1d
 		}
@@ -472,24 +472,24 @@
 				"3013000000000007"
 			]
 			description: [
-				"Квестбук может проверить, что вы открыли основные блоки, но не видит весь путь энергии EU. Поэтому проведите одну пробную операцию сами и проследите, как меняется заряд буфера."
-				"Откройте турбину и проверьте подачу пара."
-				"Откройте буфер и сравните его состояние до и после запуска машины."
-				"Откройте электрическую печь и выполните одну доступную учебную операцию."
-				"Если печь завершила операцию, а заряд буфера ожидаемо изменился, первая электрическая линия действительно работает."
-				"Откройте турбину, аккумуляторный буфер и электрическую печь основной сети."
-				"Пустой буфер указывает на источник или входной кабель; полный буфер при стоящей машине — на выход или потребитель."
-				"Если блоки доступны, но операция не идёт, проверьте класс напряжения, стороны и рецепт."
-				"Проверьте паровой вход и электрический выход."
-				"Проверьте ячейки и стороны входа и выхода."
-				"Проверьте вход, выход и подключение LV."
-				"Осталась итоговая приёмка электрического цеха и переход к P4."
+				"{industrial_frontier.quest.v2.p3.line.purpose}"
+				"{industrial_frontier.quest.v2.p3.line.step.1}"
+				"{industrial_frontier.quest.v2.p3.line.step.2}"
+				"{industrial_frontier.quest.v2.p3.line.step.3}"
+				"{industrial_frontier.quest.v2.p3.line.success}"
+				"{industrial_frontier.quest.v2.p3.line.task}"
+				"{industrial_frontier.quest.v2.p3.line.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.line.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.line.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.line.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.line.proof_help.3}"
+				"{industrial_frontier.quest.v2.p3.line.next}"
 			]
 			icon: "gtceu:lv_battery_buffer_4x"
 			id: "32C669D0E2429C33"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Турбина, кабель, буфер и печь теперь читаются как одна цепочка, а не как четыре разрозненных блока."
+			subtitle: "{industrial_frontier.quest.v2.p3.line.lead}"
 			tags: ["mainline", "lv_network", "operation"]
 			tasks: [
 				{
@@ -499,7 +499,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте турбину основной сети."
+					title: "{industrial_frontier.task.v2.p3.line.turbine_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -509,7 +509,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте аккумуляторный буфер основной сети."
+					title: "{industrial_frontier.task.v2.p3.line.buffer_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -519,33 +519,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте электрическую печь основной сети."
+					title: "{industrial_frontier.task.v2.p3.line.machine_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Линия от пара до машины"
+			title: "{industrial_frontier.quest.v2.p3.line.title}"
 			x: 12d
 			y: 0d
 		}
 		{
 			dependencies: ["32C669D0E2429C33"]
 			description: [
-				"Итоговая приёмка подтверждает доступность диагностического узла и машины после завершения линии. Дополнительные LV-машины остаются улучшениями по потребности."
-				"Повторно откройте аккумуляторный буфер и первую электрическую печь."
-				"Мацератор и кузнечный молот можно спокойно оставить на потом: они не нужны для перехода."
-				"Электрический цех принят. После завершения задания открывается P4."
-				"Откройте аккумуляторный буфер и электрическую печь основной сети LV."
-				"Если переход закрыт, завершите задание «Линия от пара до машины», затем снова откройте буфер и электрическую печь."
-				"Проверьте, что обе задачи этого задания отмечены выполненными. Необязательные машины для этого не требуются."
-				"Буфер должен оставаться доступным для диагностики после завершения линии."
-				"Взаимодействуйте с установленной электрической печью."
-				"P4 откроет химические процессы, водоочистку и удобрения. Развитие города остаётся отдельным необязательным проектом."
+				"{industrial_frontier.quest.v2.p3.commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p3.commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p3.commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p3.commissioning.success}"
+				"{industrial_frontier.quest.v2.p3.commissioning.task}"
+				"{industrial_frontier.quest.v2.p3.commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p3.commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p3.commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p3.commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p3.commissioning.next}"
 			]
 			icon: "minecraft:water_bucket"
 			id: "3B7F69E8E054CA03"
 			shape: "diamond"
 			size: 1.6d
-			subtitle: "Пар превращается в EU, сеть имеет кабель и буфер, а первая LV-машина стала рабочим потребителем."
+			subtitle: "{industrial_frontier.quest.v2.p3.commissioning.lead}"
 			tags: ["mainline", "if_commissioning_p3"]
 			tasks: [
 				{
@@ -555,7 +555,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте буфер принятой LV-сети."
+					title: "{industrial_frontier.task.v2.p3.commissioning.buffer_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -565,19 +565,19 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте первую LV-машину принятой сети."
+					title: "{industrial_frontier.task.v2.p3.commissioning.machine_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Электрический цех готов"
+			title: "{industrial_frontier.quest.v2.p3.commissioning.title}"
 			x: 14d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Паровая турбина, кабели, аккумуляторы и первая рабочая сеть низкого напряжения"
-		"В P3 паровой цех начинает вырабатывать электричество GTCEu. Вы по очереди соберёте источник, кабель, аккумуляторный буфер и первый потребитель, а заодно разберётесь, почему напряжение, сила тока и запас энергии — не одно и то же."
-		"Затем вы изготовите схему, двигатель и корпус первой машины низкого напряжения. Дополнительные машины расширяют цех, но для перехода в следующую эпоху они не нужны."
+		"{industrial_frontier.chapter.v2.p3.subtitle.1}"
+		"{industrial_frontier.chapter.v2.p3.subtitle.2}"
+		"{industrial_frontier.chapter.v2.p3.subtitle.3}"
 	]
-	title: "P3 — Электрификация"
+	title: "{industrial_frontier.chapter.v2.p3.title}"
 }

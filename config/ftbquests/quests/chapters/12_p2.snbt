@@ -13,51 +13,51 @@
 			hide_until_deps_complete: true
 			dependencies: ["3BBFA9E08F6D1A38"]
 			description: [
-				"Глава строится из двух параллельных потоков. Водяной поток заканчивается рабочей паровой машиной, углеродный — сталью; пластины и латунь связывают их с P3."
-				"Наметьте безопасное место для котла, подачи воды и отдельной паровой машины."
-				"Оставьте рядом площадку для примитивной доменной печи и склад угольного сырья."
-				"Вы различаете энергетический и металлургический потоки и понимаете, где они сходятся перед P3."
-				"Прочитайте два потока P2 и подтвердите безопасный порядок запуска."
-				"Если план тесный, разделите горячую зону, склад топлива и рабочие проходы до установки контроллеров."
-				"Если схема неясна, отдельно проследите воду до пара и угольное сырьё до стали."
-				"Дальше параллельно откроются подготовка угольного сырья и выбор подходящего котла."
+				"{industrial_frontier.quest.v2.p2.intro.purpose}"
+				"{industrial_frontier.quest.v2.p2.intro.step.1}"
+				"{industrial_frontier.quest.v2.p2.intro.step.2}"
+				"{industrial_frontier.quest.v2.p2.intro.success}"
+				"{industrial_frontier.quest.v2.p2.intro.task}"
+				"{industrial_frontier.quest.v2.p2.intro.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.intro.next}"
 			]
 			icon: "minecraft:campfire"
 			id: "3012000000000001"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Пар приводит машины, а кокс обеспечивает металлургию; смешивать эти функции нельзя."
+			subtitle: "{industrial_frontier.quest.v2.p2.intro.lead}"
 			tags: ["mainline", "briefing"]
 			tasks: [
 				{
 					id: "4012000000000001"
-					title: "Прочитайте два потока P2 и подтвердите безопасный порядок запуска."
+					title: "{industrial_frontier.task.v2.p2.intro.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Два потока одного цеха"
+			title: "{industrial_frontier.quest.v2.p2.intro.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3012000000000001"]
 			description: [
-				"Обычный уголь подтверждает начало коксовой цепочки, потому что установленная печь принимает его напрямую. Сырой уголь GTCEu сначала требует другой переработки и здесь не засчитывается; готовый кокс относится к продукту следующей операции, а древесный уголь остаётся отдельным топливом."
-				"Получите восемь единиц обычного угля из списка задачи."
-				"Сохраните сырьё для первой учебной партии: предметная проверка его не расходует."
-				"Не перерабатывайте весь запас заранее — следующий узел отдельно введёт установку."
-				"Подходящее угольное сырьё подтверждено и сохранено для первой учебной партии."
-				"Получите восемь единиц подходящего угольного сырья."
-				"Если древесный уголь не считается, это намеренно: используйте его как топливо, но найдите угольное сырьё для технологии."
-				"Если у вас уже есть кокс, он пригодится дальше, однако не заменяет подтверждение исходного угля."
-				"Нужен обычный уголь, который напрямую принимает коксовая печь; древесный уголь, сырой уголь GTCEu и готовый кокс исключены."
-				"Теперь соберите и сформируйте коксовую печь GTCEu до первой загрузки."
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.purpose}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.step.1}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.step.2}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.step.3}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.success}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.task}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.carbon_feedstock.next}"
 			]
 			icon: "minecraft:coal"
 			id: "3A12000000000006"
 			shape: "square"
 			size: 1.2d
-			subtitle: "До установки печи нужно подтвердить исходное сырьё. Кокс и древесный уголь не заменяют уголь, который действительно входит в технологическую цепочку."
+			subtitle: "{industrial_frontier.quest.v2.p2.carbon_feedstock.lead}"
 			tags: ["mainline", "carbon", "source_product_split"]
 			tasks: [
 				{
@@ -70,34 +70,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/coking_feedstock)"
 						}
 					}
-					title: "Получите восемь единиц угольного сырья из списка задачи."
+					title: "{industrial_frontier.task.v2.p2.carbon_feedstock.items.objective}"
 					type: "item"
 				}
 			]
-			title: "Уголь для коксования"
+			title: "{industrial_frontier.quest.v2.p2.carbon_feedstock.title}"
 			x: 2d
 			y: -3d
 		}
 		{
 			dependencies: ["3A12000000000006"]
 			description: [
-				"Коксовая печь GTCEu медленно превращает уголь в кокс и побочный жидкий продукт. Книга отдельно проверяет контроллер и сформированную структуру, чтобы продукт не появился раньше оборудования."
-				"Подготовьте контроллер и откройте предпросмотр многоблока."
-				"Соберите структуру в отдельной горячей зоне, оставив доступ к рабочей стороне и выходам."
-				"Откройте сформированный контроллер до загрузки угля."
-				"Коксовая печь сформирована и готова принять первую учебную загрузку угля."
-				"Подготовьте контроллер, сформируйте коксовую печь GTCEu и откройте её интерфейс."
-				"Если структура не формируется, сравните каждый слой с предпросмотром и проверьте ориентацию контроллера."
-				"Если интерфейс открывается, но рецепт не виден, проверьте входной слот, свободный выход и подходящее угольное сырьё."
-				"Контроллер открывает предпросмотр слоёв многоблока и определяет рабочую сторону установки."
-				"Сверьте каждый слой с предпросмотром; открытие контроллера подтверждает рабочее место до первой партии кокса."
-				"Загрузите одну малую партию и подтвердите отдельный продукт — кокс GTCEu."
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.purpose}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.step.1}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.step.2}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.step.3}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.success}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.task}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p2.coke_oven_setup.next}"
 			]
 			icon: "gtceu:coke_oven"
 			id: "3A12000000000007"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Уголь подготовлен, но металлургический кокс нельзя получить обычным сжиганием. Нужна отдельная установка сухой перегонки."
+			subtitle: "{industrial_frontier.quest.v2.p2.coke_oven_setup.lead}"
 			tags: ["mainline", "carbon", "machine_before_product"]
 			tasks: [
 				{
@@ -107,7 +107,7 @@
 						id: "gtceu:coke_oven"
 					}
 					consume_items: false
-					title: "Подготовьте контроллер коксовой печи GTCEu."
+					title: "{industrial_frontier.task.v2.p2.coke_oven_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -117,33 +117,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Сформируйте коксовую печь и откройте её контроллер."
+					title: "{industrial_frontier.task.v2.p2.carbon_feedstock.coke_oven_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Коксовая печь"
+			title: "{industrial_frontier.quest.v2.p2.coke_oven_setup.title}"
 			x: 4d
 			y: -3d
 		}
 		{
 			dependencies: ["3A12000000000007"]
 			description: [
-				"В коксовой печи идёт контролируемая сухая перегонка: уголь становится более чистым углеродным материалом, а побочный поток нужно вывести отдельно. Четырёх единиц достаточно для первой металлургической партии и диагностики маршрута."
-				"Откройте рецепт кокса GTCEu и загрузите в уже собранную печь один из видов угля, принятых предыдущей задачей."
-				"Освободите выходы для кокса и побочного продукта, затем дождитесь завершения малой партии."
-				"Сохраните четыре единицы кокса для примитивной доменной печи."
-				"В инвентаре есть четыре единицы кокса, а углеродный поток готов войти в доменную операцию."
-				"Получите четыре единицы кокса GTCEu."
-				"Если процесс не начинается, убедитесь, что многоблок сформирован, вход подходит задаче, а выходы не заняты."
-				"Если получился другой вид кокса, откройте его применения в JEI и найдите рецепт превращения в кокс GTCEu."
-				"Проверяется кокс GTCEu; при зачёте он останется у вас."
-				"Кокс понадобится примитивной доменной печи для первой стали."
+				"{industrial_frontier.quest.v2.p2.coke.purpose}"
+				"{industrial_frontier.quest.v2.p2.coke.step.1}"
+				"{industrial_frontier.quest.v2.p2.coke.step.2}"
+				"{industrial_frontier.quest.v2.p2.coke.step.3}"
+				"{industrial_frontier.quest.v2.p2.coke.success}"
+				"{industrial_frontier.quest.v2.p2.coke.task}"
+				"{industrial_frontier.quest.v2.p2.coke.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.coke.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.coke.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.coke.next}"
 			]
 			icon: "gtceu:coke_gem"
 			id: "3A12000000000001"
 			shape: "rsquare"
 			size: 1.3d
-			subtitle: "Кокс — не просто топливо с другим названием, а подготовленный углеродный материал для доменной операции."
+			subtitle: "{industrial_frontier.quest.v2.p2.coke.lead}"
 			tags: ["mainline", "carbon", "source_product_split"]
 			tasks: [
 				{
@@ -154,34 +154,34 @@
 						id: "gtceu:coke_gem"
 					}
 					consume_items: false
-					title: "Получите четыре единицы кокса GTCEu."
+					title: "{industrial_frontier.task.v2.p2.coke.items.objective}"
 					type: "item"
 				}
 			]
-			title: "Уголь становится коксом"
+			title: "{industrial_frontier.quest.v2.p2.coke.title}"
 			x: 6d
 			y: -3d
 		}
 		{
 			dependencies: ["3012000000000001"]
 			description: [
-				"Твердотопливный котёл связывает склад топлива с паром и удобен для первого стабильного запуска. Он требует контролировать подачу воды и запас топлива."
-				"Соберите котёл низкого давления на твёрдом топливе."
-				"Установите его в горячей зоне с доступом к воде, топливу и паровому выходу."
-				"Выбранный котёл готов к подаче воды и запуску общей паровой проверки."
-				"Получите один паровой котёл низкого давления на твёрдом топливе."
-				"До розжига убедитесь, что вода уже доступна на входе."
-				"Если пар не появляется, проверьте топливо, воду и свободный паровой выход."
-				"Котёл останется частью выбранной паровой линии."
-				"После любого одного выбранного котла общий узел проверит полученный пар."
-				"Достаточно одного котла. Выбирайте этот вариант при надёжном угольном снабжении; жидкостный и солнечный пути строить не нужно."
+				"{industrial_frontier.quest.v2.p2.boiler_solid.purpose}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.step.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.step.2}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.success}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.task}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.next}"
+				"{industrial_frontier.quest.v2.p2.boiler_solid.optional_note}"
 			]
 			icon: "gtceu:lp_steam_solid_boiler"
 			id: "3A12000000000002"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Этот путь прост для запуска, если уголь уже поступает в цех."
+			subtitle: "{industrial_frontier.quest.v2.p2.boiler_solid.lead}"
 			tags: ["choice", "boiler", "solid_fuel"]
 			tasks: [
 				{
@@ -191,34 +191,34 @@
 						id: "gtceu:lp_steam_solid_boiler"
 					}
 					consume_items: false
-					title: "Получите один паровой котёл низкого давления на твёрдом топливе."
+					title: "{industrial_frontier.task.v2.p2.boiler_solid.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Котёл на твёрдом топливе"
+			title: "{industrial_frontier.quest.v2.p2.boiler_solid.title}"
 			x: 2d
 			y: -1.5d
 		}
 		{
 			dependencies: ["3012000000000001"]
 			description: [
-				"Этот котёл выбирают ради управляемого топливного потока. Он не становится выгоднее автоматически: доступность топлива и безопасная разводка важнее названия машины."
-				"Проверьте в JEI доступное жидкое топливо и только после этого соберите котёл."
-				"Установите отдельные линии воды, топлива и пара, не соединяя резервуары случайно."
-				"Жидкостный котёл готов к контролируемой подаче воды и топлива."
-				"Получите один паровой котёл низкого давления на жидком топливе."
-				"Если котёл не принимает жидкость, проверьте её точное название и сторону ввода."
-				"Если паровой выход забит, остановите топливо до очистки линии."
-				"Эта ветвь проверяет точный жидкостный котёл."
-				"После любого одного выбранного котла общий узел проверит полученный пар."
-				"Достаточно одного котла. Выбирайте жидкостный вариант только при уже понятном топливном потоке; остальные ветви необязательны."
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.purpose}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.step.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.step.2}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.success}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.task}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.next}"
+				"{industrial_frontier.quest.v2.p2.boiler_liquid.optional_note}"
 			]
 			icon: "gtceu:lp_steam_liquid_boiler"
 			id: "3A12000000000003"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Жидкое топливо упрощает трубную подачу, если такой поток уже существует у вашей базы."
+			subtitle: "{industrial_frontier.quest.v2.p2.boiler_liquid.lead}"
 			tags: ["choice", "boiler", "liquid_fuel"]
 			tasks: [
 				{
@@ -228,34 +228,34 @@
 						id: "gtceu:lp_steam_liquid_boiler"
 					}
 					consume_items: false
-					title: "Получите один паровой котёл низкого давления на жидком топливе."
+					title: "{industrial_frontier.task.v2.p2.boiler_liquid.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Котёл на жидком топливе"
+			title: "{industrial_frontier.quest.v2.p2.boiler_liquid.title}"
 			x: 2d
 			y: 0d
 		}
 		{
 			dependencies: ["3012000000000001"]
 			description: [
-				"Котёл подходит для базы с открытой площадкой и терпимым переменным потоком. Он учит учитывать не только рецепт, но и режим доступности источника."
-				"Соберите солнечный котёл и выберите открытую площадку без перекрытия."
-				"Подведите воду и предусмотрите буфер пара для периодов без выработки."
-				"Солнечный котёл готов к работе, а переменный режим учтён в планировке парового буфера."
-				"Получите один солнечный паровой котёл низкого давления."
-				"Если пар не появляется, проверьте открытое небо, время работы и подачу воды."
-				"Если машине не хватает непрерывности, увеличьте буфер или выберите другой котёл вместо обязательного ожидания."
-				"Солнечный вариант проверяется как отдельный допустимый выбор."
-				"После любого одного выбранного котла общий узел проверит полученный пар."
-				"Достаточно одного котла. Солнечный путь выбирают ради экономии топлива, но он не обязателен и не требует строить другие варианты."
+				"{industrial_frontier.quest.v2.p2.boiler_solar.purpose}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.step.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.step.2}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.success}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.task}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.next}"
+				"{industrial_frontier.quest.v2.p2.boiler_solar.optional_note}"
 			]
 			icon: "gtceu:lp_steam_solar_boiler"
 			id: "3A12000000000004"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Солнечный путь уменьшает расход топлива, но зависит от размещения и доступного времени работы."
+			subtitle: "{industrial_frontier.quest.v2.p2.boiler_solar.lead}"
 			tags: ["choice", "boiler", "solar"]
 			tasks: [
 				{
@@ -265,11 +265,11 @@
 						id: "gtceu:lp_steam_solar_boiler"
 					}
 					consume_items: false
-					title: "Получите один солнечный паровой котёл низкого давления."
+					title: "{industrial_frontier.task.v2.p2.boiler_solar.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Солнечный паровой котёл"
+			title: "{industrial_frontier.quest.v2.p2.boiler_solar.title}"
 			x: 2d
 			y: 1.5d
 		}
@@ -281,55 +281,55 @@
 			]
 			dependency_requirement: "one_completed"
 			description: [
-				"Проверка готового пара объединяет три котла по реальной функции. Одной машины в инвентаре недостаточно, а строить остальные варианты не требуется."
-				"Подведите воду к выбранному котлу до подачи тепла или топлива."
-				"Запустите котёл безопасным способом и накопите 1000 мБ пара в доступной линии или резервуаре."
-				"Система обнаружила 1000 мБ пара GTCEu, и поток готов к подключению первой машины."
-				"Получите 1000 мБ пара GTCEu."
-				"Если пара нет, сначала проверьте воду, затем источник тепла и свободный выход."
-				"Если объём не накапливается, временно отключите потребителя и проверьте утечку либо неверную сторону трубы."
-				"Условие проверяет пар GTCEu независимо от выбранного котла."
-				"Подключим пар к мацератору и научимся читать его стороны и выход."
+				"{industrial_frontier.quest.v2.p2.steam_ready.purpose}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.step.1}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.step.2}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.success}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.task}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.steam_ready.next}"
 			]
 			icon: "gtceu:steam_bucket"
 			id: "393761C7620D9B07"
 			shape: "hexagon"
 			size: 1.4d
-			subtitle: "Выбранный котёл должен дать измеримый продукт — пар GTCEu для машин этой цепочки."
+			subtitle: "{industrial_frontier.quest.v2.p2.steam_ready.lead}"
 			tags: ["mainline", "steam", "choice_join"]
 			tasks: [
 				{
 					id: "4E9F97644405F932"
 					fluid: "gtceu:steam"
 					amount: 1000L
-					title: "Получите 1000 мБ пара GTCEu."
+					title: "{industrial_frontier.task.v2.p2.steam_ready.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Первый рабочий пар"
+			title: "{industrial_frontier.quest.v2.p2.steam_ready.title}"
 			x: 4d
 			y: 0d
 		}
 		{
 			dependencies: ["393761C7620D9B07"]
 			description: [
-				"Дробление подготавливает рудное сырьё к более управляемой металлургии. Машина вводится как рабочий узел, а не как предмет для коллекции."
-				"Установите мацератор рядом с паровой линией и оставьте доступ к его сторонам."
-				"Откройте интерфейс, настройте паровой вход и предусмотрите место для продукта."
-				"Проверьте одну подходящую учебную порцию по рецепту JEI."
-				"Интерфейс мацератора доступен, пар подведён, а учебная порция может пройти без ручной перестановки машины."
-				"Получите, установите и откройте один паровой мацератор низкого давления."
-				"Если машина не запускается, проверьте пар, правильную сторону входа и точный рецепт."
-				"Если обработка остановилась, освободите выход и убедитесь, что паровая линия не опустела."
-				"Машина останется в цехе после проверки."
-				"Проверьте точный блок и доступ к стороне парового входа."
-				"Параллельно соберём примитивную доменную печь и получим первую сталь."
+				"{industrial_frontier.quest.v2.p2.steam_machine.purpose}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.step.1}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.step.2}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.step.3}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.success}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.task}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.proof_help.2}"
+				"{industrial_frontier.quest.v2.p2.steam_machine.next}"
 			]
 			icon: "gtceu:lp_steam_macerator"
 			id: "30207E5CA3429C20"
 			shape: "square"
 			size: 1.4d
-			subtitle: "Мацератор показывает полный порядок запуска: машина, стороны, пар, вход, свободный выход."
+			subtitle: "{industrial_frontier.quest.v2.p2.steam_machine.lead}"
 			tags: ["mainline", "steam_machine"]
 			tasks: [
 				{
@@ -339,7 +339,7 @@
 						id: "gtceu:lp_steam_macerator"
 					}
 					consume_items: false
-					title: "Получите один паровой мацератор низкого давления."
+					title: "{industrial_frontier.task.v2.p2.steam_machine.item.objective}"
 					type: "item"
 				}
 				{
@@ -349,11 +349,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите паровой мацератор и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p2.steam_machine.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Первая паровая машина"
+			title: "{industrial_frontier.quest.v2.p2.steam_machine.title}"
 			x: 6d
 			y: 0d
 		}
@@ -363,23 +363,23 @@
 				"30207E5CA3429C20"
 			]
 			description: [
-				"Доменная печь связывает кокс с железом и вводит первый структурный металл. Текущие условия проверяют контроллер и доступ к нему; функциональность подтверждает следующий продуктовый квест."
-				"Получите контроллер и откройте предпросмотр структуры GTCEu."
-				"Соберите многоблок по точной схеме, оставив рабочий доступ к контроллеру."
-				"Загрузите первую малую партию железного входа и кокса по рецепту JEI."
-				"Контроллер установлен и доступен; окончательная работоспособность будет доказана четырьмя стальными слитками."
-				"Получите, установите и откройте контроллер примитивной доменной печи."
-				"Если структура не формируется, сравните каждый слой с предпросмотром и проверьте ориентацию контроллера."
-				"Если структура собрана, но процесс не идёт, сверьте входы и свободный выход."
-				"Предметная проверка подтверждает контроллер, но не всю структуру."
-				"Структуру сверяйте с предпросмотром GTCEu; использование контроллера не заменяет её сборку."
-				"Следующая задача требует продукт многоблока — первую партию стали."
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.purpose}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.step.1}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.step.2}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.step.3}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.success}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.task}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.proof_help.2}"
+				"{industrial_frontier.quest.v2.p2.primitive_blast_furnace.next}"
 			]
 			icon: "gtceu:primitive_blast_furnace"
 			id: "3A12000000000005"
 			shape: "gear"
 			size: 1.4d
-			subtitle: "Контроллер задаёт структуру, но только готовая сталь дальше докажет, что многоблок собран и работает."
+			subtitle: "{industrial_frontier.quest.v2.p2.primitive_blast_furnace.lead}"
 			tags: ["mainline", "metallurgy", "multiblock"]
 			tasks: [
 				{
@@ -389,7 +389,7 @@
 						id: "gtceu:primitive_blast_furnace"
 					}
 					consume_items: false
-					title: "Получите контроллер примитивной доменной печи."
+					title: "{industrial_frontier.task.v2.p2.primitive_blast_furnace.item.objective}"
 					type: "item"
 				}
 				{
@@ -399,32 +399,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите контроллер и откройте его интерфейс."
+					title: "{industrial_frontier.task.v2.p2.primitive_blast_furnace.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Примитивная доменная печь"
+			title: "{industrial_frontier.quest.v2.p2.primitive_blast_furnace.title}"
 			x: 8d
 			y: -3d
 		}
 		{
 			dependencies: ["3A12000000000005"]
 			description: [
-				"Сталь становится первым структурным сплавом общего производства. Небольшая партия подтверждает способность, не заставляя вручную готовить массовый запас."
-				"Запустите одну малую доменную партию по действующему рецепту JEI."
-				"Получите четыре подходящих стальных слитка и оставьте их для корпусных деталей."
-				"В инвентаре находятся четыре стальных слитка, а работоспособность доменной цепочки доказана продуктом."
-				"Получите четыре стальных слитка из списка задачи."
-				"Если результата нет, проверьте сформированную структуру, вход железа, кокс и свободный выход."
-				"Если предмет не считается, убедитесь, что это обычный стальной слиток из списка задачи, а не горячая или магнитная форма."
-				"Слитки не расходуются и пойдут на корпусные детали следующих машин."
-				"Часть ранних металлов теперь нужно превратить в пластины."
+				"{industrial_frontier.quest.v2.p2.steel.purpose}"
+				"{industrial_frontier.quest.v2.p2.steel.step.1}"
+				"{industrial_frontier.quest.v2.p2.steel.step.2}"
+				"{industrial_frontier.quest.v2.p2.steel.success}"
+				"{industrial_frontier.quest.v2.p2.steel.task}"
+				"{industrial_frontier.quest.v2.p2.steel.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.steel.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.steel.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.steel.next}"
 			]
 			icon: "gtceu:steel_ingot"
 			id: "3012000000000005"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Четыре стальных слитка доказывают, что доменная цепочка работает от кокса до металла."
+			subtitle: "{industrial_frontier.quest.v2.p2.steel.lead}"
 			tags: ["mainline", "metallurgy", "product"]
 			tasks: [
 				{
@@ -437,11 +437,11 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/steel_ingots)"
 						}
 					}
-					title: "Получите четыре стальных слитка из списка задачи."
+					title: "{industrial_frontier.task.v2.p2.steel.ingots.objective}"
 					type: "item"
 				}
 			]
-			title: "Первая сталь"
+			title: "{industrial_frontier.quest.v2.p2.steel.title}"
 			x: 10d
 			y: -3d
 		}
@@ -451,21 +451,21 @@
 				"30207E5CA3429C20"
 			]
 			description: [
-				"Отдельная форма учит выбирать процесс по задаче. Ручной путь допустим для первой партии, но повторный спрос должен перейти на паровой молот или компрессор."
-				"Сравните доступные способы получения железной пластины в JEI."
-				"Получите восемь пластин удобным ранним маршрутом и сохраните их для P3."
-				"В инвентаре есть восемь подходящих железных пластин, и эта форма материала готова к следующему потребителю."
-				"Получите восемь железных пластин из списка задачи."
-				"Если результат не считается, проверьте, что это одинарная железная пластина, а не двойная, магнитная или кованая форма."
-				"Если приходится повторять ручную операцию больше учебной партии, переключитесь на доступную паровую обработку."
-				"Пластины останутся у вас и войдут в первые корпуса и электрические детали."
-				"Параллельно восстановим межмодовую латунную цепочку Cu₃Zn."
+				"{industrial_frontier.quest.v2.p2.plates.purpose}"
+				"{industrial_frontier.quest.v2.p2.plates.step.1}"
+				"{industrial_frontier.quest.v2.p2.plates.step.2}"
+				"{industrial_frontier.quest.v2.p2.plates.success}"
+				"{industrial_frontier.quest.v2.p2.plates.task}"
+				"{industrial_frontier.quest.v2.p2.plates.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.plates.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.plates.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.plates.next}"
 			]
 			icon: "gtceu:iron_plate"
 			id: "3012000000000006"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Слиток хранит материал, а пластина становится конструкционной формой для корпусов и механизмов."
+			subtitle: "{industrial_frontier.quest.v2.p2.plates.lead}"
 			tags: ["mainline", "material_forms"]
 			tasks: [
 				{
@@ -478,68 +478,68 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_plates)"
 						}
 					}
-					title: "Получите восемь железных пластин из списка задачи."
+					title: "{industrial_frontier.task.v2.p2.plates.items.objective}"
 					type: "item"
 				}
 			]
-			title: "Металл в форме пластины"
+			title: "{industrial_frontier.quest.v2.p2.plates.title}"
 			x: 12d
 			y: -2d
 		}
 		{
 			dependencies: ["30207E5CA3429C20"]
 			description: [
-				"Режим «с нагревом» у механического смешивания создаёт горелка с блейзом. Поэтому книга честно вводит Незер до латуни, а не предлагает скрытый станок, который невозможно запустить в обычном мире."
-				"Постройте и подпишите безопасный портал, оставив запас огнива по обе стороны."
-				"Возьмите пустую горелку Create и найдите блейза в укреплённой зоне."
-				"Захватите блейза по подсказке предмета и вернитесь тем же отмеченным маршрутом."
-				"Маршрут в Незер открыт, а обратный портал отмечен; следующий шаг отдельно проверит рабочий узел нагрева Create."
-				"Войдите в Незер и отметьте безопасный путь к обратному порталу."
-				"Если портал потерян, не уходите глубже: сначала запишите координаты и укрепите площадку."
-				"Если блейз не захватывается, проверьте, что используете пустую горелку Create и правильное действие из её подсказки."
-				"Возьмите огниво, запас блоков и отметьте обратный портал. Для живой горелки Create понадобится поймать и перенести пламя блейза."
-				"Теперь соберите механический смеситель и живую горелку вокруг уже знакомой чаши."
+				"{industrial_frontier.quest.v2.p2.nether_heat.purpose}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.step.1}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.step.2}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.step.3}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.success}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.task}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.nether_heat.next}"
 			]
 			icon: "minecraft:flint_and_steel"
 			id: "3A12000000000008"
 			shape: "diamond"
 			size: 1.2d
-			subtitle: "Латунный рецепт требует не просто чашу, а нагрев от живой горелки Create."
+			subtitle: "{industrial_frontier.quest.v2.p2.nether_heat.lead}"
 			tags: ["mainline", "create", "nether", "heat_source"]
 			tasks: [
 				{
 					id: "4A12000000000014"
 					dimension: "minecraft:the_nether"
-					title: "Безопасно войдите в Незер."
+					title: "{industrial_frontier.task.v2.p2.nether_heat.dimension.objective}"
 					type: "dimension"
 				}
 			]
-			title: "Источник управляемого нагрева"
+			title: "{industrial_frontier.quest.v2.p2.nether_heat.title}"
 			x: 8d
 			y: 1d
 		}
 		{
 			dependencies: ["3A12000000000008"]
 			description: [
-				"Механический смеситель работает над чашей, а живая горелка под ней создаёт требуемый уровень нагрева. Пресс и жернова из P1 этот рецепт не выполняют."
-				"Поставьте механический смеситель над уже знакомой чашей и подведите устойчивое вращение."
-				"Установите живую горелку под чашей и подайте ей обычное топливо."
-				"Проверьте видимый нагрев; только после этого переходите к металлам."
-				"Механический смеситель, чаша и живая горелка собраны в нагреваемый рабочий узел."
-				"Установите механический смеситель над чашей и живую заправленную горелку под ней."
-				"Если венчик не опускается, проверьте высоту смесителя и положение чаши."
-				"Если рецепт остаётся холодным, убедитесь, что под чашей живая, заправленная горелка, а не пустой корпус."
-				"Смеситель ставится над чашей и получает вращение сбоку; сама чаша была освоена раньше."
-				"Оставьте один блок под чашей для горелки и подведите вращение к смесителю."
-				"Нужна горелка с пойманным блейзом, а не пустой корпус."
-				"После размещения подайте обычное топливо и убедитесь, что горелка перешла в состояние нагрева до загрузки металлов."
-				"Теперь отдельно подготовьте три медных и один цинковый слиток."
+				"{industrial_frontier.quest.v2.p2.brass_mixer.purpose}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.step.1}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.step.2}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.step.3}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.success}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.task}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.proof_help.3}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.proof_help.4}"
+				"{industrial_frontier.quest.v2.p2.brass_mixer.next}"
 			]
 			icon: "create:mechanical_mixer"
 			id: "3A12000000000009"
 			shape: "gear"
 			size: 1.3d
-			subtitle: "Незер открыт; теперь соберите конкретный станок, которого раньше в производственной линии не было."
+			subtitle: "{industrial_frontier.quest.v2.p2.brass_mixer.lead}"
 			tags: ["mainline", "create", "brass", "machine_before_product"]
 			tasks: [
 				{
@@ -549,7 +549,7 @@
 						id: "create:mechanical_mixer"
 					}
 					consume_items: false
-					title: "Соберите механический смеситель Create."
+					title: "{industrial_frontier.task.v2.p2.brass_mixer.item.objective}"
 					type: "item"
 				}
 				{
@@ -559,7 +559,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите механический смеситель над чашей."
+					title: "{industrial_frontier.task.v2.p2.brass_mixer.place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -569,7 +569,7 @@
 						id: "create:blaze_burner"
 					}
 					consume_items: false
-					title: "Подготовьте одну живую горелку Create."
+					title: "{industrial_frontier.task.v2.p2.brass_mixer.burner_item.objective}"
 					type: "item"
 				}
 				{
@@ -579,33 +579,33 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите живую горелку под чашей."
+					title: "{industrial_frontier.task.v2.p2.brass_mixer.burner_place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Смеситель и нагрев до латуни"
+			title: "{industrial_frontier.quest.v2.p2.brass_mixer.title}"
 			x: 10d
 			y: 1d
 		}
 		{
 			dependencies: ["3A12000000000009"]
 			description: [
-				"Три медных и один цинковый слиток дают четыре латунных слитка. Общие теги принимают совместимые формы разных модов и не навязывают один реестровый вариант."
-				"Подготовьте три слитка из списка меди и один слиток из списка цинка."
-				"Оставьте их раздельно у чаши до отметки, затем загрузите одной партией."
-				"Три части меди и одна часть цинка готовы к одной нагреваемой операции."
-				"Подготовьте три совместимых медных и один совместимый цинковый слиток."
-				"Если слиток не считается, откройте список задачи и проверьте его форму."
-				"Не заменяйте слиток рудой, пылью или пластиной: рецепт принимает именно слитковую форму."
-				"Подойдёт любая форма из общего тега меди, которую принимает локальный рецепт."
-				"Подойдёт любая форма из общего тега цинка, которую принимает локальный рецепт."
-				"Теперь смешайте одну точную партию и получите четыре слитка GTCEu."
+				"{industrial_frontier.quest.v2.p2.brass_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.step.1}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.step.2}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.success}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.task}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.proof_help.2}"
+				"{industrial_frontier.quest.v2.p2.brass_inputs.next}"
 			]
 			icon: "minecraft:copper_ingot"
 			id: "3A1200000000000A"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Нагреваемый узел готов; теперь отдельно подтвердите материальный баланс одной партии."
+			subtitle: "{industrial_frontier.quest.v2.p2.brass_inputs.lead}"
 			tags: ["mainline", "alloy", "brass", "source_before_product"]
 			tasks: [
 				{
@@ -618,7 +618,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/copper_ingots)"
 						}
 					}
-					title: "Подготовьте три совместимых медных слитка."
+					title: "{industrial_frontier.task.v2.p2.brass_inputs.copper.objective}"
 					type: "item"
 				}
 				{
@@ -630,33 +630,33 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/zinc_ingots)"
 						}
 					}
-					title: "Подготовьте один совместимый цинковый слиток."
+					title: "{industrial_frontier.task.v2.p2.brass_inputs.zinc.objective}"
 					type: "item"
 				}
 			]
-			title: "Медь и цинк до сплава"
+			title: "{industrial_frontier.quest.v2.p2.brass_inputs.title}"
 			x: 12d
 			y: 1d
 		}
 		{
 			dependencies: ["3A1200000000000A"]
 			description: [
-				"Единый рецепт закрепляет состав: три части меди и одна часть цинка дают четыре латунных слитка. Выход не создаёт материал из ничего и сразу допускает автоматическую подачу."
-				"Подготовьте три порции меди и одну порцию цинка, указанные в рецепте."
-				"Сверьте в JEI рецепт «Латунь из меди и цинка» и подайте материалы в нагретую чашу Create."
-				"Заберите четыре латунных слитка GTCEu."
-				"Три части меди и одна часть цинка превратились в четыре латунных слитка; материальный баланс цепочки сохранён."
-				"Получите четыре латунных слитка GTCEu."
-				"Если смешивание не начинается, проверьте точные входы, нагрев чаши и свободный выход."
-				"Если получается другой вид латуни, откройте рецепт «Латунь из меди и цинка» и проверьте, что его результатом указан латунный слиток GTCEu."
-				"Локальный рецепт использует три входа меди и один вход цинка и даёт четыре слитка."
-				"Пластины и латунь вместе подготовят корпусные и передающие элементы для электрификации."
+				"{industrial_frontier.quest.v2.p2.brass.purpose}"
+				"{industrial_frontier.quest.v2.p2.brass.step.1}"
+				"{industrial_frontier.quest.v2.p2.brass.step.2}"
+				"{industrial_frontier.quest.v2.p2.brass.step.3}"
+				"{industrial_frontier.quest.v2.p2.brass.success}"
+				"{industrial_frontier.quest.v2.p2.brass.task}"
+				"{industrial_frontier.quest.v2.p2.brass.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.brass.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.brass.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.brass.next}"
 			]
 			icon: "gtceu:brass_ingot"
 			id: "3012000000000007"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Латунь связывает металлургию GTCEu с нагреваемой пакетной обработкой Create."
+			subtitle: "{industrial_frontier.quest.v2.p2.brass.lead}"
 			tags: ["mainline", "alloy", "cross_mod"]
 			tasks: [
 				{
@@ -667,11 +667,11 @@
 						id: "gtceu:brass_ingot"
 					}
 					consume_items: false
-					title: "Получите четыре латунных слитка GTCEu."
+					title: "{industrial_frontier.task.v2.p2.brass.ingots.objective}"
 					type: "item"
 				}
 			]
-			title: "Латунь Cu₃Zn"
+			title: "{industrial_frontier.quest.v2.p2.brass.title}"
 			x: 14d
 			y: 1d
 		}
@@ -681,29 +681,29 @@
 				"3012000000000007"
 			]
 			description: [
-				"Для каждого превращения в сборке выбран основной способ обработки. Равнозначные материалы принимаются там, где это не позволяет пропустить мацератор, формование или металлургию."
-				"Откройте применения одного рудного входа и проследите путь через промежуточные формы."
-				"Сравните его с готовым слитком и убедитесь, что источник не засчитывается как продукт."
-				"Вы можете отличить намеренно отключённый прямой рецепт от настоящего разрыва и знаете, где искать основной способ обработки."
-				"Прочитайте правило основного способа обработки и подтвердите маршруты P2."
-				"Если цепочка действительно обрывается, запишите последний существующий вход и ожидаемый продукт вместо добавления собственного временного рецепта."
-				"Если дешёвого прямого рецепта нет, это может быть осознанным решением баланса, а не ошибкой JEI."
-				"Осталось принять паровой цех по четырём рабочим результатам и открыть P3."
+				"{industrial_frontier.quest.v2.p2.ore_policy.purpose}"
+				"{industrial_frontier.quest.v2.p2.ore_policy.step.1}"
+				"{industrial_frontier.quest.v2.p2.ore_policy.step.2}"
+				"{industrial_frontier.quest.v2.p2.ore_policy.success}"
+				"{industrial_frontier.quest.v2.p2.ore_policy.task}"
+				"{industrial_frontier.quest.v2.p2.ore_policy.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.ore_policy.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.ore_policy.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/process/geology/ore_sources.png"
 			id: "3012000000000008"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Руда, дроблёный продукт, пыль и слиток имеют разные функции; бесплатное превращение между ними обесценивает производственную цепочку."
+			subtitle: "{industrial_frontier.quest.v2.p2.ore_policy.lead}"
 			tags: ["mainline", "routing", "anti_bypass"]
 			tasks: [
 				{
 					id: "4012000000000008"
-					title: "Прочитайте правило основного способа обработки и подтвердите маршруты P2."
+					title: "{industrial_frontier.task.v2.p2.ore_policy.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Почему прямой рецепт закрыт"
+			title: "{industrial_frontier.quest.v2.p2.ore_policy.title}"
 			x: 14d
 			y: 0d
 		}
@@ -714,22 +714,22 @@
 				"3012000000000008"
 			]
 			description: [
-				"Итоговая приёмка объединяет энергетический, металлургический и межмодовый результаты. Машины и материалы остаются в цехе; проверка не превращается в сдачу оборудования."
-				"Проверьте доступ к паровой машине и наличие четырёх стальных слитков."
-				"Убедитесь, что четыре латунных слитка получены единым рецептом и готовы к дальнейшим деталям."
-				"Паровой цех принят, и команда переходит из P2 к электрификации P3."
-				"Подтвердите паровой цех четырьмя стальными и четырьмя латунными слитками."
-				"Если переход закрыт, откройте входящие узлы паровой машины, стали и правила рудного маршрута."
-				"Если эпоха не меняется после выполнения, сохраните журнал и сообщите владельцу сборки название этого задания."
-				"Сталь подтверждает рабочую доменную ветвь и не расходуется."
-				"Латунь подтверждает межмодовую пакетную обработку."
-				"В P3 паровая турбина превратит пар в EU, а кабели и буфер соберут первую сеть LV."
+				"{industrial_frontier.quest.v2.p2.commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p2.commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p2.commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p2.commissioning.success}"
+				"{industrial_frontier.quest.v2.p2.commissioning.task}"
+				"{industrial_frontier.quest.v2.p2.commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p2.commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p2.commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p2.commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p2.commissioning.next}"
 			]
 			icon: "minecraft:redstone"
 			id: "3E35ACD2C187646B"
 			shape: "diamond"
 			size: 1.6d
-			subtitle: "Рабочий пар приводит машину, кокс даёт сталь, а пластины и латунь готовят переход к электричеству."
+			subtitle: "{industrial_frontier.quest.v2.p2.commissioning.lead}"
 			tags: ["mainline", "if_commissioning_p2"]
 			tasks: [
 				{
@@ -742,7 +742,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/steel_ingots)"
 						}
 					}
-					title: "Имейте четыре стальных слитка при итоговой приёмке."
+					title: "{industrial_frontier.task.v2.p2.exit.steel.objective}"
 					type: "item"
 				}
 				{
@@ -753,19 +753,19 @@
 						id: "gtceu:brass_ingot"
 					}
 					consume_items: false
-					title: "Имейте четыре латунных слитка при итоговой приёмке."
+					title: "{industrial_frontier.task.v2.p2.exit.brass.objective}"
 					type: "item"
 				}
 			]
-			title: "Паровой цех готов"
+			title: "{industrial_frontier.quest.v2.p2.commissioning.title}"
 			x: 16d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Выбранный котёл, первая паровая машина, кокс, доменная сталь, пластины и латунь"
-		"P2 связывает механику Create с ранней металлургией GTCEu. Котёл превращает воду и выбранный источник тепла в пар, а машина использует его как рабочую среду."
-		"Параллельно угольное сырьё становится коксом, затем сталью. Пластины и латунь завершают набор материалов, необходимый для электрической эпохи."
+		"{industrial_frontier.chapter.v2.p2.subtitle.1}"
+		"{industrial_frontier.chapter.v2.p2.subtitle.2}"
+		"{industrial_frontier.chapter.v2.p2.subtitle.3}"
 	]
-	title: "P2 — Пар и металлургия"
+	title: "{industrial_frontier.chapter.v2.p2.title}"
 }

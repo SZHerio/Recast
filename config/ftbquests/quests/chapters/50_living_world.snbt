@@ -13,67 +13,67 @@
 			hide_until_deps_complete: true
 			dependencies: ["3010000000000005"]
 			description: [
-				"До постоянной застройки полезно оценить воду, климат, растительность, безопасный путь домой и пространство для расширения. Такой осмотр дешевле переноса склада, фермы и первых производственных линий."
-				"Выберите одно направление от лагеря и поставьте на карте точку, после которой вы повернёте назад."
-				"Возьмите еду, запасной инструмент и свободное место для одного-двух образцов; длинная экспедиция пока не нужна."
-				"Отмечайте воду, крупные перепады высоты и опасные участки, а не каждое дерево на пути."
-				"У вас есть короткий маршрут с понятной границей и подготовленный путь возвращения."
-				"Прочитайте памятку и подготовьте короткий маршрут от лагеря."
-				"Если дорога уже стала слишком длинной, вернитесь и продолжите её отдельным рейсом вместо риска потерять весь запас."
-				"Если карта перегружена, оставьте только лагерь, источник воды, опасность и текущую цель."
-				"Галочка подтверждает только знакомство с маршрутом; посещение биома и наблюдение за животным проверяются дальше отдельно."
-				"Сначала проверим один природный район и решим, подходит ли он для фермы, города или только для добычи ресурсов."
-				"Полевой атлас помогает планировать базу, но не повышает технологическую эпоху."
+				"{industrial_frontier.quest.v2.world.field_brief.purpose}"
+				"{industrial_frontier.quest.v2.world.field_brief.step.1}"
+				"{industrial_frontier.quest.v2.world.field_brief.step.2}"
+				"{industrial_frontier.quest.v2.world.field_brief.step.3}"
+				"{industrial_frontier.quest.v2.world.field_brief.success}"
+				"{industrial_frontier.quest.v2.world.field_brief.task}"
+				"{industrial_frontier.quest.v2.world.field_brief.diagnostic.1}"
+				"{industrial_frontier.quest.v2.world.field_brief.diagnostic.2}"
+				"{industrial_frontier.quest.v2.world.field_brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.field_brief.next}"
+				"{industrial_frontier.quest.v2.world.field_brief.optional_note}"
 			]
 			icon: "minecraft:compass"
 			id: "3050000000000001"
 			optional: true
 			shape: "hexagon"
 			size: 1.4d
-			subtitle: "Ровная площадка рядом с рудой ещё не гарантирует хорошего места для города."
+			subtitle: "{industrial_frontier.quest.v2.world.field_brief.lead}"
 			tags: ["world", "fieldwork", "orientation"]
 			tasks: [
 				{
 					id: "4050000000000001"
-					title: "Прочитайте правила короткой полевой вылазки."
+					title: "{industrial_frontier.task.v2.world.field_brief.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Смотрите на место целиком"
+			title: "{industrial_frontier.quest.v2.world.field_brief.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3050000000000001"]
 			description: [
-				"Климатический район оценивается по трём признакам: есть ли вода и земля для фермы, удобно ли расширять город и какие местные материалы стоит вывозить. Один показательный осмотр объяснит принцип без охоты за каждым биомом."
-				"Доберитесь до любого биома, указанного в задаче, и сначала отметьте безопасный путь обратно."
-				"Оцените доступ к воде, ровную площадь и естественные препятствия для дорог или железной дороги."
-				"Выберите один местный материал, который действительно пригодится в строительстве, озеленении или питании; весь биом вычищать не нужно."
-				"Посещение засчитано, поэтому новый район можно спокойно сравнить с площадкой нынешней базы."
-				"Посетите любой биом из указанной группы."
-				"Если подходящий биом долго не встречается, продолжайте разведку полосой от уже открытой границы карты, а не кругами вокруг лагеря."
-				"Если место красиво, но неудобно для дорог и воды, сохраните его как источник материалов или будущий парк, а не переносите туда весь город."
-				"Подойдёт любой из перечисленных районов Biomes O' Plenty; искать все варианты не нужно."
-				"Климат станет полезнее, когда рядом с фермой появятся календарь и датчик сезона."
-				"Для завершения нужен один биом из списка, а не полная коллекция природных зон."
+				"{industrial_frontier.quest.v2.world.biome_survey.purpose}"
+				"{industrial_frontier.quest.v2.world.biome_survey.step.1}"
+				"{industrial_frontier.quest.v2.world.biome_survey.step.2}"
+				"{industrial_frontier.quest.v2.world.biome_survey.step.3}"
+				"{industrial_frontier.quest.v2.world.biome_survey.success}"
+				"{industrial_frontier.quest.v2.world.biome_survey.task}"
+				"{industrial_frontier.quest.v2.world.biome_survey.diagnostic.1}"
+				"{industrial_frontier.quest.v2.world.biome_survey.diagnostic.2}"
+				"{industrial_frontier.quest.v2.world.biome_survey.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.biome_survey.next}"
+				"{industrial_frontier.quest.v2.world.biome_survey.optional_note}"
 			]
 			icon: "biomesoplenty:maple_sapling"
 			id: "3050000000000002"
 			optional: true
 			shape: "circle"
 			size: 1.2d
-			subtitle: "Теперь маршрут можно превратить в осмысленный выбор места, а не в прогулку за красивым видом."
+			subtitle: "{industrial_frontier.quest.v2.world.biome_survey.lead}"
 			tags: ["world", "biome", "city_planning"]
 			tasks: [
 				{
 					id: "4050000000000002"
 					biome: "#industrial_frontier:field_biomes"
-					title: "Посетите один показательный биом из списка задачи."
+					title: "{industrial_frontier.task.v2.world.biome_survey.visit.objective}"
 					type: "biome"
 				}
 			]
-			title: "Один биом, три вопроса"
+			title: "{industrial_frontier.quest.v2.world.biome_survey.title}"
 			x: 3d
 			y: -2d
 		}
@@ -84,26 +84,26 @@
 				"3050000000000001"
 			]
 			description: [
-				"Календарь помогает заранее менять запас семян и еды, а датчик сезона даёт сигнал для подсветки или автоматики. Задача не заставляет ждать нужное время года: достаточно подготовить систему наблюдения."
-				"Соберите календарь и посмотрите, какая часть сезона идёт сейчас."
-				"Изготовьте датчик сезона и поставьте его рядом с фермой, теплицей или складом семян."
-				"Запланируйте два запаса: культуры на ближайший сезон и еду на случай, если поле временно замедлится."
-				"Календарь находится у вас, а датчик установлен там, где его показания можно связать с работой хозяйства."
-				"Получите календарь и установите датчик сезона."
-				"Если культура растёт медленно, сначала сверьте её сезон в подсказке, а затем проверьте свет, воду и свободное место."
-				"Если сигнал датчика пока некуда подключить, оставьте рядом табличку с назначением; автоматику можно добавить позже."
-				"Если сезон неудобен, переключитесь на запасы, теплицу или другую культуру вместо ожидания у грядки."
-				"Календарь собирается из часов и бумаги; точный рецепт покажет JEI."
-				"Поставьте датчик там, где его сигнал можно будет использовать для лампы или будущего управления фермой."
-				"Пока ферма учитывает время года, полевой справочник поможет отличать полезных соседей от животных, к которым лучше не подходить."
-				"Сезонная станция делает хозяйство устойчивее, но не останавливает основную промышленную цепочку."
+				"{industrial_frontier.quest.v2.world.season_station.purpose}"
+				"{industrial_frontier.quest.v2.world.season_station.step.1}"
+				"{industrial_frontier.quest.v2.world.season_station.step.2}"
+				"{industrial_frontier.quest.v2.world.season_station.step.3}"
+				"{industrial_frontier.quest.v2.world.season_station.success}"
+				"{industrial_frontier.quest.v2.world.season_station.task}"
+				"{industrial_frontier.quest.v2.world.season_station.diagnostic.1}"
+				"{industrial_frontier.quest.v2.world.season_station.diagnostic.2}"
+				"{industrial_frontier.quest.v2.world.season_station.diagnostic.3}"
+				"{industrial_frontier.quest.v2.world.season_station.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.season_station.proof_help.2}"
+				"{industrial_frontier.quest.v2.world.season_station.next}"
+				"{industrial_frontier.quest.v2.world.season_station.optional_note}"
 			]
 			icon: "sereneseasons:season_sensor"
 			id: "3050000000000003"
 			optional: true
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Общий совет из P0 теперь превращается в два предмета, которые можно включить в работу фермы."
+			subtitle: "{industrial_frontier.quest.v2.world.season_station.lead}"
 			tags: ["world", "seasons", "agriculture"]
 			tasks: [
 				{
@@ -113,7 +113,7 @@
 						id: "sereneseasons:calendar"
 					}
 					consume_items: false
-					title: "Получите один сезонный календарь."
+					title: "{industrial_frontier.task.v2.world.season_station.calendar.objective}"
 					type: "item"
 				}
 				{
@@ -123,37 +123,37 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите один датчик сезона рядом с фермой или складом семян."
+					title: "{industrial_frontier.task.v2.world.season_station.sensor.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Сезон на приборной панели"
+			title: "{industrial_frontier.quest.v2.world.season_station.title}"
 			x: 3d
 			y: 2d
 		}
 		{
 			dependencies: ["3050000000000001"]
 			description: [
-				"Справочник объясняет поведение видов и помогает понять, кого можно спокойно наблюдать, кто приносит пользу, а кому нужна дистанция. Для знакомства достаточно одного обычного животного; полный каталог и охота за редкими материалами не нужны."
-				"Соберите справочник животных и возьмите его в полевую вылазку."
-				"Найдите любой вид из списка задачи, остановитесь на безопасном расстоянии и удерживайте его в поле зрения."
-				"После наблюдения прочитайте запись о поведении. Уникальный ресурс имеет смысл добывать только тогда, когда он нужен конкретному рецепту."
-				"У вас есть справочник, а наблюдение за одним спокойным животным засчитано без охоты и ловли."
-				"Получите справочник и понаблюдайте за одним животным из указанной группы."
-				"Если наблюдение сбрасывается, не бегите за животным вплотную: выберите открытое место и держите его в центре взгляда."
-				"Если вид защищает территорию или детёнышей, отступите и найдите другого представителя из списка."
-				"Если нужное животное не встречается, продолжите осмотр в другом биоме; список специально содержит несколько распространённых вариантов."
-				"Он собирается из книги, зелёного красителя и подходящего природного материала."
-				"Подойдут ворона, енот, колибри, голубая сойка или муха; не нужно ловить или убивать животное."
-				"Ещё один возобновляемый источник снабжения находится в воде: подготовим простую рыболовную точку."
-				"Ветка знакомит с экологией мира и не требует собирать ресурсы каждого вида."
+				"{industrial_frontier.quest.v2.world.wildlife_watch.purpose}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.step.1}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.step.2}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.step.3}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.success}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.task}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.diagnostic.1}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.diagnostic.2}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.diagnostic.3}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.proof_help.2}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.next}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.optional_note}"
 			]
 			icon: "alexsmobs:animal_dictionary"
 			id: "3050000000000004"
 			optional: true
 			shape: "circle"
 			size: 1.2d
-			subtitle: "Животное в новом биоме — не сундук с ножками, а часть местной среды и источник сведений о районе."
+			subtitle: "{industrial_frontier.quest.v2.world.wildlife_watch.lead}"
 			tags: ["world", "wildlife", "ecology"]
 			tasks: [
 				{
@@ -163,7 +163,7 @@
 						id: "alexsmobs:animal_dictionary"
 					}
 					consume_items: false
-					title: "Получите справочник животных."
+					title: "{industrial_frontier.task.v2.world.wildlife_watch.dictionary.objective}"
 					type: "item"
 				}
 				{
@@ -171,11 +171,11 @@
 					timer: 60L
 					observe_type: 6
 					to_observe: "industrial_frontier:field_wildlife"
-					title: "Наблюдайте за одним животным из списка, пока знакомство не будет засчитано."
+					title: "{industrial_frontier.task.v2.world.wildlife_watch.observe.objective}"
 					type: "observation"
 				}
 			]
-			title: "Наблюдение без охоты"
+			title: "{industrial_frontier.quest.v2.world.wildlife_watch.title}"
 			x: 6d
 			y: -2d
 		}
@@ -186,26 +186,26 @@
 				"3050000000000001"
 			]
 			description: [
-				"Железная удочка служит основой для лески, поплавка и крючка, а ящик хранит запасную оснастку у берега. Начните с простого комплекта: редкие крючки и сокровища не нужны для обычного питания."
-				"Соберите железную удочку и проверьте в её окне места для лески, поплавка и крючка."
-				"Установите ящик для снастей на освещённом берегу или причале с удобным выходом из воды."
-				"Положите рядом только расходники для нескольких попыток; большой склад наживки появится, если рыбалка действительно войдёт в снабжение города."
-				"Удочка находится у вас, а ящик для снастей установлен у выбранной рыболовной точки."
-				"Получите железную удочку и установите ящик для снастей."
-				"Если деталь не устанавливается на удочку, сверьте её назначение в подсказке: леска, поплавок и крючок занимают разные места."
-				"Если берег опасен ночью, перенесите точку ближе к свету и сделайте ступень или лестницу для выхода из воды."
-				"Если улов пока не нужен хозяйству, не тратьте железо на несколько одинаковых комплектов."
-				"Эта удочка принимает оснастку; для первого улова редкие крючки не нужны."
-				"Поставьте его у безопасного берега или на причале, чтобы не носить запас оснастки в основном рюкзаке."
-				"Теперь добудем один местный вид рыбы и превратим часть улова в удобное сырьё для кухни."
-				"Рыбалка дополняет ферму и охоту, но не является обязательным источником пищи."
+				"{industrial_frontier.quest.v2.world.fishing_station.purpose}"
+				"{industrial_frontier.quest.v2.world.fishing_station.step.1}"
+				"{industrial_frontier.quest.v2.world.fishing_station.step.2}"
+				"{industrial_frontier.quest.v2.world.fishing_station.step.3}"
+				"{industrial_frontier.quest.v2.world.fishing_station.success}"
+				"{industrial_frontier.quest.v2.world.fishing_station.task}"
+				"{industrial_frontier.quest.v2.world.fishing_station.diagnostic.1}"
+				"{industrial_frontier.quest.v2.world.fishing_station.diagnostic.2}"
+				"{industrial_frontier.quest.v2.world.fishing_station.diagnostic.3}"
+				"{industrial_frontier.quest.v2.world.fishing_station.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.fishing_station.proof_help.2}"
+				"{industrial_frontier.quest.v2.world.fishing_station.next}"
+				"{industrial_frontier.quest.v2.world.fishing_station.optional_note}"
 			]
 			icon: "aquaculture:iron_fishing_rod"
 			id: "3050000000000005"
 			optional: true
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Вода рядом с маршрутом может снабжать лагерь едой, не превращая каждую вылазку в охоту."
+			subtitle: "{industrial_frontier.quest.v2.world.fishing_station.lead}"
 			tags: ["world", "fishing", "food"]
 			tasks: [
 				{
@@ -215,7 +215,7 @@
 						id: "aquaculture:iron_fishing_rod"
 					}
 					consume_items: false
-					title: "Получите одну железную удочку Aquaculture."
+					title: "{industrial_frontier.task.v2.world.fishing_station.rod.objective}"
 					type: "item"
 				}
 				{
@@ -225,34 +225,34 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите один ящик для рыболовных снастей."
+					title: "{industrial_frontier.task.v2.world.fishing_station.tackle_box.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Рыболовная точка"
+			title: "{industrial_frontier.quest.v2.world.fishing_station.title}"
 			x: 6d
 			y: 2d
 		}
 		{
 			dependencies: ["3050000000000005"]
 			description: [
-				"Разные воды дают разные виды Aquaculture. Задача принимает любой вид из списка и не заставляет искать редкую рыбу; одна подходящая добыча отделяет источник от будущего филе."
-				"Поймайте любой вид Aquaculture из списка задачи."
-				"Если попался другой полезный улов, сохраните его и продолжите без спешки: ветка не задерживает эпоху."
-				"В инвентаре лежит одна подходящая рыба Aquaculture для учебной обработки."
-				"Получите одну рыбу Aquaculture из списка задачи."
-				"Если долго попадается только ванильная рыба, смените водоём или продолжите позже: ветка необязательна и не задерживает эпоху."
-				"Если рыбалка не окупает время, используйте её как резерв к ферме, а не как единственный источник еды."
-				"Подойдёт любой из перечисленных видов; искать конкретную редкую рыбу не нужно."
-				"Теперь сделайте подходящий нож и отдельно превратите подтверждённый улов в филе."
-				"Достаточно одного улова; редкая рыба, сокровища и полный набор снастей не требуются."
+				"{industrial_frontier.quest.v2.world.useful_catch.purpose}"
+				"{industrial_frontier.quest.v2.world.useful_catch.step.1}"
+				"{industrial_frontier.quest.v2.world.useful_catch.step.2}"
+				"{industrial_frontier.quest.v2.world.useful_catch.success}"
+				"{industrial_frontier.quest.v2.world.useful_catch.task}"
+				"{industrial_frontier.quest.v2.world.useful_catch.diagnostic.1}"
+				"{industrial_frontier.quest.v2.world.useful_catch.diagnostic.2}"
+				"{industrial_frontier.quest.v2.world.useful_catch.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.useful_catch.next}"
+				"{industrial_frontier.quest.v2.world.useful_catch.optional_note}"
 			]
 			icon: "aquaculture:atlantic_cod"
 			id: "3050000000000006"
 			optional: true
 			shape: "diamond"
 			size: 1.2d
-			subtitle: "Постоянная рыболовная точка должна сначала дать реальную рыбу, а обработка улова станет отдельным следующим шагом."
+			subtitle: "{industrial_frontier.quest.v2.world.useful_catch.lead}"
 			tags: ["world", "fishing", "food_processing"]
 			tasks: [
 				{
@@ -264,34 +264,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/aquaculture_catch)"
 						}
 					}
-					title: "Получите одну рыбу Aquaculture из списка задачи."
+					title: "{industrial_frontier.task.v2.world.useful_catch.fish.objective}"
 					type: "item"
 				}
 			]
-			title: "Первый полезный улов"
+			title: "{industrial_frontier.quest.v2.world.useful_catch.title}"
 			x: 9d
 			y: 2d
 		}
 		{
 			dependencies: ["3050000000000006"]
 			description: [
-				"Кухне важна повторяемая форма — филе, а не конкретный вид рыбы. Одной заготовки достаточно, чтобы освоить обработку без ручного запаса и охоты за редкими видами."
-				"Проверьте рецепт пойманного вида в JEI и подготовьте подходящий нож."
-				"Разделайте одну подтверждённую рыбу и сохраните сырое филе для дальнейшего приготовления."
-				"Один реальный улов превращён в сырое филе для обычной кухни."
-				"Приготовьте одно сырое филе из подтверждённого улова Aquaculture."
-				"Если рецепт не появляется, проверьте выбранный вид рыбы и материал ножа."
-				"Если конкретный вид не разделывается, используйте другой вид из списка исходного задания."
-				"Используйте любой доступный нож для филе; задача не забирает готовый продукт."
-				"Филе можно передать обычной кухне, а морские экспедиции потребуют отдельного маршрута снабжения."
-				"Одной заготовки достаточно; массовая ручная разделка не требуется."
+				"{industrial_frontier.quest.v2.world.fish_processing.purpose}"
+				"{industrial_frontier.quest.v2.world.fish_processing.step.1}"
+				"{industrial_frontier.quest.v2.world.fish_processing.step.2}"
+				"{industrial_frontier.quest.v2.world.fish_processing.success}"
+				"{industrial_frontier.quest.v2.world.fish_processing.task}"
+				"{industrial_frontier.quest.v2.world.fish_processing.diagnostic.1}"
+				"{industrial_frontier.quest.v2.world.fish_processing.diagnostic.2}"
+				"{industrial_frontier.quest.v2.world.fish_processing.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.fish_processing.next}"
+				"{industrial_frontier.quest.v2.world.fish_processing.optional_note}"
 			]
 			icon: "aquaculture:fish_fillet_raw"
 			id: "3A50000000000007"
 			optional: true
 			shape: "diamond"
 			size: 1.2d
-			subtitle: "Рыба получена; теперь один отдельный рецепт покажет переход от добычи к общей кухонной форме."
+			subtitle: "{industrial_frontier.quest.v2.world.fish_processing.lead}"
 			tags: ["world", "fishing", "food_processing", "source_before_product"]
 			tasks: [
 				{
@@ -301,20 +301,20 @@
 						id: "aquaculture:fish_fillet_raw"
 					}
 					consume_items: false
-					title: "Приготовьте одно сырое рыбное филе."
+					title: "{industrial_frontier.task.v2.world.useful_catch.fillet.objective}"
 					type: "item"
 				}
 			]
-			title: "Из улова в кухонную заготовку"
+			title: "{industrial_frontier.quest.v2.world.fish_processing.title}"
 			x: 12d
 			y: 2d
 		}
 	]
 	subtitle: [
-		"Как читать ландшафт, учитывать сезоны и пользоваться природными ресурсами без коллекционного гринда"
-		"Эта глава учит замечать условия вокруг базы: климат, сезон, животных и доступные водные ресурсы."
-		"Для знакомства достаточно одного показательного биома, одного вида животных и одного полезного улова. Полный каталог мира собирать не придётся."
-		"Ветка необязательна для технологических эпох, но помогает выбрать место для города, подготовить ферму и снабжать дальние поездки."
+		"{industrial_frontier.chapter.v2.living_world.subtitle.1}"
+		"{industrial_frontier.chapter.v2.living_world.subtitle.2}"
+		"{industrial_frontier.chapter.v2.living_world.subtitle.3}"
+		"{industrial_frontier.chapter.v2.living_world.subtitle.4}"
 	]
-	title: "Живой мир"
+	title: "{industrial_frontier.chapter.v2.living_world.title}"
 }

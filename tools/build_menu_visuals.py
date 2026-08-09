@@ -172,28 +172,10 @@ def panel_texture(size: tuple[int, int] = (96, 96)) -> Image.Image:
 
 
 def processed_icon(source: Image.Image, size: int) -> Image.Image:
-    if size <= 32:
-        # A window/taskbar icon is its own asset, not a shrunken illustration.
-        # Draw the Recast "R" directly on a 16 px grid and scale it with nearest
-        # neighbour so both Windows-requested sizes keep a clean silhouette.
-        icon = Image.new("RGB", (16, 16), DEEP[:3])
-        draw = ImageDraw.Draw(icon)
-        draw.line(
-            [(8, 0), (14, 3), (14, 12), (8, 15), (1, 12), (1, 3), (8, 0)],
-            fill=STEEL_BRIGHT[:3],
-            width=1,
-        )
-        draw.rectangle((4, 3, 5, 12), fill=TEXT[:3])
-        draw.rectangle((6, 3, 9, 4), fill=TEXT[:3])
-        draw.rectangle((9, 4, 10, 7), fill=TEXT[:3])
-        draw.rectangle((6, 7, 9, 8), fill=TEXT[:3])
-        draw.rectangle((7, 9, 8, 10), fill=MOLTEN_BRIGHT[:3])
-        draw.rectangle((8, 10, 9, 11), fill=MOLTEN[:3])
-        draw.rectangle((9, 11, 10, 12), fill=MOLTEN[:3])
-        if size == 16:
-            return icon
-        return icon.resize((32, 32), Image.Resampling.NEAREST)
-    icon = ImageOps.fit(source.convert("RGB"), (size, size), method=RESAMPLE)
+    # Keep the generated emblem's alpha and smooth vector-like edges at every
+    # Windows-requested size. Nearest-neighbour pixel art looked jagged on
+    # high-DPI taskbars and destroyed the steel/orbit silhouette.
+    icon = ImageOps.fit(source.convert("RGBA"), (size, size), method=RESAMPLE)
     if size <= 64:
         icon = ImageEnhance.Contrast(icon).enhance(1.16)
         icon = icon.filter(ImageFilter.UnsharpMask(radius=max(0.5, size / 48), percent=125, threshold=2))
@@ -412,7 +394,7 @@ def main() -> int:
     mid = fit_16_9(Image.open(MID_SOURCE).convert("RGBA"))
     near = fit_16_9(Image.open(NEAR_SOURCE).convert("RGBA"))
     logo = place_contain(crop_alpha(Image.open(LOGO_SOURCE)), (1536, 512), padding=12)
-    icon_source = Image.open(ICON_SOURCE).convert("RGB")
+    icon_source = Image.open(ICON_SOURCE).convert("RGBA")
 
     products: dict[pathlib.Path, Image.Image] = {
         GUI / "menu" / "base.png": base,

@@ -13,46 +13,46 @@
 			hide_until_deps_complete: true
 			dependencies: ["3B7F69E8E054CA03"]
 			description: [
-				"Контрольная партия связывает несколько отраслей одной практической задачей. Вода поддерживает процессы, удобрения питают поля, кухня снабжает рабочую смену, а химические линии дают реагенты соседним производствам."
-				"Вы различаете независимые ветви эпохи и знаете, что они встретятся только при технической приёмке."
-				"Прочитайте вводную схему химического комплекса."
-				"Отметка подтверждает только чтение вводной схемы; продукты и оборудование проверяются дальше."
-				"Сначала откроются вода, серная и хлор-щелочная линии, удобрения и нефтяная разведка; их можно проходить параллельно. Азотная кислота появится в P5 после сети HV."
+				"{industrial_frontier.quest.v2.p4.brief.purpose}"
+				"{industrial_frontier.quest.v2.p4.brief.success}"
+				"{industrial_frontier.quest.v2.p4.brief.task}"
+				"{industrial_frontier.quest.v2.p4.brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.brief.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/process/gtceu/foundational_feedstocks.png"
 			id: "3014000000000001"
 			shape: "gear"
 			size: 2d
-			subtitle: "Электрический участок готов; теперь производству нужны постоянные и понятные потребители."
+			subtitle: "{industrial_frontier.quest.v2.p4.brief.lead}"
 			tags: ["root", "chemistry"]
 			tasks: [
 				{
 					id: "4014000000000001"
-					title: "Прочитайте схему потоков химического комплекса."
+					title: "{industrial_frontier.task.v2.p4.brief.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Комплекс как единая система"
+			title: "{industrial_frontier.quest.v2.p4.brief.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3014000000000001"]
 			description: [
-				"Четыре совместимых куска алюминиевого сырья или рудных блока — исходная партия для восьми чистых пылей. Общий тег принимает британское и американское написание материала, обычный дроп без шёлкового касания и сами блоки. Для внешних руд сборка добавляет честный мацераторный мост в ту же дроблёную форму GregTech."
-				"Откройте список источников в задаче и выберите доступное месторождение."
-				"Соберите четыре куска сырья или рудных блока и не переплавляйте их напрямую: удвоение в мацераторе уменьшает обязательную добычу."
-				"Четыре совместимых алюминиевых входа готовы к контролируемому дроблению."
-				"Соберите четыре совместимых куска алюминиевого сырья или рудных блока."
-				"Если найденный кусок сырья или рудный блок не считается, проверьте его принадлежность показанному тегу; совместимый источник обязан засчитываться независимо от мода."
-				"Подойдут обычные куски сырья после добычи без шёлкового касания и рудные блоки из британской или американской семьи тегов. Для внешних руд сборка добавляет тот же маршрут: четыре совместимых входа дают восемь дроблёных единиц в мацераторе."
-				"Теперь подготовьте мацератор LV и раздробите сырьё."
+				"{industrial_frontier.quest.v2.p4.aluminium_source.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_source.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_source.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_source.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_source.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_source.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_source.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_source.next}"
 			]
 			icon: "gtceu:raw_aluminium"
 			id: "3A14000000000020"
 			shape: "square"
 			size: 1d
-			subtitle: "Корпуса MV требуют алюминий, но книга не станет начинать с готовой пластины."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_source.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "source_before_product"]
 			tasks: [
 				{
@@ -65,33 +65,33 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/aluminium_ores)"
 						}
 					}
-					title: "Соберите четыре куска алюминиевого сырья или рудных блока из списка задачи."
+					title: "{industrial_frontier.task.v2.p4.aluminium_source.ore.objective}"
 					type: "item"
 				}
 			]
-			title: "Сначала — источник алюминия"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_source.title}"
 			x: -18d
 			y: -8d
 		}
 		{
 			dependencies: ["3A14000000000020"]
 			description: [
-				"Мацератор LV удваивает принятое алюминиевое сырьё и позже измельчает очищенную руду до чистой пыли. Один экземпляр обслуживает оба шага, поэтому строить дубликат не нужно."
-				"Установите мацератор на принятую линию LV и оставьте место для входного и выходного буфера."
-				"Откройте интерфейс, убедитесь в правильном напряжении и свободном выходе."
-				"Мацератор LV установлен и готов к двум последовательным этапам подготовки алюминия."
-				"Подготовьте, установите и откройте мацератор LV."
-				"Если машина не принимает внешний рудный блок или кусок сырья из списка, проверьте загрузку добавленного сборкой рецепта; каждый показанный источник обязан давать две дроблёные единицы."
-				"Если питание пропадает, проверьте паровую турбину, буфер и кабель LV до машины."
-				"Если вы уже собрали его в добровольной ветке P3, используйте тот же экземпляр: второй квест его не расходует."
-				"Подключите его к принятой линии LV, освободите выход и проверьте, что машина не получает завышенное напряжение."
-				"Раздробите четыре единицы сырья и получите восемь единиц дроблёного алюминия."
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.next}"
 			]
 			icon: "gtceu:lv_macerator"
 			id: "3A14000000000021"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Сырьё собрано; сначала примем рабочее место, затем потребуем его продукт."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_before_product"]
 			tasks: [
 				{
@@ -101,7 +101,7 @@
 						id: "gtceu:lv_macerator"
 					}
 					consume_items: false
-					title: "Подготовьте мацератор LV."
+					title: "{industrial_frontier.task.v2.p4.aluminium_macerator_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -111,31 +111,31 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте мацератор LV."
+					title: "{industrial_frontier.task.v2.p4.aluminium_macerator_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Мацератор перед дроблёной рудой"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.title}"
 			x: -15d
 			y: -8d
 		}
 		{
 			dependencies: ["3A14000000000021"]
 			description: [
-				"Четыре принятые единицы сырья превращаются в восемь единиц дроблёного алюминия. Такой размер партии сразу покрывает первый набор корпусов MV и не требует лишней добычи."
-				"Загрузите четыре единицы принятого алюминиевого сырья в мацератор LV."
-				"Дождитесь восьми единиц дроблёного продукта и оставьте их в выходном буфере."
-				"Восемь единиц дроблёного алюминия готовы к промывке."
-				"Получите восемь единиц дроблёной алюминиевой руды."
-				"Если выход меньше восьми, проверьте, что переработали все четыре единицы сырья и не заблокировали выход машины."
-				"Четыре исходные руды дают восемь дроблёных единиц в мацераторе. Это промежуточная форма, а не материал для доменной печи."
-				"Теперь соберите рудопромывочную машину и промойте дроблёную форму."
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_crushed.next}"
 			]
 			icon: "gtceu:crushed_aluminium_ore"
 			id: "3A14000000000022"
 			shape: "square"
 			size: 1d
-			subtitle: "Мацератор принят; теперь проверим фактическое удвоение сырья."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_crushed.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_output"]
 			tasks: [
 				{
@@ -146,32 +146,32 @@
 						id: "gtceu:crushed_aluminium_ore"
 					}
 					consume_items: false
-					title: "Получите восемь единиц дроблёной алюминиевой руды GregTech."
+					title: "{industrial_frontier.task.v2.p4.aluminium_crushed.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Первое дробление алюминия"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_crushed.title}"
 			x: -12d
 			y: -8d
 		}
 		{
 			dependencies: ["3A14000000000024"]
 			description: [
-				"Рудопромывочная машина принимает именно дроблёную руду. Восемь единиц и 800 мБ воды дают восемь единиц очищенной алюминиевой руды. Чистая пыль появится только после следующего повторного измельчения."
-				"Загрузите восемь единиц дроблёной алюминиевой руды в принятую рудопромывочную машину."
-				"Выставьте схему 2, подайте 800 мБ воды и соберите восемь единиц очищенной руды."
-				"Восемь единиц очищенной алюминиевой руды готовы к повторному использованию мацератора."
-				"Промойте восемь единиц дроблёной руды и получите восемь единиц очищенного алюминия."
-				"Если рецепт не появляется, убедитесь, что подаёте дроблёную руду, а не загрязнённую пыль."
-				"Если партия остановилась, проверьте схему 2, остаток воды и свободный выход."
-				"Промойте восемь дроблёных единиц со схемой 2 и расходом 100 мБ воды на каждую. Выходом является очищенная руда, а не пыль."
-				"Верните очищенную руду в мацератор и получите чистую алюминиевую пыль."
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_purified.next}"
 			]
 			icon: "gtceu:purified_aluminium_ore"
 			id: "3A14000000000023"
 			shape: "square"
 			size: 1d
-			subtitle: "Рудопромывочная машина принята; теперь она должна выдать правильную очищенную форму."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_purified.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_output"]
 			tasks: [
 				{
@@ -182,11 +182,11 @@
 						id: "gtceu:purified_aluminium_ore"
 					}
 					consume_items: false
-					title: "Получите восемь единиц очищенной алюминиевой руды GregTech."
+					title: "{industrial_frontier.task.v2.p4.aluminium_purified.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Дроблёная руда после промывки"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_purified.title}"
 			x: -6d
 			y: -8d
 		}
@@ -196,22 +196,22 @@
 				"3FA17567FB015E52"
 			]
 			description: [
-				"Рудопромывочная машина LV со схемой 2 принимает дроблёную руду и использует 100 мБ воды на одну единицу. Для восьми единиц заранее подготовьте не менее 800 мБ воды и свободный выход очищенной руды."
-				"Установите рудопромывочную машину на линию LV и подключите водяной буфер."
-				"Выставьте схему 2, откройте интерфейс и проверьте запас не менее 800 мБ воды."
-				"Рудопромывочная машина LV установлена, открывается и готова очистить всю дроблёную партию."
-				"Подготовьте, установите и откройте рудопромывочную машину LV со схемой 2."
-				"Если рецепт не появляется, проверьте схему 2, дроблёную форму входа и наличие воды."
-				"Если машина останавливается после части партии, пополните водяной буфер и освободите предметный выход."
-				"Она очищает дроблёную руду при схеме 2 и расходует 100 мБ воды на каждую единицу."
-				"Подключите отдельный водяной вход, выставьте схему 2 и оставьте свободный предметный выход."
-				"Промойте восемь дроблёных единиц и получите очищенную алюминиевую руду."
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.next}"
 			]
 			icon: "gtceu:lv_ore_washer"
 			id: "3A14000000000024"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Дроблёная руда готова; теперь примеси нужно удалить до повторного измельчения."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_washer_setup.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_before_product", "water"]
 			tasks: [
 				{
@@ -221,7 +221,7 @@
 						id: "gtceu:lv_ore_washer"
 					}
 					consume_items: false
-					title: "Подготовьте рудопромывочную машину LV."
+					title: "{industrial_frontier.task.v2.p4.aluminium_washer_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -231,32 +231,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте рудопромывочную машину LV."
+					title: "{industrial_frontier.task.v2.p4.aluminium_washer_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Промывка дроблёной руды"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_washer_setup.title}"
 			x: -9d
 			y: -8d
 		}
 		{
 			dependencies: ["3A14000000000023"]
 			description: [
-				"Восемь единиц очищенной руды после повторного измельчения дают восемь чистых алюминиевых пылей — точный вход восьми доменных циклов. Газовый режим доменной печи со схемой 2 лишь ускоряет процесс; базовый рецепт со схемой 1 доступен без него."
-				"Верните восемь единиц очищенной алюминиевой руды в уже принятый мацератор LV."
-				"Проведите восемь циклов, соберите восемь чистых пылей и сохраните их для доменной печи."
-				"Восемь чистых алюминиевых пылей готовы к восьми доменным циклам."
-				"Измельчите восемь единиц очищенной руды и получите восемь совместимых чистых алюминиевых пылей."
-				"Если мацератор не принимает вход, убедитесь, что используете очищенную руду, а не дроблёную форму или загрязнённую пыль."
-				"Если пыль не считается, проверьте показанный тег совместимых форм."
-				"Подойдёт любая форма из общего тега, совместимая с доменным рецептом. Восемь пылей дают восемь слитков за восемь циклов."
-				"Подготовьте четырёхамперный резерв LV и два входных люка для доменной печи."
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_dust.next}"
 			]
 			icon: "gtceu:aluminium_dust"
 			id: "3A14000000000025"
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Промывка завершена; уже принятый мацератор теперь снимает последнюю твёрдую примесь."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_dust.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "source_before_product"]
 			tasks: [
 				{
@@ -269,34 +269,34 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/aluminium_dusts)"
 						}
 					}
-					title: "Получите восемь совместимых чистых алюминиевых пылей."
+					title: "{industrial_frontier.task.v2.p4.aluminium_dust.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Чистый алюминий перед домной"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_dust.title}"
 			x: -3d
 			y: -8d
 		}
 		{
 			dependencies: ["3A14000000000025"]
 			description: [
-				"Четырёхсекционный буфер выдаёт до четырёх ампер только тогда, когда в нём стоят четыре непустых аккумулятора. Существующая турбина может зарядить их заранее; новый источник MV для этого не нужен и не создаёт круговую зависимость."
-				"Изготовьте четыре совместимых аккумулятора LV и вставьте их в уже освоенный четырёхсекционный буфер."
-				"Зарядите все четыре до пуска доменной печи и откройте буфер, чтобы увидеть заполнение каждой ячейки."
-				"Не считайте пустую ячейку источником тока: она не добавляет ампер к выходу."
-				"Буфер LV содержит четыре подготовленных аккумулятора и может отдать кратковременный поток 4 A."
-				"Подготовьте четыре аккумулятора LV, полностью зарядите их в четырёхсекционном буфере и откройте его."
-				"Если доступны только один или два ампера, проверьте, что все четыре ячейки заняты непустыми аккумуляторами."
-				"Если заряд не растёт, вернитесь к турбине, пару, входной стороне буфера и кабелю зарядной линии."
-				"Подойдёт любой набор кадмиевых, литиевых и натриевых аккумуляторов LV из списка задачи. Перед пуском полностью зарядите все четыре."
-				"Квест видит взаимодействие с буфером, а заряд проверьте вручную: каждая непустая ячейка отдаёт один ампер."
-				"Теперь соберите отдельную четырёхамперную шину и два входных люка LV для доменной печи."
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.purpose}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.step.1}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.step.2}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.step.3}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.success}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.task}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.next}"
 			]
 			icon: "gtceu:lv_battery_buffer_4x"
 			id: "3A1400000000001E"
 			shape: "square"
 			size: 1.1d
-			subtitle: "Алюминиевый рецепт доменной печи требует 120 EU/t: одного ампера LV для него недостаточно."
+			subtitle: "{industrial_frontier.quest.v2.p4.ebf_power_reserve.lead}"
 			tags: ["mainline", "metallurgy", "power", "lv", "four_amp_bootstrap"]
 			tasks: [
 				{
@@ -309,7 +309,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/lv_batteries)"
 						}
 					}
-					title: "Подготовьте четыре совместимых аккумулятора LV."
+					title: "{industrial_frontier.task.v2.p4.ebf_power_reserve.batteries.objective}"
 					type: "item"
 				}
 				{
@@ -319,35 +319,35 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Вставьте четыре аккумулятора в буфер LV и откройте его."
+					title: "{industrial_frontier.task.v2.p4.ebf_power_reserve.buffer.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Четыре ампера до алюминия"
+			title: "{industrial_frontier.quest.v2.p4.ebf_power_reserve.title}"
 			x: 0d
 			y: -8d
 		}
 		{
 			dependencies: ["3A1400000000001E"]
 			description: [
-				"Четырёхжильный оловянный кабель переносит 4 A LV от выходной лицевой стороны буфера. Два обычных входных люка LV в корпусе доменной печи принимают по 2 A и вместе дают до 128 EU/t — достаточно для алюминиевого рецепта на 120 EU/t."
-				"Подготовьте короткую трассу из четырёхжильного оловянного кабеля; одинарный кабель на этом участке запрещён."
-				"Встройте в будущую доменную печь два входных энергетических люка LV, не повышая их напряжение до MV."
-				"Выведите шину с лицевой выходной стороны буфера и разветвите её к обоим люкам."
-				"Четырёхамперная шина и два люка LV готовы передать до 128 EU/t без преждевременной сети MV."
-				"Подготовьте четыре четырёхжильных оловянных кабеля, два входных люка LV и начните силовую трассу."
-				"Если рецепт сообщает о нехватке мощности, проверьте четыре заряженные ячейки, выходную сторону буфера, четырёхжильный кабель и оба люка."
-				"Если кабель горит или сеть отключается, убедитесь, что на силовом участке нет одинарного кабеля и что оба люка имеют уровень LV."
-				"Одинарный оловянный кабель выдерживает только 1 A и не подходит между четырёхсекционным буфером и доменной печью."
-				"Один обычный люк принимает до 2 A. Два люка LV вместе принимают требуемые 4 A без подачи опасного напряжения MV."
-				"Начните трассу от выходной лицевой стороны буфера и оставьте короткое разветвление к двум люкам LV будущей доменной печи."
-				"Теперь сформируйте доменную печь с двумя люками LV и проведите первую алюминиевую плавку."
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.purpose}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.step.1}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.step.2}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.step.3}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.success}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.task}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.proof_help.3}"
+				"{industrial_frontier.quest.v2.p4.ebf_power_bus.next}"
 			]
 			icon: "gtceu:tin_quadruple_cable"
 			id: "3A1400000000001F"
 			shape: "square"
 			size: 1.1d
-			subtitle: "Запас энергии готов; теперь его нужно передать без узкого места в одинарном кабеле."
+			subtitle: "{industrial_frontier.quest.v2.p4.ebf_power_bus.lead}"
 			tags: ["mainline", "metallurgy", "power", "lv", "four_amp_bootstrap"]
 			tasks: [
 				{
@@ -358,7 +358,7 @@
 						id: "gtceu:tin_quadruple_cable"
 					}
 					consume_items: false
-					title: "Подготовьте четыре четырёхжильных оловянных кабеля."
+					title: "{industrial_frontier.task.v2.p4.ebf_power_bus.cable.objective}"
 					type: "item"
 				}
 				{
@@ -369,7 +369,7 @@
 						id: "gtceu:lv_energy_input_hatch"
 					}
 					consume_items: false
-					title: "Подготовьте два входных энергетических люка LV."
+					title: "{industrial_frontier.task.v2.p4.ebf_power_bus.hatches.objective}"
 					type: "item"
 				}
 				{
@@ -379,34 +379,34 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите хотя бы один четырёхжильный оловянный кабель на силовой шине."
+					title: "{industrial_frontier.task.v2.p4.ebf_power_bus.place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Шина 4 A и два люка LV"
+			title: "{industrial_frontier.quest.v2.p4.ebf_power_bus.title}"
 			x: 1.5d
 			y: -8d
 		}
 		{
 			dependencies: ["3A1400000000001F"]
 			description: [
-				"Электрическая доменная печь создаёт высокотемпературные металлы. Сначала принимается сама установка, затем её первый материал и только после этого электрическая ступень MV."
-				"Соберите контроллер и все блоки структуры по предпросмотру GregTech."
-				"Назначьте отдельные вход и выход, установите энергетические люки допустимой ступени."
-				"Сформируйте многоблок и откройте контроллер до загрузки первой партии."
-				"Электрическая доменная печь сформирована и готова к малой партии алюминия."
-				"Соберите, сформируйте и откройте электрическую доменную печь GregTech."
-				"Если структура не формируется, сравните каждый слой и ориентацию люков с предпросмотром."
-				"Если рецепт не запускается, проверьте 120 EU/t, нагрев, схему 1 и свободный выход. Газ нужен только добровольному ускоренному режиму со схемой 2."
-				"Откройте предпросмотр многоблока и подготовьте один рабочий комплекс; второй контроллер ради квеста не нужен."
-				"Проверьте слои корпуса, энергетические люки, вход, выход и допустимое напряжение до загрузки руды."
-				"Проведите восемь циклов чистой алюминиевой пыли, затем сформуйте слитки в пластины для ступени MV."
+				"{industrial_frontier.quest.v2.p4.ebf.purpose}"
+				"{industrial_frontier.quest.v2.p4.ebf.step.1}"
+				"{industrial_frontier.quest.v2.p4.ebf.step.2}"
+				"{industrial_frontier.quest.v2.p4.ebf.step.3}"
+				"{industrial_frontier.quest.v2.p4.ebf.success}"
+				"{industrial_frontier.quest.v2.p4.ebf.task}"
+				"{industrial_frontier.quest.v2.p4.ebf.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.ebf.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.ebf.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.ebf.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.ebf.next}"
 			]
 			icon: "gtceu:electric_blast_furnace"
 			id: "3A14000000000016"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Переход к MV начинается не с кабеля, а с материала, который нельзя получить в обычной печи."
+			subtitle: "{industrial_frontier.quest.v2.p4.ebf.lead}"
 			tags: ["mainline", "metallurgy", "machine_before_product", "tier_bridge"]
 			tasks: [
 				{
@@ -416,7 +416,7 @@
 						id: "gtceu:electric_blast_furnace"
 					}
 					consume_items: false
-					title: "Соберите контроллер электрической доменной печи GregTech."
+					title: "{industrial_frontier.task.v2.p4.ebf.item.objective}"
 					type: "item"
 				}
 				{
@@ -426,33 +426,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Сформируйте электрическую доменную печь и откройте контроллер."
+					title: "{industrial_frontier.task.v2.p4.ebf.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Электрическая доменная печь"
+			title: "{industrial_frontier.quest.v2.p4.ebf.title}"
 			x: 3d
 			y: -8d
 		}
 		{
 			dependencies: ["3A14000000000016"]
 			description: [
-				"Базовый рецепт со схемой 1 превращает одну чистую алюминиевую пыль в один слиток при 120 EU/t. Для первой ступени MV нужны восемь слитков, поэтому проведите восемь циклов. Газовая схема 2 лишь ускоряет работу и не является скрытым обязательным входом."
-				"Установите схему 1, загрузите чистую алюминиевую пыль и убедитесь, что оба люка LV получают суммарно четыре ампера."
-				"Проведите восемь циклов, каждый раз сохраняя свободный выход."
-				"Сложите восемь слитков в отдельный буфер перед формованием."
-				"Восемь алюминиевых слитков получены честными доменными циклами без скрытого газового требования."
-				"Проведите восемь доменных циклов и получите восемь совместимых алюминиевых слитков."
-				"Если рецепт не стартует, проверьте 120 EU/t, четыре заряженных аккумулятора, четырёхжильную шину, два люка LV и схему 1."
-				"Если часть партии пропала, проверьте выходной буфер и не смешивайте слитки с другим алюминиевым полуфабрикатом."
-				"Проведите восемь доменных циклов со схемой 1: одна чистая пыль даёт один слиток. Защитный газ для базового рецепта не нужен."
-				"Подготовьте гибочный станок LV и превратите слитки в пластины без двойного расхода ручного молота."
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.step.3}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_ingots.next}"
 			]
 			icon: "gtceu:aluminium_ingot"
 			id: "3A14000000000026"
 			shape: "square"
 			size: 1d
-			subtitle: "Доменная печь сформирована; теперь она должна доказать мощность реальным алюминием."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_ingots.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_output"]
 			tasks: [
 				{
@@ -465,33 +465,33 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/aluminium_ingots)"
 						}
 					}
-					title: "Получите восемь совместимых алюминиевых слитков."
+					title: "{industrial_frontier.task.v2.p4.aluminium_ingots.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Восемь доменных циклов"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_ingots.title}"
 			x: 4.5d
 			y: -10d
 		}
 		{
 			dependencies: ["3A14000000000026"]
 			description: [
-				"Гибочный станок LV переводит один слиток в одну пластину. Он нужен до проверки пластин, чтобы книга не подталкивала к дорогому ручному рецепту и не скрывала рабочее место."
-				"Установите станок на линию LV и оставьте место для входного и выходного буферов."
-				"Откройте интерфейс, выберите схему пластин и проверьте свободный выход."
-				"Гибочный станок LV установлен и готов сформовать восемь алюминиевых пластин."
-				"Подготовьте, установите и откройте гибочный станок LV."
-				"Если рецепт не появляется, проверьте схему, вход в форме слитка и свободный выход."
-				"Если станок выключается, проверьте допустимое напряжение LV и приоритет линии."
-				"Он превращает один слиток в одну пластину и не удваивает расход, как ручной рецепт с молотом."
-				"Подключите его к принятой сети LV, выставьте схему пластин и освободите выход."
-				"Сформуйте восемь пластин и откройте материальную границу MV."
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.purpose}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.step.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.step.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.success}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.next}"
 			]
 			icon: "gtceu:lv_bender"
 			id: "3A14000000000027"
 			shape: "gear"
 			size: 1d
-			subtitle: "Восемь слитков готовы; автоматическое формование сохранит материал и станет постоянной частью цеха."
+			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_bender_setup.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_before_product"]
 			tasks: [
 				{
@@ -501,7 +501,7 @@
 						id: "gtceu:lv_bender"
 					}
 					consume_items: false
-					title: "Подготовьте гибочный станок LV."
+					title: "{industrial_frontier.task.v2.p4.aluminium_bender_setup.item.objective}"
 					type: "item"
 				}
 				{
@@ -511,32 +511,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте гибочный станок LV."
+					title: "{industrial_frontier.task.v2.p4.aluminium_bender_setup.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Пластина без лишнего расхода"
+			title: "{industrial_frontier.quest.v2.p4.aluminium_bender_setup.title}"
 			x: 5.5d
 			y: -10d
 		}
 		{
 			dependencies: ["3A14000000000027"]
 			description: [
-				"Алюминий — материальная граница MV. Книга принимает совместимые пластины из общего тега, а не единственный реестровый предмет."
-				"Передайте восемь уже принятых алюминиевых слитков в гибочный станок LV со схемой пластин."
-				"Проведите восемь формовочных циклов и оставьте пластины в инвентаре до отметки."
-				"Восемь алюминиевых пластин готовы к реальным корпусам и сетевым узлам MV."
-				"Получите восемь совместимых алюминиевых пластин после ввода электрической доменной печи."
-				"Если станок не выдаёт пластину, проверьте схему, форму входа и свободный выход."
-				"Если пластина не считается, проверьте, входит ли она в показанный тег совместимых форм."
-				"Восемь пластин соответствуют одному корпусному шагу MV и пойдут в реальные машины; квест их не расходует."
-				"Теперь переходите к источнику, кабелю, буферу и компонентам MV."
+				"{industrial_frontier.quest.v2.p4.mv_materials.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.success}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.task}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_materials.next}"
 			]
 			icon: "gtceu:aluminium_plate"
 			id: "3A14000000000017"
 			shape: "hexagon"
 			size: 1.1d
-			subtitle: "Доменная установка готова; теперь нужен её реальный продукт до трансформатора, кабеля и корпуса MV."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_materials.lead}"
 			tags: ["mainline", "metallurgy", "mv", "material_bridge"]
 			tasks: [
 				{
@@ -549,65 +549,65 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/aluminium_plates)"
 						}
 					}
-					title: "Подготовьте восемь совместимых алюминиевых пластин."
+					title: "{industrial_frontier.task.v2.p4.mv_materials.aluminium.objective}"
 					type: "item"
 				}
 			]
-			title: "Алюминий открывает MV"
+			title: "{industrial_frontier.quest.v2.p4.mv_materials.title}"
 			x: 6d
 			y: -8d
 		}
 		{
 			dependencies: ["3014000000000001"]
 			description: [
-				"Этот шаг отделяет наличие воды от её качества. Обычная вода годится как сырьё, но чувствительные химические процессы дальше потребуют дистиллированную воду."
-				"Наберите воду в резервуар или другую ёмкость, из которой её можно подать в технологическую линию."
-				"В исходном резервуаре есть 1000 мБ обычной воды."
-				"Получите 1000 мБ обычной воды."
-				"Если жидкость не засчитывается, проверьте название: нужна обычная вода, а не похожий технологический раствор."
-				"Сырая вода подтверждает источник, но ещё не считается технологически подготовленной."
-				"Часть потока пойдёт на получение дистиллированной воды, а часть останется для орошения."
+				"{industrial_frontier.quest.v2.p4.raw_water.purpose}"
+				"{industrial_frontier.quest.v2.p4.raw_water.step.1}"
+				"{industrial_frontier.quest.v2.p4.raw_water.success}"
+				"{industrial_frontier.quest.v2.p4.raw_water.task}"
+				"{industrial_frontier.quest.v2.p4.raw_water.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.raw_water.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.raw_water.next}"
 			]
 			icon: "minecraft:water_bucket"
 			id: "3FA17567FB015E52"
 			shape: "circle"
 			size: 1d
-			subtitle: "Любая водная система начинается не с фильтра, а с устойчивого забора."
+			subtitle: "{industrial_frontier.quest.v2.p4.raw_water.lead}"
 			tags: ["water", "source"]
 			tasks: [
 				{
 					id: "456E850EA8B5A4F2"
 					fluid: "minecraft:water"
 					amount: 1000L
-					title: "Соберите 1000 мБ обычной воды."
+					title: "{industrial_frontier.task.v2.p4.raw_water.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Источник воды"
+			title: "{industrial_frontier.quest.v2.p4.raw_water.title}"
 			x: 3d
 			y: -5d
 		}
 		{
 			dependencies: ["3A14000000000017"]
 			description: [
-				"Турбина превращает выбранное топливо в MV, а медный кабель переносит энергию только по новому участку. Паровой и газовый варианты равноправны: важны стабильная подача и правильное напряжение."
-				"Выберите турбину под уже автоматизированное топливо."
-				"Поставьте её отдельно от LV-линии и подготовьте четыре медных кабеля."
-				"Откройте интерфейс, проверьте подачу топлива и пока оставьте выход отключённым от машин."
-				"Источник MV установлен, открывается и ждёт подключения через собственный кабель."
-				"Установите одну турбину MV и подготовьте короткий медный кабельный участок."
-				"Если турбина не выдаёт энергию, проверьте форму топлива, свободный выхлоп и направление выхода."
-				"Если старая сеть отключается, немедленно разорвите прямое соединение MV с LV."
-				"Оба варианта дают напряжение MV. Выберите тот, для которого уже есть устойчивый поток пара или горючего газа."
-				"Пока не соединяйте её выход со старой линией LV: сначала подготовьте кабель и отдельную сторону сети."
-				"Подойдёт обычная или отожжённая медь. Четырёх кабелей достаточно для первого короткого участка MV."
-				"Теперь между источником и химическими машинами нужен буфер."
+				"{industrial_frontier.quest.v2.p4.mv_source.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_source.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_source.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_source.step.3}"
+				"{industrial_frontier.quest.v2.p4.mv_source.success}"
+				"{industrial_frontier.quest.v2.p4.mv_source.task}"
+				"{industrial_frontier.quest.v2.p4.mv_source.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_source.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_source.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_source.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.mv_source.proof_help.3}"
+				"{industrial_frontier.quest.v2.p4.mv_source.next}"
 			]
 			icon: "gtceu:mv_steam_turbine"
 			id: "3A14000000000011"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "LV-сеть не должна случайно получить напряжение следующей ступени."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_source.lead}"
 			tags: ["mainline", "mv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -619,7 +619,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/mv_generators)"
 						}
 					}
-					title: "Соберите одну паровую или газовую турбину MV."
+					title: "{industrial_frontier.task.v2.p4.mv_source.generator_item.objective}"
 					type: "item"
 				}
 				{
@@ -629,7 +629,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте выбранную турбину MV."
+					title: "{industrial_frontier.task.v2.p4.mv_source.generator_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -642,35 +642,35 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/mv_cables)"
 						}
 					}
-					title: "Подготовьте четыре одинарных медных кабеля."
+					title: "{industrial_frontier.task.v2.p4.mv_source.cable.objective}"
 					type: "item"
 				}
 			]
-			title: "Первый источник MV"
+			title: "{industrial_frontier.quest.v2.p4.mv_source.title}"
 			x: 9d
 			y: -6d
 		}
 		{
 			dependencies: ["3A14000000000011"]
 			description: [
-				"Аккумуляторный буфер принимает энергию со стороны турбины через вставленный аккумулятор и отдаёт её машинному участку. Пустой корпус не передаёт энергию, не повышает напряжение и не исправляет неправильный кабель."
-				"Поставьте буфер между турбиной и будущим цехом."
-				"Вставьте хотя бы один совместимый аккумулятор MV, зарядите его и откройте интерфейс."
-				"Подключите вход, но не запускайте химические машины до проверки компонентов MV."
-				"Буфер MV установлен, содержит аккумулятор и отделяет источник от будущей нагрузки."
-				"Соберите буфер MV, вставьте хотя бы один совместимый аккумулятор, зарядите его и откройте интерфейс."
-				"Если буфер не заряжается, проверьте направление и сторону выхода турбины."
-				"Если заряд есть, а машина не получает энергию, проверьте выходную сторону и кабель."
-				"Один буфер сгладит пики учебного участка и останется полезным после его расширения."
-				"Пустой корпус буфера не питает машины. Подойдёт кадмиевый, литиевый или натриевый аккумулятор MV из списка задачи."
-				"Проверьте направление лицевой стороны и аккумуляторы подходящей ступени до подключения нагрузки."
-				"Перед специализированными машинами подтвердим схему и корпус MV."
+				"{industrial_frontier.quest.v2.p4.mv_buffer.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.step.3}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.success}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.task}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.proof_help.3}"
+				"{industrial_frontier.quest.v2.p4.mv_buffer.next}"
 			]
 			icon: "gtceu:mv_battery_buffer_4x"
 			id: "3A14000000000012"
 			shape: "square"
 			size: 1d
-			subtitle: "Турбина готова, но три машины не должны дёргать источник напрямую."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_buffer.lead}"
 			tags: ["mainline", "mv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -680,7 +680,7 @@
 						id: "gtceu:mv_battery_buffer_4x"
 					}
 					consume_items: false
-					title: "Соберите четырёхсекционный аккумуляторный буфер MV."
+					title: "{industrial_frontier.task.v2.p4.mv_buffer.item.objective}"
 					type: "item"
 				}
 				{
@@ -692,7 +692,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/mv_batteries)"
 						}
 					}
-					title: "Подготовьте хотя бы один совместимый аккумулятор MV."
+					title: "{industrial_frontier.task.v2.p4.mv_buffer.battery.objective}"
 					type: "item"
 				}
 				{
@@ -702,33 +702,33 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте аккумуляторный буфер MV."
+					title: "{industrial_frontier.task.v2.p4.mv_buffer.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Буфер между источником и цехом"
+			title: "{industrial_frontier.quest.v2.p4.mv_buffer.title}"
 			x: 12d
 			y: -6d
 		}
 		{
 			dependencies: ["3A14000000000012"]
 			description: [
-				"Схема отвечает за управление, корпус — за электрическую и конструкционную основу машины. Это разные роли, поэтому один предмет не заменяет другой."
-				"Выберите любую доступную схему семейства MV."
-				"Соберите один корпус MV и оставьте оба предмета в инвентаре до отметки."
-				"Схема и корпус MV готовы к сборке химического оборудования."
-				"Получите одну схему семейства MV и один корпус машины MV."
-				"Если схема не засчитывается, проверьте её уровень в описании предмета."
-				"Если корпус недоступен, проследите в JEI цепочку пластин, кабелей и компонентов до первого отсутствующего узла."
-				"Подойдёт любая схема из семейства MV: книга проверяет ступень, а не единственный способ изготовления."
-				"Корпус подтверждает базовую компонентную цепочку до специализированной машины."
-				"Теперь можно собирать дистиллятор, реактор и электролизёр MV."
+				"{industrial_frontier.quest.v2.p4.mv_components.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_components.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_components.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_components.success}"
+				"{industrial_frontier.quest.v2.p4.mv_components.task}"
+				"{industrial_frontier.quest.v2.p4.mv_components.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_components.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_components.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_components.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.mv_components.next}"
 			]
 			icon: "gtceu:mv_machine_hull"
 			id: "3A14000000000013"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Питание уже принято; теперь докажем, что новая ступень собирается из собственных компонентов."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_components.lead}"
 			tags: ["mainline", "mv", "components", "tier_bridge"]
 			tasks: [
 				{
@@ -740,7 +740,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(gtceu:circuits/mv)"
 						}
 					}
-					title: "Получите одну схему уровня MV."
+					title: "{industrial_frontier.task.v2.p4.mv_components.circuit.objective}"
 					type: "item"
 				}
 				{
@@ -750,11 +750,11 @@
 						id: "gtceu:mv_machine_hull"
 					}
 					consume_items: false
-					title: "Получите один корпус машины MV."
+					title: "{industrial_frontier.task.v2.p4.mv_components.hull.objective}"
 					type: "item"
 				}
 			]
-			title: "Схема и корпус MV"
+			title: "{industrial_frontier.quest.v2.p4.mv_components.title}"
 			x: 15d
 			y: -6d
 		}
@@ -764,24 +764,24 @@
 				"3FA17567FB015E52"
 			]
 			description: [
-				"Дистиллятор отделяет подготовку технологической воды от кислотных синтезов и электролиза. Реактор и электролизёр находятся в параллельных узлах: ради воды их собирать не нужно."
-				"Соберите один дистиллятор MV на уже принятой компонентной базе."
-				"Подведите исходную воду и отдельный чистый резервуар, затем откройте интерфейс машины."
-				"Не соединяйте выход дистиллята с резервуаром сырой воды."
-				"Дистиллятор MV подключён, открывается и готов к первой небольшой партии воды."
-				"Соберите, установите и откройте один дистиллятор MV."
-				"Если интерфейс открывается, но рецепт не запускается, сначала проверьте уровень питания, точную форму входа и свободный выход."
-				"Если машина отключает сеть, отделите участок MV от LV и проверьте допустимое напряжение кабеля и буфера."
-				"Если сырая и очищенная вода смешались, слейте неверный резервуар и разведите потоки по отдельным трубам."
-				"Именно эта машина подготовит воду; более слабая установка не заменяет освоение ступени MV."
-				"Открытие интерфейса подтверждает размещённую машину и правильный доступ к ней до выпуска дистиллированной воды."
-				"Теперь дистиллируйте первую партию воды. Кислотный реактор и электролизёр можно вводить независимо."
+				"{industrial_frontier.quest.v2.p4.mv_lab.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.step.3}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.success}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.task}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.next}"
 			]
 			icon: "gtceu:mv_distillery"
 			id: "3A14000000000010"
 			shape: "gear"
 			size: 1.25d
-			subtitle: "Питание, буфер и компоненты MV уже приняты. Начнём с одной машины и одного понятного потока — очистки воды."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_lab.lead}"
 			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
 			tasks: [
 				{
@@ -791,7 +791,7 @@
 						id: "gtceu:mv_distillery"
 					}
 					consume_items: false
-					title: "Соберите дистиллятор MV GregTech."
+					title: "{industrial_frontier.task.v2.p4.mv_lab.distillery_item.objective}"
 					type: "item"
 				}
 				{
@@ -801,34 +801,34 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте дистиллятор MV."
+					title: "{industrial_frontier.task.v2.p4.mv_lab.distillery_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Дистиллятор MV"
+			title: "{industrial_frontier.quest.v2.p4.mv_lab.title}"
 			x: 18d
 			y: -5d
 		}
 		{
 			dependencies: ["3A14000000000013"]
 			description: [
-				"Химический реактор ведёт серную и азотную цепочки. Одна машина достаточна для обучения, но реагенты и продукты каждой партии должны идти по подписанным раздельным потокам."
-				"Соберите один химический реактор MV."
-				"Установите его на принятой сети, подготовьте входы и отдельный кислотный выход."
-				"Откройте интерфейс и только затем переходите к сырью конкретной химической ветви."
-				"Химический реактор MV установлен и готов к малым партиям серной и азотной химии."
-				"Соберите, установите и откройте один химический реактор MV."
-				"Если реакция не начинается, проверьте напряжение, точные формы и количества всех реагентов."
-				"Если жидкость не выходит, освободите назначенный резервуар и проверьте сторону вывода."
-				"Один реактор обслужит малые учебные партии серной и азотной ветвей; второй экземпляр ради квеста не нужен."
-				"До первой реакции подготовьте раздельные входы реагентов и отдельный выход кислоты."
-				"Серная и азотная ветви теперь могут независимо подготовить сырьё и провести первую реакцию."
+				"{industrial_frontier.quest.v2.p4.mv_reactor.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.step.3}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.success}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.task}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.next}"
 			]
 			icon: "gtceu:mv_chemical_reactor"
 			id: "3A14000000000014"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Компонентная база готова; кислотные ветви получают собственную рабочую машину, не блокируя воду и электролиз."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_reactor.lead}"
 			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
 			tasks: [
 				{
@@ -838,7 +838,7 @@
 						id: "gtceu:mv_chemical_reactor"
 					}
 					consume_items: false
-					title: "Соберите химический реактор MV GregTech."
+					title: "{industrial_frontier.task.v2.p4.mv_reactor.item.objective}"
 					type: "item"
 				}
 				{
@@ -848,11 +848,11 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте химический реактор MV."
+					title: "{industrial_frontier.task.v2.p4.mv_reactor.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Химический реактор MV"
+			title: "{industrial_frontier.quest.v2.p4.mv_reactor.title}"
 			x: 18d
 			y: -1d
 		}
@@ -862,23 +862,23 @@
 				"3FA17567FB015E52"
 			]
 			description: [
-				"Электролизёр разделяет рассол на несколько совместных продуктов. Его принимают до требования хлора и щёлочи, чтобы выходы были продуманы заранее."
-				"Соберите один электролизёр MV."
-				"Установите его на принятой сети и подготовьте отдельные выходы газа, жидкости и твёрдого продукта."
-				"Откройте интерфейс, но не подавайте рассол, пока выходы не разведены."
-				"Электролизёр MV установлен и готов к контролируемой партии рассола."
-				"Соберите, установите и откройте один электролизёр MV."
-				"Если машина не запускается, проверьте напряжение и точную форму входного раствора."
-				"Если один выход блокирует рецепт, освободите все совместные выходы и проверьте их стороны."
-				"Нужна одна рабочая машина; запасной электролизёр ради задания не требуется."
-				"До подачи рассола подготовьте раздельные выходы для хлора, водорода и щёлочи."
-				"Теперь подготовьте рассол и сохраните хлор, водород и щёлочь раздельно."
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.step.3}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.success}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.task}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.next}"
 			]
 			icon: "gtceu:mv_electrolyzer"
 			id: "3A14000000000015"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Рассольная ветвь получает отдельную машину и не заставляет заранее запускать кислотные синтезы."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_electrolyzer.lead}"
 			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
 			tasks: [
 				{
@@ -888,7 +888,7 @@
 						id: "gtceu:mv_electrolyzer"
 					}
 					consume_items: false
-					title: "Соберите электролизёр MV GregTech."
+					title: "{industrial_frontier.task.v2.p4.mv_electrolyzer.item.objective}"
 					type: "item"
 				}
 				{
@@ -898,92 +898,92 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте электролизёр MV."
+					title: "{industrial_frontier.task.v2.p4.mv_electrolyzer.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Электролизёр MV"
+			title: "{industrial_frontier.quest.v2.p4.mv_electrolyzer.title}"
 			x: 18d
 			y: 3.5d
 		}
 		{
 			dependencies: ["3A14000000000010"]
 			description: [
-				"Дистиллятор MV отделяет технологически пригодную воду от исходного потока. Дистиллированная вода нужна там, где соли сырой воды портят рецепт или оборудование."
-				"Откройте установленный дистиллятор MV, выберите в JEI рецепт дистиллированной воды и подайте обычную воду в его входной резервуар."
-				"Отведите готовую жидкость в отдельную ёмкость, чтобы не смешать её с исходной водой."
-				"В отдельном резервуаре накоплено не меньше 1000 мБ дистиллированной воды GregTech."
-				"Получите 1000 мБ дистиллированной воды GregTech."
-				"Если процесс не начинается, сначала проверьте энергию или пар и свободный выход для жидкости."
-				"Если на выходе снова обычная вода, сверьте выбранный рецепт и название продукта в JEI."
-				"Задача принимает именно дистиллированную воду GregTech, а не обычную воду или декоративную канистру."
-				"Подготовленная вода пойдёт на химические рецепты, кухню и позднее на замкнутые тепловые контуры."
+				"{industrial_frontier.quest.v2.p4.distilled_water.purpose}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.step.1}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.step.2}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.success}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.task}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.next}"
 			]
 			icon: "gtceu:distilled_water_bucket"
 			id: "3D548F1A54D402A2"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Источник найден; теперь уберём примеси, которые мешают химии и теплообмену."
+			subtitle: "{industrial_frontier.quest.v2.p4.distilled_water.lead}"
 			tags: ["water", "product"]
 			tasks: [
 				{
 					id: "449EE174796427BE"
 					fluid: "gtceu:distilled_water"
 					amount: 1000L
-					title: "Получите 1000 мБ дистиллированной воды GregTech."
+					title: "{industrial_frontier.task.v2.p4.distilled_water.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Дистиллированная вода"
+			title: "{industrial_frontier.quest.v2.p4.distilled_water.title}"
 			x: 21d
 			y: -5d
 		}
 		{
 			dependencies: ["3D548F1A54D402A2"]
 			description: [
-				"Любая рабочая водная линия должна различать чистый продукт, возвратный поток и загрязнённый сток. Пока отдельной очистной установки нет, храните стоки отдельно и не возвращайте их в чистый контур."
-				"Вы предусмотрели отдельные ёмкости и не отправляете загрязнённый сток обратно в чистый контур."
-				"Прочитайте правило баланса воды и стоков."
-				"Отметка подтверждает чтение эксплуатационного правила, а не работу несуществующей очистной машины."
-				"То же правило понадобится трём химическим линиям: у каждого побочного продукта должен быть потребитель или безопасный буфер."
+				"{industrial_frontier.quest.v2.p4.effluent_balance.purpose}"
+				"{industrial_frontier.quest.v2.p4.effluent_balance.success}"
+				"{industrial_frontier.quest.v2.p4.effluent_balance.task}"
+				"{industrial_frontier.quest.v2.p4.effluent_balance.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.effluent_balance.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/process/gtceu/sewage_recovery.png"
 			id: "3014000000000004"
 			shape: "square"
 			size: 1d
-			subtitle: "Чистый продукт получен, но исходный поток не исчезает бесследно."
+			subtitle: "{industrial_frontier.quest.v2.p4.effluent_balance.lead}"
 			tags: ["water", "diagnostics"]
 			tasks: [
 				{
 					id: "4014000000000004"
-					title: "Прочитайте правило разделения воды и стоков."
+					title: "{industrial_frontier.task.v2.p4.effluent_balance.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Куда уходит остаток"
+			title: "{industrial_frontier.quest.v2.p4.effluent_balance.title}"
 			x: 24d
 			y: -5d
 		}
 		{
 			dependencies: ["3A14000000000014"]
 			description: [
-				"Этот узел отделяет сырьё от конечной кислоты. Одна пыль серы и 3000 мБ кислорода покрывают обе ступени окисления одной учебной партии, но не заставляют заранее заполнять промышленный резервуар."
-				"Получите одну пыль серы любым совместимым способом."
-				"Подготовьте 3000 мБ кислорода в отдельном буфере: 2000 мБ уйдут на диоксид серы, ещё 1000 мБ — на триоксид."
-				"Проследите в JEI обе ступени до серной кислоты."
-				"Одна пыль серы и 3000 мБ кислорода готовы к одной малой сернокислотной партии."
-				"Подготовьте совместимую пыль серы и 3000 мБ кислорода."
-				"Если пыль не считается, проверьте её тег и форму."
-				"Если цепочка обрывается после диоксида серы, проверьте остаток кислорода для второй ступени и свободный выход реактора."
-				"Подойдёт любая пыль из показанного тега; путь получения серы не привязан к одному моду."
-				"На одну учебную цепочку нужны 2000 мБ для диоксида серы и ещё 1000 мБ для триоксида. Держите газ в отдельном буфере."
-				"Теперь проведите малую цепочку до серной кислоты."
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.purpose}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.step.1}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.step.2}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.step.3}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.success}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.task}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.next}"
 			]
 			icon: "gtceu:sulfur_dust"
 			id: "3A14000000000018"
 			shape: "square"
 			size: 1d
-			subtitle: "До серной кислоты должны существовать исходная сера, кислород и принятый реактор."
+			subtitle: "{industrial_frontier.quest.v2.p4.sulfur_feedstock.lead}"
 			tags: ["mainline", "chemistry", "sulfur", "source_before_product"]
 			tasks: [
 				{
@@ -995,50 +995,50 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/sulfur_dusts)"
 						}
 					}
-					title: "Подготовьте одну совместимую пыль серы."
+					title: "{industrial_frontier.task.v2.p4.sulfur_feedstock.sulfur.objective}"
 					type: "item"
 				}
 				{
 					id: "4A14000000000041"
 					fluid: "gtceu:oxygen"
 					amount: 3000L
-					title: "Подготовьте 3000 мБ кислорода."
+					title: "{industrial_frontier.task.v2.p4.sulfur_feedstock.oxygen.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Сера и окислитель"
+			title: "{industrial_frontier.quest.v2.p4.sulfur_feedstock.title}"
 			x: 21d
 			y: -2d
 		}
 		{
 			dependencies: ["3A14000000000018"]
 			description: [
-				"Серная кислота нужна рудопереработке, аккумуляторам и дальнейшему органическому синтезу. Её ценность определяется потребителями, поэтому первая партия остаётся небольшой."
-				"Подберите в JEI доступный источник серы и проведите малую цепочку до серной кислоты через установленный химический реактор MV."
-				"Выведите кислоту в отдельную ёмкость с понятной маркировкой."
-				"В химическом буфере находится 1000 мБ серной кислоты, не смешанной с другими жидкостями."
-				"Получите 1000 мБ серной кислоты."
-				"Если реакция остановилась, проверьте наличие окислителя и свободный жидкостный выход."
-				"Если труба не принимает кислоту, проверьте совместимость и сторону подключения машины."
-				"Используйте отдельный совместимый резервуар и не смешивайте кислоту с водой."
-				"Кислота войдёт в контрольную партию, а позднее пригодится для очистки ядерного сырья."
+				"{industrial_frontier.quest.v2.p4.sulfur.purpose}"
+				"{industrial_frontier.quest.v2.p4.sulfur.step.1}"
+				"{industrial_frontier.quest.v2.p4.sulfur.step.2}"
+				"{industrial_frontier.quest.v2.p4.sulfur.success}"
+				"{industrial_frontier.quest.v2.p4.sulfur.task}"
+				"{industrial_frontier.quest.v2.p4.sulfur.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.sulfur.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.sulfur.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.sulfur.next}"
 			]
 			icon: "gtceu:sulfuric_acid_bucket"
 			id: "37A5A8A5636C1101"
 			shape: "hexagon"
 			size: 1d
-			subtitle: "Серную ветвь можно строить сразу, не дожидаясь азота или хлора."
+			subtitle: "{industrial_frontier.quest.v2.p4.sulfur.lead}"
 			tags: ["chemistry", "sulfur"]
 			tasks: [
 				{
 					id: "44087A38296DF113"
 					fluid: "gtceu:sulfuric_acid"
 					amount: 1000L
-					title: "Получите 1000 мБ серной кислоты."
+					title: "{industrial_frontier.task.v2.p4.sulfur.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Сернокислотная линия"
+			title: "{industrial_frontier.quest.v2.p4.sulfur.title}"
 			x: 24d
 			y: -2d
 		}
@@ -1048,23 +1048,23 @@
 				"3FA17567FB015E52"
 			]
 			description: [
-				"Смеситель MV соединяет две пыли соли с 1000 мБ воды и выдаёт 1000 мБ рассола. Электролизёр будет только следующим потребителем этой жидкости, а механика Create не имеет подходящего рецепта сборки."
-				"Соберите и установите один смеситель MV GregTech."
-				"Подключите его к принятой сети MV, подведите предметный вход и водную линию."
-				"Откройте интерфейс и оставьте отдельную чистую ёмкость под солёную воду."
-				"Смеситель MV установлен, открывается и готов приготовить первую партию рассола."
-				"Соберите, установите и откройте смеситель MV GregTech до приготовления рассола."
-				"Если машина не включается, проверьте напряжение MV, кабель и свободный выход."
-				"Если рецепт не виден, убедитесь, что открыта машина GregTech, а не механический смеситель Create."
-				"Именно эта машина соединяет две пыли соли с 1000 мБ воды; механический смеситель Create этот рецепт не заменяет."
-				"Подведите предметный вход, водную линию и отдельный выход солёной воды до загрузки соли."
-				"Теперь подготовьте две совместимые пыли соли, а после этого смешайте их с водой."
+				"{industrial_frontier.quest.v2.p4.mv_mixer.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.step.1}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.step.2}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.step.3}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.success}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.task}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.mv_mixer.next}"
 			]
 			icon: "gtceu:mv_mixer"
 			id: "3A1400000000001C"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "Солёная вода GregTech не создаётся в электролизёре: её сначала готовит отдельный смеситель MV."
+			subtitle: "{industrial_frontier.quest.v2.p4.mv_mixer.lead}"
 			tags: ["mainline", "chemistry", "chlorine", "machine_before_product"]
 			tasks: [
 				{
@@ -1074,7 +1074,7 @@
 						id: "gtceu:mv_mixer"
 					}
 					consume_items: false
-					title: "Соберите смеситель MV GregTech."
+					title: "{industrial_frontier.task.v2.p4.mv_mixer.item.objective}"
 					type: "item"
 				}
 				{
@@ -1084,32 +1084,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите и откройте смеситель MV."
+					title: "{industrial_frontier.task.v2.p4.mv_mixer.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Смеситель до рассола"
+			title: "{industrial_frontier.quest.v2.p4.mv_mixer.title}"
 			x: 18d
 			y: 6d
 		}
 		{
 			dependencies: ["3A1400000000001C"]
 			description: [
-				"Одна учебная партия требует две совместимые пыли соли и 1000 мБ воды. Водный поток и смеситель MV уже подтверждены раньше; здесь книга отдельно фиксирует твёрдый исходный материал до смешивания."
-				"Получите две пыли соли из списка совместимых форм."
-				"Отложите их рядом с ранее подготовленным водным буфером, но пока не запускайте смешивание."
-				"Две совместимые пыли соли готовы к приготовлению одной партии рассола."
-				"Подготовьте две совместимые пыли соли до приготовления рассола."
-				"Если соль не считается, откройте список задачи и проверьте форму материала."
-				"Убедитесь, что подготовлены две пыли, а не один слиток, кристалл или декоративный блок."
-				"Одна партия солёной воды требует две пыли. Подойдёт любая форма из показанного тега; квест не привязывает соль к одному моду."
-				"Теперь смешайте обе пыли с 1000 мБ воды и отдельно подтвердите готовый рассол."
+				"{industrial_frontier.quest.v2.p4.brine_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.step.1}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.step.2}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.success}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.task}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.brine_inputs.next}"
 			]
 			icon: "gtceu:salt_dust"
 			id: "3A1400000000001B"
 			shape: "square"
 			size: 1d
-			subtitle: "Готовая солёная вода не должна появляться в книге раньше собственного твёрдого сырья."
+			subtitle: "{industrial_frontier.quest.v2.p4.brine_inputs.lead}"
 			tags: ["mainline", "chemistry", "chlorine", "source_before_processed"]
 			tasks: [
 				{
@@ -1122,43 +1122,43 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/salt_dusts)"
 						}
 					}
-					title: "Подготовьте две совместимые пыли соли."
+					title: "{industrial_frontier.task.v2.p4.brine_feedstock.salt.objective}"
 					type: "item"
 				}
 			]
-			title: "Две пыли соли до рассола"
+			title: "{industrial_frontier.quest.v2.p4.brine_inputs.title}"
 			x: 21d
 			y: 6d
 		}
 		{
 			dependencies: ["3A1400000000001B"]
 			description: [
-				"Две ранее подтверждённые пыли соли и 1000 мБ воды дают 1000 мБ солёной воды GregTech. Рассол готовят до требования хлора, водорода и щёлочи."
-				"Смешайте две подготовленные пыли соли с 1000 мБ подтверждённого водного потока."
-				"Получите 1000 мБ солёной воды и поместите её в отдельный входной резервуар электролизёра."
-				"В отдельном резервуаре находятся 1000 мБ рассола для одной контролируемой партии электролиза."
-				"Приготовьте 1000 мБ солёной воды GregTech из ранее подтверждённых соли и воды."
-				"Если рассол не получается, проверьте наличие двух пылей соли, 1000 мБ воды и свободного жидкостного выхода."
-				"Если электролизёр не принимает жидкость, убедитесь, что в линии находится солёная вода GregTech, а не обычная вода."
-				"Это вход электролизёра, а не готовый хлор. Используйте подтверждённый водный поток и отдельную ёмкость."
-				"Теперь проведите рассол через принятый электролизёр и разведите все выходы."
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.purpose}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.step.1}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.step.2}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.success}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.task}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.next}"
 			]
 			icon: "gtceu:salt_water_bucket"
 			id: "3A1400000000001A"
 			shape: "square"
 			size: 1d
-			subtitle: "Две пыли соли подготовлены; теперь подтвердите следующую, жидкую форму процесса."
+			subtitle: "{industrial_frontier.quest.v2.p4.brine_feedstock.lead}"
 			tags: ["mainline", "chemistry", "chlorine", "source_before_product"]
 			tasks: [
 				{
 					id: "4A14000000000045"
 					fluid: "gtceu:salt_water"
 					amount: 1000L
-					title: "Приготовьте 1000 мБ солёной воды GregTech."
+					title: "{industrial_frontier.task.v2.p4.brine_feedstock.brine.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Соль превращается в рассол"
+			title: "{industrial_frontier.quest.v2.p4.brine_feedstock.title}"
 			x: 21d
 			y: 3.5d
 		}
@@ -1168,29 +1168,29 @@
 				"3A14000000000015"
 			]
 			description: [
-				"Электролиз рассола даёт хлор, водород и щёлочь одновременно. Линия считается устойчивой только тогда, когда побочные продукты не блокируют основной выход."
-				"Подайте рассол в установленный электролизёр MV и подготовьте раздельные выходы."
-				"Сохраните хлор и гидроксид натрия; водород верните в азотную ветвь или отдельный буфер."
-				"У вас есть 1000 мБ хлора и хотя бы одна порция гидроксида натрия в виде пыли, а выходы не смешаны."
-				"Получите 1000 мБ хлора и одну порцию гидроксида натрия в виде пыли."
-				"Если установка встала, первым делом проверьте свободное место для всех совместных продуктов."
-				"Если получен только один ожидаемый продукт, сверьте рецепт рассола и подключение газовых выходов."
-				"Хлор является одним из совместных продуктов электролиза рассола."
-				"Щёлочь подтверждается отдельно, потому что она не является тем же продуктом, что хлор."
-				"Хлор понадобится очистке и полимерам, щёлочь — нейтрализации, а водород вернётся в синтез аммиака."
+				"{industrial_frontier.quest.v2.p4.chlorine.purpose}"
+				"{industrial_frontier.quest.v2.p4.chlorine.step.1}"
+				"{industrial_frontier.quest.v2.p4.chlorine.step.2}"
+				"{industrial_frontier.quest.v2.p4.chlorine.success}"
+				"{industrial_frontier.quest.v2.p4.chlorine.task}"
+				"{industrial_frontier.quest.v2.p4.chlorine.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.chlorine.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.chlorine.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.chlorine.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.chlorine.next}"
 			]
 			icon: "gtceu:chlorine_bucket"
 			id: "39016A3285565221"
 			shape: "hexagon"
 			size: 1d
-			subtitle: "Третья ветвь начинается с соли и воды и сразу требует думать о нескольких выходах."
+			subtitle: "{industrial_frontier.quest.v2.p4.chlorine.lead}"
 			tags: ["chemistry", "chlor_alkali"]
 			tasks: [
 				{
 					id: "4C36206BD95E1A88"
 					fluid: "gtceu:chlorine"
 					amount: 1000L
-					title: "Получите 1000 мБ хлора."
+					title: "{industrial_frontier.task.v2.p4.chlorine.fluid.objective}"
 					type: "fluid"
 				}
 				{
@@ -1200,35 +1200,35 @@
 						id: "gtceu:sodium_hydroxide_dust"
 					}
 					consume_items: false
-					title: "Получите одну порцию гидроксида натрия в виде пыли."
+					title: "{industrial_frontier.task.v2.p4.chlorine.caustic.objective}"
 					type: "item"
 				}
 			]
-			title: "Три продукта рассола"
+			title: "{industrial_frontier.quest.v2.p4.chlorine.title}"
 			x: 24d
 			y: 3.5d
 		}
 		{
 			dependencies: ["3A1400000000001C"]
 			description: [
-				"Одна загрузка смесителя MV принимает блок земли, две пыли древесины, четыре блока песка и 1000 мБ ранее подтверждённой воды. На выходе получаются четыре удобрения — три для приёмки и одно в запас."
-				"Подготовьте один блок обычной земли, две пыли древесины GregTech и четыре блока обычного песка."
-				"Проверьте, что к принятому смесителю MV подведены 1000 мБ воды и свободен предметный выход."
-				"Не запускайте массовое производство: следующей задаче достаточно одной точной загрузки."
-				"Три твёрдых входа и водная линия готовы к одной операции смесителя MV."
-				"Подготовьте один блок земли, две пыли древесины и четыре блока песка для одной партии удобрения."
-				"Если рецепт не появляется, проверьте обычную землю, обычный песок, две пыли древесины и 1000 мБ воды."
-				"Если выход занят, освободите его до запуска: одна операция выдаёт сразу четыре удобрения."
-				"Рецепт использует именно обычную землю; дёрн, подзол и декоративные варианты её не заменяют."
-				"Это органическая часть точного рецепта смесителя; иная форма подходит только тогда, когда её показывает сам рецепт."
-				"Для этой учебной загрузки нужен обычный песок. Красный песок не подменяет точный вход рецепта."
-				"Теперь проведите одну загрузку и подтвердите три удобрения; четвёртое останется рабочим запасом."
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.step.1}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.step.2}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.step.3}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.success}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.task}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.proof_help.3}"
+				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.next}"
 			]
 			icon: "minecraft:dirt"
 			id: "3A1400000000001D"
 			shape: "square"
 			size: 1d
-			subtitle: "Удобрение P4 не притворяется продуктом азотной кислоты: у него есть собственный доступный органо-минеральный рецепт."
+			subtitle: "{industrial_frontier.quest.v2.p4.fertiliser_inputs.lead}"
 			tags: ["mainline", "agriculture", "fertilizer", "source_before_product"]
 			tasks: [
 				{
@@ -1238,7 +1238,7 @@
 						id: "minecraft:dirt"
 					}
 					consume_items: false
-					title: "Подготовьте один блок обычной земли."
+					title: "{industrial_frontier.task.v2.p4.fertiliser_inputs.dirt.objective}"
 					type: "item"
 				}
 				{
@@ -1249,7 +1249,7 @@
 						id: "gtceu:wood_dust"
 					}
 					consume_items: false
-					title: "Подготовьте две пыли древесины GregTech."
+					title: "{industrial_frontier.task.v2.p4.fertiliser_inputs.wood_dust.objective}"
 					type: "item"
 				}
 				{
@@ -1260,32 +1260,32 @@
 						id: "minecraft:sand"
 					}
 					consume_items: false
-					title: "Подготовьте четыре блока обычного песка."
+					title: "{industrial_frontier.task.v2.p4.fertiliser_inputs.sand.objective}"
 					type: "item"
 				}
 			]
-			title: "Состав одной партии удобрения"
+			title: "{industrial_frontier.quest.v2.p4.fertiliser_inputs.title}"
 			x: 24d
 			y: 0.5d
 		}
 		{
 			dependencies: ["3A1400000000001D"]
 			description: [
-				"Блок земли, две пыли древесины, четыре блока песка и 1000 мБ воды превращаются в четыре удобрения GregTech. Три подтверждают приёмку, а четвёртое остаётся для работы поля. Азотная кислота в этом рецепте не участвует."
-				"Загрузите ранее подтверждённые входы и 1000 мБ воды в принятый смеситель MV."
-				"Проведите одну операцию, заберите четыре удобрения и оставьте не менее трёх в инвентаре до отметки."
-				"Одна операция завершена: три удобрения подтверждают линию, четвёртое осталось рабочим запасом."
-				"Получите три промышленных удобрения для оросительной системы."
-				"Если рецепт не запускается, вернитесь к проверке земли, древесной пыли, песка, воды и свободного выхода."
-				"Если предмет не засчитывается, откройте список задачи и убедитесь, что полученная форма входит в общий тег удобрений."
-				"Одна точная загрузка смесителя выдаёт четыре удобрения. Задача принимает три, а четвёртое остаётся запасом."
-				"Удобрение и вода теперь соединятся в рабочем контуре орошения."
+				"{industrial_frontier.quest.v2.p4.fertiliser.purpose}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.step.1}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.step.2}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.success}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.task}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.fertiliser.next}"
 			]
 			icon: "gtceu:fertilizer"
 			id: "3F5500A5915B1BB6"
 			shape: "circle"
 			size: 1d
-			subtitle: "Точные входы готовы; одна операция смесителя даст удобрение для первого орошаемого участка."
+			subtitle: "{industrial_frontier.quest.v2.p4.fertiliser.lead}"
 			tags: ["agriculture", "fertilizer"]
 			tasks: [
 				{
@@ -1298,11 +1298,11 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:fertilizer)"
 						}
 					}
-					title: "Получите три промышленных удобрения для оросительной системы."
+					title: "{industrial_frontier.task.v2.p4.fertiliser.tag.objective}"
 					type: "item"
 				}
 			]
-			title: "Удобрение общего стандарта"
+			title: "{industrial_frontier.quest.v2.p4.fertiliser.title}"
 			x: 27d
 			y: 0.5d
 		}
@@ -1312,22 +1312,22 @@
 				"3F5500A5915B1BB6"
 			]
 			description: [
-				"Agricultural Enhancements отвечает за давление в оросительных трубах и состояние почвы. Контроллер не расходует источник под собой, но без него трубы не поддерживают полив."
-				"Подготовьте постоянный источник воды и поставьте контроллер прямо над ним."
-				"Подключите оросительные трубы сзади или сверху, затем откройте контроллер и проверьте его состояние."
-				"Контроллер установлен над водой, доступен для взаимодействия и готов питать оросительную сеть."
-				"Поставьте контроллер орошения и один раз откройте его."
-				"Если давления нет, сначала проверьте неподвижный источник воды под контроллером."
-				"Если труба не подключается, перенесите её на заднюю или верхнюю сторону блока."
-				"Источник воды должен находиться под контроллером; трубы подключаются сзади или сверху."
-				"Взаимодействуйте с блоком после установки, чтобы проверить доступ к его интерфейсу."
-				"Стабильный урожай станет сырьём для серийной кухни и снабжения рабочих смен."
+				"{industrial_frontier.quest.v2.p4.irrigation.purpose}"
+				"{industrial_frontier.quest.v2.p4.irrigation.step.1}"
+				"{industrial_frontier.quest.v2.p4.irrigation.step.2}"
+				"{industrial_frontier.quest.v2.p4.irrigation.success}"
+				"{industrial_frontier.quest.v2.p4.irrigation.task}"
+				"{industrial_frontier.quest.v2.p4.irrigation.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.irrigation.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.irrigation.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.irrigation.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.irrigation.next}"
 			]
 			icon: "agriculturalenhancements:irrigation_controller"
 			id: "3A14000000000001"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Вода и удобрение готовы; теперь поле должно получать их как система, а не случайными кликами."
+			subtitle: "{industrial_frontier.quest.v2.p4.irrigation.lead}"
 			tags: ["agriculture", "water", "place_use"]
 			tasks: [
 				{
@@ -1337,7 +1337,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Поставьте один контроллер орошения."
+					title: "{industrial_frontier.task.v2.p4.irrigation.place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -1347,32 +1347,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте установленный контроллер орошения."
+					title: "{industrial_frontier.task.v2.p4.irrigation.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Орошаемый участок"
+			title: "{industrial_frontier.quest.v2.p4.irrigation.title}"
 			x: 27d
 			y: 3.5d
 		}
 		{
 			dependencies: ["3D548F1A54D402A2"]
 			description: [
-				"Первую кухню нужно собрать и понять вручную. Так автоматизация позже повторит известный процесс, а не скроет входы, посуду и источник тепла."
-				"Поставьте котелок над подходящим источником тепла."
-				"Оставьте рядом место для ингредиентов, контейнеров и готовых блюд."
-				"Котелок стоит в рабочей кухонной зоне и готов принять рецепт."
-				"Поставьте один котелок Farmer's Delight."
-				"Если рецепт не начинается, проверьте тепло снизу и точный набор ингредиентов."
-				"Если блюдо не выходит, убедитесь, что у результата есть подходящая посуда и свободный слот."
-				"Котелку нужен источник тепла снизу и свободное место для выдачи блюда."
-				"После ручного приготовления ту же работу возьмёт на себя механизированная кухня Create Central Kitchen."
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.purpose}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.step.1}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.step.2}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.success}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.task}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.kitchen_manual.next}"
 			]
 			icon: "farmersdelight:cooking_pot"
 			id: "3E7F5794AFFC2C7A"
 			shape: "circle"
 			size: 1d
-			subtitle: "Подготовленная вода и урожай бесполезны для снабжения, пока их негде превратить в блюда."
+			subtitle: "{industrial_frontier.quest.v2.p4.kitchen_manual.lead}"
 			tags: ["food", "kitchen"]
 			tasks: [
 				{
@@ -1382,11 +1382,11 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Поставьте котелок Farmer's Delight."
+					title: "{industrial_frontier.task.v2.p4.kitchen_manual.place.objective}"
 					type: "questsadditions:place"
 				}
 			]
-			title: "Кухня до конвейера"
+			title: "{industrial_frontier.quest.v2.p4.kitchen_manual.title}"
 			x: 27d
 			y: -3d
 		}
@@ -1396,22 +1396,22 @@
 				"3A14000000000001"
 			]
 			description: [
-				"Create Central Kitchen соединяет механизмы Create с рецептами Farmer's Delight. Буферы до и после миксера важнее скорости: кухня должна переживать нерегулярный урожай и забирать готовую партию без затора."
-				"Поставьте чашу, а над ней механический миксер."
-				"Подведите вращение и откройте блок для проверки доступа; приготовление блюда будет отдельной задачей."
-				"Миксер установлен в доступной линии, а вход и выход можно обслуживать без ручного переноса каждого ингредиента."
-				"Поставьте механический миксер и один раз взаимодействуйте с ним."
-				"Если миксер не опускается, проверьте чашу строго под ним и достаточную скорость вращения."
-				"Если рецепт не начинается, сверьте форму ингредиентов и наличие свободного выхода."
-				"Миксеру нужны вращение, чаша под ним и правильная скорость."
-				"Проверяется доступ к рабочему блоку; выпуск конкретного блюда подтвердит следующее задание."
-				"Теперь линия должна выдать небольшую, но реальную партию полевых рационов."
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.purpose}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.step.1}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.step.2}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.success}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.task}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.kitchen_batch.next}"
 			]
 			icon: "create:mechanical_mixer"
 			id: "3AB953D333D17378"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Ручной рецепт понятен, а урожай стабилен; теперь уберём повторяющиеся перекладки."
+			subtitle: "{industrial_frontier.quest.v2.p4.kitchen_batch.lead}"
 			tags: ["food", "automation"]
 			tasks: [
 				{
@@ -1421,7 +1421,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Поставьте механический миксер Create."
+					title: "{industrial_frontier.task.v2.p4.kitchen_batch.place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -1431,31 +1431,31 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Один раз взаимодействуйте с установленным миксером."
+					title: "{industrial_frontier.task.v2.p4.kitchen_batch.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Механизированная кухня"
+			title: "{industrial_frontier.quest.v2.p4.kitchen_batch.title}"
 			x: 30d
 			y: -3d
 		}
 		{
 			dependencies: ["3AB953D333D17378"]
 			description: [
-				"Полевой рацион — это категория готовой еды, а не обязательно хлеб. Общий список позволяет менять меню, не ломая техническую приёмку и не заставляя искать один редкий ингредиент."
-				"Приготовьте три одинаковых или разных блюда, подходящих для полевого рациона."
-				"В одном доступном запасе находятся три подходящих готовых блюда."
-				"Соберите три готовых блюда для полевого рациона."
-				"Сырые ингредиенты и пустая посуда не входят в категорию готового рациона."
-				"Если знакомое блюдо не считается, проверьте его расширенную подсказку и занесите несовпадение в журнал испытаний."
-				"Подходит любая еда из списка задачи; блюда могут быть одинаковыми или разными."
-				"Рацион станет одной из пяти частей контрольной партии."
+				"{industrial_frontier.quest.v2.p4.rations.purpose}"
+				"{industrial_frontier.quest.v2.p4.rations.step.1}"
+				"{industrial_frontier.quest.v2.p4.rations.success}"
+				"{industrial_frontier.quest.v2.p4.rations.task}"
+				"{industrial_frontier.quest.v2.p4.rations.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.rations.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.rations.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.rations.next}"
 			]
 			icon: "minecraft:bread"
 			id: "325E04A0EFB69CD0"
 			shape: "circle"
 			size: 1d
-			subtitle: "Поставленная кухня должна закончиться запасом, который можно выдать рабочей смене."
+			subtitle: "{industrial_frontier.quest.v2.p4.rations.lead}"
 			tags: ["food", "industrial_supply"]
 			tasks: [
 				{
@@ -1468,32 +1468,32 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/field)"
 						}
 					}
-					title: "Соберите три готовых блюда для полевого рациона."
+					title: "{industrial_frontier.task.v2.p4.rations.tag.objective}"
 					type: "item"
 				}
 			]
-			title: "Смена обеспечена едой"
+			title: "{industrial_frontier.quest.v2.p4.rations.title}"
 			x: 33d
 			y: -3d
 		}
 		{
 			dependencies: ["3014000000000001"]
 			description: [
-				"Сейсмический инструмент превращает поиск в инженерную разведку. Этот узел проверяет только готовность прибора; его размещение и реальная работа идут отдельным шагом после плана нефтяного участка."
-				"Откройте рецепт инструмента сейсмической разведки Immersive Petroleum."
-				"Соберите один прибор и оставьте его в инвентаре до перехода в подробную нефтяную главу."
-				"Инструмент готов; книга ещё не считает залежь найденной и не требует строить насос."
-				"Соберите один инструмент сейсмической разведки и не размещайте его вслепую."
-				"Если рецепт недоступен, проверьте нужные инженерные компоненты и версию самого прибора в JEI."
-				"Не ставьте промысловые сооружения заранее: сначала пройдите планирование и отдельную задачу измерения."
-				"Пока не устанавливайте прибор у первой попавшейся площадки: подробная нефтяная глава сначала поможет выбрать безопасную точку."
-				"Подробная нефтяная глава объяснит выбор площадки, после чего отдельно проверит размещение и использование прибора."
+				"{industrial_frontier.quest.v2.p4.oil_survey.purpose}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.step.1}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.step.2}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.success}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.task}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.next}"
 			]
 			icon: "immersivepetroleum:seismic_survey"
 			id: "3A14000000000002"
 			shape: "diamond"
 			size: 1d
-			subtitle: "Нефть нельзя считать доступной только потому, что она существует в мире. Сначала подготовим прибор, затем выберем площадку и проведём измерение."
+			subtitle: "{industrial_frontier.quest.v2.p4.oil_survey.lead}"
 			tags: ["petroleum", "survey"]
 			tasks: [
 				{
@@ -1503,11 +1503,11 @@
 						id: "immersivepetroleum:seismic_survey"
 					}
 					consume_items: false
-					title: "Соберите инструмент сейсмической разведки."
+					title: "{industrial_frontier.task.v2.p4.oil_survey.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Инструмент до разведки"
+			title: "{industrial_frontier.quest.v2.p4.oil_survey.title}"
 			x: 3d
 			y: 5d
 		}
@@ -1515,42 +1515,42 @@
 			hide_until_deps_complete: true
 			dependencies: ["3A24000000000008"]
 			description: [
-				"Этот узел не учит строить башню задним числом. Для 250 мБ нафты нужны 17 коротких циклов башни и 1020 мБ нефти. Проверяемые 1000 мБ сырой нефти — новый резерв после этой переработки, поэтому суммарно участок должен извлечь больше 2020 мБ. Сернистый дизель и смазку сохраняйте в отдельных выходах."
-				"Проведите 17 циклов перегонки и оставьте не меньше 250 мБ нафты в подписанном выходном резервуаре."
-				"После израсходованного сырья заново накопите не меньше 1000 мБ сырой нефти во входном буфере; это отдельный резерв, а не уже переработанная порция."
-				"Не выбрасывайте сернистый дизель, смазку и другие фракции работающей башни."
-				"Линия имеет новый резерв 1000 мБ сырой нефти и отдельный буфер с 250 мБ нафты после 17 циклов перегонки."
-				"Сохраните новый резерв 1000 мБ сырой нефти и 250 мБ нафты после 17 циклов перегонки."
-				"Если башня остановилась, проверьте энергию и свободное место для каждой фракции и твёрдого побочного продукта."
-				"Если нафта смешалась с другой жидкостью, очистите ошибочный участок трубы и разведите выходы."
-				"Если сырой нефти осталось меньше 1000 мБ, пополните новый резерв после 1020 мБ, уже ушедших в 17 циклов."
-				"Нужна именно сырая нефть из разведанного месторождения, а не готовое топливо."
-				"Нафта является одним из выходов рецепта; оставьте место и для остальных фракций."
-				"Нефтехимия войдёт в общий контракт P4; полная экологическая приёмка участка останется отдельным обязательным условием перехода к региональной фабрике."
+				"{industrial_frontier.quest.v2.p4.oil_distillation.purpose}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.step.1}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.step.2}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.step.3}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.success}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.task}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.diagnostic.3}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.next}"
 			]
 			icon: "immersivepetroleum:distillation_tower"
 			id: "3A14000000000003"
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Профильная глава уже провела нефть от разведки до башни; теперь закрепим её связь с общей приёмкой P4."
+			subtitle: "{industrial_frontier.quest.v2.p4.oil_distillation.lead}"
 			tags: ["petroleum", "distillation"]
 			tasks: [
 				{
 					id: "4A14000000000007"
 					fluid: "immersivepetroleum:crudeoil"
 					amount: 1000L
-					title: "Получите 1000 мБ сырой нефти Immersive Petroleum."
+					title: "{industrial_frontier.task.v2.p4.oil_distillation.crude.objective}"
 					type: "fluid"
 				}
 				{
 					id: "4A14000000000008"
 					fluid: "immersivepetroleum:naphtha"
 					amount: 250L
-					title: "Получите 250 мБ нафты перегонкой нефти."
+					title: "{industrial_frontier.task.v2.p4.oil_distillation.naphtha.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Нефтяная партия для химического комплекса"
+			title: "{industrial_frontier.quest.v2.p4.oil_distillation.title}"
 			x: 6d
 			y: 5d
 		}
@@ -1563,32 +1563,32 @@
 				"3A14000000000003"
 			]
 			description: [
-				"Пробная партия объединяет подготовленную воду, снабжение смены, удобрение, кислоту и нефтехимическую фракцию. Задача проверяет наличие продуктов в приёмных буферах и не заявляет автоматическую торговлю или списание ресурсов."
-				"Накопите пять частей партии в подписанных контейнерах и резервуарах у контрольной площадки."
-				"Не опустошайте рабочие буферы полностью: линии должны суметь повторить поставку."
-				"Все пять частей контрольной партии одновременно доступны в приёмной зоне."
-				"Подготовьте воду, три рациона, три удобрения, серную кислоту и нафту для приёмки."
-				"Если часть партии не считается, проверьте её название или расширенную подсказку."
-				"Если производство остановилось после сбора партии, восстановите минимальный рабочий запас перед итоговым обходом."
-				"Держите воду в отдельном приёмном резервуаре."
-				"Подходит любая готовая еда из общего списка полевых рационов."
-				"Проверяется общая категория промышленных удобрений; костная мука не заменяет эту партию."
-				"Не смешивайте приёмную кислоту с водой или другими реагентами."
-				"Нафта подтверждает нефтехимическую часть пробной поставки."
-				"Итоговый обход проверит доступ к основным участкам и завершит химическую эпоху."
+				"{industrial_frontier.quest.v2.p4.contract.purpose}"
+				"{industrial_frontier.quest.v2.p4.contract.step.1}"
+				"{industrial_frontier.quest.v2.p4.contract.step.2}"
+				"{industrial_frontier.quest.v2.p4.contract.success}"
+				"{industrial_frontier.quest.v2.p4.contract.task}"
+				"{industrial_frontier.quest.v2.p4.contract.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.contract.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.contract.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.contract.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.contract.proof_help.3}"
+				"{industrial_frontier.quest.v2.p4.contract.proof_help.4}"
+				"{industrial_frontier.quest.v2.p4.contract.proof_help.5}"
+				"{industrial_frontier.quest.v2.p4.contract.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"
 			id: "366E4B63A29E782B"
 			shape: "octagon"
 			size: 1.5d
-			subtitle: "Отдельные линии готовы; теперь соберём их продукты в один заранее известный набор."
+			subtitle: "{industrial_frontier.quest.v2.p4.contract.lead}"
 			tags: ["technical_acceptance", "contract"]
 			tasks: [
 				{
 					id: "43D6BE6351428D87"
 					fluid: "gtceu:distilled_water"
 					amount: 1000L
-					title: "Подготовьте 1000 мБ дистиллированной воды."
+					title: "{industrial_frontier.task.v2.p4.contract.water.objective}"
 					type: "fluid"
 				}
 				{
@@ -1601,7 +1601,7 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/field)"
 						}
 					}
-					title: "Подготовьте три полевых рациона."
+					title: "{industrial_frontier.task.v2.p4.contract.rations.objective}"
 					type: "item"
 				}
 				{
@@ -1614,25 +1614,25 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:fertilizer)"
 						}
 					}
-					title: "Подготовьте три промышленных удобрения."
+					title: "{industrial_frontier.task.v2.p4.contract.fertilizer.objective}"
 					type: "item"
 				}
 				{
 					id: "413D753487B5F092"
 					fluid: "gtceu:sulfuric_acid"
 					amount: 1000L
-					title: "Подготовьте 1000 мБ серной кислоты."
+					title: "{industrial_frontier.task.v2.p4.contract.acid.objective}"
 					type: "fluid"
 				}
 				{
 					id: "471EDFF87EEE92EB"
 					fluid: "immersivepetroleum:naphtha"
 					amount: 250L
-					title: "Подготовьте 250 мБ нафты."
+					title: "{industrial_frontier.task.v2.p4.contract.naphtha.objective}"
 					type: "fluid"
 				}
 			]
-			title: "Контрольная партия комплекса"
+			title: "{industrial_frontier.quest.v2.p4.contract.title}"
 			x: 36d
 			y: 0d
 		}
@@ -1643,24 +1643,24 @@
 				"3A20000000000006"
 			]
 			description: [
-				"Это единственная приёмка, которая открывает команде следующую технологическую эпоху. Продукты уже подтверждены раньше, а здесь проверяется доступ к орошению, кухне и нефтехимическому участку."
-				"Убедитесь, что сигнал малого запаса настроен хотя бы для рационов или удобрений."
-				"Откройте контроллер орошения и котелок, затем взаимодействуйте с перегонной башней."
-				"После трёх действий завершите задание: оно откроет следующую эпоху для всей команды."
-				"Три участка доступны для обслуживания, запас контролируется, а переход в следующую эпоху выдаётся команде ровно один раз."
-				"Откройте контроллер орошения и котелок, затем взаимодействуйте с перегонной башней."
-				"Если действие не считается, убедитесь, что взаимодействуете с точным блоком, указанным задачей."
-				"Если задание завершено, но эпоха не изменилась, проверьте текущую эпоху команды и сообщите об ошибке в журнале испытаний."
-				"Проверяется доступ к установленной службе, а не величина давления в трубах."
-				"Взаимодействуйте с установленным котелком после подготовки приёмной партии."
-				"Проверяется доступ к нефтехимическому участку; нафта уже подтверждена предыдущим заданием."
-				"Следующая эпоха превратит локальные линии в региональную фабрику с физической и цифровой логистикой."
+				"{industrial_frontier.quest.v2.p4.commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p4.commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p4.commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p4.commissioning.step.3}"
+				"{industrial_frontier.quest.v2.p4.commissioning.success}"
+				"{industrial_frontier.quest.v2.p4.commissioning.task}"
+				"{industrial_frontier.quest.v2.p4.commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p4.commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p4.commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p4.commissioning.proof_help.3}"
+				"{industrial_frontier.quest.v2.p4.commissioning.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"
 			id: "306E1AB30715C336"
 			shape: "gear"
 			size: 2d
-			subtitle: "Приёмная партия собрана, а склад умеет сигнализировать о минимальном запасе; осталось обойти три главных участка."
+			subtitle: "{industrial_frontier.quest.v2.p4.commissioning.lead}"
 			tags: ["if_commissioning_p4", "commissioning"]
 			tasks: [
 				{
@@ -1670,7 +1670,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте контроллер орошения во время итогового обхода."
+					title: "{industrial_frontier.task.v2.p4.commissioning.irrigation.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -1680,7 +1680,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте котелок производственной кухни."
+					title: "{industrial_frontier.task.v2.p4.commissioning.kitchen.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -1690,19 +1690,19 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Взаимодействуйте с перегонной башней."
+					title: "{industrial_frontier.task.v2.p4.commissioning.oil.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Химический комплекс работает"
+			title: "{industrial_frontier.quest.v2.p4.commissioning.title}"
 			x: 39d
 			y: 0d
 		}
 	]
 	subtitle: [
-		"Вода, серная и хлор-щелочная химия, удобрения, питание и первая контрольная партия"
-		"В этой эпохе завод впервые работает не ради одного следующего станка, а как связанный производственный комплекс. Вода, серная кислота, хлор-щелочная химия, удобрения, пища и нефтепродукты образуют несколько параллельных потоков."
-		"Серная и хлор-щелочная линии начинаются независимо. Азотная кислота сознательно отложена до честной мощности HV в P5. Контрольная партия P4 проверяет воду, снабжение смены, земледелие и нефтехимию без скрытого требования невозможной машины."
+		"{industrial_frontier.chapter.v2.p4.subtitle.1}"
+		"{industrial_frontier.chapter.v2.p4.subtitle.2}"
+		"{industrial_frontier.chapter.v2.p4.subtitle.3}"
 	]
-	title: "P4 — Химический комплекс"
+	title: "{industrial_frontier.chapter.v2.p4.title}"
 }

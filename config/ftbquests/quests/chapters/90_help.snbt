@@ -10,170 +10,170 @@
 	quests: [
 		{
 			description: [
-				"Сначала уточните, что именно не работает: рецепт не находится, предмет не засчитывается, общий прогресс не виден или игра сообщает об ошибке. От ответа зависит следующая проверка."
-				"Перечитайте формулировку задания и название требуемого предмета или действия."
-				"Если вопрос связан с изготовлением, откройте ветку про JEI."
-				"Если условие выполнено, но квест молчит, откройте ветку про незасчитанное задание."
-				"Если проблема повторяется или сопровождается ошибкой, подготовьте журнал и короткое описание действий."
-				"Вы выбрали одну конкретную ветку проверки и можете описать проблему одним предложением."
-				"Ознакомьтесь с порядком первичной проверки."
-				"Если пока непонятно, где сбой, начните с JEI: так быстрее всего отделить отсутствие рецепта от ошибки квеста."
-				"Галочка отмечает только знакомство с памяткой и не меняет прогресс кампании."
-				"Перейдите к подходящей ветке ниже; выполнять остальные памятки заранее не требуется."
-				"Справочная глава необязательна и не влияет на эпоху команды."
+				"{industrial_frontier.quest.v2.help.index.purpose}"
+				"{industrial_frontier.quest.v2.help.index.step.1}"
+				"{industrial_frontier.quest.v2.help.index.step.2}"
+				"{industrial_frontier.quest.v2.help.index.step.3}"
+				"{industrial_frontier.quest.v2.help.index.step.4}"
+				"{industrial_frontier.quest.v2.help.index.success}"
+				"{industrial_frontier.quest.v2.help.index.task}"
+				"{industrial_frontier.quest.v2.help.index.diagnostic.1}"
+				"{industrial_frontier.quest.v2.help.index.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.index.next}"
+				"{industrial_frontier.quest.v2.help.index.optional_note}"
 			]
 			icon: "minecraft:recovery_compass"
 			id: "3090000000000001"
 			optional: true
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Большинство непонятных ситуаций удаётся разобрать без переустановки и без операторских команд."
+			subtitle: "{industrial_frontier.quest.v2.help.index.lead}"
 			tags: ["help", "triage"]
 			tasks: [
 				{
 					id: "4090000000000001"
-					title: "Прочитайте порядок первичной проверки."
+					title: "{industrial_frontier.task.v2.help.index.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "С чего начать"
+			title: "{industrial_frontier.quest.v2.help.index.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3090000000000001"]
 			description: [
-				"JEI различает обычное изготовление и процессы машин. Некоторые предметы появляются только после открытия подходящей категории, а скрытые стадии могут намеренно закрывать слишком ранний рецепт."
-				"Очистите строку поиска и найдите предмет по части названия без служебных символов."
-				"Откройте способы получения предмета и просмотрите все доступные вкладки, а не только верстак."
-				"Проверьте, есть ли среди входов жидкость, энергия, давление или машина нужного уровня."
-				"Сверьте эпоху команды с главой, в которой книга впервые предлагает этот предмет."
-				"Вы нашли действующий способ получения либо точно установили, что рецепт пока закрыт развитием."
-				"Разберите порядок поиска рецепта в JEI."
-				"Если список категорий пуст, перезапустите поиск с коротким названием и снимите возможный фильтр мода."
-				"Если рецепт виден, но машина его не принимает, сравните уровень машины, напряжение и точное состояние входов."
-				"Если предмет вообще не отображается, приложите его точное имя или идентификатор к отчёту."
-				"Горячие клавиши могут отличаться, поэтому при необходимости проверьте их в настройках управления."
-				"Если рецепт найден, вернитесь в предметную главу; если нет, соберите сведения по памятке об отчёте."
-				"Эта памятка нужна только при затруднении и не является условием основной кампании."
+				"{industrial_frontier.quest.v2.help.jei.purpose}"
+				"{industrial_frontier.quest.v2.help.jei.step.1}"
+				"{industrial_frontier.quest.v2.help.jei.step.2}"
+				"{industrial_frontier.quest.v2.help.jei.step.3}"
+				"{industrial_frontier.quest.v2.help.jei.step.4}"
+				"{industrial_frontier.quest.v2.help.jei.success}"
+				"{industrial_frontier.quest.v2.help.jei.task}"
+				"{industrial_frontier.quest.v2.help.jei.diagnostic.1}"
+				"{industrial_frontier.quest.v2.help.jei.diagnostic.2}"
+				"{industrial_frontier.quest.v2.help.jei.diagnostic.3}"
+				"{industrial_frontier.quest.v2.help.jei.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.jei.next}"
+				"{industrial_frontier.quest.v2.help.jei.optional_note}"
 			]
 			icon: "minecraft:knowledge_book"
 			id: "3090000000000002"
 			optional: true
 			shape: "diamond"
 			size: 1.5d
-			subtitle: "Пустой результат поиска ещё не означает, что предмет сломан или полностью недоступен."
+			subtitle: "{industrial_frontier.quest.v2.help.jei.lead}"
 			tags: ["help", "jei", "recipes"]
 			tasks: [
 				{
 					id: "4090000000000002"
-					title: "Прочитайте памятку по поиску рецептов."
+					title: "{industrial_frontier.task.v2.help.jei.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Рецепт не находится в JEI"
+			title: "{industrial_frontier.quest.v2.help.jei.title}"
 			x: 2d
 			y: -3d
 		}
 		{
 			dependencies: ["3090000000000001"]
 			description: [
-				"Задача может принимать целую группу равноценных предметов, требовать конкретный результат или ждать настоящего взаимодействия с блоком. Значок показывает тему, но точное условие всегда написано рядом с задачей."
-				"Откройте квест и прочитайте короткий текст непосредственно у незавершённой задачи."
-				"Сравните название, количество и состояние предмета; положите его в обычный инвентарь персонажа."
-				"Для установки или использования повторите именно указанное действие после открытия квеста."
-				"Убедитесь, что все предыдущие обязательные узлы завершены той же командой."
-				"Причина найдена либо вы можете назвать точный квест, задачу, предмет и выполненное действие."
-				"Разберите безопасную проверку незасчитанного условия."
-				"Если предмет создан заранее, переложите его между ячейками инвентаря после открытия книги."
-				"Если значок подходит, а предмет не принимается, проверьте точное название в подсказке задачи."
-				"Если условие завершилось у одного участника, но не у другого, перейдите к памятке о команде."
-				"Не применяйте команды восстановления, пока не сравните предмет, действие и зависимости квеста."
-				"При повторяемом сбое сохраните точные сведения и перейдите к подготовке отчёта."
-				"Памятка не меняет квестовый прогресс и нужна только для диагностики."
+				"{industrial_frontier.quest.v2.help.not_counted.purpose}"
+				"{industrial_frontier.quest.v2.help.not_counted.step.1}"
+				"{industrial_frontier.quest.v2.help.not_counted.step.2}"
+				"{industrial_frontier.quest.v2.help.not_counted.step.3}"
+				"{industrial_frontier.quest.v2.help.not_counted.step.4}"
+				"{industrial_frontier.quest.v2.help.not_counted.success}"
+				"{industrial_frontier.quest.v2.help.not_counted.task}"
+				"{industrial_frontier.quest.v2.help.not_counted.diagnostic.1}"
+				"{industrial_frontier.quest.v2.help.not_counted.diagnostic.2}"
+				"{industrial_frontier.quest.v2.help.not_counted.diagnostic.3}"
+				"{industrial_frontier.quest.v2.help.not_counted.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.not_counted.next}"
+				"{industrial_frontier.quest.v2.help.not_counted.optional_note}"
 			]
 			icon: "minecraft:clock"
 			id: "3090000000000003"
 			optional: true
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "Чаще всего расходятся точный предмет, способ действия или прогресс команды, а не сама книга."
+			subtitle: "{industrial_frontier.quest.v2.help.not_counted.lead}"
 			tags: ["help", "quests", "diagnostics"]
 			tasks: [
 				{
 					id: "4090000000000003"
-					title: "Прочитайте порядок проверки незасчитанного условия."
+					title: "{industrial_frontier.task.v2.help.not_counted.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Условие выполнено, а квест молчит"
+			title: "{industrial_frontier.quest.v2.help.not_counted.title}"
 			x: 2d
 			y: -1d
 		}
 		{
 			dependencies: ["3090000000000001"]
 			description: [
-				"Совместная книга позволяет строить одну фабрику на всех, но требует стабильного состава команды. Выход, вступление в другую команду или создание новой могут показать другой набор выполненных заданий."
-				"Сравните название команды у участников, которые видят разный прогресс."
-				"Проверьте, кто завершал последний узел ввода эпохи в строй и состоял ли он тогда в этой команде."
-				"Не меняйте состав команды во время проверки; сначала запишите текущее состояние и спорный квест."
-				"Все участники видят одну команду и одинаково завершённый последний этап кампании."
-				"Разберите, кому принадлежит общий прогресс."
-				"Если игрок оказался вне команды, сначала выясните, когда это произошло, и не создавайте новую команду поверх старой."
-				"Если название совпадает, а книга различается, подготовьте отчёт от обоих участников."
-				"Состав команды и её квестовый прогресс связаны, поэтому смену команды нельзя считать безобидной настройкой."
-				"После проверки состава повторите действие из спорного квеста или передайте сведения администратору."
-				"Памятка полезна в совместной игре и не обязательна для одиночного прохождения."
+				"{industrial_frontier.quest.v2.help.team.purpose}"
+				"{industrial_frontier.quest.v2.help.team.step.1}"
+				"{industrial_frontier.quest.v2.help.team.step.2}"
+				"{industrial_frontier.quest.v2.help.team.step.3}"
+				"{industrial_frontier.quest.v2.help.team.success}"
+				"{industrial_frontier.quest.v2.help.team.task}"
+				"{industrial_frontier.quest.v2.help.team.diagnostic.1}"
+				"{industrial_frontier.quest.v2.help.team.diagnostic.2}"
+				"{industrial_frontier.quest.v2.help.team.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.team.next}"
+				"{industrial_frontier.quest.v2.help.team.optional_note}"
 			]
 			icon: "minecraft:player_head"
 			id: "3090000000000004"
 			optional: true
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "Эпоха и завершённые квесты принадлежат команде FTB Quests, а не имени отдельного персонажа."
+			subtitle: "{industrial_frontier.quest.v2.help.team.lead}"
 			tags: ["help", "team", "progress"]
 			tasks: [
 				{
 					id: "4090000000000004"
-					title: "Прочитайте памятку об общем прогрессе."
+					title: "{industrial_frontier.task.v2.help.team.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Общий прогресс команды"
+			title: "{industrial_frontier.quest.v2.help.team.title}"
 			x: 2d
 			y: 1d
 		}
 		{
 			dependencies: ["3090000000000001"]
 			description: [
-				"Журнал сохраняет порядок загрузки, предупреждения и саму ошибку. Его нужно брать сразу после воспроизведения проблемы, иначе следующий запуск может заменить важный контекст."
-				"Повторите проблему один раз и после неё закройте игру обычным способом, если это возможно."
-				"Откройте папку экземпляра, затем папку logs и найдите файл latest.log."
-				"Скопируйте файл в отдельное место, чтобы следующий запуск его не изменил."
-				"Перед отправкой проверьте строки с именами, путями, адресами серверов и другой личной информацией."
-				"Сохранён полный журнал того запуска, в котором проблема была воспроизведена."
-				"Научитесь сохранять журнал проблемного запуска."
-				"Если latest.log уже относится к другому запуску, посмотрите архивные файлы в той же папке и сверяйте время."
-				"Если игра аварийно завершилась, приложите также подходящий файл из папки crash-reports."
-				"Не публикуйте файл, пока не проверите его на личные данные и адреса серверов."
-				"Добавьте журнал к короткому воспроизводимому описанию из следующей памятки."
-				"Журнал нужен только для сложной или повторяемой ошибки; заранее собирать его не требуется."
+				"{industrial_frontier.quest.v2.help.latest_log.purpose}"
+				"{industrial_frontier.quest.v2.help.latest_log.step.1}"
+				"{industrial_frontier.quest.v2.help.latest_log.step.2}"
+				"{industrial_frontier.quest.v2.help.latest_log.step.3}"
+				"{industrial_frontier.quest.v2.help.latest_log.step.4}"
+				"{industrial_frontier.quest.v2.help.latest_log.success}"
+				"{industrial_frontier.quest.v2.help.latest_log.task}"
+				"{industrial_frontier.quest.v2.help.latest_log.diagnostic.1}"
+				"{industrial_frontier.quest.v2.help.latest_log.diagnostic.2}"
+				"{industrial_frontier.quest.v2.help.latest_log.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.latest_log.next}"
+				"{industrial_frontier.quest.v2.help.latest_log.optional_note}"
 			]
 			icon: "minecraft:paper"
 			id: "3090000000000005"
 			optional: true
 			shape: "rsquare"
 			size: 1.5d
-			subtitle: "Полный файл latest.log обычно полезнее фотографии одной красной строки."
+			subtitle: "{industrial_frontier.quest.v2.help.latest_log.lead}"
 			tags: ["help", "logs", "privacy"]
 			tasks: [
 				{
 					id: "4090000000000005"
-					title: "Прочитайте, как сохранить подходящий журнал."
+					title: "{industrial_frontier.task.v2.help.latest_log.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Как найти нужный журнал"
+			title: "{industrial_frontier.quest.v2.help.latest_log.title}"
 			x: 2d
 			y: 3d
 		}
@@ -183,34 +183,34 @@
 				"3090000000000005"
 			]
 			description: [
-				"Для разбора нужны условия, короткая последовательность действий, ожидаемый результат и то, что произошло на самом деле. Версия сборки, режим игры и состав команды часто объясняют различия между двумя случаями."
-				"Запишите версию сборки, одиночную или сетевую игру и название спорного квеста."
-				"Опишите минимальные действия от чистого состояния до ошибки, по одному действию на строку."
-				"Отдельно укажите ожидаемый и фактический результат."
-				"Приложите полный журнал проблемного запуска и снимок экрана, если он показывает важное состояние интерфейса."
-				"Другой человек может повторить ваши действия без дополнительных догадок и увидеть тот же результат."
-				"Ознакомьтесь со структурой воспроизводимого отчёта."
-				"Если шагов слишком много, уберите действия, после удаления которых ошибка всё равно повторяется."
-				"Если проблема появляется не всегда, укажите частоту и что менялось между удачной и неудачной попыткой."
-				"Короткие точные шаги помогают больше, чем общее сообщение о том, что всё сломано."
-				"Передайте отчёт вместе с файлами; не применяйте восстановление, пока причина остаётся неясной."
-				"Отчёт нужен только при реальной проблеме и не влияет на прохождение."
+				"{industrial_frontier.quest.v2.help.report.purpose}"
+				"{industrial_frontier.quest.v2.help.report.step.1}"
+				"{industrial_frontier.quest.v2.help.report.step.2}"
+				"{industrial_frontier.quest.v2.help.report.step.3}"
+				"{industrial_frontier.quest.v2.help.report.step.4}"
+				"{industrial_frontier.quest.v2.help.report.success}"
+				"{industrial_frontier.quest.v2.help.report.task}"
+				"{industrial_frontier.quest.v2.help.report.diagnostic.1}"
+				"{industrial_frontier.quest.v2.help.report.diagnostic.2}"
+				"{industrial_frontier.quest.v2.help.report.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.report.next}"
+				"{industrial_frontier.quest.v2.help.report.optional_note}"
 			]
 			icon: "minecraft:writable_book"
 			id: "3090000000000006"
 			optional: true
 			shape: "diamond"
 			size: 1.5d
-			subtitle: "Хороший отчёт позволяет другому человеку повторить проблему и сравнить результат."
+			subtitle: "{industrial_frontier.quest.v2.help.report.lead}"
 			tags: ["help", "report", "diagnostics"]
 			tasks: [
 				{
 					id: "4090000000000006"
-					title: "Прочитайте состав полезного отчёта."
+					title: "{industrial_frontier.task.v2.help.report.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Полезный отчёт об ошибке"
+			title: "{industrial_frontier.quest.v2.help.report.title}"
 			x: 4d
 			y: -1d
 		}
@@ -220,43 +220,43 @@
 				"3090000000000006"
 			]
 			description: [
-				"Восстановление допустимо, если команда действительно завершила ввод эпохи в строй, обычное событие не сработало и исходное состояние уже записано. Команда продвигает развитие только на один шаг."
-				"Сделайте резервную копию мира и сохраните отчёт с названием команды и последним завершённым этапом."
-				"Убедитесь, что все обязательные ветви текущей эпохи выполнены и финальный квест завершён."
-				"Попросите оператора выполнить /if_advance_epoch один раз от имени участника нужной команды."
-				"Снова откройте книгу и проверьте только следующий этап; не повторяйте команду без новой проверки."
-				"Команда перешла ровно к следующей эпохе, а её завершённые квесты и состав не изменились."
-				"Ознакомьтесь с безопасным восстановлением одного перехода."
-				"Если команда отклонена, не обходите проверку другой командой: сначала сверьте текущую эпоху и финальный квест."
-				"Если переход уже произошёл, повторная команда не нужна."
-				"Если изменился неверный прогресс, остановитесь и восстановите резервную копию до новых попыток."
-				"Эта памятка не выдаёт права оператора и не выполняет команду автоматически."
-				"После успешной проверки продолжайте с первой главой новой эпохи и сохраните запись о вмешательстве."
-				"В обычном прохождении этот квест не нужен; восстановление выполняет только оператор после проверки причины."
+				"{industrial_frontier.quest.v2.help.recovery.purpose}"
+				"{industrial_frontier.quest.v2.help.recovery.step.1}"
+				"{industrial_frontier.quest.v2.help.recovery.step.2}"
+				"{industrial_frontier.quest.v2.help.recovery.step.3}"
+				"{industrial_frontier.quest.v2.help.recovery.step.4}"
+				"{industrial_frontier.quest.v2.help.recovery.success}"
+				"{industrial_frontier.quest.v2.help.recovery.task}"
+				"{industrial_frontier.quest.v2.help.recovery.diagnostic.1}"
+				"{industrial_frontier.quest.v2.help.recovery.diagnostic.2}"
+				"{industrial_frontier.quest.v2.help.recovery.diagnostic.3}"
+				"{industrial_frontier.quest.v2.help.recovery.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.recovery.next}"
+				"{industrial_frontier.quest.v2.help.recovery.optional_note}"
 			]
 			icon: "minecraft:barrier"
 			id: "3090000000000007"
 			optional: true
 			shape: "diamond"
 			size: 1.5d
-			subtitle: "Операторская команда исправляет состояние команды, но не заменяет невыполненную производственную цепочку."
+			subtitle: "{industrial_frontier.quest.v2.help.recovery.lead}"
 			tags: ["help", "recovery", "operator"]
 			tasks: [
 				{
 					id: "4090000000000007"
-					title: "Прочитайте условия безопасного восстановления."
+					title: "{industrial_frontier.task.v2.help.recovery.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Восстановление прогресса"
+			title: "{industrial_frontier.quest.v2.help.recovery.title}"
 			x: 4d
 			y: 1d
 		}
 	]
 	subtitle: [
-		"Как разобраться с рецептом, незасчитанным заданием или общим прогрессом и собрать полезный отчёт об ошибке"
-		"Эта глава всегда доступна и ничего не открывает в основной кампании. Начните с памятки, выберите подходящую ветку и выполняйте проверки по порядку."
-		"Команды восстановления оставлены на самый конец. Сначала нужно понять причину сбоя и убедиться, что команда игроков действительно выполнила условия эпохи."
+		"{industrial_frontier.chapter.v2.help.subtitle.1}"
+		"{industrial_frontier.chapter.v2.help.subtitle.2}"
+		"{industrial_frontier.chapter.v2.help.subtitle.3}"
 	]
-	title: "Помощь и восстановление"
+	title: "{industrial_frontier.chapter.v2.help.title}"
 }

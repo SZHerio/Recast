@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Deterministically compile Quest Source v2 into an isolated staging tree.
 
-Default output is ``build/questbook_v2``.  The script deliberately has no mode
-that writes ``config/ftbquests`` or the shared Paxi language pack.
+Default output is ``build/questbook_v2``. Player-facing text is localized by
+default so FTB Quests never tries to sync the full Russian guidebook inside its
+single 1 MiB login packet. The script deliberately does not write runtime files.
 """
 
 from __future__ import annotations
@@ -33,6 +34,7 @@ from validate_questbook_v2 import (
 
 COMPILER_VERSION = 2
 DEFAULT_OUTPUT = pathlib.Path("build/questbook_v2")
+QUEST_SYNC_SNBT_BUDGET = 850_000
 OBSERVATION_ORDINAL = {
     "BLOCK": 0,
     "BLOCK_TAG": 1,
@@ -613,7 +615,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--source", default=str(DEFAULT_SOURCE))
     parser.add_argument("--schema", default=str(DEFAULT_SCHEMA))
     parser.add_argument("--out", default=str(DEFAULT_OUTPUT))
-    parser.add_argument("--text-mode", choices=["ru-inline", "staging-lang"], default="ru-inline", help="Default embeds authoritative Russian directly in SNBT.")
+    parser.add_argument("--text-mode", choices=["ru-inline", "staging-lang"], default="staging-lang", help="Default stores Russian in staging localization so the FTB Quests login packet remains below 1 MiB.")
     parser.add_argument("--reports-only", action="store_true", help="Write reports but no SNBT; allows honest draft/blocked sources.")
     args = parser.parse_args(argv)
 
@@ -682,6 +684,20 @@ def main(argv: list[str] | None = None) -> int:
             (temp / "chapter_groups.snbt").write_text(_render_groups(report["groups"], args.text_mode, localized), encoding="utf-8", newline="\n")
             if args.text_mode == "staging-lang":
                 _write_json(temp / "localization" / "ru_ru.json", {key: localized[key] for key in sorted(localized)})
+
+            sync_snbt_bytes = sum(path.stat().st_size for path in chapter_dir.glob("*.snbt")) + (temp / "chapter_groups.snbt").stat().st_size
+            _write_json(reports / "network_budget.json", {
+                "schema_version": 1,
+                "minecraft_custom_payload_limit_bytes": 1_048_576,
+                "maximum_staged_snbt_bytes": QUEST_SYNC_SNBT_BUDGET,
+                "staged_snbt_bytes": sync_snbt_bytes,
+                "status": "PASS" if sync_snbt_bytes <= QUEST_SYNC_SNBT_BUDGET else "FAIL",
+            })
+            if sync_snbt_bytes > QUEST_SYNC_SNBT_BUDGET:
+                raise RuntimeError(
+                    f"Quest sync staging is {sync_snbt_bytes} bytes; budget is {QUEST_SYNC_SNBT_BUDGET}. "
+                    "Use staging-lang or split/remove non-player-facing payload data."
+                )
 
             parity, compiler_parity_issues = _parity_projection(report, chapter_dir, args.text_mode)
             parity_issues.extend(compiler_parity_issues)

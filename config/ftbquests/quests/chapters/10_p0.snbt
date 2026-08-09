@@ -13,79 +13,79 @@
 			hide_until_deps_complete: true
 			dependencies: ["3A00000000000002"]
 			description: [
-				"Глава проверяет четыре результата: рабочий лагерь, устойчивый источник еды, ориентирование и первую железную цепочку от минерала до слитка."
-				"Прочитайте список результатов и оцените ближайшее безопасное место для временного лагеря."
-				"Не стройте окончательный завод до разведки воды, пространства и рудных жил."
-				"Вы знаете четыре обязательных результата P0 и готовы начать с древесины, а не с преждевременной капитальной стройки."
-				"Прочитайте задачи экспедиции и подтвердите начало P0."
-				"Если маршрут кажется длинным, следуйте центральной линии: пищевые и рудные альтернативы объединяются после одного выбранного пути."
-				"В этой главе все обязательные ветви снова сходятся в одном ромбе перехода."
-				"Перед заготовкой материалов прочитайте, как сезон меняет безопасность и сроки полевых работ."
+				"{industrial_frontier.quest.v2.p0.brief.purpose}"
+				"{industrial_frontier.quest.v2.p0.brief.step.1}"
+				"{industrial_frontier.quest.v2.p0.brief.step.2}"
+				"{industrial_frontier.quest.v2.p0.brief.success}"
+				"{industrial_frontier.quest.v2.p0.brief.task}"
+				"{industrial_frontier.quest.v2.p0.brief.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.brief.next}"
 			]
 			icon: "minecraft:map"
 			id: "3010000000000001"
 			shape: "gear"
 			size: 1.5d
-			subtitle: "Наша цель — не пережить одну ночь, а выбрать место, с которого удобно развивать фабрику и город."
+			subtitle: "{industrial_frontier.quest.v2.p0.brief.lead}"
 			tags: ["mainline", "briefing"]
 			tasks: [
 				{
 					id: "4010000000000001"
-					title: "Прочитайте задачи экспедиции и подтвердите начало P0."
+					title: "{industrial_frontier.task.v2.p0.brief.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "План первой экспедиции"
+			title: "{industrial_frontier.quest.v2.p0.brief.title}"
 			x: 0d
 			y: 0d
 		}
 		{
 			dependencies: ["3010000000000001"]
 			description: [
-				"Сезонная информация нужна для порядка работ: при ухудшении условий сначала готовятся укрытие, тепло и запас еды, а дальняя разведка переносится на безопасное окно."
-				"Оцените текущий сезон и погоду до дальней вылазки."
-				"При неблагоприятных условиях сначала завершите короткую лагерную ветвь и только затем уходите к рудным жилам."
-				"Вы выбрали темп работ и понимаете, какой запас нужен до дальней разведки."
-				"Прочитайте сезонные риски и подтвердите безопасный план работ."
-				"Если сезонный интерфейс непонятен, проверьте его подсказку и календарь, не ориентируйтесь только на цвет неба."
-				"Если условия опасны, работайте рядом с лагерем: обязательная глава не требует немедленной дальней поездки."
-				"Сезон не блокирует главу: он меняет приоритет укрытия, еды и поездок."
-				"Теперь заготовим универсальные брёвна для досок и первого рабочего места."
+				"{industrial_frontier.quest.v2.p0.seasons.purpose}"
+				"{industrial_frontier.quest.v2.p0.seasons.step.1}"
+				"{industrial_frontier.quest.v2.p0.seasons.step.2}"
+				"{industrial_frontier.quest.v2.p0.seasons.success}"
+				"{industrial_frontier.quest.v2.p0.seasons.task}"
+				"{industrial_frontier.quest.v2.p0.seasons.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.seasons.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.seasons.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.seasons.next}"
 			]
 			icon: "minecraft:clock"
 			id: "3010000000000002"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Погода меняет цену ошибки, но не превращает календарь в ожидание у костра."
+			subtitle: "{industrial_frontier.quest.v2.p0.seasons.lead}"
 			tags: ["mainline", "environment"]
 			tasks: [
 				{
 					id: "4010000000000002"
-					title: "Прочитайте сезонные риски и подтвердите выбранный безопасный темп экспедиции."
+					title: "{industrial_frontier.task.v2.p0.seasons.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Сезон задаёт темп"
+			title: "{industrial_frontier.quest.v2.p0.seasons.title}"
 			x: 2d
 			y: 0d
 		}
 		{
 			dependencies: ["3010000000000002"]
 			description: [
-				"Восемь брёвен дают рабочий запас на доски и первые лагерные предметы. Можно смешивать разные породы, если они перечислены в условии."
-				"Срубите доступные деревья и соберите восемь брёвен из списка задачи."
-				"Сохраните партию в основном инвентаре: проверка её не расходует."
-				"В инвентаре лежат восемь подходящих брёвен, и можно переходить к изготовлению досок."
-				"Имейте при себе восемь брёвен из списка задачи."
-				"Если похожее бревно не считается, откройте список подходящих предметов в условии и сравните точное название."
-				"Подходит любая порода из списка задачи; смешанная партия тоже считается."
-				"Часть брёвен превратим в доски — отдельную форму материала для ручных рецептов."
+				"{industrial_frontier.quest.v2.p0.logs.purpose}"
+				"{industrial_frontier.quest.v2.p0.logs.step.1}"
+				"{industrial_frontier.quest.v2.p0.logs.step.2}"
+				"{industrial_frontier.quest.v2.p0.logs.success}"
+				"{industrial_frontier.quest.v2.p0.logs.task}"
+				"{industrial_frontier.quest.v2.p0.logs.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.logs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.logs.next}"
 			]
 			icon: "minecraft:oak_log"
 			id: "3A10000000000001"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Порода дерева не должна диктовать место старта: подойдут любые брёвна из списка задачи."
+			subtitle: "{industrial_frontier.quest.v2.p0.logs.lead}"
 			tags: ["mainline", "materials"]
 			tasks: [
 				{
@@ -98,31 +98,31 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/wood_logs)"
 						}
 					}
-					title: "Имейте при себе восемь брёвен из списка задачи."
+					title: "{industrial_frontier.task.v2.p0.logs.items.objective}"
 					type: "item"
 				}
 			]
-			title: "Восемь любых брёвен"
+			title: "{industrial_frontier.quest.v2.p0.logs.title}"
 			x: 4d
 			y: 0d
 		}
 		{
 			dependencies: ["3A10000000000001"]
 			description: [
-				"Отдельная проверка досок учит читать производственную цепочку по формам. Позже то же различие будет важно для руды, пыли, слитка и пластины."
-				"Откройте рецепт досок для выбранной породы и переработайте часть брёвен."
-				"Оставьте не меньше четырёх досок в основном инвентаре."
-				"Задача видит четыре подходящие доски, а оставшиеся брёвна можно сохранить для других лагерных рецептов."
-				"Получите не меньше четырёх досок из списка задачи."
-				"Если доски не считаются, откройте список подходящих предметов в условии и проверьте их точное название."
-				"Подходит любая порода из списка; задача не требует превращать в доски всю древесину."
-				"Четыре доски пойдут на верстак — первое рабочее средство цепочки."
+				"{industrial_frontier.quest.v2.p0.planks.purpose}"
+				"{industrial_frontier.quest.v2.p0.planks.step.1}"
+				"{industrial_frontier.quest.v2.p0.planks.step.2}"
+				"{industrial_frontier.quest.v2.p0.planks.success}"
+				"{industrial_frontier.quest.v2.p0.planks.task}"
+				"{industrial_frontier.quest.v2.p0.planks.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.planks.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.planks.next}"
 			]
 			icon: "minecraft:oak_planks"
 			id: "3A10000000000002"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Источник и форма материала — разные ступени: сейчас древесина становится пригодной для ручного крафта."
+			subtitle: "{industrial_frontier.quest.v2.p0.planks.lead}"
 			tags: ["mainline", "material_forms"]
 			tasks: [
 				{
@@ -135,33 +135,33 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/wood_planks)"
 						}
 					}
-					title: "Получите не меньше четырёх досок из списка задачи."
+					title: "{industrial_frontier.task.v2.p0.planks.items.objective}"
 					type: "item"
 				}
 			]
-			title: "Брёвна становятся досками"
+			title: "{industrial_frontier.quest.v2.p0.planks.title}"
 			x: 6d
 			y: 0d
 		}
 		{
 			dependencies: ["3A10000000000002"]
 			description: [
-				"Порядок от материала к рабочему средству, а затем к изделию остаётся правилом всей сборки. Здесь он показан на самом простом примере."
-				"Сложите четыре подходящие доски в сетке инвентаря."
-				"Поставьте готовый верстак и откройте его рабочую сетку 3×3."
-				"Верстак получен, установлен и открыт; обе функциональные проверки завершены."
-				"Получите один верстак, установите его и откройте рабочую сетку."
-				"Если условие не обновилось, подберите установленный верстак: предметная задача не видит блок в мире."
-				"Если рецепта нет, сверьте в JEI, что используете доски, а не брёвна или декоративную обшивку."
-				"Если задача не обновилась, подберите установленный блок и положите его в основной инвентарь."
-				"Нужно взаимодействовать с установленным верстаком, а не только носить предмет в инвентаре."
-				"К верстаку добавим кровать и печь — минимальный комплект тёплого рабочего лагеря."
+				"{industrial_frontier.quest.v2.p0.crafting_table.purpose}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.step.1}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.step.2}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.success}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.task}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.proof_help.2}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.next}"
 			]
 			icon: "minecraft:crafting_table"
 			id: "38A095554A2A0333"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Верстак открывает сетку 3×3 и появляется раньше любого изделия, которому она нужна."
+			subtitle: "{industrial_frontier.quest.v2.p0.crafting_table.lead}"
 			tags: ["mainline", "workstation"]
 			tasks: [
 				{
@@ -171,7 +171,7 @@
 						id: "minecraft:crafting_table"
 					}
 					consume_items: false
-					title: "Соберите и сохраните один верстак."
+					title: "{industrial_frontier.task.v2.p0.crafting_table.item.objective}"
 					type: "item"
 				}
 				{
@@ -181,35 +181,35 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Установите верстак и откройте его рабочую сетку."
+					title: "{industrial_frontier.task.v2.p0.crafting_table.use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Первое рабочее место"
+			title: "{industrial_frontier.quest.v2.p0.crafting_table.title}"
 			x: 8d
 			y: 0d
 		}
 		{
 			dependencies: ["38A095554A2A0333"]
 			description: [
-				"Функциональный лагерный комплект проверяется действием: блоки нужно установить и открыть. Это надёжнее, чем формально носить их в инвентаре."
-				"Соберите и установите кровать любого подходящего цвета, затем взаимодействуйте с ней."
-				"Соберите обычную печь, установите рядом с рабочим местом и откройте её интерфейс."
-				"Кровать и печь установлены и использованы; у лагеря есть точка отдыха и доступ к ранней обработке."
-				"Установите и используйте одну кровать и одну обычную печь."
-				"Если кровать не позволяет спать, проверьте время и безопасность; для задания достаточно взаимодействия, успешный пропуск ночи не требуется."
-				"Если печь не считается, убедитесь, что это обычная печь, а не коптильня, плавильная печь или декоративный блок."
-				"Цвет кровати не важен; полный список подходящих вариантов показан в условии."
-				"Проверяется использование блока; успешный сон может зависеть от времени и безопасности."
-				"Проверяется точный блок обычной печи, а не предмет в инвентаре."
-				"Если условие не обновилось, взаимодействуйте именно с обычной печью."
-				"От работающего лагеря одновременно откроются еда, ориентирование и геологическая разведка."
+				"{industrial_frontier.quest.v2.p0.camp_kit.purpose}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.step.1}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.step.2}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.success}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.task}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.2}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.3}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.4}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.next}"
 			]
 			icon: "minecraft:white_bed"
 			id: "3A10000000000003"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Кровать закрепляет безопасную точку отдыха, а печь открывает готовку и простую переплавку."
+			subtitle: "{industrial_frontier.quest.v2.p0.camp_kit.lead}"
 			tags: ["mainline", "camp"]
 			tasks: [
 				{
@@ -219,7 +219,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите одну кровать любого цвета из списка задачи."
+					title: "{industrial_frontier.task.v2.p0.camp_kit.bed_place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -229,7 +229,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Взаимодействуйте с установленной кроватью."
+					title: "{industrial_frontier.task.v2.p0.camp_kit.bed_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -239,7 +239,7 @@
 					value: 1L
 					replace: false
 					replaced: "minecraft:air"
-					title: "Установите одну обычную печь."
+					title: "{industrial_frontier.task.v2.p0.camp_kit.furnace_place.objective}"
 					type: "questsadditions:place"
 				}
 				{
@@ -249,32 +249,32 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте интерфейс установленной печи."
+					title: "{industrial_frontier.task.v2.p0.camp_kit.furnace_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Сон и первая обработка"
+			title: "{industrial_frontier.quest.v2.p0.camp_kit.title}"
 			x: 10d
 			y: 0d
 		}
 		{
 			dependencies: ["3A10000000000003"]
 			description: [
-				"Четыре хлеба дают предсказуемый ранний запас без охоты. В дальнейшем земледелие станет устойчивым источником рациона для поселения."
-				"Получите пшеницу доступным способом и приготовьте четыре хлеба по рецепту JEI."
-				"В инвентаре лежат четыре хлеба, и общая задача снабжения едой доступна для завершения."
-				"Имейте при себе четыре хлеба."
-				"Если зерно пока недоступно, не ждите урожай ради квеста: выберите мясной или картофельный маршрут."
-				"Это один из трёх равноправных ранних маршрутов еды."
-				"Завершение этого пути откроет общий узел раннего снабжения."
-				"Достаточно одного пищевого пути. Выбирайте хлеб, только если зерно уже доступно или подходит вашему плану лагеря."
+				"{industrial_frontier.quest.v2.p0.food_crop.purpose}"
+				"{industrial_frontier.quest.v2.p0.food_crop.step.1}"
+				"{industrial_frontier.quest.v2.p0.food_crop.success}"
+				"{industrial_frontier.quest.v2.p0.food_crop.task}"
+				"{industrial_frontier.quest.v2.p0.food_crop.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.food_crop.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.food_crop.next}"
+				"{industrial_frontier.quest.v2.p0.food_crop.optional_note}"
 			]
 			icon: "minecraft:bread"
 			id: "3A10000000000004"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Растительная пища удобна там, где вы уже нашли зерно или готовы заложить небольшую грядку."
+			subtitle: "{industrial_frontier.quest.v2.p0.food_crop.lead}"
 			tags: ["choice", "food", "crop_route"]
 			tasks: [
 				{
@@ -285,32 +285,32 @@
 						id: "minecraft:bread"
 					}
 					consume_items: false
-					title: "Имейте при себе четыре хлеба."
+					title: "{industrial_frontier.task.v2.p0.food_crop.bread.objective}"
 					type: "item"
 				}
 			]
-			title: "Полевой хлеб"
+			title: "{industrial_frontier.quest.v2.p0.food_crop.title}"
 			x: 12d
 			y: -3d
 		}
 		{
 			dependencies: ["3A10000000000003"]
 			description: [
-				"Готовая пища позволяет продолжить разведку без ожидания урожая. Маршрут полезен как временное снабжение, но не требует превращать окрестности в пустую охотничью зону."
-				"Добудьте сырое мясо доступным способом и приготовьте четыре порции говядины на печи или костре."
-				"В инвентаре лежат четыре готовые порции, и общая задача снабжения едой доступна для завершения."
-				"Имейте при себе четыре жареные говядины."
-				"Если подходящих животных мало, сохраните их для разведения и выберите хлебный или картофельный путь."
-				"Это один из трёх равноправных ранних маршрутов еды."
-				"Завершение этого пути откроет общий узел раннего снабжения."
-				"Достаточно одного пищевого пути. Охота подходит для быстрой экспедиции, но не обязательна при дефиците животных."
+				"{industrial_frontier.quest.v2.p0.food_hunt.purpose}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.step.1}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.success}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.task}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.next}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.optional_note}"
 			]
 			icon: "minecraft:cooked_beef"
 			id: "3A10000000000005"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Мясной путь быстро закрывает запас еды, если поблизости уже есть подходящие животные."
+			subtitle: "{industrial_frontier.quest.v2.p0.food_hunt.lead}"
 			tags: ["choice", "food", "hunting_route"]
 			tasks: [
 				{
@@ -321,32 +321,32 @@
 						id: "minecraft:cooked_beef"
 					}
 					consume_items: false
-					title: "Имейте при себе четыре жареные говядины."
+					title: "{industrial_frontier.task.v2.p0.food_hunt.beef.objective}"
 					type: "item"
 				}
 			]
-			title: "Пища после охоты"
+			title: "{industrial_frontier.quest.v2.p0.food_hunt.title}"
 			x: 12d
 			y: -1d
 		}
 		{
 			dependencies: ["3A10000000000003"]
 			description: [
-				"Печёный картофель закрывает раннее снабжение и оставляет очевидный посадочный материал. Это удобный компромисс между немедленной едой и будущим земледелием."
-				"Найдите или вырастите картофель и приготовьте четыре штуки в доступной лагерной установке."
-				"В инвентаре лежат четыре печёных картофеля, и общая задача снабжения едой доступна для завершения."
-				"Имейте при себе четыре печёных картофеля."
-				"Если картофель не найден, не тратьте время на изнурительный поиск деревни: выберите хлебный или мясной путь."
-				"Это один из трёх равноправных ранних маршрутов еды."
-				"Завершение этого пути откроет общий узел раннего снабжения."
-				"Достаточно одного пищевого пути. Картофель выбирайте, если источник уже найден и подходит для будущей грядки."
+				"{industrial_frontier.quest.v2.p0.food_root.purpose}"
+				"{industrial_frontier.quest.v2.p0.food_root.step.1}"
+				"{industrial_frontier.quest.v2.p0.food_root.success}"
+				"{industrial_frontier.quest.v2.p0.food_root.task}"
+				"{industrial_frontier.quest.v2.p0.food_root.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.food_root.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.food_root.next}"
+				"{industrial_frontier.quest.v2.p0.food_root.optional_note}"
 			]
 			icon: "minecraft:baked_potato"
 			id: "3A10000000000006"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "Картофельный путь связывает найденную пищу с будущей простой фермой без отдельной цепочки зерна."
+			subtitle: "{industrial_frontier.quest.v2.p0.food_root.lead}"
 			tags: ["choice", "food", "foraging_route"]
 			tasks: [
 				{
@@ -357,32 +357,32 @@
 						id: "minecraft:baked_potato"
 					}
 					consume_items: false
-					title: "Имейте при себе четыре печёных картофеля."
+					title: "{industrial_frontier.task.v2.p0.food_root.potato.objective}"
 					type: "item"
 				}
 			]
-			title: "Печёный корнеплод"
+			title: "{industrial_frontier.quest.v2.p0.food_root.title}"
 			x: 12d
 			y: 1d
 		}
 		{
 			dependencies: ["3A10000000000003"]
 			description: [
-				"Задача принимает хлеб, приготовленное мясо, печёный картофель и перечисленные блюда Farmer’s Delight. Сырые продукты исключены, потому что не доказывают готовое снабжение."
-				"Приготовьте любой один продукт из списка задачи удобным доступным способом."
-				"Положите готовый рацион в основной инвентарь; предмет при зачёте не расходуется."
-				"В инвентаре есть один подходящий готовый рацион, и задача по снабжению едой завершена без прохождения всех учебных ветвей."
-				"Имейте при себе один готовый полевой рацион из списка задачи."
-				"Если похожая еда не считается, откройте полный список подходящих блюд в условии задачи."
-				"Сырое мясо, пшеница и обычный картофель не подходят: требуется готовая пища."
-				"Подойдут хлеб, готовое мясо, печёный картофель и другие перечисленные блюда; сырые ингредиенты не считаются."
-				"Пищевое снабжение готово; параллельно завершите карту и железную цепочку."
+				"{industrial_frontier.quest.v2.p0.food_ready.purpose}"
+				"{industrial_frontier.quest.v2.p0.food_ready.step.1}"
+				"{industrial_frontier.quest.v2.p0.food_ready.step.2}"
+				"{industrial_frontier.quest.v2.p0.food_ready.success}"
+				"{industrial_frontier.quest.v2.p0.food_ready.task}"
+				"{industrial_frontier.quest.v2.p0.food_ready.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.food_ready.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.food_ready.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.food_ready.next}"
 			]
 			icon: "minecraft:bread"
 			id: "3010000000000004"
 			shape: "hexagon"
 			size: 1.3d
-			subtitle: "Лагерю нужен один подходящий готовый рацион, а не обязательное повторение трёх способов добычи еды."
+			subtitle: "{industrial_frontier.quest.v2.p0.food_ready.lead}"
 			tags: ["mainline", "choice_join", "food"]
 			tasks: [
 				{
@@ -394,120 +394,120 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/field)"
 						}
 					}
-					title: "Имейте при себе один готовый полевой рацион из списка задачи."
+					title: "{industrial_frontier.task.v2.p0.food_ready.ration.objective}"
 					type: "item"
 				}
 			]
-			title: "Походная еда готова"
+			title: "{industrial_frontier.quest.v2.p0.food_ready.title}"
 			x: 14d
 			y: -1d
 		}
 		{
 			dependencies: ["3A10000000000003"]
 			description: [
-				"Раннее картирование снижает число переносов базы и помогает отделить временный лагерь от будущей промышленной площадки."
-				"Отметьте лагерь и безопасный путь возврата доступным картографическим инструментом."
-				"Наметьте воду, пространство под расширение и направление геологической разведки."
-				"У вас есть понятный ориентир возврата и хотя бы одно направление для целевой разведки."
-				"Наметьте ориентиры вокруг лагеря и подтвердите план разведки."
-				"Если карта перегружена значками, оставьте только лагерь, опасность и ближайшую цель; остальное можно добавить после P0."
-				"Галочка подтверждает планирование; она не утверждает посещение места, которое система не проверяет."
-				"Перед вылазкой закрепим порядок восстановления после смерти или потери маршрута."
+				"{industrial_frontier.quest.v2.p0.map.purpose}"
+				"{industrial_frontier.quest.v2.p0.map.step.1}"
+				"{industrial_frontier.quest.v2.p0.map.step.2}"
+				"{industrial_frontier.quest.v2.p0.map.success}"
+				"{industrial_frontier.quest.v2.p0.map.task}"
+				"{industrial_frontier.quest.v2.p0.map.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.map.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.map.next}"
 			]
 			icon: "minecraft:filled_map"
 			id: "3010000000000005"
 			shape: "square"
 			size: 1.2d
-			subtitle: "Дорога, вода, свободная площадка и путь к жиле влияют на фабрику не меньше первого рецепта."
+			subtitle: "{industrial_frontier.quest.v2.p0.map.lead}"
 			tags: ["mainline", "navigation"]
 			tasks: [
 				{
 					id: "4010000000000005"
-					title: "Наметьте ориентиры вокруг лагеря и подтвердите план разведки."
+					title: "{industrial_frontier.task.v2.p0.map.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Карта — часть инженерии"
+			title: "{industrial_frontier.quest.v2.p0.map.title}"
 			x: 12d
 			y: 3d
 		}
 		{
 			dependencies: ["3010000000000005"]
 			description: [
-				"План восстановления защищает первые инструменты и найденную жилу. Он сокращает повторный поиск, который не создаёт новых инженерных решений."
-				"Оставьте в лагере резерв простой еды, топлива и базовых материалов."
-				"Перед вылазкой проверьте ориентир возврата и свободное место для найденного сырья."
-				"У лагеря есть резерв, маршрут возврата известен, и потеря одной вылазки не обнуляет развитие."
-				"Прочитайте порядок возврата и подтвердите подготовку к вылазке."
-				"Если вы потеряли направление, сначала вернитесь к последнему известному ориентиру; не переносите весь запас в новую случайную точку."
-				"Задача обучает восстановлению и не требует намеренно погибать."
-				"Теперь можно читать местную геологию и искать любой подходящий железосодержащий минерал."
+				"{industrial_frontier.quest.v2.p0.loss.purpose}"
+				"{industrial_frontier.quest.v2.p0.loss.step.1}"
+				"{industrial_frontier.quest.v2.p0.loss.step.2}"
+				"{industrial_frontier.quest.v2.p0.loss.success}"
+				"{industrial_frontier.quest.v2.p0.loss.task}"
+				"{industrial_frontier.quest.v2.p0.loss.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.loss.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.loss.next}"
 			]
 			icon: "minecraft:recovery_compass"
 			id: "3010000000000007"
 			shape: "circle"
 			size: 1.1d
-			subtitle: "Дальняя разведка начинается с маршрута возврата и небольшого резерва, а не с надежды на удачу."
+			subtitle: "{industrial_frontier.quest.v2.p0.loss.lead}"
 			tags: ["mainline", "recovery"]
 			tasks: [
 				{
 					id: "4010000000000007"
-					title: "Прочитайте порядок возврата и подтвердите подготовку к дальней вылазке."
+					title: "{industrial_frontier.task.v2.p0.loss.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Не терять прогресс"
+			title: "{industrial_frontier.quest.v2.p0.loss.title}"
 			x: 14d
 			y: 3d
 		}
 		{
 			dependencies: ["3010000000000007"]
 			description: [
-				"Разведочный узел отделяет геологический источник от готового металла. Магнетит, гематит, лимонит и другие подтверждённые минералы принимает один общий набор."
-				"Используйте наблюдение жил и квестовую геологию как источник факта о местной GTCEu-генерации."
-				"Найдите любой один минерал из следующего набора и откройте его фактический маршрут переработки в JEI."
-				"Вы понимаете, что следующее задание примет любой минерал из утверждённого списка и не требует искать только ванильное сырое железо."
-				"Прочитайте правила железной развилки и выберите путь по фактической находке."
-				"Если сторонняя подсказка и наблюдаемая жила расходятся, доверяйте фактической GTCEu-жиле, этой ветви и рецептам JEI."
-				"Если ни один источник не найден, расширяйте разведку целевыми маршрутами от лагеря, а не случайным туннелем без ориентиров."
-				"Следующий узел требует один источник из списка, а не обязательно сырое ванильное железо."
-				"Следующая задача примет один из восьми железосодержащих источников, перечисленных в условии."
+				"{industrial_frontier.quest.v2.p0.prospect.purpose}"
+				"{industrial_frontier.quest.v2.p0.prospect.step.1}"
+				"{industrial_frontier.quest.v2.p0.prospect.step.2}"
+				"{industrial_frontier.quest.v2.p0.prospect.success}"
+				"{industrial_frontier.quest.v2.p0.prospect.task}"
+				"{industrial_frontier.quest.v2.p0.prospect.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.prospect.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.prospect.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.prospect.next}"
 			]
 			icon: "industrial_frontier:textures/gui/icons/process/geology/ore_sources.png"
 			id: "35DDD1065975E5CA"
 			shape: "gear"
 			size: 1.4d
-			subtitle: "Железная цепочка начинается не с одного предмета, а с семейства минералов с разными дальнейшими маршрутами."
+			subtitle: "{industrial_frontier.quest.v2.p0.prospect.lead}"
 			tags: ["mainline", "geology"]
 			tasks: [
 				{
 					id: "4964FF10DD1B02A8"
-					title: "Прочитайте правила железной развилки и выберите минерал по фактической находке."
+					title: "{industrial_frontier.task.v2.p0.prospect.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "Читать жилу, а не цвет"
+			title: "{industrial_frontier.quest.v2.p0.prospect.title}"
 			x: 16d
 			y: 3d
 		}
 		{
 			dependencies: ["35DDD1065975E5CA"]
 			description: [
-				"В условии перечислены восемь подтверждённых железосодержащих минералов. Задача проверяет найденный источник и намеренно не принимает пыль или готовый металл."
-				"Добудьте один подходящий минерал: например, сырое железо, магнетит, гематит или лимонит."
-				"Положите образец в основной инвентарь и откройте в JEI доступный путь до железного слитка."
-				"Один предмет из полного списка допустимых минералов находится в инвентаре; разведка засчитана независимо от выбранной местной жилы."
-				"Имейте при себе один железосодержащий минерал из списка задачи."
-				"Если образец не считается, проверьте его точную форму: пыль и блок сырья не входят в этот набор."
-				"Если ранний путь выбранного минерала неудобен, используйте другой найденный источник; готовый металл проверяется отдельно."
-				"Подойдут сырое железо, жёлтый лимонит, магнетит, оба минеральных песка, пирит, гётит или гематит."
-				"Теперь превратите доступное сырьё в железный слиток и подтвердите именно продукт."
+				"{industrial_frontier.quest.v2.p0.iron_source.purpose}"
+				"{industrial_frontier.quest.v2.p0.iron_source.step.1}"
+				"{industrial_frontier.quest.v2.p0.iron_source.step.2}"
+				"{industrial_frontier.quest.v2.p0.iron_source.success}"
+				"{industrial_frontier.quest.v2.p0.iron_source.task}"
+				"{industrial_frontier.quest.v2.p0.iron_source.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.iron_source.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.iron_source.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.iron_source.next}"
 			]
 			icon: "gtceu:raw_magnetite"
 			id: "3A10000000000007"
 			shape: "hexagon"
 			size: 1.3d
-			subtitle: "Геология выбирает маршрут: квест принимает фактическую находку, а не один заранее назначенный предмет."
+			subtitle: "{industrial_frontier.quest.v2.p0.iron_source.lead}"
 			tags: ["mainline", "geology", "source_product_split"]
 			tasks: [
 				{
@@ -519,32 +519,32 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/early_iron)"
 						}
 					}
-					title: "Имейте при себе один железосодержащий минерал из списка задачи."
+					title: "{industrial_frontier.task.v2.p0.iron_source.item.objective}"
 					type: "item"
 				}
 			]
-			title: "Любой ранний источник железа"
+			title: "{industrial_frontier.quest.v2.p0.iron_source.title}"
 			x: 18d
 			y: 3d
 		}
 		{
 			dependencies: ["3A10000000000007"]
 			description: [
-				"Отдельная проверка готового продукта подтверждает реальную способность получать железо. Четыре слитка — небольшой рабочий запас, а не налог на ручную переплавку."
-				"Откройте в JEI маршрут выбранного железосодержащего минерала и подготовьте необходимое топливо или промежуточную обработку."
-				"Получите четыре подходящих железных слитка и оставьте их в основном инвентаре."
-				"В инвентаре находятся четыре готовых железных слитка, которые можно сразу использовать в первых механических деталях."
-				"Получите четыре железных слитка из списка задачи."
-				"Если плавка не начинается, сначала сверьте форму входа и наличие топлива."
-				"Если результат не считается, убедитесь, что это железный слиток из списка задачи, а не пыль, самородок или сплав."
-				"Проверяется готовый слиток, а не руда, сырой минерал или пыль; предметы не расходуются."
-				"Теперь превратите часть металла в полезный инструмент: железная кирка покажет, что цепочка от жилы до готового изделия действительно работает."
+				"{industrial_frontier.quest.v2.p0.iron_product.purpose}"
+				"{industrial_frontier.quest.v2.p0.iron_product.step.1}"
+				"{industrial_frontier.quest.v2.p0.iron_product.step.2}"
+				"{industrial_frontier.quest.v2.p0.iron_product.success}"
+				"{industrial_frontier.quest.v2.p0.iron_product.task}"
+				"{industrial_frontier.quest.v2.p0.iron_product.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.iron_product.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.iron_product.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.iron_product.next}"
 			]
 			icon: "minecraft:iron_ingot"
 			id: "3A10000000000008"
 			shape: "rsquare"
 			size: 1.4d
-			subtitle: "Месторождение найдено; теперь источник должен стать металлом, пригодным для инструментов и деталей."
+			subtitle: "{industrial_frontier.quest.v2.p0.iron_product.lead}"
 			tags: ["mainline", "materials", "source_product_split"]
 			tasks: [
 				{
@@ -557,32 +557,32 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/iron_ingots)"
 						}
 					}
-					title: "Получите четыре железных слитка из списка задачи."
+					title: "{industrial_frontier.task.v2.p0.iron_product.ingots.objective}"
 					type: "item"
 				}
 			]
-			title: "Первая партия железа"
+			title: "{industrial_frontier.quest.v2.p0.iron_product.title}"
 			x: 20d
 			y: 3d
 		}
 		{
 			dependencies: ["3A10000000000008"]
 			description: [
-				"Железная кирка замыкает цепочку «источник → металл → потребитель» и расширяет добывающие возможности следующей механической эпохи."
-				"Откройте рецепт доступной железной кирки и подготовьте требуемые рукоять и слитки."
-				"Изготовьте одну кирку и оставьте её в основном инвентаре."
-				"Подходящая железная кирка готова к дальнейшей разведке и добыче."
-				"Изготовьте одну железную кирку Minecraft или GregTech из списка задачи."
-				"Если ванильная или GregTech-кирка из списка не засчитывается, не делайте лишний дубль: запишите реестровое имя предмета и сообщите об ошибке тега сборки."
-				"Если рецепт отличается от привычного, следуйте локальному JEI и проверьте форму рукояти и инструмента."
-				"Подойдёт обычная железная кирка Minecraft или железная кирка GregTech. Обе подтверждают, что готовый металл дошёл до полезного инструмента."
-				"Теперь лагерь может пройти итоговую функциональную приёмку и открыть механизацию P1."
+				"{industrial_frontier.quest.v2.p0.iron_consumer.purpose}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.step.1}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.step.2}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.success}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.task}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.iron_consumer.next}"
 			]
 			icon: "gtceu:iron_pickaxe"
 			id: "3A10000000000009"
 			shape: "square"
 			size: 1.3d
-			subtitle: "Готовый слиток становится полезным только тогда, когда из него появляется первый рабочий инструмент."
+			subtitle: "{industrial_frontier.quest.v2.p0.iron_consumer.lead}"
 			tags: ["mainline", "materials", "first_consumer"]
 			tasks: [
 				{
@@ -594,11 +594,11 @@
 							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_components/iron_pickaxes)"
 						}
 					}
-					title: "Изготовьте одну железную кирку из списка задачи."
+					title: "{industrial_frontier.task.v2.p0.iron_consumer.pickaxe.objective}"
 					type: "item"
 				}
 			]
-			title: "Железо идёт в работу"
+			title: "{industrial_frontier.quest.v2.p0.iron_consumer.title}"
 			x: 22d
 			y: 3d
 		}
@@ -608,22 +608,22 @@
 				"3A10000000000009"
 			]
 			description: [
-				"Итоговая приёмка подтверждает способность лагеря поддерживать следующий этап. Она повторно проверяет использование рабочих блоков, но не забирает инфраструктуру."
-				"Откройте установленный верстак и убедитесь, что рабочая сетка доступна."
-				"Откройте установленную обычную печь после завершения пищевой и железной ветвей."
-				"Верстак и печь повторно использованы после завершения ветвей; команда переходит из P0 в P1."
-				"После завершения ветвей откройте установленный верстак и обычную печь."
-				"Если переход закрыт, проверьте готовый рацион и изготовленную железную кирку в двух входящих ветвях."
-				"Если все условия выполнены, но эпоха не меняется, сохраните журнал и сообщите владельцу сборки название этого задания."
-				"Проверьте доступность рабочей сетки после завершения ветвей P0."
-				"Используйте обычную ванильную печь, а не коптильню или плавильную печь."
-				"В P1 вращение, передача мощности и буферы превратят ручные операции в первую производственную линию."
+				"{industrial_frontier.quest.v2.p0.commissioning.purpose}"
+				"{industrial_frontier.quest.v2.p0.commissioning.step.1}"
+				"{industrial_frontier.quest.v2.p0.commissioning.step.2}"
+				"{industrial_frontier.quest.v2.p0.commissioning.success}"
+				"{industrial_frontier.quest.v2.p0.commissioning.task}"
+				"{industrial_frontier.quest.v2.p0.commissioning.diagnostic.1}"
+				"{industrial_frontier.quest.v2.p0.commissioning.diagnostic.2}"
+				"{industrial_frontier.quest.v2.p0.commissioning.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.commissioning.proof_help.2}"
+				"{industrial_frontier.quest.v2.p0.commissioning.next}"
 			]
 			icon: "create:cogwheel"
 			id: "3DD22A44EA12FD23"
 			shape: "diamond"
 			size: 1.6d
-			subtitle: "Лагерь работает, еда готова, железо стало инструментом, и экспедиция может перейти к механизации."
+			subtitle: "{industrial_frontier.quest.v2.p0.commissioning.lead}"
 			tags: ["mainline", "if_commissioning_p0"]
 			tasks: [
 				{
@@ -633,7 +633,7 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте установленный верстак."
+					title: "{industrial_frontier.task.v2.p0.exit.workbench_use.objective}"
 					type: "questsadditions:use"
 				}
 				{
@@ -643,19 +643,19 @@
 					value: 1L
 					checkItem: false
 					isItemInteraction: false
-					title: "Откройте установленную обычную печь."
+					title: "{industrial_frontier.task.v2.p0.exit.furnace_use.objective}"
 					type: "questsadditions:use"
 				}
 			]
-			title: "Лагерь готов к работе"
+			title: "{industrial_frontier.quest.v2.p0.commissioning.title}"
 			x: 22d
 			y: 1d
 		}
 	]
 	subtitle: [
-		"Рабочее место, безопасный лагерь, ранняя еда и честная разведка железного сырья"
-		"P0 переводит игрока от чтения к действиям. Сначала появляются брёвна, доски и верстак; затем лагерь получает тепло, еду и ориентиры."
-		"Железная ветвь не требует одного заранее выбранного минерала. Достаточно найти любой локально подтверждённый железосодержащий источник, после чего отдельный квест проверит готовый слиток."
+		"{industrial_frontier.chapter.v2.p0.subtitle.1}"
+		"{industrial_frontier.chapter.v2.p0.subtitle.2}"
+		"{industrial_frontier.chapter.v2.p0.subtitle.3}"
 	]
-	title: "P0 — Экспедиция"
+	title: "{industrial_frontier.chapter.v2.p0.title}"
 }
