@@ -231,8 +231,6 @@ try {
     $layout = Get-Content -Raw -LiteralPath $layoutPath -Encoding UTF8
     foreach ($token in @(
         '[source:local]/config/fancymenu/assets/menu/base.png',
-        'action = setscale',
-        'scale = 2.0',
         'parallax = true',
         'parallax_intensity_x = 0.025',
         'parallax_intensity_y = 0.014',
@@ -255,6 +253,9 @@ try {
         Add-MenuError 'All eight action buttons and two compact buttons must use nine-slicing.'
     }
     if ($layout -match '(?m)^\s*slide\s*=\s*true\s*$') { Add-MenuError 'The stable title background must not slide.' }
+    if ($layout -match '(?m)^\s*action\s*=\s*setscale\s*$') {
+        Add-MenuError 'Title layout must not multiply autoscale; fixed setscale caused clipping at maximum GUI scale.'
+    }
 
     $panelBlock = Get-ElementBlock $layout 'recast_title_panel'
     if ([string]::IsNullOrWhiteSpace($panelBlock) -or
@@ -279,10 +280,12 @@ try {
             Add-MenuError 'Build label must remain inside the compact panel.'
         }
     }
-    if ($layout -notmatch '(?s)element_type\s*=\s*title_screen_branding.*?is_hidden\s*=\s*true') {
-        Add-MenuError 'Vanilla/Forge/MCP branding must be hidden to prevent the bottom overlay collision.'
+    foreach ($widgetId in @('minecraft_logo_widget', 'minecraft_splash_widget', 'minecraft_branding_widget', 'title_screen_copyright_button')) {
+        if ($layout -notmatch "(?s)element_type\s*=\s*vanilla_button\s+instance_identifier\s*=\s*$([regex]::Escape($widgetId))\s+is_hidden\s*=\s*true") {
+            Add-MenuError "Vanilla title widget '$widgetId' must be hidden by its real FancyMenu 3.9.9 identifier."
+        }
     }
-    Add-MenuPass 'FancyMenu resize-safe moving background, fixed-scale, compact-panel and hidden-branding contracts validated.'
+    Add-MenuPass 'FancyMenu resize-safe moving background, autoscale-only compact panel and exact hidden-widget contracts validated.'
 }
 catch {
     Add-MenuError "Title-layout validation failed: $($_.Exception.Message)"
@@ -301,14 +304,11 @@ try {
     )
     foreach ($name in $startupLayouts) {
         $startupLayout = Get-Content -Raw -Encoding UTF8 -LiteralPath (Resolve-MenuPath "config/fancymenu/customization/$name")
-        if ([regex]::Matches($startupLayout, '(?ms)customization\s*\{\s*action\s*=\s*setscale\s*scale\s*=\s*2\.0\s*\}').Count -ne 1) {
-            Add-MenuError "Startup layout '$name' must contain exactly one fixed layout scale of 2.0."
+        if ($startupLayout -match '(?m)^\s*action\s*=\s*setscale\s*$') {
+            Add-MenuError "Startup layout '$name' must use autoscale only; setscale breaks maximum-GUI-scale geometry."
         }
         if ([regex]::Matches($startupLayout, '(?ms)customization\s*\{\s*action\s*=\s*autoscale\s*basewidth\s*=\s*854\s*baseheight\s*=\s*480\s*\}').Count -ne 1) {
             Add-MenuError "Startup layout '$name' must auto-scale from the 854x480 reference canvas."
-        }
-        if ($startupLayout.IndexOf('action = setscale') -gt $startupLayout.IndexOf('action = autoscale')) {
-            Add-MenuError "Startup layout '$name' must apply setscale before autoscale."
         }
     }
 
@@ -323,7 +323,7 @@ try {
             }
         }
     }
-    Add-MenuPass 'All startup layouts use resize-safe scale order; loading copy is bootstrap-safe and compact.'
+    Add-MenuPass 'All startup layouts use autoscale-only resize-safe geometry; loading copy is bootstrap-safe and compact.'
 }
 catch {
     Add-MenuError "Startup-layout validation failed: $($_.Exception.Message)"

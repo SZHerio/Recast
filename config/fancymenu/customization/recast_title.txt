@@ -12,11 +12,6 @@ layout-meta {
 }
 
 customization {
-  action = setscale
-  scale = 2.0
-}
-
-customization {
   action = autoscale
   basewidth = 854
   baseheight = 480
@@ -361,19 +356,25 @@ vanilla_button {
 }
 
 deep_element {
-  element_type = title_screen_logo
-  instance_identifier = vanilla_logo
+  element_type = vanilla_button
+  instance_identifier = minecraft_logo_widget
   is_hidden = true
 }
 
 deep_element {
-  element_type = title_screen_branding
-  instance_identifier = vanilla_branding
+  element_type = vanilla_button
+  instance_identifier = minecraft_branding_widget
   is_hidden = true
 }
 
 deep_element {
-  element_type = title_screen_splash
-  instance_identifier = vanilla_splash
+  element_type = vanilla_button
+  instance_identifier = minecraft_splash_widget
+  is_hidden = true
+}
+
+deep_element {
+  element_type = vanilla_button
+  instance_identifier = title_screen_copyright_button
   is_hidden = true
 }
