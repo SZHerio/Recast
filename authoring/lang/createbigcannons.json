@@ -1,3 +1,5 @@
 {
+  "block.createbigcannons.autocannon_ammo_container.tooltip.main_ammo": "%1$s шт. %2$s",
+  "block.createbigcannons.smoke_shell.tooltip": "ДЫМОВОЙ СНАРЯД",
   "item.createbigcannons.delayed_impact_fuze.tooltip.shell_info": "Время до взрыва: _%s с и %s тиков_"
 }

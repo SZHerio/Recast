@@ -46,9 +46,9 @@ element {
   instance_identifier = recast_loading_works_panel
   anchor_point = bottom-centered
   x = -210
-  y = -88
+  y = -112
   width = 420
-  height = 72
+  height = 104
   stay_on_screen = true
 }
 
@@ -63,9 +63,9 @@ element {
   instance_identifier = recast_loading_works_title
   anchor_point = bottom-centered
   x = -190
-  y = -78
+  y = -100
   width = 380
-  height = 10
+  height = 18
   stay_on_screen = true
 }
 
@@ -79,9 +79,9 @@ element {
   instance_identifier = recast_loading_works_tip
   anchor_point = bottom-centered
   x = -190
-  y = -62
+  y = -78
   width = 380
-  height = 20
+  height = 30
   stay_on_screen = true
 }
 
@@ -95,9 +95,9 @@ element {
   instance_identifier = recast_loading_works_frame
   anchor_point = bottom-centered
   x = -194
-  y = -34
+  y = -43
   width = 388
-  height = 12
+  height = 14
   stay_on_screen = true
 }
 
@@ -107,9 +107,9 @@ element {
   instance_identifier = recast_loading_works_bar
   anchor_point = bottom-centered
   x = -188
-  y = -31
+  y = -39
   width = 376
-  height = 5
+  height = 6
   stay_on_screen = true
 }
 
@@ -123,9 +123,9 @@ element {
   instance_identifier = recast_loading_works_status
   anchor_point = bottom-centered
   x = -188
-  y = -20
+  y = -27
   width = 260
-  height = 9
+  height = 16
   stay_on_screen = true
 }
 
@@ -139,9 +139,9 @@ element {
   instance_identifier = recast_loading_works_percent
   anchor_point = bottom-centered
   x = 150
-  y = -20
+  y = -27
   width = 38
-  height = 9
+  height = 16
   stay_on_screen = true
 }
 

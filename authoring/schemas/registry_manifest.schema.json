@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/registry_manifest.schema.json",
+  "title": "Recast M2 registry manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "namespace",
+    "manifest_id",
+    "status",
+    "gameplay_effect",
+    "registries",
+    "cross_registry_invariants",
+    "validation_assumptions"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "namespace": { "const": "industrial_frontier" },
+    "manifest_id": { "const": "industrial_frontier:registry_manifest" },
+    "status": { "const": "STATIC_COMPLETE_USER_GATE_PENDING" },
+    "gameplay_effect": { "const": "M2_RUNTIME_CONTENT_PRESENT_USER_TEST_PENDING" },
+    "registries": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["registry_id", "registry_path", "schema_path", "status", "counts"],
+        "properties": {
+          "registry_id": { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+          "registry_path": { "type": "string", "pattern": "^docs/registries/m2_[a-z0-9_]+\\.json$" },
+          "schema_path": { "type": "string", "pattern": "^authoring/schemas/m2_[a-z0-9_]+\\.schema\\.json$" },
+          "status": { "enum": ["STATIC_COMPLETE_USER_GATE_PENDING", "STATIC_BASELINE_NON_EXECUTABLE", "STATIC_BASELINE_USER_TEST_PENDING"] },
+          "counts": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "cross_registry_invariants": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "validation_assumptions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  }
+}

@@ -1046,9 +1046,9 @@ function Test-CoreDependencyRefsObject {
         return
     }
     $fieldContracts = @{
-        substance_refs = [pscustomobject]@{ kind = 'substance_id'; registry = 'docs/registries/m2_substance_passports.json' }
-        form_refs = [pscustomobject]@{ kind = 'form_id'; registry = 'docs/registries/m2_material_forms.json' }
-        process_refs = [pscustomobject]@{ kind = 'process_id'; registry = 'docs/registries/m2_domain_process_ownership.json' }
+        substance_refs = [pscustomobject]@{ kind = 'substance_id'; registry = 'docs/registries/substance_passports.json' }
+        form_refs = [pscustomobject]@{ kind = 'form_id'; registry = 'docs/registries/material_forms.json' }
+        process_refs = [pscustomobject]@{ kind = 'process_id'; registry = 'docs/registries/domain_process_ownership.json' }
     }
     foreach ($property in $coreRefs.PSObject.Properties) {
         if ([string]$property.Name -cnotin @('substance_refs', 'form_refs', 'process_refs', 'fallback_concept_refs')) {
@@ -1192,9 +1192,9 @@ if (-not (Test-Path -LiteralPath $registryDirectory -PathType Container)) {
     Add-ValidationError 'Missing docs/registries directory.'
 }
 else {
-    $m2RegistryFiles = @(Get-ChildItem -LiteralPath $registryDirectory -File -Filter 'm2_*.json' | Sort-Object Name)
+    $m2RegistryFiles = @(Get-ChildItem -LiteralPath $registryDirectory -File -Filter '02_*.json' | Sort-Object Name)
     if ($m2RegistryFiles.Count -eq 0) {
-        Add-ValidationError 'No docs/registries/m2_*.json files were found.'
+        Add-ValidationError 'No docs/registries/02_*.json files were found.'
     }
     foreach ($file in $m2RegistryFiles) {
         $relative = Normalize-RelativePath -Path $file.FullName.Substring($rootPath.Length).TrimStart('\', '/')
@@ -1428,7 +1428,7 @@ if ($null -ne $manifest) {
                     $actualCount = @(Get-PropertyValue -Object $document -Name $collectionName).Count
                     $countResolved = $true
                 }
-                elseif (-not $countResolved -and $registryId -eq 'industrial_frontier:m2/domain_process_ownership') {
+                elseif (-not $countResolved -and $registryId -eq 'industrial_frontier:domain_process_ownership') {
                     $manifestProcesses = @((Get-PropertyValue -Object $document -Name 'domains') | ForEach-Object {
                         @(Get-PropertyValue -Object $_ -Name 'processes')
                     })
@@ -1452,7 +1452,7 @@ if ($null -ne $manifest) {
                         }
                     }
                 }
-                elseif (-not $countResolved -and $registryId -eq 'industrial_frontier:m2/progression_graph' -and $collectionName -eq 'component_requirement_edges') {
+                elseif (-not $countResolved -and $registryId -eq 'industrial_frontier:progression_graph' -and $collectionName -eq 'component_requirement_edges') {
                     $actualCount = @((Get-PropertyValue -Object $document -Name 'dependency_edges') | Where-Object {
                         [string](Get-PropertyValue -Object $_ -Name 'relation') -eq 'COMPONENT_REQUIRES'
                     }).Count
@@ -1504,7 +1504,7 @@ if (-not (Test-Path -LiteralPath $schemaDirectory -PathType Container)) {
     Add-ValidationError 'Missing authoring/schemas directory.'
 }
 else {
-    foreach ($schemaFile in Get-ChildItem -LiteralPath $schemaDirectory -File -Filter 'm2_*.schema.json' | Sort-Object Name) {
+    foreach ($schemaFile in Get-ChildItem -LiteralPath $schemaDirectory -File -Filter '02_*.schema.json' | Sort-Object Name) {
         $keywordProblems = [System.Collections.Generic.List[string]]::new()
         $schemaDocument = Get-LocalSchemaDocument -SchemaPath $schemaFile.FullName -Problems $keywordProblems
         if ($null -ne $schemaDocument) {
@@ -1519,7 +1519,7 @@ else {
 }
 
 if ($null -ne $manifest) {
-    $manifestSchemaPath = Join-Path $rootPath 'authoring\schemas\m2_registry_manifest.schema.json'
+    $manifestSchemaPath = Join-Path $rootPath 'authoring\schemas\registry_manifest.schema.json'
     Invoke-LocalJsonSchemaValidation -Instance $manifest -SchemaPath $manifestSchemaPath -Label $manifestRelativePath
     foreach ($entry in @(Get-PropertyValue -Object $manifest -Name 'registries')) {
         $registryRelative = Normalize-RelativePath -Path ([string](Get-PropertyValue -Object $entry -Name 'registry_path'))
@@ -1662,10 +1662,10 @@ foreach ($relative in @($registryDocuments.Keys | Sort-Object)) {
 
 # Active process claims inherit the evidence/gates of their sovereign domain;
 # the parent must therefore be fully sourced.
-$domainRegistryInfo = $documentsByRegistryId['industrial_frontier:m2/domain_process_ownership']
+$domainRegistryInfo = $documentsByRegistryId['industrial_frontier:domain_process_ownership']
 $domainRegistry = if ($null -eq $domainRegistryInfo) { $null } else { $domainRegistryInfo.document }
 if ($null -eq $domainRegistry) {
-    Add-ValidationError 'Missing industrial_frontier:m2/domain_process_ownership registry.'
+    Add-ValidationError 'Missing industrial_frontier:domain_process_ownership registry.'
 }
 else {
     foreach ($domain in @(Get-PropertyValue -Object $domainRegistry -Name 'domains')) {
@@ -1941,14 +1941,14 @@ else {
         }
     }
 
-    Assert-ManifestCount -RegistryId 'industrial_frontier:m2/domain_process_ownership' -CountName 'processes' -ActualCount $allProductionProcesses.Count -Context 'M2 production processes'
-    Assert-ManifestCount -RegistryId 'industrial_frontier:m2/domain_process_ownership' -CountName 'pathways' -ActualCount $pathwayById.Count -Context 'M2 production pathways'
-    Assert-ManifestCount -RegistryId 'industrial_frontier:m2/domain_process_ownership' -CountName 'stages' -ActualCount $stageById.Count -Context 'M2 production stages'
-    Assert-ManifestCount -RegistryId 'industrial_frontier:m2/domain_process_ownership' -CountName 'non_material_exemptions' -ActualCount $nonMaterialExemptionCount -Context 'M2 non-material coordination exemptions'
+    Assert-ManifestCount -RegistryId 'industrial_frontier:domain_process_ownership' -CountName 'processes' -ActualCount $allProductionProcesses.Count -Context 'M2 production processes'
+    Assert-ManifestCount -RegistryId 'industrial_frontier:domain_process_ownership' -CountName 'pathways' -ActualCount $pathwayById.Count -Context 'M2 production pathways'
+    Assert-ManifestCount -RegistryId 'industrial_frontier:domain_process_ownership' -CountName 'stages' -ActualCount $stageById.Count -Context 'M2 production stages'
+    Assert-ManifestCount -RegistryId 'industrial_frontier:domain_process_ownership' -CountName 'non_material_exemptions' -ActualCount $nonMaterialExemptionCount -Context 'M2 non-material coordination exemptions'
 
     # The progression graph must project exactly the authored stage contract:
     # no invented edge, no silently dropped flow, no unbounded return loop.
-    $progressionForEdges = $documentsByRegistryId['industrial_frontier:m2/progression_graph']
+    $progressionForEdges = $documentsByRegistryId['industrial_frontier:progression_graph']
     if ($null -eq $progressionForEdges) {
         Add-ValidationError 'Cannot audit stage projection: progression graph registry is missing.'
     }
@@ -2050,16 +2050,16 @@ else {
 
         $productionEdgeCount = @(Get-PropertyValue -Object $progressionForEdges.document -Name 'production_edges').Count
         $recycleEdgeCount = @(Get-PropertyValue -Object $progressionForEdges.document -Name 'bounded_recycle_edges').Count
-        Assert-ManifestCount -RegistryId 'industrial_frontier:m2/progression_graph' -CountName 'production_edges' -ActualCount $productionEdgeCount -Context 'M2 stage production edges'
-        Assert-ManifestCount -RegistryId 'industrial_frontier:m2/progression_graph' -CountName 'bounded_recycle_edges' -ActualCount $recycleEdgeCount -Context 'M2 bounded recycle edges'
+        Assert-ManifestCount -RegistryId 'industrial_frontier:progression_graph' -CountName 'production_edges' -ActualCount $productionEdgeCount -Context 'M2 stage production edges'
+        Assert-ManifestCount -RegistryId 'industrial_frontier:progression_graph' -CountName 'bounded_recycle_edges' -ActualCount $recycleEdgeCount -Context 'M2 bounded recycle edges'
     }
 }
 
 # The authoritative progression is a single linear P0 -> ... -> P9 graph.
-$progressionInfo = $documentsByRegistryId['industrial_frontier:m2/progression_graph']
+$progressionInfo = $documentsByRegistryId['industrial_frontier:progression_graph']
 $progression = if ($null -eq $progressionInfo) { $null } else { $progressionInfo.document }
 if ($null -eq $progression) {
-    Add-ValidationError 'Missing industrial_frontier:m2/progression_graph registry.'
+    Add-ValidationError 'Missing industrial_frontier:progression_graph registry.'
 }
 else {
     $nodes = @(Get-PropertyValue -Object $progression -Name 'nodes')
@@ -2150,7 +2150,7 @@ else {
                 if ($null -ne $minimumEpoch) { $domainMinimumProcessEpoch[$domainId] = [int]$minimumEpoch }
             }
         }
-        $substanceRegistryInfoForComponentDag = $documentsByRegistryId['industrial_frontier:m2/substance_passports']
+        $substanceRegistryInfoForComponentDag = $documentsByRegistryId['industrial_frontier:substance_passports']
         if ($null -ne $substanceRegistryInfoForComponentDag) {
             foreach ($collectionName in @('passports', 'planned_substances')) {
                 foreach ($substance in @(Get-PropertyValue -Object $substanceRegistryInfoForComponentDag.document -Name $collectionName)) {
@@ -2158,7 +2158,7 @@ else {
                 }
             }
         }
-        $energyRegistryInfoForComponentDag = $documentsByRegistryId['industrial_frontier:m2/energy_networks']
+        $energyRegistryInfoForComponentDag = $documentsByRegistryId['industrial_frontier:energy_networks']
         if ($null -ne $energyRegistryInfoForComponentDag) {
             foreach ($network in @(Get-PropertyValue -Object $energyRegistryInfoForComponentDag.document -Name 'networks')) {
                 $networkEpoch = Get-PropertyValue -Object $network -Name 'earliest_epoch'
@@ -2168,7 +2168,7 @@ else {
             }
         }
         $criticalComponentByIdForDag = @{}
-        $grindRegistryInfoForComponentDag = $documentsByRegistryId['industrial_frontier:m2/grind_budget']
+        $grindRegistryInfoForComponentDag = $documentsByRegistryId['industrial_frontier:grind_budget']
         if ($null -ne $grindRegistryInfoForComponentDag) {
             foreach ($component in @(Get-PropertyValue -Object $grindRegistryInfoForComponentDag.document -Name 'critical_components')) {
                 $criticalComponentByIdForDag[[string](Get-PropertyValue -Object $component -Name 'component_id')] = $component
@@ -2291,7 +2291,7 @@ else {
             }
         }
 
-        Assert-ManifestCount -RegistryId 'industrial_frontier:m2/progression_graph' -CountName 'dependency_edges' -ActualCount $dependencyEdges.Count -Context 'M2 dependency edges'
+        Assert-ManifestCount -RegistryId 'industrial_frontier:progression_graph' -CountName 'dependency_edges' -ActualCount $dependencyEdges.Count -Context 'M2 dependency edges'
         $classifiedDependencyEdgeCount = 0
         foreach ($relation in @($actualDependencyRelationCounts.Keys)) {
             $classifiedDependencyEdgeCount += [int]$actualDependencyRelationCounts[$relation]
@@ -2352,7 +2352,7 @@ else {
             Add-ValidationError "Progression dependency DAG contains a directed cycle; processed $processedDependencyNodes of $($dependencyIndegree.Count) endpoints."
         }
 
-        $formsRegistryInfoForDag = $documentsByRegistryId['industrial_frontier:m2/material_forms']
+        $formsRegistryInfoForDag = $documentsByRegistryId['industrial_frontier:material_forms']
         if ($null -eq $formsRegistryInfoForDag) {
             Add-ValidationError 'Cannot audit FORM_REPRESENTS_SUBSTANCE completeness: material forms registry is missing.'
         }
@@ -2375,7 +2375,7 @@ else {
             }
         }
 
-        $substanceRegistryInfoForDag = $documentsByRegistryId['industrial_frontier:m2/substance_passports']
+        $substanceRegistryInfoForDag = $documentsByRegistryId['industrial_frontier:substance_passports']
         if ($null -eq $substanceRegistryInfoForDag) {
             Add-ValidationError 'Cannot audit SUBSTANCE_GOVERNED_BY_PROCESS completeness: substance registry is missing.'
         }
@@ -2405,7 +2405,7 @@ else {
 
                 if ($substanceCollectionById.ContainsKey($substanceId)) {
                     $slug = $substanceId.Substring('industrial_frontier:substance/'.Length)
-                    $expectedPointer = "docs/registries/m2_substance_passports.json#/$($substanceCollectionById[$substanceId])?substance_id=$slug/recipe_policy_ru"
+                    $expectedPointer = "docs/registries/substance_passports.json#/$($substanceCollectionById[$substanceId])?substance_id=$slug/recipe_policy_ru"
                     $actualPointer = [string](Get-PropertyValue -Object $dependencyEdge -Name 'recipe_policy_pointer')
                     if ($actualPointer -cne $expectedPointer) {
                         Add-ValidationError "Dependency '$dependencyId' recipe_policy_pointer does not select '$substanceId': expected '$expectedPointer'."
@@ -2467,7 +2467,7 @@ else {
     # reachable from at least one epoch node. OPTIONAL contracts deliberately
     # stay outside the required P0-P9 spine; placing one in contract_refs would
     # silently turn a side campaign into a progression gate.
-    $substanceRegistryInfo = $documentsByRegistryId['industrial_frontier:m2/substance_passports']
+    $substanceRegistryInfo = $documentsByRegistryId['industrial_frontier:substance_passports']
     if ($null -eq $substanceRegistryInfo) {
         Add-ValidationError 'Cannot audit progression coverage: substance passport registry is missing.'
     }
@@ -2516,9 +2516,9 @@ else {
         foreach ($node in $nodes) {
             $nodeEpoch = [int](Get-PropertyValue -Object $node -Name 'epoch')
             $expectedExtendedRefs = @(
-                "docs/registries/m2_extended_domains.json#/construction/epoch_palettes?epoch=p$nodeEpoch",
-                "docs/registries/m2_extended_domains.json#/food/ration_passports?epoch=p$nodeEpoch",
-                "docs/registries/m2_extended_domains.json#/combat/epoch_profiles?epoch=p$nodeEpoch"
+                "docs/registries/extended_domains.json#/construction/epoch_palettes?epoch=p$nodeEpoch",
+                "docs/registries/extended_domains.json#/food/ration_passports?epoch=p$nodeEpoch",
+                "docs/registries/extended_domains.json#/combat/epoch_profiles?epoch=p$nodeEpoch"
             )
             $actualExtendedRefs = @(Get-PropertyValue -Object $node -Name 'extended_refs')
             if ($actualExtendedRefs.Count -ne $expectedExtendedRefs.Count) {
@@ -2587,10 +2587,10 @@ if ($null -ne $domainRegistry) {
     }
 }
 
-$energyInfo = $documentsByRegistryId['industrial_frontier:m2/energy_networks']
+$energyInfo = $documentsByRegistryId['industrial_frontier:energy_networks']
 $energyRegistry = if ($null -eq $energyInfo) { $null } else { $energyInfo.document }
 if ($null -eq $energyRegistry) {
-    Add-ValidationError 'Missing industrial_frontier:m2/energy_networks registry.'
+    Add-ValidationError 'Missing industrial_frontier:energy_networks registry.'
 }
 else {
     # The HBM network opened with its own wave in M7 and now names its unit and
@@ -2694,10 +2694,10 @@ else {
 
 # Material-form conversions are explicitly non-profitable. Unknown conversions
 # stay gated rather than receiving invented ratios.
-$formsInfo = $documentsByRegistryId['industrial_frontier:m2/material_forms']
+$formsInfo = $documentsByRegistryId['industrial_frontier:material_forms']
 $formsRegistry = if ($null -eq $formsInfo) { $null } else { $formsInfo.document }
 if ($null -eq $formsRegistry) {
-    Add-ValidationError 'Missing industrial_frontier:m2/material_forms registry.'
+    Add-ValidationError 'Missing industrial_frontier:material_forms registry.'
 }
 else {
     foreach ($form in @(Get-PropertyValue -Object $formsRegistry -Name 'forms')) {
@@ -2736,10 +2736,10 @@ else {
 # Atomic and planetary worldgen were decided in M7 and must stay decided. The
 # rule is unchanged since M0 — GregTech owns ore generation — so the check moved
 # from "still blocked" to "named an owner and named who was disabled".
-$worldgenInfo = $documentsByRegistryId['industrial_frontier:m2/worldgen_ownership']
+$worldgenInfo = $documentsByRegistryId['industrial_frontier:worldgen_ownership']
 $worldgenRegistry = if ($null -eq $worldgenInfo) { $null } else { $worldgenInfo.document }
 if ($null -eq $worldgenRegistry) {
-    Add-ValidationError 'Missing industrial_frontier:m2/worldgen_ownership registry.'
+    Add-ValidationError 'Missing industrial_frontier:worldgen_ownership registry.'
 }
 else {
     foreach ($decidedWorldgen in @(
@@ -2763,10 +2763,10 @@ else {
     }
 }
 
-$bypassInfo = $documentsByRegistryId['industrial_frontier:m2/bypass_decisions']
+$bypassInfo = $documentsByRegistryId['industrial_frontier:bypass_decisions']
 $bypassRegistry = if ($null -eq $bypassInfo) { $null } else { $bypassInfo.document }
 if ($null -eq $bypassRegistry) {
-    Add-ValidationError 'Missing industrial_frontier:m2/bypass_decisions registry.'
+    Add-ValidationError 'Missing industrial_frontier:bypass_decisions registry.'
 }
 else {
     $futureBypass = Find-ObjectById -Items (Get-PropertyValue -Object $bypassRegistry -Name 'decisions') -IdField 'bypass_id' -Id 'industrial_frontier:bypass/future_nuclear_hbm_cycles'
@@ -2835,7 +2835,7 @@ if (Test-Path -LiteralPath $deviationPath -PathType Leaf) {
     }
 }
 
-$ownershipRegistry = $documentsByRegistryId['industrial_frontier:m2/domain_process_ownership']
+$ownershipRegistry = $documentsByRegistryId['industrial_frontier:domain_process_ownership']
 $civilNuclearDomainStatus = 'UNKNOWN'
 $strategicNuclearDomainStatus = 'UNKNOWN'
 if ($null -ne $ownershipRegistry) {
@@ -3031,7 +3031,7 @@ if ($null -ne $extendedInfo) {
     # combat dependencies. Forms inherit the epoch of their substance;
     # processes use earliest_epoch.
     $coreAvailabilityById = @{}
-    $coreSubstanceInfo = $documentsByRegistryId['industrial_frontier:m2/substance_passports']
+    $coreSubstanceInfo = $documentsByRegistryId['industrial_frontier:substance_passports']
     if ($null -ne $coreSubstanceInfo) {
         foreach ($collectionName in @('passports', 'planned_substances')) {
             foreach ($substance in @(Get-PropertyValue -Object $coreSubstanceInfo.document -Name $collectionName)) {
@@ -3040,7 +3040,7 @@ if ($null -ne $extendedInfo) {
             }
         }
     }
-    $coreFormsInfo = $documentsByRegistryId['industrial_frontier:m2/material_forms']
+    $coreFormsInfo = $documentsByRegistryId['industrial_frontier:material_forms']
     if ($null -ne $coreFormsInfo) {
         foreach ($form in @(Get-PropertyValue -Object $coreFormsInfo.document -Name 'forms')) {
             $formId = [string](Get-PropertyValue -Object $form -Name 'form_id')
@@ -3599,7 +3599,7 @@ if ($null -ne $extendedInfo) {
 # The grind registry uses local design-file evidence rather than the core
 # evidence-ID namespace. Enforce its hard ceilings and the rule that automation
 # exists no later than mass demand.
-$grindInfo = $documentsByRegistryId['industrial_frontier:m2/grind_budget']
+$grindInfo = $documentsByRegistryId['industrial_frontier:grind_budget']
 if ($null -ne $grindInfo) {
     $grind = $grindInfo.document
     $limits = Get-PropertyValue -Object $grind -Name 'limits'
@@ -3608,7 +3608,7 @@ if ($null -ne $grindInfo) {
         Add-ValidationError 'Grind budget registry must declare limits and at least one chain.'
     }
     else {
-        Assert-ManifestCount -RegistryId 'industrial_frontier:m2/grind_budget' -CountName 'chains' -ActualCount $chains.Count -Context 'Grind-budget chains'
+        Assert-ManifestCount -RegistryId 'industrial_frontier:grind_budget' -CountName 'chains' -ActualCount $chains.Count -Context 'Grind-budget chains'
         $seenGrindIds = @{}
         $epochsCovered = @{}
         $limitNames = @(
@@ -3754,7 +3754,7 @@ if ($null -ne $grindInfo) {
         # exact COMPONENT_REQUIRES coverage, a bootstrap route and automation no
         # later than mass demand.
         $criticalComponents = @(Get-PropertyValue -Object $grind -Name 'critical_components')
-        Assert-ManifestCount -RegistryId 'industrial_frontier:m2/grind_budget' -CountName 'critical_components' -ActualCount $criticalComponents.Count -Context 'Grind-budget critical components'
+        Assert-ManifestCount -RegistryId 'industrial_frontier:grind_budget' -CountName 'critical_components' -ActualCount $criticalComponents.Count -Context 'Grind-budget critical components'
         if ($criticalComponents.Count -ne $chains.Count) {
             Add-ValidationError "Critical-component/grind-card parity requires equal collection sizes: components=$($criticalComponents.Count) chains=$($chains.Count)."
         }
@@ -3790,7 +3790,7 @@ if ($null -ne $grindInfo) {
                 [string](Get-PropertyValue -Object $_ -Name 'relation') -eq 'COMPONENT_REQUIRES'
             })
         }
-        Assert-ManifestCount -RegistryId 'industrial_frontier:m2/progression_graph' -CountName 'component_requirement_edges' -ActualCount $componentRequirementEdges.Count -Context 'Progression COMPONENT_REQUIRES edges'
+        Assert-ManifestCount -RegistryId 'industrial_frontier:progression_graph' -CountName 'component_requirement_edges' -ActualCount $componentRequirementEdges.Count -Context 'Progression COMPONENT_REQUIRES edges'
         $declaredComponentRequirementCount = 0
         foreach ($criticalComponentForCount in $criticalComponents) {
             $declaredComponentRequirementCount += @(Get-PropertyValue -Object $criticalComponentForCount -Name 'required_refs').Count

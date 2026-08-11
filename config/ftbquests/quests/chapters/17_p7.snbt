@@ -1,29 +1,23 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
-	hide_quest_until_deps_visible: true
 	filename: "17_p7"
 	group: "1000000000000004"
-	icon: "industrial_frontier:textures/gui/icons/epochs/p7.png"
+	icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p7.png"}}
 	id: "2017000000000001"
 	order_index: 17
 	quest_links: [ ]
 	quests: [
 		{
-			hide_until_deps_complete: true
 			dependencies: ["3BAFBFB90BC9F168"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.brief.purpose}"
-				"{industrial_frontier.quest.v2.p7.brief.success}"
 				"{industrial_frontier.quest.v2.p7.brief.task}"
 				"{industrial_frontier.quest.v2.p7.brief.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.brief.next}"
 			]
 			icon: "gcyr:launch_pad"
 			id: "3017000000000001"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p7.brief.lead}"
+			size: 1d
 			tags: ["root", "mainline"]
 			tasks: [
 				{
@@ -39,21 +33,84 @@
 		{
 			dependencies: ["3017000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.ilmenite_source.purpose}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_source.step.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_source.step.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_source.success}"
+				"{industrial_frontier.quest.v2.p7.ev_actuators.task}"
+				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.2}"
+				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.3}"
+				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.4}"
+				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.5}"
+			]
+			icon: "gtceu:ev_robot_arm"
+			id: "3A17000000000015"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "ev", "components", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A17000000000035"
+					item: {
+						Count: 1
+						id: "gtceu:ev_electric_motor"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_actuators.motor.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000036"
+					item: {
+						Count: 1
+						id: "gtceu:ev_electric_pump"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_actuators.pump.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000037"
+					item: {
+						Count: 1
+						id: "gtceu:ev_sensor"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_actuators.sensor.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000038"
+					item: {
+						Count: 1
+						id: "gtceu:ev_emitter"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_actuators.emitter.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000039"
+					item: {
+						Count: 1
+						id: "gtceu:ev_robot_arm"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_actuators.robot_arm.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ev_actuators.title}"
+			x: 2d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3017000000000001"]
+			description: [
 				"{industrial_frontier.quest.v2.p7.ilmenite_source.task}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_source.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_source.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.ilmenite_source.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_source.next}"
 			]
 			icon: "gtceu:raw_ilmenite"
 			id: "3A1700000000002E"
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ilmenite_source.lead}"
 			tags: ["mainline", "metallurgy", "titanium", "source_before_product", "ore_family"]
 			tasks: [
 				{
@@ -71,187 +128,73 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.ilmenite_source.title}"
-			x: 3d
-			y: -26d
+			x: 2d
+			y: -3d
 		}
 		{
-			dependencies: ["3A1700000000002E"]
+			dependencies: ["3017000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.success}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.task}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.next}"
+				"{industrial_frontier.quest.v2.p7.life_support_cell.task}"
+				"{industrial_frontier.quest.v2.p7.life_support_cell.proof_help.1}"
 			]
-			icon: "gtceu:lv_macerator"
-			id: "3A17000000000040"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "machine_before_product", "reuse"]
-			tasks: [
-				{
-					id: "4A1700000000009C"
-					block_type: 1
-					block: "industrial_frontier:machines/lv_plus_macerators"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.ilmenite_processing_setup.macerator.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A1700000000009D"
-					block_type: 1
-					block: "industrial_frontier:machines/lv_plus_ore_washers"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.ilmenite_processing_setup.washer.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.title}"
-			x: 3d
-			y: -24.5d
-		}
-		{
-			dependencies: ["3A17000000000040"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.purpose}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.step.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.step.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.success}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.task}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.next}"
-			]
-			icon: "gtceu:crushed_ilmenite_ore"
-			id: "3A1700000000002F"
-			shape: "hexagon"
+			icon: "gtceu:tungsten_steel_fluid_cell"
+			id: "3A17000000000049"
+			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ilmenite_crushing.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "ore_processing", "machine_before_product"]
+			tags: ["space", "safety", "life_support", "tungsten_steel", "component_before_product"]
 			tasks: [
 				{
-					id: "4A17000000000076"
-					count: 16L
+					id: "4A170000000000A1"
 					item: {
 						Count: 1
-						id: "gtceu:crushed_ilmenite_ore"
+						id: "gtceu:tungsten_steel_fluid_cell"
 					}
 					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ilmenite_crushing.output.objective}"
+					title: "{industrial_frontier.task.v2.p7.life_support_cell.item.objective}"
 					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.ilmenite_crushing.title}"
-			x: 3d
-			y: -23d
+			title: "{industrial_frontier.quest.v2.p7.life_support_cell.title}"
+			x: 2d
+			y: -1.5d
 		}
 		{
-			dependencies: ["3A1700000000002F"]
+			dependencies: ["3017000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.purpose}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.step.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.step.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.step.3}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.success}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.task}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_washing.next}"
+				"{industrial_frontier.quest.v2.p7.return_sample.task}"
+				"{industrial_frontier.quest.v2.p7.return_sample.proof_help.1}"
 			]
-			icon: "gtceu:purified_ilmenite_ore"
-			id: "3A17000000000030"
-			shape: "hexagon"
+			icon: "gcyr:moon_stone"
+			id: "3A17000000000010"
+			shape: "diamond"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ilmenite_washing.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "ore_processing", "machine_before_product"]
+			tags: ["space", "return"]
 			tasks: [
 				{
-					id: "4A17000000000078"
-					count: 16L
+					id: "4A17000000000020"
 					item: {
 						Count: 1
-						id: "gtceu:purified_ilmenite_ore"
+						id: "gcyr:moon_stone"
 					}
 					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ilmenite_washing.output.objective}"
+					title: "{industrial_frontier.task.v2.p7.return_sample.moon_stone.objective}"
 					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.ilmenite_washing.title}"
-			x: 3d
-			y: -21.5d
+			title: "{industrial_frontier.quest.v2.p7.return_sample.title}"
+			x: 2d
+			y: 0d
 		}
 		{
-			dependencies: ["3A17000000000030"]
+			dependencies: ["3017000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.purpose}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.step.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.step.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.success}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.task}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ilmenite_dust.next}"
-			]
-			icon: "gtceu:ilmenite_dust"
-			id: "3A17000000000031"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ilmenite_dust.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "ore_processing", "processed_form"]
-			tasks: [
-				{
-					id: "4A1700000000007A"
-					count: 16L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/ilmenite_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.ilmenite_dust.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.ilmenite_dust.title}"
-			x: 3d
-			y: -20d
-		}
-		{
-			dependencies: ["3A17000000000031"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.step.3}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.success}"
 				"{industrial_frontier.quest.v2.p7.rutile_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.rutile_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.rutile_inputs.next}"
 			]
 			icon: "gtceu:carbon_dust"
 			id: "3A17000000000041"
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.rutile_inputs.lead}"
 			tags: ["mainline", "metallurgy", "titanium", "inputs_before_process", "machine_before_product"]
 			tasks: [
 				{
@@ -267,80 +210,52 @@
 					title: "{industrial_frontier.task.v2.p7.rutile_smelting.carbon.objective}"
 					type: "item"
 				}
-				{
-					id: "4A1700000000007C"
-					block_type: 0
-					block: "gtceu:electric_blast_furnace"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.rutile_smelting.ebf.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.rutile_inputs.title}"
-			x: 1.5d
-			y: -18.5d
+			x: 2d
+			y: 1.5d
 		}
 		{
-			dependencies: ["3A17000000000041"]
+			dependencies: ["3017000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.purpose}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.step.1}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.step.2}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.step.3}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.success}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.task}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.rutile_smelting.next}"
+				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.task}"
+				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.proof_help.1}"
 			]
-			icon: "gtceu:rutile_dust"
-			id: "3A17000000000032"
-			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.rutile_smelting.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "machine_before_product", "processed_form"]
+			icon: "gtceu:magnesium_dust"
+			id: "3A17000000000042"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "metallurgy", "titanium", "inputs_before_process", "machine_before_product"]
 			tasks: [
 				{
-					id: "4A1700000000007D"
-					count: 9L
+					id: "4A1700000000005D"
+					count: 16L
 					item: {
 						Count: 1
 						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/rutile_dusts)"
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/magnesium_dusts)"
 						}
 					}
-					title: "{industrial_frontier.task.v2.p7.rutile_smelting.output.objective}"
+					title: "{industrial_frontier.task.v2.p7.titanium_hot.magnesium.objective}"
 					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.rutile_smelting.title}"
-			x: 3d
-			y: -18.5d
+			title: "{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.title}"
+			x: 2d
+			y: 3d
 		}
 		{
-			dependencies: ["3A17000000000032"]
+			dependencies: ["3017000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.titanium_sources.purpose}"
-				"{industrial_frontier.quest.v2.p7.titanium_sources.step.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_sources.step.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_sources.step.3}"
-				"{industrial_frontier.quest.v2.p7.titanium_sources.success}"
 				"{industrial_frontier.quest.v2.p7.titanium_sources.task}"
-				"{industrial_frontier.quest.v2.p7.titanium_sources.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_sources.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.titanium_sources.proof_help.1}"
 				"{industrial_frontier.quest.v2.p7.titanium_sources.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_sources.next}"
 			]
 			icon: "gtceu:rutile_dust"
 			id: "3A17000000000029"
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.titanium_sources.lead}"
 			tags: ["mainline", "metallurgy", "titanium", "inputs_before_process"]
 			tasks: [
 				{
@@ -365,110 +280,106 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.titanium_sources.title}"
-			x: 3d
-			y: -17d
+			x: 2d
+			y: 4.5d
 		}
 		{
-			dependencies: ["3A17000000000029"]
+			dependencies: ["3A17000000000015"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.purpose}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.step.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.step.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.success}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.task}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.next}"
+				"{industrial_frontier.quest.v2.p7.ev_assembly.purpose}"
+				"{industrial_frontier.quest.v2.p7.ev_assembly.task}"
+				"{industrial_frontier.quest.v2.p7.ev_assembly.proof_help.1}"
 			]
-			icon: "gtceu:titanium_tetrachloride_bucket"
-			id: "3A1700000000002A"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.titanium_tetrachloride.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "processed_form"]
+			icon: "gtceu:ev_assembler"
+			id: "3A17000000000016"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "ev", "machine_before_product", "tier_bridge"]
 			tasks: [
 				{
-					id: "4A1700000000005C"
-					fluid: "gtceu:titanium_tetrachloride"
-					amount: 8000L
-					title: "{industrial_frontier.task.v2.p7.titanium_tetrachloride.fluid.objective}"
-					type: "fluid"
+					id: "4A17000000000029"
+					item: {
+						Count: 1
+						id: "gtceu:ev_assembler"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_assembly.item.objective}"
+					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.titanium_tetrachloride.title}"
-			x: 3d
-			y: -15.5d
+			title: "{industrial_frontier.quest.v2.p7.ev_assembly.title}"
+			x: 4d
+			y: -3d
 		}
 		{
-			dependencies: ["3A1700000000002A"]
+			dependencies: ["3A1700000000002E"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.step.3}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.success}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.next}"
+				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.task}"
+				"{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.proof_help.1}"
 			]
-			icon: "gtceu:magnesium_dust"
-			id: "3A17000000000042"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "inputs_before_process", "machine_before_product"]
+			icon: "gtceu:lv_macerator"
+			id: "3A17000000000040"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "metallurgy", "titanium", "machine_before_product", "reuse"]
 			tasks: [
 				{
-					id: "4A1700000000005D"
-					count: 16L
+					id: "4A1700000000009C"
 					item: {
 						Count: 1
 						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/magnesium_dusts)"
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:machines/lv_plus_macerators)"
 						}
 					}
-					title: "{industrial_frontier.task.v2.p7.titanium_hot.magnesium.objective}"
+					title: "{industrial_frontier.task.v2.p7.ilmenite_processing_setup.macerator.objective}"
 					type: "item"
 				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ilmenite_processing_setup.title}"
+			x: 4d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A17000000000041"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.rutile_smelting.task}"
+				"{industrial_frontier.quest.v2.p7.rutile_smelting.proof_help.1}"
+			]
+			icon: "gtceu:rutile_dust"
+			id: "3A17000000000032"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "titanium", "machine_before_product", "processed_form"]
+			tasks: [
 				{
-					id: "4A1700000000005E"
-					block_type: 0
-					block: "gtceu:electric_blast_furnace"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.titanium_hot.ebf.objective}"
-					type: "questsadditions:use"
+					id: "4A1700000000007D"
+					count: 9L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/rutile_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.rutile_smelting.output.objective}"
+					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.titanium_reduction_inputs.title}"
-			x: 1.5d
-			y: -14d
+			title: "{industrial_frontier.quest.v2.p7.rutile_smelting.title}"
+			x: 4d
+			y: 0d
 		}
 		{
 			dependencies: ["3A17000000000042"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.titanium_hot.purpose}"
-				"{industrial_frontier.quest.v2.p7.titanium_hot.step.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_hot.step.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_hot.step.3}"
-				"{industrial_frontier.quest.v2.p7.titanium_hot.success}"
 				"{industrial_frontier.quest.v2.p7.titanium_hot.task}"
-				"{industrial_frontier.quest.v2.p7.titanium_hot.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_hot.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.titanium_hot.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_hot.next}"
 			]
 			icon: "gtceu:hot_titanium_ingot"
 			id: "3A1700000000002B"
 			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.titanium_hot.lead}"
+			size: 1d
 			tags: ["mainline", "metallurgy", "titanium", "machine_before_product"]
 			tasks: [
 				{
@@ -484,29 +395,180 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.titanium_hot.title}"
-			x: 3d
-			y: -14d
+			x: 4d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A17000000000029"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.task}"
+				"{industrial_frontier.quest.v2.p7.titanium_tetrachloride.proof_help.1}"
+			]
+			icon: "gtceu:titanium_tetrachloride_bucket"
+			id: "3A1700000000002A"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "metallurgy", "titanium", "processed_form"]
+			tasks: [
+				{
+					id: "4A1700000000005C"
+					fluid: "gtceu:titanium_tetrachloride"
+					amount: 8000L
+					title: "{industrial_frontier.task.v2.p7.titanium_tetrachloride.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.titanium_tetrachloride.title}"
+			x: 4d
+			y: 3d
+		}
+		{
+			dependencies: ["3A17000000000016"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.cryogenic_setup.task}"
+				"{industrial_frontier.quest.v2.p7.cryogenic_setup.proof_help.1}"
+			]
+			icon: "gtceu:vacuum_freezer"
+			id: "3A1700000000001E"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "space", "cryogenics", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A17000000000049"
+					fluid: "gtceu:oxygen"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p7.cryogenic_setup.oxygen.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.cryogenic_setup.title}"
+			x: 6d
+			y: -3.75d
+		}
+		{
+			dependencies: ["3A17000000000040"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.task}"
+				"{industrial_frontier.quest.v2.p7.ilmenite_crushing.proof_help.1}"
+			]
+			icon: "gtceu:crushed_ilmenite_ore"
+			id: "3A1700000000002F"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "titanium", "ore_processing", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A17000000000076"
+					count: 16L
+					item: {
+						Count: 1
+						id: "gtceu:crushed_ilmenite_ore"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ilmenite_crushing.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ilmenite_crushing.title}"
+			x: 6d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3A17000000000016"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.scheelite_source.task}"
+				"{industrial_frontier.quest.v2.p7.scheelite_source.proof_help.1}"
+			]
+			icon: "gtceu:raw_scheelite"
+			id: "3A17000000000033"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "source_before_product", "ore_family"]
+			tasks: [
+				{
+					id: "4A1700000000007E"
+					count: 12L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/raw_scheelite)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.scheelite_source.raw.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.scheelite_source.title}"
+			x: 6d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A17000000000016"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.shared_electronics.task}"
+				"{industrial_frontier.quest.v2.p7.shared_electronics.proof_help.1}"
+			]
+			icon: "gcyr:id_chip"
+			id: "3A17000000000002"
+			shape: "diamond"
+			size: 1d
+			tags: ["shared", "electronics"]
+			tasks: [
+				{
+					id: "4A17000000000005"
+					item: {
+						Count: 1
+						id: "gcyr:id_chip"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.shared_electronics.id_chip.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.shared_electronics.title}"
+			x: 6d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A17000000000016"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.space_fabric_setup.task}"
+				"{industrial_frontier.quest.v2.p7.space_fabric_setup.proof_help.1}"
+			]
+			icon: "gtceu:ev_assembler"
+			id: "3A17000000000044"
+			shape: "gear"
+			size: 1.1d
+			tags: ["shared", "materials", "space", "machine_before_product", "reuse"]
+			tasks: [
+				{
+					id: "4A1700000000006F"
+					item: {
+						Count: 1
+						id: "gtceu:ev_assembler"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.shared_materials.assembler.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.space_fabric_setup.title}"
+			x: 6d
+			y: 2.25d
 		}
 		{
 			dependencies: ["3A1700000000002B"]
 			description: [
 				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.success}"
 				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.task}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.next}"
 			]
 			icon: "gtceu:vacuum_freezer"
 			id: "3A1700000000002C"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.lead}"
 			tags: ["mainline", "metallurgy", "cryogenics", "machine_before_product"]
 			tasks: [
 				{
@@ -519,192 +581,193 @@
 					title: "{industrial_frontier.task.v2.p7.vacuum_freezer_setup.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A17000000000061"
-					block_type: 0
-					block: "gtceu:vacuum_freezer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.vacuum_freezer_setup.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.vacuum_freezer_setup.title}"
-			x: 3d
-			y: -12.5d
+			x: 6d
+			y: 3.75d
 		}
 		{
-			dependencies: ["3A1700000000002C"]
+			dependencies: ["3A1700000000001E"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.purpose}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.step.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.step.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.step.3}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.success}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.task}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.titanium_cooling.next}"
+				"{industrial_frontier.quest.v2.p7.dnt_inputs.task}"
+				"{industrial_frontier.quest.v2.p7.dnt_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.dnt_inputs.proof_help.2}"
 			]
-			icon: "gtceu:titanium_ingot"
-			id: "3A1700000000002D"
+			icon: "gtceu:dinitrogen_tetroxide_bucket"
+			id: "3A17000000000027"
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.titanium_cooling.lead}"
-			tags: ["mainline", "metallurgy", "titanium", "processed_form"]
+			tags: ["space", "chemistry", "oxidizer", "source_before_product"]
 			tasks: [
 				{
-					id: "4A17000000000063"
-					count: 8L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/titanium_ingots)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.titanium_cooling.ingots.objective}"
-					type: "item"
+					id: "4A17000000000055"
+					fluid: "gtceu:ammonia"
+					amount: 2000L
+					title: "{industrial_frontier.task.v2.p7.dnt_inputs.ammonia.objective}"
+					type: "fluid"
+				}
+				{
+					id: "4A17000000000056"
+					fluid: "gtceu:oxygen"
+					amount: 7000L
+					title: "{industrial_frontier.task.v2.p7.dnt_inputs.oxygen.objective}"
+					type: "fluid"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.titanium_cooling.title}"
-			x: 3d
-			y: -11d
+			title: "{industrial_frontier.quest.v2.p7.dnt_inputs.title}"
+			x: 8d
+			y: -4.5d
 		}
 		{
-			dependencies: ["3A1700000000002D"]
+			dependencies: ["3A1700000000001E"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.success}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.task}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.plate_forming_setup.next}"
+				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.task}"
+				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.proof_help.2}"
 			]
-			icon: "gtceu:lv_bender"
-			id: "3A17000000000043"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.plate_forming_setup.lead}"
-			tags: ["mainline", "metallurgy", "machine_before_product", "reuse"]
+			icon: "gtceu:hypochlorous_acid_bucket"
+			id: "3A17000000000023"
+			shape: "circle"
+			size: 1d
+			tags: ["space", "chemistry", "source_before_product"]
 			tasks: [
 				{
-					id: "4A1700000000009E"
-					block_type: 1
-					block: "industrial_frontier:machines/lv_plus_benders"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.plate_forming_setup.bender.objective}"
-					type: "questsadditions:use"
+					id: "4A17000000000050"
+					fluid: "minecraft:water"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p7.hypochlorous_inputs.water.objective}"
+					type: "fluid"
+				}
+				{
+					id: "4A17000000000051"
+					fluid: "gtceu:chlorine"
+					amount: 2000L
+					title: "{industrial_frontier.task.v2.p7.hypochlorous_inputs.chlorine.objective}"
+					type: "fluid"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.plate_forming_setup.title}"
-			x: 1.5d
-			y: -9.5d
+			title: "{industrial_frontier.quest.v2.p7.hypochlorous_inputs.title}"
+			x: 8d
+			y: -3d
 		}
 		{
-			dependencies: ["3A17000000000043"]
+			dependencies: ["3A1700000000002F"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.ev_materials.purpose}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.step.1}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.step.2}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.success}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.task}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ev_materials.next}"
+				"{industrial_frontier.quest.v2.p7.ilmenite_washing.task}"
+				"{industrial_frontier.quest.v2.p7.ilmenite_washing.proof_help.1}"
 			]
-			icon: "gtceu:titanium_plate"
-			id: "3A1700000000001C"
+			icon: "gtceu:purified_ilmenite_ore"
+			id: "3A17000000000030"
 			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ev_materials.lead}"
-			tags: ["mainline", "metallurgy", "ev", "material_bridge"]
+			size: 1d
+			tags: ["mainline", "metallurgy", "titanium", "ore_processing", "machine_before_product"]
 			tasks: [
 				{
-					id: "4A1700000000003C"
-					count: 8L
+					id: "4A17000000000078"
+					count: 16L
+					item: {
+						Count: 1
+						id: "gtceu:purified_ilmenite_ore"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ilmenite_washing.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ilmenite_washing.title}"
+			x: 8d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A1700000000001E"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.methanol_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p7.methanol_inputs.task}"
+				"{industrial_frontier.quest.v2.p7.methanol_inputs.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.methanol_inputs.proof_help.2}"
+				"{industrial_frontier.quest.v2.p7.methanol_inputs.proof_help.3}"
+			]
+			icon: "gtceu:methanol_bucket"
+			id: "3A17000000000021"
+			shape: "circle"
+			size: 1d
+			tags: ["space", "chemistry", "source_before_product"]
+			tasks: [
+				{
+					id: "4A1700000000004C"
+					count: 2L
 					item: {
 						Count: 1
 						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/titanium_plates)"
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/carbon_dusts)"
 						}
 					}
-					title: "{industrial_frontier.task.v2.p7.ev_materials.titanium.objective}"
+					title: "{industrial_frontier.task.v2.p7.methanol_inputs.carbon.objective}"
+					type: "item"
+				}
+				{
+					id: "4A1700000000004D"
+					fluid: "gtceu:hydrogen"
+					amount: 8000L
+					title: "{industrial_frontier.task.v2.p7.methanol_inputs.hydrogen.objective}"
+					type: "fluid"
+				}
+				{
+					id: "4A1700000000004E"
+					fluid: "gtceu:oxygen"
+					amount: 2000L
+					title: "{industrial_frontier.task.v2.p7.methanol_inputs.oxygen.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.methanol_inputs.title}"
+			x: 8d
+			y: 0d
+		}
+		{
+			dependencies: ["3A17000000000033"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.task}"
+				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.proof_help.1}"
+			]
+			icon: "gtceu:lv_ore_washer"
+			id: "3A17000000000046"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "machine_before_product", "reuse"]
+			tasks: [
+				{
+					id: "4A1700000000009F"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:machines/lv_plus_macerators)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.scheelite_processing_reuse.macerator.objective}"
 					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.ev_materials.title}"
-			x: 3d
-			y: -9.5d
-		}
-		{
-			dependencies: ["3A17000000000016"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.success}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.task}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_setup.next}"
-			]
-			icon: "gtceu:ev_assembler"
-			id: "3A17000000000044"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.space_fabric_setup.lead}"
-			tags: ["shared", "materials", "space", "machine_before_product", "reuse"]
-			tasks: [
-				{
-					id: "4A1700000000006F"
-					block_type: 0
-					block: "gtceu:ev_assembler"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.shared_materials.assembler.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.space_fabric_setup.title}"
-			x: 1d
-			y: 3d
+			title: "{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.title}"
+			x: 8d
+			y: 1.5d
 		}
 		{
 			dependencies: ["3A17000000000044"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.shared_materials.purpose}"
-				"{industrial_frontier.quest.v2.p7.shared_materials.step.1}"
-				"{industrial_frontier.quest.v2.p7.shared_materials.step.2}"
-				"{industrial_frontier.quest.v2.p7.shared_materials.step.3}"
-				"{industrial_frontier.quest.v2.p7.shared_materials.success}"
 				"{industrial_frontier.quest.v2.p7.shared_materials.task}"
-				"{industrial_frontier.quest.v2.p7.shared_materials.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.shared_materials.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.shared_materials.proof_help.1}"
 				"{industrial_frontier.quest.v2.p7.shared_materials.proof_help.2}"
 				"{industrial_frontier.quest.v2.p7.shared_materials.proof_help.3}"
 				"{industrial_frontier.quest.v2.p7.shared_materials.proof_help.4}"
-				"{industrial_frontier.quest.v2.p7.shared_materials.next}"
 			]
 			icon: "gcyr:space_fabric"
 			id: "3A17000000000001"
 			shape: "diamond"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.shared_materials.lead}"
 			tags: ["shared", "materials"]
 			tasks: [
 				{
@@ -761,28 +824,210 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.shared_materials.title}"
-			x: 3d
-			y: 1d
+			x: 8d
+			y: 3d
+		}
+		{
+			dependencies: ["3A1700000000002C"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.titanium_cooling.task}"
+				"{industrial_frontier.quest.v2.p7.titanium_cooling.proof_help.1}"
+			]
+			icon: "gtceu:titanium_ingot"
+			id: "3A1700000000002D"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "metallurgy", "titanium", "processed_form"]
+			tasks: [
+				{
+					id: "4A17000000000063"
+					count: 8L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/titanium_ingots)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.titanium_cooling.ingots.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.titanium_cooling.title}"
+			x: 8d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3A17000000000027"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.dnt.task}"
+				"{industrial_frontier.quest.v2.p7.dnt.proof_help.1}"
+			]
+			icon: "gtceu:dinitrogen_tetroxide_bucket"
+			id: "3A17000000000028"
+			shape: "circle"
+			size: 1d
+			tags: ["space", "chemistry", "oxidizer"]
+			tasks: [
+				{
+					id: "4A17000000000057"
+					fluid: "gtceu:dinitrogen_tetroxide"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p7.dnt.output.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.dnt.title}"
+			x: 10d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3A17000000000023"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.hypochlorous.purpose}"
+				"{industrial_frontier.quest.v2.p7.hypochlorous.task}"
+				"{industrial_frontier.quest.v2.p7.hypochlorous.proof_help.1}"
+			]
+			icon: "gtceu:hypochlorous_acid_bucket"
+			id: "3A17000000000024"
+			shape: "circle"
+			size: 1d
+			tags: ["space", "chemistry", "processed_form"]
+			tasks: [
+				{
+					id: "4A17000000000052"
+					fluid: "gtceu:hypochlorous_acid"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p7.hypochlorous.output.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.hypochlorous.title}"
+			x: 10d
+			y: -3d
+		}
+		{
+			dependencies: ["3A17000000000030"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.ilmenite_dust.task}"
+				"{industrial_frontier.quest.v2.p7.ilmenite_dust.proof_help.1}"
+			]
+			icon: "gtceu:ilmenite_dust"
+			id: "3A17000000000031"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "titanium", "ore_processing", "processed_form"]
+			tasks: [
+				{
+					id: "4A1700000000007A"
+					count: 16L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/ilmenite_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.ilmenite_dust.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ilmenite_dust.title}"
+			x: 10d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A17000000000021"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.methanol.purpose}"
+				"{industrial_frontier.quest.v2.p7.methanol.task}"
+				"{industrial_frontier.quest.v2.p7.methanol.proof_help.1}"
+			]
+			icon: "gtceu:methanol_bucket"
+			id: "3A17000000000022"
+			shape: "circle"
+			size: 1d
+			tags: ["space", "chemistry", "processed_form"]
+			tasks: [
+				{
+					id: "4A1700000000004F"
+					fluid: "gtceu:methanol"
+					amount: 2000L
+					title: "{industrial_frontier.task.v2.p7.methanol.output.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.methanol.title}"
+			x: 10d
+			y: 0d
+		}
+		{
+			dependencies: ["3A1700000000002D"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.plate_forming_setup.task}"
+				"{industrial_frontier.quest.v2.p7.plate_forming_setup.proof_help.1}"
+			]
+			icon: "gtceu:lv_bender"
+			id: "3A17000000000043"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "metallurgy", "machine_before_product", "reuse"]
+			tasks: [
+				{
+					id: "4A1700000000009E"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:machines/lv_plus_benders)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.plate_forming_setup.bender.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.plate_forming_setup.title}"
+			x: 10d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A17000000000046"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.scheelite_crushing.task}"
+				"{industrial_frontier.quest.v2.p7.scheelite_crushing.proof_help.1}"
+			]
+			icon: "gtceu:crushed_scheelite_ore"
+			id: "3A17000000000034"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "ore_processing", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A17000000000080"
+					count: 24L
+					item: {
+						Count: 1
+						id: "gtceu:crushed_scheelite_ore"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.scheelite_crushing.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.scheelite_crushing.title}"
+			x: 10d
+			y: 3d
 		}
 		{
 			dependencies: ["3A17000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.purpose}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.step.1}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.step.2}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.step.3}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.success}"
 				"{industrial_frontier.quest.v2.p7.space_fabric_output.task}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.space_fabric_output.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.space_fabric_output.next}"
 			]
 			icon: "gcyr:space_fabric"
 			id: "3A17000000000045"
 			shape: "diamond"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.space_fabric_output.lead}"
+			size: 1d
 			tags: ["shared", "materials", "space", "processed_form", "batch_output"]
 			tasks: [
 				{
@@ -798,753 +1043,8 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.space_fabric_output.title}"
-			x: 5d
-			y: 0d
-		}
-		{
-			dependencies: ["3A1700000000001C"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.ev_transformer.purpose}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.step.1}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.step.2}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.step.3}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.success}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.task}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.ev_transformer.next}"
-			]
-			icon: "gtceu:hv_transformer_1a"
-			id: "3A17000000000012"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ev_transformer.lead}"
-			tags: ["mainline", "ev", "power", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A17000000000023"
-					item: {
-						Count: 1
-						id: "gtceu:hv_transformer_1a"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_transformer.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000024"
-					block_type: 0
-					block: "gtceu:hv_transformer_1a"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.ev_transformer.use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A17000000000027"
-					count: 4L
-					item: {
-						Count: 1
-						id: "gtceu:aluminium_single_cable"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_transformer.cable.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.ev_transformer.title}"
-			x: 3d
-			y: -8d
-		}
-		{
-			dependencies: ["3A17000000000012"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.ev_buffer.purpose}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.step.1}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.step.2}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.step.3}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.success}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.task}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.ev_buffer.next}"
-			]
-			icon: "gtceu:ev_battery_buffer_4x"
-			id: "3A17000000000013"
-			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ev_buffer.lead}"
-			tags: ["mainline", "ev", "power", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A17000000000025"
-					item: {
-						Count: 1
-						id: "gtceu:ev_battery_buffer_4x"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_buffer.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000004A"
-					count: 4L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/ev_batteries)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.ev_buffer.batteries.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000026"
-					block_type: 0
-					block: "gtceu:ev_battery_buffer_4x"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.ev_buffer.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.ev_buffer.title}"
-			x: 3d
-			y: -6.5d
-		}
-		{
-			dependencies: ["3A17000000000013"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.ev_components.purpose}"
-				"{industrial_frontier.quest.v2.p7.ev_components.step.1}"
-				"{industrial_frontier.quest.v2.p7.ev_components.step.2}"
-				"{industrial_frontier.quest.v2.p7.ev_components.step.3}"
-				"{industrial_frontier.quest.v2.p7.ev_components.success}"
-				"{industrial_frontier.quest.v2.p7.ev_components.task}"
-				"{industrial_frontier.quest.v2.p7.ev_components.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ev_components.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ev_components.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ev_components.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.ev_components.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.ev_components.next}"
-			]
-			icon: "gtceu:ev_machine_hull"
-			id: "3A17000000000014"
-			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ev_components.lead}"
-			tags: ["mainline", "ev", "components", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A17000000000004"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(gtceu:circuits/ev)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.ev_components.circuit.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000028"
-					item: {
-						Count: 1
-						id: "gtceu:ev_machine_hull"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_components.hull.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000034"
-					item: {
-						Count: 1
-						id: "gtceu:ev_voltage_coil"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_components.voltage_coil.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.ev_components.title}"
-			x: 3d
-			y: -5d
-		}
-		{
-			dependencies: ["3A17000000000014"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.ev_actuators.purpose}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.step.1}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.step.2}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.step.3}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.success}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.task}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.4}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.proof_help.5}"
-				"{industrial_frontier.quest.v2.p7.ev_actuators.next}"
-			]
-			icon: "gtceu:ev_robot_arm"
-			id: "3A17000000000015"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ev_actuators.lead}"
-			tags: ["mainline", "ev", "components", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A17000000000035"
-					item: {
-						Count: 1
-						id: "gtceu:ev_electric_motor"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_actuators.motor.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000036"
-					item: {
-						Count: 1
-						id: "gtceu:ev_electric_pump"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_actuators.pump.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000037"
-					item: {
-						Count: 1
-						id: "gtceu:ev_sensor"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_actuators.sensor.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000038"
-					item: {
-						Count: 1
-						id: "gtceu:ev_emitter"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_actuators.emitter.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000039"
-					item: {
-						Count: 1
-						id: "gtceu:ev_robot_arm"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_actuators.robot_arm.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.ev_actuators.title}"
-			x: 3d
-			y: -3.5d
-		}
-		{
-			dependencies: ["3A17000000000015"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.ev_assembly.purpose}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.step.1}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.step.2}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.step.3}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.success}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.task}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.ev_assembly.next}"
-			]
-			icon: "gtceu:ev_assembler"
-			id: "3A17000000000016"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.ev_assembly.lead}"
-			tags: ["mainline", "ev", "machine_before_product", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A17000000000029"
-					item: {
-						Count: 1
-						id: "gtceu:ev_assembler"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.ev_assembly.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000002A"
-					block_type: 0
-					block: "gtceu:ev_assembler"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.ev_assembly.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.ev_assembly.title}"
-			x: 3d
-			y: -2d
-		}
-		{
-			dependencies: ["3A17000000000016"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.shared_electronics.purpose}"
-				"{industrial_frontier.quest.v2.p7.shared_electronics.step.1}"
-				"{industrial_frontier.quest.v2.p7.shared_electronics.success}"
-				"{industrial_frontier.quest.v2.p7.shared_electronics.task}"
-				"{industrial_frontier.quest.v2.p7.shared_electronics.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.shared_electronics.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.shared_electronics.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.shared_electronics.next}"
-			]
-			icon: "gcyr:id_chip"
-			id: "3A17000000000002"
-			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.shared_electronics.lead}"
-			tags: ["shared", "electronics"]
-			tasks: [
-				{
-					id: "4A17000000000005"
-					item: {
-						Count: 1
-						id: "gcyr:id_chip"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.shared_electronics.id_chip.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.shared_electronics.title}"
-			x: 3d
-			y: -0.5d
-		}
-		{
-			dependencies: [
-				"3A1700000000001D"
-				"3A17000000000002"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p7.hbm_entry.purpose}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.step.1}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.step.2}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.success}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.task}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.hbm_entry.next}"
-			]
-			icon: "hbm_ntm_rebirth:machine_assembly_machine"
-			id: "3017000000000002"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.hbm_entry.lead}"
-			tags: ["hbm", "strategic"]
-			tasks: [
-				{
-					id: "4017000000000002"
-					item: {
-						Count: 1
-						id: "hbm_ntm_rebirth:machine_assembly_machine"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.hbm_entry.machine.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.hbm_entry.title}"
-			x: 6d
-			y: -3d
-		}
-		{
-			dependencies: ["3017000000000002"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.protected_zone.purpose}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.step.1}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.step.2}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.success}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.task}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.protected_zone.next}"
-			]
-			icon: "hbm_ntm_rebirth:steel_scaffold"
-			id: "3A17000000000003"
-			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.protected_zone.lead}"
-			tags: ["hbm", "safety", "construction"]
-			tasks: [
-				{
-					id: "4A17000000000006"
-					block_type: 0
-					block: "hbm_ntm_rebirth:steel_scaffold"
-					value: 8L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p7.protected_zone.scaffold.objective}"
-					type: "questsadditions:place"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.protected_zone.title}"
-			x: 9d
-			y: -3d
-		}
-		{
-			dependencies: ["3A17000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.radiation_control.purpose}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.step.1}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.step.2}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.success}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.task}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.radiation_control.next}"
-			]
-			icon: "hbm_ntm_rebirth:dosimeter"
-			id: "3A17000000000004"
-			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.radiation_control.lead}"
-			tags: ["hbm", "safety", "radiation"]
-			tasks: [
-				{
-					id: "4A17000000000007"
-					item: {
-						Count: 1
-						id: "hbm_ntm_rebirth:dosimeter"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.radiation_control.dosimeter.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000008"
-					block_type: 0
-					block: "hbm_ntm_rebirth:vitrified_barrel"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p7.radiation_control.storage.objective}"
-					type: "questsadditions:place"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.radiation_control.title}"
-			x: 12d
-			y: -3d
-		}
-		{
-			dependencies: ["3A17000000000004"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.purex_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.success}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.task}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.purex_setup.next}"
-			]
-			icon: "hbm_ntm_rebirth:machine_purex"
-			id: "3A1700000000001B"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.purex_setup.lead}"
-			tags: ["mainline", "hbm", "machine_before_product", "safety"]
-			tasks: [
-				{
-					id: "4A1700000000003A"
-					item: {
-						Count: 1
-						id: "hbm_ntm_rebirth:machine_purex"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.purex_setup.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000009"
-					block_type: 0
-					block: "hbm_ntm_rebirth:machine_purex"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.purex_setup.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.purex_setup.title}"
-			x: 15d
-			y: -5d
-		}
-		{
-			dependencies: ["3A1700000000001B"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.strategic_process.purpose}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.step.1}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.step.2}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.success}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.task}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.strategic_process.next}"
-			]
-			icon: "hbm_ntm_rebirth:machine_purex"
-			id: "3A17000000000005"
-			shape: "hexagon"
-			size: 1.25d
-			subtitle: "{industrial_frontier.quest.v2.p7.strategic_process.lead}"
-			tags: ["hbm", "reprocessing", "product"]
-			tasks: [
-				{
-					id: "4A17000000000010"
-					item: {
-						Count: 1
-						id: "hbm_ntm_rebirth:ingot_neptunium"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.strategic_process.product.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.strategic_process.title}"
-			x: 15d
-			y: -3d
-		}
-		{
-			dependencies: ["3A17000000000016"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.success}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.task}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.cryogenic_setup.next}"
-			]
-			icon: "gtceu:vacuum_freezer"
-			id: "3A1700000000001E"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.cryogenic_setup.lead}"
-			tags: ["mainline", "space", "cryogenics", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A1700000000003F"
-					block_type: 0
-					block: "gtceu:vacuum_freezer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.cryogenic_setup.use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A17000000000049"
-					fluid: "gtceu:oxygen"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p7.cryogenic_setup.oxygen.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.cryogenic_setup.title}"
-			x: 6d
-			y: 1.5d
-		}
-		{
-			dependencies: ["3A1700000000001E"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.step.3}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.success}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.methanol_inputs.next}"
-			]
-			icon: "gtceu:methanol_bucket"
-			id: "3A17000000000021"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.methanol_inputs.lead}"
-			tags: ["space", "chemistry", "source_before_product"]
-			tasks: [
-				{
-					id: "4A1700000000004C"
-					count: 2L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/carbon_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.methanol_inputs.carbon.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000004D"
-					fluid: "gtceu:hydrogen"
-					amount: 8000L
-					title: "{industrial_frontier.task.v2.p7.methanol_inputs.hydrogen.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A1700000000004E"
-					fluid: "gtceu:oxygen"
-					amount: 2000L
-					title: "{industrial_frontier.task.v2.p7.methanol_inputs.oxygen.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.methanol_inputs.title}"
-			x: 9d
-			y: 0d
-		}
-		{
-			dependencies: ["3A17000000000021"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.methanol.purpose}"
-				"{industrial_frontier.quest.v2.p7.methanol.step.1}"
-				"{industrial_frontier.quest.v2.p7.methanol.step.2}"
-				"{industrial_frontier.quest.v2.p7.methanol.success}"
-				"{industrial_frontier.quest.v2.p7.methanol.task}"
-				"{industrial_frontier.quest.v2.p7.methanol.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.methanol.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.methanol.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.methanol.next}"
-			]
-			icon: "gtceu:methanol_bucket"
-			id: "3A17000000000022"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.methanol.lead}"
-			tags: ["space", "chemistry", "processed_form"]
-			tasks: [
-				{
-					id: "4A1700000000004F"
-					fluid: "gtceu:methanol"
-					amount: 2000L
-					title: "{industrial_frontier.task.v2.p7.methanol.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.methanol.title}"
-			x: 12d
-			y: 0d
-		}
-		{
-			dependencies: ["3A1700000000001E"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.success}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous_inputs.next}"
-			]
-			icon: "gtceu:hypochlorous_acid_bucket"
-			id: "3A17000000000023"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.hypochlorous_inputs.lead}"
-			tags: ["space", "chemistry", "source_before_product"]
-			tasks: [
-				{
-					id: "4A17000000000050"
-					fluid: "minecraft:water"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p7.hypochlorous_inputs.water.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A17000000000051"
-					fluid: "gtceu:chlorine"
-					amount: 2000L
-					title: "{industrial_frontier.task.v2.p7.hypochlorous_inputs.chlorine.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.hypochlorous_inputs.title}"
-			x: 9d
-			y: 3d
-		}
-		{
-			dependencies: ["3A17000000000023"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.hypochlorous.purpose}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.step.1}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.step.2}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.success}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.task}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.hypochlorous.next}"
-			]
-			icon: "gtceu:hypochlorous_acid_bucket"
-			id: "3A17000000000024"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.hypochlorous.lead}"
-			tags: ["space", "chemistry", "processed_form"]
-			tasks: [
-				{
-					id: "4A17000000000052"
-					fluid: "gtceu:hypochlorous_acid"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p7.hypochlorous.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.hypochlorous.title}"
-			x: 12d
-			y: 3d
+			x: 10d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -1553,20 +1053,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p7.dmh_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.dmh_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.dmh_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.dmh_inputs.success}"
 				"{industrial_frontier.quest.v2.p7.dmh_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.dmh_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.dmh_inputs.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.dmh_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.dmh_inputs.next}"
 			]
 			icon: "gtceu:ammonia_bucket"
 			id: "3A17000000000025"
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.dmh_inputs.lead}"
 			tags: ["space", "chemistry", "source_before_product"]
 			tasks: [
 				{
@@ -1578,298 +1071,38 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.dmh_inputs.title}"
-			x: 15d
-			y: 1.5d
-		}
-		{
-			dependencies: ["3A17000000000025"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.dmh.purpose}"
-				"{industrial_frontier.quest.v2.p7.dmh.step.1}"
-				"{industrial_frontier.quest.v2.p7.dmh.step.2}"
-				"{industrial_frontier.quest.v2.p7.dmh.success}"
-				"{industrial_frontier.quest.v2.p7.dmh.task}"
-				"{industrial_frontier.quest.v2.p7.dmh.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.dmh.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.dmh.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.dmh.next}"
-			]
-			icon: "gtceu:dimethylhydrazine_bucket"
-			id: "3A17000000000026"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.dmh.lead}"
-			tags: ["space", "chemistry", "fuel"]
-			tasks: [
-				{
-					id: "4A17000000000054"
-					fluid: "gtceu:dimethylhydrazine"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p7.dmh.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.dmh.title}"
-			x: 18d
-			y: 1.5d
-		}
-		{
-			dependencies: ["3A1700000000001E"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.success}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.dnt_inputs.next}"
-			]
-			icon: "gtceu:dinitrogen_tetroxide_bucket"
-			id: "3A17000000000027"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.dnt_inputs.lead}"
-			tags: ["space", "chemistry", "oxidizer", "source_before_product"]
-			tasks: [
-				{
-					id: "4A17000000000055"
-					fluid: "gtceu:ammonia"
-					amount: 2000L
-					title: "{industrial_frontier.task.v2.p7.dnt_inputs.ammonia.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A17000000000056"
-					fluid: "gtceu:oxygen"
-					amount: 7000L
-					title: "{industrial_frontier.task.v2.p7.dnt_inputs.oxygen.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.dnt_inputs.title}"
 			x: 12d
-			y: 5d
+			y: -2.25d
 		}
 		{
-			dependencies: ["3A17000000000027"]
+			dependencies: ["3A17000000000043"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.dnt.purpose}"
-				"{industrial_frontier.quest.v2.p7.dnt.step.1}"
-				"{industrial_frontier.quest.v2.p7.dnt.step.2}"
-				"{industrial_frontier.quest.v2.p7.dnt.success}"
-				"{industrial_frontier.quest.v2.p7.dnt.task}"
-				"{industrial_frontier.quest.v2.p7.dnt.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.dnt.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.dnt.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.dnt.next}"
+				"{industrial_frontier.quest.v2.p7.ev_materials.task}"
+				"{industrial_frontier.quest.v2.p7.ev_materials.proof_help.1}"
 			]
-			icon: "gtceu:dinitrogen_tetroxide_bucket"
-			id: "3A17000000000028"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.dnt.lead}"
-			tags: ["space", "chemistry", "oxidizer"]
-			tasks: [
-				{
-					id: "4A17000000000057"
-					fluid: "gtceu:dinitrogen_tetroxide"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p7.dnt.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.dnt.title}"
-			x: 15d
-			y: 5d
-		}
-		{
-			dependencies: [
-				"3A17000000000026"
-				"3A17000000000028"
-				"3A1700000000001E"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p7.propellant_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.success}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.task}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.propellant_setup.next}"
-			]
-			icon: "gtceu:ev_mixer"
-			id: "3A1700000000001F"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.propellant_setup.lead}"
-			tags: ["mainline", "space", "chemistry", "machine_before_product", "source_before_product"]
-			tasks: [
-				{
-					id: "4A17000000000040"
-					item: {
-						Count: 1
-						id: "gtceu:ev_mixer"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.propellant_setup.mixer_item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000041"
-					block_type: 0
-					block: "gtceu:ev_mixer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.propellant_setup.mixer_use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.propellant_setup.title}"
-			x: 21d
-			y: 3d
-		}
-		{
-			dependencies: ["3A1700000000001F"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.purpose}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.step.1}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.step.2}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.success}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.task}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.rocket_fuel.next}"
-			]
-			icon: "gcyr:basic_fuel_tank"
-			id: "3A17000000000006"
+			icon: "gtceu:titanium_plate"
+			id: "3A1700000000001C"
 			shape: "hexagon"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.rocket_fuel.lead}"
-			tags: ["space", "chemistry", "fuel"]
+			tags: ["mainline", "metallurgy", "ev", "material_bridge"]
 			tasks: [
 				{
-					id: "4A17000000000011"
-					fluid: "gtceu:rocket_fuel"
-					amount: 6000L
-					title: "{industrial_frontier.task.v2.p7.rocket_fuel.fuel.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A17000000000012"
-					fluid: "gtceu:liquid_oxygen"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p7.rocket_fuel.oxygen.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.rocket_fuel.title}"
-			x: 24d
-			y: 3d
-		}
-		{
-			dependencies: [
-				"3A17000000000006"
-				"3A17000000000002"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p7.spaceport.purpose}"
-				"{industrial_frontier.quest.v2.p7.spaceport.step.1}"
-				"{industrial_frontier.quest.v2.p7.spaceport.step.2}"
-				"{industrial_frontier.quest.v2.p7.spaceport.success}"
-				"{industrial_frontier.quest.v2.p7.spaceport.task}"
-				"{industrial_frontier.quest.v2.p7.spaceport.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.spaceport.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.spaceport.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.spaceport.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.spaceport.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.spaceport.next}"
-			]
-			icon: "gcyr:launch_pad"
-			id: "3A17000000000007"
-			shape: "octagon"
-			size: 1.25d
-			subtitle: "{industrial_frontier.quest.v2.p7.spaceport.lead}"
-			tags: ["space", "construction", "aerospace", "strategic_infrastructure"]
-			tasks: [
-				{
-					id: "4A17000000000013"
-					block_type: 0
-					block: "gcyr:launch_pad"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p7.spaceport.pad.objective}"
-					type: "questsadditions:place"
-				}
-				{
-					id: "4A1700000000003B"
+					id: "4A1700000000003C"
+					count: 8L
 					item: {
 						Count: 1
-						id: "gcyr:rocket_scanner"
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/titanium_plates)"
+						}
 					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.spaceport.scanner_item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000014"
-					block_type: 0
-					block: "gcyr:rocket_scanner"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.spaceport.scanner.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.spaceport.title}"
-			x: 27d
-			y: 3d
-		}
-		{
-			dependencies: ["3A1700000000001D"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.life_support_cell.purpose}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.step.1}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.step.2}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.step.3}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.success}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.task}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.life_support_cell.next}"
-			]
-			icon: "gtceu:tungsten_steel_fluid_cell"
-			id: "3A17000000000049"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.life_support_cell.lead}"
-			tags: ["space", "safety", "life_support", "tungsten_steel", "component_before_product"]
-			tasks: [
-				{
-					id: "4A170000000000A1"
-					item: {
-						Count: 1
-						id: "gtceu:tungsten_steel_fluid_cell"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.life_support_cell.item.objective}"
+					title: "{industrial_frontier.task.v2.p7.ev_materials.titanium.objective}"
 					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.life_support_cell.title}"
-			x: 25d
-			y: 6.5d
+			title: "{industrial_frontier.quest.v2.p7.ev_materials.title}"
+			x: 12d
+			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -1877,27 +1110,16 @@
 				"3A17000000000049"
 			]
 			description: [
-				"{industrial_frontier.quest.v2.p7.life_support.purpose}"
-				"{industrial_frontier.quest.v2.p7.life_support.step.1}"
-				"{industrial_frontier.quest.v2.p7.life_support.step.2}"
-				"{industrial_frontier.quest.v2.p7.life_support.step.3}"
-				"{industrial_frontier.quest.v2.p7.life_support.success}"
 				"{industrial_frontier.quest.v2.p7.life_support.task}"
-				"{industrial_frontier.quest.v2.p7.life_support.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.life_support.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.life_support.diagnostic.3}"
-				"{industrial_frontier.quest.v2.p7.life_support.diagnostic.4}"
 				"{industrial_frontier.quest.v2.p7.life_support.proof_help.1}"
 				"{industrial_frontier.quest.v2.p7.life_support.proof_help.2}"
 				"{industrial_frontier.quest.v2.p7.life_support.proof_help.3}"
 				"{industrial_frontier.quest.v2.p7.life_support.proof_help.4}"
-				"{industrial_frontier.quest.v2.p7.life_support.next}"
 			]
 			icon: "gcyr:space_helmet"
 			id: "3A17000000000008"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.life_support.lead}"
 			tags: ["space", "safety", "life_support"]
 			tasks: [
 				{
@@ -1942,8 +1164,1088 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.life_support.title}"
-			x: 27d
-			y: 5d
+			x: 12d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A17000000000034"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.scheelite_washing.task}"
+				"{industrial_frontier.quest.v2.p7.scheelite_washing.proof_help.1}"
+			]
+			icon: "gtceu:purified_scheelite_ore"
+			id: "3A17000000000035"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "ore_processing", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A17000000000082"
+					count: 24L
+					item: {
+						Count: 1
+						id: "gtceu:purified_scheelite_ore"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.scheelite_washing.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.scheelite_washing.title}"
+			x: 12d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3A17000000000025"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.dmh.purpose}"
+				"{industrial_frontier.quest.v2.p7.dmh.task}"
+				"{industrial_frontier.quest.v2.p7.dmh.proof_help.1}"
+			]
+			icon: "gtceu:dimethylhydrazine_bucket"
+			id: "3A17000000000026"
+			shape: "circle"
+			size: 1d
+			tags: ["space", "chemistry", "fuel"]
+			tasks: [
+				{
+					id: "4A17000000000054"
+					fluid: "gtceu:dimethylhydrazine"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p7.dmh.output.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.dmh.title}"
+			x: 14d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A1700000000001C"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.ev_transformer.task}"
+				"{industrial_frontier.quest.v2.p7.ev_transformer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.ev_transformer.proof_help.2}"
+			]
+			icon: "gtceu:hv_transformer_1a"
+			id: "3A17000000000012"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "ev", "power", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A17000000000023"
+					item: {
+						Count: 1
+						id: "gtceu:hv_transformer_1a"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_transformer.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000027"
+					count: 4L
+					item: {
+						Count: 1
+						id: "gtceu:aluminium_single_cable"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_transformer.cable.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ev_transformer.title}"
+			x: 14d
+			y: 0d
+		}
+		{
+			dependencies: ["3A17000000000035"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.scheelite_dust.purpose}"
+				"{industrial_frontier.quest.v2.p7.scheelite_dust.task}"
+				"{industrial_frontier.quest.v2.p7.scheelite_dust.proof_help.1}"
+			]
+			icon: "gtceu:scheelite_dust"
+			id: "3A17000000000036"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "ore_processing", "processed_form"]
+			tasks: [
+				{
+					id: "4A17000000000084"
+					count: 24L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/scheelite_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.scheelite_dust.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.scheelite_dust.title}"
+			x: 14d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A17000000000012"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.ev_buffer.task}"
+				"{industrial_frontier.quest.v2.p7.ev_buffer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.ev_buffer.proof_help.2}"
+			]
+			icon: "gtceu:ev_battery_buffer_4x"
+			id: "3A17000000000013"
+			shape: "square"
+			size: 1.1d
+			tags: ["mainline", "ev", "power", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A17000000000025"
+					item: {
+						Count: 1
+						id: "gtceu:ev_battery_buffer_4x"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_buffer.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4A1700000000004A"
+					count: 4L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/ev_batteries)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.ev_buffer.batteries.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ev_buffer.title}"
+			x: 16d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3A17000000000026"
+				"3A17000000000028"
+				"3A1700000000001E"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p7.propellant_setup.task}"
+				"{industrial_frontier.quest.v2.p7.propellant_setup.proof_help.1}"
+			]
+			icon: "gtceu:ev_mixer"
+			id: "3A1700000000001F"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "space", "chemistry", "machine_before_product", "source_before_product"]
+			tasks: [
+				{
+					id: "4A17000000000040"
+					item: {
+						Count: 1
+						id: "gtceu:ev_mixer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.propellant_setup.mixer_item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.propellant_setup.title}"
+			x: 16d
+			y: 0d
+		}
+		{
+			dependencies: ["3A17000000000036"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.purpose}"
+				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.proof_help.1}"
+			]
+			icon: "gtceu:ev_chemical_bath"
+			id: "3A17000000000037"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "chemistry", "tungsten_steel", "machine_before_product", "ev"]
+			tasks: [
+				{
+					id: "4A17000000000085"
+					item: {
+						Count: 1
+						id: "gtceu:ev_chemical_bath"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.tungsten_bath_setup.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_bath_setup.title}"
+			x: 16d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A17000000000013"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.ev_components.task}"
+				"{industrial_frontier.quest.v2.p7.ev_components.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.ev_components.proof_help.2}"
+				"{industrial_frontier.quest.v2.p7.ev_components.proof_help.3}"
+			]
+			icon: "gtceu:ev_machine_hull"
+			id: "3A17000000000014"
+			shape: "diamond"
+			size: 1d
+			tags: ["mainline", "ev", "components", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A17000000000004"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(gtceu:circuits/ev)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.ev_components.circuit.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000028"
+					item: {
+						Count: 1
+						id: "gtceu:ev_machine_hull"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_components.hull.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000034"
+					item: {
+						Count: 1
+						id: "gtceu:ev_voltage_coil"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.ev_components.voltage_coil.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.ev_components.title}"
+			x: 18d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A1700000000001F"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.rocket_fuel.task}"
+				"{industrial_frontier.quest.v2.p7.rocket_fuel.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.rocket_fuel.proof_help.2}"
+			]
+			icon: "gcyr:basic_fuel_tank"
+			id: "3A17000000000006"
+			shape: "hexagon"
+			size: 1d
+			tags: ["space", "chemistry", "fuel"]
+			tasks: [
+				{
+					id: "4A17000000000011"
+					fluid: "gtceu:rocket_fuel"
+					amount: 6000L
+					title: "{industrial_frontier.task.v2.p7.rocket_fuel.fuel.objective}"
+					type: "fluid"
+				}
+				{
+					id: "4A17000000000012"
+					fluid: "gtceu:liquid_oxygen"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p7.rocket_fuel.oxygen.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.rocket_fuel.title}"
+			x: 18d
+			y: 0d
+		}
+		{
+			dependencies: ["3A17000000000037"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.purpose}"
+				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.task}"
+				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.proof_help.1}"
+			]
+			icon: "gtceu:hydrochloric_acid_bucket"
+			id: "3A17000000000047"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "chemistry", "tungsten_steel", "inputs_before_process"]
+			tasks: [
+				{
+					id: "4A17000000000087"
+					fluid: "gtceu:hydrochloric_acid"
+					amount: 8000L
+					title: "{industrial_frontier.task.v2.p7.tungstic_acid.hydrochloric.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.title}"
+			x: 18d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3A17000000000006"
+				"3A17000000000002"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p7.spaceport.purpose}"
+				"{industrial_frontier.quest.v2.p7.spaceport.task}"
+				"{industrial_frontier.quest.v2.p7.spaceport.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.spaceport.proof_help.2}"
+			]
+			icon: "gcyr:launch_pad"
+			id: "3A17000000000007"
+			shape: "octagon"
+			size: 1.4d
+			tags: ["space", "construction", "aerospace", "strategic_infrastructure"]
+			tasks: [
+				{
+					id: "4A17000000000013"
+					block_type: 0
+					block: "gcyr:launch_pad"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.p7.spaceport.pad.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4A1700000000003B"
+					item: {
+						Count: 1
+						id: "gcyr:rocket_scanner"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.spaceport.scanner_item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.spaceport.title}"
+			x: 20d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A17000000000047"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungstic_acid.purpose}"
+				"{industrial_frontier.quest.v2.p7.tungstic_acid.task}"
+				"{industrial_frontier.quest.v2.p7.tungstic_acid.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.tungstic_acid.proof_help.2}"
+			]
+			icon: "gtceu:tungstic_acid_dust"
+			id: "3A17000000000038"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "chemistry", "tungsten_steel", "processed_form"]
+			tasks: [
+				{
+					id: "4A17000000000089"
+					count: 28L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungstic_acid_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.tungstic_acid.output.objective}"
+					type: "item"
+				}
+				{
+					id: "4A1700000000008A"
+					count: 12L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/calcium_chloride_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.tungstic_acid.byproduct.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungstic_acid.title}"
+			x: 20d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A17000000000038"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.purpose}"
+				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.proof_help.1}"
+			]
+			icon: "gtceu:ev_electrolyzer"
+			id: "3A17000000000039"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "chemistry", "tungsten_steel", "machine_before_product", "ev"]
+			tasks: [
+				{
+					id: "4A1700000000008B"
+					item: {
+						Count: 1
+						id: "gtceu:ev_electrolyzer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.tungsten_electrolyzer_setup.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.title}"
+			x: 22d
+			y: 0d
+		}
+		{
+			dependencies: ["3A17000000000039"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_dust.purpose}"
+				"{industrial_frontier.quest.v2.p7.tungsten_dust.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_dust.proof_help.1}"
+			]
+			icon: "gtceu:tungsten_dust"
+			id: "3A1700000000003A"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "chemistry", "tungsten_steel", "processed_form"]
+			tasks: [
+				{
+					id: "4A1700000000008E"
+					count: 4L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.tungsten_dust.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_dust.title}"
+			x: 24d
+			y: 0d
+		}
+		{
+			dependencies: ["3A1700000000003A"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.proof_help.1}"
+			]
+			icon: "gtceu:ev_mixer"
+			id: "3A1700000000003B"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "machine_before_product", "ev"]
+			tasks: [
+				{
+					id: "4A1700000000008F"
+					item: {
+						Count: 1
+						id: "gtceu:ev_mixer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.tungsten_mixer_setup.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.title}"
+			x: 26d
+			y: 0d
+		}
+		{
+			dependencies: ["3A1700000000003B"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.proof_help.1}"
+			]
+			icon: "gtceu:steel_dust"
+			id: "3A17000000000048"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "inputs_before_process"]
+			tasks: [
+				{
+					id: "4A17000000000091"
+					count: 4L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/steel_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.tungsten_steel_alloy.steel.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.title}"
+			x: 28d
+			y: 0d
+		}
+		{
+			dependencies: ["3A17000000000048"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.proof_help.1}"
+			]
+			icon: "gtceu:tungsten_steel_dust"
+			id: "3A1700000000003C"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "alloy", "processed_form"]
+			tasks: [
+				{
+					id: "4A17000000000093"
+					count: 8L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_steel_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.tungsten_steel_alloy.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.title}"
+			x: 30d
+			y: 0d
+		}
+		{
+			dependencies: ["3A1700000000003C"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.proof_help.2}"
+			]
+			icon: "gtceu:ev_energy_input_hatch"
+			id: "3A1700000000003D"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "machine_before_product", "power_topology"]
+			tasks: [
+				{
+					id: "4A17000000000094"
+					item: {
+						Count: 1
+						id: "gtceu:ev_energy_input_hatch"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.tungsten_ebf_power.hatch.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000095"
+					count: 4L
+					item: {
+						Count: 1
+						id: "gtceu:aluminium_single_cable"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.tungsten_ebf_power.cable.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_ebf_power.title}"
+			x: 32d
+			y: 0d
+		}
+		{
+			dependencies: ["3A1700000000003D"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.proof_help.1}"
+			]
+			icon: "gtceu:hot_tungsten_steel_ingot"
+			id: "3A1700000000003E"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "hot_ingot", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A17000000000098"
+					count: 8L
+					item: {
+						Count: 1
+						id: "gtceu:hot_tungsten_steel_ingot"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.tungsten_steel_hot.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_hot.title}"
+			x: 34d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A1700000000003E"
+				"3A1700000000002C"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.task}"
+				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.proof_help.1}"
+			]
+			icon: "gtceu:tungsten_steel_ingot"
+			id: "3A1700000000003F"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "metallurgy", "tungsten_steel", "vacuum_freezer", "processed_form"]
+			tasks: [
+				{
+					id: "4A1700000000009A"
+					count: 8L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_steel_ingots)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.tungsten_steel_cooling.output.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.title}"
+			x: 36d
+			y: 0d
+		}
+		{
+			dependencies: ["3A1700000000003F"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.iv_materials.task}"
+				"{industrial_frontier.quest.v2.p7.iv_materials.proof_help.1}"
+			]
+			icon: "gtceu:tungsten_steel_plate"
+			id: "3A1700000000001D"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "metallurgy", "iv", "material_bridge"]
+			tasks: [
+				{
+					id: "4A1700000000003D"
+					count: 8L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_steel_plates)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.iv_materials.tungsten_steel.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.iv_materials.title}"
+			x: 38d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A1700000000001D"
+				"3A17000000000002"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p7.hbm_entry.task}"
+				"{industrial_frontier.quest.v2.p7.hbm_entry.proof_help.1}"
+			]
+			icon: "hbm_ntm_rebirth:machine_assembly_machine"
+			id: "3017000000000002"
+			shape: "hexagon"
+			size: 1.1d
+			tags: ["hbm", "strategic"]
+			tasks: [
+				{
+					id: "4017000000000002"
+					item: {
+						Count: 1
+						id: "hbm_ntm_rebirth:machine_assembly_machine"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.hbm_entry.machine.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.hbm_entry.title}"
+			x: 40d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A17000000000007"
+				"3A1700000000001D"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p7.iv_transformer.task}"
+				"{industrial_frontier.quest.v2.p7.iv_transformer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.iv_transformer.proof_help.2}"
+			]
+			icon: "gtceu:ev_transformer_1a"
+			id: "3A17000000000017"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "iv", "power", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A1700000000002B"
+					item: {
+						Count: 1
+						id: "gtceu:ev_transformer_1a"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.iv_transformer.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000031"
+					count: 4L
+					item: {
+						Count: 1
+						id: "gtceu:tungsten_single_cable"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.iv_transformer.cable.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.iv_transformer.title}"
+			x: 40d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A17000000000017"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.iv_buffer.task}"
+				"{industrial_frontier.quest.v2.p7.iv_buffer.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.iv_buffer.proof_help.2}"
+			]
+			icon: "gtceu:iv_battery_buffer_4x"
+			id: "3A17000000000018"
+			shape: "square"
+			size: 1.1d
+			tags: ["mainline", "iv", "power", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A1700000000002D"
+					item: {
+						Count: 1
+						id: "gtceu:iv_battery_buffer_4x"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.iv_buffer.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4A1700000000004B"
+					count: 4L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/iv_batteries)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.iv_buffer.batteries.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.iv_buffer.title}"
+			x: 42d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3017000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.protected_zone.purpose}"
+				"{industrial_frontier.quest.v2.p7.protected_zone.task}"
+				"{industrial_frontier.quest.v2.p7.protected_zone.proof_help.1}"
+			]
+			icon: "hbm_ntm_rebirth:steel_scaffold"
+			id: "3A17000000000003"
+			shape: "square"
+			size: 1.4d
+			tags: ["hbm", "safety", "construction"]
+			tasks: [
+				{
+					id: "4A17000000000006"
+					block_type: 0
+					block: "hbm_ntm_rebirth:steel_scaffold"
+					value: 8L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.p7.protected_zone.scaffold.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.protected_zone.title}"
+			x: 42d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A17000000000018"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.iv_components.task}"
+				"{industrial_frontier.quest.v2.p7.iv_components.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.iv_components.proof_help.2}"
+			]
+			icon: "gtceu:iv_machine_hull"
+			id: "3A17000000000019"
+			shape: "diamond"
+			size: 1d
+			tags: ["mainline", "iv", "components", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A1700000000002F"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(gtceu:circuits/iv)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p7.iv_components.circuit.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000030"
+					item: {
+						Count: 1
+						id: "gtceu:iv_machine_hull"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.iv_components.hull.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.iv_components.title}"
+			x: 44d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A17000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.radiation_control.purpose}"
+				"{industrial_frontier.quest.v2.p7.radiation_control.task}"
+				"{industrial_frontier.quest.v2.p7.radiation_control.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.radiation_control.proof_help.2}"
+			]
+			icon: "hbm_ntm_rebirth:dosimeter"
+			id: "3A17000000000004"
+			shape: "diamond"
+			size: 1.4d
+			tags: ["hbm", "safety", "radiation"]
+			tasks: [
+				{
+					id: "4A17000000000007"
+					item: {
+						Count: 1
+						id: "hbm_ntm_rebirth:dosimeter"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.radiation_control.dosimeter.objective}"
+					type: "item"
+				}
+				{
+					id: "4A17000000000008"
+					block_type: 0
+					block: "hbm_ntm_rebirth:vitrified_barrel"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.p7.radiation_control.storage.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.radiation_control.title}"
+			x: 44d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3A17000000000004"
+				"3A17000000000007"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p7.emergency.purpose}"
+				"{industrial_frontier.quest.v2.p7.emergency.task}"
+				"{industrial_frontier.quest.v2.p7.emergency.proof_help.1}"
+			]
+			icon: "gcyr:insulating_fabric"
+			id: "3017000000000021"
+			shape: "square"
+			size: 1d
+			tags: ["safety", "recovery"]
+			tasks: [
+				{
+					id: "4017000000000021"
+					title: "{industrial_frontier.task.v2.p7.emergency.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.emergency.title}"
+			x: 46d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3A17000000000019"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.iv_assembly.purpose}"
+				"{industrial_frontier.quest.v2.p7.iv_assembly.task}"
+				"{industrial_frontier.quest.v2.p7.iv_assembly.proof_help.1}"
+			]
+			icon: "gtceu:iv_assembler"
+			id: "3A1700000000001A"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "iv", "machine_before_product", "tier_bridge"]
+			tasks: [
+				{
+					id: "4A17000000000032"
+					item: {
+						Count: 1
+						id: "gtceu:iv_assembler"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.iv_assembly.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.iv_assembly.title}"
+			x: 46d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A17000000000004"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.purex_setup.purpose}"
+				"{industrial_frontier.quest.v2.p7.purex_setup.task}"
+				"{industrial_frontier.quest.v2.p7.purex_setup.proof_help.1}"
+			]
+			icon: "hbm_ntm_rebirth:machine_purex"
+			id: "3A1700000000001B"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "hbm", "machine_before_product", "safety"]
+			tasks: [
+				{
+					id: "4A1700000000003A"
+					item: {
+						Count: 1
+						id: "hbm_ntm_rebirth:machine_purex"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.purex_setup.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.purex_setup.title}"
+			x: 46d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A17000000000004"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.rbmk.task}"
+				"{industrial_frontier.quest.v2.p7.rbmk.proof_help.1}"
+				"{industrial_frontier.quest.v2.p7.rbmk.optional_note}"
+			]
+			icon: "hbm_ntm_rebirth:rbmk_console"
+			id: "3017000000000004"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["hbm", "optional", "reactor"]
+			tasks: [
+				{
+					id: "4017000000000004"
+					item: {
+						Count: 1
+						id: "hbm_ntm_rebirth:rbmk_console"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.rbmk.console.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.rbmk.title}"
+			x: 46d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3A1700000000001A"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.deep_path.task}"
+				"{industrial_frontier.quest.v2.p7.deep_path.proof_help.1}"
+			]
+			icon: "creatingspace:rocket_engineer_table"
+			id: "3017000000000020"
+			shape: "circle"
+			size: 1.1d
+			tags: ["space", "engineering", "creatingspace"]
+			tasks: [
+				{
+					id: "4017000000000020"
+					item: {
+						Count: 1
+						id: "creatingspace:rocket_engineer_table"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.deep_path.table.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.deep_path.title}"
+			x: 48d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A1700000000001B"]
+			description: [
+				"{industrial_frontier.quest.v2.p7.strategic_process.purpose}"
+				"{industrial_frontier.quest.v2.p7.strategic_process.task}"
+				"{industrial_frontier.quest.v2.p7.strategic_process.proof_help.1}"
+			]
+			icon: "hbm_ntm_rebirth:machine_purex"
+			id: "3A17000000000005"
+			shape: "hexagon"
+			size: 1.2d
+			tags: ["hbm", "reprocessing", "product"]
+			tasks: [
+				{
+					id: "4A17000000000010"
+					item: {
+						Count: 1
+						id: "hbm_ntm_rebirth:ingot_neptunium"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p7.strategic_process.product.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.strategic_process.title}"
+			x: 48d
+			y: 0.75d
 		}
 		{
 			dependencies: [
@@ -1952,25 +2254,16 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p7.launch_vehicle.purpose}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.step.1}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.step.2}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.step.3}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.success}"
 				"{industrial_frontier.quest.v2.p7.launch_vehicle.task}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.launch_vehicle.proof_help.1}"
 				"{industrial_frontier.quest.v2.p7.launch_vehicle.proof_help.2}"
 				"{industrial_frontier.quest.v2.p7.launch_vehicle.proof_help.3}"
 				"{industrial_frontier.quest.v2.p7.launch_vehicle.proof_help.4}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.proof_help.5}"
-				"{industrial_frontier.quest.v2.p7.launch_vehicle.next}"
 			]
 			icon: "gcyr:basic_rocket_motor"
 			id: "3A17000000000020"
 			shape: "octagon"
-			size: 1.35d
-			subtitle: "{industrial_frontier.quest.v2.p7.launch_vehicle.lead}"
+			size: 1.4d
 			tags: ["mainline", "space", "vehicle", "machine_before_operation"]
 			tasks: [
 				{
@@ -2013,171 +2306,24 @@
 					title: "{industrial_frontier.task.v2.p7.launch_vehicle.casing.objective}"
 					type: "questsadditions:place"
 				}
-				{
-					id: "4A17000000000048"
-					block_type: 0
-					block: "gcyr:rocket_scanner"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.launch_vehicle.scan.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.launch_vehicle.title}"
-			x: 30d
-			y: 6.5d
-		}
-		{
-			dependencies: [
-				"3A17000000000007"
-				"3A17000000000008"
-				"3A17000000000020"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p7.first_launch.purpose}"
-				"{industrial_frontier.quest.v2.p7.first_launch.step.1}"
-				"{industrial_frontier.quest.v2.p7.first_launch.step.2}"
-				"{industrial_frontier.quest.v2.p7.first_launch.success}"
-				"{industrial_frontier.quest.v2.p7.first_launch.task}"
-				"{industrial_frontier.quest.v2.p7.first_launch.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.first_launch.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.first_launch.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.first_launch.next}"
-			]
-			icon: "gcyr:basic_rocket_motor"
-			id: "3A17000000000009"
-			shape: "octagon"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p7.first_launch.lead}"
-			tags: ["space", "launch"]
-			tasks: [
-				{
-					id: "4A17000000000019"
-					dimension: "gcyr:luna"
-					title: "{industrial_frontier.task.v2.p7.first_launch.dimension.objective}"
-					type: "dimension"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.first_launch.title}"
-			x: 30d
-			y: 3d
-		}
-		{
-			dependencies: ["3A17000000000009"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.return_sample.purpose}"
-				"{industrial_frontier.quest.v2.p7.return_sample.step.1}"
-				"{industrial_frontier.quest.v2.p7.return_sample.step.2}"
-				"{industrial_frontier.quest.v2.p7.return_sample.success}"
-				"{industrial_frontier.quest.v2.p7.return_sample.task}"
-				"{industrial_frontier.quest.v2.p7.return_sample.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.return_sample.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.return_sample.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.return_sample.next}"
-			]
-			icon: "gcyr:moon_stone"
-			id: "3A17000000000010"
-			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.return_sample.lead}"
-			tags: ["space", "return"]
-			tasks: [
-				{
-					id: "4A17000000000020"
-					item: {
-						Count: 1
-						id: "gcyr:moon_stone"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.return_sample.moon_stone.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.return_sample.title}"
-			x: 33d
-			y: 3d
-		}
-		{
-			dependencies: [
-				"3A17000000000004"
-				"3A17000000000007"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p7.emergency.purpose}"
-				"{industrial_frontier.quest.v2.p7.emergency.success}"
-				"{industrial_frontier.quest.v2.p7.emergency.task}"
-				"{industrial_frontier.quest.v2.p7.emergency.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.emergency.next}"
-			]
-			icon: "gcyr:insulating_fabric"
-			id: "3017000000000021"
-			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.emergency.lead}"
-			tags: ["safety", "recovery"]
-			tasks: [
-				{
-					id: "4017000000000021"
-					title: "{industrial_frontier.task.v2.p7.emergency.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.emergency.title}"
-			x: 15d
-			y: 0d
-		}
-		{
-			dependencies: ["3A17000000000004"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.rbmk.purpose}"
-				"{industrial_frontier.quest.v2.p7.rbmk.step.1}"
-				"{industrial_frontier.quest.v2.p7.rbmk.success}"
-				"{industrial_frontier.quest.v2.p7.rbmk.task}"
-				"{industrial_frontier.quest.v2.p7.rbmk.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.rbmk.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.rbmk.next}"
-				"{industrial_frontier.quest.v2.p7.rbmk.optional_note}"
-			]
-			icon: "hbm_ntm_rebirth:rbmk_console"
-			id: "3017000000000004"
-			optional: true
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.rbmk.lead}"
-			tags: ["hbm", "optional", "reactor"]
-			tasks: [
-				{
-					id: "4017000000000004"
-					item: {
-						Count: 1
-						id: "hbm_ntm_rebirth:rbmk_console"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.rbmk.console.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.rbmk.title}"
-			x: 12d
-			y: -6d
+			x: 50d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A17000000000005"]
 			description: [
 				"{industrial_frontier.quest.v2.p7.strategic_rules.purpose}"
-				"{industrial_frontier.quest.v2.p7.strategic_rules.success}"
 				"{industrial_frontier.quest.v2.p7.strategic_rules.task}"
 				"{industrial_frontier.quest.v2.p7.strategic_rules.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.strategic_rules.next}"
 				"{industrial_frontier.quest.v2.p7.strategic_rules.optional_note}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png"}}
 			id: "3D7ABD69A00ED421"
 			optional: true
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.strategic_rules.lead}"
 			tags: ["hbm", "optional", "policy"]
 			tasks: [
 				{
@@ -2187,1001 +2333,59 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.strategic_rules.title}"
-			x: 18d
-			y: -4d
+			x: 50d
+			y: 0.75d
 		}
 		{
-			dependencies: ["3A17000000000016"]
+			dependencies: ["3D7ABD69A00ED421"]
 			description: [
-				"{industrial_frontier.quest.v2.p7.scheelite_source.purpose}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.step.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.step.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.success}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.task}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_source.next}"
+				"{industrial_frontier.quest.v2.defence.strategic.purpose}"
+				"{industrial_frontier.quest.v2.defence.strategic.task}"
+				"{industrial_frontier.quest.v2.defence.strategic.proof_help.1}"
+				"{industrial_frontier.quest.v2.defence.strategic.optional_note}"
 			]
-			icon: "gtceu:raw_scheelite"
-			id: "3A17000000000033"
-			shape: "circle"
+			icon: "minecraft:nether_star"
+			id: "3A2100000000000A"
+			optional: true
+			shape: "octagon"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.scheelite_source.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "source_before_product", "ore_family"]
+			tags: ["defence", "strategic", "p7"]
 			tasks: [
 				{
-					id: "4A1700000000007E"
-					count: 12L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/raw_scheelite)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.scheelite_source.raw.objective}"
-					type: "item"
+					id: "4A2100000000000A"
+					title: "{industrial_frontier.task.v2.defence.strategic.read.objective}"
+					type: "checkmark"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p7.scheelite_source.title}"
-			x: -20d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000033"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.purpose}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.step.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.step.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.step.3}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.success}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.task}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.next}"
-			]
-			icon: "gtceu:lv_ore_washer"
-			id: "3A17000000000046"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "machine_before_product", "reuse"]
-			tasks: [
-				{
-					id: "4A1700000000009F"
-					block_type: 1
-					block: "industrial_frontier:machines/lv_plus_macerators"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.scheelite_processing_reuse.macerator.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A170000000000A0"
-					block_type: 1
-					block: "industrial_frontier:machines/lv_plus_ore_washers"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.scheelite_processing_reuse.washer.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.scheelite_processing_reuse.title}"
-			x: -19d
-			y: 7d
-		}
-		{
-			dependencies: ["3A17000000000046"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.purpose}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.step.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.step.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.success}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.task}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_crushing.next}"
-			]
-			icon: "gtceu:crushed_scheelite_ore"
-			id: "3A17000000000034"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.scheelite_crushing.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "ore_processing", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A17000000000080"
-					count: 24L
-					item: {
-						Count: 1
-						id: "gtceu:crushed_scheelite_ore"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.scheelite_crushing.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.scheelite_crushing.title}"
-			x: -18d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000034"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.purpose}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.step.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.step.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.step.3}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.success}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.task}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_washing.next}"
-			]
-			icon: "gtceu:purified_scheelite_ore"
-			id: "3A17000000000035"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.scheelite_washing.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "ore_processing", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A17000000000082"
-					count: 24L
-					item: {
-						Count: 1
-						id: "gtceu:purified_scheelite_ore"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.scheelite_washing.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.scheelite_washing.title}"
-			x: -16d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000035"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.purpose}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.step.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.step.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.success}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.task}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.scheelite_dust.next}"
-			]
-			icon: "gtceu:scheelite_dust"
-			id: "3A17000000000036"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.scheelite_dust.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "ore_processing", "processed_form"]
-			tasks: [
-				{
-					id: "4A17000000000084"
-					count: 24L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/scheelite_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.scheelite_dust.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.scheelite_dust.title}"
-			x: -14d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000036"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_bath_setup.next}"
-			]
-			icon: "gtceu:ev_chemical_bath"
-			id: "3A17000000000037"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_bath_setup.lead}"
-			tags: ["mainline", "chemistry", "tungsten_steel", "machine_before_product", "ev"]
-			tasks: [
-				{
-					id: "4A17000000000085"
-					item: {
-						Count: 1
-						id: "gtceu:ev_chemical_bath"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_bath_setup.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000086"
-					block_type: 0
-					block: "gtceu:ev_chemical_bath"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_bath_setup.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_bath_setup.title}"
-			x: -12d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000037"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.success}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.next}"
-			]
-			icon: "gtceu:hydrochloric_acid_bucket"
-			id: "3A17000000000047"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.lead}"
-			tags: ["mainline", "chemistry", "tungsten_steel", "inputs_before_process"]
-			tasks: [
-				{
-					id: "4A17000000000087"
-					fluid: "gtceu:hydrochloric_acid"
-					amount: 8000L
-					title: "{industrial_frontier.task.v2.p7.tungstic_acid.hydrochloric.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungstic_acid_inputs.title}"
-			x: -11d
-			y: 7d
-		}
-		{
-			dependencies: ["3A17000000000047"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.success}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.task}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.tungstic_acid.next}"
-			]
-			icon: "gtceu:tungstic_acid_dust"
-			id: "3A17000000000038"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungstic_acid.lead}"
-			tags: ["mainline", "chemistry", "tungsten_steel", "processed_form"]
-			tasks: [
-				{
-					id: "4A17000000000089"
-					count: 28L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungstic_acid_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.tungstic_acid.output.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000008A"
-					count: 12L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/calcium_chloride_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.tungstic_acid.byproduct.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungstic_acid.title}"
-			x: -10d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000038"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.next}"
-			]
-			icon: "gtceu:ev_electrolyzer"
-			id: "3A17000000000039"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.lead}"
-			tags: ["mainline", "chemistry", "tungsten_steel", "machine_before_product", "ev"]
-			tasks: [
-				{
-					id: "4A1700000000008B"
-					item: {
-						Count: 1
-						id: "gtceu:ev_electrolyzer"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_electrolyzer_setup.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000008C"
-					block_type: 0
-					block: "gtceu:ev_electrolyzer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_electrolyzer_setup.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_electrolyzer_setup.title}"
-			x: -8d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000039"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_dust.next}"
-			]
-			icon: "gtceu:tungsten_dust"
-			id: "3A1700000000003A"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_dust.lead}"
-			tags: ["mainline", "chemistry", "tungsten_steel", "processed_form"]
-			tasks: [
-				{
-					id: "4A1700000000008E"
-					count: 4L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.tungsten_dust.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_dust.title}"
-			x: -6d
-			y: 9d
-		}
-		{
-			dependencies: ["3A1700000000003A"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.next}"
-			]
-			icon: "gtceu:ev_mixer"
-			id: "3A1700000000003B"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "machine_before_product", "ev"]
-			tasks: [
-				{
-					id: "4A1700000000008F"
-					item: {
-						Count: 1
-						id: "gtceu:ev_mixer"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_mixer_setup.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000090"
-					block_type: 0
-					block: "gtceu:ev_mixer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_mixer_setup.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_mixer_setup.title}"
-			x: -4d
-			y: 9d
-		}
-		{
-			dependencies: ["3A1700000000003B"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.next}"
-			]
-			icon: "gtceu:steel_dust"
-			id: "3A17000000000048"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "inputs_before_process"]
-			tasks: [
-				{
-					id: "4A17000000000091"
-					count: 4L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/steel_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.tungsten_steel_alloy.steel.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_alloy_inputs.title}"
-			x: -3d
-			y: 7d
-		}
-		{
-			dependencies: ["3A17000000000048"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.next}"
-			]
-			icon: "gtceu:tungsten_steel_dust"
-			id: "3A1700000000003C"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "alloy", "processed_form"]
-			tasks: [
-				{
-					id: "4A17000000000093"
-					count: 8L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_steel_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.tungsten_steel_alloy.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_alloy.title}"
-			x: -2d
-			y: 9d
-		}
-		{
-			dependencies: ["3A1700000000003C"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_ebf_power.next}"
-			]
-			icon: "gtceu:ev_energy_input_hatch"
-			id: "3A1700000000003D"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_ebf_power.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "machine_before_product", "power_topology"]
-			tasks: [
-				{
-					id: "4A17000000000094"
-					item: {
-						Count: 1
-						id: "gtceu:ev_energy_input_hatch"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_ebf_power.hatch.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000095"
-					count: 4L
-					item: {
-						Count: 1
-						id: "gtceu:aluminium_single_cable"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_ebf_power.cable.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000096"
-					block_type: 0
-					block: "gtceu:electric_blast_furnace"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_ebf_power.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_ebf_power.title}"
-			x: 0d
-			y: 9d
-		}
-		{
-			dependencies: ["3A1700000000003D"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_hot.next}"
-			]
-			icon: "gtceu:hot_tungsten_steel_ingot"
-			id: "3A1700000000003E"
-			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_steel_hot.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "hot_ingot", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A17000000000098"
-					count: 8L
-					item: {
-						Count: 1
-						id: "gtceu:hot_tungsten_steel_ingot"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.tungsten_steel_hot.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_hot.title}"
-			x: 2d
-			y: 9d
-		}
-		{
-			dependencies: [
-				"3A1700000000003E"
-				"3A1700000000002C"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.purpose}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.step.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.step.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.step.3}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.success}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.task}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.next}"
-			]
-			icon: "gtceu:tungsten_steel_ingot"
-			id: "3A1700000000003F"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.lead}"
-			tags: ["mainline", "metallurgy", "tungsten_steel", "vacuum_freezer", "processed_form"]
-			tasks: [
-				{
-					id: "4A1700000000009A"
-					count: 8L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_steel_ingots)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.tungsten_steel_cooling.output.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.tungsten_steel_cooling.title}"
-			x: 4d
-			y: 9d
-		}
-		{
-			dependencies: ["3A1700000000003F"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.iv_materials.purpose}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.step.1}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.step.2}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.step.3}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.success}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.task}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.iv_materials.next}"
-			]
-			icon: "gtceu:tungsten_steel_plate"
-			id: "3A1700000000001D"
-			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.iv_materials.lead}"
-			tags: ["mainline", "metallurgy", "iv", "material_bridge"]
-			tasks: [
-				{
-					id: "4A1700000000003D"
-					count: 8L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/tungsten_steel_plates)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.iv_materials.tungsten_steel.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.iv_materials.title}"
-			x: 6d
-			y: 9d
-		}
-		{
-			dependencies: [
-				"3A17000000000007"
-				"3A1700000000001D"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p7.iv_transformer.purpose}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.step.1}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.step.2}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.step.3}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.success}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.task}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.iv_transformer.next}"
-			]
-			icon: "gtceu:ev_transformer_1a"
-			id: "3A17000000000017"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.iv_transformer.lead}"
-			tags: ["mainline", "iv", "power", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A1700000000002B"
-					item: {
-						Count: 1
-						id: "gtceu:ev_transformer_1a"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.iv_transformer.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000002C"
-					block_type: 0
-					block: "gtceu:ev_transformer_1a"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.iv_transformer.use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A17000000000031"
-					count: 4L
-					item: {
-						Count: 1
-						id: "gtceu:tungsten_single_cable"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.iv_transformer.cable.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.iv_transformer.title}"
-			x: 8d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000017"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.iv_buffer.purpose}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.step.1}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.step.2}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.step.3}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.success}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.task}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.proof_help.3}"
-				"{industrial_frontier.quest.v2.p7.iv_buffer.next}"
-			]
-			icon: "gtceu:iv_battery_buffer_4x"
-			id: "3A17000000000018"
-			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.iv_buffer.lead}"
-			tags: ["mainline", "iv", "power", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A1700000000002D"
-					item: {
-						Count: 1
-						id: "gtceu:iv_battery_buffer_4x"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.iv_buffer.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000004B"
-					count: 4L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:power/iv_batteries)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.iv_buffer.batteries.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1700000000002E"
-					block_type: 0
-					block: "gtceu:iv_battery_buffer_4x"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.iv_buffer.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.iv_buffer.title}"
-			x: 10d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000018"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.iv_components.purpose}"
-				"{industrial_frontier.quest.v2.p7.iv_components.step.1}"
-				"{industrial_frontier.quest.v2.p7.iv_components.step.2}"
-				"{industrial_frontier.quest.v2.p7.iv_components.success}"
-				"{industrial_frontier.quest.v2.p7.iv_components.task}"
-				"{industrial_frontier.quest.v2.p7.iv_components.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.iv_components.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.iv_components.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.iv_components.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.iv_components.next}"
-			]
-			icon: "gtceu:iv_machine_hull"
-			id: "3A17000000000019"
-			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.iv_components.lead}"
-			tags: ["mainline", "iv", "components", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A1700000000002F"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(gtceu:circuits/iv)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p7.iv_components.circuit.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000030"
-					item: {
-						Count: 1
-						id: "gtceu:iv_machine_hull"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.iv_components.hull.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.iv_components.title}"
-			x: 12d
-			y: 9d
-		}
-		{
-			dependencies: ["3A17000000000019"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.iv_assembly.purpose}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.step.1}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.step.2}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.success}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.task}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.iv_assembly.next}"
-			]
-			icon: "gtceu:iv_assembler"
-			id: "3A1700000000001A"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p7.iv_assembly.lead}"
-			tags: ["mainline", "iv", "machine_before_product", "tier_bridge"]
-			tasks: [
-				{
-					id: "4A17000000000032"
-					item: {
-						Count: 1
-						id: "gtceu:iv_assembler"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.iv_assembly.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A17000000000033"
-					block_type: 0
-					block: "gtceu:iv_assembler"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p7.iv_assembly.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.iv_assembly.title}"
-			x: 14d
-			y: 9d
-		}
-		{
-			dependencies: ["3A1700000000001A"]
-			description: [
-				"{industrial_frontier.quest.v2.p7.deep_path.purpose}"
-				"{industrial_frontier.quest.v2.p7.deep_path.step.1}"
-				"{industrial_frontier.quest.v2.p7.deep_path.step.2}"
-				"{industrial_frontier.quest.v2.p7.deep_path.success}"
-				"{industrial_frontier.quest.v2.p7.deep_path.task}"
-				"{industrial_frontier.quest.v2.p7.deep_path.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.deep_path.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p7.deep_path.proof_help.1}"
-				"{industrial_frontier.quest.v2.p7.deep_path.next}"
-			]
-			icon: "creatingspace:rocket_engineer_table"
-			id: "3017000000000020"
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p7.deep_path.lead}"
-			tags: ["space", "engineering", "creatingspace"]
-			tasks: [
-				{
-					id: "4017000000000020"
-					item: {
-						Count: 1
-						id: "creatingspace:rocket_engineer_table"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p7.deep_path.table.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p7.deep_path.title}"
-			x: 16d
-			y: 9d
+			title: "{industrial_frontier.quest.v2.defence.strategic.title}"
+			x: 52d
+			y: -1.5d
 		}
 		{
 			dependencies: [
 				"3A17000000000005"
 				"3A17000000000010"
 				"3017000000000021"
+				"3A17000000000032"
+				"3A1700000000002A"
+				"3A17000000000031"
+				"3A17000000000014"
+				"3A17000000000017"
+				"3A17000000000018"
+				"3A17000000000019"
+				"3A1700000000001A"
+				"3A17000000000020"
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p7.commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p7.commissioning.step.1}"
-				"{industrial_frontier.quest.v2.p7.commissioning.step.2}"
-				"{industrial_frontier.quest.v2.p7.commissioning.success}"
 				"{industrial_frontier.quest.v2.p7.commissioning.task}"
-				"{industrial_frontier.quest.v2.p7.commissioning.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p7.commissioning.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p7.commissioning.proof_help.1}"
 				"{industrial_frontier.quest.v2.p7.commissioning.proof_help.2}"
-				"{industrial_frontier.quest.v2.p7.commissioning.next}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/epochs/p7.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p7.png"}}
 			id: "3A17000000000011"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p7.commissioning.lead}"
+			size: 1.8d
 			tags: ["if_commissioning_p7", "commissioning"]
 			tasks: [
 				{
@@ -3206,7 +2410,169 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p7.commissioning.title}"
-			x: 36d
+			x: 52d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A17000000000007"
+				"3A17000000000008"
+				"3A17000000000020"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p7.first_launch.purpose}"
+				"{industrial_frontier.quest.v2.p7.first_launch.task}"
+				"{industrial_frontier.quest.v2.p7.first_launch.proof_help.1}"
+			]
+			icon: "gcyr:basic_rocket_motor"
+			id: "3A17000000000009"
+			shape: "octagon"
+			size: 1.2d
+			tags: ["space", "launch"]
+			tasks: [
+				{
+					id: "4A17000000000019"
+					dimension: "gcyr:luna"
+					title: "{industrial_frontier.task.v2.p7.first_launch.dimension.objective}"
+					type: "dimension"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p7.first_launch.title}"
+			x: 52d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3A23000000000009"
+				"3A17000000000011"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.control.component_assembly.purpose}"
+				"{industrial_frontier.quest.v2.control.component_assembly.task}"
+				"{industrial_frontier.quest.v2.control.component_assembly.proof_help.1}"
+			]
+			icon: "gtnn:component_assembly_line"
+			id: "3A2300000000000A"
+			shape: "diamond"
+			size: 1.4d
+			tags: ["gtnn", "component_assembly", "late_factory"]
+			tasks: [
+				{
+					id: "4A23000000000014"
+					item: {
+						Count: 1
+						id: "gtnn:component_assembly_line"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.control.component_assembly.use.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.control.component_assembly.title}"
+			x: 54d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3073000000000001"
+				"3A17000000000011"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.marathon.space.purpose}"
+				"{industrial_frontier.quest.v2.marathon.space.task}"
+				"{industrial_frontier.quest.v2.marathon.space.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.space.optional_note}"
+			]
+			icon: "gcyr:basic_rocket_motor"
+			id: "3073000000000005"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["marathon", "space", "comparison", "optional"]
+			tasks: [
+				{
+					id: "4073000000000005"
+					title: "{industrial_frontier.task.v2.marathon.space.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.marathon.space.title}"
+			x: 54d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A22000000000014"
+				"3A17000000000011"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.civil_resilience.task}"
+				"{industrial_frontier.quest.v2.settlement.civil_resilience.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.civil_resilience.optional_note}"
+			]
+			icon: "hbm_ntm_rebirth:dosimeter"
+			id: "3A22000000000019"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["city", "p7", "civil_defence", "resilience", "optional"]
+			tasks: [
+				{
+					id: "4B22000000000059"
+					item: {
+						Count: 1
+						id: "hbm_ntm_rebirth:dosimeter"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.settlement.civil_resilience.dosimeter.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.civil_resilience.title}"
+			x: 54d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3A23000000000002"
+				"3A23000000000004"
+				"3A23000000000006"
+				"3A23000000000007"
+				"3A23000000000009"
+				"3A2300000000000A"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.control.acceptance.purpose}"
+				"{industrial_frontier.quest.v2.control.acceptance.task}"
+				"{industrial_frontier.quest.v2.control.acceptance.proof_help.1}"
+				"{industrial_frontier.quest.v2.control.acceptance.proof_help.2}"
+			]
+			icon: "advancedperipherals:energy_detector"
+			id: "3A2300000000000B"
+			shape: "diamond"
+			size: 1.4d
+			tags: ["control", "acceptance", "p8_bridge"]
+			tasks: [
+				{
+					id: "4A23000000000015"
+					title: "{industrial_frontier.task.v2.control.acceptance.signoff.objective}"
+					type: "checkmark"
+				}
+				{
+					id: "4A23000000000016"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(computercraft:monitor)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.control.acceptance.monitor.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.control.acceptance.title}"
+			x: 56d
 			y: 0d
 		}
 	]

@@ -40,10 +40,10 @@ foreach ($relativeRoot in $jsonRoots) {
 
 # Traceability must point to real authored or generated artifacts. Counts are
 # checked for the M1 corpora so documentation cannot silently drift from disk.
-$tracePath = Join-Path $rootPath 'authoring\trace\m1_trace.json'
+$tracePath = Join-Path $rootPath 'authoring\trace\trace.json'
 $trace = Read-JsonObject $tracePath
 if ($null -ne $trace) {
-    if ([int]$trace.schema_version -ne 2) { Add-LintError 'm1_trace.json must use schema_version 2.' }
+    if ([int]$trace.schema_version -ne 2) { Add-LintError 'trace.json must use schema_version 2.' }
     $featureIds = [System.Collections.Generic.HashSet[string]]::new()
     $featuresById = @{}
     foreach ($feature in @($trace.features)) {
@@ -94,11 +94,11 @@ if ($null -ne $trace) {
 }
 
 # M2 trace is separate so the historical M1 artifact counts stay immutable.
-$m2TracePath = Join-Path $rootPath 'authoring\trace\m2_trace.json'
+$m2TracePath = Join-Path $rootPath 'authoring\trace\02_trace.json'
 $m2Trace = Read-JsonObject $m2TracePath
 if ($null -ne $m2Trace) {
-    if ([int]$m2Trace.schema_version -ne 2) { Add-LintError 'm2_trace.json must use schema_version 2.' }
-    if ([string]$m2Trace.build_id -ne 'IF-M2-0001') { Add-LintError 'm2_trace.json must identify IF-M2-0001.' }
+    if ([int]$m2Trace.schema_version -ne 2) { Add-LintError '02_trace.json must use schema_version 2.' }
+    if ([string]$m2Trace.build_id -ne 'IF-M2-0001') { Add-LintError '02_trace.json must identify IF-M2-0001.' }
     $m2FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
     $m2FeaturesById = @{}
     foreach ($feature in @($m2Trace.features)) {
@@ -130,12 +130,12 @@ if ($null -ne $m2Trace) {
 
 # M3 trace covers the P0-P3 main line. Its quest count is derived from the four
 # authoring sources so a hand-edited chapter cannot drift away from the trace.
-$m3TracePath = Join-Path $rootPath 'authoring\trace\m3_trace.json'
+$m3TracePath = Join-Path $rootPath 'authoring\trace\03_trace.json'
 $m3Trace = Read-JsonObject $m3TracePath
 $m3ChapterFiles = @('10_p0_expedition', '11_p1_mechanised', '12_p2_steam_metallurgy', '13_p3_electrification')
 if ($null -ne $m3Trace) {
-    if ([int]$m3Trace.schema_version -ne 2) { Add-LintError 'm3_trace.json must use schema_version 2.' }
-    if ([string]$m3Trace.build_id -ne 'IF-M3-0001') { Add-LintError 'm3_trace.json must identify IF-M3-0001.' }
+    if ([int]$m3Trace.schema_version -ne 2) { Add-LintError '03_trace.json must use schema_version 2.' }
+    if ([string]$m3Trace.build_id -ne 'IF-M3-0001') { Add-LintError '03_trace.json must identify IF-M3-0001.' }
     $m3FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
     $m3FeaturesById = @{}
     foreach ($feature in @($m3Trace.features)) {
@@ -169,12 +169,12 @@ if ($null -ne $m3Trace) {
 }
 
 # M4 extends the same main line with the P4 chapter and the municipal water tail.
-$m4TracePath = Join-Path $rootPath 'authoring\trace\m4_trace.json'
+$m4TracePath = Join-Path $rootPath 'authoring\trace\04_trace.json'
 $m4Trace = Read-JsonObject $m4TracePath
 $m4ChapterFiles = @('14_p4_chemical_city')
 if ($null -ne $m4Trace) {
-    if ([int]$m4Trace.schema_version -ne 2) { Add-LintError 'm4_trace.json must use schema_version 2.' }
-    if ([string]$m4Trace.build_id -ne 'IF-M4-0001') { Add-LintError 'm4_trace.json must identify IF-M4-0001.' }
+    if ([int]$m4Trace.schema_version -ne 2) { Add-LintError '04_trace.json must use schema_version 2.' }
+    if ([string]$m4Trace.build_id -ne 'IF-M4-0001') { Add-LintError '04_trace.json must identify IF-M4-0001.' }
     $m4FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
     $m4FeaturesById = @{}
     foreach ($feature in @($m4Trace.features)) {
@@ -206,12 +206,12 @@ if ($null -ne $m4Trace) {
 # M5 opens P5 regional logistics. Its first debt was the AE2 entry contract, so
 # the trace counts what the script actually registers rather than what the prose
 # claims: seven authored recipe IDs and three removed foreign routes.
-$m5TracePath = Join-Path $rootPath 'authoring\trace\m5_trace.json'
+$m5TracePath = Join-Path $rootPath 'authoring\trace\05_trace.json'
 $m5Trace = Read-JsonObject $m5TracePath
 $m5ChapterFiles = @('15_p5_regional_logistics')
 if ($null -ne $m5Trace) {
-    if ([int]$m5Trace.schema_version -ne 2) { Add-LintError 'm5_trace.json must use schema_version 2.' }
-    if ([string]$m5Trace.build_id -ne 'IF-M5-0001') { Add-LintError 'm5_trace.json must identify IF-M5-0001.' }
+    if ([int]$m5Trace.schema_version -ne 2) { Add-LintError '05_trace.json must use schema_version 2.' }
+    if ([string]$m5Trace.build_id -ne 'IF-M5-0001') { Add-LintError '05_trace.json must identify IF-M5-0001.' }
     $m5FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
     $m5FeaturesById = @{}
     foreach ($feature in @($m5Trace.features)) {
@@ -225,10 +225,10 @@ if ($null -ne $m5Trace) {
         }
     }
 
-    $ae2ContractPath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m5_ae2_entry_contract.js'
+    $ae2ContractPath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\05_ae2_entry_contract.js'
     if (Test-Path -LiteralPath $ae2ContractPath -PathType Leaf) {
         $ae2ContractText = Get-Content -Raw -Encoding UTF8 -LiteralPath $ae2ContractPath
-        $authoredAe2Ids = @([regex]::Matches($ae2ContractText, 'industrial_frontier:m5/ae2/[a-z0-9_]+') | ForEach-Object { $_.Value } | Sort-Object -Unique)
+        $authoredAe2Ids = @([regex]::Matches($ae2ContractText, 'industrial_frontier:ae2/[a-z0-9_]+') | ForEach-Object { $_.Value } | Sort-Object -Unique)
         $removedForeignIds = @([regex]::Matches($ae2ContractText, 'nuclearcraft:assembler/ae2_[a-z_]+') | ForEach-Object { $_.Value } | Sort-Object -Unique)
         if ($m5FeaturesById.ContainsKey('m5.ae2_entry_contract')) {
             $ae2Feature = $m5FeaturesById['m5.ae2_entry_contract']
@@ -267,7 +267,7 @@ if ($null -ne $m5Trace) {
 
     # Each transport layer must keep exactly one owner. If a removed second
     # railway or the MTR epoch gate quietly returns, the split is gone.
-    $transportPath = Join-Path $rootPath 'kubejs\server_scripts\30_integrations\m5_transport_domains.js'
+    $transportPath = Join-Path $rootPath 'kubejs\server_scripts\30_integrations\05_transport_domains.js'
     if (Test-Path -LiteralPath $transportPath -PathType Leaf) {
         $transportText = Get-Content -Raw -Encoding UTF8 -LiteralPath $transportPath
         foreach ($requiredRoute in @('littlelogistics:steam_locomotive', 'littlelogistics:energy_locomotive', 'mtr:rail_node', 'mtr:railway_dashboard')) {
@@ -282,12 +282,12 @@ if ($null -ne $m5Trace) {
 # had no gate at all: its first machine cost lead and a piston, so the whole
 # atomic industry was reachable in P1. The checks below make that regression
 # loud if the gate is ever weakened.
-$m6TracePath = Join-Path $rootPath 'authoring\trace\m6_trace.json'
+$m6TracePath = Join-Path $rootPath 'authoring\trace\06_trace.json'
 $m6Trace = Read-JsonObject $m6TracePath
 $m6ChapterFiles = @('16_p6_nuclear')
 if ($null -ne $m6Trace) {
-    if ([int]$m6Trace.schema_version -ne 2) { Add-LintError 'm6_trace.json must use schema_version 2.' }
-    if ([string]$m6Trace.build_id -ne 'IF-M6-0001') { Add-LintError 'm6_trace.json must identify IF-M6-0001.' }
+    if ([int]$m6Trace.schema_version -ne 2) { Add-LintError '06_trace.json must use schema_version 2.' }
+    if ([string]$m6Trace.build_id -ne 'IF-M6-0001') { Add-LintError '06_trace.json must identify IF-M6-0001.' }
     $m6FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
     $m6FeaturesById = @{}
     foreach ($feature in @($m6Trace.features)) {
@@ -316,7 +316,7 @@ if ($null -ne $m6Trace) {
         Add-LintError "M6 trace quest count mismatch: trace=$($m6FeaturesById['m6.questbook'].artifact_count), source=$m6QuestCount"
     }
 
-    $nuclearGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m6_nuclear_epoch_gate.js'
+    $nuclearGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\06_nuclear_epoch_gate.js'
     if (Test-Path -LiteralPath $nuclearGatePath -PathType Leaf) {
         $nuclearGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $nuclearGatePath
         # The two entry machines are the whole lock. If either stops being
@@ -347,12 +347,12 @@ if ($null -ne $m6Trace) {
 # loud here, because both were real conditions of the installed JARs rather than
 # hypotheticals: the HBM machine domain had no entrance at all, and the whole
 # Creating Space stack was reachable in the first epoch for six wooden slabs.
-$m7TracePath = Join-Path $rootPath 'authoring\trace\m7_trace.json'
+$m7TracePath = Join-Path $rootPath 'authoring\trace\07_trace.json'
 $m7Trace = Read-JsonObject $m7TracePath
 $m7ChapterFiles = @('17_p7_strategic_space')
 if ($null -ne $m7Trace) {
-    if ([int]$m7Trace.schema_version -ne 2) { Add-LintError 'm7_trace.json must use schema_version 2.' }
-    if ([string]$m7Trace.build_id -ne 'IF-M7-0001') { Add-LintError 'm7_trace.json must identify IF-M7-0001.' }
+    if ([int]$m7Trace.schema_version -ne 2) { Add-LintError '07_trace.json must use schema_version 2.' }
+    if ([string]$m7Trace.build_id -ne 'IF-M7-0001') { Add-LintError '07_trace.json must identify IF-M7-0001.' }
     $m7FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
     $m7FeaturesById = @{}
     foreach ($feature in @($m7Trace.features)) {
@@ -384,7 +384,7 @@ if ($null -ne $m7Trace) {
     # The strategic gate is the only entrance the HBM machine domain has: its
     # assembly machine is produced solely by an assembly machine, so if this
     # recipe disappears the domain becomes unreachable again rather than early.
-    $strategicGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m7_strategic_epoch_gate.js'
+    $strategicGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\07_strategic_epoch_gate.js'
     if (Test-Path -LiteralPath $strategicGatePath -PathType Leaf) {
         $strategicGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $strategicGatePath
         foreach ($requiredRoute in @('hbm_ntm_rebirth:machine_assembly_machine', 'hbm_ntm_rebirth:anvil_iron', 'hbm_ntm_rebirth:anvil_lead')) {
@@ -428,7 +428,7 @@ if ($null -ne $m7Trace) {
 
     # The space gate closes the other half: without it the engine designer costs
     # six wooden slabs and smooth stone, i.e. the first epoch.
-    $spaceGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m7_space_epoch_gate.js'
+    $spaceGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\07_space_epoch_gate.js'
     if (Test-Path -LiteralPath $spaceGatePath -PathType Leaf) {
         $spaceGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $spaceGatePath
         foreach ($requiredRoute in @(
@@ -477,12 +477,12 @@ if ($null -ne $m7Trace) {
 # that return disappears, the whole branch becomes unreachable forever rather
 # than late. And fusion has exactly two owners by owner decision — the third
 # copy must stay removed.
-$m8TracePath = Join-Path $rootPath 'authoring\trace\m8_trace.json'
+$m8TracePath = Join-Path $rootPath 'authoring\trace\08_trace.json'
 $m8Trace = Read-JsonObject $m8TracePath
 $m8ChapterFiles = @('18_p8_orbital_network', '19_p9_finale')
 if ($null -ne $m8Trace) {
-    if ([int]$m8Trace.schema_version -ne 2) { Add-LintError 'm8_trace.json must use schema_version 2.' }
-    if ([string]$m8Trace.build_id -ne 'IF-M8-0001') { Add-LintError 'm8_trace.json must identify IF-M8-0001.' }
+    if ([int]$m8Trace.schema_version -ne 2) { Add-LintError '08_trace.json must use schema_version 2.' }
+    if ([string]$m8Trace.build_id -ne 'IF-M8-0001') { Add-LintError '08_trace.json must identify IF-M8-0001.' }
     $m8FeatureIds = [System.Collections.Generic.HashSet[string]]::new()
     $m8FeaturesById = @{}
     foreach ($feature in @($m8Trace.features)) {
@@ -517,7 +517,7 @@ if ($null -ne $m8Trace) {
         Add-LintError 'The mastery chapter must remain optional.'
     }
 
-    $lateGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m8_late_epoch_gate.js'
+    $lateGatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\08_late_epoch_gate.js'
     if (Test-Path -LiteralPath $lateGatePath -PathType Leaf) {
         $lateGateText = Get-Content -Raw -Encoding UTF8 -LiteralPath $lateGatePath
         foreach ($returnedInstallation in @(
@@ -540,7 +540,7 @@ if ($null -ne $m8Trace) {
 
 # The municipal water tail must stay closed: every declared sewage product needs
 # a passport, otherwise the loop drains into an undeclared substance again.
-$waterSubstancePath = Join-Path $rootPath 'docs\registries\m2_substance_passports.json'
+$waterSubstancePath = Join-Path $rootPath 'docs\registries\substance_passports.json'
 $waterSubstances = Read-JsonObject $waterSubstancePath
 if ($null -ne $waterSubstances) {
     $declaredSubstanceIds = [System.Collections.Generic.HashSet[string]]::new()
@@ -899,7 +899,7 @@ foreach ($requiredSetting in @(
     if ($gtConfig -notmatch $requiredSetting.pattern) { Add-LintError $requiredSetting.message }
 }
 
-$m2ProcessOwnershipPath = Join-Path $rootPath 'kubejs\server_scripts\30_integrations\m2_process_ownership.js'
+$m2ProcessOwnershipPath = Join-Path $rootPath 'kubejs\server_scripts\30_integrations\02_process_ownership.js'
 if (-not (Test-Path -LiteralPath $m2ProcessOwnershipPath -PathType Leaf)) {
     Add-LintError 'Missing M2 Create process-ownership script.'
 }
@@ -913,13 +913,13 @@ else {
         '3x #forge:ingots/copper',
         '#forge:ingots/zinc',
         '4x gtceu:brass_ingot',
-        'industrial_frontier:m2/create/brass_from_copper_zinc'
+        'industrial_frontier:create/brass_from_copper_zinc'
     )) {
         if (-not $m2ProcessText.Contains($requiredToken)) { Add-LintError "M2 process-ownership script is missing safety anchor: $requiredToken" }
     }
 }
 
-$m2Ae2GatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\m2_ae2_epoch_gate.js'
+$m2Ae2GatePath = Join-Path $rootPath 'kubejs\server_scripts\10_progression\02_ae2_epoch_gate.js'
 if (-not (Test-Path -LiteralPath $m2Ae2GatePath -PathType Leaf)) {
     Add-LintError 'Missing M2 AE2 epoch-gate script.'
 }
@@ -970,8 +970,8 @@ if ($null -ne $stable) {
 
 # Dynamically placed Ponder blocks above the base plate must be revealed.
 foreach ($ponderRelative in @(
-    'kubejs\client_scripts\10_ponder\m1_batch_processing.js',
-    'kubejs\client_scripts\10_ponder\m3_mechanical_stress.js'
+    'kubejs\client_scripts\10_ponder\01_batch_processing.js',
+    'kubejs\client_scripts\10_ponder\03_mechanical_stress.js'
 )) {
     $ponderPath = Join-Path $rootPath $ponderRelative
     if (-not (Test-Path -LiteralPath $ponderPath)) { continue }
@@ -1061,9 +1061,9 @@ foreach ($packName in @('server_scripts', 'startup_scripts', 'client_scripts')) 
 }
 
 # The faction module must agree with the registries it claims to follow.
-$factionDataRelative = 'kubejs\server_scripts\40_balance\m85_factions_1_data.js'
+$factionDataRelative = 'kubejs\server_scripts\40_balance\85_factions_1_data.js'
 $factionDataPath = Join-Path $rootPath $factionDataRelative
-$threatCorePath = Join-Path $rootPath 'kubejs\server_scripts\40_balance\m3_threat_director.js'
+$threatCorePath = Join-Path $rootPath 'kubejs\server_scripts\40_balance\03_threat_director.js'
 if ((Test-Path -LiteralPath $factionDataPath) -and (Test-Path -LiteralPath $threatCorePath)) {
     $factionDataText = Get-Content -Raw -Encoding UTF8 -LiteralPath $factionDataPath
     $threatCoreText = Get-Content -Raw -Encoding UTF8 -LiteralPath $threatCorePath

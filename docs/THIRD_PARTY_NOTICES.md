@@ -141,7 +141,7 @@ Minimap/World Map, Rechiseled и несколько библиотек. Полн
 ### Авторские ресурсы Recast
 
 Происхождение M9-иллюстраций, иконок и производных хранится в
-`docs/registries/m9_asset_provenance.json`. Они не были скопированы из других
+`docs/registries/asset_provenance.json`. Они не были скопированы из других
 модпаков. Source-artwork и generated-ассеты должны сохранять свои hashes и
 provenance при любом новом экспорте.
 

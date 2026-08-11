@@ -1,0 +1,465 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/substance_passports.schema.json",
+  "title": "Recast M2 substance passports",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "namespace",
+    "registry_id",
+    "status",
+    "scope_ru",
+    "purity_vocabulary",
+    "passports",
+    "planned_substances",
+    "gates",
+    "source_evidence"
+  ],
+  "properties": {
+    "schema_version": { "const": 2 },
+    "namespace": { "const": "industrial_frontier" },
+    "registry_id": { "const": "industrial_frontier:substance_passports" },
+    "status": { "const": "STATIC_COMPLETE_USER_GATE_PENDING" },
+    "scope_ru": { "type": "string", "minLength": 1 },
+    "purity_vocabulary": {
+      "const": [
+        "RAW",
+        "TECHNICAL",
+        "CHEMICAL",
+        "ELECTRONIC",
+        "REACTOR",
+        "AEROSPACE",
+        "DOMAIN_SPECIALIZED",
+        "UNCLASSIFIED"
+      ]
+    },
+    "passports": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "substance_id",
+          "status",
+          "kind",
+          "name_ru",
+          "name_en",
+          "formula",
+          "formula_status",
+          "physical_states",
+          "purity_classes",
+          "world_origin_decision_ref",
+          "first_epoch",
+          "automation",
+          "renewability",
+          "form_refs",
+          "domain_consumers",
+          "byproduct_refs",
+          "russian_term",
+          "source_strategy_ru",
+          "process_route_ru",
+          "process_refs",
+          "recipe_policy_ru",
+          "waste_policy_ru",
+          "canonical_output_policy_ru",
+          "evidence_refs",
+          "gate_refs"
+        ],
+        "properties": {
+          "substance_id": {
+            "type": "string",
+            "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$"
+          },
+          "status": {
+            "enum": [
+              "ACTIVE_INSTALLED",
+              "AUDIT_REQUIRED",
+              "GATED_CONCEPTUAL",
+              "GATED_FUTURE_DOMAIN"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "ELEMENT",
+              "ALLOY",
+              "COMPOUND",
+              "MINERAL",
+              "MIXTURE",
+              "FICTIONAL_MATERIAL"
+            ]
+          },
+          "name_ru": { "type": "string", "minLength": 1 },
+          "name_en": { "type": "string", "minLength": 1 },
+          "formula": { "type": ["string", "null"], "minLength": 1 },
+          "formula_status": { "enum": ["KNOWN", "NOT_APPLICABLE", "UNVERIFIED"] },
+          "composition": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["basis", "total_parts", "components"],
+            "properties": {
+              "basis": { "const": "PACK_MATERIAL_PARTS" },
+              "total_parts": { "type": "integer", "minimum": 2 },
+              "components": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["substance_ref", "parts"],
+                  "properties": {
+                    "substance_ref": {
+                      "type": "string",
+                      "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$"
+                    },
+                    "parts": { "type": "integer", "minimum": 1 }
+                  }
+                }
+              }
+            }
+          },
+          "physical_states": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "enum": ["SOLID", "LIQUID", "GAS", "PLASMA", "MIXTURE", "UNKNOWN"] },
+            "uniqueItems": true
+          },
+          "purity_classes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "RAW",
+                "TECHNICAL",
+                "CHEMICAL",
+                "ELECTRONIC",
+                "REACTOR",
+                "AEROSPACE",
+                "DOMAIN_SPECIALIZED",
+                "UNCLASSIFIED"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "world_origin_decision_ref": {
+            "anyOf": [
+              { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+              { "type": "null" }
+            ]
+          },
+          "first_epoch": { "$ref": "common.schema.json#/$defs/nullableEpoch" },
+          "automation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["first_automatic_epoch", "mass_epoch"],
+            "properties": {
+              "first_automatic_epoch": { "$ref": "common.schema.json#/$defs/nullableEpoch" },
+              "mass_epoch": { "$ref": "common.schema.json#/$defs/nullableEpoch" }
+            }
+          },
+          "renewability": {
+            "enum": [
+              "NONRENEWABLE",
+              "RENEWABLE_INSTALLED",
+              "RENEWABLE_GATED",
+              "MIXED",
+              "UNRESOLVED"
+            ]
+          },
+          "form_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^industrial_frontier:form/[a-z0-9_/-]+$"
+            },
+            "uniqueItems": true
+          },
+          "domain_consumers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["domain_ref", "status", "purpose_ru"],
+              "properties": {
+                "domain_ref": { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+                "status": { "enum": ["ACTIVE_INSTALLED", "GATED_NOT_INSTALLED", "AUDIT_REQUIRED", "GATED_CONCEPTUAL"] },
+                "purpose_ru": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "byproduct_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$"
+            },
+            "uniqueItems": true
+          },
+          "russian_term": { "type": "string", "minLength": 1 },
+          "source_strategy_ru": { "type": "string", "minLength": 1 },
+          "process_route_ru": { "type": "string", "minLength": 1 },
+          "process_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^industrial_frontier:process/[a-z0-9_/-]+$"
+            },
+            "uniqueItems": true
+          },
+          "recipe_policy_ru": { "type": "string", "minLength": 1 },
+          "waste_policy_ru": { "type": "string", "minLength": 1 },
+          "canonical_output_policy_ru": { "type": "string", "minLength": 1 },
+          "evidence_refs": { "$ref": "common.schema.json#/$defs/evidenceRefs" },
+          "gate_refs": { "$ref": "common.schema.json#/$defs/gateRefs" }
+        }
+      }
+    },
+    "planned_substances": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "substance_id",
+          "group",
+          "status",
+          "name_ru",
+          "name_en",
+          "russian_term",
+          "kind",
+          "formula",
+          "formula_status",
+          "physical_states",
+          "purity_classes",
+          "world_origin_decision_ref",
+          "first_epoch",
+          "automation",
+          "renewability",
+          "owner_domain_ref",
+          "secondary_owner_domain_refs",
+          "form_refs",
+          "forms_policy_ru",
+          "source_strategy_ru",
+          "process_route_ru",
+          "process_refs",
+          "recipe_policy_ru",
+          "consumer_domain_refs",
+          "domain_consumers",
+          "byproduct_refs",
+          "waste_streams_ru",
+          "waste_policy_ru",
+          "recycle_policy_ru",
+          "canonical_output_policy_ru",
+          "evidence_refs",
+          "gate_refs",
+          "exit_contract"
+        ],
+        "properties": {
+          "substance_id": {
+            "type": "string",
+            "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$"
+          },
+          "group": {
+            "enum": [
+              "P0_NATURAL_MATERIALS",
+              "P1_EARLY_MATERIALS",
+              "P2_FOUNDATIONS",
+              "P3_APPLIED_CHEMISTRY",
+              "P4_INDUSTRIAL_CHEMISTRY",
+              "P4_WATER",
+              "P4_PETROLEUM",
+              "P4_POLYMERS",
+              "P5_ENGINEERED_MATERIALS",
+              "P5_ELECTRONICS",
+              "P6_PROTECTIVE_CHEMISTRY",
+              "P6_NUCLEAR",
+              "P7_AEROSPACE",
+              "P8_EXTRATERRESTRIAL",
+              "P9_STRATEGIC"
+            ]
+          },
+          "status": { "const": "GATED_CONCEPTUAL" },
+          "name_ru": { "type": "string", "minLength": 1 },
+          "name_en": { "type": "string", "minLength": 1 },
+          "russian_term": { "type": "string", "minLength": 1 },
+          "kind": {
+            "enum": ["ELEMENT", "ALLOY", "COMPOUND", "MINERAL", "MIXTURE", "FICTIONAL_MATERIAL"]
+          },
+          "formula": { "type": ["string", "null"], "minLength": 1 },
+          "formula_status": { "enum": ["KNOWN", "NOT_APPLICABLE", "UNVERIFIED"] },
+          "physical_states": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "enum": ["SOLID", "LIQUID", "GAS", "PLASMA", "MIXTURE", "UNKNOWN"] },
+            "uniqueItems": true
+          },
+          "purity_classes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": ["RAW", "TECHNICAL", "CHEMICAL", "ELECTRONIC", "REACTOR", "AEROSPACE", "DOMAIN_SPECIALIZED", "UNCLASSIFIED"]
+            },
+            "uniqueItems": true
+          },
+          "world_origin_decision_ref": {
+            "anyOf": [
+              { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+              { "type": "null" }
+            ]
+          },
+          "first_epoch": { "$ref": "common.schema.json#/$defs/epoch" },
+          "automation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["first_automatic_epoch", "mass_epoch"],
+            "properties": {
+              "first_automatic_epoch": { "$ref": "common.schema.json#/$defs/nullableEpoch" },
+              "mass_epoch": { "$ref": "common.schema.json#/$defs/nullableEpoch" }
+            }
+          },
+          "renewability": {
+            "enum": [
+              "NONRENEWABLE",
+              "RENEWABLE_INSTALLED",
+              "RENEWABLE_GATED",
+              "MIXED",
+              "UNRESOLVED"
+            ]
+          },
+          "owner_domain_ref": { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+          "secondary_owner_domain_refs": {
+            "type": "array",
+            "items": { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+            "uniqueItems": true
+          },
+          "form_refs": { "type": "array", "maxItems": 0 },
+          "forms_policy_ru": { "type": "string", "minLength": 1 },
+          "source_strategy_ru": { "type": "string", "minLength": 1 },
+          "process_route_ru": { "type": "string", "minLength": 1 },
+          "process_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^industrial_frontier:process/[a-z0-9_/-]+$"
+            },
+            "uniqueItems": true
+          },
+          "recipe_policy_ru": { "type": "string", "minLength": 1 },
+          "consumer_domain_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+            "uniqueItems": true
+          },
+          "domain_consumers": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["domain_ref", "status", "purpose_ru"],
+              "properties": {
+                "domain_ref": { "$ref": "common.schema.json#/$defs/industrialFrontierId" },
+                "status": { "enum": ["ACTIVE_INSTALLED", "GATED_NOT_INSTALLED", "AUDIT_REQUIRED", "GATED_CONCEPTUAL"] },
+                "purpose_ru": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "byproduct_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^industrial_frontier:substance/[a-z0-9_/-]+$"
+            },
+            "uniqueItems": true
+          },
+          "waste_streams_ru": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          },
+          "waste_policy_ru": { "type": "string", "minLength": 1 },
+          "recycle_policy_ru": { "type": "string", "minLength": 1 },
+          "canonical_output_policy_ru": { "type": "string", "minLength": 1 },
+          "evidence_refs": { "$ref": "common.schema.json#/$defs/evidenceRefs" },
+          "gate_refs": { "$ref": "common.schema.json#/$defs/gateRefs" },
+          "exit_contract": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "target_status",
+              "unblocks_concept_refs",
+              "blocked_contract_refs",
+              "owner",
+              "approval_state",
+              "required_evidence_refs",
+              "criteria_ru",
+              "checks",
+              "runtime_binding_allowed"
+            ],
+            "properties": {
+              "target_status": { "enum": ["ACTIVE_INSTALLED", "AUDIT_REQUIRED", "GATED_FUTURE_DOMAIN"] },
+              "unblocks_concept_refs": {
+                "type": "array",
+                "items": { "type": "string", "pattern": "^(material|chemistry)\\.[a-z0-9_.]+$" },
+                "uniqueItems": true
+              },
+              "blocked_contract_refs": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 },
+                "uniqueItems": true
+              },
+              "owner": { "enum": ["CODEX", "PACK_OWNER", "SHARED", "EXTERNAL_RELEASE"] },
+              "approval_state": { "const": "BLOCKED_PENDING_EVIDENCE" },
+              "required_evidence_refs": { "$ref": "common.schema.json#/$defs/evidenceRefs" },
+              "criteria_ru": {
+                "type": "array",
+                "minItems": 3,
+                "items": { "type": "string", "minLength": 1 },
+                "uniqueItems": true
+              },
+              "checks": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "source_world_origin_verified",
+                  "mass_balance_verified",
+                  "canonical_forms_verified",
+                  "byproducts_waste_verified",
+                  "epoch_lock_verified",
+                  "no_bypass_duplication_verified",
+                  "russian_quest_link_verified"
+                ],
+                "properties": {
+                  "source_world_origin_verified": { "type": "boolean" },
+                  "mass_balance_verified": { "type": "boolean" },
+                  "canonical_forms_verified": { "type": "boolean" },
+                  "byproducts_waste_verified": { "type": "boolean" },
+                  "epoch_lock_verified": { "type": "boolean" },
+                  "no_bypass_duplication_verified": { "type": "boolean" },
+                  "russian_quest_link_verified": { "type": "boolean" }
+                }
+              },
+              "runtime_binding_allowed": { "const": false }
+            }
+          }
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/gate" }
+    },
+    "source_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/sourceEvidence" }
+    }
+  }
+}

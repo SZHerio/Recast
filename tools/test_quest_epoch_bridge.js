@@ -116,7 +116,7 @@ const context = vm.createContext({
 
 const root = path.resolve(__dirname, '..')
 for (const relative of [
-  'kubejs/server_scripts/40_balance/m3_threat_director.js',
+  'kubejs/server_scripts/40_balance/03_threat_director.js',
   'kubejs/server_scripts/10_progression/quest_commissioning_bridge.js',
 ]) {
   vm.runInContext(fs.readFileSync(path.join(root, relative), 'utf8'), context, { filename: relative })

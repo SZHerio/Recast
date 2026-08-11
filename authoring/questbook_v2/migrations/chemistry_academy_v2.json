@@ -41,7 +41,7 @@
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/70_material_passports.json",
-        "docs/registries/m2_substance_passports.json"
+        "docs/registries/substance_passports.json"
       ]
     },
     {
@@ -54,7 +54,7 @@
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/70_material_passports.json",
-        "docs/registries/m2_domain_process_ownership.json"
+        "docs/registries/domain_process_ownership.json"
       ]
     },
     {
@@ -80,7 +80,7 @@
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/70_material_passports.json",
-        "kubejs/server_scripts/30_integrations/m2_process_ownership.js"
+        "kubejs/server_scripts/30_integrations/02_process_ownership.js"
       ]
     },
     {
@@ -93,7 +93,7 @@
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/70_material_passports.json",
-        "docs/registries/m2_substance_passports.json"
+        "docs/registries/substance_passports.json"
       ]
     },
     {
@@ -119,7 +119,7 @@
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/70_material_passports.json",
-        "docs/registries/m2_bypass_decisions.json"
+        "docs/registries/bypass_decisions.json"
       ]
     },
     {
@@ -158,7 +158,7 @@
       "evidence": [
         "docs/registries/stable_ids.json",
         "authoring/quests/71_academy_of_elements.json",
-        "docs/registries/m2_substance_passports.json"
+        "docs/registries/substance_passports.json"
       ]
     },
     {

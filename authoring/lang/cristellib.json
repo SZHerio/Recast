@@ -1,3 +1,4 @@
 {
-  "cristellib.builtinPack": "Встроенный пакет данных от Cristel Lib"
+  "cristellib.builtinPack": "Встроенный пакет данных от Cristel Lib",
+  "cristellib.nameAndSource": "%s (%s)"
 }

@@ -19,7 +19,7 @@
       "lv",
       "electrification"
     ],
-    "hide_until_reached": true,
+    "hide_until_reached": false,
     "text_ru": {
       "title": "P3 — Электрификация",
       "subtitle": "Паровая турбина, кабели, аккумуляторы и первая рабочая сеть низкого напряжения",
@@ -61,7 +61,7 @@
             "quest": "if.quest.v2.p2.commissioning",
             "reason": "Электрификация начинается после принятого парового и металлургического цеха P2.",
             "evidence": [
-              "docs/registries/m2_progression_graph.json"
+              "docs/registries/progression_graph.json"
             ]
           }
         ]
@@ -79,18 +79,7 @@
         }
       ],
       "text_ru": {
-        "title_ru": "Как не сжечь первую сеть",
-        "lead_ru": "В GTCEu энергия измеряется в EU. Ступень напряжения определяет, какие машины можно подключить, сила тока — сколько энергии выдержит кабель, а аккумуляторы задают только запас.",
-        "purpose_ru": "На этом этапе вы работаете с низким напряжением LV. Источник, кабель, буфер и машина должны поддерживать эту ступень, иначе сеть будет работать неправильно или повредит оборудование.",
-        "steps_ru": [
-          "Разберите отдельно напряжение, силу тока и ёмкость аккумуляторов.",
-          "Наметьте короткую цепь: паровая турбина LV, кабель LV, аккумуляторный буфер LV и одна машина LV."
-        ],
-        "success_ru": "Вы понимаете, почему большой запас энергии не защищает машину от неверного напряжения и почему слишком слабый кабель ограничивает всю сеть.",
-        "diagnostics_ru": [
-          "Перед подключением сравните ступень источника, кабеля, буфера и машины. Если хотя бы один элемент рассчитан на другую ступень, сначала исправьте схему."
-        ],
-        "next_ru": "Первым источником электричества станет паровая турбина LV.",
+        "title_ru": "Первая электрическая сеть",
         "task_text_ru": "Разберитесь, чем отличаются напряжение, сила тока и запас энергии."
       },
       "authorship": {
@@ -160,9 +149,9 @@
       "content_refs": [
         {
           "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
+          "id": "docs/registries/energy_networks.json",
           "evidence": [
-            "docs/registries/m2_energy_networks.json"
+            "docs/registries/energy_networks.json"
           ]
         },
         {
@@ -181,10 +170,10 @@
         "rationale_ru": "Электробезопасность объясняется до ресурсных задач."
       },
       "layout": {
-        "x": 0,
-        "y": 0,
+        "x": 0.0,
+        "y": 0.0,
         "shape": "gear",
-        "size": 1.5
+        "size": 1.0
       }
     },
     {
@@ -206,7 +195,7 @@
             "quest": "if.quest.v2.p3.intro",
             "reason": "Источник EU устанавливается только после объяснения ограничений сети.",
             "evidence": [
-              "docs/registries/m2_energy_networks.json"
+              "docs/registries/energy_networks.json"
             ]
           }
         ]
@@ -226,39 +215,12 @@
             "count": 1,
             "consume": false
           }
-        },
-        {
-          "alias": "if.task.v2.p3.generator.use",
-          "engine_id": "4B65679E8990E746",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите турбину LV и откройте её интерфейс.",
-            "help": "Проверьте доступ к паровому входу и электрическому выходу."
-          },
-          "use": {
-            "block": "gtceu:lv_steam_turbine",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
         }
       ],
       "text_ru": {
         "title_ru": "Пар становится электричеством",
-        "lead_ru": "Паровая турбина превращает пар из уже знакомого котельного контура в энергию EU для первой сети GTCEu.",
-        "purpose_ru": "Турбина вырабатывает энергию, но не хранит её. Для устойчивой работы ей нужны постоянная подача пара и электрический выход ступени LV.",
-        "steps_ru": [
-          "Соберите турбину LV и установите её рядом с паровой магистралью, оставив доступ к сторонам.",
-          "Откройте интерфейс, подведите пар и не подключайте потребитель до установки подходящего кабеля."
-        ],
-        "success_ru": "Турбина установлена, получает пар и готова передавать энергию по кабелю LV.",
-        "diagnostics_ru": [
-          "Если турбина не работает, сначала проверьте запас пара и сторону его ввода.",
-          "Если пар есть, но сеть пуста, проверьте электрический выход и соединение кабеля."
-        ],
-        "next_ru": "Теперь проведём энергию по оловянному кабелю LV.",
-        "task_text_ru": "Получите, установите и откройте одну паровую турбину LV."
+        "purpose_ru": "Турбина превращает пар в электричество. Котёл у вас уже есть, вся разница — куда направить трубу. И не дайте воде кончиться: сухой котёл взрывается вместе со всем, что стоит рядом.",
+        "task_text_ru": "Получите одну паровую турбину LV."
       },
       "authorship": {
         "primary_language": "ru",
@@ -267,15 +229,13 @@
         "editorial_note": "Старый генератор конкретизирован до локально подтверждённой паровой турбины LV и усилен взаимодействием."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Предмет и блок подтверждены локальным реестром; задача не смешивает системы энергии EU и FE."
+          "Переписано по стандарту от 10 августа 2026 года."
         ]
       },
       "teaching_sections": [
@@ -329,7 +289,7 @@
         },
         {
           "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
+          "id": "docs/registries/energy_networks.json",
           "evidence": [
             "GT EU определена как активная сеть P3."
           ]
@@ -351,361 +311,10 @@
         "rationale_ru": "Одна турбина питает учебную сеть и остаётся производственным активом."
       },
       "layout": {
-        "x": 2,
-        "y": 0,
+        "x": 2.0,
+        "y": -0.75,
         "shape": "rsquare",
-        "size": 1.4
-      }
-    },
-    {
-      "alias": "if.quest.v2.p3.cable",
-      "engine_id": "3F3E8024F482B958",
-      "epoch": "P3",
-      "role": "integration",
-      "requirement": "required",
-      "icon": "gtceu:tin_single_cable",
-      "tags": [
-        "mainline",
-        "cable",
-        "lv"
-      ],
-      "dependency": {
-        "mode": "ALL_OF",
-        "edges": [
-          {
-            "quest": "if.quest.v2.p3.generator",
-            "reason": "Кабель выбирается для уже известного источника и класса напряжения.",
-            "evidence": [
-              "docs/registries/m2_energy_networks.json"
-            ]
-          }
-        ]
-      },
-      "proofs": [
-        {
-          "alias": "if.task.v2.p3.cable.items",
-          "engine_id": "434FA5DE673D19AD",
-          "type": "item",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Получите восемь одинарных оловянных кабелей.",
-            "help": "Партия предназначена для короткой учебной сети LV."
-          },
-          "item": {
-            "id": "gtceu:tin_single_cable",
-            "count": 8,
-            "consume": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p3.cable.place",
-          "engine_id": "4B4CB5947E57AF87",
-          "type": "place",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите хотя бы один одинарный оловянный кабель.",
-            "help": "Размещайте кабель между источником и будущим буфером, не подключая неверный класс машины."
-          },
-          "place": {
-            "block": "gtceu:tin_single_cable",
-            "count": 1,
-            "require_replace": false
-          }
-        }
-      ],
-      "text_ru": {
-        "title_ru": "Кабель — ограничение, не декор",
-        "lead_ru": "Одинарный оловянный кабель подходит для сети LV, но выдерживает только указанную в подсказке силу тока.",
-        "purpose_ru": "Сначала нужна короткая и обозримая линия. Так проще найти разрыв или неверно подключённую сторону, а материалы не уйдут на лишние десятки блоков.",
-        "steps_ru": [
-          "Получите восемь одинарных оловянных кабелей.",
-          "Проложите короткий доступный участок от турбины к месту будущего аккумуляторного буфера."
-        ],
-        "success_ru": "Кабельная трасса начата, а оставшейся партии хватит, чтобы подключить буфер и первую машину рядом с турбиной.",
-        "diagnostics_ru": [
-          "Если сеть не получает питание, проверьте непрерывность трассы и правильные стороны блоков.",
-          "Если кабель перегружен, уменьшите число потребителей или выберите проводник с подходящей пропускной способностью."
-        ],
-        "next_ru": "Между источником и машиной поставим аккумуляторный буфер LV.",
-        "task_text_ru": "Изготовьте восемь одинарных оловянных кабелей и установите хотя бы один."
-      },
-      "authorship": {
-        "primary_language": "ru",
-        "origin": "human_authored",
-        "machine_translation": false,
-        "editorial_note": "Квест требует материал и одно размещение, а не выдаёт стопку кабеля за завершённую сеть."
-      },
-      "editorial_review": {
-        "state": "RU_READY",
-        "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
-        ],
-        "review_notes": [
-          "Кабель подтверждён локальным реестром; точные параметры предлагается смотреть во всплывающей подсказке предмета."
-        ]
-      },
-      "teaching_sections": [
-        {
-          "kind": "purpose",
-          "source_fields": [
-            "text_ru.lead_ru",
-            "text_ru.purpose_ru"
-          ]
-        },
-        {
-          "kind": "setup",
-          "source_fields": [
-            "text_ru.steps_ru"
-          ]
-        },
-        {
-          "kind": "hazards",
-          "source_fields": [
-            "text_ru.purpose_ru",
-            "text_ru.diagnostics_ru"
-          ]
-        },
-        {
-          "kind": "output",
-          "source_fields": [
-            "text_ru.success_ru"
-          ]
-        },
-        {
-          "kind": "diagnostics",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
-          ]
-        },
-        {
-          "kind": "downstream",
-          "source_fields": [
-            "text_ru.next_ru"
-          ]
-        },
-        {
-          "kind": "operation",
-          "source_fields": [
-            "text_ru.task_text_ru"
-          ]
-        }
-      ],
-      "content_refs": [
-        {
-          "kind": "item",
-          "id": "gtceu:tin_single_cable",
-          "evidence": [
-            "kubejs/exported/gtceu_item_census.json"
-          ]
-        },
-        {
-          "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
-          "evidence": [
-            "Реестр определяет GT EU как отдельную кабельную сеть."
-          ]
-        }
-      ],
-      "grind": {
-        "class": "GREEN",
-        "training_batch": 8,
-        "expected_runs": 1,
-        "automation_before_bulk": false,
-        "budget_ref": "industrial_frontier:grind/p3/lv_components",
-        "rationale_ru": "Восемь кабелей образуют короткую рабочую трассу без складской квоты."
-      },
-      "layout": {
-        "x": 4,
-        "y": 0,
-        "shape": "square",
-        "size": 1.3
-      }
-    },
-    {
-      "alias": "if.quest.v2.p3.buffer",
-      "engine_id": "3BBD1D3385C43666",
-      "epoch": "P3",
-      "role": "operation",
-      "requirement": "required",
-      "icon": "gtceu:lv_battery_buffer_4x",
-      "tags": [
-        "mainline",
-        "buffer",
-        "lv"
-      ],
-      "dependency": {
-        "mode": "ALL_OF",
-        "edges": [
-          {
-            "quest": "if.quest.v2.p3.cable",
-            "reason": "Буфер устанавливается после выбора безопасного кабеля LV.",
-            "evidence": [
-              "kubejs/exported/gtceu_item_census.json"
-            ]
-          }
-        ]
-      },
-      "proofs": [
-        {
-          "alias": "if.task.v2.p3.buffer.item",
-          "engine_id": "423059A21AFC5403",
-          "type": "item",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Получите аккумуляторный буфер LV на четыре элемента.",
-            "help": "Буфер останется между источником и потребителем."
-          },
-          "item": {
-            "id": "gtceu:lv_battery_buffer_4x",
-            "count": 1,
-            "consume": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p3.buffer.battery",
-          "engine_id": "4A13000000000010",
-          "type": "item",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Подготовьте хотя бы один совместимый аккумулятор LV.",
-            "help": "Пустой корпус буфера не передаёт энергию. Подойдёт кадмиевый, литиевый или натриевый аккумулятор LV из списка задачи."
-          },
-          "item_tag": {
-            "id": "industrial_frontier:power/lv_batteries",
-            "count": 1
-          }
-        },
-        {
-          "alias": "if.task.v2.p3.buffer.use",
-          "engine_id": "41CEA8E2374DB683",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите буфер и откройте его интерфейс.",
-            "help": "Проверьте стороны сети и ячейки аккумуляторов."
-          },
-          "use": {
-            "block": "gtceu:lv_battery_buffer_4x",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        }
-      ],
-      "text_ru": {
-        "title_ru": "Буфер между источником и нагрузкой",
-        "lead_ru": "Аккумуляторный буфер сглаживает разницу между выработкой турбины и потреблением машины.",
-        "purpose_ru": "Буфер хранит энергию только через вставленные аккумуляторы и не повышает допустимое напряжение. Он также делает состояние сети видимым: разряженный элемент указывает на проблему источника, заряженный при стоящей машине — на остановленный выход.",
-        "steps_ru": [
-          "Установите буфер LV между турбиной и будущим потребителем.",
-          "Вставьте хотя бы один совместимый аккумулятор LV, зарядите его от турбины и откройте интерфейс.",
-          "Проверьте направление сторон: пустой корпус без аккумулятора не питает машину."
-        ],
-        "success_ru": "Буфер установлен между турбиной и будущей машиной, содержит аккумулятор и может передавать энергию потребителю.",
-        "diagnostics_ru": [
-          "Если буфер пуст, проверьте турбину, пар и кабель до входа.",
-          "Если буфер полный, а машина не работает, проверьте выходную сторону, кабель и класс напряжения потребителя."
-        ],
-        "next_ru": "Теперь подготовим редстоун и три основные детали первой машины LV.",
-        "task_text_ru": "Получите буфер LV, вставьте хотя бы один совместимый аккумулятор, зарядите его и откройте интерфейс."
-      },
-      "authorship": {
-        "primary_language": "ru",
-        "origin": "human_authored",
-        "machine_translation": false,
-        "editorial_note": "Буфер объяснён как диагностический узел, а не как универсальная защита от неверного напряжения."
-      },
-      "editorial_review": {
-        "state": "RU_READY",
-        "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
-        ],
-        "review_notes": [
-          "Буфер подтверждён локальным реестром; подходящие аккумуляторы игрок выбирает по действующим рецептам JEI."
-        ]
-      },
-      "teaching_sections": [
-        {
-          "kind": "purpose",
-          "source_fields": [
-            "text_ru.lead_ru",
-            "text_ru.purpose_ru"
-          ]
-        },
-        {
-          "kind": "setup",
-          "source_fields": [
-            "text_ru.steps_ru"
-          ]
-        },
-        {
-          "kind": "operation",
-          "source_fields": [
-            "text_ru.success_ru",
-            "text_ru.task_text_ru"
-          ]
-        },
-        {
-          "kind": "recovery",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
-          ]
-        },
-        {
-          "kind": "diagnostics",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
-          ]
-        },
-        {
-          "kind": "downstream",
-          "source_fields": [
-            "text_ru.next_ru"
-          ]
-        }
-      ],
-      "content_refs": [
-        {
-          "kind": "item",
-          "id": "gtceu:lv_battery_buffer_4x",
-          "evidence": [
-            "kubejs/exported/gtceu_item_census.json"
-          ]
-        },
-        {
-          "kind": "item_tag",
-          "id": "industrial_frontier:power/lv_batteries",
-          "evidence": [
-            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/power/lv_batteries.json"
-          ]
-        },
-        {
-          "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
-          "evidence": [
-            "Реестр разделяет генерацию, хранение и передачу энергии."
-          ]
-        }
-      ],
-      "grind": {
-        "class": "TEACHING",
-        "training_batch": 2,
-        "expected_runs": 1,
-        "automation_before_bulk": false,
-        "budget_ref": "industrial_frontier:grind/p3/lv_components",
-        "rationale_ru": "Один буфер и один аккумулятор образуют минимальную рабочую учебную сеть и остаются её диагностическим центром."
-      },
-      "layout": {
-        "x": 6,
-        "y": 0,
-        "shape": "rsquare",
-        "size": 1.4
+        "size": 1.2
       }
     },
     {
@@ -749,17 +358,6 @@
       ],
       "text_ru": {
         "title_ru": "Редстоун для первых схем",
-        "lead_ru": "Редстоун здесь становится сырьём электроники, а не заменой силового кабеля.",
-        "purpose_ru": "Восемь единиц хватит на первые схемы и управляющие детали. Редстоун передаёт сигналы и входит в рецепты, но не заменяет силовой кабель EU.",
-        "steps_ru": [
-          "Получите восемь единиц принятой редстоуновой пыли.",
-          "Сохраните её для базовых электронных схем и не прокладывайте редстоун вместо кабеля EU."
-        ],
-        "success_ru": "Редстоуновый запас готов, а различие между управляющим материалом и силовой сетью понятно.",
-        "diagnostics_ru": [
-          "Если похожая пыль не засчитывается, откройте задание и сверяйтесь со списком допустимых вариантов."
-        ],
-        "next_ru": "Редстоун, сталь и медь понадобятся в первых компонентах LV.",
         "task_text_ru": "Получите восемь единиц подходящей редстоуновой пыли."
       },
       "authorship": {
@@ -835,7 +433,7 @@
         },
         {
           "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
+          "id": "docs/registries/energy_networks.json",
           "evidence": [
             "Редстоуновая логика не является GT EU-кабелем."
           ]
@@ -850,9 +448,838 @@
         "rationale_ru": "Восемь единиц — полезный электронный запас без массовой добычи."
       },
       "layout": {
-        "x": 4,
-        "y": 2,
+        "x": 2.0,
+        "y": 0.75,
         "shape": "square",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.hardwired_interlocks",
+      "engine_id": "3A23000000000005",
+      "epoch": "P3",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "projectred_integration:timer_gate",
+      "tags": [
+        "projectred",
+        "interlock",
+        "signal_bus"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.overview",
+            "reason": "Местная защита вводится после разделения уровней управления.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.signal",
+            "reason": "Игрок уже знаком с базовым электрическим сигналом и может перейти к составной логике.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.hardwired_interlocks.wire",
+          "engine_id": "4A23000000000008",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один провод из красного сплава.",
+            "help": "Он проведёт одиночный сигнал вдоль машины или стены."
+          },
+          "item": {
+            "id": "projectred_transmission:red_alloy_wire",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.hardwired_interlocks.timer",
+          "engine_id": "4A23000000000009",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один таймер.",
+            "help": "Таймер даёт повторяемый такт; для аварийной остановки нужен отдельный постоянный сигнал."
+          },
+          "item": {
+            "id": "projectred_integration:timer_gate",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.hardwired_interlocks.bus",
+          "engine_id": "4A2300000000000A",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один обычный жгут проводов любого цвета.",
+            "help": "Подойдёт нейтральный или окрашенный жгут без каркаса. Он переносит несколько независимых каналов по одной трассе; после получения деталей проверьте приоритет аварийного запрета на собранной цепи."
+          },
+          "item_tag": {
+            "id": "projectred_transmission:bundled_wire",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Защита рядом с машиной",
+        "purpose_ru": "Таймер и логический элемент возле самой машины срабатывают быстрее пульта, да и чинить их проще — всё на виду. Схем таких понадобится много, запаситесь деталями заранее.",
+        "task_text_ru": "Соберите местную блокировку с тактом, отдельным запретом и двумя подписанными каналами."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "ProjectRed закреплён за локальной детерминированной логикой, а не за диспетчерским уровнем."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "projectred_core",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-core.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "projectred_integration",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-integration.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "projectred_transmission",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-transmission.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "projectred_illumination",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-illumination.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "cb_multipart",
+          "evidence": [
+            "mods/CBMultipart-1.20.1-3.3.0.159-universal.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "cb_microblock",
+          "evidence": [
+            "mods/CBMultipart-1.20.1-3.3.0.159-universal.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "cb_multipart_minecraft",
+          "evidence": [
+            "mods/CBMultipart-1.20.1-3.3.0.159-universal.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "projectred_integration:timer_gate",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-integration.jar!assets/projectred_integration/models/item/timer_gate.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "projectred_transmission:bundled_wire",
+          "evidence": [
+            "mods/ProjectRed-1.20.1-4.21.0-transmission.jar!data/projectred_transmission/tags/items/bundled_wire.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/projectred_interlock",
+        "rationale_ru": "По одному представителю провода, логики и многоканальной линии достаточно для учебного шкафа."
+      },
+      "layout": {
+        "x": 4.0,
+        "y": -1.5,
+        "shape": "rsquare",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.measured_power",
+      "engine_id": "3A23000000000007",
+      "epoch": "P3",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "powergrid:multimeter",
+      "tags": [
+        "powergrid",
+        "measurement",
+        "motor"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.overview",
+            "reason": "Учебная силовая сеть строится после разделения исполнительной и управляющей частей.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.generator",
+            "reason": "Игрок уже получил электричество и готов перейти от факта питания к измерениям.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.measured_power.meter",
+          "engine_id": "4A2300000000000D",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один мультиметр.",
+            "help": "Измеряйте сеть до подключения двигателя, а затем повторите измерение под нагрузкой."
+          },
+          "item": {
+            "id": "powergrid:multimeter",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.measured_power.fuse",
+          "engine_id": "4A2300000000000E",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один держатель предохранителя.",
+            "help": "Предохранитель ставится до нагрузки и должен оставаться доступным для замены."
+          },
+          "item": {
+            "id": "powergrid:fuse_holder",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Ток видно по последствиям",
+        "purpose_ru": "Надпись «подключено» о нагрузке не говорит ничего. Пока не измерите ток, не узнаете, выдержит ли сеть двигатель — а узнаете обычно по сгоревшему проводу.",
+        "task_text_ru": "Соберите измеряемую и защищённую цепь с одним электрическим двигателем."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Power Grid получает роль электротехнической лаборатории и специального привода, не вытесняя сеть EU."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "powergrid",
+          "evidence": [
+            "mods/powergrid-mc1.20.1-0.5.5.1.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "powergrid:multimeter",
+          "evidence": [
+            "mods/powergrid-mc1.20.1-0.5.5.1.jar!assets/powergrid/models/item/multimeter.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "powergrid:electric_motor",
+          "evidence": [
+            "mods/powergrid-mc1.20.1-0.5.5.1.jar!assets/powergrid/models/item/electric_motor.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/measured_power",
+        "rationale_ru": "По одному измерителю, защитному узлу и двигателю образуют полноценный учебный стенд без серийной сборки."
+      },
+      "layout": {
+        "x": 4.0,
+        "y": 0.0,
+        "shape": "diamond",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p3.cable",
+      "engine_id": "3F3E8024F482B958",
+      "epoch": "P3",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "gtceu:tin_single_cable",
+      "tags": [
+        "mainline",
+        "cable",
+        "lv"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p3.generator",
+            "reason": "Кабель выбирается для уже известного источника и класса напряжения.",
+            "evidence": [
+              "docs/registries/energy_networks.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p3.cable.items",
+          "engine_id": "434FA5DE673D19AD",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите восемь одинарных оловянных кабелей.",
+            "help": "Партия предназначена для короткой учебной сети LV."
+          },
+          "item": {
+            "id": "gtceu:tin_single_cable",
+            "count": 8,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p3.cable.place",
+          "engine_id": "4B4CB5947E57AF87",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите хотя бы один одинарный оловянный кабель.",
+            "help": "Размещайте кабель между источником и будущим буфером, не подключая неверный класс машины."
+          },
+          "place": {
+            "block": "gtceu:tin_single_cable",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Кабели и их пределы",
+        "purpose_ru": "У провода есть предел, и он его не переживёт. Перегрузите — сгорит сам и утащит за собой машину. А машине хватит одного тика с завышенным напряжением, чтобы взорваться. Проводов вы намотаете километры, так что волока будет работать постоянно.",
+        "task_text_ru": "Изготовьте восемь одинарных оловянных кабелей и установите хотя бы один."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Квест требует материал и одно размещение, а не выдаёт стопку кабеля за завершённую сеть."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:tin_single_cable",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/energy_networks.json",
+          "evidence": [
+            "Реестр определяет GT EU как отдельную кабельную сеть."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 8,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/lv_components",
+        "rationale_ru": "Восемь кабелей образуют короткую рабочую трассу без складской квоты."
+      },
+      "layout": {
+        "x": 4.0,
+        "y": 1.5,
+        "shape": "square",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.p3.bridge",
+      "engine_id": "3013000000000007",
+      "epoch": "P3",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:lever",
+      "tags": [
+        "mainline",
+        "energy_bridge",
+        "anti_loop"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p3.generator",
+            "reason": "Правило конверсии изучается после появления реального источника EU.",
+            "evidence": [
+              "docs/registries/energy_networks.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.cable",
+            "reason": "Правило конверсии опирается на уже понятную кабельную сеть GTCEu.",
+            "evidence": [
+              "config/gtceu.yaml"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p3.bridge.read",
+          "engine_id": "4013000000000007",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте направление моста EU→FE и подтвердите запрет обратной петли.",
+            "help": "Если схема требует FE→EU, перестройте её: такой обратный конвертер отключён."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Две энергетические системы",
+        "task_text_ru": "Прочитайте направление моста EU→FE и подтвердите запрет обратной петли."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст использует подтверждённую конфигурацию и честно оставляет runtime-пропускную способность владельцу."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Разрешённое направление EU→FE и запрет FE→EU сверены с конфигурацией GTCEu."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "hazards",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "config/gtceu.yaml",
+          "evidence": [
+            "nativeEUToFE=true; enableFEConverters=false; коэффициенты заданы конфигурацией."
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/energy_networks.json",
+          "evidence": [
+            "Реестр фиксирует односторонний мост и открытый runtime cycle test."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": false,
+        "rationale_ru": "Правило предотвращает энергетический обход и не требует отдельной машины."
+      },
+      "layout": {
+        "x": 6.0,
+        "y": -0.75,
+        "shape": "square",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.p3.buffer",
+      "engine_id": "3BBD1D3385C43666",
+      "epoch": "P3",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "gtceu:lv_battery_buffer_4x",
+      "tags": [
+        "mainline",
+        "buffer",
+        "lv"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p3.cable",
+            "reason": "Буфер устанавливается после выбора безопасного кабеля LV.",
+            "evidence": [
+              "kubejs/exported/gtceu_item_census.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p3.buffer.item",
+          "engine_id": "423059A21AFC5403",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите аккумуляторный буфер LV на четыре элемента.",
+            "help": "Буфер останется между источником и потребителем."
+          },
+          "item": {
+            "id": "gtceu:lv_battery_buffer_4x",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p3.buffer.battery",
+          "engine_id": "4A13000000000010",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте хотя бы один совместимый аккумулятор LV.",
+            "help": "Пустой корпус буфера не передаёт энергию. Подойдёт кадмиевый, литиевый или натриевый аккумулятор LV из списка задачи."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:power/lv_batteries",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Буфер между источником и нагрузкой",
+        "purpose_ru": "Буфер сглаживает разницу между тем, сколько турбина даёт, и сколько машина забирает. Поставьте его между ними, иначе скачок уйдёт прямо в провод.",
+        "task_text_ru": "Получите буфер LV, вставьте хотя бы один совместимый аккумулятор, зарядите его и откройте интерфейс."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Буфер объяснён как диагностический узел, а не как универсальная защита от неверного напряжения."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:lv_battery_buffer_4x",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:power/lv_batteries",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/power/lv_batteries.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "docs/registries/energy_networks.json",
+          "evidence": [
+            "Реестр разделяет генерацию, хранение и передачу энергии."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/lv_components",
+        "rationale_ru": "Один буфер и один аккумулятор образуют минимальную рабочую учебную сеть и остаются её диагностическим центром."
+      },
+      "layout": {
+        "x": 6.0,
+        "y": 0.75,
+        "shape": "rsquare",
         "size": 1.2
       }
     },
@@ -935,19 +1362,6 @@
       ],
       "text_ru": {
         "title_ru": "Схема, двигатель и корпус",
-        "lead_ru": "Электрическая машина складывается из управления, движения и защищённого корпуса — это три разные функции.",
-        "purpose_ru": "Вы изготовите только те детали, которые сразу понадобятся первой машине: две схемы, два двигателя и один корпус.",
-        "steps_ru": [
-          "По действующим рецептам JEI получите две базовые электронные схемы.",
-          "Соберите два двигателя LV и один корпус машины LV.",
-          "Не делайте большой запас вручную. Когда деталей понадобится больше, сначала наладьте их повторяемое производство."
-        ],
-        "success_ru": "Две схемы, два двигателя и один корпус находятся в инвентаре и готовы стать первой LV-машиной.",
-        "diagnostics_ru": [
-          "Если рецепт обрывается, откройте применения последнего доступного компонента и проверьте правильный класс LV.",
-          "Если рецепт требует много одинаковых ручных операций, остановитесь на указанной партии: сейчас важнее запустить первую машину."
-        ],
-        "next_ru": "Из компонентов соберём электрическую печь — первый обязательный потребитель сети.",
         "task_text_ru": "Получите две базовые схемы, два двигателя LV и один корпус машины LV."
       },
       "authorship": {
@@ -1032,9 +1446,9 @@
         },
         {
           "kind": "registry",
-          "id": "docs/registries/m2_grind_budget.json",
+          "id": "docs/registries/grind_budget.json",
           "evidence": [
-            "docs/registries/m2_grind_budget.json"
+            "docs/registries/grind_budget.json"
           ]
         }
       ],
@@ -1047,10 +1461,10 @@
         "rationale_ru": "Три разных результата выполняются малыми партиями; серийный спрос должен быть автоматизирован."
       },
       "layout": {
-        "x": 8,
-        "y": 1,
+        "x": 8.0,
+        "y": 0.0,
         "shape": "gear",
-        "size": 1.4
+        "size": 1.0
       }
     },
     {
@@ -1091,40 +1505,12 @@
             "count": 1,
             "consume": false
           }
-        },
-        {
-          "alias": "if.task.v2.p3.first_machine.use",
-          "engine_id": "4A62AA296F0CE6F3",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите электрическую печь LV и откройте её интерфейс.",
-            "help": "Проверьте входную сторону кабеля и свободный выход."
-          },
-          "use": {
-            "block": "gtceu:lv_electric_furnace",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
         }
       ],
       "text_ru": {
         "title_ru": "Первый потребитель LV",
-        "lead_ru": "Электрическая печь превращает набор компонентов в понятную рабочую нагрузку для сети.",
-        "purpose_ru": "Печь выбрана как простой первый потребитель: её легко проверить, а источник, кабель и буфер остаются теми же для следующих машин.",
-        "steps_ru": [
-          "Соберите электрическую печь LV из подготовленных компонентов.",
-          "Установите её после аккумуляторного буфера и откройте интерфейс.",
-          "Сверьте один доступный рецепт, но не подключайте машину к напряжению другого класса."
-        ],
-        "success_ru": "Печь установлена и доступна; первая сеть имеет конкретного потребителя LV.",
-        "diagnostics_ru": [
-          "Если машина не получает питание, проверьте выход буфера, кабель и сторону подключения.",
-          "Если интерфейс активен, но рецепт не идёт, проверьте вход, свободный выход и достаточный запас энергии."
-        ],
-        "next_ru": "Первая машина готова. Теперь проверим всю цепь от подачи пара до завершённой операции.",
-        "task_text_ru": "Получите, установите и откройте одну электрическую печь LV."
+        "purpose_ru": "Электрическая печь станет первой настоящей нагрузкой. На ней и будет видно, тянет сеть или проседает.",
+        "task_text_ru": "Получите одну электрическую печь LV."
       },
       "authorship": {
         "primary_language": "ru",
@@ -1133,15 +1519,13 @@
         "editorial_note": "Старый общий machine-узел получил точный первый потребитель и функциональное взаимодействие."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Машина подтверждена локальным реестром; реальную работу сети игрок проверяет пробной операцией."
+          "Переписано по стандарту от 10 августа 2026 года."
         ]
       },
       "teaching_sections": [
@@ -1195,7 +1579,7 @@
         },
         {
           "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
+          "id": "docs/registries/energy_networks.json",
           "evidence": [
             "Потребитель относится к сети GT EU класса LV."
           ]
@@ -1210,166 +1594,10 @@
         "rationale_ru": "Одна машина доказывает способность сети и остаётся полезным потребителем."
       },
       "layout": {
-        "x": 10,
-        "y": 1,
+        "x": 10.0,
+        "y": -1.5,
         "shape": "rsquare",
-        "size": 1.4
-      }
-    },
-    {
-      "alias": "if.quest.v2.p3.optional_macerator",
-      "engine_id": "3A13000000000001",
-      "epoch": "P3",
-      "role": "optional_mastery",
-      "requirement": "optional",
-      "icon": "gtceu:lv_macerator",
-      "tags": [
-        "optional",
-        "lv_machine",
-        "ore_processing"
-      ],
-      "dependency": {
-        "mode": "ALL_OF",
-        "edges": [
-          {
-            "quest": "if.quest.v2.p3.components",
-            "reason": "Дополнительная машина использует тот же освоенный набор LV-компонентов.",
-            "evidence": [
-              "kubejs/exported/gtceu_item_census.json"
-            ]
-          }
-        ]
-      },
-      "proofs": [
-        {
-          "alias": "if.task.v2.p3.optional_macerator.item",
-          "engine_id": "4A1300000000000C",
-          "type": "item",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Получите один электрический мацератор LV.",
-            "help": "Машина необязательна для перехода, но расширяет рудный поток."
-          },
-          "item": {
-            "id": "gtceu:lv_macerator",
-            "count": 1,
-            "consume": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p3.optional_macerator.use",
-          "engine_id": "4A1300000000000D",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите мацератор LV и откройте его интерфейс.",
-            "help": "Подключайте его только к сети соответствующего класса."
-          },
-          "use": {
-            "block": "gtceu:lv_macerator",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        }
-      ],
-      "text_ru": {
-        "title_ru": "Электрическое дробление",
-        "lead_ru": "Мацератор LV переносит знакомый рудный процесс с пара на управляемую электрическую сеть.",
-        "purpose_ru": "Это необязательное расширение. Стройте мацератор, если дробление уже стало узким местом; переход в следующую эпоху от него не зависит.",
-        "steps_ru": [
-          "Соберите мацератор LV, установите его после буфера и откройте интерфейс."
-        ],
-        "success_ru": "Мацератор доступен как второй потребитель сети и может заменить часть парового маршрута.",
-        "diagnostics_ru": [
-          "Если подключение останавливает сеть, проверьте суммарную нагрузку и не запускайте обе машины одновременно без достаточного источника."
-        ],
-        "next_ru": "Расширяйте сеть только после измерения реальной нагрузки.",
-        "task_text_ru": "Получите, установите и откройте один электрический мацератор LV.",
-        "optional_note_ru": "Машина необязательна для P3; выбирайте её, если рудная переработка уже стала узким местом."
-      },
-      "authorship": {
-        "primary_language": "ru",
-        "origin": "human_authored",
-        "machine_translation": false,
-        "editorial_note": "Необязательный потребитель отвечает конкретному узкому месту и не дублирует обязательную печь."
-      },
-      "editorial_review": {
-        "state": "RU_READY",
-        "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
-        ],
-        "review_notes": [
-          "Мацератор подтверждён локальным реестром и не входит в обязательные условия перехода."
-        ]
-      },
-      "teaching_sections": [
-        {
-          "kind": "purpose",
-          "source_fields": [
-            "text_ru.lead_ru",
-            "text_ru.purpose_ru"
-          ]
-        },
-        {
-          "kind": "alternatives",
-          "source_fields": [
-            "text_ru.optional_note_ru"
-          ]
-        },
-        {
-          "kind": "operation",
-          "source_fields": [
-            "text_ru.steps_ru",
-            "text_ru.success_ru",
-            "text_ru.task_text_ru"
-          ]
-        },
-        {
-          "kind": "diagnostics",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
-          ]
-        },
-        {
-          "kind": "downstream",
-          "source_fields": [
-            "text_ru.next_ru"
-          ]
-        }
-      ],
-      "content_refs": [
-        {
-          "kind": "item",
-          "id": "gtceu:lv_macerator",
-          "evidence": [
-            "kubejs/exported/gtceu_item_census.json"
-          ]
-        },
-        {
-          "kind": "process",
-          "id": "gtceu-lv-maceration",
-          "evidence": [
-            "mods/gtceu-1.20.1-7.5.3.jar"
-          ]
-        }
-      ],
-      "grind": {
-        "class": "GREEN",
-        "training_batch": 1,
-        "expected_runs": 1,
-        "automation_before_bulk": true,
-        "budget_ref": "industrial_frontier:grind/p3/lv_components",
-        "rationale_ru": "Необязательная машина строится один раз по фактической потребности."
-      },
-      "layout": {
-        "x": 10,
-        "y": 3,
-        "shape": "circle",
-        "size": 1.1
+        "size": 1.2
       }
     },
     {
@@ -1411,37 +1639,11 @@
             "count": 1,
             "consume": false
           }
-        },
-        {
-          "alias": "if.task.v2.p3.optional_forge_hammer.use",
-          "engine_id": "4A1300000000000F",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите кузнечный молот LV и откройте его интерфейс.",
-            "help": "Проверьте электрическую сторону и свободный выход."
-          },
-          "use": {
-            "block": "gtceu:lv_forge_hammer",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
         }
       ],
       "text_ru": {
         "title_ru": "Электрическое формование",
-        "lead_ru": "Кузнечный молот LV снимает повторяемую ручную работу с пластинами и заготовками.",
-        "purpose_ru": "Это необязательное расширение. Кузнечный молот стоит строить тогда, когда ручное формование действительно стало узким местом.",
-        "steps_ru": [
-          "Соберите кузнечный молот LV, подключите после буфера и откройте его интерфейс."
-        ],
-        "success_ru": "Формовочная машина доступна как дополнительный потребитель сети LV.",
-        "diagnostics_ru": [
-          "Если сеть проседает при запуске молота, остановите параллельные машины и проверьте источник, буфер и кабель."
-        ],
-        "next_ru": "После снятия узкого места вернитесь к приёмке основной электрической линии.",
-        "task_text_ru": "Получите, установите и откройте один электрический кузнечный молот LV.",
+        "task_text_ru": "Получите один электрический кузнечный молот LV.",
         "optional_note_ru": "Машина необязательна для перехода; стройте её, когда ручное или паровое формование действительно ограничивает производство."
       },
       "authorship": {
@@ -1533,76 +1735,63 @@
         "rationale_ru": "Необязательный молот появляется только при реальном повторном спросе."
       },
       "layout": {
-        "x": 12,
-        "y": 3,
+        "x": 10.0,
+        "y": 0.0,
         "shape": "circle",
-        "size": 1.1
+        "size": 1.0
       }
     },
     {
-      "alias": "if.quest.v2.p3.bridge",
-      "engine_id": "3013000000000007",
+      "alias": "if.quest.v2.p3.optional_macerator",
+      "engine_id": "3A13000000000001",
       "epoch": "P3",
-      "role": "knowledge",
-      "requirement": "required",
-      "icon": "minecraft:lever",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "gtceu:lv_macerator",
       "tags": [
-        "mainline",
-        "energy_bridge",
-        "anti_loop"
+        "optional",
+        "lv_machine",
+        "ore_processing"
       ],
       "dependency": {
         "mode": "ALL_OF",
         "edges": [
           {
-            "quest": "if.quest.v2.p3.generator",
-            "reason": "Правило конверсии изучается после появления реального источника EU.",
+            "quest": "if.quest.v2.p3.components",
+            "reason": "Дополнительная машина использует тот же освоенный набор LV-компонентов.",
             "evidence": [
-              "docs/registries/m2_energy_networks.json"
-            ]
-          },
-          {
-            "quest": "if.quest.v2.p3.cable",
-            "reason": "Правило конверсии опирается на уже понятную кабельную сеть GTCEu.",
-            "evidence": [
-              "config/gtceu.yaml"
+              "kubejs/exported/gtceu_item_census.json"
             ]
           }
         ]
       },
       "proofs": [
         {
-          "alias": "if.task.v2.p3.bridge.read",
-          "engine_id": "4013000000000007",
-          "type": "checkmark",
+          "alias": "if.task.v2.p3.optional_macerator.item",
+          "engine_id": "4A1300000000000C",
+          "type": "item",
           "status": "verified",
           "text_ru": {
-            "objective": "Прочитайте направление моста EU→FE и подтвердите запрет обратной петли.",
-            "help": "Если схема требует FE→EU, перестройте её: такой обратный конвертер отключён."
+            "objective": "Получите один электрический мацератор LV.",
+            "help": "Машина необязательна для перехода, но расширяет рудный поток."
+          },
+          "item": {
+            "id": "gtceu:lv_macerator",
+            "count": 1,
+            "consume": false
           }
         }
       ],
       "text_ru": {
-        "title_ru": "Две энергетические системы",
-        "lead_ru": "Сеть GTCEu использует EU, а многие другие механизмы — Forge Energy, или FE. В этой сборке энергию можно передавать из EU в совместимый FE-механизм, но не обратно.",
-        "purpose_ru": "Одностороннее правило не позволяет обходить промышленное развитие и исключает замкнутые энергетические петли. Основная фабрика по-прежнему питается сетью GTCEu.",
-        "steps_ru": [
-          "Запомните разрешённое направление: EU можно передать совместимому потребителю FE.",
-          "Не рассчитывайте вернуть FE в сеть GTCEu: обратное направление отключено."
-        ],
-        "success_ru": "Вы знаете, в каком направлении можно передавать энергию между системами EU и FE.",
-        "diagnostics_ru": [
-          "Если FE-механизм не получает энергию, проверьте совместимость выбранного выхода и сторону подключения.",
-          "Если схема требует передать FE обратно в EU, измените её: разрешённого обратного преобразователя нет."
-        ],
-        "next_ru": "Соберём основную LV-линию и проверим доступ к источнику, буферу и потребителю.",
-        "task_text_ru": "Прочитайте направление моста EU→FE и подтвердите запрет обратной петли."
+        "title_ru": "Электрическое дробление",
+        "task_text_ru": "Получите один электрический мацератор LV.",
+        "optional_note_ru": "Машина необязательна для P3; выбирайте её, если рудная переработка уже стала узким местом."
       },
       "authorship": {
         "primary_language": "ru",
         "origin": "human_authored",
         "machine_translation": false,
-        "editorial_note": "Текст использует подтверждённую конфигурацию и честно оставляет runtime-пропускную способность владельцу."
+        "editorial_note": "Необязательный потребитель отвечает конкретному узкому месту и не дублирует обязательную печь."
       },
       "editorial_review": {
         "state": "RU_READY",
@@ -1613,7 +1802,7 @@
           "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Разрешённое направление EU→FE и запрет FE→EU сверены с конфигурацией GTCEu."
+          "Мацератор подтверждён локальным реестром и не входит в обязательные условия перехода."
         ]
       },
       "teaching_sections": [
@@ -1625,16 +1814,17 @@
           ]
         },
         {
-          "kind": "hazards",
+          "kind": "alternatives",
           "source_fields": [
-            "text_ru.lead_ru",
-            "text_ru.steps_ru"
+            "text_ru.optional_note_ru"
           ]
         },
         {
-          "kind": "recovery",
+          "kind": "operation",
           "source_fields": [
-            "text_ru.diagnostics_ru"
+            "text_ru.steps_ru",
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
           ]
         },
         {
@@ -1648,48 +1838,37 @@
           "source_fields": [
             "text_ru.next_ru"
           ]
-        },
-        {
-          "kind": "output",
-          "source_fields": [
-            "text_ru.success_ru"
-          ]
-        },
-        {
-          "kind": "operation",
-          "source_fields": [
-            "text_ru.task_text_ru"
-          ]
         }
       ],
       "content_refs": [
         {
-          "kind": "doc",
-          "id": "config/gtceu.yaml",
+          "kind": "item",
+          "id": "gtceu:lv_macerator",
           "evidence": [
-            "nativeEUToFE=true; enableFEConverters=false; коэффициенты заданы конфигурацией."
+            "kubejs/exported/gtceu_item_census.json"
           ]
         },
         {
-          "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
+          "kind": "process",
+          "id": "gtceu-lv-maceration",
           "evidence": [
-            "Реестр фиксирует односторонний мост и открытый runtime cycle test."
+            "mods/gtceu-1.20.1-7.5.3.jar"
           ]
         }
       ],
       "grind": {
-        "class": "NONE",
-        "training_batch": 0,
-        "expected_runs": 0,
-        "automation_before_bulk": false,
-        "rationale_ru": "Правило предотвращает энергетический обход и не требует отдельной машины."
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p3/lv_components",
+        "rationale_ru": "Необязательная машина строится один раз по фактической потребности."
       },
       "layout": {
-        "x": 10,
-        "y": -1,
-        "shape": "square",
-        "size": 1.2
+        "x": 10.0,
+        "y": 1.5,
+        "shape": "circle",
+        "size": 1.0
       }
     },
     {
@@ -1718,7 +1897,7 @@
             "quest": "if.quest.v2.p3.bridge",
             "reason": "Перед приёмкой сети нужно понимать разрешённые границы конверсии.",
             "evidence": [
-              "docs/registries/m2_energy_networks.json"
+              "docs/registries/energy_networks.json"
             ]
           }
         ]
@@ -1727,67 +1906,22 @@
         {
           "alias": "if.task.v2.p3.line.turbine_use",
           "engine_id": "42FFC66E781F7C07",
-          "type": "use",
+          "type": "item",
           "status": "verified",
           "text_ru": {
-            "objective": "Откройте турбину основной сети.",
+            "objective": "Изготовьте: Обычная паровая турбина.",
             "help": "Проверьте паровой вход и электрический выход."
           },
-          "use": {
-            "block": "gtceu:lv_steam_turbine",
+          "item": {
+            "id": "gtceu:lv_steam_turbine",
             "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p3.line.buffer_use",
-          "engine_id": "48D97727A2CF836F",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Откройте аккумуляторный буфер основной сети.",
-            "help": "Проверьте ячейки и стороны входа и выхода."
-          },
-          "use": {
-            "block": "gtceu:lv_battery_buffer_4x",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p3.line.machine_use",
-          "engine_id": "4DA0E1683913C917",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Откройте электрическую печь основной сети.",
-            "help": "Проверьте вход, выход и подключение LV."
-          },
-          "use": {
-            "block": "gtceu:lv_electric_furnace",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
+            "consume": false
           }
         }
       ],
       "text_ru": {
         "title_ru": "Линия от пара до машины",
-        "lead_ru": "Турбина, кабель, буфер и печь теперь читаются как одна цепочка, а не как четыре разрозненных блока.",
-        "purpose_ru": "Квестбук может проверить, что вы открыли основные блоки, но не видит весь путь энергии EU. Поэтому проведите одну пробную операцию сами и проследите, как меняется заряд буфера.",
-        "steps_ru": [
-          "Откройте турбину и проверьте подачу пара.",
-          "Откройте буфер и сравните его состояние до и после запуска машины.",
-          "Откройте электрическую печь и выполните одну доступную учебную операцию."
-        ],
-        "success_ru": "Если печь завершила операцию, а заряд буфера ожидаемо изменился, первая электрическая линия действительно работает.",
-        "diagnostics_ru": [
-          "Пустой буфер указывает на источник или входной кабель; полный буфер при стоящей машине — на выход или потребитель.",
-          "Если блоки доступны, но операция не идёт, проверьте класс напряжения, стороны и рецепт."
-        ],
-        "next_ru": "Осталась итоговая приёмка электрического цеха и переход к P4.",
+        "purpose_ru": "Турбина, кабель, буфер и печь складываются в одну линию. Она будет разрастаться, так что место вокруг лучше оставить свободным.",
         "task_text_ru": "Откройте турбину, аккумуляторный буфер и электрическую печь основной сети."
       },
       "authorship": {
@@ -1797,15 +1931,13 @@
         "editorial_note": "Три use-proof подтверждают доступ к узлам; текст не выдаёт их за автоматическое измерение EU."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Турбина, буфер и печь подтверждены локальным реестром; текст честно отделяет проверяемое взаимодействие от ручной проверки работы сети."
+          "Переписано по стандарту от 10 августа 2026 года."
         ]
       },
       "teaching_sections": [
@@ -1873,7 +2005,7 @@
         },
         {
           "kind": "registry",
-          "id": "docs/registries/m2_energy_networks.json",
+          "id": "docs/registries/energy_networks.json",
           "evidence": [
             "Реестр предупреждает не использовать FE-task как доказательство EU."
           ]
@@ -1888,10 +2020,10 @@
         "rationale_ru": "Одна учебная операция проверяет сеть; дальнейшее производство должно стать повторяемым."
       },
       "layout": {
-        "x": 12,
-        "y": 0,
+        "x": 12.0,
+        "y": 0.0,
         "shape": "gear",
-        "size": 1.5
+        "size": 1.4
       }
     },
     {
@@ -1912,7 +2044,7 @@
             "quest": "if.quest.v2.p3.line",
             "reason": "Итоговая приёмка открывается после объединения источника, буфера и первой LV-машины.",
             "evidence": [
-              "docs/registries/m2_progression_graph.json"
+              "docs/registries/progression_graph.json"
             ]
           }
         ]
@@ -1921,50 +2053,22 @@
         {
           "alias": "if.task.v2.p3.commissioning.buffer_use",
           "engine_id": "4E6D26708578992C",
-          "type": "use",
+          "type": "item",
           "status": "verified",
           "text_ru": {
-            "objective": "Откройте буфер принятой LV-сети.",
+            "objective": "Изготовьте: Батарейный буфер (4 ячейки LV).",
             "help": "Буфер должен оставаться доступным для диагностики после завершения линии."
           },
-          "use": {
-            "block": "gtceu:lv_battery_buffer_4x",
+          "item": {
+            "id": "gtceu:lv_battery_buffer_4x",
             "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p3.commissioning.machine_use",
-          "engine_id": "4E667A8B5AC4BD82",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Откройте первую LV-машину принятой сети.",
-            "help": "Взаимодействуйте с установленной электрической печью."
-          },
-          "use": {
-            "block": "gtceu:lv_electric_furnace",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
+            "consume": false
           }
         }
       ],
       "text_ru": {
         "title_ru": "Электрический цех готов",
-        "lead_ru": "Пар превращается в EU, сеть имеет кабель и буфер, а первая LV-машина стала рабочим потребителем.",
-        "purpose_ru": "Итоговая приёмка подтверждает доступность диагностического узла и машины после завершения линии. Дополнительные LV-машины остаются улучшениями по потребности.",
-        "steps_ru": [
-          "Повторно откройте аккумуляторный буфер и первую электрическую печь.",
-          "Мацератор и кузнечный молот можно спокойно оставить на потом: они не нужны для перехода."
-        ],
-        "success_ru": "Электрический цех принят. После завершения задания открывается P4.",
-        "diagnostics_ru": [
-          "Если переход закрыт, завершите задание «Линия от пара до машины», затем снова откройте буфер и электрическую печь.",
-          "Проверьте, что обе задачи этого задания отмечены выполненными. Необязательные машины для этого не требуются."
-        ],
-        "next_ru": "P4 откроет химические процессы, водоочистку и удобрения. Развитие города остаётся отдельным необязательным проектом.",
+        "purpose_ru": "Пар стал электричеством, сеть держит нагрузку, первая машина работает. Впереди химия, и энергии она попросит куда больше.",
         "task_text_ru": "Откройте аккумуляторный буфер и электрическую печь основной сети LV."
       },
       "authorship": {
@@ -1974,15 +2078,13 @@
         "editorial_note": "Единственная итоговая приёмка P3 использует два операционных действия и единый alias .commissioning."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Обязательная ветвь заканчивается полной линией; дополнительные машины LV и городская кампания не блокируют переход."
+          "Переписано по стандарту от 10 августа 2026 года."
         ]
       },
       "teaching_sections": [
@@ -2057,10 +2159,10 @@
         "rationale_ru": "Приёмка не добавляет ресурсы и повторно использует действующие узлы."
       },
       "layout": {
-        "x": 14,
-        "y": 0,
+        "x": 14.0,
+        "y": 0.0,
         "shape": "diamond",
-        "size": 1.6
+        "size": 1.8
       },
       "commissioning": {
         "epoch": "P3",
@@ -2072,6 +2174,1298 @@
           "docs/registries/quest_epoch_bridge.json",
           "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js"
         ]
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.pneumatic_loop",
+      "engine_id": "3A23000000000003",
+      "epoch": "P3",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "pneumaticcraft:air_compressor",
+      "tags": [
+        "pneumatic",
+        "pressure",
+        "safety"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.overview",
+            "reason": "Сжатый воздух вводится как отдельный исполнительный контур.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.commissioning",
+            "reason": "Стальной и электрический цех дают материалы для безопасной пневматической установки.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.pneumatic_loop.compressor",
+          "engine_id": "4A23000000000004",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один воздушный компрессор.",
+            "help": "Компрессор не расходуется; перед запуском прочитайте шкалу и предел давления."
+          },
+          "item": {
+            "id": "pneumaticcraft:air_compressor",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.control.pneumatic_loop.safety",
+          "engine_id": "4A23000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один предохранительный модуль для трубы.",
+            "help": "Он выпускает лишний воздух и не даёт давлению перейти опасную границу. Это последняя защита, а не обычный способ управлять компрессором."
+          },
+          "item": {
+            "id": "pneumaticcraft:safety_tube_module",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Давление хранит энергию",
+        "purpose_ru": "Сжатый воздух ведёт себя не как ток: запас в трубе зависит от давления и объёма, а падает рывком. Держите манометр на виду и не перегружайте трубу — на перегрузке она рвётся.",
+        "task_text_ru": "Соберите короткий безопасный контур из компрессора, трубы, измерения и предохранителя."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Пневматика объясняется через запас, предел и тепло, а не как цветная разновидность кабеля."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "pneumaticcraft",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "pneumaticcraft:air_compressor",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/air_compressor.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "pneumaticcraft:safety_tube_module",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/safety_tube_module.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 2,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/pneumatic_safety",
+        "rationale_ru": "Один компрессор и один предохранитель достаточны для безопасного учебного контура."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": -3.0,
+        "shape": "hexagon",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.connected_kitchen",
+      "engine_id": "3A2200000000000C",
+      "epoch": "P3",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "cookingforblockheads:cooking_table",
+      "tags": [
+        "city",
+        "p3",
+        "kitchen",
+        "cookingforblockheads"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.manual_food",
+            "reason": "Связанная кухня упрощает уже понятные ручные рецепты и не скрывает первый опыт приготовления.",
+            "evidence": [
+              "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md#44-кухня-как-функциональный-интерьер"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.commissioning",
+            "reason": "Общественная кухня появляется вместе с постоянным электрическим районом и его складами.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.connected_kitchen.table",
+          "engine_id": "4B22000000000032",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите кулинарный стол Cooking for Blockheads.",
+            "help": "Поставьте его вплотную к шкафам и холодильнику, чтобы сеть увидела ингредиенты."
+          },
+          "place": {
+            "block": "cookingforblockheads:cooking_table",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.connected_kitchen.fridge",
+          "engine_id": "4B22000000000034",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите холодильник Cooking for Blockheads.",
+            "help": "Держите в нём ингредиенты для готовки и не используйте его как общий склад деталей."
+          },
+          "place": {
+            "block": "cookingforblockheads:fridge",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.connected_kitchen.cabinet",
+          "engine_id": "4B22000000000035",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите кухонный шкаф Cooking for Blockheads.",
+            "help": "Шкаф должен касаться связанной кухонной группы без разрыва."
+          },
+          "place": {
+            "block": "cookingforblockheads:cabinet",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Одна кухня видит соседние запасы",
+        "task_text_ru": "Установите кулинарный стол, холодильник и шкаф, затем откройте стол и холодильник."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "cookingforblockheads",
+          "evidence": [
+            "mods/cookingforblockheads-forge-1.20.1-16.0.15.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "cookingforblockheads:cooking_table",
+          "evidence": [
+            "mods/cookingforblockheads-forge-1.20.1-16.0.15.jar!assets/cookingforblockheads/blockstates/cooking_table.json"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "cookingforblockheads:fridge",
+          "evidence": [
+            "mods/cookingforblockheads-forge-1.20.1-16.0.15.jar!assets/cookingforblockheads/blockstates/fridge.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 3,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "rationale_ru": "Три блока образуют минимальную связанную кухню; дополнительные стойки остаются выбором планировки."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": -1.5,
+        "shape": "rsquare",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.trade",
+      "engine_id": "3A2200000000000E",
+      "epoch": "P3",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "lightmanscurrency:cash_register",
+      "tags": [
+        "city",
+        "p3",
+        "trade",
+        "economy"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.supply",
+            "reason": "Торговая точка получает честный запас со склада и не создаёт товары из интерфейса.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.commissioning",
+            "reason": "Защищённая постоянная торговля появляется после электрического района и устойчивого производства.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.trade.register",
+          "engine_id": "4B2200000000003A",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите кассу Lightman's Currency.",
+            "help": "Разместите её в доступной части рынка, отдельно от личного хранилища монет."
+          },
+          "place": {
+            "block": "lightmanscurrency:cash_register",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.trade.trader",
+          "engine_id": "4B2200000000003C",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите малого сетевого торговца предметами.",
+            "help": "Начните с одного понятного товара и ограниченного запаса."
+          },
+          "place": {
+            "block": "lightmanscurrency:item_trader_server_sml",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.trade.coins",
+          "engine_id": "4B2200000000003E",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте восемь медных монет.",
+            "help": "Это небольшая оборотная сумма для проверки цены, а не плата за прохождение главы."
+          },
+          "item": {
+            "id": "lightmanscurrency:coin_copper",
+            "count": 8,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Товар, цена, запас и доступ",
+        "purpose_ru": "Рынок торгует настоящим излишком. Нет товара на складе — продавать нечего, и цена тут не поможет.",
+        "task_text_ru": "Установите и откройте кассу и сетевого торговца, подготовьте восемь медных монет."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "lightmanscurrency",
+          "evidence": [
+            "mods/lightmanscurrency-1.20.1-2.3.0.5.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "lightmanscurrency:cash_register",
+          "evidence": [
+            "mods/lightmanscurrency-1.20.1-2.3.0.5.jar!assets/lightmanscurrency/blockstates/cash_register.json"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "lightmanscurrency:item_trader_server_sml",
+          "evidence": [
+            "mods/lightmanscurrency-1.20.1-2.3.0.5.jar!assets/lightmanscurrency/blockstates/item_trader_server_sml.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Одна ограниченная сделка учит безопасности и цене без накопления большой валютной квоты."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": 0.0,
+        "shape": "rsquare",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.workshop_power",
+      "engine_id": "3A2200000000000A",
+      "epoch": "P3",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "minecolonies:blockhutblacksmith",
+      "tags": [
+        "city",
+        "p3",
+        "workshop",
+        "energy"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.supply",
+            "reason": "Мастерская начинает работу после появления склада и доставки материалов.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.commissioning",
+            "reason": "Электрифицированная мастерская открывается после принятой линии LV.",
+            "evidence": [
+              "authoring/questbook_v2/13_p3.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.workshop_power.hut",
+          "engine_id": "4B2200000000002A",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите блок кузницы MineColonies.",
+            "help": "Поставьте мастерскую между складом и производственным районом, а не в глубине жилья."
+          },
+          "place": {
+            "block": "minecolonies:blockhutblacksmith",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Мастерская между складом и сетью",
+        "purpose_ru": "Мастерская встанет и без детали, и без электричества, а выглядит это одинаково. Проверяйте оба конца.",
+        "task_text_ru": "Разместите и откройте кузницу, затем откройте городской аккумуляторный буфер LV."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "minecolonies",
+          "evidence": [
+            "mods/minecolonies-1.20.1-1.1.1274.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "minecolonies:blockhutblacksmith",
+          "evidence": [
+            "mods/minecolonies-1.20.1-1.1.1274.jar!assets/minecolonies/blockstates/blockhutblacksmith.json"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "gtceu:lv_battery_buffer_4x",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "rationale_ru": "Одна мастерская и существующий районный буфер связывают город с фабрикой без дублирования производства."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": 1.5,
+        "shape": "gear",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.crafting",
+      "engine_id": "3A20000000000005",
+      "epoch": "P3",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "toms_storage:ts.crafting_terminal",
+      "tags": [
+        "storage",
+        "crafting",
+        "p3"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.terminal",
+            "reason": "Терминал сборки расширяет уже проверенный общий доступ к складу.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p3.commissioning",
+            "reason": "Сборка из большого общего запаса открывается после электрификации P3.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.crafting.item",
+          "engine_id": "4B20000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите терминал сборки.",
+            "help": "Он берёт доступные ингредиенты из подключённых контейнеров, но не запускает рецепт сам."
+          },
+          "item": {
+            "id": "toms_storage:ts.crafting_terminal",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сборка из общих запасов",
+        "purpose_ru": "Терминал сам вытащит ингредиенты из подключённых сундуков. Что собирать, по-прежнему решаете вы.",
+        "task_text_ru": "Получите и откройте терминал сборки."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Текст последовательно отличает ручную сборку из запасов от будущего автокрафта AE2."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.crafting_terminal",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.crafting_terminal.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один терминал заменяет повторное перекладывание ингредиентов и остаётся рабочим блоком."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": 3.0,
+        "shape": "rsquare",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.pressure_chamber_setup",
+      "engine_id": "3A2300000000000C",
+      "epoch": "P3",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "pneumaticcraft:pressure_chamber_valve",
+      "tags": [
+        "pneumatic",
+        "pressure_chamber",
+        "machine_before_product"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.pneumatic_loop",
+            "reason": "Камеру собирают только после проверки безопасного контура давления и до требования сжатого железа.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.pressure_chamber.use",
+          "engine_id": "4A23000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте: Барокамерный клапан.",
+            "help": "Открытие клапана отмечается автоматически; герметичность и показания давления оцените на месте."
+          },
+          "item": {
+            "id": "pneumaticcraft:pressure_chamber_valve",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Герметичная камера",
+        "purpose_ru": "Сначала корпус и клапан, потом продукт. Негерметичная камера просто стравит воздух и ничего не сделает.",
+        "task_text_ru": "Соберите герметичную камеру давления и откройте её клапан."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Setup отделён от продукта по общему правилу machine-before-output."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "pneumaticcraft",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "pneumaticcraft:pressure_chamber_valve",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/pressure_chamber_valve.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/pressure_chamber_setup",
+        "rationale_ru": "Одна долговременная камера является рабочей инфраструктурой; второй корпус не требуется."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": -0.75,
+        "shape": "gear",
+        "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.fermentation_setup",
+      "engine_id": "3A2200000000001D",
+      "epoch": "P3",
+      "role": "operation",
+      "requirement": "optional",
+      "icon": "brewinandchewin:keg",
+      "tags": [
+        "city",
+        "food",
+        "fermentation",
+        "optional",
+        "machine_before_product"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.connected_kitchen",
+            "reason": "Бочку ставят после организации кухонных запасов и до требования готового продукта брожения.",
+            "evidence": [
+              "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md#82-полная-производственная-цепочка"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.fermentation.keg",
+          "engine_id": "4B22000000000037",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите бочку для брожения Brewin' and Chewin'.",
+            "help": "Поставьте её в отдельной зоне, где входное сырьё и готовая партия не смешаются."
+          },
+          "place": {
+            "block": "brewinandchewin:keg",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Бочка для брожения",
+        "purpose_ru": "Брожение идёт долго, и затевать его без готовой бочки смысла нет.",
+        "task_text_ru": "Установите и откройте бочку для брожения.",
+        "optional_note_ru": "Это добровольная ветка: она расширяет меню, но не нужна для перехода между эпохами."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "brewinandchewin",
+          "evidence": [
+            "mods/BrewinAndChewin-1.20.1-3.2.1.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "brewinandchewin:keg",
+          "evidence": [
+            "mods/BrewinAndChewin-1.20.1-3.2.1.jar!assets/brewinandchewin/blockstates/keg.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Одна долговременная бочка остаётся полезной; дубликат ради задания не требуется."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": 0.75,
+        "shape": "gear",
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.control.pressure_chamber",
+      "engine_id": "3A23000000000004",
+      "epoch": "P3",
+      "role": "transformation",
+      "requirement": "required",
+      "icon": "pneumaticcraft:ingot_iron_compressed",
+      "tags": [
+        "pneumatic",
+        "pressure_chamber",
+        "compressed_iron"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.control.pressure_chamber_setup",
+            "reason": "Сжатое железо требуют только после сборки и открытия герметичной камеры.",
+            "evidence": [
+              "authoring/questbook_v2/23_control_pressure.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.control.pressure_chamber.output",
+          "engine_id": "4A23000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один слиток сжатого железа из камеры.",
+            "help": "Получив слиток, не считайте опыт законченным: первую операцию обязательно проведите именно в собранной камере."
+          },
+          "item": {
+            "id": "pneumaticcraft:ingot_iron_compressed",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первый продукт камеры",
+        "purpose_ru": "Камера собрана — один настоящий рецепт покажет, держит ли она давление.",
+        "task_text_ru": "Получите первый слиток сжатого железа в принятой камере давления."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Предметный результат следует отдельному setup-узлу и доказывает настоящую операцию."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "pneumaticcraft",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "pneumaticcraft:ingot_iron_compressed",
+          "evidence": [
+            "mods/pneumaticcraft-repressurized-6.0.23+mc1.20.1.jar!assets/pneumaticcraft/models/item/ingot_iron_compressed.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "budget_ref": "industrial_frontier:grind/p3/pressure_chamber",
+        "rationale_ru": "Одного слитка достаточно для знакомства с процессом; массовое ручное производство не требуется."
+      },
+      "layout": {
+        "x": 20.0,
+        "y": -0.75,
+        "shape": "square",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.fermentation",
+      "engine_id": "3A2200000000000D",
+      "epoch": "P3",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "brewinandchewin:keg",
+      "tags": [
+        "city",
+        "food",
+        "fermentation",
+        "optional"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.fermentation_setup",
+            "reason": "Готовый продукт требуют только после установки и открытия бочки для брожения.",
+            "evidence": [
+              "authoring/questbook_v2/22_settlement.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.fermentation.kimchi",
+          "engine_id": "4B22000000000039",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите одну порцию кимчи.",
+            "help": "Одна порция подтверждает готовый продукт; повторять рецепт большими объёмами ради этой ветки не нужно."
+          },
+          "item": {
+            "id": "brewinandchewin:kimchi",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Одна полная партия кимчи",
+        "task_text_ru": "Получите одну порцию кимчи в уже принятой бочке для брожения.",
+        "optional_note_ru": "Ветка добровольная: ферментация расширяет меню и торговые товары, но не нужна для перехода между эпохами."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "brewinandchewin",
+          "evidence": [
+            "mods/BrewinAndChewin-1.20.1-3.2.1.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "brewinandchewin:keg",
+          "evidence": [
+            "mods/BrewinAndChewin-1.20.1-3.2.1.jar!assets/brewinandchewin/blockstates/keg.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "brewinandchewin:kimchi",
+          "evidence": [
+            "mods/BrewinAndChewin-1.20.1-3.2.1.jar!assets/brewinandchewin/lang/en_us.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Одного полного цикла достаточно, чтобы понять загрузку, ожидание и выдачу продукта."
+      },
+      "layout": {
+        "x": 20.0,
+        "y": 0.75,
+        "shape": "diamond",
+        "size": 1.0
       }
     }
   ]

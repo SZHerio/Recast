@@ -1,29 +1,24 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
-	hide_quest_until_deps_visible: true
 	filename: "14_p4"
 	group: "1000000000000004"
-	icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"
+	icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"}}
 	id: "2014000000000001"
 	order_index: 14
 	quest_links: [ ]
 	quests: [
 		{
-			hide_until_deps_complete: true
 			dependencies: ["3B7F69E8E054CA03"]
 			description: [
 				"{industrial_frontier.quest.v2.p4.brief.purpose}"
-				"{industrial_frontier.quest.v2.p4.brief.success}"
 				"{industrial_frontier.quest.v2.p4.brief.task}"
 				"{industrial_frontier.quest.v2.p4.brief.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.brief.next}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/process/gtceu/foundational_feedstocks.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/gtceu/foundational_feedstocks.png"}}
 			id: "3014000000000001"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p4.brief.lead}"
+			size: 1d
 			tags: ["root", "chemistry"]
 			tasks: [
 				{
@@ -37,22 +32,100 @@
 			y: 0d
 		}
 		{
+			dependencies: [
+				"3051000000000001"
+				"3014000000000001"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.atlas.nether_site.purpose}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.task}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.nether_site.optional_note}"
+			]
+			icon: "minecraft:blaze_rod"
+			id: "3051000000000006"
+			optional: true
+			shape: "circle"
+			size: 1.2d
+			tags: ["world", "nether", "structures"]
+			tasks: [
+				{
+					id: "4051000000000006"
+					structure: "#industrial_frontier:expedition_nether"
+					title: "{industrial_frontier.task.v2.atlas.nether_site.structure.objective}"
+					type: "structure"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.atlas.nether_site.title}"
+			x: 2d
+			y: -4.5d
+		}
+		{
 			dependencies: ["3014000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_source.purpose}"
-				"{industrial_frontier.quest.v2.p4.aluminium_source.step.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_source.step.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_source.success}"
+				"{industrial_frontier.quest.v2.oil.coresample.task}"
+				"{industrial_frontier.quest.v2.oil.coresample.proof_help.1}"
+			]
+			icon: "immersiveengineering:coresample"
+			id: "3A24000000000002"
+			shape: "diamond"
+			size: 1d
+			tags: ["immersive_engineering", "exploration"]
+			tasks: [
+				{
+					id: "4B24000000000004"
+					item: {
+						Count: 1
+						id: "immersiveengineering:coresample"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.coresample.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.coresample.title}"
+			x: 2d
+			y: -3d
+		}
+		{
+			dependencies: ["3014000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.respirator.task}"
+				"{industrial_frontier.quest.v2.oil.respirator.proof_help.1}"
+			]
+			icon: "adpother:iron_respirator"
+			id: "3A24000000000016"
+			shape: "circle"
+			size: 1d
+			tags: ["pollution", "safety"]
+			tasks: [
+				{
+					id: "4B24000000000019"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:safety/respirators)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.oil.respirator.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.respirator.title}"
+			x: 2d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3014000000000001"]
+			description: [
 				"{industrial_frontier.quest.v2.p4.aluminium_source.task}"
-				"{industrial_frontier.quest.v2.p4.aluminium_source.diagnostic.1}"
 				"{industrial_frontier.quest.v2.p4.aluminium_source.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_source.next}"
 			]
 			icon: "gtceu:raw_aluminium"
 			id: "3A14000000000020"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_source.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "source_before_product"]
 			tasks: [
 				{
@@ -70,28 +143,170 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.aluminium_source.title}"
-			x: -18d
-			y: -8d
+			x: 2d
+			y: 0d
+		}
+		{
+			dependencies: ["3014000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.oil_survey.purpose}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.task}"
+				"{industrial_frontier.quest.v2.p4.oil_survey.proof_help.1}"
+			]
+			icon: "immersivepetroleum:seismic_survey"
+			id: "3A14000000000002"
+			shape: "diamond"
+			size: 1.2d
+			tags: ["petroleum", "survey"]
+			tasks: [
+				{
+					id: "4A14000000000005"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:seismic_survey"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p4.oil_survey.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.oil_survey.title}"
+			x: 2d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3014000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.raw_water.task}"
+				"{industrial_frontier.quest.v2.p4.raw_water.proof_help.1}"
+			]
+			icon: "minecraft:water_bucket"
+			id: "3FA17567FB015E52"
+			shape: "circle"
+			size: 1d
+			tags: ["water", "source"]
+			tasks: [
+				{
+					id: "456E850EA8B5A4F2"
+					fluid: "minecraft:water"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p4.raw_water.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.raw_water.title}"
+			x: 2d
+			y: 3d
+		}
+		{
+			dependencies: [
+				"3A20000000000004"
+				"3A20000000000005"
+				"3014000000000001"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.storage.level.purpose}"
+				"{industrial_frontier.quest.v2.storage.level.task}"
+				"{industrial_frontier.quest.v2.storage.level.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.level.proof_help.2}"
+			]
+			icon: "toms_storage:ts.level_emitter"
+			id: "3A20000000000006"
+			shape: "gear"
+			size: 1.4d
+			tags: ["storage", "redstone", "stock_control"]
+			tasks: [
+				{
+					id: "4B20000000000006"
+					item: {
+						Count: 1
+						id: "toms_storage:ts.level_emitter"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.storage.level.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4A20000000000006"
+					block_type: 0
+					block: "toms_storage:ts.level_emitter"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.storage.level.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.storage.level.title}"
+			x: 2d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3A24000000000016"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.baseline_measurement.purpose}"
+				"{industrial_frontier.quest.v2.oil.baseline_measurement.task}"
+				"{industrial_frontier.quest.v2.oil.baseline_measurement.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.baseline_measurement.proof_help.2}"
+			]
+			icon: "adpother:aerometer"
+			id: "3A24000000000017"
+			shape: "diamond"
+			size: 1d
+			tags: ["pollution", "measurement"]
+			tasks: [
+				{
+					id: "4B2400000000001A"
+					item: {
+						Count: 1
+						id: "adpother:aerometer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.baseline_measurement.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4B2400000000001B"
+					title: "{industrial_frontier.task.v2.oil.baseline_measurement.record.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.baseline_measurement.title}"
+			x: 4d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A14000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.intro.task}"
+				"{industrial_frontier.quest.v2.oil.intro.proof_help.1}"
+			]
+			icon: "immersivepetroleum:crudeoil_bucket"
+			id: "3024000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["root", "petroleum"]
+			tasks: [
+				{
+					id: "4024000000000001"
+					title: "{industrial_frontier.task.v2.oil.intro.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.intro.title}"
+			x: 4d
+			y: 0d
 		}
 		{
 			dependencies: ["3A14000000000020"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.purpose}"
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.step.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.step.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.success}"
 				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.task}"
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.next}"
 			]
 			icon: "gtceu:lv_macerator"
 			id: "3A14000000000021"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_before_product"]
 			tasks: [
 				{
@@ -104,38 +319,76 @@
 					title: "{industrial_frontier.task.v2.p4.aluminium_macerator_setup.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A14000000000052"
-					block_type: 0
-					block: "gtceu:lv_macerator"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.aluminium_macerator_setup.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.aluminium_macerator_setup.title}"
-			x: -15d
-			y: -8d
+			x: 4d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A24000000000017"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.chimney.task}"
+				"{industrial_frontier.quest.v2.oil.chimney.proof_help.1}"
+			]
+			icon: "adchimneys:metal_chimney"
+			id: "3A24000000000018"
+			shape: "gear"
+			size: 1.1d
+			tags: ["pollution", "chimney"]
+			tasks: [
+				{
+					id: "4B2400000000001C"
+					block_type: 0
+					block: "adchimneys:metal_chimney"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.oil.chimney.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.chimney.title}"
+			x: 6d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3024000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.seismic_survey.purpose}"
+				"{industrial_frontier.quest.v2.oil.seismic_survey.task}"
+				"{industrial_frontier.quest.v2.oil.seismic_survey.proof_help.1}"
+			]
+			icon: "immersivepetroleum:seismic_survey"
+			id: "3A24000000000001"
+			shape: "diamond"
+			size: 1.2d
+			tags: ["petroleum", "exploration"]
+			tasks: [
+				{
+					id: "4B24000000000002"
+					block_type: 0
+					block: "immersivepetroleum:seismic_survey"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.oil.seismic_survey.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.seismic_survey.title}"
+			x: 6d
+			y: 0d
 		}
 		{
 			dependencies: ["3A14000000000021"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_crushed.purpose}"
-				"{industrial_frontier.quest.v2.p4.aluminium_crushed.step.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_crushed.step.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_crushed.success}"
 				"{industrial_frontier.quest.v2.p4.aluminium_crushed.task}"
-				"{industrial_frontier.quest.v2.p4.aluminium_crushed.diagnostic.1}"
 				"{industrial_frontier.quest.v2.p4.aluminium_crushed.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_crushed.next}"
 			]
 			icon: "gtceu:crushed_aluminium_ore"
 			id: "3A14000000000022"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_crushed.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_output"]
 			tasks: [
 				{
@@ -151,27 +404,168 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.aluminium_crushed.title}"
-			x: -12d
-			y: -8d
+			x: 6d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A24000000000018"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.filter_frame.task}"
+				"{industrial_frontier.quest.v2.oil.filter_frame.proof_help.1}"
+			]
+			icon: "adpother:iron_filter_frame"
+			id: "3A24000000000019"
+			shape: "square"
+			size: 1.1d
+			tags: ["pollution", "filter"]
+			tasks: [
+				{
+					id: "4B2400000000001D"
+					block_type: 0
+					block: "adpother:iron_filter_frame"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.oil.filter_frame.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.filter_frame.title}"
+			x: 8d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3A24000000000001"
+				"3A24000000000002"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.oil.pumpjack.purpose}"
+				"{industrial_frontier.quest.v2.oil.pumpjack.task}"
+				"{industrial_frontier.quest.v2.oil.pumpjack.proof_help.1}"
+			]
+			icon: "immersivepetroleum:pumpjack"
+			id: "3A24000000000003"
+			shape: "gear"
+			size: 1.1d
+			tags: ["petroleum", "extraction"]
+			tasks: [
+				{
+					id: "4B24000000000005"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:pumpjack"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.pumpjack.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.pumpjack.title}"
+			x: 8d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A14000000000022"
+				"3FA17567FB015E52"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.task}"
+				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.proof_help.1}"
+			]
+			icon: "gtceu:lv_ore_washer"
+			id: "3A14000000000024"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "metallurgy", "aluminium", "machine_before_product", "water"]
+			tasks: [
+				{
+					id: "4A14000000000055"
+					item: {
+						Count: 1
+						id: "gtceu:lv_ore_washer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p4.aluminium_washer_setup.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.aluminium_washer_setup.title}"
+			x: 8d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A24000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.buffer.task}"
+				"{industrial_frontier.quest.v2.oil.buffer.proof_help.1}"
+			]
+			icon: "immersivepetroleum:oiltank"
+			id: "3A24000000000004"
+			shape: "gear"
+			size: 1.1d
+			tags: ["petroleum", "buffer"]
+			tasks: [
+				{
+					id: "4B24000000000006"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:oiltank"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.buffer.use.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.buffer.title}"
+			x: 10d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A24000000000019"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.remeasure.purpose}"
+				"{industrial_frontier.quest.v2.oil.remeasure.task}"
+				"{industrial_frontier.quest.v2.oil.remeasure.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.remeasure.proof_help.2}"
+			]
+			icon: "adpother:aerometer"
+			id: "3A2400000000001A"
+			shape: "diamond"
+			size: 1d
+			tags: ["pollution", "measurement"]
+			tasks: [
+				{
+					id: "4B2400000000001E"
+					title: "{industrial_frontier.task.v2.oil.remeasure.record.objective}"
+					type: "checkmark"
+				}
+				{
+					id: "4B2400000000001F"
+					item: {
+						Count: 1
+						id: "adpother:iron_filter_frame"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.remeasure.observe.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.remeasure.title}"
+			x: 10d
+			y: 0d
 		}
 		{
 			dependencies: ["3A14000000000024"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_purified.purpose}"
-				"{industrial_frontier.quest.v2.p4.aluminium_purified.step.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_purified.step.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_purified.success}"
 				"{industrial_frontier.quest.v2.p4.aluminium_purified.task}"
-				"{industrial_frontier.quest.v2.p4.aluminium_purified.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_purified.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.aluminium_purified.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_purified.next}"
 			]
 			icon: "gtceu:purified_aluminium_ore"
 			id: "3A14000000000023"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_purified.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_output"]
 			tasks: [
 				{
@@ -187,76 +581,46 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.aluminium_purified.title}"
-			x: -6d
-			y: -8d
+			x: 10d
+			y: 1.5d
 		}
 		{
-			dependencies: [
-				"3A14000000000022"
-				"3FA17567FB015E52"
-			]
+			dependencies: ["3A24000000000004"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.purpose}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.step.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.step.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.success}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.task}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_washer_setup.next}"
+				"{industrial_frontier.quest.v2.oil.fluid_pipe.task}"
+				"{industrial_frontier.quest.v2.oil.fluid_pipe.proof_help.1}"
 			]
-			icon: "gtceu:lv_ore_washer"
-			id: "3A14000000000024"
-			shape: "gear"
+			icon: "immersiveengineering:fluid_pipe"
+			id: "3A24000000000005"
+			shape: "circle"
 			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_washer_setup.lead}"
-			tags: ["mainline", "metallurgy", "aluminium", "machine_before_product", "water"]
+			tags: ["immersive_engineering", "fluid_logistics"]
 			tasks: [
 				{
-					id: "4A14000000000055"
-					item: {
-						Count: 1
-						id: "gtceu:lv_ore_washer"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p4.aluminium_washer_setup.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A14000000000056"
+					id: "4B24000000000007"
 					block_type: 0
-					block: "gtceu:lv_ore_washer"
+					block: "immersiveengineering:fluid_pipe"
 					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.aluminium_washer_setup.use.objective}"
-					type: "questsadditions:use"
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.oil.fluid_pipe.place.objective}"
+					type: "questsadditions:place"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p4.aluminium_washer_setup.title}"
-			x: -9d
-			y: -8d
+			title: "{industrial_frontier.quest.v2.oil.fluid_pipe.title}"
+			x: 12d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A14000000000023"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_dust.purpose}"
-				"{industrial_frontier.quest.v2.p4.aluminium_dust.step.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_dust.step.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_dust.success}"
 				"{industrial_frontier.quest.v2.p4.aluminium_dust.task}"
-				"{industrial_frontier.quest.v2.p4.aluminium_dust.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_dust.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.aluminium_dust.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_dust.next}"
 			]
 			icon: "gtceu:aluminium_dust"
 			id: "3A14000000000025"
 			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_dust.lead}"
+			size: 1d
 			tags: ["mainline", "metallurgy", "aluminium", "source_before_product"]
 			tasks: [
 				{
@@ -274,29 +638,45 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.aluminium_dust.title}"
-			x: -3d
-			y: -8d
+			x: 12d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A24000000000005"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.crude_flow.purpose}"
+				"{industrial_frontier.quest.v2.oil.crude_flow.task}"
+				"{industrial_frontier.quest.v2.oil.crude_flow.proof_help.1}"
+			]
+			icon: "immersivepetroleum:crudeoil_bucket"
+			id: "3A24000000000006"
+			shape: "gear"
+			size: 1.2d
+			tags: ["petroleum", "extraction"]
+			tasks: [
+				{
+					id: "4B24000000000009"
+					fluid: "immersivepetroleum:crudeoil"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.oil.crude_flow.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.crude_flow.title}"
+			x: 14d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A14000000000025"]
 			description: [
 				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.purpose}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.step.1}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.step.2}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.step.3}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.success}"
 				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.task}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_reserve.next}"
 			]
 			icon: "gtceu:lv_battery_buffer_4x"
 			id: "3A1400000000001E"
 			shape: "square"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.ebf_power_reserve.lead}"
+			size: 1.4d
 			tags: ["mainline", "metallurgy", "power", "lv", "four_amp_bootstrap"]
 			tasks: [
 				{
@@ -312,42 +692,52 @@
 					title: "{industrial_frontier.task.v2.p4.ebf_power_reserve.batteries.objective}"
 					type: "item"
 				}
-				{
-					id: "4A1400000000004C"
-					block_type: 0
-					block: "gtceu:lv_battery_buffer_4x"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.ebf_power_reserve.buffer.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.ebf_power_reserve.title}"
-			x: 0d
-			y: -8d
+			x: 14d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A24000000000006"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.distillation_tower.purpose}"
+				"{industrial_frontier.quest.v2.oil.distillation_tower.task}"
+				"{industrial_frontier.quest.v2.oil.distillation_tower.proof_help.1}"
+			]
+			icon: "immersivepetroleum:distillation_tower"
+			id: "3A24000000000007"
+			shape: "gear"
+			size: 1.2d
+			tags: ["petroleum", "distillation"]
+			tasks: [
+				{
+					id: "4B2400000000000A"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:distillation_tower"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.distillation_tower.use.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.distillation_tower.title}"
+			x: 16d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A1400000000001E"]
 			description: [
 				"{industrial_frontier.quest.v2.p4.ebf_power_bus.purpose}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_bus.step.1}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_bus.step.2}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_bus.step.3}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_bus.success}"
 				"{industrial_frontier.quest.v2.p4.ebf_power_bus.task}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_bus.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_bus.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.ebf_power_bus.proof_help.1}"
 				"{industrial_frontier.quest.v2.p4.ebf_power_bus.proof_help.2}"
 				"{industrial_frontier.quest.v2.p4.ebf_power_bus.proof_help.3}"
-				"{industrial_frontier.quest.v2.p4.ebf_power_bus.next}"
 			]
 			icon: "gtceu:tin_quadruple_cable"
 			id: "3A1400000000001F"
 			shape: "square"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.ebf_power_bus.lead}"
+			size: 1.4d
 			tags: ["mainline", "metallurgy", "power", "lv", "four_amp_bootstrap"]
 			tasks: [
 				{
@@ -384,29 +774,149 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.ebf_power_bus.title}"
-			x: 1.5d
-			y: -8d
+			x: 16d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A24000000000007"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.bitumen.task}"
+				"{industrial_frontier.quest.v2.oil.bitumen.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.bitumen.optional_note}"
+			]
+			icon: "immersivepetroleum:bitumen"
+			id: "3A2400000000000B"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["optional", "petroleum", "byproduct"]
+			tasks: [
+				{
+					id: "4B2400000000000E"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:bitumen"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.bitumen.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.bitumen.title}"
+			x: 18d
+			y: -3.75d
+		}
+		{
+			dependencies: ["3A24000000000007"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.crusher.purpose}"
+				"{industrial_frontier.quest.v2.oil.crusher.task}"
+				"{industrial_frontier.quest.v2.oil.crusher.proof_help.1}"
+			]
+			icon: "immersiveengineering:crusher"
+			id: "3A24000000000012"
+			shape: "gear"
+			size: 1.1d
+			tags: ["immersive_engineering", "heavy_industry"]
+			tasks: [
+				{
+					id: "4B24000000000015"
+					item: {
+						Count: 1
+						id: "immersiveengineering:crusher"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.crusher.use.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.crusher.title}"
+			x: 18d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3A24000000000007"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.lubricant.task}"
+				"{industrial_frontier.quest.v2.oil.lubricant.proof_help.1}"
+			]
+			icon: "immersivepetroleum:lubricant_bucket"
+			id: "3A2400000000000A"
+			shape: "circle"
+			size: 1d
+			tags: ["petroleum", "byproduct"]
+			tasks: [
+				{
+					id: "4B2400000000000D"
+					fluid: "immersivepetroleum:lubricant"
+					amount: 250L
+					title: "{industrial_frontier.task.v2.oil.lubricant.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.lubricant.title}"
+			x: 18d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A24000000000007"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.naphtha.task}"
+				"{industrial_frontier.quest.v2.oil.naphtha.proof_help.1}"
+			]
+			icon: "immersivepetroleum:naphtha_bucket"
+			id: "3A24000000000008"
+			shape: "circle"
+			size: 1d
+			tags: ["petroleum", "chemistry"]
+			tasks: [
+				{
+					id: "4B2400000000000B"
+					fluid: "immersivepetroleum:naphtha"
+					amount: 250L
+					title: "{industrial_frontier.task.v2.oil.naphtha.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.naphtha.title}"
+			x: 18d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A24000000000007"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.sulfur_diesel.task}"
+				"{industrial_frontier.quest.v2.oil.sulfur_diesel.proof_help.1}"
+			]
+			icon: "immersivepetroleum:diesel_sulfur_bucket"
+			id: "3A24000000000009"
+			shape: "circle"
+			size: 1d
+			tags: ["petroleum", "fuel"]
+			tasks: [
+				{
+					id: "4B2400000000000C"
+					fluid: "immersivepetroleum:diesel_sulfur"
+					amount: 500L
+					title: "{industrial_frontier.task.v2.oil.sulfur_diesel.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.sulfur_diesel.title}"
+			x: 18d
+			y: 2.25d
 		}
 		{
 			dependencies: ["3A1400000000001F"]
 			description: [
 				"{industrial_frontier.quest.v2.p4.ebf.purpose}"
-				"{industrial_frontier.quest.v2.p4.ebf.step.1}"
-				"{industrial_frontier.quest.v2.p4.ebf.step.2}"
-				"{industrial_frontier.quest.v2.p4.ebf.step.3}"
-				"{industrial_frontier.quest.v2.p4.ebf.success}"
 				"{industrial_frontier.quest.v2.p4.ebf.task}"
-				"{industrial_frontier.quest.v2.p4.ebf.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.ebf.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.ebf.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.ebf.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.ebf.next}"
 			]
 			icon: "gtceu:electric_blast_furnace"
 			id: "3A14000000000016"
 			shape: "gear"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p4.ebf.lead}"
+			size: 1.1d
 			tags: ["mainline", "metallurgy", "machine_before_product", "tier_bridge"]
 			tasks: [
 				{
@@ -419,40 +929,145 @@
 					title: "{industrial_frontier.task.v2.p4.ebf.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A1400000000003E"
-					block_type: 0
-					block: "gtceu:electric_blast_furnace"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.ebf.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.ebf.title}"
-			x: 3d
-			y: -8d
+			x: 18d
+			y: 3.75d
+		}
+		{
+			dependencies: ["3A24000000000012"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.aerometer.task}"
+				"{industrial_frontier.quest.v2.oil.aerometer.proof_help.1}"
+			]
+			icon: "adpother:aerometer"
+			id: "3A24000000000015"
+			shape: "diamond"
+			size: 1d
+			tags: ["pollution", "measurement"]
+			tasks: [
+				{
+					id: "4B24000000000018"
+					item: {
+						Count: 1
+						id: "adpother:aerometer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.aerometer.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.aerometer.title}"
+			x: 20d
+			y: -3.75d
+		}
+		{
+			dependencies: [
+				"3A2400000000000B"
+				"3A24000000000012"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.oil.asphalt.task}"
+				"{industrial_frontier.quest.v2.oil.asphalt.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.asphalt.optional_note}"
+			]
+			icon: "immersivepetroleum:asphalt"
+			id: "3A24000000000013"
+			optional: true
+			shape: "square"
+			size: 1d
+			tags: ["optional", "city", "road"]
+			tasks: [
+				{
+					id: "4B24000000000016"
+					block_type: 0
+					block: "immersivepetroleum:asphalt"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.oil.asphalt.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.asphalt.title}"
+			x: 20d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3A2400000000000B"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.coker.purpose}"
+				"{industrial_frontier.quest.v2.oil.coker.task}"
+				"{industrial_frontier.quest.v2.oil.coker.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.coker.optional_note}"
+			]
+			icon: "immersivepetroleum:coker_unit"
+			id: "3A24000000000010"
+			optional: true
+			shape: "gear"
+			size: 1d
+			tags: ["optional", "petroleum", "coking"]
+			tasks: [
+				{
+					id: "4B24000000000013"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:coker_unit"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.coker.use.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.coker.title}"
+			x: 20d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A24000000000009"
+				"3A2400000000000A"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.oil.hydrotreater.task}"
+				"{industrial_frontier.quest.v2.oil.hydrotreater.proof_help.1}"
+			]
+			icon: "immersivepetroleum:hydrotreater"
+			id: "3A2400000000000C"
+			shape: "gear"
+			size: 1.1d
+			tags: ["petroleum", "refining"]
+			tasks: [
+				{
+					id: "4B2400000000000F"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:hydrotreater"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.hydrotreater.use.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.hydrotreater.title}"
+			x: 20d
+			y: 0.75d
 		}
 		{
 			dependencies: ["3A14000000000016"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_ingots.purpose}"
 				"{industrial_frontier.quest.v2.p4.aluminium_ingots.step.1}"
 				"{industrial_frontier.quest.v2.p4.aluminium_ingots.step.2}"
 				"{industrial_frontier.quest.v2.p4.aluminium_ingots.step.3}"
-				"{industrial_frontier.quest.v2.p4.aluminium_ingots.success}"
 				"{industrial_frontier.quest.v2.p4.aluminium_ingots.task}"
 				"{industrial_frontier.quest.v2.p4.aluminium_ingots.diagnostic.1}"
 				"{industrial_frontier.quest.v2.p4.aluminium_ingots.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.aluminium_ingots.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_ingots.next}"
 			]
 			icon: "gtceu:aluminium_ingot"
 			id: "3A14000000000026"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_ingots.lead}"
 			tags: ["mainline", "metallurgy", "aluminium", "machine_output"]
 			tasks: [
 				{
@@ -470,28 +1085,162 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.aluminium_ingots.title}"
-			x: 4.5d
-			y: -10d
+			x: 20d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3A24000000000008"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.oil_distillation.task}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.oil_distillation.proof_help.2}"
+			]
+			icon: "immersivepetroleum:distillation_tower"
+			id: "3A14000000000003"
+			shape: "gear"
+			size: 1d
+			tags: ["petroleum", "distillation"]
+			tasks: [
+				{
+					id: "4A14000000000007"
+					fluid: "immersivepetroleum:crudeoil"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p4.oil_distillation.crude.objective}"
+					type: "fluid"
+				}
+				{
+					id: "4A14000000000008"
+					fluid: "immersivepetroleum:naphtha"
+					amount: 250L
+					title: "{industrial_frontier.task.v2.p4.oil_distillation.naphtha.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.oil_distillation.title}"
+			x: 20d
+			y: 3.75d
+		}
+		{
+			dependencies: ["3A2400000000000C"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.clean_diesel.task}"
+				"{industrial_frontier.quest.v2.oil.clean_diesel.proof_help.1}"
+			]
+			icon: "immersivepetroleum:diesel_bucket"
+			id: "3A2400000000000D"
+			shape: "circle"
+			size: 1d
+			tags: ["petroleum", "fuel"]
+			tasks: [
+				{
+					id: "4B24000000000010"
+					fluid: "immersivepetroleum:diesel"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.oil.clean_diesel.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.clean_diesel.title}"
+			x: 22d
+			y: -3d
+		}
+		{
+			dependencies: ["3A2400000000000C"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.paraffin.task}"
+				"{industrial_frontier.quest.v2.oil.paraffin.proof_help.1}"
+			]
+			icon: "immersivepetroleum:paraffin_wax"
+			id: "3A2400000000000F"
+			shape: "circle"
+			size: 1d
+			tags: ["petroleum", "byproduct"]
+			tasks: [
+				{
+					id: "4B24000000000012"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:paraffin_wax"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.paraffin.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.paraffin.title}"
+			x: 22d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A24000000000010"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.petcoke.task}"
+				"{industrial_frontier.quest.v2.oil.petcoke.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.petcoke.optional_note}"
+			]
+			icon: "immersivepetroleum:petcoke"
+			id: "3A24000000000011"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["optional", "petroleum", "byproduct"]
+			tasks: [
+				{
+					id: "4B24000000000014"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:petcoke"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.petcoke.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.petcoke.title}"
+			x: 22d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A24000000000008"
+				"3A2400000000000C"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.oil.refinery_setup.purpose}"
+				"{industrial_frontier.quest.v2.oil.refinery_setup.task}"
+				"{industrial_frontier.quest.v2.oil.refinery_setup.proof_help.1}"
+			]
+			icon: "immersiveengineering:refinery"
+			id: "3A2400000000001D"
+			shape: "gear"
+			size: 1.1d
+			tags: ["petroleum", "immersive_engineering", "polymer", "machine_before_product"]
+			tasks: [
+				{
+					id: "4B24000000000024"
+					item: {
+						Count: 1
+						id: "immersiveengineering:refinery"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.refinery_setup.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.refinery_setup.title}"
+			x: 22d
+			y: 1.5d
 		}
 		{
 			dependencies: ["3A14000000000026"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.purpose}"
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.step.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.step.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.success}"
 				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.task}"
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.aluminium_bender_setup.next}"
 			]
 			icon: "gtceu:lv_bender"
 			id: "3A14000000000027"
 			shape: "gear"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.aluminium_bender_setup.lead}"
+			size: 1.1d
 			tags: ["mainline", "metallurgy", "aluminium", "machine_before_product"]
 			tasks: [
 				{
@@ -504,39 +1253,76 @@
 					title: "{industrial_frontier.task.v2.p4.aluminium_bender_setup.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A1400000000005A"
-					block_type: 0
-					block: "gtceu:lv_bender"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.aluminium_bender_setup.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.aluminium_bender_setup.title}"
-			x: 5.5d
-			y: -10d
+			x: 22d
+			y: 3d
+		}
+		{
+			dependencies: ["3A2400000000001D"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.bottling_setup.purpose}"
+				"{industrial_frontier.quest.v2.oil.bottling_setup.task}"
+				"{industrial_frontier.quest.v2.oil.bottling_setup.proof_help.1}"
+			]
+			icon: "immersiveengineering:bottling_machine"
+			id: "3A2400000000001E"
+			shape: "gear"
+			size: 1.1d
+			tags: ["petroleum", "immersive_engineering", "polymer", "machine_before_product"]
+			tasks: [
+				{
+					id: "4B24000000000026"
+					item: {
+						Count: 1
+						id: "immersiveengineering:bottling_machine"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.bottling_setup.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.bottling_setup.title}"
+			x: 24d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A2400000000000D"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.diesel_barrel.task}"
+				"{industrial_frontier.quest.v2.oil.diesel_barrel.proof_help.1}"
+			]
+			icon: "immersiveengineering:metal_barrel"
+			id: "3A2400000000000E"
+			shape: "square"
+			size: 1.1d
+			tags: ["immersive_engineering", "reserve"]
+			tasks: [
+				{
+					id: "4B24000000000011"
+					block_type: 0
+					block: "immersiveengineering:metal_barrel"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.oil.diesel_barrel.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.diesel_barrel.title}"
+			x: 24d
+			y: 0d
 		}
 		{
 			dependencies: ["3A14000000000027"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.mv_materials.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_materials.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_materials.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_materials.success}"
 				"{industrial_frontier.quest.v2.p4.mv_materials.task}"
-				"{industrial_frontier.quest.v2.p4.mv_materials.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_materials.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.mv_materials.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.mv_materials.next}"
 			]
 			icon: "gtceu:aluminium_plate"
 			id: "3A14000000000017"
 			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_materials.lead}"
+			size: 1d
 			tags: ["mainline", "metallurgy", "mv", "material_bridge"]
 			tasks: [
 				{
@@ -554,60 +1340,80 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.mv_materials.title}"
-			x: 6d
-			y: -8d
+			x: 24d
+			y: 1.5d
 		}
 		{
-			dependencies: ["3014000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.raw_water.purpose}"
-				"{industrial_frontier.quest.v2.p4.raw_water.step.1}"
-				"{industrial_frontier.quest.v2.p4.raw_water.success}"
-				"{industrial_frontier.quest.v2.p4.raw_water.task}"
-				"{industrial_frontier.quest.v2.p4.raw_water.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.raw_water.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.raw_water.next}"
+			dependencies: [
+				"3A24000000000013"
+				"3A2400000000000E"
 			]
-			icon: "minecraft:water_bucket"
-			id: "3FA17567FB015E52"
-			shape: "circle"
+			description: [
+				"{industrial_frontier.quest.v2.oil.gas_station.task}"
+				"{industrial_frontier.quest.v2.oil.gas_station.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.gas_station.optional_note}"
+			]
+			icon: "car:gas_station"
+			id: "3A2400000000001B"
+			optional: true
+			shape: "hexagon"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.raw_water.lead}"
-			tags: ["water", "source"]
+			tags: ["optional", "city", "last_mile"]
 			tasks: [
 				{
-					id: "456E850EA8B5A4F2"
-					fluid: "minecraft:water"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p4.raw_water.fluid.objective}"
-					type: "fluid"
+					id: "4B24000000000020"
+					block_type: 0
+					block: "car:gas_station"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.oil.gas_station.place.objective}"
+					type: "questsadditions:place"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p4.raw_water.title}"
-			x: 3d
-			y: -5d
+			title: "{industrial_frontier.quest.v2.oil.gas_station.title}"
+			x: 26d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A2400000000001E"]
+			description: [
+				"{industrial_frontier.quest.v2.oil.plastic.purpose}"
+				"{industrial_frontier.quest.v2.oil.plastic.task}"
+				"{industrial_frontier.quest.v2.oil.plastic.proof_help.1}"
+			]
+			icon: "immersiveengineering:plate_duroplast"
+			id: "3A24000000000014"
+			shape: "hexagon"
+			size: 1.4d
+			tags: ["petroleum", "immersive_engineering", "polymer"]
+			tasks: [
+				{
+					id: "4B24000000000017"
+					item: {
+						Count: 1
+						id: "immersiveengineering:plate_duroplast"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.plastic.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.plastic.title}"
+			x: 26d
+			y: 0d
 		}
 		{
 			dependencies: ["3A14000000000017"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.mv_source.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_source.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_source.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_source.step.3}"
-				"{industrial_frontier.quest.v2.p4.mv_source.success}"
 				"{industrial_frontier.quest.v2.p4.mv_source.task}"
-				"{industrial_frontier.quest.v2.p4.mv_source.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_source.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.mv_source.proof_help.1}"
 				"{industrial_frontier.quest.v2.p4.mv_source.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.mv_source.proof_help.3}"
-				"{industrial_frontier.quest.v2.p4.mv_source.next}"
 			]
 			icon: "gtceu:mv_steam_turbine"
 			id: "3A14000000000011"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_source.lead}"
 			tags: ["mainline", "mv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -621,16 +1427,6 @@
 					}
 					title: "{industrial_frontier.task.v2.p4.mv_source.generator_item.objective}"
 					type: "item"
-				}
-				{
-					id: "4A14000000000037"
-					block_type: 1
-					block: "industrial_frontier:power/mv_generators"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.mv_source.generator_use.objective}"
-					type: "questsadditions:use"
 				}
 				{
 					id: "4A1400000000003C"
@@ -647,30 +1443,59 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.mv_source.title}"
-			x: 9d
-			y: -6d
+			x: 26d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3A2400000000000E"
+				"3A2400000000000F"
+				"3A24000000000014"
+				"3A2400000000001A"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.oil.acceptance.purpose}"
+				"{industrial_frontier.quest.v2.oil.acceptance.task}"
+				"{industrial_frontier.quest.v2.oil.acceptance.proof_help.1}"
+				"{industrial_frontier.quest.v2.oil.acceptance.proof_help.2}"
+			]
+			icon: "immersivepetroleum:distillation_tower"
+			id: "3A2400000000001C"
+			shape: "octagon"
+			size: 1.4d
+			tags: ["petroleum", "ecology", "acceptance"]
+			tasks: [
+				{
+					id: "4B24000000000021"
+					title: "{industrial_frontier.task.v2.oil.acceptance.manual.objective}"
+					type: "checkmark"
+				}
+				{
+					id: "4B24000000000023"
+					item: {
+						Count: 1
+						id: "immersivepetroleum:distillation_tower"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.oil.acceptance.tower.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.oil.acceptance.title}"
+			x: 28d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A14000000000011"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.mv_buffer.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.step.3}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.success}"
 				"{industrial_frontier.quest.v2.p4.mv_buffer.task}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.mv_buffer.proof_help.1}"
 				"{industrial_frontier.quest.v2.p4.mv_buffer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.proof_help.3}"
-				"{industrial_frontier.quest.v2.p4.mv_buffer.next}"
 			]
 			icon: "gtceu:mv_battery_buffer_4x"
 			id: "3A14000000000012"
 			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_buffer.lead}"
+			size: 1.1d
 			tags: ["mainline", "mv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -695,40 +1520,22 @@
 					title: "{industrial_frontier.task.v2.p4.mv_buffer.battery.objective}"
 					type: "item"
 				}
-				{
-					id: "4A14000000000039"
-					block_type: 0
-					block: "gtceu:mv_battery_buffer_4x"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.mv_buffer.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.mv_buffer.title}"
-			x: 12d
-			y: -6d
+			x: 28d
+			y: 0.75d
 		}
 		{
 			dependencies: ["3A14000000000012"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.mv_components.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_components.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_components.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_components.success}"
 				"{industrial_frontier.quest.v2.p4.mv_components.task}"
-				"{industrial_frontier.quest.v2.p4.mv_components.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_components.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.mv_components.proof_help.1}"
 				"{industrial_frontier.quest.v2.p4.mv_components.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.mv_components.next}"
 			]
 			icon: "gtceu:mv_machine_hull"
 			id: "3A14000000000013"
 			shape: "diamond"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_components.lead}"
 			tags: ["mainline", "mv", "components", "tier_bridge"]
 			tasks: [
 				{
@@ -755,106 +1562,8 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.mv_components.title}"
-			x: 15d
-			y: -6d
-		}
-		{
-			dependencies: [
-				"3A14000000000013"
-				"3FA17567FB015E52"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p4.mv_lab.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.step.3}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.success}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.task}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.diagnostic.3}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.mv_lab.next}"
-			]
-			icon: "gtceu:mv_distillery"
-			id: "3A14000000000010"
-			shape: "gear"
-			size: 1.25d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_lab.lead}"
-			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A14000000000030"
-					item: {
-						Count: 1
-						id: "gtceu:mv_distillery"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p4.mv_lab.distillery_item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A14000000000031"
-					block_type: 0
-					block: "gtceu:mv_distillery"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.mv_lab.distillery_use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.mv_lab.title}"
-			x: 18d
-			y: -5d
-		}
-		{
-			dependencies: ["3A14000000000013"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.mv_reactor.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.step.3}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.success}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.task}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.mv_reactor.next}"
-			]
-			icon: "gtceu:mv_chemical_reactor"
-			id: "3A14000000000014"
-			shape: "gear"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_reactor.lead}"
-			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A14000000000032"
-					item: {
-						Count: 1
-						id: "gtceu:mv_chemical_reactor"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p4.mv_reactor.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A14000000000033"
-					block_type: 0
-					block: "gtceu:mv_chemical_reactor"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.mv_reactor.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.mv_reactor.title}"
-			x: 18d
-			y: -1d
+			x: 30d
+			y: 0d
 		}
 		{
 			dependencies: [
@@ -863,22 +1572,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.step.3}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.success}"
 				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.task}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.mv_electrolyzer.next}"
 			]
 			icon: "gtceu:mv_electrolyzer"
 			id: "3A14000000000015"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_electrolyzer.lead}"
 			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
 			tasks: [
 				{
@@ -891,156 +1591,10 @@
 					title: "{industrial_frontier.task.v2.p4.mv_electrolyzer.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A14000000000035"
-					block_type: 0
-					block: "gtceu:mv_electrolyzer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.mv_electrolyzer.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.mv_electrolyzer.title}"
-			x: 18d
-			y: 3.5d
-		}
-		{
-			dependencies: ["3A14000000000010"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.distilled_water.purpose}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.step.1}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.step.2}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.success}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.task}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.distilled_water.next}"
-			]
-			icon: "gtceu:distilled_water_bucket"
-			id: "3D548F1A54D402A2"
-			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.distilled_water.lead}"
-			tags: ["water", "product"]
-			tasks: [
-				{
-					id: "449EE174796427BE"
-					fluid: "gtceu:distilled_water"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p4.distilled_water.fluid.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.distilled_water.title}"
-			x: 21d
-			y: -5d
-		}
-		{
-			dependencies: ["3D548F1A54D402A2"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.effluent_balance.purpose}"
-				"{industrial_frontier.quest.v2.p4.effluent_balance.success}"
-				"{industrial_frontier.quest.v2.p4.effluent_balance.task}"
-				"{industrial_frontier.quest.v2.p4.effluent_balance.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.effluent_balance.next}"
-			]
-			icon: "industrial_frontier:textures/gui/icons/process/gtceu/sewage_recovery.png"
-			id: "3014000000000004"
-			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.effluent_balance.lead}"
-			tags: ["water", "diagnostics"]
-			tasks: [
-				{
-					id: "4014000000000004"
-					title: "{industrial_frontier.task.v2.p4.effluent_balance.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.effluent_balance.title}"
-			x: 24d
-			y: -5d
-		}
-		{
-			dependencies: ["3A14000000000014"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.purpose}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.step.1}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.step.2}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.step.3}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.success}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.task}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.next}"
-			]
-			icon: "gtceu:sulfur_dust"
-			id: "3A14000000000018"
-			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.sulfur_feedstock.lead}"
-			tags: ["mainline", "chemistry", "sulfur", "source_before_product"]
-			tasks: [
-				{
-					id: "4A14000000000040"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/sulfur_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p4.sulfur_feedstock.sulfur.objective}"
-					type: "item"
-				}
-				{
-					id: "4A14000000000041"
-					fluid: "gtceu:oxygen"
-					amount: 3000L
-					title: "{industrial_frontier.task.v2.p4.sulfur_feedstock.oxygen.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.sulfur_feedstock.title}"
-			x: 21d
-			y: -2d
-		}
-		{
-			dependencies: ["3A14000000000018"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.sulfur.purpose}"
-				"{industrial_frontier.quest.v2.p4.sulfur.step.1}"
-				"{industrial_frontier.quest.v2.p4.sulfur.step.2}"
-				"{industrial_frontier.quest.v2.p4.sulfur.success}"
-				"{industrial_frontier.quest.v2.p4.sulfur.task}"
-				"{industrial_frontier.quest.v2.p4.sulfur.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.sulfur.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.sulfur.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.sulfur.next}"
-			]
-			icon: "gtceu:sulfuric_acid_bucket"
-			id: "37A5A8A5636C1101"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.sulfur.lead}"
-			tags: ["chemistry", "sulfur"]
-			tasks: [
-				{
-					id: "44087A38296DF113"
-					fluid: "gtceu:sulfuric_acid"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p4.sulfur.fluid.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.sulfur.title}"
-			x: 24d
-			y: -2d
+			x: 32d
+			y: -2.25d
 		}
 		{
 			dependencies: [
@@ -1048,23 +1602,44 @@
 				"3FA17567FB015E52"
 			]
 			description: [
-				"{industrial_frontier.quest.v2.p4.mv_mixer.purpose}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.step.1}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.step.2}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.step.3}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.success}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.task}"
+				"{industrial_frontier.quest.v2.p4.mv_lab.proof_help.1}"
+			]
+			icon: "gtceu:mv_distillery"
+			id: "3A14000000000010"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A14000000000030"
+					item: {
+						Count: 1
+						id: "gtceu:mv_distillery"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p4.mv_lab.distillery_item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.mv_lab.title}"
+			x: 32d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A14000000000013"
+				"3FA17567FB015E52"
+			]
+			description: [
 				"{industrial_frontier.quest.v2.p4.mv_mixer.task}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.mv_mixer.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.mv_mixer.next}"
 			]
 			icon: "gtceu:mv_mixer"
 			id: "3A1400000000001C"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p4.mv_mixer.lead}"
 			tags: ["mainline", "chemistry", "chlorine", "machine_before_product"]
 			tasks: [
 				{
@@ -1077,39 +1652,49 @@
 					title: "{industrial_frontier.task.v2.p4.mv_mixer.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A14000000000047"
-					block_type: 0
-					block: "gtceu:mv_mixer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.mv_mixer.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.mv_mixer.title}"
-			x: 18d
-			y: 6d
+			x: 32d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A14000000000013"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.mv_reactor.purpose}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.task}"
+				"{industrial_frontier.quest.v2.p4.mv_reactor.proof_help.1}"
+			]
+			icon: "gtceu:mv_chemical_reactor"
+			id: "3A14000000000014"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "mv", "chemistry", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A14000000000032"
+					item: {
+						Count: 1
+						id: "gtceu:mv_chemical_reactor"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p4.mv_reactor.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.mv_reactor.title}"
+			x: 32d
+			y: 2.25d
 		}
 		{
 			dependencies: ["3A1400000000001C"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.brine_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p4.brine_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p4.brine_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p4.brine_inputs.success}"
 				"{industrial_frontier.quest.v2.p4.brine_inputs.task}"
-				"{industrial_frontier.quest.v2.p4.brine_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.brine_inputs.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.brine_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.brine_inputs.next}"
 			]
 			icon: "gtceu:salt_dust"
 			id: "3A1400000000001B"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.brine_inputs.lead}"
 			tags: ["mainline", "chemistry", "chlorine", "source_before_processed"]
 			tasks: [
 				{
@@ -1127,108 +1712,46 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.brine_inputs.title}"
-			x: 21d
-			y: 6d
+			x: 34d
+			y: -2.25d
 		}
 		{
-			dependencies: ["3A1400000000001B"]
+			dependencies: ["3A14000000000010"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.purpose}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.step.1}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.step.2}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.success}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.task}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.brine_feedstock.next}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.task}"
+				"{industrial_frontier.quest.v2.p4.distilled_water.proof_help.1}"
 			]
-			icon: "gtceu:salt_water_bucket"
-			id: "3A1400000000001A"
-			shape: "square"
+			icon: "gtceu:distilled_water_bucket"
+			id: "3D548F1A54D402A2"
+			shape: "diamond"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.brine_feedstock.lead}"
-			tags: ["mainline", "chemistry", "chlorine", "source_before_product"]
+			tags: ["water", "product"]
 			tasks: [
 				{
-					id: "4A14000000000045"
-					fluid: "gtceu:salt_water"
+					id: "449EE174796427BE"
+					fluid: "gtceu:distilled_water"
 					amount: 1000L
-					title: "{industrial_frontier.task.v2.p4.brine_feedstock.brine.objective}"
+					title: "{industrial_frontier.task.v2.p4.distilled_water.fluid.objective}"
 					type: "fluid"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p4.brine_feedstock.title}"
-			x: 21d
-			y: 3.5d
-		}
-		{
-			dependencies: [
-				"3A1400000000001A"
-				"3A14000000000015"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p4.chlorine.purpose}"
-				"{industrial_frontier.quest.v2.p4.chlorine.step.1}"
-				"{industrial_frontier.quest.v2.p4.chlorine.step.2}"
-				"{industrial_frontier.quest.v2.p4.chlorine.success}"
-				"{industrial_frontier.quest.v2.p4.chlorine.task}"
-				"{industrial_frontier.quest.v2.p4.chlorine.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.chlorine.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.chlorine.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.chlorine.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.chlorine.next}"
-			]
-			icon: "gtceu:chlorine_bucket"
-			id: "39016A3285565221"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.chlorine.lead}"
-			tags: ["chemistry", "chlor_alkali"]
-			tasks: [
-				{
-					id: "4C36206BD95E1A88"
-					fluid: "gtceu:chlorine"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p4.chlorine.fluid.objective}"
-					type: "fluid"
-				}
-				{
-					id: "45D68695AF02BACE"
-					item: {
-						Count: 1
-						id: "gtceu:sodium_hydroxide_dust"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p4.chlorine.caustic.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.chlorine.title}"
-			x: 24d
-			y: 3.5d
+			title: "{industrial_frontier.quest.v2.p4.distilled_water.title}"
+			x: 34d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A1400000000001C"]
 			description: [
 				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.step.3}"
-				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.success}"
 				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.task}"
-				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.proof_help.1}"
 				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.proof_help.2}"
 				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.proof_help.3}"
-				"{industrial_frontier.quest.v2.p4.fertiliser_inputs.next}"
 			]
 			icon: "minecraft:dirt"
 			id: "3A1400000000001D"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.fertiliser_inputs.lead}"
 			tags: ["mainline", "agriculture", "fertilizer", "source_before_product"]
 			tasks: [
 				{
@@ -1265,27 +1788,104 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.fertiliser_inputs.title}"
-			x: 24d
-			y: 0.5d
+			x: 34d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A14000000000014"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.purpose}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.task}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.sulfur_feedstock.proof_help.2}"
+			]
+			icon: "gtceu:sulfur_dust"
+			id: "3A14000000000018"
+			shape: "square"
+			size: 1d
+			tags: ["mainline", "chemistry", "sulfur", "source_before_product"]
+			tasks: [
+				{
+					id: "4A14000000000040"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/sulfur_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p4.sulfur_feedstock.sulfur.objective}"
+					type: "item"
+				}
+				{
+					id: "4A14000000000041"
+					fluid: "gtceu:oxygen"
+					amount: 3000L
+					title: "{industrial_frontier.task.v2.p4.sulfur_feedstock.oxygen.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.sulfur_feedstock.title}"
+			x: 34d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3A1400000000001B"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.task}"
+				"{industrial_frontier.quest.v2.p4.brine_feedstock.proof_help.1}"
+			]
+			icon: "gtceu:salt_water_bucket"
+			id: "3A1400000000001A"
+			shape: "square"
+			size: 1d
+			tags: ["mainline", "chemistry", "chlorine", "source_before_product"]
+			tasks: [
+				{
+					id: "4A14000000000045"
+					fluid: "gtceu:salt_water"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p4.brine_feedstock.brine.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.brine_feedstock.title}"
+			x: 36d
+			y: -3d
+		}
+		{
+			dependencies: ["3D548F1A54D402A2"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.effluent_balance.task}"
+				"{industrial_frontier.quest.v2.p4.effluent_balance.proof_help.1}"
+			]
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/gtceu/sewage_recovery.png"}}
+			id: "3014000000000004"
+			shape: "square"
+			size: 1d
+			tags: ["water", "diagnostics"]
+			tasks: [
+				{
+					id: "4014000000000004"
+					title: "{industrial_frontier.task.v2.p4.effluent_balance.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.effluent_balance.title}"
+			x: 36d
+			y: -1.5d
 		}
 		{
 			dependencies: ["3A1400000000001D"]
 			description: [
 				"{industrial_frontier.quest.v2.p4.fertiliser.purpose}"
-				"{industrial_frontier.quest.v2.p4.fertiliser.step.1}"
-				"{industrial_frontier.quest.v2.p4.fertiliser.step.2}"
-				"{industrial_frontier.quest.v2.p4.fertiliser.success}"
 				"{industrial_frontier.quest.v2.p4.fertiliser.task}"
-				"{industrial_frontier.quest.v2.p4.fertiliser.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.fertiliser.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.fertiliser.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.fertiliser.next}"
 			]
 			icon: "gtceu:fertilizer"
 			id: "3F5500A5915B1BB6"
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.fertiliser.lead}"
 			tags: ["agriculture", "fertilizer"]
 			tasks: [
 				{
@@ -1303,76 +1903,19 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.fertiliser.title}"
-			x: 27d
-			y: 0.5d
-		}
-		{
-			dependencies: [
-				"3FA17567FB015E52"
-				"3F5500A5915B1BB6"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.p4.irrigation.purpose}"
-				"{industrial_frontier.quest.v2.p4.irrigation.step.1}"
-				"{industrial_frontier.quest.v2.p4.irrigation.step.2}"
-				"{industrial_frontier.quest.v2.p4.irrigation.success}"
-				"{industrial_frontier.quest.v2.p4.irrigation.task}"
-				"{industrial_frontier.quest.v2.p4.irrigation.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.irrigation.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.irrigation.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.irrigation.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.irrigation.next}"
-			]
-			icon: "agriculturalenhancements:irrigation_controller"
-			id: "3A14000000000001"
-			shape: "gear"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p4.irrigation.lead}"
-			tags: ["agriculture", "water", "place_use"]
-			tasks: [
-				{
-					id: "4A14000000000002"
-					block_type: 0
-					block: "agriculturalenhancements:irrigation_controller"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p4.irrigation.place.objective}"
-					type: "questsadditions:place"
-				}
-				{
-					id: "4A14000000000003"
-					block_type: 0
-					block: "agriculturalenhancements:irrigation_controller"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.irrigation.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.irrigation.title}"
-			x: 27d
-			y: 3.5d
+			x: 36d
+			y: 0d
 		}
 		{
 			dependencies: ["3D548F1A54D402A2"]
 			description: [
-				"{industrial_frontier.quest.v2.p4.kitchen_manual.purpose}"
-				"{industrial_frontier.quest.v2.p4.kitchen_manual.step.1}"
-				"{industrial_frontier.quest.v2.p4.kitchen_manual.step.2}"
-				"{industrial_frontier.quest.v2.p4.kitchen_manual.success}"
 				"{industrial_frontier.quest.v2.p4.kitchen_manual.task}"
-				"{industrial_frontier.quest.v2.p4.kitchen_manual.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.kitchen_manual.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.kitchen_manual.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.kitchen_manual.next}"
 			]
 			icon: "farmersdelight:cooking_pot"
 			id: "3E7F5794AFFC2C7A"
 			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.kitchen_manual.lead}"
+			size: 1.1d
 			tags: ["food", "kitchen"]
 			tasks: [
 				{
@@ -1387,8 +1930,178 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.kitchen_manual.title}"
-			x: 27d
-			y: -3d
+			x: 36d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A14000000000018"]
+			description: [
+				"{industrial_frontier.quest.v2.p4.sulfur.purpose}"
+				"{industrial_frontier.quest.v2.p4.sulfur.task}"
+				"{industrial_frontier.quest.v2.p4.sulfur.proof_help.1}"
+			]
+			icon: "gtceu:sulfuric_acid_bucket"
+			id: "37A5A8A5636C1101"
+			shape: "hexagon"
+			size: 1d
+			tags: ["chemistry", "sulfur"]
+			tasks: [
+				{
+					id: "44087A38296DF113"
+					fluid: "gtceu:sulfuric_acid"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p4.sulfur.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.sulfur.title}"
+			x: 36d
+			y: 3d
+		}
+		{
+			dependencies: [
+				"3071000000000002"
+				"37A5A8A5636C1101"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.elements.sulfur.purpose}"
+				"{industrial_frontier.quest.v2.elements.sulfur.task}"
+				"{industrial_frontier.quest.v2.elements.sulfur.proof_help.1}"
+			]
+			icon: "gtceu:sulfuric_acid_bucket"
+			id: "3071000000000004"
+			shape: "circle"
+			size: 1d
+			tags: ["chemistry", "sulfur", "acid"]
+			tasks: [
+				{
+					id: "4071000000000004"
+					title: "{industrial_frontier.task.v2.elements.sulfur.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.sulfur.title}"
+			x: 38d
+			y: -2.25d
+		}
+		{
+			dependencies: [
+				"3071000000000002"
+				"3014000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.elements.water.task}"
+				"{industrial_frontier.quest.v2.elements.water.proof_help.1}"
+			]
+			icon: "gtceu:distilled_water_bucket"
+			id: "3071000000000007"
+			shape: "circle"
+			size: 1d
+			tags: ["chemistry", "water", "utilities"]
+			tasks: [
+				{
+					id: "4071000000000007"
+					title: "{industrial_frontier.task.v2.elements.water.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.water.title}"
+			x: 38d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A1400000000001A"
+				"3A14000000000015"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p4.chlorine.task}"
+				"{industrial_frontier.quest.v2.p4.chlorine.proof_help.1}"
+				"{industrial_frontier.quest.v2.p4.chlorine.proof_help.2}"
+			]
+			icon: "gtceu:chlorine_bucket"
+			id: "39016A3285565221"
+			shape: "hexagon"
+			size: 1d
+			tags: ["chemistry", "chlor_alkali"]
+			tasks: [
+				{
+					id: "4C36206BD95E1A88"
+					fluid: "gtceu:chlorine"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p4.chlorine.fluid.objective}"
+					type: "fluid"
+				}
+				{
+					id: "45D68695AF02BACE"
+					item: {
+						Count: 1
+						id: "gtceu:sodium_hydroxide_dust"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p4.chlorine.caustic.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.chlorine.title}"
+			x: 38d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3FA17567FB015E52"
+				"3F5500A5915B1BB6"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p4.irrigation.purpose}"
+				"{industrial_frontier.quest.v2.p4.irrigation.task}"
+				"{industrial_frontier.quest.v2.p4.irrigation.proof_help.1}"
+			]
+			icon: "agriculturalenhancements:irrigation_controller"
+			id: "3A14000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["agriculture", "water", "place_use"]
+			tasks: [
+				{
+					id: "4A14000000000002"
+					block_type: 0
+					block: "agriculturalenhancements:irrigation_controller"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.p4.irrigation.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p4.irrigation.title}"
+			x: 38d
+			y: 2.25d
+		}
+		{
+			dependencies: [
+				"3071000000000002"
+				"39016A3285565221"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.elements.chlorine.task}"
+				"{industrial_frontier.quest.v2.elements.chlorine.proof_help.1}"
+			]
+			icon: "gtceu:chlorine_bucket"
+			id: "3071000000000006"
+			shape: "circle"
+			size: 1d
+			tags: ["chemistry", "chlorine", "coproducts"]
+			tasks: [
+				{
+					id: "4071000000000006"
+					title: "{industrial_frontier.task.v2.elements.chlorine.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.chlorine.title}"
+			x: 40d
+			y: -2.25d
 		}
 		{
 			dependencies: [
@@ -1397,21 +2110,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p4.kitchen_batch.purpose}"
-				"{industrial_frontier.quest.v2.p4.kitchen_batch.step.1}"
-				"{industrial_frontier.quest.v2.p4.kitchen_batch.step.2}"
-				"{industrial_frontier.quest.v2.p4.kitchen_batch.success}"
 				"{industrial_frontier.quest.v2.p4.kitchen_batch.task}"
-				"{industrial_frontier.quest.v2.p4.kitchen_batch.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.kitchen_batch.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.kitchen_batch.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.kitchen_batch.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.kitchen_batch.next}"
 			]
 			icon: "create:mechanical_mixer"
 			id: "3AB953D333D17378"
 			shape: "gear"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p4.kitchen_batch.lead}"
+			size: 1.4d
 			tags: ["food", "automation"]
 			tasks: [
 				{
@@ -1424,38 +2129,104 @@
 					title: "{industrial_frontier.task.v2.p4.kitchen_batch.place.objective}"
 					type: "questsadditions:place"
 				}
-				{
-					id: "41C193132CE1EB28"
-					block_type: 0
-					block: "create:mechanical_mixer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.kitchen_batch.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.kitchen_batch.title}"
-			x: 30d
-			y: -3d
+			x: 40d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A70000000000005"
+				"3A14000000000003"
+				"39016A3285565221"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.purpose}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.task}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.proof_help.1}"
+				"{industrial_frontier.quest.v2.passports.moldraw_polymer.proof_help.2}"
+			]
+			icon: "gtceu:polyvinyl_chloride_plate"
+			id: "3A70000000000006"
+			shape: "diamond"
+			size: 1.4d
+			tags: ["materials", "polymer", "visual_reference"]
+			tasks: [
+				{
+					id: "4A70000000000007"
+					item: {
+						Count: 1
+						id: "gtceu:polyethylene_plate"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.passports.moldraw_polymer.polyethylene.objective}"
+					type: "item"
+				}
+				{
+					id: "4A70000000000008"
+					item: {
+						Count: 1
+						id: "gtceu:polyvinyl_chloride_plate"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.passports.moldraw_polymer.pvc.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.passports.moldraw_polymer.title}"
+			x: 40d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3A22000000000017"
+				"3A14000000000001"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.farm_water.purpose}"
+				"{industrial_frontier.quest.v2.settlement.farm_water.task}"
+				"{industrial_frontier.quest.v2.settlement.farm_water.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.farm_water.proof_help.2}"
+			]
+			icon: "minecolonies:blockhutfarmer"
+			id: "3A2200000000000F"
+			shape: "circle"
+			size: 1.4d
+			tags: ["city", "p4", "farm", "water"]
+			tasks: [
+				{
+					id: "4B2200000000003F"
+					block_type: 0
+					block: "minecolonies:blockhutfarmer"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.farm_water.hut.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4B22000000000041"
+					fluid: "minecraft:water"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.settlement.farm_water.water.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.farm_water.title}"
+			x: 40d
+			y: 2.25d
 		}
 		{
 			dependencies: ["3AB953D333D17378"]
 			description: [
 				"{industrial_frontier.quest.v2.p4.rations.purpose}"
-				"{industrial_frontier.quest.v2.p4.rations.step.1}"
-				"{industrial_frontier.quest.v2.p4.rations.success}"
 				"{industrial_frontier.quest.v2.p4.rations.task}"
-				"{industrial_frontier.quest.v2.p4.rations.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.rations.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.rations.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.rations.next}"
 			]
 			icon: "minecraft:bread"
 			id: "325E04A0EFB69CD0"
 			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.rations.lead}"
+			size: 1.4d
 			tags: ["food", "industrial_supply"]
 			tasks: [
 				{
@@ -1473,86 +2244,84 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.rations.title}"
-			x: 33d
-			y: -3d
+			x: 42d
+			y: -1.5d
 		}
 		{
-			dependencies: ["3014000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.oil_survey.purpose}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.step.1}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.step.2}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.success}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.task}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.oil_survey.next}"
+			dependencies: [
+				"3A70000000000004"
+				"3A70000000000006"
+				"3A70000000000003"
 			]
-			icon: "immersivepetroleum:seismic_survey"
-			id: "3A14000000000002"
-			shape: "diamond"
+			description: [
+				"{industrial_frontier.quest.v2.passports.bypass_audit.purpose}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.task}"
+				"{industrial_frontier.quest.v2.passports.bypass_audit.proof_help.1}"
+			]
+			icon: "minecraft:spyglass"
+			id: "3070000000000009"
+			shape: "octagon"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p4.oil_survey.lead}"
-			tags: ["petroleum", "survey"]
+			tags: ["materials", "diagnostics", "balance"]
 			tasks: [
 				{
-					id: "4A14000000000005"
+					id: "4070000000000009"
+					title: "{industrial_frontier.task.v2.passports.bypass_audit.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.passports.bypass_audit.title}"
+			x: 42d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A2200000000000C"
+				"3A2200000000000F"
+				"3AB953D333D17378"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.batch_kitchen.purpose}"
+				"{industrial_frontier.quest.v2.settlement.batch_kitchen.task}"
+				"{industrial_frontier.quest.v2.settlement.batch_kitchen.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.batch_kitchen.proof_help.2}"
+			]
+			icon: "create:mechanical_mixer"
+			id: "3A22000000000010"
+			shape: "gear"
+			size: 1.4d
+			tags: ["city", "p4", "food", "automation"]
+			tasks: [
+				{
+					id: "4B22000000000043"
+					count: 8L
 					item: {
 						Count: 1
-						id: "immersivepetroleum:seismic_survey"
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/city)"
+						}
 					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p4.oil_survey.item.objective}"
+					title: "{industrial_frontier.task.v2.settlement.batch_kitchen.rations.objective}"
+					type: "item"
+				}
+				{
+					id: "4B22000000000044"
+					count: 4L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:storage/returnable_food_container)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.settlement.batch_kitchen.containers.objective}"
 					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p4.oil_survey.title}"
-			x: 3d
-			y: 5d
-		}
-		{
-			hide_until_deps_complete: true
-			dependencies: ["3A24000000000008"]
-			description: [
-				"{industrial_frontier.quest.v2.p4.oil_distillation.purpose}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.step.1}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.step.2}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.step.3}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.success}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.task}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.diagnostic.3}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.oil_distillation.next}"
-			]
-			icon: "immersivepetroleum:distillation_tower"
-			id: "3A14000000000003"
-			shape: "gear"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p4.oil_distillation.lead}"
-			tags: ["petroleum", "distillation"]
-			tasks: [
-				{
-					id: "4A14000000000007"
-					fluid: "immersivepetroleum:crudeoil"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p4.oil_distillation.crude.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A14000000000008"
-					fluid: "immersivepetroleum:naphtha"
-					amount: 250L
-					title: "{industrial_frontier.task.v2.p4.oil_distillation.naphtha.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p4.oil_distillation.title}"
-			x: 6d
-			y: 5d
+			title: "{industrial_frontier.quest.v2.settlement.batch_kitchen.title}"
+			x: 42d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1564,24 +2333,17 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p4.contract.purpose}"
-				"{industrial_frontier.quest.v2.p4.contract.step.1}"
-				"{industrial_frontier.quest.v2.p4.contract.step.2}"
-				"{industrial_frontier.quest.v2.p4.contract.success}"
 				"{industrial_frontier.quest.v2.p4.contract.task}"
-				"{industrial_frontier.quest.v2.p4.contract.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.contract.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.contract.proof_help.1}"
 				"{industrial_frontier.quest.v2.p4.contract.proof_help.2}"
 				"{industrial_frontier.quest.v2.p4.contract.proof_help.3}"
 				"{industrial_frontier.quest.v2.p4.contract.proof_help.4}"
 				"{industrial_frontier.quest.v2.p4.contract.proof_help.5}"
-				"{industrial_frontier.quest.v2.p4.contract.next}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"}}
 			id: "366E4B63A29E782B"
 			shape: "octagon"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p4.contract.lead}"
+			size: 1.4d
 			tags: ["technical_acceptance", "contract"]
 			tasks: [
 				{
@@ -1633,69 +2395,194 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.contract.title}"
-			x: 36d
+			x: 44d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3070000000000009"]
+			description: [
+				"{industrial_frontier.quest.v2.passports.signoff.purpose}"
+				"{industrial_frontier.quest.v2.passports.signoff.task}"
+				"{industrial_frontier.quest.v2.passports.signoff.proof_help.1}"
+			]
+			icon: "minecraft:written_book"
+			id: "3A70000000000007"
+			shape: "hexagon"
+			size: 1d
+			tags: ["materials", "summary", "reference"]
+			tasks: [
+				{
+					id: "4A70000000000009"
+					title: "{industrial_frontier.task.v2.passports.signoff.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.passports.signoff.title}"
+			x: 44d
 			y: 0d
 		}
 		{
-			hide_until_deps_complete: true
+			dependencies: [
+				"3A22000000000010"
+				"325E04A0EFB69CD0"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.dining.purpose}"
+				"{industrial_frontier.quest.v2.settlement.dining.task}"
+				"{industrial_frontier.quest.v2.settlement.dining.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.dining.proof_help.2}"
+			]
+			icon: "minecolonies:blockhutcook"
+			id: "3A22000000000011"
+			shape: "circle"
+			size: 1.4d
+			tags: ["city", "p4", "dining", "supply"]
+			tasks: [
+				{
+					id: "4B22000000000045"
+					block_type: 0
+					block: "minecolonies:blockhutcook"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.dining.hut.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4B22000000000047"
+					count: 8L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/worker)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.settlement.dining.meals.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.dining.title}"
+			x: 44d
+			y: 1.5d
+		}
+		{
 			dependencies: [
 				"366E4B63A29E782B"
 				"3A20000000000006"
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p4.commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p4.commissioning.step.1}"
-				"{industrial_frontier.quest.v2.p4.commissioning.step.2}"
-				"{industrial_frontier.quest.v2.p4.commissioning.step.3}"
-				"{industrial_frontier.quest.v2.p4.commissioning.success}"
 				"{industrial_frontier.quest.v2.p4.commissioning.task}"
-				"{industrial_frontier.quest.v2.p4.commissioning.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p4.commissioning.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p4.commissioning.proof_help.1}"
-				"{industrial_frontier.quest.v2.p4.commissioning.proof_help.2}"
-				"{industrial_frontier.quest.v2.p4.commissioning.proof_help.3}"
-				"{industrial_frontier.quest.v2.p4.commissioning.next}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p4.png"}}
 			id: "306E1AB30715C336"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p4.commissioning.lead}"
+			size: 1.8d
 			tags: ["if_commissioning_p4", "commissioning"]
 			tasks: [
 				{
 					id: "45D09EDCCFC2EB06"
-					block_type: 0
-					block: "agriculturalenhancements:irrigation_controller"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "agriculturalenhancements:irrigation_controller"
+					}
+					consume_items: false
 					title: "{industrial_frontier.task.v2.p4.commissioning.irrigation.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4C2CD6A17C62B9AC"
-					block_type: 0
-					block: "farmersdelight:cooking_pot"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.commissioning.kitchen.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "43925DFA595FA223"
-					block_type: 0
-					block: "immersivepetroleum:distillation_tower"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p4.commissioning.oil.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p4.commissioning.title}"
-			x: 39d
+			x: 46d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3A23000000000005"
+				"306E1AB30715C336"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.control.computer_station.purpose}"
+				"{industrial_frontier.quest.v2.control.computer_station.task}"
+				"{industrial_frontier.quest.v2.control.computer_station.proof_help.1}"
+			]
+			icon: "computercraft:computer_normal"
+			id: "3A23000000000008"
+			shape: "square"
+			size: 1.2d
+			tags: ["computercraft", "programming", "supervision"]
+			tasks: [
+				{
+					id: "4A23000000000011"
+					item: {
+						Count: 1
+						id: "computercraft:monitor_normal"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.control.computer_station.monitor.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.control.computer_station.title}"
+			x: 48d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A23000000000005"
+				"306E1AB30715C336"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.control.lithography_setup.task}"
+				"{industrial_frontier.quest.v2.control.lithography_setup.proof_help.1}"
+			]
+			icon: "projectred_fabrication:ic_workbench"
+			id: "3A2300000000000D"
+			shape: "gear"
+			size: 1.1d
+			tags: ["projectred", "fabrication", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A2300000000000B"
+					item: {
+						Count: 1
+						id: "projectred_fabrication:ic_workbench"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.control.lithography.workbench.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.control.lithography_setup.title}"
+			x: 48d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A2300000000000D"]
+			description: [
+				"{industrial_frontier.quest.v2.control.lithography.task}"
+				"{industrial_frontier.quest.v2.control.lithography.proof_help.1}"
+			]
+			icon: "projectred_fabrication:ic_workbench"
+			id: "3A23000000000006"
+			shape: "hexagon"
+			size: 1d
+			tags: ["projectred", "fabrication", "silicon"]
+			tasks: [
+				{
+					id: "4A2300000000000C"
+					item: {
+						Count: 1
+						id: "projectred_fabrication:fabricated_gate"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.control.lithography.gate.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.control.lithography.title}"
+			x: 50d
 			y: 0d
 		}
 	]

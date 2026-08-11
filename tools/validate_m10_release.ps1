@@ -86,9 +86,9 @@ function Assert-Unique {
     }
 }
 
-$schemaDoc = Read-M10Json 'authoring/schemas/m10_release_readiness.schema.json' 'M10 schema'
-$readinessDoc = Read-M10Json 'docs/registries/m10_release_readiness.json' 'M10 readiness ledger'
-$releaseFilesDoc = Read-M10Json 'docs/registries/m10_release_files.json' 'M10 release-file contract'
+$schemaDoc = Read-M10Json 'authoring/schemas/release_readiness.schema.json' 'M10 schema'
+$readinessDoc = Read-M10Json 'docs/registries/release_readiness.json' 'M10 readiness ledger'
+$releaseFilesDoc = Read-M10Json 'docs/registries/release_files.json' 'M10 release-file contract'
 $manifestDoc = Read-M10Json 'manifest.json' 'CurseForge manifest'
 $instanceDoc = Read-M10Json 'minecraftinstance.json' 'CurseForge instance metadata'
 $sourcesDoc = Read-M10Json 'docs/registries/curseforge_sources.json' 'Exact-file source registry'

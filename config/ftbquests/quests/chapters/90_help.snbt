@@ -10,24 +10,15 @@
 	quests: [
 		{
 			description: [
-				"{industrial_frontier.quest.v2.help.index.purpose}"
-				"{industrial_frontier.quest.v2.help.index.step.1}"
-				"{industrial_frontier.quest.v2.help.index.step.2}"
-				"{industrial_frontier.quest.v2.help.index.step.3}"
-				"{industrial_frontier.quest.v2.help.index.step.4}"
-				"{industrial_frontier.quest.v2.help.index.success}"
 				"{industrial_frontier.quest.v2.help.index.task}"
-				"{industrial_frontier.quest.v2.help.index.diagnostic.1}"
 				"{industrial_frontier.quest.v2.help.index.proof_help.1}"
-				"{industrial_frontier.quest.v2.help.index.next}"
 				"{industrial_frontier.quest.v2.help.index.optional_note}"
 			]
 			icon: "minecraft:recovery_compass"
 			id: "3090000000000001"
 			optional: true
 			shape: "gear"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.help.index.lead}"
+			size: 1d
 			tags: ["help", "triage"]
 			tasks: [
 				{
@@ -44,25 +35,15 @@
 			dependencies: ["3090000000000001"]
 			description: [
 				"{industrial_frontier.quest.v2.help.jei.purpose}"
-				"{industrial_frontier.quest.v2.help.jei.step.1}"
-				"{industrial_frontier.quest.v2.help.jei.step.2}"
-				"{industrial_frontier.quest.v2.help.jei.step.3}"
-				"{industrial_frontier.quest.v2.help.jei.step.4}"
-				"{industrial_frontier.quest.v2.help.jei.success}"
 				"{industrial_frontier.quest.v2.help.jei.task}"
-				"{industrial_frontier.quest.v2.help.jei.diagnostic.1}"
-				"{industrial_frontier.quest.v2.help.jei.diagnostic.2}"
-				"{industrial_frontier.quest.v2.help.jei.diagnostic.3}"
 				"{industrial_frontier.quest.v2.help.jei.proof_help.1}"
-				"{industrial_frontier.quest.v2.help.jei.next}"
 				"{industrial_frontier.quest.v2.help.jei.optional_note}"
 			]
 			icon: "minecraft:knowledge_book"
 			id: "3090000000000002"
 			optional: true
 			shape: "diamond"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.help.jei.lead}"
+			size: 1d
 			tags: ["help", "jei", "recipes"]
 			tasks: [
 				{
@@ -73,98 +54,20 @@
 			]
 			title: "{industrial_frontier.quest.v2.help.jei.title}"
 			x: 2d
-			y: -3d
+			y: -2.25d
 		}
 		{
 			dependencies: ["3090000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.help.not_counted.purpose}"
-				"{industrial_frontier.quest.v2.help.not_counted.step.1}"
-				"{industrial_frontier.quest.v2.help.not_counted.step.2}"
-				"{industrial_frontier.quest.v2.help.not_counted.step.3}"
-				"{industrial_frontier.quest.v2.help.not_counted.step.4}"
-				"{industrial_frontier.quest.v2.help.not_counted.success}"
-				"{industrial_frontier.quest.v2.help.not_counted.task}"
-				"{industrial_frontier.quest.v2.help.not_counted.diagnostic.1}"
-				"{industrial_frontier.quest.v2.help.not_counted.diagnostic.2}"
-				"{industrial_frontier.quest.v2.help.not_counted.diagnostic.3}"
-				"{industrial_frontier.quest.v2.help.not_counted.proof_help.1}"
-				"{industrial_frontier.quest.v2.help.not_counted.next}"
-				"{industrial_frontier.quest.v2.help.not_counted.optional_note}"
-			]
-			icon: "minecraft:clock"
-			id: "3090000000000003"
-			optional: true
-			shape: "rsquare"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.help.not_counted.lead}"
-			tags: ["help", "quests", "diagnostics"]
-			tasks: [
-				{
-					id: "4090000000000003"
-					title: "{industrial_frontier.task.v2.help.not_counted.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.help.not_counted.title}"
-			x: 2d
-			y: -1d
-		}
-		{
-			dependencies: ["3090000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.help.team.purpose}"
-				"{industrial_frontier.quest.v2.help.team.step.1}"
-				"{industrial_frontier.quest.v2.help.team.step.2}"
-				"{industrial_frontier.quest.v2.help.team.step.3}"
-				"{industrial_frontier.quest.v2.help.team.success}"
-				"{industrial_frontier.quest.v2.help.team.task}"
-				"{industrial_frontier.quest.v2.help.team.diagnostic.1}"
-				"{industrial_frontier.quest.v2.help.team.diagnostic.2}"
-				"{industrial_frontier.quest.v2.help.team.proof_help.1}"
-				"{industrial_frontier.quest.v2.help.team.next}"
-				"{industrial_frontier.quest.v2.help.team.optional_note}"
-			]
-			icon: "minecraft:player_head"
-			id: "3090000000000004"
-			optional: true
-			shape: "rsquare"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.help.team.lead}"
-			tags: ["help", "team", "progress"]
-			tasks: [
-				{
-					id: "4090000000000004"
-					title: "{industrial_frontier.task.v2.help.team.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.help.team.title}"
-			x: 2d
-			y: 1d
-		}
-		{
-			dependencies: ["3090000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.help.latest_log.purpose}"
-				"{industrial_frontier.quest.v2.help.latest_log.step.1}"
-				"{industrial_frontier.quest.v2.help.latest_log.step.2}"
-				"{industrial_frontier.quest.v2.help.latest_log.step.3}"
-				"{industrial_frontier.quest.v2.help.latest_log.step.4}"
-				"{industrial_frontier.quest.v2.help.latest_log.success}"
 				"{industrial_frontier.quest.v2.help.latest_log.task}"
-				"{industrial_frontier.quest.v2.help.latest_log.diagnostic.1}"
-				"{industrial_frontier.quest.v2.help.latest_log.diagnostic.2}"
 				"{industrial_frontier.quest.v2.help.latest_log.proof_help.1}"
-				"{industrial_frontier.quest.v2.help.latest_log.next}"
 				"{industrial_frontier.quest.v2.help.latest_log.optional_note}"
 			]
 			icon: "minecraft:paper"
 			id: "3090000000000005"
 			optional: true
 			shape: "rsquare"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.help.latest_log.lead}"
+			size: 1d
 			tags: ["help", "logs", "privacy"]
 			tasks: [
 				{
@@ -175,7 +78,56 @@
 			]
 			title: "{industrial_frontier.quest.v2.help.latest_log.title}"
 			x: 2d
-			y: 3d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3090000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.help.not_counted.purpose}"
+				"{industrial_frontier.quest.v2.help.not_counted.task}"
+				"{industrial_frontier.quest.v2.help.not_counted.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.not_counted.optional_note}"
+			]
+			icon: "minecraft:clock"
+			id: "3090000000000003"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["help", "quests", "diagnostics"]
+			tasks: [
+				{
+					id: "4090000000000003"
+					title: "{industrial_frontier.task.v2.help.not_counted.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.help.not_counted.title}"
+			x: 2d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3090000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.help.team.task}"
+				"{industrial_frontier.quest.v2.help.team.proof_help.1}"
+				"{industrial_frontier.quest.v2.help.team.optional_note}"
+			]
+			icon: "minecraft:player_head"
+			id: "3090000000000004"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["help", "team", "progress"]
+			tasks: [
+				{
+					id: "4090000000000004"
+					title: "{industrial_frontier.task.v2.help.team.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.help.team.title}"
+			x: 2d
+			y: 2.25d
 		}
 		{
 			dependencies: [
@@ -183,25 +135,15 @@
 				"3090000000000005"
 			]
 			description: [
-				"{industrial_frontier.quest.v2.help.report.purpose}"
-				"{industrial_frontier.quest.v2.help.report.step.1}"
-				"{industrial_frontier.quest.v2.help.report.step.2}"
-				"{industrial_frontier.quest.v2.help.report.step.3}"
-				"{industrial_frontier.quest.v2.help.report.step.4}"
-				"{industrial_frontier.quest.v2.help.report.success}"
 				"{industrial_frontier.quest.v2.help.report.task}"
-				"{industrial_frontier.quest.v2.help.report.diagnostic.1}"
-				"{industrial_frontier.quest.v2.help.report.diagnostic.2}"
 				"{industrial_frontier.quest.v2.help.report.proof_help.1}"
-				"{industrial_frontier.quest.v2.help.report.next}"
 				"{industrial_frontier.quest.v2.help.report.optional_note}"
 			]
 			icon: "minecraft:writable_book"
 			id: "3090000000000006"
 			optional: true
 			shape: "diamond"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.help.report.lead}"
+			size: 1d
 			tags: ["help", "report", "diagnostics"]
 			tasks: [
 				{
@@ -212,7 +154,7 @@
 			]
 			title: "{industrial_frontier.quest.v2.help.report.title}"
 			x: 4d
-			y: -1d
+			y: 0d
 		}
 		{
 			dependencies: [
@@ -221,25 +163,15 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.help.recovery.purpose}"
-				"{industrial_frontier.quest.v2.help.recovery.step.1}"
-				"{industrial_frontier.quest.v2.help.recovery.step.2}"
-				"{industrial_frontier.quest.v2.help.recovery.step.3}"
-				"{industrial_frontier.quest.v2.help.recovery.step.4}"
-				"{industrial_frontier.quest.v2.help.recovery.success}"
 				"{industrial_frontier.quest.v2.help.recovery.task}"
-				"{industrial_frontier.quest.v2.help.recovery.diagnostic.1}"
-				"{industrial_frontier.quest.v2.help.recovery.diagnostic.2}"
-				"{industrial_frontier.quest.v2.help.recovery.diagnostic.3}"
 				"{industrial_frontier.quest.v2.help.recovery.proof_help.1}"
-				"{industrial_frontier.quest.v2.help.recovery.next}"
 				"{industrial_frontier.quest.v2.help.recovery.optional_note}"
 			]
 			icon: "minecraft:barrier"
 			id: "3090000000000007"
 			optional: true
 			shape: "diamond"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.help.recovery.lead}"
+			size: 1d
 			tags: ["help", "recovery", "operator"]
 			tasks: [
 				{
@@ -249,8 +181,8 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.help.recovery.title}"
-			x: 4d
-			y: 1d
+			x: 6d
+			y: 0d
 		}
 	]
 	subtitle: [

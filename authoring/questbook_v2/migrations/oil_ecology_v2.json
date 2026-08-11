@@ -71,7 +71,7 @@
         "docs/registries/stable_ids.json",
         "authoring/quests/24_oil_line.json",
         "kubejs/exported/gtceu_item_census.json",
-        "docs/registries/m2_domain_process_ownership.json",
+        "docs/registries/domain_process_ownership.json",
         "authoring/questbook_v2/24_oil_ecology.json"
       ]
     }

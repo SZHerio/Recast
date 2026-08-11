@@ -11,6 +11,7 @@
   "item.projectred_fabrication.photomask_set": "Набор фотомасок",
   "item.projectred_fabrication.rough_silicon_wafer": "Необработанная кремниевая пластина",
   "item.projectred_fabrication.valid_die": "Годный кристалл",
+  "itemGroup.projectred_fabrication": "Project Red: производство",
   "projectred_fabrication.compile.stack": "Стек",
   "projectred_fabrication.compile.step.check_flat_maps": "Проверка плоских карт",
   "projectred_fabrication.compile.step.check_flat_maps.desc": "Поиск плоских карт для объединения",

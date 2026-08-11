@@ -6,7 +6,7 @@
 
 ## Что не так
 
-Два домена в [`registries/m2_domain_process_ownership.json`](registries/m2_domain_process_ownership.json)
+Два домена в [`registries/domain_process_ownership.json`](registries/domain_process_ownership.json)
 остаются `GATED_NOT_INSTALLED`, хотя моды, которые ими владеют, стоят в сборке
 с волны M4 и уже используются:
 
@@ -43,7 +43,7 @@
 
 Найдена сквозным аудитом кампании в M8.
 
-Цепочка [`industrial_frontier:grind/p4/city_rations`](registries/m2_grind_budget.json)
+Цепочка [`industrial_frontier:grind/p4/city_rations`](registries/grind_budget.json)
 имеет статус `GATED_NOT_INSTALLED` и причину «Farmer's Delight/Central Kitchen
 ещё не установлены; числа являются верхним бюджетом будущей линии».
 

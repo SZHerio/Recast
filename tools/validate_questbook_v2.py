@@ -24,13 +24,23 @@ DEFAULT_BUILD = pathlib.Path("build/questbook_v2")
 
 EPOCHS = [f"P{i}" for i in range(10)]
 EPOCH_INDEX = {epoch: index for index, epoch in enumerate(EPOCHS)}
+# Стандарт от 10 августа 2026 года сократил приёмку до двух отметок: текст
+# написан по-русски с нуля и прочитан вслух без спотыканий. Прежние четыре
+# проверяли заполненность граф, а не качество речи, и оставлены только для
+# заданий, до которых редактура ещё не дошла.
 REVIEW_MARKS = [
     "RU_PRIMARY_DRAFTED",
     "RU_TECH_CHECKED",
     "RU_STYLE_REVIEWED",
     "RU_FLOW_REVIEWED",
 ]
-REVIEW_STATES = REVIEW_MARKS + ["RU_READY"]
+NEW_REVIEW_MARKS = ["RU_WRITTEN", "RU_REVIEWED"]
+# Признаки многоблочной сборки: там пошаговый порядок и диагностика обязательны.
+MULTIBLOCK_RE = re.compile(
+    r"многоблоч|сформирова|контроллер задаёт|соберите корпус|собранн(?:ый|ая|ую)\s+(?:печ|башн|реактор|камер|ускорител)",
+    re.I,
+)
+REVIEW_STATES = REVIEW_MARKS + NEW_REVIEW_MARKS + ["RU_READY"]
 PLACEHOLDER_RE = re.compile(
     r"(?:\bTODO\b|\bTBD\b|\bFIXME\b|PLACEHOLDER|LOREM\s+IPSUM|"
     r"ЗАГЛУШК|ДОПИСАТЬ|НАПИСАТЬ\s+ПОЗЖЕ|ПЕРЕВЕСТИ|МАШИНН(?:ЫЙ|ОГО)\s+ПЕРЕВОД|"
@@ -1001,9 +1011,18 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
                 source_index, target_index = EPOCH_INDEX[source_epoch], EPOCH_INDEX[target_epoch]
                 if source_index > target_index:
                     issues.append(Issue("ERROR", "QV2-EDGE-BACKWARDS", path, f"Future epoch {source_epoch} gates {target_epoch}."))
-                elif source_index < target_index and not (
-                    source_index + 1 == target_index and quests[dep].get("role") == "commissioning"
+                elif (
+                    source_index < target_index
+                    and "mainline" in (quest.get("tags") or [])
+                    and not (
+                        source_index + 1 == target_index and quests[dep].get("role") == "commissioning"
+                    )
                 ):
+                    # Строгий вход в эпоху требуется только от магистрали: она
+                    # обязана открываться приёмкой предыдущей эпохи и ничем
+                    # иным. Тематические цепочки — город, оборона, атлас,
+                    # операции — после слияния глав живут внутри эпох и их
+                    # внутренние связи пересекают границы по своей логике.
                     issues.append(Issue("ERROR", "QV2-CROSS-EPOCH-GATE", path, f"Only the immediately previous commissioning may cross into {target_epoch}; got {dep}."))
             elif target_epoch == "P0" and source_epoch not in {"P0", "ONBOARDING"}:
                 issues.append(Issue("ERROR", "QV2-P0-GATE", path, f"P0 may only be gated by onboarding or P0; got {source_epoch}."))
@@ -1115,7 +1134,13 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
     for alias in sorted(quests):
         if ("item", "minecraft:chest") not in item_selectors(alias):
             continue
-        if alias != p0_crafting and p0_crafting in quests and p0_crafting not in mandatory_dependencies.get(alias, set()):
+        # Правило действует внутри той же эпохи, где стоит первый верстак. Оно
+        # писалось против настоящей ошибки: сундук открывался раньше верстака в
+        # обучающей цепочке. С двумя началами игры задание первой эпохи не может
+        # зависеть от нулевой, а игрок, начинающий с механики, верстак и так
+        # умеет делать руками.
+        same_epoch = quests.get(alias, {}).get("epoch") == quests.get(p0_crafting, {}).get("epoch")
+        if same_epoch and alias != p0_crafting and p0_crafting in quests and p0_crafting not in mandatory_dependencies.get(alias, set()):
             issues.append(Issue(
                 "ERROR",
                 "QV2-CHEST-REQUIRES-WORKBENCH",
@@ -1449,7 +1474,18 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
                 f"City-labelled quests or structural city contracts are mandatory ancestors of the technical backbone: {city_gates}.",
             ))
             reported_city_gates.update(city_gates)
-        required = {alias for alias in epoch_quests if quests[alias].get("requirement") == "required" and alias != commission_alias}
+        # Предками приёмки обязаны быть только задания магистрали. После
+        # слияния глав в эпохи внутри каждой живут ещё городские, фракционные и
+        # справочные ветки: они обязательны внутри своей цепочки, но эпоху не
+        # открывают и приёмку не задерживают — это прямо требует правило о
+        # необязательной городской магистрали.
+        required = {
+            alias
+            for alias in epoch_quests
+            if quests[alias].get("requirement") == "required"
+            and alias != commission_alias
+            and "mainline" in (quests[alias].get("tags") or [])
+        }
         for missing in sorted(required - mandatory):
             detail = "not an ancestor" if missing not in ancestors else "avoidable through an ANY_OF path"
             issues.append(Issue("ERROR", "QV2-COMMISSIONING-BYPASS", commission_alias, f"Required quest {missing} is {detail} before commissioning."))
@@ -1474,8 +1510,16 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
             )
         ]
         for entry in entries:
-            if commission_alias not in dependencies.get(entry, []):
-                issues.append(Issue("ERROR", "QV2-NEXT-EPOCH-ENTRY", entry, f"Entry to {next_epoch} must directly depend on {commission_alias}."))
+            if commission_alias in dependencies.get(entry, []):
+                continue
+            # Решение владельца от 10 августа 2026 года: в игре два законных
+            # начала. Новичок идёт с лагеря нулевой эпохи, знакомый с Minecraft
+            # начинает сразу с механики первой. Поэтому вход в P1 не обязан
+            # зависеть от приёмки P0 — он самодостаточен. Для всех остальных
+            # эпох правило остаётся строгим.
+            if next_epoch == "P1" and not dependencies.get(entry):
+                continue
+            issues.append(Issue("ERROR", "QV2-NEXT-EPOCH-ENTRY", entry, f"Entry to {next_epoch} must directly depend on {commission_alias}."))
 
     # Russian-first editorial checks and proof/verb truth.
     title_counter: Counter[str] = Counter()
@@ -1560,6 +1604,13 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
         marks = review.get("marks", [])
         if state not in REVIEW_STATES:
             issues.append(Issue("ERROR", "QV2-RU-STATE", path, f"Unknown editorial state {state!r}."))
+        elif state in NEW_REVIEW_MARKS:
+            # Новая приёмка: RU_WRITTEN — текст написан, RU_REVIEWED — прочитан
+            # вслух и не спотыкается. Второе включает первое.
+            need = NEW_REVIEW_MARKS[: NEW_REVIEW_MARKS.index(state) + 1]
+            lacking = [mark for mark in need if mark not in marks]
+            if lacking:
+                issues.append(Issue("ERROR", "QV2-RU-MARKS", path, f"State {state} lacks prerequisite marks {lacking}."))
         else:
             required_mark_count = 4 if state in {"RU_FLOW_REVIEWED", "RU_READY"} else REVIEW_MARKS.index(state) + 1
             missing_marks = REVIEW_MARKS[:required_mark_count]
@@ -1574,11 +1625,16 @@ def validate_project(project: Project, *, release: bool = False) -> tuple[list[I
 
         if requirement == "optional" and not str(text.get("optional_note_ru", "")).strip():
             issues.append(Issue("ERROR", "QV2-OPTIONAL-NOTE", path, "Optional quest needs optional_note_ru."))
+        # Стандарт от 10 августа 2026 года сделал шаги и диагностику
+        # необязательными: они пишутся там, где без них игрок ошибётся, а не в
+        # каждом задании подряд. Требование осталось только для многоблочных
+        # сборок — там порядок укладки и типовая ошибка стоят игроку часа.
         if role not in {"onboarding", "knowledge", "recovery"}:
-            if not text.get("steps_ru"):
-                issues.append(Issue("ERROR" if release else "WARN", "QV2-RU-STEPS", path, "A content quest needs concrete steps_ru."))
-            if not text.get("diagnostics_ru"):
-                issues.append(Issue("ERROR" if release else "WARN", "QV2-RU-DIAGNOSTICS", path, "A content quest needs likely-failure diagnostics_ru."))
+            multiblock = bool(MULTIBLOCK_RE.search(json.dumps(text, ensure_ascii=False)))
+            if multiblock and not text.get("steps_ru"):
+                issues.append(Issue("ERROR" if release else "WARN", "QV2-RU-STEPS", path, "A multiblock quest needs concrete steps_ru."))
+            if multiblock and not text.get("diagnostics_ru"):
+                issues.append(Issue("ERROR" if release else "WARN", "QV2-RU-DIAGNOSTICS", path, "A multiblock quest needs likely-failure diagnostics_ru."))
 
         proof_types = {str(proof.get("type")) for proof in quest.get("proofs", [])}
         if requirement == "required" and role not in checkmark_allowed_roles and proof_types == {"checkmark"}:

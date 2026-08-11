@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "build_id": "IF-M3-0001",
+  "features": [
+    {
+      "id": "m3.mainline_questbook",
+      "owner": "Recast P0-P3 vertical slice",
+      "artifact_count": 35,
+      "files": [
+        "authoring/quests/10_p0_expedition.json",
+        "authoring/quests/11_p1_mechanised.json",
+        "authoring/quests/12_p2_steam_metallurgy.json",
+        "authoring/quests/13_p3_electrification.json",
+        "config/ftbquests/quests/chapters/10_p0_expedition.snbt",
+        "config/ftbquests/quests/chapters/11_p1_mechanised.snbt",
+        "config/ftbquests/quests/chapters/12_p2_steam_metallurgy.snbt",
+        "config/ftbquests/quests/chapters/13_p3_electrification.snbt",
+        "config/ftbquests/quests/chapter_groups.snbt"
+      ],
+      "consumers": [
+        "player onboarding",
+        "owner playtest",
+        "M4 chemistry chapters"
+      ]
+    },
+    {
+      "id": "m3.mainline_localization",
+      "owner": "Recast russian release",
+      "artifact_count": 218,
+      "files": [
+        "config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/lang/ru_ru.json",
+        "config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/lang/en_us.json"
+      ],
+      "consumers": [
+        "quest rendering",
+        "localization coverage report"
+      ]
+    },
+    {
+      "id": "m3.ponder_stress",
+      "owner": "Recast teaching visuals",
+      "artifact_count": 1,
+      "files": [
+        "kubejs/client_scripts/10_ponder/03_mechanical_stress.js"
+      ],
+      "consumers": [
+        "P1 rotation lesson",
+        "diagnostics chapter"
+      ]
+    },
+    {
+      "id": "m3.review_m3_decisions",
+      "owner": "Recast bypass architecture",
+      "artifact_count": 4,
+      "files": [
+        "docs/registries/bypass_decisions.json",
+        "authoring/registries/registry_manifest.json"
+      ],
+      "consumers": [
+        "recipe authoring",
+        "static validator"
+      ]
+    },
+    {
+      "id": "m3.blocked_on_runtime_registry",
+      "owner": "Recast ore beneficiation",
+      "artifact_count": 0,
+      "files": [
+        "docs/M3_BUILD_TEST_PROTOCOL.md",
+        "docs/M2_RUNTIME_CENSUS_TEMPLATE.md"
+      ],
+      "consumers": [
+        "M4 recipe wave"
+      ]
+    },
+    {
+      "id": "m3.combat_epoch_gate",
+      "owner": "Recast weapon stack",
+      "artifact_count": 3,
+      "files": [
+        "kubejs/server_scripts/10_progression/03_combat_epoch_gate.js",
+        "docs/registries/bypass_decisions.json",
+        "docs/registries/curseforge_sources.json"
+      ],
+      "consumers": [
+        "P2 metallurgy gate",
+        "faction loadouts",
+        "owner playtest"
+      ]
+    },
+    {
+      "id": "m3.food_slice_mod",
+      "owner": "Recast manual food slice",
+      "artifact_count": 1,
+      "files": [
+        "docs/registries/curseforge_sources.json"
+      ],
+      "consumers": [
+        "P0-P2 rations",
+        "M4 Central Kitchen automation"
+      ]
+    }
+  ]
+}

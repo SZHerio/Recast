@@ -22,7 +22,7 @@ Minecraft не запускается Codex. Codex выполняет иссле
 - AE2 остаётся доменом P5: семь vendor-корней раннего входа закрыты и получат полную замену только вместе с P5-квестами;
 - `nativeEUToFE=true` допускается как односторонний compatibility-output, `enableFEConverters=false`; фактический коэффициент и отсутствие обратного цикла проверяет владелец;
 - NuclearCraft, HBM, город и космос присутствуют в реестрах только как `GATED_NOT_INSTALLED`: ни один будущий ID не выдумывается заранее;
-- все решения, формы, контракты, ворота и доказательства ведутся в `docs/registries/m2_*.json`; человеческий diff находится в [`M2_SUBSTANCE_AND_BYPASS_AUDIT.md`](M2_SUBSTANCE_AND_BYPASS_AUDIT.md).
+- все решения, формы, контракты, ворота и доказательства ведутся в `docs/registries/02_*.json`; человеческий diff находится в [`M2_SUBSTANCE_AND_BYPASS_AUDIT.md`](history/M2_SUBSTANCE_AND_BYPASS_AUDIT.md).
 
 ---
 

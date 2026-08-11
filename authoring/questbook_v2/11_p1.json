@@ -18,7 +18,7 @@
       "create",
       "mechanisation"
     ],
-    "hide_until_reached": true,
+    "hide_until_reached": false,
     "text_ru": {
       "title": "P1 — Механизация",
       "subtitle": "Вращение, нагрузка, пакетная обработка и первая линия без ручной передачи каждой детали",
@@ -55,15 +55,7 @@
       ],
       "dependency": {
         "mode": "ALL_OF",
-        "edges": [
-          {
-            "quest": "if.quest.v2.p0.commissioning",
-            "reason": "Механизация открывается после ввода экспедиции P0 в строй.",
-            "evidence": [
-              "docs/registries/m2_progression_graph.json"
-            ]
-          }
-        ]
+        "edges": []
       },
       "proofs": [
         {
@@ -79,17 +71,6 @@
       ],
       "text_ru": {
         "title_ru": "Три величины механики",
-        "lead_ru": "Create передаёт вращение, а не электричество: направление, скорость и доступная нагрузка решают разные задачи.",
-        "purpose_ru": "Разделение величин помогает проектировать линию до установки машин. Вал переносит вращение, передача меняет скорость, а запас единиц нагрузки (SU) определяет, сколько потребителей выдержит источник.",
-        "steps_ru": [
-          "Прочитайте определения направления, скорости вращения и единиц нагрузки SU.",
-          "Наметьте путь от будущего источника через валы к первой машине."
-        ],
-        "success_ru": "Вы можете объяснить, почему быстро вращающийся вал всё равно способен остановиться при перегрузке.",
-        "diagnostics_ru": [
-          "Если линия позже встанет, сначала проверяйте наличие вращения, затем направление и только потом запас единиц нагрузки."
-        ],
-        "next_ru": "Первым материалом привода станет небольшая партия андезитового сплава.",
         "task_text_ru": "Прочитайте различие между вращением, скоростью и нагрузкой."
       },
       "authorship": {
@@ -154,14 +135,14 @@
         },
         {
           "kind": "doc",
-          "id": "docs/registries/m2_energy_networks.json",
+          "id": "docs/registries/energy_networks.json",
           "evidence": [
             "Реестр отделяет механическую сеть Create SU от EU и FE."
           ]
         },
         {
           "kind": "doc",
-          "id": "kubejs/client_scripts/10_ponder/m3_mechanical_stress.js",
+          "id": "kubejs/client_scripts/10_ponder/03_mechanical_stress.js",
           "evidence": [
             "Локальная сцена объясняет нагрузку и остановку сети."
           ]
@@ -175,10 +156,10 @@
         "rationale_ru": "Чтение не добавляет предметной проверки."
       },
       "layout": {
-        "x": 0,
-        "y": 0,
+        "x": 0.0,
+        "y": 0.0,
         "shape": "gear",
-        "size": 1.5
+        "size": 1.0
       }
     },
     {
@@ -199,7 +180,7 @@
             "quest": "if.quest.v2.p1.intro",
             "reason": "Материал привода появляется после объяснения механической системы.",
             "evidence": [
-              "docs/registries/m2_grind_budget.json"
+              "docs/registries/grind_budget.json"
             ]
           }
         ]
@@ -223,18 +204,6 @@
       ],
       "text_ru": {
         "title_ru": "Сплав для первого привода",
-        "lead_ru": "Восемь андезитовых сплавов — рабочая партия для учебной линии, а не складская квота.",
-        "purpose_ru": "Андезитовый сплав связывает железную ветвь P0 с механикой Create. В P1 он становится общим материалом валов, передач и корпусов.",
-        "steps_ru": [
-          "Откройте действующий рецепт андезитового сплава в JEI и подготовьте две учебные партии.",
-          "Получите восемь единиц и сохраните их для следующих механизмов."
-        ],
-        "success_ru": "В инвентаре есть восемь сплавов, которых достаточно для начала линии без обязательного массового производства.",
-        "diagnostics_ru": [
-          "Если привычный рецепт не работает, используйте только вариант, который показывает локальный JEI.",
-          "Не делайте большой запас вручную: после запуска линии этот материал должен перейти к серийному маршруту."
-        ],
-        "next_ru": "Из сплава соберём простую передачу вращения и отдельно — источник мощности.",
         "task_text_ru": "Получите восемь андезитовых сплавов."
       },
       "authorship": {
@@ -305,9 +274,9 @@
         },
         {
           "kind": "registry",
-          "id": "docs/registries/m2_grind_budget.json",
+          "id": "docs/registries/grind_budget.json",
           "evidence": [
-            "docs/registries/m2_grind_budget.json"
+            "docs/registries/grind_budget.json"
           ]
         }
       ],
@@ -320,148 +289,10 @@
         "rationale_ru": "Восемь единиц образуют полезный стартовый запас; дальнейший объём нельзя делать вручную."
       },
       "layout": {
-        "x": 2,
-        "y": 0,
+        "x": 2.0,
+        "y": 0.0,
         "shape": "rsquare",
-        "size": 1.4
-      }
-    },
-    {
-      "alias": "if.quest.v2.p1.rotation",
-      "engine_id": "3011000000000003",
-      "epoch": "P1",
-      "role": "machine",
-      "requirement": "required",
-      "icon": "create:cogwheel",
-      "tags": [
-        "mainline",
-        "powertrain"
-      ],
-      "dependency": {
-        "mode": "ALL_OF",
-        "edges": [
-          {
-            "quest": "if.quest.v2.p1.andesite_alloy",
-            "reason": "Зубчатые колёса используют материал уже освоенного привода.",
-            "evidence": [
-              "config/ftbquests/quests/chapters/11_p1.snbt"
-            ]
-          }
-        ]
-      },
-      "proofs": [
-        {
-          "alias": "if.task.v2.p1.rotation.cogwheels",
-          "engine_id": "4011000000000003",
-          "type": "item",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Получите четыре малых зубчатых колеса.",
-            "help": "Колёса останутся у вас и войдут в учебную передачу."
-          },
-          "item": {
-            "id": "create:cogwheel",
-            "count": 4,
-            "consume": false
-          }
-        }
-      ],
-      "text_ru": {
-        "title_ru": "Передать вращение",
-        "lead_ru": "Зубчатое колесо меняет маршрут вращения и связывает источник с потребителем.",
-        "purpose_ru": "Четыре колеса позволяют увидеть направление передачи и оставить запас на поворот линии. Скорость и направление нужно читать до подключения машины.",
-        "steps_ru": [
-          "Соберите четыре малых зубчатых колеса.",
-          "Спланируйте короткую передачу без лишних ступеней и оставьте доступ к валам для диагностики."
-        ],
-        "success_ru": "Набор передачи готов, а будущий маршрут от источника к машине можно проследить визуально.",
-        "diagnostics_ru": [
-          "Если соседние колёса вращаются не в ожидаемую сторону, проследите каждое зацепление от источника вместо случайной перестановки."
-        ],
-        "next_ru": "Когда готовы и источник, и передача, установим стрессометр и измерим доступную нагрузку.",
-        "task_text_ru": "Получите четыре малых зубчатых колеса."
-      },
-      "authorship": {
-        "primary_language": "ru",
-        "origin": "human_authored",
-        "machine_translation": false,
-        "editorial_note": "Квест учит читать направление передачи, не обещая измерение, которого предметный proof не видит."
-      },
-      "editorial_review": {
-        "state": "RU_READY",
-        "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
-        ],
-        "review_notes": [
-          "Малые зубчатые колёса и размер партии сверены с действующей задачей; переход больше не навязывает конкретный источник."
-        ]
-      },
-      "teaching_sections": [
-        {
-          "kind": "purpose",
-          "source_fields": [
-            "text_ru.lead_ru",
-            "text_ru.purpose_ru"
-          ]
-        },
-        {
-          "kind": "setup",
-          "source_fields": [
-            "text_ru.steps_ru"
-          ]
-        },
-        {
-          "kind": "output",
-          "source_fields": [
-            "text_ru.success_ru",
-            "text_ru.task_text_ru"
-          ]
-        },
-        {
-          "kind": "diagnostics",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
-          ]
-        },
-        {
-          "kind": "downstream",
-          "source_fields": [
-            "text_ru.next_ru"
-          ]
-        }
-      ],
-      "content_refs": [
-        {
-          "kind": "item",
-          "id": "create:cogwheel",
-          "evidence": [
-            "config/ftbquests/quests/chapters/11_p1.snbt"
-          ]
-        },
-        {
-          "kind": "mechanic",
-          "id": "create-rotation-direction",
-          "evidence": [
-            "kubejs/client_scripts/10_ponder/m3_mechanical_stress.js"
-          ]
-        }
-      ],
-      "grind": {
-        "class": "GREEN",
-        "training_batch": 4,
-        "expected_runs": 1,
-        "automation_before_bulk": false,
-        "budget_ref": "industrial_frontier:grind/p1/andesite_alloy",
-        "rationale_ru": "Четыре колеса составляют одну полезную передачу."
-      },
-      "layout": {
-        "x": 4,
-        "y": -1,
-        "shape": "square",
-        "size": 1.2
+        "size": 1.0
       }
     },
     {
@@ -505,19 +336,7 @@
       ],
       "text_ru": {
         "title_ru": "Выбрать источник вращения",
-        "lead_ru": "Вода и ветер дают разные планировочные решения, поэтому книга проверяет функцию, а не один навязанный блок.",
-        "purpose_ru": "Подойдут обычное или большое водяное колесо либо подшипник ветряной мельницы. Творческий двигатель исключён, потому что отменяет урок нагрузки.",
-        "steps_ru": [
-          "Сравните доступное место и выберите водяной либо ветряной привод.",
-          "Получите один подходящий источник и установите его по инструкции выбранного механизма.",
-          "Убедитесь, что от источника можно вывести доступный вал к будущему стрессометру."
-        ],
-        "success_ru": "Получен один подходящий источник; после установки его вращение можно передать в измеряемую сеть.",
-        "diagnostics_ru": [
-          "Если предмет не считается, откройте полный список подходящих источников в условии задачи.",
-          "Если установленный привод не вращается, проверьте воду или конструкцию ветряной мельницы по выбранному маршруту."
-        ],
-        "next_ru": "Соединим выбранный источник с передачей и поставим прибор, который покажет запас нагрузки.",
+        "purpose_ru": "Отсюда пойдёт всё вращение. Колесо просит реку, ветряку нужна высота и открытое небо. Творческий двигатель не берите: он выдаёт бесконечную мощность, и считать нагрузку становится незачем.",
         "task_text_ru": "Получите один механический источник мощности Create из списка задачи."
       },
       "authorship": {
@@ -527,15 +346,13 @@
         "editorial_note": "Точный water_wheel заменён проверенным acceptance set, а функциональный запуск доказывается следующим использованием стрессометра."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Три допустимых источника сверены с локальным пакетом данных; творческий двигатель явно исключён."
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
         ]
       },
       "teaching_sections": [
@@ -610,97 +427,61 @@
         "rationale_ru": "Один источник используется всей учебной линией."
       },
       "layout": {
-        "x": 4,
-        "y": 1,
+        "x": 4.0,
+        "y": -0.75,
         "shape": "square",
-        "size": 1.3
+        "size": 1.1
       }
     },
     {
-      "alias": "if.quest.v2.p1.stress",
-      "engine_id": "3538CE73ECF70BAD",
+      "alias": "if.quest.v2.p1.rotation",
+      "engine_id": "3011000000000003",
       "epoch": "P1",
-      "role": "diagnostics",
+      "role": "machine",
       "requirement": "required",
-      "icon": "create:stressometer",
+      "icon": "create:cogwheel",
       "tags": [
         "mainline",
-        "diagnostics",
-        "su"
+        "powertrain"
       ],
       "dependency": {
         "mode": "ALL_OF",
         "edges": [
           {
-            "quest": "if.quest.v2.p1.rotation",
-            "reason": "Измерение имеет смысл после подготовки передачи вращения.",
+            "quest": "if.quest.v2.p1.andesite_alloy",
+            "reason": "Зубчатые колёса используют материал уже освоенного привода.",
             "evidence": [
-              "kubejs/client_scripts/10_ponder/m3_mechanical_stress.js"
-            ]
-          },
-          {
-            "quest": "if.quest.v2.p1.power",
-            "reason": "Стрессометр подключается к действующему источнику вращения.",
-            "evidence": [
-              "kubejs/client_scripts/10_ponder/m3_mechanical_stress.js"
+              "config/ftbquests/quests/chapters/11_p1.snbt"
             ]
           }
         ]
       },
       "proofs": [
         {
-          "alias": "if.task.v2.p1.stress.item",
-          "engine_id": "47461D683C57DD69",
+          "alias": "if.task.v2.p1.rotation.cogwheels",
+          "engine_id": "4011000000000003",
           "type": "item",
           "status": "verified",
           "text_ru": {
-            "objective": "Получите один стрессометр.",
-            "help": "Прибор останется частью вашей линии."
+            "objective": "Получите четыре малых зубчатых колеса.",
+            "help": "Колёса останутся у вас и войдут в учебную передачу."
           },
           "item": {
-            "id": "create:stressometer",
-            "count": 1,
+            "id": "create:cogwheel",
+            "count": 4,
             "consume": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p1.stress.use",
-          "engine_id": "432A8FFFB61AC4E1",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите стрессометр и прочитайте его показание.",
-            "help": "Если интерфейс не открывается, убедитесь, что прибор включён в вращающуюся сеть."
-          },
-          "use": {
-            "block": "create:stressometer",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
           }
         }
       ],
       "text_ru": {
-        "title_ru": "Нагрузка измеряется",
-        "lead_ru": "Стрессометр заменяет догадки числом: он показывает, сколько SU использует подключённая сеть.",
-        "purpose_ru": "Прибор помогает отличить отсутствие вращения от перегрузки. Запас мощности планируется до подключения следующей машины, а не после остановки всей линии.",
-        "steps_ru": [
-          "Соберите стрессометр и установите его в доступном месте на вращающемся валу.",
-          "Откройте показание до подключения машин и ещё раз после первого потребителя."
-        ],
-        "success_ru": "Прибор установлен и показывает изменение нагрузки после подключения потребителя.",
-        "diagnostics_ru": [
-          "Если показание отсутствует, проверьте, что вал действительно вращается и прибор связан с сетью.",
-          "Если сеть перегружена, временно отключите потребитель и увеличьте источник либо снизьте скорость."
-        ],
-        "next_ru": "Завершите параллельную ветвь мельницы; затем подключим чашу для пакетной обработки.",
-        "task_text_ru": "Получите, установите и прочитайте один стрессометр."
+        "title_ru": "Передать вращение",
+        "task_text_ru": "Получите четыре малых зубчатых колеса."
       },
       "authorship": {
         "primary_language": "ru",
         "origin": "human_authored",
         "machine_translation": false,
-        "editorial_note": "Диагностический прибор проверяется предметом и взаимодействием, а не формальной отметкой."
+        "editorial_note": "Квест учит читать направление передачи, не обещая измерение, которого предметный proof не видит."
       },
       "editorial_review": {
         "state": "RU_READY",
@@ -711,7 +492,7 @@
           "RU_FLOW_REVIEWED"
         ],
         "review_notes": [
-          "Стрессометр подтверждён действующей задачей и обучающей сценой; диагностика встроена между источником и потребителем."
+          "Малые зубчатые колёса и размер партии сверены с действующей задачей; переход больше не навязывает конкретный источник."
         ]
       },
       "teaching_sections": [
@@ -729,16 +510,10 @@
           ]
         },
         {
-          "kind": "operation",
+          "kind": "output",
           "source_fields": [
             "text_ru.success_ru",
             "text_ru.task_text_ru"
-          ]
-        },
-        {
-          "kind": "recovery",
-          "source_fields": [
-            "text_ru.diagnostics_ru"
           ]
         },
         {
@@ -757,38 +532,32 @@
       "content_refs": [
         {
           "kind": "item",
-          "id": "create:stressometer",
+          "id": "create:cogwheel",
           "evidence": [
             "config/ftbquests/quests/chapters/11_p1.snbt"
           ]
         },
         {
-          "kind": "doc",
-          "id": "kubejs/client_scripts/10_ponder/m3_mechanical_stress.js",
+          "kind": "mechanic",
+          "id": "create-rotation-direction",
           "evidence": [
-            "Сцена показывает запас SU и перегрузку сети."
-          ]
-        },
-        {
-          "kind": "doc",
-          "id": "docs/registries/m2_energy_networks.json",
-          "evidence": [
-            "Create SU определена как отдельная механическая сеть."
+            "kubejs/client_scripts/10_ponder/03_mechanical_stress.js"
           ]
         }
       ],
       "grind": {
-        "class": "TEACHING",
-        "training_batch": 1,
-        "expected_runs": 2,
+        "class": "GREEN",
+        "training_batch": 4,
+        "expected_runs": 1,
         "automation_before_bulk": false,
-        "rationale_ru": "Один постоянный прибор обслуживает всю раннюю сеть."
+        "budget_ref": "industrial_frontier:grind/p1/andesite_alloy",
+        "rationale_ru": "Четыре колеса составляют одну полезную передачу."
       },
       "layout": {
-        "x": 6,
-        "y": -1,
+        "x": 4.0,
+        "y": 0.75,
         "shape": "square",
-        "size": 1.3
+        "size": 1.1
       }
     },
     {
@@ -836,39 +605,12 @@
             "count": 1,
             "consume": false
           }
-        },
-        {
-          "alias": "if.task.v2.p1.mill.use",
-          "engine_id": "47EC408520CB0AD5",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите мельницу и откройте её интерфейс.",
-            "help": "Проверьте, что взаимодействуете с установленной мельницей Create."
-          },
-          "use": {
-            "block": "create:millstone",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
         }
       ],
       "text_ru": {
         "title_ru": "Первая вращательная обработка",
-        "lead_ru": "Мельница превращает постоянное вращение в повторяемую обработку одного входа.",
-        "purpose_ru": "Это первый потребитель, на котором видно различие между ручной операцией и машинным процессом. Вход должен поступать сверху, а выходу нужно свободное место.",
-        "steps_ru": [
-          "Установите мельницу под доступной передачей и подключите её к вращению.",
-          "Откройте интерфейс, положите одну учебную порцию подходящего входа и предусмотрите место для результата."
-        ],
-        "success_ru": "Мельница установлена, интерфейс доступен, а учебная порция проходит от входа к выходу без ручного повторения рецепта.",
-        "diagnostics_ru": [
-          "Если процесс не начинается, проверьте вращение, правильный вход и наличие рецепта в JEI.",
-          "Если продукт не выходит, освободите выход и временно уберите автоматическую подачу."
-        ],
-        "next_ru": "Рядом появится чаша — общий узел для пакетного смешивания и обработки.",
-        "task_text_ru": "Получите, установите и откройте одну мельницу."
+        "purpose_ru": "Мелет сама, пока крутится вал. Кидайте сверху, а снизу оставьте место — иначе забьётся и встанет.",
+        "task_text_ru": "Получите одну мельницу."
       },
       "authorship": {
         "primary_language": "ru",
@@ -877,15 +619,13 @@
         "editorial_note": "Квест описывает наблюдаемую схему входа и выхода, но не выдумывает конкретный учебный рецепт."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Мельница и проверка установленного блока подтверждены действующей задачей; текст честно отделяет автоматическую проверку от пробной партии."
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
         ]
       },
       "teaching_sections": [
@@ -954,10 +694,156 @@
         "rationale_ru": "Одна мельница остаётся рабочим узлом линии."
       },
       "layout": {
-        "x": 8,
-        "y": 1,
+        "x": 6.0,
+        "y": -0.75,
         "shape": "square",
-        "size": 1.3
+        "size": 1.2
+      }
+    },
+    {
+      "alias": "if.quest.v2.p1.stress",
+      "engine_id": "3538CE73ECF70BAD",
+      "epoch": "P1",
+      "role": "diagnostics",
+      "requirement": "required",
+      "icon": "create:stressometer",
+      "tags": [
+        "mainline",
+        "diagnostics",
+        "su"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p1.rotation",
+            "reason": "Измерение имеет смысл после подготовки передачи вращения.",
+            "evidence": [
+              "kubejs/client_scripts/10_ponder/03_mechanical_stress.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p1.power",
+            "reason": "Стрессометр подключается к действующему источнику вращения.",
+            "evidence": [
+              "kubejs/client_scripts/10_ponder/03_mechanical_stress.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p1.stress.item",
+          "engine_id": "47461D683C57DD69",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один стрессометр.",
+            "help": "Прибор останется частью вашей линии."
+          },
+          "item": {
+            "id": "create:stressometer",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Нагрузка измеряется",
+        "purpose_ru": "Повесьте стрессометр на вал, и он покажет число: сколько нагрузки уже съедено, сколько осталось. Сразу видно, потянет сеть ещё одну машину или пора добавлять мощности.",
+        "task_text_ru": "Получите один стрессометр."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Диагностический прибор проверяется предметом и взаимодействием, а не формальной отметкой."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "create:stressometer",
+          "evidence": [
+            "config/ftbquests/quests/chapters/11_p1.snbt"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "kubejs/client_scripts/10_ponder/03_mechanical_stress.js",
+          "evidence": [
+            "Сцена показывает запас SU и перегрузку сети."
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/registries/energy_networks.json",
+          "evidence": [
+            "Create SU определена как отдельная механическая сеть."
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 2,
+        "automation_before_bulk": false,
+        "rationale_ru": "Один постоянный прибор обслуживает всю раннюю сеть."
+      },
+      "layout": {
+        "x": 6.0,
+        "y": 0.75,
+        "shape": "square",
+        "size": 1.0
       }
     },
     {
@@ -978,14 +864,14 @@
             "quest": "if.quest.v2.p1.stress",
             "reason": "Пакетный узел подключается после появления измеряемой сети.",
             "evidence": [
-              "authoring/ponder/m1_batch_processing.json"
+              "authoring/ponder/batch_processing.json"
             ]
           },
           {
             "quest": "if.quest.v2.p1.mill",
             "reason": "Чаша вводится после первого простого потребителя как следующий класс обработки.",
             "evidence": [
-              "authoring/ponder/m1_batch_processing.json"
+              "authoring/ponder/batch_processing.json"
             ]
           }
         ]
@@ -1005,40 +891,12 @@
             "count": 1,
             "consume": false
           }
-        },
-        {
-          "alias": "if.task.v2.p1.basin.use",
-          "engine_id": "4A11000000000002",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите чашу и откройте её интерфейс.",
-            "help": "Если окно не открывается, проверьте, что установлена именно чаша Create."
-          },
-          "use": {
-            "block": "create:basin",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
         }
       ],
       "text_ru": {
         "title_ru": "Чаша как пакетный узел",
-        "lead_ru": "Чаша собирает входы в одной точке и позволяет отделить подачу материалов от работы механизма над ней.",
-        "purpose_ru": "Пакетная обработка уменьшает ручные перекладывания и создаёт понятное место для входного и выходного буфера. Один узел позже обслужит смешивание, прессование и нагрев.",
-        "steps_ru": [
-          "Установите чашу так, чтобы сверху оставалось место для рабочего механизма.",
-          "Откройте интерфейс и посмотрите, где появляются входы и готовый результат.",
-          "Просмотрите обучающую сцену Ponder «Партия, буфер и узкое место»."
-        ],
-        "success_ru": "Чаша установлена, интерфейс прочитан, а место под входной и выходной поток предусмотрено заранее.",
-        "diagnostics_ru": [
-          "Если рецепт не определяется, проверьте полный набор входов, свободный выход и требуемое тепло.",
-          "Если предметы застревают, временно отключите автоматическую подачу и проверьте одну учебную партию."
-        ],
-        "next_ru": "Над чашей поставим механический пресс и получим первый общий рабочий узел нескольких процессов.",
-        "task_text_ru": "Получите, установите и откройте одну чашу Create."
+        "purpose_ru": "В чашу сыплется всё, что надо смешать или спрессовать, а готовое падает вниз. Место прямо над ней не занимайте — туда встанут пресс и смеситель.",
+        "task_text_ru": "Получите одну чашу Create."
       },
       "authorship": {
         "primary_language": "ru",
@@ -1047,15 +905,13 @@
         "editorial_note": "Узел опирается на существующую русскую Ponder-сцену и вводит буферы до массового потока."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Чаша и обучающая сцена подтверждены исходниками сборки; назначение входного и выходного буфера объяснено до пресса."
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
         ]
       },
       "teaching_sections": [
@@ -1104,13 +960,13 @@
           "kind": "item",
           "id": "create:basin",
           "evidence": [
-            "authoring/ponder/m1_batch_processing.json",
-            "kubejs/client_scripts/10_ponder/m1_batch_processing.js"
+            "authoring/ponder/batch_processing.json",
+            "kubejs/client_scripts/10_ponder/01_batch_processing.js"
           ]
         },
         {
           "kind": "doc",
-          "id": "authoring/ponder/m1_batch_processing.json",
+          "id": "authoring/ponder/batch_processing.json",
           "evidence": [
             "Сцена объясняет входной буфер, чашу, выход и узкое место."
           ]
@@ -1132,10 +988,10 @@
         "rationale_ru": "Одна чаша поддерживает несколько процессов и предотвращает дублирование установки."
       },
       "layout": {
-        "x": 10,
-        "y": 1,
+        "x": 8.0,
+        "y": 0.0,
         "shape": "square",
-        "size": 1.3
+        "size": 1.2
       }
     },
     {
@@ -1156,14 +1012,14 @@
             "quest": "if.quest.v2.p1.basin",
             "reason": "Пресс становится общим рабочим узлом после подготовки чаши.",
             "evidence": [
-              "authoring/ponder/m1_batch_processing.json"
+              "authoring/ponder/batch_processing.json"
             ]
           },
           {
             "quest": "if.quest.v2.p1.stress",
             "reason": "Перед подключением пресса сеть должна иметь измеряемый запас SU.",
             "evidence": [
-              "kubejs/client_scripts/10_ponder/m3_mechanical_stress.js"
+              "kubejs/client_scripts/10_ponder/03_mechanical_stress.js"
             ]
           }
         ]
@@ -1183,39 +1039,12 @@
             "count": 1,
             "consume": false
           }
-        },
-        {
-          "alias": "if.task.v2.p1.press.use",
-          "engine_id": "4BA1A072A578DB86",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Установите пресс и взаимодействуйте с ним.",
-            "help": "Разместите пресс над рабочей зоной и убедитесь, что выбран нужный блок."
-          },
-          "use": {
-            "block": "create:mechanical_press",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
         }
       ],
       "text_ru": {
         "title_ru": "Пресс над рабочей зоной",
-        "lead_ru": "Один механический пресс обслуживает отдельные заготовки и пакетную работу над чашей.",
-        "purpose_ru": "Пресс вводит общий исполнительный механизм для нескольких производств. Правильная высота, вращение и свободный выход важнее декоративной симметрии.",
-        "steps_ru": [
-          "Установите пресс над чашей или другой рабочей зоной с правильным зазором.",
-          "Подведите вращение и проверьте одну учебную операцию по действующему рецепту JEI."
-        ],
-        "success_ru": "Пресс установлен, подключён и способен выполнить одну учебную операцию без ручной перестановки механизма.",
-        "diagnostics_ru": [
-          "Если пресс не двигается, проверьте вращение и запас SU.",
-          "Если движения есть, но рецепта нет, проверьте высоту, набор входов и требуемый режим обработки."
-        ],
-        "next_ru": "Теперь соединим мельницу, чашу и пресс лентой и разделим входной и выходной поток.",
-        "task_text_ru": "Получите, установите и используйте один механический пресс."
+        "purpose_ru": "Плющит то, что лежит под ним. Над лентой обрабатывает поток, над чашей — работает партиями.",
+        "task_text_ru": "Получите один механический пресс."
       },
       "authorship": {
         "primary_language": "ru",
@@ -1224,15 +1053,13 @@
         "editorial_note": "Квест объясняет многоролевой пресс и проверяет взаимодействие вместо одной иконки в инвентаре."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Механический пресс подтверждён действующей задачей и обучающей сценой; проверены высота, вращение и свободный выход."
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
         ]
       },
       "teaching_sections": [
@@ -1286,7 +1113,7 @@
         },
         {
           "kind": "doc",
-          "id": "authoring/ponder/m1_batch_processing.json",
+          "id": "authoring/ponder/batch_processing.json",
           "evidence": [
             "Сцена показывает пресс над чашей и буферизацию."
           ]
@@ -1301,10 +1128,10 @@
         "rationale_ru": "Один пресс обслуживает несколько рецептов и остаётся частью линии."
       },
       "layout": {
-        "x": 12,
-        "y": 0,
+        "x": 10.0,
+        "y": 0.0,
         "shape": "rsquare",
-        "size": 1.4
+        "size": 1.2
       }
     },
     {
@@ -1333,14 +1160,14 @@
             "quest": "if.quest.v2.p1.press",
             "reason": "Полная линия должна включать пакетный рабочий узел.",
             "evidence": [
-              "authoring/ponder/m1_batch_processing.json"
+              "authoring/ponder/batch_processing.json"
             ]
           },
           {
             "quest": "if.quest.v2.p1.stress",
             "reason": "Автоматическая линия вводится только с доступной диагностикой нагрузки.",
             "evidence": [
-              "kubejs/client_scripts/10_ponder/m3_mechanical_stress.js"
+              "kubejs/client_scripts/10_ponder/03_mechanical_stress.js"
             ]
           }
         ]
@@ -1360,72 +1187,11 @@
             "count": 8,
             "consume": false
           }
-        },
-        {
-          "alias": "if.task.v2.p1.line.mill_use",
-          "engine_id": "4FBC0B4FCD841E3A",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Откройте мельницу, включённую в линию.",
-            "help": "Взаимодействуйте с установленной мельницей Create."
-          },
-          "use": {
-            "block": "create:millstone",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p1.line.basin_use",
-          "engine_id": "412A83221B81F3A2",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Откройте чашу, включённую в линию.",
-            "help": "Проверьте доступ к входам и выходу установленной чаши."
-          },
-          "use": {
-            "block": "create:basin",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p1.line.press_use",
-          "engine_id": "4235AF27E45646D3",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Взаимодействуйте с прессом над рабочей зоной.",
-            "help": "Убедитесь, что взаимодействуете с установленным механическим прессом Create."
-          },
-          "use": {
-            "block": "create:mechanical_press",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
         }
       ],
       "text_ru": {
         "title_ru": "Линия от входа до выхода",
-        "lead_ru": "Лента убирает ручную передачу между узлами, но требует ясного направления и свободного выхода.",
-        "purpose_ru": "Первая автоматизация должна переносить материалы между доступными рабочими узлами. Входной буфер сглаживает подачу, чаша или мельница выполняют процесс, а отдельный выход не даёт продукту забить маршрут.",
-        "steps_ru": [
-          "Получите восемь соединителей ленты и разметьте короткий маршрут без пересечения входа и выхода.",
-          "Соедините подачу с мельницей, чашей и прессом по нужному процессу.",
-          "Откройте каждый установленный рабочий узел и вручную проследите одну учебную партию от входа до выхода."
-        ],
-        "success_ru": "Комплект ленты получен, а мельница, чаша и пресс доступны для осмотра. Проведите одну учебную партию сами и убедитесь, что она доходит от входа до выхода.",
-        "diagnostics_ru": [
-          "Если предмет стоит, проверьте направление ленты и свободное место следующего узла.",
-          "Если вся сеть остановилась, прочитайте стрессометр и временно отключите один потребитель.",
-          "Если вход попадает в выход, разделите буферы физически до увеличения скорости."
-        ],
-        "next_ru": "После появления потока можно добавить необязательное пакетное хранилище или сразу ввести P1 в строй.",
+        "purpose_ru": "Лента возит предметы между машинами, пока вы заняты другим. Задайте направление и следите, чтобы на выходе было куда складывать.",
         "task_text_ru": "Получите восемь соединителей ленты и откройте мельницу, чашу и пресс собранной линии."
       },
       "authorship": {
@@ -1435,15 +1201,13 @@
         "editorial_note": "Условие усилено тремя взаимодействиями с установленными узлами; текст не выдаёт их за автоматическое наблюдение всей партии."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Проверки трёх установленных механизмов сверены со схемой источника; движение учебной партии оставлено честной игровой приёмкой владельца."
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
         ]
       },
       "teaching_sections": [
@@ -1502,7 +1266,7 @@
         },
         {
           "kind": "doc",
-          "id": "authoring/ponder/m1_batch_processing.json",
+          "id": "authoring/ponder/batch_processing.json",
           "evidence": [
             "Сцена объясняет входной и выходной буфер."
           ]
@@ -1511,7 +1275,7 @@
           "kind": "process",
           "id": "create-first-production-line",
           "evidence": [
-            "docs/registries/m2_grind_budget.json"
+            "docs/registries/grind_budget.json"
           ]
         }
       ],
@@ -1524,10 +1288,10 @@
         "rationale_ru": "Восемь соединителей образуют полезную короткую линию; последующий массовый спрос обслуживает сама линия."
       },
       "layout": {
-        "x": 14,
-        "y": 0,
+        "x": 12.0,
+        "y": 0.0,
         "shape": "gear",
-        "size": 1.5
+        "size": 1.4
       }
     },
     {
@@ -1549,7 +1313,7 @@
             "quest": "if.quest.v2.p1.line",
             "reason": "Пакетное хранение предлагается после появления реального входного и выходного потока.",
             "evidence": [
-              "kubejs/server_scripts/00_core/recipes/m1_bulk_storage.js"
+              "kubejs/server_scripts/00_core/recipes/01_bulk_storage.js"
             ]
           }
         ]
@@ -1573,18 +1337,6 @@
       ],
       "text_ru": {
         "title_ru": "Буферы одной партией",
-        "lead_ru": "Теперь сундуки решают реальную задачу: отделяют подачу сырья от готового продукта линии.",
-        "purpose_ru": "Пакетный рецепт сохраняет стоимость четырёх обычных сундуков и убирает только повторные клики. Это удобное расширение, а не ворота механической эпохи.",
-        "steps_ru": [
-          "Разложите восемь подходящих брёвен кольцом на верстаке, оставив центр пустым.",
-          "Получите четыре сундука и поставьте отдельные буферы до и после рабочей зоны."
-        ],
-        "success_ru": "Четыре сундука готовы; линия получает раздельный запас входа и выхода без ресурсной скидки.",
-        "diagnostics_ru": [
-          "Если рецепт не собирается, проверьте пустой центр и убедитесь, что все брёвна входят в список рецепта.",
-          "Если линия продолжает вставать, проверьте не размер сундука, а направление передачи и свободный выход."
-        ],
-        "next_ru": "Буферы можно расширять по мере пропускной способности; для перехода к P2 достаточно основной линии.",
         "task_text_ru": "Получите четыре сундука пакетным рецептом из восьми брёвен.",
         "optional_note_ru": "Это улучшение повышает устойчивость линии, но не блокирует ввод P1 в строй."
       },
@@ -1662,16 +1414,16 @@
         },
         {
           "kind": "recipe",
-          "id": "industrial_frontier:m1/bulk_chest_from_logs",
+          "id": "industrial_frontier:bulk_chest_from_logs",
           "evidence": [
-            "kubejs/server_scripts/00_core/recipes/m1_bulk_storage.js"
+            "kubejs/server_scripts/00_core/recipes/01_bulk_storage.js"
           ]
         },
         {
           "kind": "registry",
-          "id": "docs/registries/m2_grind_budget.json",
+          "id": "docs/registries/grind_budget.json",
           "evidence": [
-            "docs/registries/m2_grind_budget.json"
+            "docs/registries/grind_budget.json"
           ]
         }
       ],
@@ -1684,10 +1436,1376 @@
         "rationale_ru": "Одна пакетная операция заменяет повторный интерфейсный крафт без скидки материала."
       },
       "layout": {
-        "x": 16,
-        "y": -2,
+        "x": 14.0,
+        "y": -2.25,
         "shape": "circle",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.passports.intro",
+      "engine_id": "3070000000000001",
+      "epoch": "P1",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:book",
+      "tags": [
+        "root",
+        "reference",
+        "materials"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p1.line",
+            "reason": "После первой рабочей линии игрок уже встречает одинаковые вещества в разных формах и может применить правила справочника на практике.",
+            "evidence": [
+              "authoring/questbook_v2/11_p1.json",
+              "docs/registries/material_forms.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.passports.intro.read",
+          "engine_id": "4070000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, зачем каждому важному материалу нужен понятный паспорт.",
+            "help": "Отметьте пункт после чтения; никаких предметов для него не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Зачем материалу паспорт",
+        "purpose_ru": "Слитки из разных цепочек выглядят одинаково, а ведут себя по-разному. Паспорт подскажет, откуда этот взялся и куда его лучше пустить.",
+        "task_text_ru": "Ознакомьтесь с назначением паспортов материалов."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:substance_passports",
+          "evidence": [
+            "docs/registries/substance_passports.json"
+          ]
+        },
+        {
+          "kind": "registry",
+          "id": "industrial_frontier:material_forms",
+          "evidence": [
+            "docs/registries/material_forms.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Вводное чтение не требует предметов и не расходует ресурсы."
+      },
+      "layout": {
+        "x": 14.0,
+        "y": -0.75,
+        "shape": "hexagon",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.intro",
+      "engine_id": "3022000000000001",
+      "epoch": "P1",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecolonies:blockhuttownhall",
+      "tags": [
+        "city",
+        "p1",
+        "planning"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p1.line",
+            "reason": "Городская программа начинается после первой рабочей механической линии, когда базе уже нужен постоянный район обслуживания.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+              "authoring/questbook_v2/11_p1.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.intro.read",
+          "engine_id": "4022000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте, чем рабочий город отличается от набора красивых домов.",
+            "help": "Галочка подтверждает только знакомство с правилами этой главы."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сначала функции, потом фасады",
+        "task_text_ru": "Ознакомьтесь с устройством функционального города."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "minecolonies",
+          "evidence": [
+            "mods/minecolonies-1.20.1-1.1.1274.jar"
+          ]
+        },
+        {
+          "kind": "doc",
+          "id": "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md",
+          "evidence": [
+            "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Планирование района не требует лишних предметов."
+      },
+      "layout": {
+        "x": 14.0,
+        "y": 0.75,
+        "shape": "hexagon",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.intro",
+      "engine_id": "3020000000000001",
+      "epoch": "P1",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "minecraft:chest",
+      "tags": [
+        "storage",
+        "planning"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p1.line",
+            "reason": "Общий склад появляется после первой линии, когда ручной поиск деталей уже создаёт заметный простой.",
+            "evidence": [
+              "docs/QUEST_SYSTEM_REBUILD_PLAN.md",
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.intro.read",
+          "engine_id": "4020000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте три правила рабочего склада.",
+            "help": "Отметьте пункт после чтения; никаких предметов для него не требуется."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Зачем нужен общий склад",
+        "task_text_ru": "Разберитесь, какие задачи решает рабочий склад."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Вводный узел связывает склад с простоем фабрики и не требует преждевременный предмет."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Проверены естественность текста, связь со сталью P2 и подготовка места для следующих двух блоков."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "toms_storage",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Планирование не требует создавать лишние контейнеры ради отметки."
+      },
+      "layout": {
+        "x": 14.0,
+        "y": 2.25,
+        "shape": "gear",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.manual_build",
+      "engine_id": "3A22000000000001",
+      "epoch": "P1",
+      "role": "integration",
+      "requirement": "required",
+      "icon": "minecraft:bricks",
+      "tags": [
+        "city",
+        "p1",
+        "manual_build"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.intro",
+            "reason": "Ручное здание следует после выбора места и функций района.",
+            "evidence": [
+              "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md#94-квестовая-архитектура"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.manual_build.place",
+          "engine_id": "4B22000000000002",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите двадцать четыре блока из строительной палитры P1.",
+            "help": "Подойдут кирпич, каменный кирпич, стекло, гладкий камень, медь или андезитовый корпус из списка задачи."
+          },
+          "place": {
+            "block_tag": "industrial_frontier:palette/p1",
+            "count": 24,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первое помещение строим руками",
+        "purpose_ru": "Соберите первую комнату руками. Так вы почувствуете настоящий расход блоков и поймёте, какой ширины делать проходы. Дальше можно браться за инструменты.",
+        "task_text_ru": "Разместите двадцать четыре блока палитры P1 в одном ручном строительном фрагменте."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block_tag",
+          "id": "industrial_frontier:palette/p1",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/blocks/palette/p1.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 24,
+        "expected_runs": 1,
+        "automation_before_bulk": false,
+        "rationale_ru": "Двадцать четыре блока сразу образуют полезный фрагмент здания и больше не повторяются вручную ради обучения."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": -0.75,
+        "shape": "square",
+        "size": 1.4
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.connector",
+      "engine_id": "3A20000000000002",
+      "epoch": "P1",
+      "role": "machine",
+      "requirement": "required",
+      "icon": "toms_storage:ts.inventory_connector",
+      "tags": [
+        "storage",
+        "network",
+        "toms_storage"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.intro",
+            "reason": "Связующий блок ставится в заранее выбранную складскую зону.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.connector.item",
+          "engine_id": "4B20000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите один связующий блок инвентарей.",
+            "help": "Блок должен остаться у вас для сборки учебного склада."
+          },
+          "item": {
+            "id": "toms_storage:ts.inventory_connector",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.storage.connector.place",
+          "engine_id": "4A20000000000002",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите связующий блок рядом с контейнерами.",
+            "help": "Хотя бы один сундук должен касаться блока или непрерывной цепочки подключённых контейнеров."
+          },
+          "place": {
+            "block": "toms_storage:ts.inventory_connector",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Один учёт для нескольких сундуков",
+        "task_text_ru": "Изготовьте и установите связующий блок инвентарей."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Предмет и установка проверяются отдельно; текст не приписывает блоку транспортировку."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Сверены точный ID, модель непрерывного подключения и соответствие двух действий задачам."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.inventory_connector",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.inventory_connector.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Для обучения достаточно одного блока, который сразу остаётся частью полезного склада."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": 0.75,
+        "shape": "rsquare",
         "size": 1.1
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.effortless",
+      "engine_id": "3A22000000000006",
+      "epoch": "P1",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "effortlessbuilding:muscles",
+      "tags": [
+        "city",
+        "construction",
+        "anti_grind",
+        "optional"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.manual_build",
+            "reason": "Средство массовой стройки открывается только после первого ручного помещения.",
+            "evidence": [
+              "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md#54-правила-использования-инструментов"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.effortless.item",
+          "engine_id": "4B22000000000013",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите предмет «Мышцы» из Effortless Building.",
+            "help": "Он открывает размещение нескольких блоков одной строительной операцией."
+          },
+          "item": {
+            "id": "effortlessbuilding:muscles",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.effortless.place",
+          "engine_id": "4B22000000000014",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите ещё двадцать четыре блока палитры P1 в повторяющемся участке.",
+            "help": "Выберите стену, пол или ряд опор; не применяйте массовую замену к машинам и хранилищам."
+          },
+          "place": {
+            "block_tag": "industrial_frontier:palette/p1",
+            "count": 24,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Быстрая укладка стен",
+        "task_text_ru": "Получите «Мышцы» и разместите двадцать четыре блока палитры P1 в повторяющемся участке.",
+        "optional_note_ru": "Ветка добровольная и служит только снижению рутины после ручного строительства; без неё городская программа остаётся проходимой."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "effortlessbuilding",
+          "evidence": [
+            "mods/effortlessbuilding-1.20.1-3.11.jar"
+          ]
+        },
+        {
+          "kind": "block_tag",
+          "id": "industrial_frontier:palette/p1",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/blocks/palette/p1.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 24,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "После ручного образца повторяющаяся укладка ускоряется и сразу становится частью здания."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": -3.0,
+        "shape": "diamond",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.furniture",
+      "engine_id": "3A22000000000005",
+      "epoch": "P1",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "handcrafted:oak_chair",
+      "tags": [
+        "city",
+        "interior",
+        "handcrafted",
+        "optional"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.manual_build",
+            "reason": "Мебель получает смысл только после появления помещения с понятной функцией.",
+            "evidence": [
+              "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md#4-мебель-и-интерьер"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.furniture.set",
+          "engine_id": "4B2200000000000F",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Подготовьте четыре предмета из городского мебельного набора.",
+            "help": "Подойдут любые сочетания стульев, столов, лавок, полок, ящиков и стоек из списка задачи."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:furniture/city_set",
+            "count": 4
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.furniture.chair",
+          "engine_id": "4B22000000000010",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите один стул Handcrafted любой породы дерева.",
+            "help": "Поставьте его у стола или рабочего места, а не посреди прохода."
+          },
+          "place": {
+            "block_tag": "handcrafted:chairs",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.furniture.table",
+          "engine_id": "4B22000000000011",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите один стол Handcrafted любой породы дерева.",
+            "help": "Стол обозначит обеденную, рабочую или административную функцию комнаты."
+          },
+          "place": {
+            "block_tag": "handcrafted:tables",
+            "count": 1,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.furniture.shelf",
+          "engine_id": "4B22000000000012",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите одну полку Handcrafted любой породы дерева.",
+            "help": "Оставьте перед ней свободное место и не перекрывайте рабочий проход."
+          },
+          "place": {
+            "block_tag": "handcrafted:shelves",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Интерьер объясняет назначение комнаты",
+        "purpose_ru": "Стол, стул и полка сразу говорят, для чего комната. Жителям это тоже важно — обустроенные помещения они занимают охотнее.",
+        "task_text_ru": "Подготовьте четыре предмета городского набора и разместите стул, стол и полку выбранной породы дерева.",
+        "optional_note_ru": "Ветка добровольная: она учит собирать функциональный интерьер, но не требует покупать каждый вариант мебели."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "handcrafted",
+          "evidence": [
+            "mods/handcrafted-forge-1.20.1-3.0.6.jar"
+          ]
+        },
+        {
+          "kind": "item_tag",
+          "id": "industrial_frontier:furniture/city_set",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/furniture/city_set.json"
+          ]
+        },
+        {
+          "kind": "block_tag",
+          "id": "handcrafted:chairs",
+          "evidence": [
+            "mods/handcrafted-forge-1.20.1-3.0.6.jar!data/handcrafted/tags/blocks/chairs.json"
+          ]
+        },
+        {
+          "kind": "block_tag",
+          "id": "handcrafted:tables",
+          "evidence": [
+            "mods/handcrafted-forge-1.20.1-3.0.6.jar!data/handcrafted/tags/blocks/tables.json"
+          ]
+        },
+        {
+          "kind": "block_tag",
+          "id": "handcrafted:shelves",
+          "evidence": [
+            "mods/handcrafted-forge-1.20.1-3.0.6.jar!data/handcrafted/tags/blocks/shelves.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Три размещённых предмета показывают основные функции комнаты; четвёртый остаётся свободным выбором."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": -1.5,
+        "shape": "diamond",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.geometry",
+      "engine_id": "3A22000000000003",
+      "epoch": "P1",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "framedblocks:framed_slope",
+      "tags": [
+        "city",
+        "architecture",
+        "framedblocks",
+        "optional"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.manual_build",
+            "reason": "Каркасная геометрия дополняет уже построенный простой объём, а не заменяет его целиком.",
+            "evidence": [
+              "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md#54-правила-использования-инструментов"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.geometry.item",
+          "engine_id": "4B22000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите три каркасных скоса.",
+            "help": "Этого хватит для одного заметного узла крыши или фасада."
+          },
+          "item": {
+            "id": "framedblocks:framed_slope",
+            "count": 3,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.geometry.place",
+          "engine_id": "4B22000000000008",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите три каркасных скоса в одном узле.",
+            "help": "Соберите короткий свес, вентиляционный короб или переход кровли."
+          },
+          "place": {
+            "block": "framedblocks:framed_slope",
+            "count": 3,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Геометрия там, где она нужна",
+        "purpose_ru": "Скос выручает на сложных стыках — там, где стена сходится под углом или крыша упирается в башню. По всему фасаду его лучше не пускать, выйдет дорого и пестро.",
+        "task_text_ru": "Получите и разместите три каркасных скоса, затем нанесите кирпич на один из них.",
+        "optional_note_ru": "Ветка добровольная: каркасные формы помогают сложной архитектуре, но не нужны каждой стене и не влияют на развитие фабрики."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "framedblocks",
+          "evidence": [
+            "mods/FramedBlocks-9.4.3.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "framedblocks:framed_slope",
+          "evidence": [
+            "mods/FramedBlocks-9.4.3.jar!assets/framedblocks/blockstates/framed_slope.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Три скоса создают законченный узел и не требуют облицовывать ими всё здание."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": 0.0,
+        "shape": "diamond",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.surfaces",
+      "engine_id": "3A22000000000002",
+      "epoch": "P1",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "rechiseled:chisel",
+      "tags": [
+        "city",
+        "architecture",
+        "rechiseled",
+        "optional"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.manual_build",
+            "reason": "Фактуру выбирают после знакомства с базовой ценой и масштабом ручной стены.",
+            "evidence": [
+              "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md#54-правила-использования-инструментов"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.surfaces.chisel",
+          "engine_id": "4B22000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите ручное долото Rechiseled.",
+            "help": "Оно меняет вариант поверхности, не создавая новый технологический материал."
+          },
+          "item": {
+            "id": "rechiseled:chisel",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.surfaces.place",
+          "engine_id": "4B22000000000004",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Разместите три дубовых элемента Rechiseled из списка задачи.",
+            "help": "Можно сочетать разные узоры и формы. Для ровной повторяющейся фактуры возьмите три одинаковых блока, но счётчик этого не требует."
+          },
+          "place": {
+            "block_tag": "rechiseled:oak_planks",
+            "count": 3,
+            "require_replace": false
+          }
+        },
+        {
+          "alias": "if.task.v2.settlement.surfaces.machine",
+          "engine_id": "4B22000000000005",
+          "type": "place",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Установите механическое долото Rechiseled: Create.",
+            "help": "Оставьте стороны свободными для подачи вращения, исходного блока и выхода."
+          },
+          "place": {
+            "block": "rechiseledcreate:mechanical_chisel",
+            "count": 1,
+            "require_replace": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Фактура без новой металлургии",
+        "task_text_ru": "Получите ручное долото, разместите три одинаковых дубовых блока Rechiseled и установите механическое долото.",
+        "optional_note_ru": "Ветка добровольная: она расширяет архитектурную палитру и ускоряет отделку, но не открывает следующую технологическую эпоху."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.title_ru",
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mod",
+          "id": "rechiseled",
+          "evidence": [
+            "mods/rechiseled-1.2.5-forge-mc1.20.1.jar"
+          ]
+        },
+        {
+          "kind": "mod",
+          "id": "rechiseledcreate",
+          "evidence": [
+            "mods/rechiseledcreate-1.1.1-forge-mc1.20.jar"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "rechiseledcreate:mechanical_chisel",
+          "evidence": [
+            "mods/rechiseledcreate-1.1.1-forge-mc1.20.jar!assets/rechiseledcreate/blockstates/mechanical_chisel.json"
+          ]
+        },
+        {
+          "kind": "block_tag",
+          "id": "rechiseled:oak_planks",
+          "evidence": [
+            "mods/rechiseled-1.2.5-forge-mc1.20.1.jar!data/rechiseled/tags/blocks/oak_planks.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 3,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Три блока показывают соединение фактуры; крупные партии предназначены механическому долоту."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": 1.5,
+        "shape": "diamond",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.storage.terminal",
+      "engine_id": "3A20000000000003",
+      "epoch": "P1",
+      "role": "operation",
+      "requirement": "required",
+      "icon": "toms_storage:ts.storage_terminal",
+      "tags": [
+        "storage",
+        "terminal",
+        "toms_storage"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.storage.connector",
+            "reason": "Терминалу нужна уже собранная группа доступных инвентарей.",
+            "evidence": [
+              "authoring/quests/specs/20_storage_order.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.storage.terminal.item",
+          "engine_id": "4B20000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Получите терминал хранения.",
+            "help": "Терминал является точкой доступа и не заменяет сами контейнеры."
+          },
+          "item": {
+            "id": "toms_storage:ts.storage_terminal",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Весь склад одним списком",
+        "purpose_ru": "Терминал соберёт содержимое всех подключённых сундуков в один список с поиском. Перекладывать за вас он ничего не станет, зато по кладовой бегать больше не придётся.",
+        "task_text_ru": "Получите терминал и откройте общий список склада."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Задачи подтверждают наличие терминала и первое взаимодействие, а текст ограничивает его роль поиском и ручным доступом."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.task_text_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "toms_storage:ts.storage_terminal",
+          "evidence": [
+            "mods/toms_storage-1.20-1.7.1.jar!assets/toms_storage/models/item/ts.storage_terminal.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "TEACHING",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "rationale_ru": "Один терминал сразу становится постоянной рабочей точкой склада."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": 3.0,
+        "shape": "rsquare",
+        "size": 1.2
       }
     },
     {
@@ -1708,15 +2826,15 @@
             "quest": "if.quest.v2.p1.line",
             "reason": "Ввод P1 в строй требует завершённой логистической линии, а не набора отдельных машин.",
             "evidence": [
-              "docs/registries/m2_progression_graph.json"
+              "docs/registries/progression_graph.json"
             ]
           },
           {
             "quest": "if.quest.v2.storage.terminal",
             "reason": "До парового этапа линии уже нужен общий склад: терминал связывает ранние запасы и убирает ручной поиск деталей.",
             "evidence": [
-              "authoring/questbook_v2/20_storage_order.json",
-              "kubejs/server_scripts/10_progression/m9_storage_gate.js"
+              "authoring/questbook_v2/11_p1.json",
+              "kubejs/server_scripts/10_progression/09_storage_gate.js"
             ]
           }
         ]
@@ -1725,51 +2843,22 @@
         {
           "alias": "if.task.v2.p1.commissioning.stress_use",
           "engine_id": "42FBF7945A459487",
-          "type": "use",
+          "type": "item",
           "status": "verified",
           "text_ru": {
-            "objective": "Откройте стрессометр действующей механической сети.",
+            "objective": "Изготовьте: Стрессометр.",
             "help": "Прибор должен оставаться доступным для проверки нагрузки после сборки линии."
           },
-          "use": {
-            "block": "create:stressometer",
+          "item": {
+            "id": "create:stressometer",
             "count": 1,
-            "item_interaction": false,
-            "check_item": false
-          }
-        },
-        {
-          "alias": "if.task.v2.p1.commissioning.press_use",
-          "engine_id": "448A2EFE63D99215",
-          "type": "use",
-          "status": "verified",
-          "text_ru": {
-            "objective": "Взаимодействуйте с прессом собранной линии.",
-            "help": "Проверьте установленный механический пресс после завершения узла линии."
-          },
-          "use": {
-            "block": "create:mechanical_press",
-            "count": 1,
-            "item_interaction": false,
-            "check_item": false
+            "consume": false
           }
         }
       ],
       "text_ru": {
         "title_ru": "Линия и общий склад готовы",
-        "lead_ru": "Источник, передача, измерение нагрузки, материальный поток и единая точка доступа к запасам уже работают как одна система.",
-        "purpose_ru": "Приёмка P1 подтверждает, что механика снимает повторяемую ручную работу, а общий склад сокращает поиск деталей между операциями. Пакетный рецепт сундуков остаётся необязательным удобством и не подменяет складской терминал.",
-        "steps_ru": [
-          "Откройте стрессометр и убедитесь, что диагностический прибор остаётся доступным.",
-          "Взаимодействуйте с механическим прессом после завершения узла полной линии.",
-          "Перед переходом убедитесь, что связующий блок и терминал общего склада уже установлены и проверены в складской ветви."
-        ],
-        "success_ru": "Диагностический прибор, рабочий пресс и терминал общего склада доступны; команда переходит в P2.",
-        "diagnostics_ru": [
-          "Если переход закрыт, завершите узел полной линии и складскую ветвь до терминала, затем повторно откройте оба механических блока.",
-          "Если механизм доступен, но партия не проходит, исправьте направление потока, перегрузку и забитый выход до перехода."
-        ],
-        "next_ru": "В P2 механическое производство подготовит входы для пара, кокса, стали и латуни.",
+        "purpose_ru": "Вал крутится, нагрузка под присмотром, лента возит, склад ищет сам. Механика готова — впереди пар и настоящая металлургия.",
         "task_text_ru": "После завершения механической линии и общего склада откройте стрессометр и взаимодействуйте с механическим прессом."
       },
       "authorship": {
@@ -1779,15 +2868,13 @@
         "editorial_note": "Итоговая приёмка P1 объединяет рабочую механическую линию и реализованную раннюю ветвь общего склада."
       },
       "editorial_review": {
-        "state": "RU_READY",
+        "state": "RU_REVIEWED",
         "marks": [
-          "RU_PRIMARY_DRAFTED",
-          "RU_TECH_CHECKED",
-          "RU_STYLE_REVIEWED",
-          "RU_FLOW_REVIEWED"
+          "RU_WRITTEN",
+          "RU_REVIEWED"
         ],
         "review_notes": [
-          "Две проверки подтверждают доступ к действующим узлам; терминал отдельно проверяется обязательной складской ветвью."
+          "Переписано по стандарту от 10 августа 2026 года: одна–три фразы, что это и зачем."
         ]
       },
       "teaching_sections": [
@@ -1836,7 +2923,7 @@
           "kind": "quest",
           "id": "if.quest.v2.storage.terminal",
           "evidence": [
-            "authoring/questbook_v2/20_storage_order.json"
+            "authoring/questbook_v2/11_p1.json"
           ]
         },
         {
@@ -1869,10 +2956,10 @@
         "rationale_ru": "Приёмка повторно не расходует материалы; общий склад строится один раз из деталей, уже доступных в P1."
       },
       "layout": {
-        "x": 18,
-        "y": 0,
+        "x": 20.0,
+        "y": 0.0,
         "shape": "diamond",
-        "size": 1.6
+        "size": 1.8
       },
       "commissioning": {
         "epoch": "P1",
@@ -1882,7 +2969,7 @@
           "if.quest.v2.storage.terminal"
         ],
         "epoch_state_evidence": [
-          "docs/registries/m2_progression_graph.json",
+          "docs/registries/progression_graph.json",
           "threat_director/SPECIFICATION.md"
         ]
       }

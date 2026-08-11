@@ -10,20 +10,13 @@
 	quests: [
 		{
 			description: [
-				"{industrial_frontier.quest.v2.onboarding.welcome.purpose}"
-				"{industrial_frontier.quest.v2.onboarding.welcome.step.1}"
-				"{industrial_frontier.quest.v2.onboarding.welcome.step.2}"
-				"{industrial_frontier.quest.v2.onboarding.welcome.success}"
 				"{industrial_frontier.quest.v2.onboarding.welcome.task}"
-				"{industrial_frontier.quest.v2.onboarding.welcome.diagnostic.1}"
 				"{industrial_frontier.quest.v2.onboarding.welcome.proof_help.1}"
-				"{industrial_frontier.quest.v2.onboarding.welcome.next}"
 			]
 			icon: "minecraft:compass"
 			id: "358E19D16CFF1CF8"
 			shape: "gear"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.onboarding.welcome.lead}"
+			size: 1d
 			tags: ["mainline", "reading"]
 			tasks: [
 				{
@@ -40,20 +33,13 @@
 			dependencies: ["358E19D16CFF1CF8"]
 			description: [
 				"{industrial_frontier.quest.v2.onboarding.reading.purpose}"
-				"{industrial_frontier.quest.v2.onboarding.reading.step.1}"
-				"{industrial_frontier.quest.v2.onboarding.reading.step.2}"
-				"{industrial_frontier.quest.v2.onboarding.reading.success}"
 				"{industrial_frontier.quest.v2.onboarding.reading.task}"
-				"{industrial_frontier.quest.v2.onboarding.reading.diagnostic.1}"
-				"{industrial_frontier.quest.v2.onboarding.reading.diagnostic.2}"
 				"{industrial_frontier.quest.v2.onboarding.reading.proof_help.1}"
-				"{industrial_frontier.quest.v2.onboarding.reading.next}"
 			]
 			icon: "minecraft:writable_book"
 			id: "3000000000000002"
 			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.onboarding.reading.lead}"
+			size: 1d
 			tags: ["mainline", "reading"]
 			tasks: [
 				{
@@ -69,21 +55,36 @@
 		{
 			dependencies: ["3000000000000002"]
 			description: [
-				"{industrial_frontier.quest.v2.onboarding.jei.purpose}"
-				"{industrial_frontier.quest.v2.onboarding.jei.step.1}"
-				"{industrial_frontier.quest.v2.onboarding.jei.step.2}"
-				"{industrial_frontier.quest.v2.onboarding.jei.success}"
+				"{industrial_frontier.quest.v2.field_manual.interface.task}"
+				"{industrial_frontier.quest.v2.field_manual.interface.proof_help.1}"
+				"{industrial_frontier.quest.v2.field_manual.interface.optional_note}"
+			]
+			icon: "minecraft:spyglass"
+			id: "3A01000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["interface", "accessibility"]
+			tasks: [
+				{
+					id: "4A01000000000001"
+					title: "{industrial_frontier.task.v2.field_manual.interface.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.field_manual.interface.title}"
+			x: 4d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3000000000000002"]
+			description: [
 				"{industrial_frontier.quest.v2.onboarding.jei.task}"
-				"{industrial_frontier.quest.v2.onboarding.jei.diagnostic.1}"
-				"{industrial_frontier.quest.v2.onboarding.jei.diagnostic.2}"
 				"{industrial_frontier.quest.v2.onboarding.jei.proof_help.1}"
-				"{industrial_frontier.quest.v2.onboarding.jei.next}"
 			]
 			icon: "minecraft:knowledge_book"
 			id: "3000000000000003"
 			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.onboarding.jei.lead}"
+			size: 1d
 			tags: ["mainline", "interface"]
 			tasks: [
 				{
@@ -97,23 +98,62 @@
 			y: 0d
 		}
 		{
+			dependencies: ["3000000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.onboarding.team.purpose}"
+				"{industrial_frontier.quest.v2.onboarding.team.task}"
+				"{industrial_frontier.quest.v2.onboarding.team.proof_help.1}"
+			]
+			icon: "minecraft:player_head"
+			id: "3000000000000004"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "state"]
+			tasks: [
+				{
+					id: "4000000000000004"
+					title: "{industrial_frontier.task.v2.onboarding.team.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.onboarding.team.title}"
+			x: 4d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A01000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.field_manual.food.purpose}"
+				"{industrial_frontier.quest.v2.field_manual.food.task}"
+				"{industrial_frontier.quest.v2.field_manual.food.proof_help.1}"
+				"{industrial_frontier.quest.v2.field_manual.food.optional_note}"
+			]
+			icon: "minecraft:apple"
+			id: "3A01000000000002"
+			shape: "rsquare"
+			size: 1d
+			tags: ["food", "appleskin"]
+			tasks: [
+				{
+					id: "4A01000000000002"
+					title: "{industrial_frontier.task.v2.field_manual.food.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.field_manual.food.title}"
+			x: 6d
+			y: -0.75d
+		}
+		{
 			dependencies: ["3000000000000003"]
 			description: [
-				"{industrial_frontier.quest.v2.onboarding.field_tools.purpose}"
-				"{industrial_frontier.quest.v2.onboarding.field_tools.step.1}"
-				"{industrial_frontier.quest.v2.onboarding.field_tools.step.2}"
-				"{industrial_frontier.quest.v2.onboarding.field_tools.success}"
 				"{industrial_frontier.quest.v2.onboarding.field_tools.task}"
-				"{industrial_frontier.quest.v2.onboarding.field_tools.diagnostic.1}"
-				"{industrial_frontier.quest.v2.onboarding.field_tools.diagnostic.2}"
 				"{industrial_frontier.quest.v2.onboarding.field_tools.proof_help.1}"
-				"{industrial_frontier.quest.v2.onboarding.field_tools.next}"
 			]
 			icon: "minecraft:spyglass"
 			id: "3A00000000000001"
 			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.onboarding.field_tools.lead}"
+			size: 1d
 			tags: ["mainline", "interface", "geology"]
 			tasks: [
 				{
@@ -124,37 +164,33 @@
 			]
 			title: "{industrial_frontier.quest.v2.onboarding.field_tools.title}"
 			x: 6d
-			y: 0d
+			y: 0.75d
 		}
 		{
-			dependencies: ["3000000000000002"]
-			description: [
-				"{industrial_frontier.quest.v2.onboarding.team.purpose}"
-				"{industrial_frontier.quest.v2.onboarding.team.step.1}"
-				"{industrial_frontier.quest.v2.onboarding.team.step.2}"
-				"{industrial_frontier.quest.v2.onboarding.team.success}"
-				"{industrial_frontier.quest.v2.onboarding.team.task}"
-				"{industrial_frontier.quest.v2.onboarding.team.diagnostic.1}"
-				"{industrial_frontier.quest.v2.onboarding.team.diagnostic.2}"
-				"{industrial_frontier.quest.v2.onboarding.team.proof_help.1}"
-				"{industrial_frontier.quest.v2.onboarding.team.next}"
+			dependencies: [
+				"3A01000000000002"
+				"3A00000000000001"
 			]
-			icon: "minecraft:player_head"
-			id: "3000000000000004"
-			shape: "circle"
+			description: [
+				"{industrial_frontier.quest.v2.field_manual.map.task}"
+				"{industrial_frontier.quest.v2.field_manual.map.proof_help.1}"
+				"{industrial_frontier.quest.v2.field_manual.map.optional_note}"
+			]
+			icon: "minecraft:filled_map"
+			id: "3A01000000000003"
+			shape: "rsquare"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.onboarding.team.lead}"
-			tags: ["mainline", "state"]
+			tags: ["map", "xaero", "routes"]
 			tasks: [
 				{
-					id: "4000000000000004"
-					title: "{industrial_frontier.task.v2.onboarding.team.read.objective}"
+					id: "4A01000000000003"
+					title: "{industrial_frontier.task.v2.field_manual.map.read.objective}"
 					type: "checkmark"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.onboarding.team.title}"
-			x: 6d
-			y: 2d
+			title: "{industrial_frontier.quest.v2.field_manual.map.title}"
+			x: 8d
+			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -163,21 +199,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.onboarding.help.purpose}"
-				"{industrial_frontier.quest.v2.onboarding.help.step.1}"
-				"{industrial_frontier.quest.v2.onboarding.help.step.2}"
-				"{industrial_frontier.quest.v2.onboarding.help.step.3}"
-				"{industrial_frontier.quest.v2.onboarding.help.success}"
 				"{industrial_frontier.quest.v2.onboarding.help.task}"
-				"{industrial_frontier.quest.v2.onboarding.help.diagnostic.1}"
-				"{industrial_frontier.quest.v2.onboarding.help.diagnostic.2}"
 				"{industrial_frontier.quest.v2.onboarding.help.proof_help.1}"
-				"{industrial_frontier.quest.v2.onboarding.help.next}"
 			]
 			icon: "minecraft:recovery_compass"
 			id: "3A00000000000002"
 			shape: "diamond"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.onboarding.help.lead}"
+			size: 1d
 			tags: ["mainline", "help", "transition"]
 			tasks: [
 				{
@@ -188,6 +216,53 @@
 			]
 			title: "{industrial_frontier.quest.v2.onboarding.help.title}"
 			x: 8d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A01000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.field_manual.carry.task}"
+				"{industrial_frontier.quest.v2.field_manual.carry.proof_help.1}"
+				"{industrial_frontier.quest.v2.field_manual.carry.optional_note}"
+			]
+			icon: "minecraft:chest"
+			id: "3A01000000000004"
+			shape: "rsquare"
+			size: 1d
+			tags: ["carry_on", "safety", "storage"]
+			tasks: [
+				{
+					id: "4A01000000000004"
+					title: "{industrial_frontier.task.v2.field_manual.carry.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.field_manual.carry.title}"
+			x: 10d
+			y: 0d
+		}
+		{
+			dependencies: ["3A01000000000004"]
+			description: [
+				"{industrial_frontier.quest.v2.field_manual.grave.purpose}"
+				"{industrial_frontier.quest.v2.field_manual.grave.task}"
+				"{industrial_frontier.quest.v2.field_manual.grave.proof_help.1}"
+				"{industrial_frontier.quest.v2.field_manual.grave.optional_note}"
+			]
+			icon: "minecraft:recovery_compass"
+			id: "3A01000000000005"
+			shape: "diamond"
+			size: 1d
+			tags: ["gravestone", "death", "recovery"]
+			tasks: [
+				{
+					id: "4A01000000000005"
+					title: "{industrial_frontier.task.v2.field_manual.grave.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.field_manual.grave.title}"
+			x: 12d
 			y: 0d
 		}
 	]

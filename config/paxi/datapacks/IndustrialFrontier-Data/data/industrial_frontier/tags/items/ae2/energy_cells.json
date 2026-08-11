@@ -1,0 +1,8 @@
+{
+  "__comment": "Предметная пара тега блоков ae2/energy_cells. Подходит и обычная, и плотная энергетическая ячейка МЭ-сети.",
+  "replace": false,
+  "values": [
+    "ae2:energy_cell",
+    "ae2:dense_energy_cell"
+  ]
+}

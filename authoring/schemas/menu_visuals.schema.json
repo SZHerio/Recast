@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/menu_visuals.schema.json",
+  "title": "Recast v2 title-menu visual contract",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schema_version",
+    "registry_id",
+    "build_id",
+    "status",
+    "no_game_launch",
+    "translation_scope",
+    "implementation",
+    "art_direction",
+    "layers",
+    "ui",
+    "icon",
+    "acceptance",
+    "official_references"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "const": 1 },
+    "registry_id": { "const": "industrial_frontier:menu_visuals_v2" },
+    "build_id": { "const": "IF-M10-MENU-0001" },
+    "status": { "enum": ["IMPLEMENTED_STATIC_UNTESTED", "VERIFIED_IN_GAME"] },
+    "no_game_launch": { "const": true },
+    "translation_scope": { "const": "EXCLUDED_NO_FILES_TOUCHED" },
+    "implementation": {
+      "type": "object",
+      "required": [
+        "minecraft",
+        "loader",
+        "fancymenu",
+        "parallax_position_multiplier",
+        "layout_path",
+        "builder_path",
+        "validator_path",
+        "reference_canvas"
+      ],
+      "properties": {
+        "minecraft": { "const": "1.20.1" },
+        "loader": { "type": "string" },
+        "fancymenu": { "const": "3.9.9" },
+        "parallax_position_multiplier": { "const": 1.0 },
+        "layout_path": { "type": "string" },
+        "builder_path": { "type": "string" },
+        "validator_path": { "type": "string" },
+        "reference_canvas": {
+          "type": "object",
+          "required": ["width", "height"],
+          "properties": {
+            "width": { "const": 854 },
+            "height": { "const": 480 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "art_direction": { "type": "object" },
+    "layers": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "source_path", "runtime_path", "mode", "width", "height", "parallax", "intensity_x", "intensity_y", "layout"],
+        "properties": {
+          "id": { "enum": ["base", "mid", "near"] },
+          "source_path": { "type": "string" },
+          "runtime_path": { "type": "string" },
+          "mode": { "enum": ["RGB", "RGBA"] },
+          "width": { "type": "integer", "minimum": 1 },
+          "height": { "type": "integer", "minimum": 1 },
+          "parallax": { "type": "boolean" },
+          "intensity_x": { "type": "number", "minimum": 0, "maximum": 1 },
+          "intensity_y": { "type": "number", "minimum": 0, "maximum": 1 },
+          "maximum_cursor_offset_x": { "type": "number", "minimum": 0 },
+          "maximum_cursor_offset_y": { "type": "number", "minimum": 0 },
+          "layout": { "type": "object" }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "parallax": { "const": true } },
+              "required": ["parallax"]
+            },
+            "then": {
+              "required": ["maximum_cursor_offset_x", "maximum_cursor_offset_y"]
+            }
+          }
+        ],
+        "additionalProperties": false
+      }
+    },
+    "ui": { "type": "object" },
+    "icon": { "type": "object" },
+    "acceptance": {
+      "type": "object",
+      "required": [
+        "static_preview_path",
+        "static_cursor_extremes_preview_path",
+        "static_button_states_preview_path",
+        "required_runtime_checks",
+        "owner_runtime_test_required"
+      ]
+    },
+    "official_references": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string", "format": "uri" }
+    }
+  },
+  "additionalProperties": false
+}

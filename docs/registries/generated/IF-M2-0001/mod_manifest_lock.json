@@ -1,12 +1,12 @@
 ﻿{
     "schema_version":  2,
     "build_id":  "IF-M2-0001",
-    "generated_at":  "2026-08-04T20:42:59.5039374Z",
+    "generated_at":  "2026-08-10T21:25:33.8353924Z",
     "platform":  {
                      "minecraft":  "1.20.1",
                      "forge":  "47.4.22"
                  },
-    "jar_count":  132,
+    "jar_count":  137,
     "curseforge_provenance_complete":  true,
     "owner_registered_exception_count":  1,
     "owner_registered_exception_files":  [
@@ -68,6 +68,54 @@
                                            "expected_hash_algorithm":  "SHA1",
                                            "expected_hash":  "c715e6255f5dd74d5e174cd8d912773b0ac35cd6",
                                            "actual_hash":  "C715E6255F5DD74D5E174CD8D912773B0AC35CD6",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
+                        "file_name":  "AgriCraft-forge-1.20.1-4.0.6.jar",
+                        "size":  2085377,
+                        "sha256":  "7F6CF2BCFF0D4DD432C1C8A6C6B201C0114829B456506ABDFAA29F67CC89992F",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_app_metadata",
+                                           "project_id":  225635,
+                                           "file_id":  7257465,
+                                           "download_url":  "https://edge.forgecdn.net/files/7257/465/AgriCraft-forge-1.20.1-4.0.6.jar",
+                                           "expected_sha256":  null,
+                                           "expected_hash_algorithm":  "SHA1",
+                                           "expected_hash":  "97035ebd0ac8f5b4ebafe98c61a84723cba00db4",
+                                           "actual_hash":  "97035EBD0AC8F5B4EBAFE98C61A84723CBA00DB4",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
+                        "file_name":  "agricraftseedfix-1.1-forge-mc1.20.1.jar",
+                        "size":  3726,
+                        "sha256":  "B9610E718E8C9F57801B493AF2AAD6581AB28BF765B05D1D42931BA5309D1D51",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_app_metadata",
+                                           "project_id":  560962,
+                                           "file_id":  6353125,
+                                           "download_url":  "https://edge.forgecdn.net/files/6353/125/agricraftseedfix-1.1-forge-mc1.20.1.jar",
+                                           "expected_sha256":  null,
+                                           "expected_hash_algorithm":  "SHA1",
+                                           "expected_hash":  "72c01c7d2a129aa77dd7503c7447fd1d04bf366a",
+                                           "actual_hash":  "72C01C7D2A129AA77DD7503C7447FD1D04BF366A",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
+                        "file_name":  "agricreatecompat-1.20.1-1.0.0.jar",
+                        "size":  6508,
+                        "sha256":  "9B38B8B0CD32E9F47E378A65CEF2EE194E478F7405035AC923EC09D59B01143C",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_app_metadata",
+                                           "project_id":  1341846,
+                                           "file_id":  6967499,
+                                           "download_url":  "https://edge.forgecdn.net/files/6967/499/agricreatecompat-1.20.1-1.0.0.jar",
+                                           "expected_sha256":  null,
+                                           "expected_hash_algorithm":  "SHA1",
+                                           "expected_hash":  "20a501667bb5a2bcef3281f15e197428e1be3947",
+                                           "actual_hash":  "20A501667BB5A2BCEF3281F15E197428E1BE3947",
                                            "hash_matches":  true
                                        }
                     },
@@ -237,7 +285,7 @@
                         "sha256":  "0658AEA747CFAEA37171EA0794E420C4AC40E638B1D7DEC50D196086B80A4CB7",
                         "curseforge":  {
                                            "provenance":  "curseforge_exact_file_registry",
-                                           "project_id":  528052,
+                                           "project_id":  522992,
                                            "file_id":  7541343,
                                            "download_url":  "https://edge.forgecdn.net/files/7541/343/blockui-1.20.1-1.0.193.jar",
                                            "expected_sha256":  "0658AEA747CFAEA37171EA0794E420C4AC40E638B1D7DEC50D196086B80A4CB7",
@@ -413,7 +461,7 @@
                         "sha256":  "E2DF6C4D862160A4BB5C5C19D3EAE3BE5226794D3E6FB5816BA69A20A34CCE9F",
                         "curseforge":  {
                                            "provenance":  "curseforge_exact_file_registry",
-                                           "project_id":  628194,
+                                           "project_id":  820977,
                                            "file_id":  8204836,
                                            "download_url":  "https://edge.forgecdn.net/files/8204/836/create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar",
                                            "expected_sha256":  "E2DF6C4D862160A4BB5C5C19D3EAE3BE5226794D3E6FB5816BA69A20A34CCE9F",
@@ -509,7 +557,7 @@
                         "sha256":  "6A8D84F68F37465F4FDC991C34623A6DCC8BB86A1EB6C6C738AACC9EEAC9D999",
                         "curseforge":  {
                                            "provenance":  "curseforge_exact_file_registry",
-                                           "project_id":  446069,
+                                           "project_id":  527361,
                                            "file_id":  8338110,
                                            "download_url":  "https://edge.forgecdn.net/files/8338/110/domum_ornamentum-1.20.1-1.0.303-snapshot-universal.jar",
                                            "expected_sha256":  "6A8D84F68F37465F4FDC991C34623A6DCC8BB86A1EB6C6C738AACC9EEAC9D999",
@@ -520,50 +568,66 @@
                                        }
                     },
                     {
-                        "file_name":  "easy_npc_bundle-forge-1.20.1-7.4.1.jar",
-                        "size":  25438,
-                        "sha256":  "438652873D02931E6FB82E652B48C8349AFD3C2FA7068AA052FDAB640534F325",
+                        "file_name":  "drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar",
+                        "size":  281881,
+                        "sha256":  "3213B0A5AE3B487360BC2CAFD036A11F35C4E1465122E18E218968C0771DDC42",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_exact_file_registry",
+                                           "project_id":  511770,
+                                           "file_id":  8552902,
+                                           "download_url":  "https://edge.forgecdn.net/files/8552/902/drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar",
+                                           "expected_sha256":  "3213B0A5AE3B487360BC2CAFD036A11F35C4E1465122E18E218968C0771DDC42",
+                                           "expected_hash_algorithm":  "SHA256",
+                                           "expected_hash":  "3213B0A5AE3B487360BC2CAFD036A11F35C4E1465122E18E218968C0771DDC42",
+                                           "actual_hash":  "3213B0A5AE3B487360BC2CAFD036A11F35C4E1465122E18E218968C0771DDC42",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
+                        "file_name":  "easy_npc_bundle-forge-1.20.1-7.6.0.jar",
+                        "size":  25442,
+                        "sha256":  "9634495D51641B7E2612EAAA810DF4C4F99B24FF6454FE07AEF9EDC0F252B6ED",
                         "curseforge":  {
                                            "provenance":  "curseforge_app_metadata",
                                            "project_id":  559312,
-                                           "file_id":  8500463,
-                                           "download_url":  "https://edge.forgecdn.net/files/8500/463/easy_npc_bundle-forge-1.20.1-7.4.1.jar",
+                                           "file_id":  8578880,
+                                           "download_url":  "https://edge.forgecdn.net/files/8578/880/easy_npc_bundle-forge-1.20.1-7.6.0.jar",
                                            "expected_sha256":  null,
                                            "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "cee00e8d676c1f71c6182100687570544a29e3cd",
-                                           "actual_hash":  "CEE00E8D676C1F71C6182100687570544A29E3CD",
+                                           "expected_hash":  "c5069e1edae0537839c1be526004a602544d83bf",
+                                           "actual_hash":  "C5069E1EDAE0537839C1BE526004A602544D83BF",
                                            "hash_matches":  true
                                        }
                     },
                     {
-                        "file_name":  "easy_npc_config_ui-forge-1.20.1-7.4.1.jar",
-                        "size":  978860,
-                        "sha256":  "A7C220210097CDD34287513F9F794DE71D561F5E8ECA48055AE37057D0ACA72A",
+                        "file_name":  "easy_npc_config_ui-forge-1.20.1-7.6.0.jar",
+                        "size":  1021261,
+                        "sha256":  "A2D7C6156CF4929B826637D909F2BE26DE1F2F88BA8D70AEEAFB80D5641E6F5C",
                         "curseforge":  {
                                            "provenance":  "curseforge_app_metadata",
                                            "project_id":  1214728,
-                                           "file_id":  8500457,
-                                           "download_url":  "https://edge.forgecdn.net/files/8500/457/easy_npc_config_ui-forge-1.20.1-7.4.1.jar",
+                                           "file_id":  8578877,
+                                           "download_url":  "https://edge.forgecdn.net/files/8578/877/easy_npc_config_ui-forge-1.20.1-7.6.0.jar",
                                            "expected_sha256":  null,
                                            "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "061a7f6b5c3eba30846919dc567482c5da67733d",
-                                           "actual_hash":  "061A7F6B5C3EBA30846919DC567482C5DA67733D",
+                                           "expected_hash":  "110757cb8021e669c511a683ec956e7347634fbc",
+                                           "actual_hash":  "110757CB8021E669C511A683EC956E7347634FBC",
                                            "hash_matches":  true
                                        }
                     },
                     {
-                        "file_name":  "easy_npc-forge-1.20.1-7.4.1.jar",
-                        "size":  2270248,
-                        "sha256":  "C170BBC32B0D2B3073413920DDE2F87E612AE2A7BE8596CF06D38315EF8F67CC",
+                        "file_name":  "easy_npc-forge-1.20.1-7.6.0.jar",
+                        "size":  2648618,
+                        "sha256":  "FCEF5EA7ABE4006901AD944FA708988ACA1E157A76F61F777FBA7551E9C1FBC9",
                         "curseforge":  {
                                            "provenance":  "curseforge_app_metadata",
                                            "project_id":  1308987,
-                                           "file_id":  8500451,
-                                           "download_url":  "https://edge.forgecdn.net/files/8500/451/easy_npc-forge-1.20.1-7.4.1.jar",
+                                           "file_id":  8578872,
+                                           "download_url":  "https://edge.forgecdn.net/files/8578/872/easy_npc-forge-1.20.1-7.6.0.jar",
                                            "expected_sha256":  null,
                                            "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "4c2cd233e307a5a6aed7860eaf1947c7686b349c",
-                                           "actual_hash":  "4C2CD233E307A5A6AED7860EAF1947C7686B349C",
+                                           "expected_hash":  "2fb72cfc50846d481722d36b3ee12dbc6c657047",
+                                           "actual_hash":  "2FB72CFC50846D481722D36B3EE12DBC6C657047",
                                            "hash_matches":  true
                                        }
                     },
@@ -620,14 +684,14 @@
                         "size":  26174014,
                         "sha256":  "686253F50D103E21CC04B8710AB9BA4BA788916AD852620040308F3F08512FAB",
                         "curseforge":  {
-                                           "provenance":  "curseforge_app_metadata",
+                                           "provenance":  "curseforge_exact_file_registry",
                                            "project_id":  367706,
                                            "file_id":  8544939,
                                            "download_url":  "https://edge.forgecdn.net/files/8544/939/fancymenu_forge_3.9.9_MC_1.20.1.jar",
-                                           "expected_sha256":  null,
-                                           "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "dffd6e4bbead32f51da04f02010b16c5a4ec6ff7",
-                                           "actual_hash":  "DFFD6E4BBEAD32F51DA04F02010B16C5A4EC6FF7",
+                                           "expected_sha256":  "686253F50D103E21CC04B8710AB9BA4BA788916AD852620040308F3F08512FAB",
+                                           "expected_hash_algorithm":  "SHA256",
+                                           "expected_hash":  "686253F50D103E21CC04B8710AB9BA4BA788916AD852620040308F3F08512FAB",
+                                           "actual_hash":  "686253F50D103E21CC04B8710AB9BA4BA788916AD852620040308F3F08512FAB",
                                            "hash_matches":  true
                                        }
                     },
@@ -692,6 +756,22 @@
                                            "expected_hash_algorithm":  "SHA1",
                                            "expected_hash":  "740c0feaab75455f32df7e137389f77c83fb490c",
                                            "actual_hash":  "740C0FEAAB75455F32DF7E137389F77C83FB490C",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
+                        "file_name":  "ftb-essentials-forge-2001.2.4.jar",
+                        "size":  157732,
+                        "sha256":  "E0022BFE29DC10E373947701DAE1BC4CE75EE15FE21F6D89269677FBB9AEBF73",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_app_metadata",
+                                           "project_id":  410811,
+                                           "file_id":  7609948,
+                                           "download_url":  "https://edge.forgecdn.net/files/7609/948/ftb-essentials-forge-2001.2.4.jar",
+                                           "expected_sha256":  null,
+                                           "expected_hash_algorithm":  "SHA1",
+                                           "expected_hash":  "4f898578e3cc321397dbc59a0c44e2927000bd32",
+                                           "actual_hash":  "4F898578E3CC321397DBC59A0C44E2927000BD32",
                                            "hash_matches":  true
                                        }
                     },
@@ -1048,34 +1128,18 @@
                                        }
                     },
                     {
-                        "file_name":  "jei-1.20.1-forge-15.20.0.134.jar",
-                        "size":  1412399,
-                        "sha256":  "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
+                        "file_name":  "jei-1.20.1-forge-15.48.0.181.jar",
+                        "size":  1657293,
+                        "sha256":  "8E57BF9D5637500C3A845EC91E3C0F8FE56E93C4118A9A7ED4114227D67FCFF3",
                         "curseforge":  {
                                            "provenance":  "curseforge_exact_file_registry",
                                            "project_id":  238222,
-                                           "file_id":  8419086,
-                                           "download_url":  "https://edge.forgecdn.net/files/8419/086/jei-1.20.1-forge-15.20.0.134.jar",
-                                           "expected_sha256":  "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
+                                           "file_id":  8607089,
+                                           "download_url":  "https://edge.forgecdn.net/files/8607/89/jei-1.20.1-forge-15.48.0.181.jar",
+                                           "expected_sha256":  "8E57BF9D5637500C3A845EC91E3C0F8FE56E93C4118A9A7ED4114227D67FCFF3",
                                            "expected_hash_algorithm":  "SHA256",
-                                           "expected_hash":  "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
-                                           "actual_hash":  "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
-                                           "hash_matches":  true
-                                       }
-                    },
-                    {
-                        "file_name":  "JustEnoughResources-1.20.1-1.4.0.247.jar",
-                        "size":  276231,
-                        "sha256":  "311D3A83DB489D27B96CD15DEB690CE64C78CFFB552C25C3DFF85956A14EC09E",
-                        "curseforge":  {
-                                           "provenance":  "curseforge_app_metadata",
-                                           "project_id":  240630,
-                                           "file_id":  5057220,
-                                           "download_url":  "https://edge.forgecdn.net/files/5057/220/JustEnoughResources-1.20.1-1.4.0.247.jar",
-                                           "expected_sha256":  null,
-                                           "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "2747c58f439c37a01139d35cab59ca1a54114009",
-                                           "actual_hash":  "2747C58F439C37A01139D35CAB59CA1A54114009",
+                                           "expected_hash":  "8E57BF9D5637500C3A845EC91E3C0F8FE56E93C4118A9A7ED4114227D67FCFF3",
+                                           "actual_hash":  "8E57BF9D5637500C3A845EC91E3C0F8FE56E93C4118A9A7ED4114227D67FCFF3",
                                            "hash_matches":  true
                                        }
                     },
@@ -1084,14 +1148,14 @@
                         "size":  625185,
                         "sha256":  "E78686B92C3761EC26EB9D3C53EFDD3D6CA77981CBD3723995E1163B7103AE0B",
                         "curseforge":  {
-                                           "provenance":  "curseforge_app_metadata",
+                                           "provenance":  "curseforge_exact_file_registry",
                                            "project_id":  410295,
                                            "file_id":  5028413,
                                            "download_url":  "https://edge.forgecdn.net/files/5028/413/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
-                                           "expected_sha256":  null,
-                                           "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "2019d821bed9071daabed43979433a5473ceee49",
-                                           "actual_hash":  "2019D821BED9071DAABED43979433A5473CEEE49",
+                                           "expected_sha256":  "E78686B92C3761EC26EB9D3C53EFDD3D6CA77981CBD3723995E1163B7103AE0B",
+                                           "expected_hash_algorithm":  "SHA256",
+                                           "expected_hash":  "E78686B92C3761EC26EB9D3C53EFDD3D6CA77981CBD3723995E1163B7103AE0B",
+                                           "actual_hash":  "E78686B92C3761EC26EB9D3C53EFDD3D6CA77981CBD3723995E1163B7103AE0B",
                                            "hash_matches":  true
                                        }
                     },
@@ -1192,18 +1256,34 @@
                                        }
                     },
                     {
+                        "file_name":  "mcw-lights-1.1.5-mc1.20.1forge.jar",
+                        "size":  547779,
+                        "sha256":  "174437555FF8B3938B5AF8FA3F6EFCC528FC101E90E35B89570323E4A3726F0A",
+                        "curseforge":  {
+                                           "provenance":  "curseforge_app_metadata",
+                                           "project_id":  502372,
+                                           "file_id":  7304117,
+                                           "download_url":  "https://edge.forgecdn.net/files/7304/117/mcw-lights-1.1.5-mc1.20.1forge.jar",
+                                           "expected_sha256":  null,
+                                           "expected_hash_algorithm":  "SHA1",
+                                           "expected_hash":  "76dde38745ad436f2784f71939dc0941d7d51c6e",
+                                           "actual_hash":  "76DDE38745AD436F2784F71939DC0941D7D51C6E",
+                                           "hash_matches":  true
+                                       }
+                    },
+                    {
                         "file_name":  "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
                         "size":  37178,
                         "sha256":  "933E2A7E79C4594F965F7F7D00B1F28A98EC2A180AD8F9F90310A266FE5CF5D8",
                         "curseforge":  {
-                                           "provenance":  "curseforge_app_metadata",
+                                           "provenance":  "curseforge_exact_file_registry",
                                            "project_id":  938643,
                                            "file_id":  5109692,
                                            "download_url":  "https://edge.forgecdn.net/files/5109/692/melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
-                                           "expected_sha256":  null,
-                                           "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "e0942d396a70c09038e6c2e5e1da6505178249b8",
-                                           "actual_hash":  "E0942D396A70C09038E6C2E5E1DA6505178249B8",
+                                           "expected_sha256":  "933E2A7E79C4594F965F7F7D00B1F28A98EC2A180AD8F9F90310A266FE5CF5D8",
+                                           "expected_hash_algorithm":  "SHA256",
+                                           "expected_hash":  "933E2A7E79C4594F965F7F7D00B1F28A98EC2A180AD8F9F90310A266FE5CF5D8",
+                                           "actual_hash":  "933E2A7E79C4594F965F7F7D00B1F28A98EC2A180AD8F9F90310A266FE5CF5D8",
                                            "hash_matches":  true
                                        }
                     },
@@ -1352,18 +1432,18 @@
                                        }
                     },
                     {
-                        "file_name":  "NuclearCraft-1.20.1-1.2.33.jar",
-                        "size":  30745675,
-                        "sha256":  "41E80FCFDDF6FEE890B99992DF7B2E3F66C80C574A45FAF1CF70D1E5FAC59456",
+                        "file_name":  "NuclearCraft-1.20.1-1.2.34.jar",
+                        "size":  30832373,
+                        "sha256":  "4A60908A0C2EA5E33016EAA3BCB98BCC0BB22625209D9115E999B84DA75519A8",
                         "curseforge":  {
                                            "provenance":  "curseforge_app_metadata",
                                            "project_id":  840010,
-                                           "file_id":  8564186,
-                                           "download_url":  "https://edge.forgecdn.net/files/8564/186/NuclearCraft-1.20.1-1.2.33.jar",
+                                           "file_id":  8581060,
+                                           "download_url":  "https://edge.forgecdn.net/files/8581/60/NuclearCraft-1.20.1-1.2.34.jar",
                                            "expected_sha256":  null,
                                            "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "9f0205edf2b0835b260bc2592ab32f70547acaa5",
-                                           "actual_hash":  "9F0205EDF2B0835B260BC2592AB32F70547ACAA5",
+                                           "expected_hash":  "678b89120c5ec8c0a7e577209ceb20a2d07fe7e8",
+                                           "actual_hash":  "678B89120C5EC8C0A7E577209CEB20A2D07FE7E8",
                                            "hash_matches":  true
                                        }
                     },
@@ -1816,18 +1896,18 @@
                                        }
                     },
                     {
-                        "file_name":  "supermartijn642corelib-1.1.22-forge-mc1.20.1.jar",
-                        "size":  555653,
-                        "sha256":  "A3479421DCA11EFB172D47DF5F0E4CCC645CCCA209BF9211992D03D92408FB33",
+                        "file_name":  "supermartijn642corelib-1.1.23a-forge-mc1.20.1.jar",
+                        "size":  556920,
+                        "sha256":  "F45DE8934015D5E65CD2B91BF363324155DE311D1EE33BA3228E8CF52D992DEF",
                         "curseforge":  {
                                            "provenance":  "curseforge_app_metadata",
                                            "project_id":  454372,
-                                           "file_id":  8526509,
-                                           "download_url":  "https://edge.forgecdn.net/files/8526/509/supermartijn642corelib-1.1.22-forge-mc1.20.1.jar",
+                                           "file_id":  8600794,
+                                           "download_url":  "https://edge.forgecdn.net/files/8600/794/supermartijn642corelib-1.1.23a-forge-mc1.20.1.jar",
                                            "expected_sha256":  null,
                                            "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "a2822972a0188ab85c2b6f2f6679fd947ace729f",
-                                           "actual_hash":  "A2822972A0188AB85C2B6F2F6679FD947ACE729F",
+                                           "expected_hash":  "952c471d06816bf883a5c35b6cb115e2fa9ac7c0",
+                                           "actual_hash":  "952C471D06816BF883A5C35B6CB115E2FA9AC7C0",
                                            "hash_matches":  true
                                        }
                     },
@@ -1900,14 +1980,14 @@
                         "size":  520148,
                         "sha256":  "08552BE86F960111E501227707DC089C91B8A55F6C1BE09BAEE188338576FF9B",
                         "curseforge":  {
-                                           "provenance":  "curseforge_app_metadata",
+                                           "provenance":  "curseforge_exact_file_registry",
                                            "project_id":  378609,
                                            "file_id":  6418133,
                                            "download_url":  "https://edge.forgecdn.net/files/6418/133/toms_storage-1.20-1.7.1.jar",
-                                           "expected_sha256":  null,
-                                           "expected_hash_algorithm":  "SHA1",
-                                           "expected_hash":  "8b70aed9e35ad78fdc2f9fcb94a29dc64ba8d757",
-                                           "actual_hash":  "8B70AED9E35AD78FDC2F9FCB94A29DC64BA8D757",
+                                           "expected_sha256":  "08552BE86F960111E501227707DC089C91B8A55F6C1BE09BAEE188338576FF9B",
+                                           "expected_hash_algorithm":  "SHA256",
+                                           "expected_hash":  "08552BE86F960111E501227707DC089C91B8A55F6C1BE09BAEE188338576FF9B",
+                                           "actual_hash":  "08552BE86F960111E501227707DC089C91B8A55F6C1BE09BAEE188338576FF9B",
                                            "hash_matches":  true
                                        }
                     },

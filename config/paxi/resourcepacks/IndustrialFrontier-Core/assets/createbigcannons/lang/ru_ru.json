@@ -1,5 +1,6 @@
 {
   "block.createbigcannons.autocannon_ammo_container": "Контейнер боеприпасов автопушки",
+  "block.createbigcannons.autocannon_ammo_container.tooltip.main_ammo": "%1$s шт. %2$s",
   "block.createbigcannons.autocannon_ammo_container.tooltip.tracer_spacing": "Трассер: каждый %s-й выстрел",
   "block.createbigcannons.autocannon_ammo_container.tooltip.tracers": "Трассеры: x%1$s %2$s",
   "block.createbigcannons.bronze_block": "Бронзовый блок",
@@ -9,6 +10,7 @@
   "block.createbigcannons.creative_autocannon_ammo_container": "Творческий контейнер боеприпасов автопушки",
   "block.createbigcannons.fixed_cannon_mount": "Неподвижное крепление пушки",
   "block.createbigcannons.propellant.tooltip.damp": "Отсыревший",
+  "block.createbigcannons.smoke_shell.tooltip": "ДЫМОВОЙ СНАРЯД",
   "block.createbigcannons.smoke_shell.tooltip.behaviour1": "Выпускает _временное облако дыма_.",
   "block.createbigcannons.smoke_shell.tooltip.condition1": "При детонации",
   "block.createbigcannons.smoke_shell.tooltip.summary": "Накрывает поле боя _дымовой завесой_, скрывающей обзор.",

@@ -51,5 +51,6 @@
   "item.projectred_core.white_illumar": "Белый иллюмар",
   "item.projectred_core.wired_plate": "Плата с проводником",
   "item.projectred_core.woven_cloth": "Тканое полотно",
-  "item.projectred_core.yellow_illumar": "Жёлтый иллюмар"
+  "item.projectred_core.yellow_illumar": "Жёлтый иллюмар",
+  "itemGroup.projectred_core": "Project Red: ядро"
 }

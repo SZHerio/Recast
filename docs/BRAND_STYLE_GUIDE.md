@@ -4,9 +4,9 @@
 
 Это нормативный документ для главного меню, загрузки, книги заданий,
 фракционного интерфейса и будущих экранов сборки. Машиночитаемая точка истины —
-[`registries/m9_visual_system.json`](registries/m9_visual_system.json), а
+[`registries/visual_system.json`](registries/visual_system.json), а
 происхождение и контрольные суммы файлов —
-[`registries/m9_asset_provenance.json`](registries/m9_asset_provenance.json).
+[`registries/asset_provenance.json`](registries/asset_provenance.json).
 
 ## 1. Имя и обещание
 
@@ -106,7 +106,7 @@ lockup содержит только имена `MINECRAFT` и `RECAST`, а жа
   широкая сцена и согласованные прозрачные планы.
 
 Приёмочные разрешения и GUI-scale перечислены в
-[`M9_BUILD_TEST_PROTOCOL.md`](M9_BUILD_TEST_PROTOCOL.md).
+[`M9_BUILD_TEST_PROTOCOL.md`](history/M9_BUILD_TEST_PROTOCOL.md).
 
 ## 6. Грамматика иконок
 

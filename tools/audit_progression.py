@@ -29,9 +29,9 @@ from typing import Any, Iterable, Iterator
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 REGISTRY_DIR = ROOT / "docs" / "registries"
 INPUT_FILES = {
-    "progression_graph": REGISTRY_DIR / "m2_progression_graph.json",
-    "substance_passports": REGISTRY_DIR / "m2_substance_passports.json",
-    "grind_budget": REGISTRY_DIR / "m2_grind_budget.json",
+    "progression_graph": REGISTRY_DIR / "progression_graph.json",
+    "substance_passports": REGISTRY_DIR / "substance_passports.json",
+    "grind_budget": REGISTRY_DIR / "grind_budget.json",
 }
 EXPECTED_EPOCHS = set(range(10))
 EPOCH_RE = re.compile(r"^industrial_frontier:epoch/p([0-9])$")
@@ -1218,7 +1218,7 @@ def build_report() -> tuple[Audit, dict[str, Any]]:
         )
     )
     report = {
-        "audit_id": "industrial_frontier:m10/progression_grind_static_audit",
+        "audit_id": "industrial_frontier:progression_grind_static_audit",
         "audit_version": 1,
         "generated_at_utc": utc_timestamp(),
         "scope": "Static registry audit only; Minecraft/Forge was not launched.",

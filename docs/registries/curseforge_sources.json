@@ -14,15 +14,15 @@
       "purpose": "Обязательная зависимость Alex's Mobs; требует Citadel 2.6.0 или новее."
     },
     {
-      "file_name": "jei-1.20.1-forge-15.20.0.134.jar",
+      "file_name": "jei-1.20.1-forge-15.48.0.181.jar",
       "project_id": 238222,
-      "file_id": 8419086,
+      "file_id": 8607089,
       "project_slug": "jei",
-      "download_url": "https://edge.forgecdn.net/files/8419/086/jei-1.20.1-forge-15.20.0.134.jar",
-      "sha256": "7CC9F12B02E5AB625933C67DAC819FF873A7508728B66E6077B13704E98C478E",
+      "download_url": "https://edge.forgecdn.net/files/8607/89/jei-1.20.1-forge-15.48.0.181.jar",
+      "sha256": "8E57BF9D5637500C3A845EC91E3C0F8FE56E93C4118A9A7ED4114227D67FCFF3",
       "release_type": "beta",
-      "purpose": "Порог совместимости для GTCEu 7.5.3, который требует JEI 15.20.0.115 или новее.",
-      "replaces": "jei-1.20.1-forge-15.20.0.112.jar"
+      "purpose": "Просмотр рецептов. Обновлён вместе с GTCEu; версия сверена с файлом экземпляра CurseForge.",
+      "replaces": "jei-1.20.1-forge-15.20.0.134.jar"
     },
     {
       "file_name": "ftb-library-forge-2001.2.13.jar",

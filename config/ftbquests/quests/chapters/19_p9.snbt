@@ -1,7 +1,6 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
-	hide_quest_until_deps_visible: true
 	filename: "19_p9"
 	group: "1000000000000004"
 	icon: "gcyr:dyson_swarm_satellite"
@@ -10,20 +9,15 @@
 	quest_links: [ ]
 	quests: [
 		{
-			hide_until_deps_complete: true
 			dependencies: ["3A18000000000009"]
 			description: [
-				"{industrial_frontier.quest.v2.p9.brief.purpose}"
-				"{industrial_frontier.quest.v2.p9.brief.success}"
 				"{industrial_frontier.quest.v2.p9.brief.task}"
 				"{industrial_frontier.quest.v2.p9.brief.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.brief.next}"
 			]
 			icon: "gcyr:dyson_swarm_satellite"
 			id: "3019000000000001"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p9.brief.lead}"
+			size: 1d
 			tags: ["root", "mainline"]
 			tasks: [
 				{
@@ -40,25 +34,14 @@
 			dependencies: ["3019000000000001"]
 			description: [
 				"{industrial_frontier.quest.v2.p9.local_industry.purpose}"
-				"{industrial_frontier.quest.v2.p9.local_industry.step.1}"
-				"{industrial_frontier.quest.v2.p9.local_industry.step.2}"
-				"{industrial_frontier.quest.v2.p9.local_industry.step.3}"
-				"{industrial_frontier.quest.v2.p9.local_industry.success}"
 				"{industrial_frontier.quest.v2.p9.local_industry.task}"
-				"{industrial_frontier.quest.v2.p9.local_industry.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.local_industry.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.local_industry.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p9.local_industry.proof_help.1}"
 				"{industrial_frontier.quest.v2.p9.local_industry.proof_help.2}"
-				"{industrial_frontier.quest.v2.p9.local_industry.proof_help.3}"
-				"{industrial_frontier.quest.v2.p9.local_industry.proof_help.4}"
-				"{industrial_frontier.quest.v2.p9.local_industry.next}"
 			]
 			icon: "gtceu:iv_assembler"
 			id: "3A19000000000001"
 			shape: "gear"
-			size: 1.25d
-			subtitle: "{industrial_frontier.quest.v2.p9.local_industry.lead}"
+			size: 1.4d
 			tags: ["foundation", "local_industry", "colony"]
 			tasks: [
 				{
@@ -72,16 +55,6 @@
 					type: "item"
 				}
 				{
-					id: "4A19000000000002"
-					block_type: 0
-					block: "gtceu:iv_assembler"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p9.local_industry.audit.objective}"
-					type: "questsadditions:use"
-				}
-				{
 					id: "4A1900000000000C"
 					item: {
 						Count: 1
@@ -91,270 +64,134 @@
 					title: "{industrial_frontier.task.v2.p9.local_industry.centrifuge_item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A1900000000000D"
-					block_type: 0
-					block: "gtceu:iv_centrifuge"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p9.local_industry.centrifuge_use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.local_industry.title}"
-			x: 3d
+			x: 2d
 			y: 0d
 		}
 		{
 			dependencies: ["3A19000000000001"]
 			description: [
 				"{industrial_frontier.quest.v2.p9.closed_loop.purpose}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.step.1}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.step.2}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.step.3}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.success}"
 				"{industrial_frontier.quest.v2.p9.closed_loop.task}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p9.closed_loop.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.closed_loop.next}"
 			]
 			icon: "gtceu:iv_centrifuge"
 			id: "3A19000000000002"
 			shape: "gear"
-			size: 1.25d
-			subtitle: "{industrial_frontier.quest.v2.p9.closed_loop.lead}"
+			size: 1.4d
 			tags: ["foundation", "closed_loop", "recycling"]
 			tasks: [
 				{
 					id: "4A19000000000003"
-					block_type: 0
-					block: "gtceu:iv_centrifuge"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "gtceu:iv_centrifuge"
+					}
+					consume_items: false
 					title: "{industrial_frontier.task.v2.p9.closed_loop.audit.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.closed_loop.title}"
-			x: 6d
+			x: 4d
 			y: 0d
 		}
 		{
 			dependencies: ["3A19000000000002"]
 			description: [
 				"{industrial_frontier.quest.v2.p9.maintenance.purpose}"
-				"{industrial_frontier.quest.v2.p9.maintenance.step.1}"
-				"{industrial_frontier.quest.v2.p9.maintenance.step.2}"
-				"{industrial_frontier.quest.v2.p9.maintenance.step.3}"
-				"{industrial_frontier.quest.v2.p9.maintenance.success}"
 				"{industrial_frontier.quest.v2.p9.maintenance.task}"
-				"{industrial_frontier.quest.v2.p9.maintenance.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.maintenance.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.maintenance.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p9.maintenance.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.maintenance.next}"
 			]
 			icon: "gtceu:maintenance_hatch"
 			id: "3A19000000000003"
 			shape: "gear"
-			size: 1.25d
-			subtitle: "{industrial_frontier.quest.v2.p9.maintenance.lead}"
+			size: 1d
 			tags: ["foundation", "maintenance", "spares"]
 			tasks: [
 				{
 					id: "4A19000000000004"
-					block_type: 0
-					block: "gtceu:maintenance_hatch"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "gtceu:maintenance_hatch"
+					}
+					consume_items: false
 					title: "{industrial_frontier.task.v2.p9.maintenance.audit.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.maintenance.title}"
-			x: 9d
+			x: 6d
 			y: 0d
 		}
 		{
 			dependencies: ["3A19000000000003"]
 			description: [
 				"{industrial_frontier.quest.v2.p9.resilience.purpose}"
-				"{industrial_frontier.quest.v2.p9.resilience.step.1}"
-				"{industrial_frontier.quest.v2.p9.resilience.step.2}"
-				"{industrial_frontier.quest.v2.p9.resilience.step.3}"
-				"{industrial_frontier.quest.v2.p9.resilience.success}"
 				"{industrial_frontier.quest.v2.p9.resilience.task}"
-				"{industrial_frontier.quest.v2.p9.resilience.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.resilience.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.resilience.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p9.resilience.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.resilience.next}"
 			]
 			icon: "ae2:energy_cell"
 			id: "3A19000000000004"
 			shape: "octagon"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p9.resilience.lead}"
+			size: 1d
 			tags: ["foundation", "resilience", "recovery"]
 			tasks: [
 				{
 					id: "4A19000000000005"
-					block_type: 1
-					block: "industrial_frontier:ae2/energy_cells"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:ae2/energy_cells)"
+						}
+					}
 					title: "{industrial_frontier.task.v2.p9.resilience.audit.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.resilience.title}"
-			x: 12d
+			x: 8d
 			y: 0d
 		}
 		{
 			dependencies: ["3A19000000000004"]
 			description: [
-				"{industrial_frontier.quest.v2.p9.swarm_line.purpose}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.step.1}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.step.2}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.success}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.task}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.next}"
-				"{industrial_frontier.quest.v2.p9.swarm_line.optional_note}"
-			]
-			icon: "gcyr:dyson_swarm_satellite"
-			id: "3019000000000002"
-			optional: true
-			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p9.swarm_line.lead}"
-			tags: ["final_path", "dyson", "automation"]
-			tasks: [
-				{
-					id: "4019000000000002"
-					item: {
-						Count: 1
-						id: "gcyr:dyson_swarm_satellite"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p9.swarm_line.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p9.swarm_line.title}"
-			x: 15d
-			y: -4d
-		}
-		{
-			dependencies: ["3019000000000002"]
-			description: [
-				"{industrial_frontier.quest.v2.p9.swarm_operational.purpose}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.step.1}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.step.2}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.step.3}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.success}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.task}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.diagnostic.3}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.next}"
-				"{industrial_frontier.quest.v2.p9.swarm_operational.optional_note}"
-			]
-			icon: "gcyr:dyson_swarm_satellite"
-			id: "3A19000000000005"
-			optional: true
-			shape: "octagon"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p9.swarm_operational.lead}"
-			tags: ["final_path", "dyson", "operation"]
-			tasks: [
-				{
-					id: "4A19000000000006"
-					block_type: 0
-					block: "gcyr:beam_receiver"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p9.swarm_operational.receiver.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p9.swarm_operational.title}"
-			x: 18d
-			y: -4d
-		}
-		{
-			dependencies: ["3A19000000000004"]
-			description: [
 				"{industrial_frontier.quest.v2.p9.colony_autonomy.purpose}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.step.1}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.step.2}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.step.3}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.success}"
 				"{industrial_frontier.quest.v2.p9.colony_autonomy.task}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p9.colony_autonomy.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.proof_help.2}"
-				"{industrial_frontier.quest.v2.p9.colony_autonomy.next}"
 				"{industrial_frontier.quest.v2.p9.colony_autonomy.optional_note}"
 			]
 			icon: "gcyr:proxima_centauri_b_grassy_turf"
 			id: "3A19000000000006"
 			optional: true
 			shape: "octagon"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p9.colony_autonomy.lead}"
+			size: 1d
 			tags: ["final_path", "colony", "autonomy"]
 			tasks: [
 				{
 					id: "4A19000000000007"
-					block_type: 1
-					block: "industrial_frontier:gcyr/oxygen_spreaders"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:gcyr/oxygen_spreaders)"
+						}
+					}
 					title: "{industrial_frontier.task.v2.p9.colony_autonomy.oxygen.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A1900000000000B"
-					block_type: 0
-					block: "gtceu:iv_assembler"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p9.colony_autonomy.assembler.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.colony_autonomy.title}"
-			x: 15d
-			y: 0d
+			x: 10d
+			y: -1.5d
 		}
 		{
 			dependencies: ["3A19000000000004"]
 			description: [
-				"{industrial_frontier.quest.v2.p9.quantum.purpose}"
-				"{industrial_frontier.quest.v2.p9.quantum.step.1}"
-				"{industrial_frontier.quest.v2.p9.quantum.step.2}"
-				"{industrial_frontier.quest.v2.p9.quantum.success}"
 				"{industrial_frontier.quest.v2.p9.quantum.task}"
-				"{industrial_frontier.quest.v2.p9.quantum.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.quantum.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p9.quantum.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.quantum.next}"
 				"{industrial_frontier.quest.v2.p9.quantum.optional_note}"
 			]
 			icon: "nuclearcraft:quantum_transformer"
@@ -362,7 +199,6 @@
 			optional: true
 			shape: "diamond"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p9.quantum.lead}"
 			tags: ["final_path", "nuclearcraft", "quantum"]
 			tasks: [
 				{
@@ -377,47 +213,97 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.quantum.title}"
-			x: 15d
-			y: 4d
+			x: 10d
+			y: 0d
+		}
+		{
+			dependencies: ["3A19000000000004"]
+			description: [
+				"{industrial_frontier.quest.v2.p9.swarm_line.task}"
+				"{industrial_frontier.quest.v2.p9.swarm_line.proof_help.1}"
+				"{industrial_frontier.quest.v2.p9.swarm_line.optional_note}"
+			]
+			icon: "gcyr:dyson_swarm_satellite"
+			id: "3019000000000002"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["final_path", "dyson", "automation"]
+			tasks: [
+				{
+					id: "4019000000000002"
+					item: {
+						Count: 1
+						id: "gcyr:dyson_swarm_satellite"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p9.swarm_line.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p9.swarm_line.title}"
+			x: 10d
+			y: 1.5d
 		}
 		{
 			dependencies: ["3019000000000006"]
 			description: [
 				"{industrial_frontier.quest.v2.p9.quantum_operational.purpose}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.step.1}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.step.2}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.step.3}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.success}"
 				"{industrial_frontier.quest.v2.p9.quantum_operational.task}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p9.quantum_operational.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.quantum_operational.next}"
 				"{industrial_frontier.quest.v2.p9.quantum_operational.optional_note}"
 			]
 			icon: "nuclearcraft:quantum_transformer"
 			id: "3A19000000000007"
 			optional: true
 			shape: "octagon"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p9.quantum_operational.lead}"
+			size: 1d
 			tags: ["final_path", "nuclearcraft", "operation"]
 			tasks: [
 				{
 					id: "4A19000000000008"
-					block_type: 0
-					block: "nuclearcraft:quantum_transformer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "nuclearcraft:quantum_transformer"
+					}
+					consume_items: false
 					title: "{industrial_frontier.task.v2.p9.quantum_operational.audit.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.quantum_operational.title}"
-			x: 18d
-			y: 4d
+			x: 12d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3019000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.p9.swarm_operational.purpose}"
+				"{industrial_frontier.quest.v2.p9.swarm_operational.task}"
+				"{industrial_frontier.quest.v2.p9.swarm_operational.proof_help.1}"
+				"{industrial_frontier.quest.v2.p9.swarm_operational.optional_note}"
+			]
+			icon: "gcyr:dyson_swarm_satellite"
+			id: "3A19000000000005"
+			optional: true
+			shape: "octagon"
+			size: 1d
+			tags: ["final_path", "dyson", "operation"]
+			tasks: [
+				{
+					id: "4A19000000000006"
+					item: {
+						Count: 1
+						id: "gcyr:beam_receiver"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p9.swarm_operational.receiver.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p9.swarm_operational.title}"
+			x: 12d
+			y: 0.75d
 		}
 		{
 			dependencies: [
@@ -428,16 +314,13 @@
 			dependency_requirement: "one_completed"
 			description: [
 				"{industrial_frontier.quest.v2.p9.final_choice.purpose}"
-				"{industrial_frontier.quest.v2.p9.final_choice.success}"
 				"{industrial_frontier.quest.v2.p9.final_choice.task}"
 				"{industrial_frontier.quest.v2.p9.final_choice.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.final_choice.next}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png"}}
 			id: "3A19000000000008"
 			shape: "gear"
-			size: 1.75d
-			subtitle: "{industrial_frontier.quest.v2.p9.final_choice.lead}"
+			size: 1d
 			tags: ["finale", "choice", "any_of"]
 			tasks: [
 				{
@@ -447,29 +330,50 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.final_choice.title}"
-			x: 22d
+			x: 14d
 			y: 0d
+		}
+		{
+			dependencies: [
+				"3073000000000002"
+				"3073000000000003"
+				"3073000000000004"
+				"3073000000000005"
+				"3A19000000000008"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.marathon.finale.task}"
+				"{industrial_frontier.quest.v2.marathon.finale.proof_help.1}"
+				"{industrial_frontier.quest.v2.marathon.finale.optional_note}"
+			]
+			icon: "minecraft:nether_star"
+			id: "3073000000000006"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["marathon", "finale", "legacy", "optional"]
+			tasks: [
+				{
+					id: "4073000000000006"
+					title: "{industrial_frontier.task.v2.marathon.finale.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.marathon.finale.title}"
+			x: 16d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A19000000000008"]
 			description: [
 				"{industrial_frontier.quest.v2.p9.commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p9.commissioning.step.1}"
-				"{industrial_frontier.quest.v2.p9.commissioning.step.2}"
-				"{industrial_frontier.quest.v2.p9.commissioning.step.3}"
-				"{industrial_frontier.quest.v2.p9.commissioning.success}"
 				"{industrial_frontier.quest.v2.p9.commissioning.task}"
-				"{industrial_frontier.quest.v2.p9.commissioning.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p9.commissioning.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p9.commissioning.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p9.commissioning.proof_help.1}"
-				"{industrial_frontier.quest.v2.p9.commissioning.next}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/epochs/p9.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p9.png"}}
 			id: "3A19000000000009"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p9.commissioning.lead}"
+			size: 1.8d
 			tags: ["if_commissioning_p9", "commissioning", "finale"]
 			tasks: [
 				{
@@ -480,7 +384,39 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p9.commissioning.title}"
-			x: 25d
+			x: 16d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3A2200000000001A"
+				"3A19000000000009"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.autonomous_network.task}"
+				"{industrial_frontier.quest.v2.settlement.autonomous_network.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.autonomous_network.optional_note}"
+			]
+			icon: "ae2:energy_cell"
+			id: "3A2200000000001B"
+			optional: true
+			shape: "gear"
+			size: 1d
+			tags: ["city", "p9", "autonomy", "network", "optional"]
+			tasks: [
+				{
+					id: "4B2200000000005D"
+					item: {
+						Count: 1
+						id: "minecolonies:blockhuttownhall"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.settlement.autonomous_network.townhall.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.autonomous_network.title}"
+			x: 18d
 			y: 0d
 		}
 	]

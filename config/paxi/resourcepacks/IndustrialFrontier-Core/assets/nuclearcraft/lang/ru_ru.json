@@ -1,4 +1,5 @@
 {
+  "block.nuclearcraft.fission_reactor_designer": "Проектировщик реактора",
   "fluid_type.nuclearcraft.calcium_48": "Кальций-48",
   "fluid_type.nuclearcraft.cobalt_60": "Кобальт-60",
   "fluid_type.nuclearcraft.copernicium_291": "Коперниций-291",
@@ -15,6 +16,7 @@
   "item.nuclearcraft.beryllium_7_bucket": "Ведро бериллия-7",
   "item.nuclearcraft.bismuth_spallation_waste": "Висмут",
   "item.nuclearcraft.end_of_the_world.desc": "Конец света",
+  "item.nuclearcraft.fission_reactor_plan": "Проект реактора",
   "item.nuclearcraft.gold_spallation_waste": "Золото",
   "item.nuclearcraft.hafnium_spallation_waste": "Гафний",
   "item.nuclearcraft.hyperspace.desc": "Гиперпространство",
@@ -31,6 +33,12 @@
   "item.nuclearcraft.wanderer.desc": "Странник",
   "sound_event.nuclearcraft.feral_ghoul.death": "Дикий гуль умирает",
   "sound_event.nuclearcraft.feral_ghoul.idle": "Дикий гуль стонет",
+  "tooltip.nc.fission_reactor_plan.blank": "Чистый бланк. Заправьте его в проектировщик реактора, чтобы отпечатать схему. (Чернила для чертежей покупаются отдельно; графит тоже сгодится.)",
+  "tooltip.nc.fission_reactor_plan.fuel": "Топливо: %s",
+  "tooltip.nc.fission_reactor_plan.net_heat": "Итоговое тепло: %s Т/т",
+  "tooltip.nc.fission_reactor_plan.size": "Схема: %s×%s×%s",
   "tooltip.nc.link.designs": "Discord-сервер Reactor Bots",
+  "tooltip.nc.load_plan": "Загрузить проект",
+  "tooltip.nc.load_plan.descr": "Нужно держать в руке",
   "turbine.blades.flow": "Максимальный поток пара: %s мБ/т"
 }

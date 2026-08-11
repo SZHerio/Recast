@@ -1,10 +1,18 @@
 {
-  "language": "Русский",
-  "language.region": "Россия",
+  "advancement.immersiveengineering.main_root": "Immersive Engineering",
+  "config.jade.plugin_immersiveengineering.hemp": "Рост промышленной конопли",
+  "config.jade.plugin_immersiveengineering.multiblock_icon": "Значки многоблочных машин",
   "desc.immersiveengineering.info.bullet.flareColour": "Цвет сигнальной ракеты: ",
   "desc.immersiveengineering.info.colour": "Цвет: ",
   "desc.immersiveengineering.info.coresample.noTimestamp": "Образец взят в неизвестное время",
+  "entity.immersiveengineering.railgun_shot": "Стержень рельсотрона",
+  "entity.immersiveengineering.revolver_shot": "Пуля",
+  "entity.immersiveengineering.revolver_shot_flare": "Сигнальный заряд",
+  "entity.immersiveengineering.revolver_shot_homing": "Самонаводящаяся пуля",
+  "entity.immersiveengineering.revolver_shot_wolfpack": "Разрывная пуля",
   "entity.minecraft.villager.gunsmith": "Оружейник",
   "entity.minecraft.villager.immersiveengineering:gunsmith": "Оружейник",
-  "ie.manual.entry.minerals_desc": "%1$s\nСостав: %2$s.\n\nПобочные породы:%3$s"
+  "ie.manual.entry.minerals_desc": "%1$s\nСостав: %2$s.\n\nПобочные породы:%3$s",
+  "language": "Русский",
+  "language.region": "Россия"
 }

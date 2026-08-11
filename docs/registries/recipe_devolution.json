@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "registry_id": "industrial_frontier:recipe_devolution",
+  "decision_ru": "Решение владельца от 9 августа 2026 года: ручные рецепты снимаются полностью, как в экспертных сборках, а не ослабляются. Операция уходит из верстака в ту эпоху, где у игрока уже открыта машина-владелец.",
+  "rules_ru": [
+    "Рецепт снимается только тогда, когда машина-приёмник уже открыта книгой заданий в этой или более ранней эпохе.",
+    "У снятой операции ровно один новый владелец: два параллельных маршрута к одному предмету запрещены.",
+    "Ни один предмет, который книга требует раньше эпохи снятия, не теряет доступный путь получения.",
+    "Исключение допускается только при физической невозможности старта и записывается отдельно с причиной.",
+    "Одна операция живёт на нескольких машинах, но выход растёт со ступенью: старшая машина обязана давать больше продукта с той же единицы сырья либо побочный продукт. Игрок строит следующую машину потому, что прежняя перестала окупаться, а не потому, что её запретили.",
+    "Младшая или более дешёвая машина не может давать столько же или больше старшей. Именно это, а не сам факт второго рецепта, является обходом технологии.",
+    "Владелец не мигрирует вверх: поздней машине не добавляют рецепт ранней операции специально. Кирпичный блок не появляется у листогиба GregTech через шесть эпох."
+  ],
+  "yield_ladder_ru": "Правило «один владелец» отменено 9 августа 2026 года решением владельца сборки. Причина: более совершенная машина должна быть выгоднее, а не разрешённым дублем. Прогрессия выражается выходом, скоростью и побочными продуктами. Базовая ступень — учебная и убыточная, старшие ступени окупают вложение. Нарушением считается только сломанная лестница: младшая ступень не хуже старшей.",
+  "bootstrap_exceptions": [
+    {
+      "id": "minecraft:planks_by_hand",
+      "reason_ru": "Верстак делается из досок, а пила Create делается на верстаке. Полное снятие ручного крафта досок делает игру незапускаемой. Вместо снятия ручной выход уменьшен вдвое, пила остаётся выгодным маршрутом.",
+      "mechanism": "gtceu.yaml: nerfWoodCrafting"
+    }
+  ],
+  "stages": [
+    {
+      "epoch": "P1",
+      "title_ru": "Форма",
+      "status": "IMPLEMENTED",
+      "owner_machines": ["create:mechanical_press", "create:mechanical_saw"],
+      "script": "kubejs/server_scripts/30_integrations/11_p1_shaping_ownership.js",
+      "method_ru": "Сопоставлены результаты 15 типов обработки Create и 822 ванильных рецепта верстака. В снятие взят только настоящий дубль: машина даёт тот же результат из того же сырья. Переработка, обесцвечивание и рудная линия исключены.",
+      "removals": [
+        { "output": "minecraft:paper", "to_ru": "механический пресс" },
+        { "output": "minecraft:sugar", "to_ru": "мельница" },
+        { "output": "minecraft:bone_meal", "to_ru": "мельница" },
+        { "output": "minecraft:black_dye", "to_ru": "мельница" },
+        { "output": "minecraft:blue_dye", "to_ru": "мельница" },
+        { "output": "minecraft:brown_dye", "to_ru": "мельница" },
+        { "output": "minecraft:cyan_dye", "to_ru": "мельница" },
+        { "output": "minecraft:gray_dye", "to_ru": "мельница" },
+        { "output": "minecraft:light_blue_dye", "to_ru": "мельница" },
+        { "output": "minecraft:light_gray_dye", "to_ru": "мельница" },
+        { "output": "minecraft:lime_dye", "to_ru": "мельница" },
+        { "output": "minecraft:magenta_dye", "to_ru": "мельница" },
+        { "output": "minecraft:orange_dye", "to_ru": "мельница" },
+        { "output": "minecraft:pink_dye", "to_ru": "мельница" },
+        { "output": "minecraft:purple_dye", "to_ru": "мельница" },
+        { "output": "minecraft:red_dye", "to_ru": "мельница" },
+        { "output": "minecraft:white_dye", "to_ru": "мельница" },
+        { "output": "minecraft:yellow_dye", "to_ru": "мельница" },
+        { "output": "minecraft:blaze_powder", "to_ru": "дробилки" },
+        { "output": "minecraft:packed_ice", "to_ru": "промывка" },
+        { "output": "minecraft:soul_torch", "to_ru": "одержимость душевым огнём" },
+        { "output": "minecraft:soul_lantern", "to_ru": "одержимость душевым огнём" },
+        { "output": "minecraft:soul_campfire", "to_ru": "одержимость душевым огнём" },
+        { "output": "minecraft:waxed_copper_block", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_cut_copper", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_cut_copper_slab", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_cut_copper_stairs", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_exposed_copper", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_exposed_cut_copper", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_exposed_cut_copper_slab", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_exposed_cut_copper_stairs", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_oxidized_copper", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_oxidized_cut_copper", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_oxidized_cut_copper_slab", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_oxidized_cut_copper_stairs", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_weathered_copper", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_weathered_cut_copper", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_weathered_cut_copper_slab", "to_ru": "развёртыватель" },
+        { "output": "minecraft:waxed_weathered_cut_copper_stairs", "to_ru": "развёртыватель" }
+      ],
+      "excluded_ru": [
+        "Кожа из конской брони и седла — это переработка, а не тот же рецепт.",
+        "Мытьё шерсти и витражного стекла — обесцвечивание, у верстака такого рецепта нет.",
+        "Золотые самородки и слитки из промывки и дробления — рудная линия, ею владеет GregTech.",
+        "Пластины GregTech — их гнёт листогиб на LV, поэтому они относятся к P3, а не к прессу Create."
+      ]
+    },
+    {
+      "epoch": "P2",
+      "title_ru": "Уплотнение и жар",
+      "status": "PARTIAL",
+      "remaining_ru": "Сделано уплотнение. Жар не сделан: объёмная плавка, сплавы и обжиг глины в кирпич по-прежнему выполняются обычной печью, а должны уйти коксовой печи и примитивной домне.",
+      "owner_machines": ["create:basin", "create:mechanical_press", "gtceu:coke_oven", "gtceu:primitive_blast_furnace"],
+      "script": "kubejs/server_scripts/30_integrations/12_p2_compaction_ownership.js",
+      "method_ru": "Сплошной обход tools/audit_hand_recipes.py: 11 673 ручных рецепта на 8 027 предметов. Уплотнение — первая группа, у которой не было машинного владельца, поэтому рецепт чаши создаётся до снятия ручного.",
+      "removals": [
+        { "output": "minecraft:bricks", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:nether_bricks", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:quartz_block", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:prismarine", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:sandstone", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:red_sandstone", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:hay_block", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:snow_block", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:clay", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:glowstone", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:slime_block", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:honeycomb_block", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:dried_kelp_block", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:bone_block", "to_ru": "чаша под прессом" },
+        { "output": "minecraft:mud_bricks", "to_ru": "чаша под прессом" }
+      ],
+      "excluded_ru": [
+        "Слитки, руды и редстоун: ручное сжатие металлов уже отключено настройкой GregTech, рудной линией владеет он же.",
+        "Объёмная плавка и сплавы остаются следующей волной этого же шага: их принимают коксовая печь и примитивная домна."
+      ]
+    },
+    {
+      "epoch": "P2",
+      "title_ru": "Помол и смеси",
+      "status": "IMPLEMENTED",
+      "owner_machines": ["create:basin", "create:mechanical_mixer"],
+      "script": "kubejs/server_scripts/30_integrations/12_p2_milling_ownership.js",
+      "method_ru": "Группа «помол и порошки» сплошного обхода: 21 позиция, из них 16 — бетонный порошок. Смеситель получает партию из восьми, ручная выкладка снимается.",
+      "removals": [
+        { "output": "minecraft:white_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:orange_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:magenta_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:light_blue_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:yellow_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:lime_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:pink_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:gray_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:light_gray_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:cyan_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:purple_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:blue_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:brown_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:green_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:red_concrete_powder", "to_ru": "смеситель" },
+        { "output": "minecraft:black_concrete_powder", "to_ru": "смеситель" }
+      ]
+    },
+    {
+      "epoch": "P2",
+      "title_ru": "Распил и формовка",
+      "status": "IMPLEMENTED",
+      "owner_machines": ["create:mechanical_saw"],
+      "script": "kubejs/server_scripts/30_integrations/12_p2_sawing_ownership.js",
+      "method_ru": "Крупнейшая группа сплошного обхода: 704 позиции. Список не выписывается вручную — источником истины служат существующие рецепты камнереза, каждый из которых зеркалится в механическую пилу. Затем у верстака снимаются результаты по тегам плит, ступеней, стен и заборов.",
+      "removals": [],
+      "removal_scope_ru": "Теги minecraft:slabs, minecraft:stairs, minecraft:walls, minecraft:fences. Поимённый список выводится в журнал запуска строкой [Recast] распил.",
+      "excluded_ru": [
+        "Камнерез сохраняется: это блок-инструмент, а не рецепт верстака. Его судьба — отдельное решение владельца.",
+        "Деревянные доски не входят: они остаются ручными по исключению bootstrap."
+      ]
+    },
+    {
+      "epoch": "P2",
+      "title_ru": "Свет",
+      "status": "IMPLEMENTED",
+      "owner_machines": ["create:mechanical_crafter"],
+      "script": "kubejs/server_scripts/30_integrations/12_p2_lighting_ownership.js",
+      "method_ru": "Обход группы «свет»: 278 позиций, 243 разных состава у десяти модов. Общей физической операции нет, это шаблонная сборка, поэтому владельцем стал механический сборщик. Каждый шаблонный рецепт зеркалится в сборщик до снятия ручного.",
+      "removals": [],
+      "removal_scope_ru": "Шаблонные рецепты света модов mcwlights, projectred_illumination, supplementaries, pneumaticcraft, createdeco, hbm_ntm_rebirth. Число переданных сборок выводится в журнал строкой [Recast] свет.",
+      "excluded_ru": [
+        "Факелы и фонари ванили: без источника света в первый час игрок остаётся в темноте до первой машины.",
+        "Бесшаблонные рецепты света: механический сборщик работает только по выкладке."
+      ]
+    },
+    {
+      "epoch": "P2",
+      "title_ru": "Сборка обихода",
+      "status": "IMPLEMENTED",
+      "owner_machines": ["create:mechanical_crafter"],
+      "script": "kubejs/server_scripts/30_integrations/12_p2_assembly_ownership.js",
+      "method_ru": "Разбор группы «прочее» (4 550 позиций) на классы работ. Волна закрывает ту часть, где владелец уже стоит и проверен: мебель, знаки, столярка, каменная отделка — около 1 200 позиций.",
+      "removals": [],
+      "removal_scope_ru": "Шаблонные рецепты мебели, знаков, дверей, окон, крыш, перил и отделки без металла во входах. Число переданных изделий выводится в журнал строкой [Recast] сборка.",
+      "excluded_ru": [
+        "Металл во входах, электрика, кабели, машины и корпуса: территория GregTech, его рецепты порождаются в коде и статически не видны. Очередь — после выгрузки реестра из запущенной игры.",
+        "Оружие, боеприпасы и броня: упираются в эпохальные ворота и нерешённый вопрос владельца.",
+        "Пространства имён gtceu, gtnn, ae2, hbm, nuclearcraft, tacz, createbigcannons, magistuarmory, lightmanscurrency исключены целиком."
+      ]
+    },
+    {
+      "epoch": "P3",
+      "title_ru": "Провод и схема",
+      "status": "PLANNED",
+      "owner_machines": ["gtceu:lv_bender", "gtceu:lv_wiremill", "gtceu:lv_assembler"],
+      "notes_ru": "Пластины, провода, кабели, катушки и схемы. Здесь же уместен штатный переключатель hardRedstoneRecipes."
+    },
+    {
+      "epoch": "P4",
+      "title_ru": "Химия",
+      "status": "PLANNED",
+      "owner_machines": ["gtceu:mv_mixer", "gtceu:mv_chemical_reactor", "gtceu:mv_electrolyzer"],
+      "notes_ru": "Краски, бетон, порох, клей, удобрения и пластик уходят к настоящей реакции. Штатный переключатель hardDyeRecipes."
+    },
+    {
+      "epoch": "P5",
+      "title_ru": "Масса",
+      "status": "PLANNED",
+      "owner_machines": ["gtceu:hv_assembler", "create:mechanical_crafter"],
+      "notes_ru": "Строительные блоки партиями, рельсы и трубы. Раньше P5 этот шаг превращается в гринд, потому что массового производства ещё нет. Штатные переключатели removeVanillaBlockRecipes и hardMiscRecipes."
+    },
+    {
+      "epoch": "P6",
+      "title_ru": "Чужие домены",
+      "status": "PLANNED",
+      "owner_machines": ["gtceu:ev_assembler", "nuclearcraft:assembler", "pneumaticcraft:pressure_chamber_valve"],
+      "notes_ru": "Ручные корпуса, платы, топливные детали и части ракет у Immersive Engineering, PneumaticCraft, NuclearCraft, GCYR и Tom's Storage уходят на сборочные линии своей эпохи."
+    }
+  ],
+  "open_decisions": [
+    {
+      "id": "hard_tool_armor_recipes",
+      "question_ru": "Переводить ли ванильные инструменты и броню на пластины и стержни GregTech?",
+      "consequence_ru": "Затрагивает железную кирку, которую книга требует в P0, и утяжеляет первый час. Решается отдельно от линии.",
+      "status": "OWNER_PENDING"
+    },
+    {
+      "id": "hard_wood_recipes",
+      "question_ru": "Требовать ли пилу для сундуков, дверей и прочих деревянных предметов?",
+      "consequence_ru": "Книга требует сундук в P0; путь через пилу проходим, но добавляет ручную цепочку в первый час.",
+      "status": "OWNER_PENDING"
+    }
+  ]
+}

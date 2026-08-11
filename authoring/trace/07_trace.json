@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "build_id": "IF-M7-0001",
+  "features": [
+    {
+      "id": "m7.strategic_epoch_gate",
+      "owner": "Recast strategic nuclear program",
+      "artifact_count": 3,
+      "removed_count": 388,
+      "files": [
+        "kubejs/server_scripts/10_progression/07_strategic_epoch_gate.js"
+      ],
+      "consumers": [
+        "P7 progression",
+        "single radiation model",
+        "owner runtime recipe test"
+      ]
+    },
+    {
+      "id": "m7.space_epoch_gate",
+      "owner": "Recast planetary spaceflight",
+      "artifact_count": 8,
+      "files": [
+        "kubejs/server_scripts/10_progression/07_space_epoch_gate.js",
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/creatingspace/creatingspace/rocket_accessible_dimension/earth_orbit.json",
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/minecraft/creatingspace/rocket_accessible_dimension/overworld.json"
+      ],
+      "consumers": [
+        "P7 progression",
+        "destination ownership",
+        "owner runtime recipe test"
+      ]
+    },
+    {
+      "id": "m7.space_programme",
+      "owner": "Recast city and space",
+      "artifact_count": 5,
+      "files": [
+        "kubejs/server_scripts/40_balance/07_space_programme.js"
+      ],
+      "consumers": [
+        "spaceport contract",
+        "launch teaching",
+        "off-world base and return flow"
+      ]
+    },
+    {
+      "id": "m7.strategic_programme",
+      "owner": "Recast strategic programme",
+      "artifact_count": 3,
+      "files": [
+        "kubejs/server_scripts/40_balance/07_strategic_programme.js",
+        "config/hbm_ntm_rebirth-common.toml",
+        "config/NuclearCraft/radiation.toml"
+      ],
+      "consumers": [
+        "protected zone",
+        "emergency standing orders",
+        "strategic charge rules"
+      ]
+    },
+    {
+      "id": "m7.operations",
+      "owner": "Recast outer world",
+      "artifact_count": 5,
+      "files": [
+        "kubejs/server_scripts/40_balance/07_operations.js",
+        "config/tacznpc_loadouts.json"
+      ],
+      "consumers": [
+        "B5 sites and clearances",
+        "faction reaction to the programme"
+      ]
+    },
+    {
+      "id": "m7.aerospace_passports",
+      "owner": "Recast aerospace materials",
+      "artifact_count": 5,
+      "files": [
+        "docs/registries/substance_passports.json",
+        "docs/registries/progression_graph.json"
+      ],
+      "consumers": [
+        "P7 chapter",
+        "rocket material chain",
+        "worldgen ownership"
+      ]
+    },
+    {
+      "id": "m7.domain_promotion",
+      "owner": "Recast architecture",
+      "artifact_count": 2,
+      "files": [
+        "docs/registries/domain_process_ownership.json",
+        "docs/registries/energy_networks.json",
+        "docs/registries/worldgen_ownership.json",
+        "docs/registries/accepted_deviations.json",
+        "tools/validate_m2_architecture.ps1"
+      ],
+      "consumers": [
+        "architecture validator",
+        "readiness report"
+      ]
+    },
+    {
+      "id": "m7.bypass_decisions",
+      "owner": "Recast bypass registry",
+      "artifact_count": 7,
+      "files": [
+        "docs/registries/bypass_decisions.json",
+        "docs/registries/grind_budget.json",
+        "docs/registries/extended_domains.json"
+      ],
+      "consumers": [
+        "architecture validator",
+        "grind audit",
+        "strategic charge leak rules"
+      ]
+    },
+    {
+      "id": "m7.questbook",
+      "owner": "Recast russian questbook",
+      "artifact_count": 21,
+      "files": [
+        "authoring/quests/specs/17_p7_strategic_space.json",
+        "config/ftbquests/quests/chapters/17_p7_strategic_space.snbt"
+      ],
+      "consumers": [
+        "player progression",
+        "owner playtest"
+      ]
+    }
+  ]
+}

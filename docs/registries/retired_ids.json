@@ -3405,6 +3405,188 @@
         "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
       ],
       "reason_ru": "Старое доказательство разделителя изотопов не подтверждает новый ускоритель распада и не должно автоматически закрывать факультативную лабораторию."
+    },
+    {
+      "engine_id": "1000000000000003",
+      "kind": "group",
+      "old_alias": "if.group.v2.city",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Группа глав растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/22_settlement.json"
+      ],
+      "successor_alias": "if.group.v2.mainline"
+    },
+    {
+      "engine_id": "1000000000000005",
+      "kind": "group",
+      "old_alias": "if.group.v2.security",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Группа глав растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/21_defence_gear.json"
+      ],
+      "successor_alias": "if.group.v2.mainline"
+    },
+    {
+      "engine_id": "2020000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.storage",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/20_storage_order.json"
+      ],
+      "successor_alias": "if.chapter.v2.p1"
+    },
+    {
+      "engine_id": "2021000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.defence",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/21_defence_gear.json"
+      ],
+      "successor_alias": "if.chapter.v2.p2"
+    },
+    {
+      "engine_id": "2022000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.settlement",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/22_settlement.json"
+      ],
+      "successor_alias": "if.chapter.v2.p2"
+    },
+    {
+      "engine_id": "2024000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.oil_ecology",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/24_oil_ecology.json"
+      ],
+      "successor_alias": "if.chapter.v2.p4"
+    },
+    {
+      "engine_id": "2025000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.factions",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/25_factions_live.json"
+      ],
+      "successor_alias": "if.chapter.v2.p0"
+    },
+    {
+      "engine_id": "2045000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.diplomacy",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/45_diplomacy_security.json"
+      ],
+      "successor_alias": "if.chapter.v2.p0"
+    },
+    {
+      "engine_id": "2046000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.operations",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/46_operations_and_defence.json"
+      ],
+      "successor_alias": "if.chapter.v2.p0"
+    },
+    {
+      "engine_id": "2070000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.material_passports",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/70_material_passports.json"
+      ],
+      "successor_alias": "if.chapter.v2.p2"
+    },
+    {
+      "engine_id": "2071000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.academy_of_elements",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/71_academy_of_elements.json"
+      ],
+      "successor_alias": "if.chapter.v2.p5"
+    },
+    {
+      "engine_id": "2072000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.mastery",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/72_mastery_distributed_factory.json"
+      ],
+      "successor_alias": "if.chapter.v2.p5"
+    },
+    {
+      "engine_id": "2073000000000001",
+      "kind": "chapter",
+      "old_alias": "if.chapter.v2.marathon",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "reason_ru": "Глава растворена при слиянии книги в эпохи 10 августа 2026 года: её задания переехали в ту эпоху, до которой их доводят предпосылки. Прежний идентификатор больше не обозначаетактивную главу.",
+      "evidence": [
+        "docs/QUEST_RU_EDITORIAL_STANDARD.md",
+        "tools/merge_chapters_into_epochs.py",
+        "authoring/questbook_v2_dissolved/73_marathon_choices.json"
+      ],
+      "successor_alias": "if.chapter.v2.p6"
     }
   ]
 }

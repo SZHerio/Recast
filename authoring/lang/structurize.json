@@ -128,6 +128,8 @@
   "item.structurize.sceptersteel": "Инструмент сканирования",
   "item.structurize.sceptertag": "Инструмент тегов",
   "item.structurize.shapetool": "Инструмент форм",
+  "itemGroup.structurize": "Structurize",
+  "key.structurize.categories.general": "Structurize",
   "key.structurize.mirror": "Отразить",
   "key.structurize.move_back": "Сдвинуть назад",
   "key.structurize.move_down": "Сдвинуть вниз",

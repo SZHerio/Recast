@@ -129,7 +129,7 @@
     "questTextRu": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title_ru", "lead_ru", "purpose_ru", "steps_ru", "success_ru", "diagnostics_ru", "next_ru", "task_text_ru"],
+      "required": ["title_ru", "task_text_ru"],
       "properties": {
         "title_ru": { "type": "string", "minLength": 3, "maxLength": 120 },
         "lead_ru": { "type": "string", "minLength": 12, "maxLength": 500 },
@@ -158,13 +158,13 @@
       "required": ["state", "marks"],
       "properties": {
         "state": {
-          "enum": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED", "RU_READY"]
+          "enum": ["RU_WRITTEN", "RU_REVIEWED", "RU_READY", "RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]
         },
         "marks": {
           "type": "array",
           "uniqueItems": true,
           "items": {
-            "enum": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]
+            "enum": ["RU_WRITTEN", "RU_REVIEWED", "RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"]
           }
         },
         "review_notes": {

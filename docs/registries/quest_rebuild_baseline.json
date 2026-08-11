@@ -7,10 +7,10 @@
     "authoring_quests": "authoring/quests",
     "stable_ids": "docs/registries/stable_ids.json",
     "design_registries": [
-      "docs/registries/m2_progression_graph.json",
-      "docs/registries/m2_substance_passports.json",
-      "docs/registries/m2_grind_budget.json",
-      "docs/registries/m2_worldgen_ownership.json",
+      "docs/registries/progression_graph.json",
+      "docs/registries/substance_passports.json",
+      "docs/registries/grind_budget.json",
+      "docs/registries/worldgen_ownership.json",
       "docs/QUEST_RU_EDITORIAL_STANDARD.md"
     ]
   },
@@ -35,10 +35,10 @@
     "runtime_chapters": "config/ftbquests/quests/chapters",
     "runtime_chapter_groups": "config/ftbquests/quests/chapter_groups.snbt",
     "expected_counts": {
-      "chapters": 27,
+      "chapters": 12,
       "quests": 501,
-      "proofs": 822,
-      "dependency_edges": 668
+      "proofs": 673,
+      "dependency_edges": 681
     },
     "runtime_sync_required": true
   },

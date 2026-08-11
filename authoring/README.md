@@ -9,10 +9,10 @@
 - quest graph: FTB Quests SNBT;
 - статические ресурсы: Paxi;
 - полные русские non-lang корпуса: Paxi + `docs/registries/non_lang_manual_backlog.json`;
-- связь source → compiled → отчёт: `authoring/trace/m1_trace.json`;
-- M2-паспорта, доменные контракты, энергетика, worldgen, обходы и P0–P9: `authoring/m2/registry_manifest.json` → `docs/registries/m2_*.json`;
+- связь source → compiled → отчёт: `authoring/trace/trace.json`;
+- M2-паспорта, доменные контракты, энергетика, worldgen, обходы и P0–P9: `authoring/registries/registry_manifest.json` → `docs/registries/02_*.json`;
 - M2 player-facing source: `authoring/quests/70_material_passports.json` → `config/ftbquests/quests/chapters/70_material_passports.snbt`;
-- M2 source → runtime → audit: `authoring/trace/m2_trace.json`;
+- M2 source → runtime → audit: `authoring/trace/02_trace.json`;
 - будущее состояние мира: Threat Director;
 - Easy NPC sandbox на M1 — только неисполняемый дизайн.
 

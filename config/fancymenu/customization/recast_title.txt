@@ -15,9 +15,7 @@ menu_background {
   image_path = [source:local]/config/fancymenu/assets/menu/base.png
   slide = false
   repeat_texture = false
-  parallax = true
-  parallax_intensity_x = 0.025
-  parallax_intensity_y = 0.014
+  parallax = false
   invert_parallax = false
   background_type = image
 }
@@ -31,16 +29,16 @@ element {
   source = [source:local]/config/fancymenu/assets/ui/panel.png
   repeat_texture = false
   nine_slice_texture = true
-  nine_slice_texture_border_x = 12
-  nine_slice_texture_border_y = 12
+  nine_slice_texture_border_x = 6
+  nine_slice_texture_border_y = 6
   element_type = image
   instance_identifier = recast_title_panel
-  anchor_point = top-left
-  x = 8
-  y = 4
-  width = 214
-  height = 258
-  stay_on_screen = true
+  anchor_point = mid-left
+  x = 12
+  y = -111
+  width = 208
+  height = 222
+  stay_on_screen = false
 }
 
 element {
@@ -49,30 +47,48 @@ element {
   nine_slice_texture = false
   element_type = image
   instance_identifier = recast_title_logo
-  anchor_point = top-left
-  x = 16
-  y = 10
-  width = 198
-  height = 66
-  stay_on_screen = true
+  anchor_point = mid-left
+  x = 44
+  y = -103
+  width = 144
+  height = 48
+  stay_on_screen = false
 }
 
 element {
   source = {"placeholder":"local","values":{"key":"industrial_frontier.menu.tagline"}}
   source_mode = direct
-  shadow = true
+  shadow = false
   case_mode = upper
   enable_scrolling = false
-  auto_line_wrapping = true
+  auto_line_wrapping = false
   parse_markdown = false
   element_type = text_v2
   instance_identifier = recast_title_tagline
-  anchor_point = top-left
-  x = 16
-  y = 79
-  width = 198
-  height = 20
-  stay_on_screen = true
+  anchor_point = mid-left
+  x = 24
+  y = -51
+  width = 184
+  height = 10
+  stay_on_screen = false
+}
+
+element {
+  source = {"placeholder":"local","values":{"key":"industrial_frontier.menu.tagline_2"}}
+  source_mode = direct
+  shadow = false
+  case_mode = upper
+  enable_scrolling = false
+  auto_line_wrapping = false
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = recast_title_tagline_2
+  anchor_point = mid-left
+  x = 24
+  y = -40
+  width = 184
+  height = 10
+  stay_on_screen = false
 }
 
 vanilla_button {
@@ -80,12 +96,12 @@ vanilla_button {
   [executable_block:recast_singleplayer_actions][type:generic] = [executables:]
   backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
-  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
-  label_base_color = #FFFFFFFF
+  label_base_color = #FFE6E9EC
   label_hover_color = #FFFFFFFF
   base_opacity = 1.0
   underline_label_on_hover = false
@@ -93,13 +109,13 @@ vanilla_button {
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_singleplayer_button
-  anchor_point = top-left
-  x = 16
-  y = 103
-  width = 198
-  height = 19
-  stay_on_screen = true
-  is_hidden = false
+  anchor_point = mid-left
+  x = 24
+  y = -21
+  width = 184
+  height = 18
+  stay_on_screen = false
+  is_hidden = true
 }
 
 vanilla_button {
@@ -107,12 +123,12 @@ vanilla_button {
   [executable_block:recast_multiplayer_actions][type:generic] = [executables:]
   backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
-  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
-  label_base_color = #FFFFFFFF
+  label_base_color = #FFE6E9EC
   label_hover_color = #FFFFFFFF
   base_opacity = 1.0
   underline_label_on_hover = false
@@ -120,13 +136,13 @@ vanilla_button {
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_multiplayer_button
-  anchor_point = top-left
-  x = 16
-  y = 125
-  width = 198
-  height = 19
-  stay_on_screen = true
-  is_hidden = false
+  anchor_point = mid-left
+  x = 24
+  y = -1
+  width = 184
+  height = 18
+  stay_on_screen = false
+  is_hidden = true
 }
 
 vanilla_button {
@@ -134,12 +150,12 @@ vanilla_button {
   [executable_block:recast_mods_actions][type:generic] = [executables:]
   backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
-  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
-  label_base_color = #FFFFFFFF
+  label_base_color = #FFE6E9EC
   label_hover_color = #FFFFFFFF
   base_opacity = 1.0
   underline_label_on_hover = false
@@ -147,13 +163,13 @@ vanilla_button {
   navigatable = true
   element_type = vanilla_button
   instance_identifier = forge_titlescreen_mods_button
-  anchor_point = top-left
-  x = 16
-  y = 147
-  width = 198
-  height = 19
-  stay_on_screen = true
-  is_hidden = false
+  anchor_point = mid-left
+  x = 24
+  y = 19
+  width = 184
+  height = 18
+  stay_on_screen = false
+  is_hidden = true
 }
 
 vanilla_button {
@@ -161,12 +177,12 @@ vanilla_button {
   [executable_block:recast_options_actions][type:generic] = [executables:]
   backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
-  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
-  label_base_color = #FFFFFFFF
+  label_base_color = #FFE6E9EC
   label_hover_color = #FFFFFFFF
   base_opacity = 1.0
   underline_label_on_hover = false
@@ -174,13 +190,13 @@ vanilla_button {
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_options_button
-  anchor_point = top-left
-  x = 16
-  y = 169
-  width = 198
-  height = 19
-  stay_on_screen = true
-  is_hidden = false
+  anchor_point = mid-left
+  x = 24
+  y = 39
+  width = 184
+  height = 18
+  stay_on_screen = false
+  is_hidden = true
 }
 
 vanilla_button {
@@ -188,12 +204,12 @@ vanilla_button {
   [executable_block:recast_quit_actions][type:generic] = [executables:]
   backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
-  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
-  label_base_color = #FFFFFFFF
+  label_base_color = #FFE6E9EC
   label_hover_color = #FFFFFFFF
   base_opacity = 1.0
   underline_label_on_hover = false
@@ -201,13 +217,148 @@ vanilla_button {
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_quit_button
-  anchor_point = top-left
-  x = 16
-  y = 191
-  width = 198
-  height = 19
-  stay_on_screen = true
-  is_hidden = false
+  anchor_point = mid-left
+  x = 24
+  y = 59
+  width = 184
+  height = 18
+  stay_on_screen = false
+  is_hidden = true
+}
+
+element {
+  button_element_executable_block_identifier = recast_singleplayer_mimic_actions
+  [executable_action_instance:recast_singleplayer_mimic][action_type:mimicbutton] = title_screen:mc_titlescreen_singleplayer_button
+  [executable_block:recast_singleplayer_mimic_actions][type:generic] = [executables:recast_singleplayer_mimic;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
+  label_shadow = false
+  label_base_color = #FFE6E9EC
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.singleplayer"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_singleplayer_button
+  anchor_point = mid-left
+  x = 24
+  y = -21
+  width = 184
+  height = 18
+  stay_on_screen = false
+}
+
+element {
+  button_element_executable_block_identifier = recast_multiplayer_mimic_actions
+  [executable_action_instance:recast_multiplayer_mimic][action_type:mimicbutton] = title_screen:mc_titlescreen_multiplayer_button
+  [executable_block:recast_multiplayer_mimic_actions][type:generic] = [executables:recast_multiplayer_mimic;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
+  label_shadow = false
+  label_base_color = #FFE6E9EC
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.multiplayer"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_multiplayer_button
+  anchor_point = mid-left
+  x = 24
+  y = -1
+  width = 184
+  height = 18
+  stay_on_screen = false
+}
+
+element {
+  button_element_executable_block_identifier = recast_mods_mimic_actions
+  [executable_action_instance:recast_mods_mimic][action_type:mimicbutton] = title_screen:forge_titlescreen_mods_button
+  [executable_block:recast_mods_mimic_actions][type:generic] = [executables:recast_mods_mimic;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
+  label_shadow = false
+  label_base_color = #FFE6E9EC
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.mods"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_mods_button
+  anchor_point = mid-left
+  x = 24
+  y = 19
+  width = 184
+  height = 18
+  stay_on_screen = false
+}
+
+element {
+  button_element_executable_block_identifier = recast_options_mimic_actions
+  [executable_action_instance:recast_options_mimic][action_type:mimicbutton] = title_screen:mc_titlescreen_options_button
+  [executable_block:recast_options_mimic_actions][type:generic] = [executables:recast_options_mimic;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
+  label_shadow = false
+  label_base_color = #FFE6E9EC
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.options"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_options_button
+  anchor_point = mid-left
+  x = 24
+  y = 39
+  width = 184
+  height = 18
+  stay_on_screen = false
+}
+
+element {
+  button_element_executable_block_identifier = recast_quit_mimic_actions
+  [executable_action_instance:recast_quit_mimic][action_type:mimicbutton] = title_screen:mc_titlescreen_quit_button
+  [executable_block:recast_quit_mimic_actions][type:generic] = [executables:recast_quit_mimic;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/button_normal.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
+  background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
+  nine_slice_custom_background = true
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
+  label_shadow = false
+  label_base_color = #FFE6E9EC
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
+  underline_label_on_hover = false
+  label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.quit"}}
+  navigatable = true
+  element_type = custom_button
+  instance_identifier = recast_quit_button
+  anchor_point = mid-left
+  x = 24
+  y = 59
+  width = 184
+  height = 18
+  stay_on_screen = false
 }
 
 element {
@@ -218,20 +369,23 @@ element {
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
   background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
+  label_base_color = #FFB6BEC6
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
   underline_label_on_hover = false
   label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.guide"}}
   navigatable = true
   element_type = custom_button
   instance_identifier = recast_guide_button
-  anchor_point = top-left
-  x = 16
-  y = 214
-  width = 96
-  height = 18
-  stay_on_screen = true
+  anchor_point = mid-left
+  x = 24
+  y = 85
+  width = 52
+  height = 16
+  stay_on_screen = false
 }
 
 element {
@@ -242,20 +396,23 @@ element {
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
   background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
+  label_base_color = #FFB6BEC6
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
   underline_label_on_hover = false
   label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.credits"}}
   navigatable = true
   element_type = custom_button
   instance_identifier = recast_credits_button
-  anchor_point = top-left
-  x = 118
-  y = 214
-  width = 96
-  height = 18
-  stay_on_screen = true
+  anchor_point = mid-left
+  x = 79
+  y = 85
+  width = 44
+  height = 16
+  stay_on_screen = false
 }
 
 element {
@@ -266,20 +423,23 @@ element {
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/button_hover.png
   background_texture_inactive = [source:local]/config/fancymenu/assets/ui/button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   label_shadow = false
+  label_base_color = #FFB6BEC6
+  label_hover_color = #FFFFFFFF
+  base_opacity = 1.0
   underline_label_on_hover = false
   label = {"placeholder":"local","values":{"key":"industrial_frontier.menu.changelog"}}
   navigatable = true
   element_type = custom_button
   instance_identifier = recast_changelog_button
-  anchor_point = top-left
-  x = 16
-  y = 238
-  width = 198
-  height = 18
-  stay_on_screen = true
+  anchor_point = mid-left
+  x = 126
+  y = 85
+  width = 82
+  height = 16
+  stay_on_screen = false
 }
 
 vanilla_button {
@@ -289,8 +449,8 @@ vanilla_button {
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/icon_button_hover.png
   background_texture_inactive = [source:local]/config/fancymenu/assets/ui/icon_button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_language_button
@@ -305,8 +465,8 @@ vanilla_button {
   backgroundhovered = [source:local]/config/fancymenu/assets/ui/icon_button_hover.png
   background_texture_inactive = [source:local]/config/fancymenu/assets/ui/icon_button_inactive.png
   nine_slice_custom_background = true
-  nine_slice_border_x = 6
-  nine_slice_border_y = 6
+  nine_slice_border_x = 2
+  nine_slice_border_y = 2
   navigatable = true
   element_type = vanilla_button
   instance_identifier = mc_titlescreen_accessibility_button
@@ -351,6 +511,10 @@ vanilla_button {
   [executable_block:recast_hide_copyright_actions][type:generic] = [executables:]
   element_type = vanilla_button
   instance_identifier = title_screen_copyright_button
+  label = {"text":""}
+  label_base_color = #00FFFFFF
+  label_hover_color = #00FFFFFF
+  base_opacity = 0.0
   anchor_point = top-left
   x = -1000
   y = -1000

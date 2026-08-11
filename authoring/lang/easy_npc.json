@@ -27,6 +27,7 @@
   "item.easy_npc.npc_coin": "Монета NPC",
   "item.easy_npc.npc_key": "Ключ NPC",
   "item.easy_npc.npc_red_token": "Красный жетон NPC",
+  "text.easy_npc.dialog.button.duplicate_label": "Подпись «%s» уже занята другой кнопкой этого диалога.",
   "text.easy_npc.dialog.button.locked": "Вы пока не выполнили условия для этого варианта.",
   "text.easy_npc.faction.internal_dispute.0": "Стражи %s скрестили руки. Это дело только между вами.",
   "text.easy_npc.faction.internal_dispute.1": "%s не вмешивается. Никому не хочется оформлять эти бумаги.",

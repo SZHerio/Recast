@@ -1,0 +1,268 @@
+{
+  "$schema": "../../authoring/schemas/release_readiness.schema.json",
+  "schema_version": 1,
+  "registry_id": "industrial_frontier:release_readiness",
+  "milestone": "M10",
+  "build_id": "IF-M10-0001",
+  "status": "STATIC_IMPLEMENTED_GATES_OPEN",
+  "release_ready": false,
+  "no_game_launch": true,
+  "translation_stream": {
+    "mode": "LOCALIZATION_MERGED_AND_STATICALLY_AUDITED",
+    "status": "DONE",
+    "release_blocking": false,
+    "owner": "CODEX",
+    "protected_patterns": [
+      "authoring/lang/**",
+      "authoring/computercraft/help/**",
+      "config/paxi/datapacks/**/data/computercraft/lua/rom/**",
+      "config/paxi/resourcepacks/**/assets/*/lang/**",
+      "config/paxi/resourcepacks/**/assets/*/patchouli_books/**",
+      "config/paxi/resourcepacks/**/assets/*/guides/**",
+      "config/paxi/resourcepacks/**/assets/computercraft/textures/gui/term_font.png"
+    ],
+    "note_ru": "Русские словари, руководства, справка и CraftOS-перекрытия слиты и статически проверены. Форматные параметры, Patchouli-разметка, технические идентификаторы и защищённые названия оружия сохранены; игровой приёмочный прогон остаётся отдельным OWNER-gate."
+  },
+  "gates": [
+    {
+      "id": "M10-01",
+      "title_ru": "Пользовательское прохождение P0–P9 и журнал времени",
+      "status": "OWNER",
+      "owner": "OWNER",
+      "release_blocking": true,
+      "evidence": [
+        "docs/M10_BUILD_TEST_PROTOCOL.md",
+        "docs/M10_TEST_JOURNAL_TEMPLATE.md"
+      ],
+      "note_ru": "Протокол и шаблон готовы; фактический survival-проход выполняет владелец. Minecraft/Forge в M10 не запускались."
+    },
+    {
+      "id": "M10-02",
+      "title_ru": "Статический поиск тупиков, обходов и ручных провалов",
+      "status": "DONE",
+      "owner": "CODEX",
+      "release_blocking": false,
+      "evidence": [
+        "docs/M10_GRIND_BUDGET_REPORT.md",
+        "docs/registries/progression_graph.json",
+        "docs/registries/bypass_decisions.json"
+      ],
+      "note_ru": "Граф и бюджет проверяются машинно; объяснённые дизайнерские ворота отделены от необъяснённых блокеров."
+    },
+    {
+      "id": "M10-03",
+      "title_ru": "Отдельный пользовательский журнал раздражения, ожидания и неясности",
+      "status": "OWNER",
+      "owner": "OWNER",
+      "release_blocking": true,
+      "evidence": [
+        "docs/M10_BUILD_TEST_PROTOCOL.md",
+        "docs/M10_TEST_JOURNAL_TEMPLATE.md"
+      ],
+      "note_ru": "Шкала I0–I4 и жёсткие пределы подготовлены; нужен фактический пользовательский прогон."
+    },
+    {
+      "id": "M10-04",
+      "title_ru": "Пользовательское измерение производительности",
+      "status": "OWNER",
+      "owner": "OWNER",
+      "release_blocking": true,
+      "evidence": [
+        "docs/M10_BUILD_TEST_PROTOCOL.md",
+        "docs/M10_TEST_JOURNAL_TEMPLATE.md"
+      ],
+      "note_ru": "Заданы воспроизводимые сцены, метод и числовые пороги FPS/TPS/MSPT; требуются реальные замеры на согласованном оборудовании."
+    },
+    {
+      "id": "M10-05",
+      "title_ru": "Multiplayer-проверка командных квестов",
+      "status": "OWNER",
+      "owner": "OWNER",
+      "release_blocking": true,
+      "evidence": [
+        "docs/M10_BUILD_TEST_PROTOCOL.md",
+        "docs/M10_TEST_JOURNAL_TEMPLATE.md"
+      ],
+      "note_ru": "Подготовлены сценарии синхронизации, join/leave, relog, наград и изоляции команд; нужен серверный прогон минимум с двумя игроками."
+    },
+    {
+      "id": "M10-06",
+      "title_ru": "Миграционные заметки",
+      "status": "DONE",
+      "owner": "CODEX",
+      "release_blocking": false,
+      "evidence": [
+        "docs/MIGRATION_NOTES_IF-M10-0001.md"
+      ],
+      "note_ru": "Описаны обновление существующего экземпляра, резервная копия, worldgen-границы, проверка состояния и откат без обещания совместимости, не подтверждённой игрой."
+    },
+    {
+      "id": "M10-07",
+      "title_ru": "Релизные профили и лицензии",
+      "status": "DONE",
+      "owner": "CODEX",
+      "release_blocking": false,
+      "evidence": [
+        "docs/M10_RELEASE_PROFILES.md",
+        "docs/THIRD_PARTY_NOTICES.md",
+        "docs/registries/release_files.json",
+        "docs/registries/generated/IF-M10-0001/license_inventory.json"
+      ],
+      "note_ru": "Профили и правила комплектации сформированы; сам публичный профиль честно остаётся NOT_READY из-за открытых release-blocker."
+    },
+    {
+      "id": "M10-08",
+      "title_ru": "Полный Known Issues",
+      "status": "DONE",
+      "owner": "CODEX",
+      "release_blocking": false,
+      "evidence": [
+        "docs/KNOWN_ISSUES.md"
+      ],
+      "note_ru": "Известные ограничения сведены в единый журнал с влиянием, обходом, владельцем решения и условием закрытия."
+    },
+    {
+      "id": "M10-09",
+      "title_ru": "Финальная сверка JAR, CurseForge project/file и SHA-256",
+      "status": "PARTIAL",
+      "owner": "SHARED",
+      "release_blocking": true,
+      "evidence": [
+        "docs/registries/curseforge_sources.json",
+        "manifest.json",
+        "docs/registries/generated/IF-M10-0001/mod_manifest_lock.json"
+      ],
+      "note_ru": "Для CurseForge-файлов исправлены три project ID и добавлен Tom's Storage в manifest. Сверка остаётся PARTIAL: установленный CC:Tweaked 1.120.0 не имеет версии 1.120.0 на CurseForge и нарушает действующее правило источников."
+    },
+    {
+      "id": "M10-10",
+      "title_ru": "Ноль необъяснённых пропусков русской локализации",
+      "status": "DONE",
+      "owner": "CODEX",
+      "release_blocking": false,
+      "evidence": [
+        "docs/RU_LOCALIZATION_REPORT.md",
+        "tools/generate_archive_lang_audit.ps1",
+        "tools/validate_ru_overlays.py",
+        "tools/build_cc_rom_ru.js",
+        "docs/registries/release_readiness.json"
+      ],
+      "note_ru": "Перевод принят: 606 JSON-файлов валидны, 235 страниц PneumaticCraft совпадают с исходным скелетом, 55 363 эффективных lang-значения проверены без расхождений параметров, а 100 справочных и 84 Lua-файла CraftOS прошли отдельный аудит. Остаточная латиница ограничена защищёнными названиями и техническими токенами."
+    },
+    {
+      "id": "M10-11",
+      "title_ru": "Редакторская вычитка обязательных квестов как единой гайд-книги",
+      "status": "PARTIAL",
+      "owner": "SHARED",
+      "release_blocking": true,
+      "evidence": [
+        "docs/M10_QUEST_EDITORIAL_AUDIT.md",
+        "docs/M10_GRIND_BUDGET_REPORT.md",
+        "docs/M10_BUILD_TEST_PROTOCOL.md"
+      ],
+      "note_ru": "Структура, достижимость, бюджет и слитая локализация проверены статически. Gate остаётся PARTIAL до непрерывной пользовательской вычитки обязательной ветки и прохождения без внешней wiki."
+    },
+    {
+      "id": "M10-12",
+      "title_ru": "Финальный grind-budget P0–P9",
+      "status": "DONE",
+      "owner": "CODEX",
+      "release_blocking": false,
+      "evidence": [
+        "docs/M10_GRIND_BUDGET_REPORT.md",
+        "docs/registries/grind_budget.json"
+      ],
+      "note_ru": "Статический отчёт охватывает P0–P9 и отличает допустимое обучение от повторного микрокрафта; фактические минуты собираются отдельно в M10-01 и M10-03."
+    },
+    {
+      "id": "M10-13",
+      "title_ru": "Multiplayer-регресс внешнего мира, оружия и операций",
+      "status": "OWNER",
+      "owner": "OWNER",
+      "release_blocking": true,
+      "evidence": [
+        "docs/M10_BUILD_TEST_PROTOCOL.md",
+        "docs/M10_TEST_JOURNAL_TEMPLATE.md"
+      ],
+      "note_ru": "Протокол покрывает Threat Director, 20/40/80 NPC, TaCZ ammo/reload, TACZ: NPCs, Easy NPC, CBC, cooldown, recovery и рестарт; результаты должен получить владелец в игре."
+    },
+    {
+      "id": "M10-14",
+      "title_ru": "Редакторская проверка будущих диалогов",
+      "status": "DEFERRED",
+      "owner": "OWNER",
+      "release_blocking": false,
+      "evidence": [
+        "docs/MASTER_DESIGN_DOCUMENT.md"
+      ],
+      "note_ru": "Отложено прямым решением владельца: полноценные диалоги пока остаются архитектурной задумкой и не создаются. Проверка persona cards и отдельных RU/EN начнётся вместе с авторингом сюжетных ветвей."
+    }
+  ],
+  "blockers": [
+    {
+      "id": "M10-BLK-001",
+      "kind": "SOURCE_POLICY",
+      "status": "OPEN",
+      "resolution_owner": "OWNER",
+      "evidence": [
+        "docs/registries/curseforge_sources.json",
+        "docs/KNOWN_ISSUES.md"
+      ],
+      "note_ru": "CC:Tweaked 1.120.0 установлен не из CurseForge. Для закрытия нужен выбранный и затем игровой проверенный CurseForge-only набор совместимых CC:Tweaked/Advanced Peripherals либо явное изменение политики распространения владельцем."
+    },
+    {
+      "id": "M10-BLK-002",
+      "kind": "LOCALIZATION",
+      "status": "RESOLVED",
+      "resolution_owner": "CODEX",
+      "evidence": [
+        "tools/validate_ru_overlays.py",
+        "tools/build_cc_rom_ru.js",
+        "docs/registries/release_readiness.json"
+      ],
+      "note_ru": "Поток перевода слит и прошёл структурный, форматный и остаточный языковой аудит. Игровая отрисовка и понятность проверяются отдельными runtime/editorial gate."
+    },
+    {
+      "id": "M10-BLK-003",
+      "kind": "RUNTIME_EVIDENCE",
+      "status": "OPEN",
+      "resolution_owner": "OWNER",
+      "evidence": [
+        "docs/M10_BUILD_TEST_PROTOCOL.md",
+        "docs/M10_TEST_JOURNAL_TEMPLATE.md"
+      ],
+      "note_ru": "Нет результатов полного прохождения, performance, multiplayer и M9 visual QA; это невозможно подтвердить статическим анализом."
+    },
+    {
+      "id": "M10-BLK-004",
+      "kind": "EDITORIAL_REVIEW",
+      "status": "OPEN",
+      "resolution_owner": "SHARED",
+      "evidence": [
+        "docs/M10_BUILD_TEST_PROTOCOL.md",
+        "docs/registries/release_readiness.json"
+      ],
+      "note_ru": "Локализация слита; остаётся непрерывная пользовательская вычитка и подтверждение игроком, что обязательная ветка проходится без внешней wiki."
+    }
+  ],
+  "release_contract": {
+    "manifest_path": "manifest.json",
+    "source_registry_path": "docs/registries/curseforge_sources.json",
+    "audit_directory": "docs/registries/generated/IF-M10-0001",
+    "license_inventory_path": "docs/registries/generated/IF-M10-0001/license_inventory.json",
+    "release_profiles_path": "docs/registries/release_files.json",
+    "required_public_archive_roots": [
+      "manifest.json",
+      "overrides/"
+    ],
+    "forbidden_public_archive_patterns": [
+      "overrides/mods/*.jar",
+      "saves/**",
+      "logs/**",
+      "crash-reports/**",
+      "backups/**",
+      "hs_err_pid*.log",
+      "tmp/**"
+    ]
+  }
+}

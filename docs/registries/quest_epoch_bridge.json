@@ -4,7 +4,7 @@
   "status": "STATIC_IMPLEMENTED_USER_RUNTIME_PENDING",
   "authority": {
     "parameter": "industrial_frontier:tech_epoch",
-    "state_owner": "kubejs/server_scripts/40_balance/m3_threat_director.js",
+    "state_owner": "kubejs/server_scripts/40_balance/03_threat_director.js",
     "team_key": "FTB_QUESTS_TEAM_UUID",
     "username_as_persistent_key": false,
     "mirror_policy": "Scoreboard и другие зеркала доступны только для чтения и никогда не повышают эпоху."
@@ -43,7 +43,7 @@
     "mods/ftb-xmod-compat-forge-2.1.3.jar!dev.ftb.mods.ftbxmodcompat.ftbquests.kubejs.QuestObjectCompletedEventJS",
     "mods/ftb-quests-forge-2001.4.22.jar!dev.ftb.mods.ftbquests.quest.TeamData#getTeamId",
     "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js",
-    "kubejs/server_scripts/40_balance/m3_threat_director.js",
+    "kubejs/server_scripts/40_balance/03_threat_director.js",
     "kubejs/server_scripts/00_core/if_commands.js",
     "tools/test_quest_epoch_bridge.js"
   ],

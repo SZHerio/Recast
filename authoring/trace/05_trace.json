@@ -1,0 +1,168 @@
+{
+  "schema_version": 2,
+  "build_id": "IF-M5-0001",
+  "features": [
+    {
+      "id": "m5.ae2_entry_contract",
+      "owner": "Recast digital factory",
+      "artifact_count": 7,
+      "removed_count": 3,
+      "files": [
+        "kubejs/server_scripts/10_progression/05_ae2_entry_contract.js",
+        "docs/registries/stable_ids.json",
+        "docs/registries/bypass_decisions.json"
+      ],
+      "consumers": [
+        "P5 progression",
+        "AE2 teaching chapter",
+        "owner runtime recipe test"
+      ]
+    },
+    {
+      "id": "m5.ae2_stages",
+      "owner": "Recast digital factory",
+      "artifact_count": 3,
+      "files": [
+        "kubejs/server_scripts/10_progression/05_ae2_stages.js"
+      ],
+      "consumers": [
+        "HV autocrafting gate",
+        "EV acceleration gate"
+      ]
+    },
+    {
+      "id": "m5.bulk_processing",
+      "owner": "Recast ore processing",
+      "artifact_count": 67,
+      "files": [
+        "kubejs/server_scripts/20_process_lines/05_bulk_processing.js"
+      ],
+      "consumers": [
+        "GregTech ore ownership",
+        "P5 chapter"
+      ]
+    },
+    {
+      "id": "m5.transport_domains",
+      "owner": "Recast transport split",
+      "artifact_count": 2,
+      "removed_count": 11,
+      "files": [
+        "kubejs/server_scripts/30_integrations/05_transport_domains.js"
+      ],
+      "consumers": [
+        "freight mainline",
+        "passenger transit",
+        "water freight"
+      ]
+    },
+    {
+      "id": "m5.ordnance_limits",
+      "owner": "Recast ordnance",
+      "artifact_count": 4,
+      "removed_count": 4,
+      "files": [
+        "kubejs/server_scripts/10_progression/05_ordnance_limits.js"
+      ],
+      "consumers": [
+        "operations chapter",
+        "faction defence"
+      ]
+    },
+    {
+      "id": "m5.regional_contracts",
+      "owner": "Recast city economy",
+      "artifact_count": 6,
+      "files": [
+        "kubejs/server_scripts/40_balance/05_regional_contracts.js"
+      ],
+      "consumers": [
+        "city signals",
+        "Threat Director",
+        "P5 chapter"
+      ]
+    },
+    {
+      "id": "m5.operations",
+      "owner": "Recast outer world",
+      "artifact_count": 5,
+      "files": [
+        "kubejs/server_scripts/40_balance/05_operations.js"
+      ],
+      "consumers": [
+        "operations chapter",
+        "treaties",
+        "squad loadouts"
+      ]
+    },
+    {
+      "id": "m5.storage_and_palettes",
+      "owner": "Recast construction and storage",
+      "artifact_count": 6,
+      "files": [
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/blocks/palette/p4.json",
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/blocks/palette/p5.json",
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/storage/long_term_reserve.json",
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/storage/field_kit.json",
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/storage/returnable_food_container.json",
+        "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/items/furniture/city_set.json"
+      ],
+      "consumers": [
+        "regional contracts",
+        "district building",
+        "food cycle"
+      ]
+    },
+    {
+      "id": "m5.questbook",
+      "owner": "Recast russian questbook",
+      "artifact_count": 20,
+      "files": [
+        "authoring/quests/specs/15_p5_regional_logistics.json",
+        "authoring/quests/specs/46_operations_and_defence.json",
+        "config/ftbquests/quests/chapters/15_p5_regional_logistics.snbt",
+        "config/ftbquests/quests/chapters/46_operations_and_defence.snbt"
+      ],
+      "consumers": [
+        "player progression",
+        "owner playtest"
+      ]
+    },
+    {
+      "id": "m5.milestone_registration",
+      "owner": "Recast reporting discipline",
+      "artifact_count": 14,
+      "files": [
+        "docs/registries/milestone_status.json"
+      ],
+      "consumers": [
+        "authoring lint",
+        "readiness report"
+      ]
+    },
+    {
+      "id": "m5.audit_version_semantics",
+      "owner": "Recast static tooling",
+      "artifact_count": 1,
+      "files": [
+        "tools/audit_instance.ps1"
+      ],
+      "consumers": [
+        "dependency audit",
+        "provenance audit"
+      ]
+    },
+    {
+      "id": "m5.tag_census",
+      "owner": "Recast static tooling",
+      "artifact_count": 13,
+      "files": [
+        "kubejs/server_scripts/00_core/05_registry_census.js"
+      ],
+      "consumers": [
+        "Immersive Engineering steel decision",
+        "future tag-based recipes"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "build_id": "IF-M6-0001",
+  "features": [
+    {
+      "id": "m6.nuclear_passports",
+      "owner": "Recast nuclear materials",
+      "artifact_count": 7,
+      "files": [
+        "docs/registries/substance_passports.json",
+        "docs/registries/progression_graph.json"
+      ],
+      "consumers": [
+        "P6 chapter",
+        "fuel cycle",
+        "worldgen ownership"
+      ]
+    },
+    {
+      "id": "m6.epoch_gate",
+      "owner": "Recast civil nuclear industry",
+      "artifact_count": 3,
+      "removed_count": 8,
+      "files": [
+        "kubejs/server_scripts/10_progression/06_nuclear_epoch_gate.js"
+      ],
+      "consumers": [
+        "P6 progression",
+        "owner runtime recipe test"
+      ]
+    },
+    {
+      "id": "m6.nuclear_programme",
+      "owner": "Recast city and outer world",
+      "artifact_count": 5,
+      "files": [
+        "kubejs/server_scripts/40_balance/06_nuclear_programme.js"
+      ],
+      "consumers": [
+        "city contract",
+        "safety teaching",
+        "faction operations"
+      ]
+    },
+    {
+      "id": "m6.domain_promotion",
+      "owner": "Recast architecture",
+      "artifact_count": 1,
+      "files": [
+        "docs/registries/domain_process_ownership.json",
+        "docs/registries/accepted_deviations.json",
+        "tools/validate_m2_architecture.ps1"
+      ],
+      "consumers": [
+        "architecture validator",
+        "readiness report"
+      ]
+    },
+    {
+      "id": "m6.questbook",
+      "owner": "Recast russian questbook",
+      "artifact_count": 14,
+      "files": [
+        "authoring/quests/specs/16_p6_nuclear.json",
+        "config/ftbquests/quests/chapters/16_p6_nuclear.snbt"
+      ],
+      "consumers": [
+        "player progression",
+        "owner playtest"
+      ]
+    },
+    {
+      "id": "m6.bypass_decisions",
+      "owner": "Recast bypass registry",
+      "artifact_count": 3,
+      "files": [
+        "docs/registries/bypass_decisions.json",
+        "docs/registries/grind_budget.json"
+      ],
+      "consumers": [
+        "architecture validator",
+        "grind audit"
+      ]
+    }
+  ]
+}

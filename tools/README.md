@@ -39,10 +39,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\audit_instance.p
 - запрет worldgen Create;
 - синтаксис JavaScript через Node.js;
 - регистрацию ID рецептов и Ponder-сцен.
-- существование файлов из `authoring/trace/m1_trace.json` и фактические количества 14 квестов, 119 GuideME-страниц, 90 Alex’s Mobs-overrides и 2 Citadel-страниц.
+- существование файлов из `authoring/trace/trace.json` и фактические количества 14 квестов, 119 GuideME-страниц, 90 Alex’s Mobs-overrides и 2 Citadel-страниц.
 - 12 M2-тегов допустимых входов, конфигурационные договоры GTCEu, каноническую латунь, закрытие выбранных обходов Create и ранних корней AE2.
 - структуру русской главы «Академия материалов»: 10 необязательных учебных квестов без наград и скрытого изменения прогресса.
-- существование файлов из `authoring/trace/m2_trace.json` и запуск отдельной семантической проверки архитектуры M2.
+- существование файлов из `authoring/trace/02_trace.json` и запуск отдельной семантической проверки архитектуры M2.
 - локальные Markdown-ссылки во всём корпусе `docs/`, `authoring/`, `threat_director/` и `tools/`.
 
 Запуск с закреплённым Node.js Codex:

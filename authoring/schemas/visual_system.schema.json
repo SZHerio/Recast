@@ -1,0 +1,475 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/visual_system.schema.json",
+  "title": "Industrial Frontier M9 visual-system contracts",
+  "description": "Schema shared by the authoritative M9 visual registry and its immutable asset-provenance ledger.",
+  "oneOf": [
+    { "$ref": "#/$defs/visualRegistry" },
+    { "$ref": "#/$defs/provenanceRegistry" }
+  ],
+  "$defs": {
+    "stableId": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?![A-Za-z]:)(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\\\]+$"
+    },
+    "hexColor": {
+      "type": "string",
+      "pattern": "^#[0-9A-F]{6}$"
+    },
+    "assetId": {
+      "type": "string",
+      "pattern": "^industrial_frontier:asset/[a-z0-9_./-]+$"
+    },
+    "sourceArtworkId": {
+      "type": "string",
+      "pattern": "^industrial_frontier:source/[a-z0-9_./-]+$"
+    },
+    "screen": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "layout_path",
+        "identifier",
+        "activation",
+        "required_references",
+        "localization_keys",
+        "asset_ids"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "kind": {
+          "enum": ["TITLE", "DRIPPY_LOADING", "SERVICE"]
+        },
+        "layout_path": { "$ref": "#/$defs/relativePath" },
+        "identifier": { "type": "string", "minLength": 1 },
+        "activation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "token"],
+          "properties": {
+            "path": { "$ref": "#/$defs/relativePath" },
+            "token": { "type": "string", "minLength": 1 }
+          }
+        },
+        "required_references": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "localization_keys": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^industrial_frontier\\." }
+        },
+        "asset_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/assetId" }
+        }
+      }
+    },
+    "epoch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "code", "order", "localization_key", "asset_id", "resource_location", "quest_chapter_path"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "code": { "type": "string", "pattern": "^P[0-9]$" },
+        "order": { "type": "integer", "minimum": 0, "maximum": 9 },
+        "localization_key": { "type": "string", "pattern": "^industrial_frontier\\.visual\\.epoch\\.p[0-9]$" },
+        "asset_id": { "$ref": "#/$defs/assetId" },
+        "resource_location": { "$ref": "#/$defs/stableId" },
+        "quest_chapter_path": { "$ref": "#/$defs/relativePath" }
+      }
+    },
+    "processPathway": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "localization_key", "asset_id", "resource_location"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "localization_key": { "type": "string", "pattern": "^industrial_frontier\\.visual\\.process\\." },
+        "asset_id": { "$ref": "#/$defs/assetId" },
+        "resource_location": { "$ref": "#/$defs/stableId" }
+      }
+    },
+    "faction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "slug",
+        "localization_key",
+        "runtime_color_token",
+        "runtime_color_hex",
+        "display_color_hex",
+        "emblem_asset_id",
+        "silhouette_asset_id",
+        "base_asset_ids"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "slug": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "localization_key": { "type": "string", "pattern": "^industrial_frontier\\.visual\\.faction\\." },
+        "runtime_color_token": { "type": "string", "pattern": "^[A-Z_]+$" },
+        "runtime_color_hex": { "$ref": "#/$defs/hexColor" },
+        "display_color_hex": { "$ref": "#/$defs/hexColor" },
+        "emblem_asset_id": { "$ref": "#/$defs/assetId" },
+        "silhouette_asset_id": { "$ref": "#/$defs/assetId" },
+        "base_asset_ids": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["b0", "b1", "b2", "b3", "b4", "b5", "b6"],
+          "properties": {
+            "b0": { "$ref": "#/$defs/assetId" },
+            "b1": { "$ref": "#/$defs/assetId" },
+            "b2": { "$ref": "#/$defs/assetId" },
+            "b3": { "$ref": "#/$defs/assetId" },
+            "b4": { "$ref": "#/$defs/assetId" },
+            "b5": { "$ref": "#/$defs/assetId" },
+            "b6": { "$ref": "#/$defs/assetId" }
+          }
+        }
+      }
+    },
+    "baseLevel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "code", "order", "localization_key"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "code": { "type": "string", "pattern": "^B[0-6]$" },
+        "order": { "type": "integer", "minimum": 0, "maximum": 6 },
+        "localization_key": { "type": "string", "pattern": "^industrial_frontier\\.visual\\.base\\.b[0-6]$" }
+      }
+    },
+    "reputationTier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "slug", "order", "minimum", "maximum", "localization_key", "asset_id"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "slug": { "type": "string", "pattern": "^[a-z_]+$" },
+        "order": { "type": "integer", "minimum": 0, "maximum": 6 },
+        "minimum": { "type": "integer", "minimum": -100, "maximum": 100 },
+        "maximum": { "type": "integer", "minimum": -100, "maximum": 100 },
+        "localization_key": { "type": "string", "pattern": "^industrial_frontier\\.visual\\.reputation\\." },
+        "asset_id": { "$ref": "#/$defs/assetId" }
+      }
+    },
+    "namedVisual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "slug", "order", "localization_key", "asset_id"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stableId" },
+        "slug": { "type": "string", "pattern": "^[a-z_]+$" },
+        "order": { "type": "integer", "minimum": 0 },
+        "localization_key": { "type": "string", "pattern": "^industrial_frontier\\.visual\\." },
+        "asset_id": { "$ref": "#/$defs/assetId" }
+      }
+    },
+    "visualRegistry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "$schema",
+        "schema_version",
+        "registry_id",
+        "milestone",
+        "status",
+        "asset_provenance_path",
+        "implementation_stack",
+        "brand",
+        "asset_roots",
+        "screens",
+        "epochs",
+        "process_pathways",
+        "factions",
+        "base_levels",
+        "reputation_tiers",
+        "treaties",
+        "operation_stages",
+        "localization_contract",
+        "validation_contract"
+      ],
+      "properties": {
+        "$schema": { "type": "string", "minLength": 1 },
+        "schema_version": { "const": 1 },
+        "registry_id": { "const": "industrial_frontier:visual_system" },
+        "milestone": { "const": "M9" },
+        "status": { "enum": ["IMPLEMENTED_STATIC_UNTESTED", "VERIFIED_IN_GAME"] },
+        "asset_provenance_path": { "$ref": "#/$defs/relativePath" },
+        "implementation_stack": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "version", "role"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^[a-z0-9_.-]+$" },
+              "version": { "type": "string", "minLength": 1 },
+              "role": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "brand": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "namespace", "palette", "accessibility_rules"],
+          "properties": {
+            "name": { "const": "Recast" },
+            "namespace": { "const": "industrial_frontier" },
+            "palette": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["cold_deep", "cold_surface", "steel", "molten", "molten_bright", "text", "text_muted"],
+              "properties": {
+                "cold_deep": { "$ref": "#/$defs/hexColor" },
+                "cold_surface": { "$ref": "#/$defs/hexColor" },
+                "steel": { "$ref": "#/$defs/hexColor" },
+                "molten": { "$ref": "#/$defs/hexColor" },
+                "molten_bright": { "$ref": "#/$defs/hexColor" },
+                "text": { "$ref": "#/$defs/hexColor" },
+                "text_muted": { "$ref": "#/$defs/hexColor" }
+              }
+            },
+            "accessibility_rules": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "asset_roots": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["resource_pack", "resource_namespace", "fancymenu", "generator_source", "fonts"],
+          "properties": {
+            "resource_pack": { "$ref": "#/$defs/relativePath" },
+            "resource_namespace": { "$ref": "#/$defs/relativePath" },
+            "fancymenu": { "$ref": "#/$defs/relativePath" },
+            "generator_source": { "$ref": "#/$defs/relativePath" },
+            "fonts": { "$ref": "#/$defs/relativePath" }
+          }
+        },
+        "screens": {
+          "type": "array",
+          "minItems": 8,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/screen" }
+        },
+        "epochs": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10,
+          "items": { "$ref": "#/$defs/epoch" }
+        },
+        "process_pathways": {
+          "type": "array",
+          "minItems": 22,
+          "items": { "$ref": "#/$defs/processPathway" }
+        },
+        "factions": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": { "$ref": "#/$defs/faction" }
+        },
+        "base_levels": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": { "$ref": "#/$defs/baseLevel" }
+        },
+        "reputation_tiers": {
+          "type": "array",
+          "minItems": 7,
+          "maxItems": 7,
+          "items": { "$ref": "#/$defs/reputationTier" }
+        },
+        "treaties": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "$ref": "#/$defs/namedVisual" }
+        },
+        "operation_stages": {
+          "type": "array",
+          "minItems": 9,
+          "maxItems": 9,
+          "items": { "$ref": "#/$defs/namedVisual" }
+        },
+        "localization_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ru_path", "en_path", "required_keys", "parity_required"],
+          "properties": {
+            "ru_path": { "$ref": "#/$defs/relativePath" },
+            "en_path": { "$ref": "#/$defs/relativePath" },
+            "required_keys": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": { "type": "string", "pattern": "^industrial_frontier\\." }
+            },
+            "parity_required": { "const": true }
+          }
+        },
+        "validation_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["validator_path", "no_game_launch", "hash_algorithm", "expected_counts", "quest_icon_scan_roots"],
+          "properties": {
+            "validator_path": { "$ref": "#/$defs/relativePath" },
+            "no_game_launch": { "const": true },
+            "hash_algorithm": { "const": "SHA256" },
+            "expected_counts": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["screens", "epochs", "process_pathways", "factions", "base_levels", "reputation_tiers", "treaties", "operation_stages"],
+              "properties": {
+                "screens": { "const": 8 },
+                "epochs": { "const": 10 },
+                "process_pathways": { "const": 22 },
+                "factions": { "const": 6 },
+                "base_levels": { "const": 7 },
+                "reputation_tiers": { "const": 7 },
+                "treaties": { "const": 5 },
+                "operation_stages": { "const": 9 }
+              }
+            },
+            "quest_icon_scan_roots": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": { "$ref": "#/$defs/relativePath" }
+            }
+          }
+        }
+      }
+    },
+    "provenanceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["asset_id", "path", "kind", "source_type", "license_id", "sha256", "bytes"],
+      "properties": {
+        "asset_id": { "$ref": "#/$defs/assetId" },
+        "path": { "$ref": "#/$defs/relativePath" },
+        "resource_location": { "$ref": "#/$defs/stableId" },
+        "kind": { "enum": ["PNG", "FONT_TTF", "LICENSE_TEXT"] },
+        "source_type": { "enum": ["PROJECT_GENERATED", "PROJECT_SOURCE", "LICENSED_FONT", "DERIVED_PROJECT_ASSET"] },
+        "license_id": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9A-F]{64}$" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "derived_from": { "$ref": "#/$defs/assetId" },
+        "source_artwork_id": { "$ref": "#/$defs/sourceArtworkId" },
+        "source_note": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "PNG" } }, "required": ["kind"] },
+          "then": { "required": ["width", "height"] }
+        }
+      ]
+    },
+    "sourceArtworkRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "path",
+        "kind",
+        "origin_type",
+        "license_id",
+        "sha256",
+        "bytes",
+        "width",
+        "height",
+        "created_at",
+        "generator_provider",
+        "model_disclosure",
+        "prompt_record_status",
+        "prompt_summary_ru",
+        "prompt_summary_en",
+        "rights_basis",
+        "output_asset_ids"
+      ],
+      "properties": {
+        "source_id": { "$ref": "#/$defs/sourceArtworkId" },
+        "path": { "$ref": "#/$defs/relativePath" },
+        "kind": { "const": "PNG" },
+        "origin_type": { "const": "PROJECT_AI_GENERATED" },
+        "license_id": { "const": "PROJECT-ORIGINAL" },
+        "sha256": { "type": "string", "pattern": "^[0-9A-F]{64}$" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "created_at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[+-][0-9]{2}:[0-9]{2}$"
+        },
+        "generator_provider": { "type": "string", "minLength": 1 },
+        "model_disclosure": { "type": "string", "minLength": 1 },
+        "prompt_record_status": { "const": "RECONSTRUCTED_SUMMARY_ONLY" },
+        "prompt_summary_ru": { "type": "string", "minLength": 1 },
+        "prompt_summary_en": { "type": "string", "minLength": 1 },
+        "rights_basis": { "type": "string", "minLength": 1 },
+        "output_asset_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/assetId" }
+        }
+      }
+    },
+    "provenanceRegistry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["$schema", "schema_version", "registry_id", "status", "hash_algorithm", "path_policy", "generator", "source_artwork", "assets"],
+      "properties": {
+        "$schema": { "type": "string", "minLength": 1 },
+        "schema_version": { "const": 1 },
+        "registry_id": { "const": "industrial_frontier:asset_provenance" },
+        "status": { "const": "LOCKED_STATIC_UNTESTED" },
+        "hash_algorithm": { "const": "SHA256" },
+        "path_policy": { "const": "WORKSPACE_RELATIVE_FORWARD_SLASH" },
+        "generator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["visual_generator_path", "brand_generator_path", "hero_installer_path", "method", "font_license_path"],
+          "properties": {
+            "visual_generator_path": { "$ref": "#/$defs/relativePath" },
+            "brand_generator_path": { "$ref": "#/$defs/relativePath" },
+            "hero_installer_path": { "$ref": "#/$defs/relativePath" },
+            "method": { "type": "string", "minLength": 1 },
+            "font_license_path": { "$ref": "#/$defs/relativePath" }
+          }
+        },
+        "source_artwork": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 16,
+          "items": { "$ref": "#/$defs/sourceArtworkRecord" }
+        },
+        "assets": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/provenanceRecord" }
+        }
+      }
+    }
+  }
+}

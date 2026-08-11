@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://industrial-frontier.invalid/schemas/grind_budget.schema.json",
+  "title": "Recast M2 grind budget",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "registry_id", "status", "limits", "critical_components", "chains"],
+  "properties": {
+    "$schema": { "const": "../../authoring/schemas/grind_budget.schema.json" },
+    "schema_version": { "const": 1 },
+    "registry_id": { "const": "industrial_frontier:grind_budget" },
+    "status": { "enum": ["STATIC_BASELINE_USER_TEST_PENDING"] },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["training_batches_max", "manual_repeats_green_max", "manual_repeats_hard_max", "transfers_green_max", "transfers_hard_max", "passive_minutes_green_max", "passive_minutes_hard_max"],
+      "properties": {
+        "training_batches_max": { "const": 3 },
+        "manual_repeats_green_max": { "const": 3 },
+        "manual_repeats_hard_max": { "const": 8 },
+        "transfers_green_max": { "const": 4 },
+        "transfers_hard_max": { "const": 10 },
+        "passive_minutes_green_max": { "const": 3 },
+        "passive_minutes_hard_max": { "const": 8 }
+      }
+    },
+    "critical_components": {
+      "type": "array",
+      "minItems": 21,
+      "maxItems": 21,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "component_id",
+          "epoch",
+          "status",
+          "title_ru",
+          "title_en",
+          "mandatory",
+          "required_refs",
+          "bootstrap_route_ru",
+          "automation_route_ru",
+          "automation_epoch",
+          "mass_demand_epoch",
+          "budget_ref",
+          "evidence_refs",
+          "gate"
+        ],
+        "properties": {
+          "component_id": { "type": "string", "pattern": "^industrial_frontier:component/p[0-9]/[a-z0-9_./-]+$" },
+          "epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "status": { "enum": ["ACTIVE_M2", "DESIGN_BASELINE", "GATED_NOT_INSTALLED"] },
+          "title_ru": { "type": "string", "minLength": 1 },
+          "title_en": { "type": "string", "minLength": 1 },
+          "mandatory": { "const": true },
+          "required_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "pattern": "^industrial_frontier:[a-z0-9_./-]+$" },
+            "uniqueItems": true
+          },
+          "bootstrap_route_ru": { "type": "string", "minLength": 1 },
+          "automation_route_ru": { "type": "string", "minLength": 1 },
+          "automation_epoch": { "type": ["integer", "null"], "minimum": 0, "maximum": 9 },
+          "mass_demand_epoch": { "type": ["integer", "null"], "minimum": 0, "maximum": 9 },
+          "budget_ref": { "type": "string", "pattern": "^industrial_frontier:grind/[a-z0-9_./-]+$" },
+          "evidence_refs": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+          "gate": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "chains": {
+      "type": "array",
+      "minItems": 18,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["chain_id", "epoch", "title_ru", "status", "goal_ru", "critical_component_refs", "training_batches", "repeated_manual_operations", "manual_transfers", "active_minutes", "passive_minutes", "rng_percent", "deterministic_alternative_ru", "automation_epoch", "mass_demand_epoch", "returned_tools_or_catalysts", "risk_flags", "result", "decision_ru", "evidence_refs", "gate"],
+        "properties": {
+          "chain_id": { "type": "string", "pattern": "^industrial_frontier:grind/[a-z0-9_./-]+$" },
+          "epoch": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "title_ru": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["ACTIVE_M2", "DESIGN_BASELINE", "GATED_NOT_INSTALLED"] },
+          "goal_ru": { "type": "string", "minLength": 1 },
+          "critical_component_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "pattern": "^industrial_frontier:component/p[0-9]/[a-z0-9_./-]+$" },
+            "uniqueItems": true
+          },
+          "training_batches": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "repeated_manual_operations": { "type": "integer", "minimum": 0 },
+          "manual_transfers": { "type": "integer", "minimum": 0 },
+          "active_minutes": { "type": "number", "minimum": 0 },
+          "passive_minutes": { "type": "number", "minimum": 0 },
+          "rng_percent": { "type": "number", "minimum": 0, "maximum": 100 },
+          "deterministic_alternative_ru": { "type": "string", "minLength": 1 },
+          "automation_epoch": { "type": ["integer", "null"], "minimum": 0, "maximum": 9 },
+          "mass_demand_epoch": { "type": ["integer", "null"], "minimum": 0, "maximum": 9 },
+          "returned_tools_or_catalysts": { "type": "boolean" },
+          "risk_flags": {
+            "type": "array",
+            "items": { "enum": ["MICROCRAFT", "MANUAL_TRANSFER", "PASSIVE_WAIT", "RNG", "REBUILD", "CONSUMED_TOOL", "NONE"] },
+            "uniqueItems": true
+          },
+          "result": { "enum": ["GREEN", "EXPLAIN", "REWORK", "GATED"] },
+          "decision_ru": { "type": "string", "minLength": 1 },
+          "evidence_refs": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+          "gate": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

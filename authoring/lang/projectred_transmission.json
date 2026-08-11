@@ -68,5 +68,6 @@
   "item.projectred_transmission.yellow_bundled_wire": "Жёлтый многожильный кабель",
   "item.projectred_transmission.yellow_framed_bundled_wire": "Жёлтый каркасный многожильный кабель",
   "item.projectred_transmission.yellow_framed_insulated_wire": "Жёлтый каркасный изолированный провод",
-  "item.projectred_transmission.yellow_insulated_wire": "Жёлтый изолированный провод"
+  "item.projectred_transmission.yellow_insulated_wire": "Жёлтый изолированный провод",
+  "itemGroup.projectred_transmission": "Project Red: провода"
 }

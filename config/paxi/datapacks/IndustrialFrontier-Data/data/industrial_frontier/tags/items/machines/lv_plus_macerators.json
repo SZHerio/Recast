@@ -1,0 +1,14 @@
+{
+  "__comment": "Предметная пара тега блоков machines/lv_plus_macerators. Задание засчитывает изготовленную дробилку любого уровня от LV и выше: апгрейд линии не должен закрывать игроку доступ к проверке.",
+  "replace": false,
+  "values": [
+    "gtceu:lv_macerator",
+    "gtceu:mv_macerator",
+    "gtceu:hv_macerator",
+    "gtceu:ev_macerator",
+    "gtceu:iv_macerator",
+    "gtceu:luv_macerator",
+    "gtceu:zpm_macerator",
+    "gtceu:uv_macerator"
+  ]
+}

@@ -187,9 +187,9 @@ function Get-ObjectValues {
     return @($Object.PSObject.Properties | ForEach-Object { $_.Value })
 }
 
-$schemaDoc = Read-ContractJson 'authoring/schemas/m9_visual_system.schema.json' 'M9 JSON schema'
-$registryDoc = Read-ContractJson 'docs/registries/m9_visual_system.json' 'M9 visual registry'
-$provenanceDoc = Read-ContractJson 'docs/registries/m9_asset_provenance.json' 'M9 provenance registry'
+$schemaDoc = Read-ContractJson 'authoring/schemas/visual_system.schema.json' 'M9 JSON schema'
+$registryDoc = Read-ContractJson 'docs/registries/visual_system.json' 'M9 visual registry'
+$provenanceDoc = Read-ContractJson 'docs/registries/asset_provenance.json' 'M9 provenance registry'
 
 if ($null -eq $schemaDoc -or $null -eq $registryDoc -or $null -eq $provenanceDoc) {
     foreach ($message in $errors) { Write-Host "[M9][ERROR] $message" -ForegroundColor Red }
@@ -243,10 +243,10 @@ if ($null -ne $testJsonCommand) {
 if ([int]$registry.schema_version -ne 1 -or [int]$provenance.schema_version -ne 1) {
     Add-ValidationError 'M9 registry schema_version must be 1.'
 }
-if ([string]$registry.registry_id -ne 'industrial_frontier:m9/visual_system') {
+if ([string]$registry.registry_id -ne 'industrial_frontier:visual_system') {
     Add-ValidationError "Unexpected visual registry ID: $($registry.registry_id)"
 }
-if ([string]$provenance.registry_id -ne 'industrial_frontier:m9/asset_provenance') {
+if ([string]$provenance.registry_id -ne 'industrial_frontier:asset_provenance') {
     Add-ValidationError "Unexpected provenance registry ID: $($provenance.registry_id)"
 }
 if ([string]$registry.status -ne 'IMPLEMENTED_STATIC_UNTESTED') {
@@ -305,7 +305,7 @@ foreach ($collectionName in $countProperties) {
     }
 }
 
-$m2ProgressionDoc = Read-ContractJson 'docs/registries/m2_progression_graph.json' 'M2 progression graph'
+$m2ProgressionDoc = Read-ContractJson 'docs/registries/progression_graph.json' 'M2 progression graph'
 for ($epochIndex = 0; $epochIndex -lt 10; $epochIndex++) {
     $epoch = @($registry.epochs | Where-Object { [int]$_.order -eq $epochIndex })
     if ($epoch.Count -ne 1) {
@@ -318,11 +318,11 @@ for ($epochIndex = 0; $epochIndex -lt 10; $epochIndex++) {
         Add-ValidationError "Epoch order $epochIndex does not use canonical ID/code $expectedEpochId / P$epochIndex."
     }
     if ($null -ne $m2ProgressionDoc -and -not $m2ProgressionDoc.Raw.Contains($expectedEpochId)) {
-        Add-ValidationError "Epoch $expectedEpochId is absent from m2_progression_graph.json."
+        Add-ValidationError "Epoch $expectedEpochId is absent from progression_graph.json."
     }
 }
 
-$m2ProcessesDoc = Read-ContractJson 'docs/registries/m2_domain_process_ownership.json' 'M2 domain/process ownership'
+$m2ProcessesDoc = Read-ContractJson 'docs/registries/domain_process_ownership.json' 'M2 domain/process ownership'
 if ($null -ne $m2ProcessesDoc) {
     $canonicalProcessIds = @([regex]::Matches($m2ProcessesDoc.Raw, 'industrial_frontier:pathway/[a-z0-9_./-]+') | ForEach-Object { $_.Value } | Sort-Object -Unique)
     $visualProcessIds = @($registry.process_pathways | ForEach-Object { [string]$_.id })
@@ -331,7 +331,7 @@ if ($null -ne $m2ProcessesDoc) {
 
 $canonicalFactionSlugs = @('zemlemer', 'meridian', 'free_caravans', 'helios', 'ash_root', 'scar')
 Compare-ExactSets $canonicalFactionSlugs @($registry.factions | ForEach-Object { [string]$_.slug }) 'M9 faction slugs'
-$factionRuntimePath = Resolve-ContractPath 'kubejs/server_scripts/40_balance/m85_factions_1_data.js'
+$factionRuntimePath = Resolve-ContractPath 'kubejs/server_scripts/40_balance/85_factions_1_data.js'
 if (Test-Path -LiteralPath $factionRuntimePath -PathType Leaf) {
     $factionRuntimeRaw = Get-Content -Raw -LiteralPath $factionRuntimePath
     foreach ($faction in @($registry.factions)) {

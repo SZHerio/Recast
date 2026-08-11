@@ -1,6 +1,7 @@
 {
   "config.jade.plugin_minecraft.vapourware.fuel": "Топливо VapourWare",
   "item.vapourware.wrench": "Универсальный гаечный ключ",
+  "itemGroup.vapourware": "VapourWare",
   "vapourware.fuel": "Топливо: %d",
   "vapourware.fuel.info": "Для работы требуется топливо",
   "vapourware.fuel_excess.info": "Избыточное топливо расходуется только тогда, когда без этого машина не может работать. При использовании ценного топлива из других модов возможны потери.",

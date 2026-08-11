@@ -61,6 +61,10 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "agricraft": {
+    "soil": true,
+    "crop_block": true
+  },
   "lightmanscurrency": {
     "model_variant": true,
     "model_variant.locked": false,

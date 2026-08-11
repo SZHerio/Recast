@@ -1,21 +1,21 @@
 {
-  "audit_id": "industrial_frontier:m10/progression_grind_static_audit",
+  "audit_id": "industrial_frontier:progression_grind_static_audit",
   "audit_version": 1,
   "generated_at_utc": "2026-08-08T14:30:04+00:00",
   "scope": "Static registry audit only; Minecraft/Forge was not launched.",
   "inputs": {
     "progression_graph": {
-      "path": "docs/registries/m2_progression_graph.json",
+      "path": "docs/registries/progression_graph.json",
       "sha256": "6944F2448D7F91E6912E6C274E327ED59C1FBD06F377326F8A5AC99854E2AB9B",
       "bytes": 324671
     },
     "substance_passports": {
-      "path": "docs/registries/m2_substance_passports.json",
+      "path": "docs/registries/substance_passports.json",
       "sha256": "8514FAABF6BAAEFFD91D47E11D0BEBD3DE7976FC7B2FB883BDF4FF6060638BA9",
       "bytes": 493269
     },
     "grind_budget": {
-      "path": "docs/registries/m2_grind_budget.json",
+      "path": "docs/registries/grind_budget.json",
       "sha256": "E80AB50804A4CA894A3D47B2EAC0707E78129573A1E1F1986A2430FBA22F7F79",
       "bytes": 61303
     }
@@ -242,8 +242,8 @@
       "evidence_refs": [
         "docs/FURNITURE_ARCHITECTURE_FOOD_CURSEFORGE_AUDIT.md",
         "docs/registries/curseforge_sources.json",
-        "kubejs/server_scripts/40_balance/m4_city_signals.js",
-        "kubejs/server_scripts/40_balance/m4_municipal_contracts.js"
+        "kubejs/server_scripts/40_balance/04_city_signals.js",
+        "kubejs/server_scripts/40_balance/04_municipal_contracts.js"
       ]
     },
     {
@@ -255,8 +255,8 @@
       "explained": true,
       "evidence_refs": [
         "docs/GLOBAL_TECH_CITY_CURSEFORGE_AUDIT.md#transport",
-        "kubejs/server_scripts/30_integrations/m5_transport_domains.js",
-        "kubejs/server_scripts/40_balance/m5_regional_contracts.js"
+        "kubejs/server_scripts/30_integrations/05_transport_domains.js",
+        "kubejs/server_scripts/40_balance/05_regional_contracts.js"
       ]
     },
     {
@@ -301,7 +301,7 @@
       "explained": true,
       "evidence_refs": [
         "docs/M2_SUBSTANCE_AND_BYPASS_AUDIT.md#andesite",
-        "docs/registries/m2_bypass_decisions.json"
+        "docs/registries/bypass_decisions.json"
       ]
     },
     {

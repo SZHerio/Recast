@@ -4,7 +4,7 @@
 Платформа: **Minecraft 1.20.1, Forge 47.4.22**  
 Ограничение: **Codex не запускает Minecraft; все игровые проверки выполняет владелец сборки**
 
-Текущий статус: **M0–M2 статически собраны в `IF-M2-0001`; ожидается пользовательский M2-gate без запуска Minecraft со стороны Codex.** M2 добавляет девять авторитетных реестров, академию паспортов материалов, контроль ранних обходов и измеримый anti-grind. Фактический состав: [`M2_IMPLEMENTATION_REPORT.md`](M2_IMPLEMENTATION_REPORT.md); ручная проверка: [`M2_BUILD_TEST_PROTOCOL.md`](M2_BUILD_TEST_PROTOCOL.md).
+Текущий статус: **M0–M2 статически собраны в `IF-M2-0001`; ожидается пользовательский M2-gate без запуска Minecraft со стороны Codex.** M2 добавляет девять авторитетных реестров, академию паспортов материалов, контроль ранних обходов и измеримый anti-grind. Фактический состав: [`M2_IMPLEMENTATION_REPORT.md`](history/M2_IMPLEMENTATION_REPORT.md); ручная проверка: [`M2_BUILD_TEST_PROTOCOL.md`](history/M2_BUILD_TEST_PROTOCOL.md).
 
 ## 1. Авторский фундамент
 

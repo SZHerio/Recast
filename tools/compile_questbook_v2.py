@@ -57,6 +57,13 @@ def _num(value: int | float) -> str:
     return f"{numeric:g}d"
 
 
+def _icon(value: str) -> str:
+    """Render texture-backed FTB Quests icons as real custom-icon stacks."""
+    if re.fullmatch(r"[a-z0-9_.-]+:textures/.+\.png", value):
+        return '{Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: ' + _q(value) + '}}'
+    return _q(value)
+
+
 def _key(alias: str, suffix: str) -> str:
     stem = alias[3:] if alias.startswith("if.") else alias
     return f"industrial_frontier.{stem}.{suffix}"
@@ -206,17 +213,24 @@ def _render_proof(proof: dict[str, Any], mode: str, localized: dict[str, str]) -
 
 
 def _quest_description(quest: dict[str, Any]) -> list[tuple[str, str]]:
+    # РЎС‚Р°РЅРґР°СЂС‚ РѕС‚ 10 Р°РІРіСѓСЃС‚Р° 2026 РіРѕРґР° СЃРґРµР»Р°Р» РѕРїРёСЃР°РЅРёРµ РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рј: Сѓ 273
+    # Р·Р°РґР°РЅРёР№ СѓСЃР»РѕРІРёРµ РіРѕРІРѕСЂРёС‚ СЃР°РјРѕ Р·Р° СЃРµР±СЏ, Рё РїРѕР»РµР№ purpose/steps/success Сѓ РЅРёС…
+    # Р±РѕР»СЊС€Рµ РЅРµС‚. РЎРѕР±РёСЂР°РµРј РѕРїРёСЃР°РЅРёРµ РёР· С‚РѕРіРѕ, С‡С‚Рѕ Р°РІС‚РѕСЂ СЃС‡С‘Р» РЅСѓР¶РЅС‹Рј РЅР°РїРёСЃР°С‚СЊ.
     text = quest["text_ru"]
-    entries: list[tuple[str, str]] = [("purpose", text["purpose_ru"])]
-    entries.extend((f"step.{index}", value) for index, value in enumerate(text["steps_ru"], 1))
-    entries.append(("success", text["success_ru"]))
+    entries: list[tuple[str, str]] = []
+    if text.get("purpose_ru"):
+        entries.append(("purpose", text["purpose_ru"]))
+    entries.extend((f"step.{index}", value) for index, value in enumerate(text.get("steps_ru") or [], 1))
+    if text.get("success_ru"):
+        entries.append(("success", text["success_ru"]))
     entries.append(("task", text["task_text_ru"]))
-    entries.extend((f"diagnostic.{index}", value) for index, value in enumerate(text["diagnostics_ru"], 1))
+    entries.extend((f"diagnostic.{index}", value) for index, value in enumerate(text.get("diagnostics_ru") or [], 1))
     for pindex, proof in enumerate(quest["proofs"], 1):
         help_text = proof.get("text_ru", {}).get("help")
         if help_text:
             entries.append((f"proof_help.{pindex}", help_text))
-    entries.append(("next", text["next_ru"]))
+    if text.get("next_ru"):
+        entries.append(("next", text["next_ru"]))
     if text.get("optional_note_ru"):
         entries.append(("optional_note", text["optional_note_ru"]))
     return entries
@@ -234,7 +248,7 @@ def _render_chapter(document: dict[str, Any], mode: str, localized: dict[str, st
     lines.extend([
         f"\tfilename: {_q(chapter['filename'])}",
         f"\tgroup: {_q(chapter['group']['engine_id'])}",
-        f"\ticon: {_q(chapter['icon'])}",
+        f"\ticon: {_icon(chapter['icon'])}",
         f"\tid: {_q(chapter['engine_id'])}",
         f"\torder_index: {chapter['order']}",
         "\tquest_links: [ ]",
@@ -249,8 +263,8 @@ def _render_chapter(document: dict[str, Any], mode: str, localized: dict[str, st
         # Cross-chapter IDs are resolved by a temporary field injected by compile().
         quest_ids.update(document.get("_global_quest_ids", {}))
         if deps:
-            if any(document.get("_quest_epochs", {}).get(dep) != quest["epoch"] for dep in deps):
-                lines.append("\t\t\thide_until_deps_complete: true")
+            # Задания больше не прячутся до выполнения предпосылок: игрок видит
+            # весь путь целиком, а недоступное показано замком.
             if len(deps) == 1:
                 lines.append(f"\t\t\tdependencies: [{_q(quest_ids[deps[0]])}]")
             else:
@@ -265,7 +279,7 @@ def _render_chapter(document: dict[str, Any], mode: str, localized: dict[str, st
             rendered = _text(value, f"{base}.{suffix}", mode, localized)
             lines.append(f"\t\t\t\t{_q(rendered)}")
         lines.append("\t\t\t]")
-        lines.append(f"\t\t\ticon: {_q(quest['icon'])}")
+        lines.append(f"\t\t\ticon: {_icon(quest['icon'])}")
         lines.append(f"\t\t\tid: {_q(quest['engine_id'])}")
         if quest["requirement"] == "optional":
             lines.append("\t\t\toptional: true")
@@ -274,8 +288,12 @@ def _render_chapter(document: dict[str, Any], mode: str, localized: dict[str, st
             lines.append(f"\t\t\tshape: {_q(layout['shape'])}")
         if layout.get("size") is not None:
             lines.append(f"\t\t\tsize: {_num(layout['size'])}")
-        lead = _text(quest["text_ru"]["lead_ru"], f"{base}.lead", mode, localized)
-        lines.append(f"\t\t\tsubtitle: {_q(lead)}")
+        # РџРѕРґР·Р°РіРѕР»РѕРІРѕРє РЅРµРѕР±СЏР·Р°С‚РµР»РµРЅ: Сѓ Р±РѕР»СЊС€РёРЅСЃС‚РІР° Р·Р°РґР°РЅРёР№ РµРіРѕ СЂРѕР»СЊ РІС‹РїРѕР»РЅСЏРµС‚
+        # Р»РёР±Рѕ РЅР°Р·РІР°РЅРёРµ, Р»РёР±Рѕ СЃР°РјРѕ СѓСЃР»РѕРІРёРµ. РЎС‚Р°РЅРґР°СЂС‚ РѕС‚ 10 Р°РІРіСѓСЃС‚Р° 2026 РіРѕРґР°
+        # СЂР°Р·СЂРµС€Р°РµС‚ РѕР±С…РѕРґРёС‚СЊСЃСЏ Р±РµР· РЅРµРіРѕ.
+        if quest["text_ru"].get("lead_ru"):
+            lead = _text(quest["text_ru"]["lead_ru"], f"{base}.lead", mode, localized)
+            lines.append(f"\t\t\tsubtitle: {_q(lead)}")
         tags = list(quest.get("tags", []))
         if tags:
             lines.append("\t\t\ttags: [" + ", ".join(_q(tag) for tag in tags) + "]")
@@ -386,9 +404,9 @@ def _translation_handoff(report: dict[str, Any]) -> dict[str, Any]:
 def _russian_editorial_corpus(report: dict[str, Any]) -> str:
     """Render every player-facing Russian string in reading order for review."""
     lines = [
-        "# Сквозная вычитка русского квестбука",
+        "# РЎРєРІРѕР·РЅР°СЏ РІС‹С‡РёС‚РєР° СЂСѓСЃСЃРєРѕРіРѕ РєРІРµСЃС‚Р±СѓРєР°",
         "",
-        "Этот файл собран автоматически из Quest Source v2. Он нужен для непрерывного чтения; правки вносятся в исходные JSON-файлы.",
+        "Р­С‚РѕС‚ С„Р°Р№Р» СЃРѕР±СЂР°РЅ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РёР· Quest Source v2. РћРЅ РЅСѓР¶РµРЅ РґР»СЏ РЅРµРїСЂРµСЂС‹РІРЅРѕРіРѕ С‡С‚РµРЅРёСЏ; РїСЂР°РІРєРё РІРЅРѕСЃСЏС‚СЃСЏ РІ РёСЃС…РѕРґРЅС‹Рµ JSON-С„Р°Р№Р»С‹.",
         "",
     ]
     chapter_order = sorted(
@@ -424,32 +442,30 @@ def _russian_editorial_corpus(report: dict[str, Any]) -> str:
                 "",
                 f"<!-- {alias} | {quest['epoch']} | {quest['role']} | {quest['requirement']} -->",
                 "",
-                text_ru["lead_ru"],
-                "",
-                text_ru["purpose_ru"],
+                text_ru.get("lead_ru", ""),
                 "",
             ])
-            if text_ru["steps_ru"]:
-                lines.extend(["Что сделать:", ""])
+            if text_ru.get("purpose_ru"):
+                lines.extend([text_ru["purpose_ru"], ""])
+            if text_ru.get("steps_ru"):
+                lines.extend(["Р§С‚Рѕ СЃРґРµР»Р°С‚СЊ:", ""])
                 lines.extend(f"{index}. {step}" for index, step in enumerate(text_ru["steps_ru"], 1))
                 lines.append("")
-            lines.extend([f"Результат: {text_ru['success_ru']}", ""])
-            if text_ru["diagnostics_ru"]:
-                lines.extend(["Если не получилось:", ""])
+            if text_ru.get("success_ru"):
+                lines.extend([f"Р РµР·СѓР»СЊС‚Р°С‚: {text_ru['success_ru']}", ""])
+            if text_ru.get("diagnostics_ru"):
+                lines.extend(["Р•СЃР»Рё РЅРµ РїРѕР»СѓС‡РёР»РѕСЃСЊ:", ""])
                 lines.extend(f"- {entry}" for entry in text_ru["diagnostics_ru"])
                 lines.append("")
-            lines.extend([
-                f"Дальше: {text_ru['next_ru']}",
-                "",
-                f"Текст задачи: {text_ru['task_text_ru']}",
-                "",
-            ])
+            if text_ru.get("next_ru"):
+                lines.extend([f"Р”Р°Р»СЊС€Рµ: {text_ru['next_ru']}", ""])
+            lines.extend([f"РўРµРєСЃС‚ Р·Р°РґР°С‡Рё: {text_ru['task_text_ru']}", ""])
             if text_ru.get("optional_note_ru"):
-                lines.extend([f"Необязательная ветвь: {text_ru['optional_note_ru']}", ""])
-            lines.extend(["Задачи проверки:", ""])
+                lines.extend([f"РќРµРѕР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РІРµС‚РІСЊ: {text_ru['optional_note_ru']}", ""])
+            lines.extend(["Р—Р°РґР°С‡Рё РїСЂРѕРІРµСЂРєРё:", ""])
             for proof in quest["proofs"]:
                 proof_text = proof["text_ru"]
-                suffix = f" — {proof_text['help']}" if proof_text.get("help") else ""
+                suffix = f" вЂ” {proof_text['help']}" if proof_text.get("help") else ""
                 lines.append(f"- {proof_text['objective']}{suffix}")
             lines.extend(["", "---", ""])
     return "\n".join(lines).rstrip() + "\n"
@@ -516,6 +532,9 @@ def _parity_projection(report: dict[str, Any], chapter_dir: pathlib.Path, mode: 
     for chapter_alias, chapter in sorted(report["chapters"].items(), key=lambda item: (item[1]["order"], item[1]["filename"])):
         path = chapter_dir / f"{chapter['filename']}.snbt"
         text = path.read_text(encoding="utf-8")
+        chapter_icon_present = f"\ticon: {_icon(chapter['icon'])}" in text
+        if not chapter_icon_present:
+            issues.append(Issue("ERROR", "QV2-CHAPTER-ICON-PARITY", str(path), f"Compiled chapter icon differs for {chapter_alias}."))
         quest_blocks = _compound_blocks_by_id(text, 2, 3)
         for alias, quest in report["quests"].items():
             if report["chapter_for_quest"][alias] != chapter_alias:
@@ -529,6 +548,7 @@ def _parity_projection(report: dict[str, Any], chapter_dir: pathlib.Path, mode: 
             any_of_present = 'dependency_requirement: "one_completed"' in block
             dependency_mode_ok = any_of_present == (bool(dep_ids) and report["dependency_modes"][alias] == "ANY_OF")
             tags_present = all(_q(tag) in block for tag in quest.get("tags", []))
+            icon_present = f"\n\t\t\ticon: {_icon(quest['icon'])}" in block
             optional_present = "\n\t\t\toptional: true" in block
             optionality_ok = optional_present == (quest["requirement"] == "optional")
             proof_blocks = _compound_blocks_by_id(block, 4, 5)
@@ -551,6 +571,7 @@ def _parity_projection(report: dict[str, Any], chapter_dir: pathlib.Path, mode: 
                 and dependency_shape_ok
                 and dependency_mode_ok
                 and tags_present
+                and icon_present
                 and optionality_ok
                 and ru_present
                 and all(item["id_present"] and item["type_present"] for item in proof_checks)
@@ -562,6 +583,7 @@ def _parity_projection(report: dict[str, Any], chapter_dir: pathlib.Path, mode: 
                 "dependency_shape_ok": dependency_shape_ok,
                 "dependency_mode_ok": dependency_mode_ok,
                 "tags_present": tags_present,
+                "icon_present": icon_present,
                 "optionality_ok": optionality_ok,
                 "ru_primary_strings_present": ru_present,
                 "proofs": proof_checks,
@@ -726,3 +748,4 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

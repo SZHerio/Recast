@@ -39,6 +39,16 @@ MOLTEN_BRIGHT = (255, 176, 92, 255)
 TEXT = (230, 233, 236, 255)
 MUTED = (112, 123, 132, 190)
 
+# Строгий набор: заливки без цвета, выделение — белизной рамки.
+BUTTON_NORMAL = (26, 30, 35, 236)
+BUTTON_HOVER = (44, 50, 58, 247)
+BUTTON_INACTIVE = (20, 23, 27, 206)
+EDGE_NORMAL = (255, 255, 255, 42)
+EDGE_HOVER = (255, 255, 255, 232)
+EDGE_INACTIVE = (255, 255, 255, 18)
+PANEL_FILL = (14, 17, 21, 232)
+PANEL_EDGE = (255, 255, 255, 30)
+
 RESAMPLE = Image.Resampling.LANCZOS
 REFERENCE_SIZE = (854, 480)
 BACKGROUND_PARALLAX = (0.025, 0.014)
@@ -114,59 +124,58 @@ def nine_slice_resize(
     return target
 
 
+def _flat_surface(state: str) -> tuple[tuple[int, int, int, int], tuple[int, int, int, int]]:
+    """Заливка и рамка для строгого состояния кнопки."""
+    if state == "hover":
+        return BUTTON_HOVER, EDGE_HOVER
+    if state == "inactive":
+        return BUTTON_INACTIVE, EDGE_INACTIVE
+    return BUTTON_NORMAL, EDGE_NORMAL
+
+
 def button_texture(state: str, size: tuple[int, int] = (48, 24)) -> Image.Image:
+    # Строгая кнопка ванильной формы: прямоугольник, сплошная тёмная заливка и
+    # рамка в один пиксель. Выделение — белизна рамки, а не цвет: при наведении
+    # она разгорается почти до белого. Скошенные углы, вертикальные засечки и
+    # подчёркивания убраны — именно из-за них меню выглядело перегруженным.
+    #
+    # Координаты кратны множителю сглаживания, поэтому после уменьшения рамка
+    # остаётся ровно в один пиксель и не размывается.
     def paint(draw: ImageDraw.ImageDraw, scale: int) -> None:
-        points = [(6, 1), (47, 1), (47, 17), (41, 23), (1, 23), (1, 6)]
-        points = [(x * scale, y * scale) for x, y in points]
-        if state == "hover":
-            fill, border = SURFACE_HOVER, MOLTEN_BRIGHT
-        elif state == "inactive":
-            fill, border = (23, 28, 32, 188), MUTED
-        else:
-            fill, border = SURFACE, STEEL
-        draw.polygon(points, fill=fill, outline=border, width=scale)
-        draw.line([(6 * scale, 4 * scale), (6 * scale, 20 * scale)], fill=border, width=scale)
-        if state == "hover":
-            draw.polygon(
-                [(2 * scale, 9 * scale), (5 * scale, 12 * scale), (2 * scale, 15 * scale)],
-                fill=MOLTEN_BRIGHT,
-            )
-            draw.line([(16 * scale, 20 * scale), (39 * scale, 20 * scale)], fill=MOLTEN, width=scale)
-        elif state == "inactive":
-            draw.line([(2 * scale, 9 * scale), (5 * scale, 12 * scale)], fill=MUTED, width=scale)
-            draw.line([(2 * scale, 15 * scale), (5 * scale, 18 * scale)], fill=MUTED, width=scale)
-        else:
-            draw.line([(10 * scale, 20 * scale), (25 * scale, 20 * scale)], fill=STEEL_BRIGHT, width=scale)
+        fill, border = _flat_surface(state)
+        draw.rectangle(
+            [(0, 0), (size[0] * scale - 1, size[1] * scale - 1)],
+            fill=fill,
+            outline=border,
+            width=scale,
+        )
 
     return aa_texture(size, paint)
 
 
 def icon_button_texture(state: str, size: tuple[int, int] = (24, 24)) -> Image.Image:
     def paint(draw: ImageDraw.ImageDraw, scale: int) -> None:
-        points = [(6, 1), (23, 1), (23, 17), (17, 23), (1, 23), (1, 6)]
-        points = [(x * scale, y * scale) for x, y in points]
-        if state == "hover":
-            fill, border = SURFACE_HOVER, MOLTEN_BRIGHT
-        elif state == "inactive":
-            fill, border = (23, 28, 32, 188), MUTED
-        else:
-            fill, border = SURFACE, STEEL
-        draw.polygon(points, fill=fill, outline=border, width=scale)
-        if state == "hover":
-            draw.line([(5 * scale, 19 * scale), (15 * scale, 19 * scale)], fill=MOLTEN, width=scale)
+        fill, border = _flat_surface(state)
+        draw.rectangle(
+            [(0, 0), (size[0] * scale - 1, size[1] * scale - 1)],
+            fill=fill,
+            outline=border,
+            width=scale,
+        )
 
     return aa_texture(size, paint)
 
 
 def panel_texture(size: tuple[int, int] = (96, 96)) -> Image.Image:
+    # Панель держит текст на пёстром пейзаже и больше ничего не делает: ровная
+    # тёмная подложка и тонкая рамка. Акцентные линии и скошенные углы сняты.
     def paint(draw: ImageDraw.ImageDraw, scale: int) -> None:
-        outer = [(11, 2), (94, 2), (94, 85), (85, 94), (2, 94), (2, 11)]
-        inner = [(12, 6), (90, 6), (90, 83), (83, 90), (6, 90), (6, 12)]
-        draw.polygon([(x * scale, y * scale) for x, y in outer], fill=(10, 14, 18, 226), outline=STEEL, width=scale)
-        draw.polygon([(x * scale, y * scale) for x, y in inner], fill=(20, 24, 28, 214))
-        draw.line([(16 * scale, 8 * scale), (44 * scale, 8 * scale)], fill=MOLTEN_BRIGHT, width=scale)
-        draw.line([(8 * scale, 18 * scale), (8 * scale, 53 * scale)], fill=(74, 156, 199, 120), width=scale)
-        draw.line([(75 * scale, 88 * scale), (83 * scale, 80 * scale)], fill=(74, 156, 199, 150), width=scale)
+        draw.rectangle(
+            [(0, 0), (size[0] * scale - 1, size[1] * scale - 1)],
+            fill=PANEL_FILL,
+            outline=PANEL_EDGE,
+            width=scale,
+        )
 
     return aa_texture(size, paint)
 

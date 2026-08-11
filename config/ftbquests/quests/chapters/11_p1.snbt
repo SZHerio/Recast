@@ -1,32 +1,22 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
-	hide_quest_until_deps_visible: true
 	filename: "11_p1"
 	group: "1000000000000004"
-	icon: "industrial_frontier:textures/gui/icons/epochs/p1.png"
+	icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p1.png"}}
 	id: "2011000000000001"
 	order_index: 11
 	quest_links: [ ]
 	quests: [
 		{
-			hide_until_deps_complete: true
-			dependencies: ["3DD22A44EA12FD23"]
 			description: [
-				"{industrial_frontier.quest.v2.p1.intro.purpose}"
-				"{industrial_frontier.quest.v2.p1.intro.step.1}"
-				"{industrial_frontier.quest.v2.p1.intro.step.2}"
-				"{industrial_frontier.quest.v2.p1.intro.success}"
 				"{industrial_frontier.quest.v2.p1.intro.task}"
-				"{industrial_frontier.quest.v2.p1.intro.diagnostic.1}"
 				"{industrial_frontier.quest.v2.p1.intro.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.intro.next}"
 			]
 			icon: "create:cogwheel"
 			id: "3011000000000001"
 			shape: "gear"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p1.intro.lead}"
+			size: 1d
 			tags: ["mainline", "mechanics"]
 			tasks: [
 				{
@@ -42,21 +32,13 @@
 		{
 			dependencies: ["3011000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p1.andesite_alloy.purpose}"
-				"{industrial_frontier.quest.v2.p1.andesite_alloy.step.1}"
-				"{industrial_frontier.quest.v2.p1.andesite_alloy.step.2}"
-				"{industrial_frontier.quest.v2.p1.andesite_alloy.success}"
 				"{industrial_frontier.quest.v2.p1.andesite_alloy.task}"
-				"{industrial_frontier.quest.v2.p1.andesite_alloy.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.andesite_alloy.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p1.andesite_alloy.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.andesite_alloy.next}"
 			]
 			icon: "create:andesite_alloy"
 			id: "3011000000000002"
 			shape: "rsquare"
-			size: 1.4d
-			subtitle: "{industrial_frontier.quest.v2.p1.andesite_alloy.lead}"
+			size: 1d
 			tags: ["mainline", "materials"]
 			tasks: [
 				{
@@ -78,57 +60,14 @@
 		{
 			dependencies: ["3011000000000002"]
 			description: [
-				"{industrial_frontier.quest.v2.p1.rotation.purpose}"
-				"{industrial_frontier.quest.v2.p1.rotation.step.1}"
-				"{industrial_frontier.quest.v2.p1.rotation.step.2}"
-				"{industrial_frontier.quest.v2.p1.rotation.success}"
-				"{industrial_frontier.quest.v2.p1.rotation.task}"
-				"{industrial_frontier.quest.v2.p1.rotation.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.rotation.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.rotation.next}"
-			]
-			icon: "create:cogwheel"
-			id: "3011000000000003"
-			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p1.rotation.lead}"
-			tags: ["mainline", "powertrain"]
-			tasks: [
-				{
-					id: "4011000000000003"
-					count: 4L
-					item: {
-						Count: 1
-						id: "create:cogwheel"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p1.rotation.cogwheels.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p1.rotation.title}"
-			x: 4d
-			y: -1d
-		}
-		{
-			dependencies: ["3011000000000002"]
-			description: [
 				"{industrial_frontier.quest.v2.p1.power.purpose}"
-				"{industrial_frontier.quest.v2.p1.power.step.1}"
-				"{industrial_frontier.quest.v2.p1.power.step.2}"
-				"{industrial_frontier.quest.v2.p1.power.step.3}"
-				"{industrial_frontier.quest.v2.p1.power.success}"
 				"{industrial_frontier.quest.v2.p1.power.task}"
-				"{industrial_frontier.quest.v2.p1.power.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.power.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p1.power.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.power.next}"
 			]
 			icon: "create:water_wheel"
 			id: "3011000000000004"
 			shape: "square"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p1.power.lead}"
+			size: 1.1d
 			tags: ["mainline", "power_source"]
 			tasks: [
 				{
@@ -146,56 +85,35 @@
 			]
 			title: "{industrial_frontier.quest.v2.p1.power.title}"
 			x: 4d
-			y: 1d
+			y: -0.75d
 		}
 		{
-			dependencies: [
-				"3011000000000003"
-				"3011000000000004"
-			]
+			dependencies: ["3011000000000002"]
 			description: [
-				"{industrial_frontier.quest.v2.p1.stress.purpose}"
-				"{industrial_frontier.quest.v2.p1.stress.step.1}"
-				"{industrial_frontier.quest.v2.p1.stress.step.2}"
-				"{industrial_frontier.quest.v2.p1.stress.success}"
-				"{industrial_frontier.quest.v2.p1.stress.task}"
-				"{industrial_frontier.quest.v2.p1.stress.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.stress.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p1.stress.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.stress.proof_help.2}"
-				"{industrial_frontier.quest.v2.p1.stress.next}"
+				"{industrial_frontier.quest.v2.p1.rotation.task}"
+				"{industrial_frontier.quest.v2.p1.rotation.proof_help.1}"
 			]
-			icon: "create:stressometer"
-			id: "3538CE73ECF70BAD"
+			icon: "create:cogwheel"
+			id: "3011000000000003"
 			shape: "square"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p1.stress.lead}"
-			tags: ["mainline", "diagnostics", "su"]
+			size: 1.1d
+			tags: ["mainline", "powertrain"]
 			tasks: [
 				{
-					id: "47461D683C57DD69"
+					id: "4011000000000003"
+					count: 4L
 					item: {
 						Count: 1
-						id: "create:stressometer"
+						id: "create:cogwheel"
 					}
 					consume_items: false
-					title: "{industrial_frontier.task.v2.p1.stress.item.objective}"
+					title: "{industrial_frontier.task.v2.p1.rotation.cogwheels.objective}"
 					type: "item"
 				}
-				{
-					id: "432A8FFFB61AC4E1"
-					block_type: 0
-					block: "create:stressometer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.stress.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
-			title: "{industrial_frontier.quest.v2.p1.stress.title}"
-			x: 6d
-			y: -1d
+			title: "{industrial_frontier.quest.v2.p1.rotation.title}"
+			x: 4d
+			y: 0.75d
 		}
 		{
 			dependencies: [
@@ -204,21 +122,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p1.mill.purpose}"
-				"{industrial_frontier.quest.v2.p1.mill.step.1}"
-				"{industrial_frontier.quest.v2.p1.mill.step.2}"
-				"{industrial_frontier.quest.v2.p1.mill.success}"
 				"{industrial_frontier.quest.v2.p1.mill.task}"
-				"{industrial_frontier.quest.v2.p1.mill.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.mill.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p1.mill.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.mill.proof_help.2}"
-				"{industrial_frontier.quest.v2.p1.mill.next}"
 			]
 			icon: "create:millstone"
 			id: "313F53950BC8F23B"
 			shape: "square"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p1.mill.lead}"
+			size: 1.2d
 			tags: ["mainline", "processing"]
 			tasks: [
 				{
@@ -231,20 +141,41 @@
 					title: "{industrial_frontier.task.v2.p1.mill.item.objective}"
 					type: "item"
 				}
-				{
-					id: "47EC408520CB0AD5"
-					block_type: 0
-					block: "create:millstone"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.mill.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p1.mill.title}"
-			x: 8d
-			y: 1d
+			x: 6d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3011000000000003"
+				"3011000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.p1.stress.purpose}"
+				"{industrial_frontier.quest.v2.p1.stress.task}"
+				"{industrial_frontier.quest.v2.p1.stress.proof_help.1}"
+			]
+			icon: "create:stressometer"
+			id: "3538CE73ECF70BAD"
+			shape: "square"
+			size: 1d
+			tags: ["mainline", "diagnostics", "su"]
+			tasks: [
+				{
+					id: "47461D683C57DD69"
+					item: {
+						Count: 1
+						id: "create:stressometer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p1.stress.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p1.stress.title}"
+			x: 6d
+			y: 0.75d
 		}
 		{
 			dependencies: [
@@ -253,22 +184,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p1.basin.purpose}"
-				"{industrial_frontier.quest.v2.p1.basin.step.1}"
-				"{industrial_frontier.quest.v2.p1.basin.step.2}"
-				"{industrial_frontier.quest.v2.p1.basin.step.3}"
-				"{industrial_frontier.quest.v2.p1.basin.success}"
 				"{industrial_frontier.quest.v2.p1.basin.task}"
-				"{industrial_frontier.quest.v2.p1.basin.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.basin.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p1.basin.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.basin.proof_help.2}"
-				"{industrial_frontier.quest.v2.p1.basin.next}"
 			]
 			icon: "create:basin"
 			id: "3A11000000000001"
 			shape: "square"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p1.basin.lead}"
+			size: 1.2d
 			tags: ["mainline", "batch_processing"]
 			tasks: [
 				{
@@ -281,20 +203,10 @@
 					title: "{industrial_frontier.task.v2.p1.basin.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A11000000000002"
-					block_type: 0
-					block: "create:basin"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.basin.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p1.basin.title}"
-			x: 10d
-			y: 1d
+			x: 8d
+			y: 0d
 		}
 		{
 			dependencies: [
@@ -303,21 +215,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p1.press.purpose}"
-				"{industrial_frontier.quest.v2.p1.press.step.1}"
-				"{industrial_frontier.quest.v2.p1.press.step.2}"
-				"{industrial_frontier.quest.v2.p1.press.success}"
 				"{industrial_frontier.quest.v2.p1.press.task}"
-				"{industrial_frontier.quest.v2.p1.press.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.press.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p1.press.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.press.proof_help.2}"
-				"{industrial_frontier.quest.v2.p1.press.next}"
 			]
 			icon: "create:mechanical_press"
 			id: "3A8FB34E62555188"
 			shape: "rsquare"
-			size: 1.4d
-			subtitle: "{industrial_frontier.quest.v2.p1.press.lead}"
+			size: 1.2d
 			tags: ["mainline", "processing"]
 			tasks: [
 				{
@@ -330,19 +234,9 @@
 					title: "{industrial_frontier.task.v2.p1.press.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4BA1A072A578DB86"
-					block_type: 0
-					block: "create:mechanical_press"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.press.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p1.press.title}"
-			x: 12d
+			x: 10d
 			y: 0d
 		}
 		{
@@ -353,25 +247,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p1.line.purpose}"
-				"{industrial_frontier.quest.v2.p1.line.step.1}"
-				"{industrial_frontier.quest.v2.p1.line.step.2}"
-				"{industrial_frontier.quest.v2.p1.line.step.3}"
-				"{industrial_frontier.quest.v2.p1.line.success}"
 				"{industrial_frontier.quest.v2.p1.line.task}"
-				"{industrial_frontier.quest.v2.p1.line.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.line.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p1.line.diagnostic.3}"
 				"{industrial_frontier.quest.v2.p1.line.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.line.proof_help.2}"
-				"{industrial_frontier.quest.v2.p1.line.proof_help.3}"
-				"{industrial_frontier.quest.v2.p1.line.proof_help.4}"
-				"{industrial_frontier.quest.v2.p1.line.next}"
 			]
 			icon: "create:belt_connector"
 			id: "3E36137316A04963"
 			shape: "gear"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p1.line.lead}"
+			size: 1.4d
 			tags: ["mainline", "automation", "logistics"]
 			tasks: [
 				{
@@ -385,61 +267,23 @@
 					title: "{industrial_frontier.task.v2.p1.line.belts.objective}"
 					type: "item"
 				}
-				{
-					id: "4FBC0B4FCD841E3A"
-					block_type: 0
-					block: "create:millstone"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.line.mill_use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "412A83221B81F3A2"
-					block_type: 0
-					block: "create:basin"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.line.basin_use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4235AF27E45646D3"
-					block_type: 0
-					block: "create:mechanical_press"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.line.press_use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p1.line.title}"
-			x: 14d
+			x: 12d
 			y: 0d
 		}
 		{
 			dependencies: ["3E36137316A04963"]
 			description: [
-				"{industrial_frontier.quest.v2.p1.bulk_storage.purpose}"
-				"{industrial_frontier.quest.v2.p1.bulk_storage.step.1}"
-				"{industrial_frontier.quest.v2.p1.bulk_storage.step.2}"
-				"{industrial_frontier.quest.v2.p1.bulk_storage.success}"
 				"{industrial_frontier.quest.v2.p1.bulk_storage.task}"
-				"{industrial_frontier.quest.v2.p1.bulk_storage.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.bulk_storage.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p1.bulk_storage.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.bulk_storage.next}"
 				"{industrial_frontier.quest.v2.p1.bulk_storage.optional_note}"
 			]
 			icon: "minecraft:chest"
 			id: "3000000000000006"
 			optional: true
 			shape: "circle"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p1.bulk_storage.lead}"
+			size: 1d
 			tags: ["optional", "anti_grind", "storage"]
 			tasks: [
 				{
@@ -455,58 +299,398 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p1.bulk_storage.title}"
-			x: 16d
-			y: -2d
+			x: 14d
+			y: -2.25d
 		}
 		{
-			hide_until_deps_complete: true
+			dependencies: ["3E36137316A04963"]
+			description: [
+				"{industrial_frontier.quest.v2.passports.intro.purpose}"
+				"{industrial_frontier.quest.v2.passports.intro.task}"
+				"{industrial_frontier.quest.v2.passports.intro.proof_help.1}"
+			]
+			icon: "minecraft:book"
+			id: "3070000000000001"
+			shape: "hexagon"
+			size: 1d
+			tags: ["root", "reference", "materials"]
+			tasks: [
+				{
+					id: "4070000000000001"
+					title: "{industrial_frontier.task.v2.passports.intro.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.passports.intro.title}"
+			x: 14d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3E36137316A04963"]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.intro.task}"
+				"{industrial_frontier.quest.v2.settlement.intro.proof_help.1}"
+			]
+			icon: "minecolonies:blockhuttownhall"
+			id: "3022000000000001"
+			shape: "hexagon"
+			size: 1d
+			tags: ["city", "p1", "planning"]
+			tasks: [
+				{
+					id: "4022000000000001"
+					title: "{industrial_frontier.task.v2.settlement.intro.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.intro.title}"
+			x: 14d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3E36137316A04963"]
+			description: [
+				"{industrial_frontier.quest.v2.storage.intro.task}"
+				"{industrial_frontier.quest.v2.storage.intro.proof_help.1}"
+			]
+			icon: "minecraft:chest"
+			id: "3020000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["storage", "planning"]
+			tasks: [
+				{
+					id: "4020000000000001"
+					title: "{industrial_frontier.task.v2.storage.intro.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.storage.intro.title}"
+			x: 14d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3022000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.manual_build.purpose}"
+				"{industrial_frontier.quest.v2.settlement.manual_build.task}"
+				"{industrial_frontier.quest.v2.settlement.manual_build.proof_help.1}"
+			]
+			icon: "minecraft:bricks"
+			id: "3A22000000000001"
+			shape: "square"
+			size: 1.4d
+			tags: ["city", "p1", "manual_build"]
+			tasks: [
+				{
+					id: "4B22000000000002"
+					block_type: 1
+					block: "industrial_frontier:palette/p1"
+					value: 24L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.manual_build.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.manual_build.title}"
+			x: 16d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3020000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.storage.connector.task}"
+				"{industrial_frontier.quest.v2.storage.connector.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.connector.proof_help.2}"
+			]
+			icon: "toms_storage:ts.inventory_connector"
+			id: "3A20000000000002"
+			shape: "rsquare"
+			size: 1.1d
+			tags: ["storage", "network", "toms_storage"]
+			tasks: [
+				{
+					id: "4B20000000000002"
+					item: {
+						Count: 1
+						id: "toms_storage:ts.inventory_connector"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.storage.connector.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4A20000000000002"
+					block_type: 0
+					block: "toms_storage:ts.inventory_connector"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.storage.connector.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.storage.connector.title}"
+			x: 16d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A22000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.effortless.task}"
+				"{industrial_frontier.quest.v2.settlement.effortless.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.effortless.proof_help.2}"
+				"{industrial_frontier.quest.v2.settlement.effortless.optional_note}"
+			]
+			icon: "effortlessbuilding:muscles"
+			id: "3A22000000000006"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["city", "construction", "anti_grind", "optional"]
+			tasks: [
+				{
+					id: "4B22000000000013"
+					item: {
+						Count: 1
+						id: "effortlessbuilding:muscles"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.settlement.effortless.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4B22000000000014"
+					block_type: 1
+					block: "industrial_frontier:palette/p1"
+					value: 24L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.effortless.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.effortless.title}"
+			x: 18d
+			y: -3d
+		}
+		{
+			dependencies: ["3A22000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.furniture.purpose}"
+				"{industrial_frontier.quest.v2.settlement.furniture.task}"
+				"{industrial_frontier.quest.v2.settlement.furniture.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.furniture.proof_help.2}"
+				"{industrial_frontier.quest.v2.settlement.furniture.proof_help.3}"
+				"{industrial_frontier.quest.v2.settlement.furniture.proof_help.4}"
+				"{industrial_frontier.quest.v2.settlement.furniture.optional_note}"
+			]
+			icon: "handcrafted:oak_chair"
+			id: "3A22000000000005"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["city", "interior", "handcrafted", "optional"]
+			tasks: [
+				{
+					id: "4B2200000000000F"
+					count: 4L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:furniture/city_set)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.settlement.furniture.set.objective}"
+					type: "item"
+				}
+				{
+					id: "4B22000000000010"
+					block_type: 1
+					block: "handcrafted:chairs"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.furniture.chair.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4B22000000000011"
+					block_type: 1
+					block: "handcrafted:tables"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.furniture.table.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4B22000000000012"
+					block_type: 1
+					block: "handcrafted:shelves"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.furniture.shelf.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.furniture.title}"
+			x: 18d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A22000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.geometry.purpose}"
+				"{industrial_frontier.quest.v2.settlement.geometry.task}"
+				"{industrial_frontier.quest.v2.settlement.geometry.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.geometry.proof_help.2}"
+				"{industrial_frontier.quest.v2.settlement.geometry.optional_note}"
+			]
+			icon: "framedblocks:framed_slope"
+			id: "3A22000000000003"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["city", "architecture", "framedblocks", "optional"]
+			tasks: [
+				{
+					id: "4B22000000000007"
+					count: 3L
+					item: {
+						Count: 1
+						id: "framedblocks:framed_slope"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.settlement.geometry.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4B22000000000008"
+					block_type: 0
+					block: "framedblocks:framed_slope"
+					value: 3L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.geometry.place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.geometry.title}"
+			x: 18d
+			y: 0d
+		}
+		{
+			dependencies: ["3A22000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.surfaces.task}"
+				"{industrial_frontier.quest.v2.settlement.surfaces.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.surfaces.proof_help.2}"
+				"{industrial_frontier.quest.v2.settlement.surfaces.proof_help.3}"
+				"{industrial_frontier.quest.v2.settlement.surfaces.optional_note}"
+			]
+			icon: "rechiseled:chisel"
+			id: "3A22000000000002"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["city", "architecture", "rechiseled", "optional"]
+			tasks: [
+				{
+					id: "4B22000000000003"
+					item: {
+						Count: 1
+						id: "rechiseled:chisel"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.settlement.surfaces.chisel.objective}"
+					type: "item"
+				}
+				{
+					id: "4B22000000000004"
+					block_type: 1
+					block: "rechiseled:oak_planks"
+					value: 3L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.surfaces.place.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4B22000000000005"
+					block_type: 0
+					block: "rechiseledcreate:mechanical_chisel"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.surfaces.machine.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.surfaces.title}"
+			x: 18d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A20000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.storage.terminal.purpose}"
+				"{industrial_frontier.quest.v2.storage.terminal.task}"
+				"{industrial_frontier.quest.v2.storage.terminal.proof_help.1}"
+			]
+			icon: "toms_storage:ts.storage_terminal"
+			id: "3A20000000000003"
+			shape: "rsquare"
+			size: 1.2d
+			tags: ["storage", "terminal", "toms_storage"]
+			tasks: [
+				{
+					id: "4B20000000000003"
+					item: {
+						Count: 1
+						id: "toms_storage:ts.storage_terminal"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.storage.terminal.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.storage.terminal.title}"
+			x: 18d
+			y: 3d
+		}
+		{
 			dependencies: [
 				"3E36137316A04963"
 				"3A20000000000003"
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p1.commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p1.commissioning.step.1}"
-				"{industrial_frontier.quest.v2.p1.commissioning.step.2}"
-				"{industrial_frontier.quest.v2.p1.commissioning.step.3}"
-				"{industrial_frontier.quest.v2.p1.commissioning.success}"
 				"{industrial_frontier.quest.v2.p1.commissioning.task}"
-				"{industrial_frontier.quest.v2.p1.commissioning.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p1.commissioning.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p1.commissioning.proof_help.1}"
-				"{industrial_frontier.quest.v2.p1.commissioning.proof_help.2}"
-				"{industrial_frontier.quest.v2.p1.commissioning.next}"
 			]
 			icon: "create:mechanical_press"
 			id: "3BBFA9E08F6D1A38"
 			shape: "diamond"
-			size: 1.6d
-			subtitle: "{industrial_frontier.quest.v2.p1.commissioning.lead}"
+			size: 1.8d
 			tags: ["mainline", "if_commissioning_p1"]
 			tasks: [
 				{
 					id: "42FBF7945A459487"
-					block_type: 0
-					block: "create:stressometer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "create:stressometer"
+					}
+					consume_items: false
 					title: "{industrial_frontier.task.v2.p1.commissioning.stress_use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "448A2EFE63D99215"
-					block_type: 0
-					block: "create:mechanical_press"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p1.commissioning.press_use.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p1.commissioning.title}"
-			x: 18d
+			x: 20d
 			y: 0d
 		}
 	]

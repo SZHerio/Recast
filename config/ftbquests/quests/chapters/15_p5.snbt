@@ -1,32 +1,27 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
-	hide_quest_until_deps_visible: true
 	filename: "15_p5"
 	group: "1000000000000004"
-	icon: "industrial_frontier:textures/gui/icons/epochs/p5.png"
+	icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p5.png"}}
 	id: "2015000000000001"
 	order_index: 15
 	quest_links: [ ]
 	quests: [
 		{
-			hide_until_deps_complete: true
 			dependencies: [
 				"306E1AB30715C336"
 				"3A2400000000001C"
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p5.brief.purpose}"
-				"{industrial_frontier.quest.v2.p5.brief.success}"
 				"{industrial_frontier.quest.v2.p5.brief.task}"
 				"{industrial_frontier.quest.v2.p5.brief.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.brief.next}"
 			]
 			icon: "create:track"
 			id: "3015000000000001"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p5.brief.lead}"
+			size: 1d
 			tags: ["root", "logistics"]
 			tasks: [
 				{
@@ -40,26 +35,47 @@
 			y: 0d
 		}
 		{
+			dependencies: [
+				"3051000000000001"
+				"3015000000000001"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.purpose}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.task}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.stronghold_route.optional_note}"
+			]
+			icon: "minecraft:ender_eye"
+			id: "3051000000000005"
+			optional: true
+			shape: "hexagon"
+			size: 1.2d
+			tags: ["world", "stronghold", "regional_logistics"]
+			tasks: [
+				{
+					id: "4051000000000005"
+					structure: "#betterstrongholds:better_strongholds"
+					title: "{industrial_frontier.task.v2.atlas.stronghold_route.structure.objective}"
+					type: "structure"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.atlas.stronghold_route.title}"
+			x: 2d
+			y: -0.75d
+		}
+		{
 			dependencies: ["3015000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.stainless_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p5.stainless_inputs.step.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_inputs.step.2}"
-				"{industrial_frontier.quest.v2.p5.stainless_inputs.success}"
 				"{industrial_frontier.quest.v2.p5.stainless_inputs.task}"
-				"{industrial_frontier.quest.v2.p5.stainless_inputs.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_inputs.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.stainless_inputs.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.stainless_inputs.proof_help.2}"
 				"{industrial_frontier.quest.v2.p5.stainless_inputs.proof_help.3}"
 				"{industrial_frontier.quest.v2.p5.stainless_inputs.proof_help.4}"
-				"{industrial_frontier.quest.v2.p5.stainless_inputs.next}"
 			]
 			icon: "gtceu:chromium_dust"
 			id: "3A15000000000018"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.stainless_inputs.lead}"
 			tags: ["mainline", "metallurgy", "stainless_steel", "source_before_product"]
 			tasks: [
 				{
@@ -113,27 +129,19 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.stainless_inputs.title}"
-			x: -6d
-			y: -7.3d
+			x: 2d
+			y: 0.75d
 		}
 		{
 			dependencies: ["3A15000000000018"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.stainless_alloy.purpose}"
-				"{industrial_frontier.quest.v2.p5.stainless_alloy.step.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_alloy.step.2}"
-				"{industrial_frontier.quest.v2.p5.stainless_alloy.success}"
 				"{industrial_frontier.quest.v2.p5.stainless_alloy.task}"
-				"{industrial_frontier.quest.v2.p5.stainless_alloy.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_alloy.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.stainless_alloy.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_alloy.next}"
 			]
 			icon: "gtceu:stainless_steel_dust"
 			id: "3A15000000000019"
 			shape: "hexagon"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.stainless_alloy.lead}"
 			tags: ["mainline", "metallurgy", "stainless_steel", "machine_output"]
 			tasks: [
 				{
@@ -151,33 +159,23 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.stainless_alloy.title}"
-			x: -3d
-			y: -7.3d
+			x: 4d
+			y: 0d
 		}
 		{
 			dependencies: ["3A15000000000019"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.stainless_power_bus.purpose}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.step.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.step.2}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.step.3}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.step.4}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.success}"
 				"{industrial_frontier.quest.v2.p5.stainless_power_bus.task}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.stainless_power_bus.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.stainless_power_bus.proof_help.2}"
 				"{industrial_frontier.quest.v2.p5.stainless_power_bus.proof_help.3}"
 				"{industrial_frontier.quest.v2.p5.stainless_power_bus.proof_help.4}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.proof_help.5}"
-				"{industrial_frontier.quest.v2.p5.stainless_power_bus.next}"
 			]
 			icon: "gtceu:copper_quadruple_cable"
 			id: "3A1500000000001B"
 			shape: "square"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p5.stainless_power_bus.lead}"
+			size: 1.4d
 			tags: ["mainline", "metallurgy", "stainless_steel", "power", "four_amp_bootstrap"]
 			tasks: [
 				{
@@ -192,16 +190,6 @@
 					}
 					title: "{industrial_frontier.task.v2.p5.stainless_power_bus.batteries.objective}"
 					type: "item"
-				}
-				{
-					id: "4A15000000000057"
-					block_type: 0
-					block: "gtceu:mv_battery_buffer_4x"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.stainless_power_bus.buffer.objective}"
-					type: "questsadditions:use"
 				}
 				{
 					id: "4A15000000000058"
@@ -237,28 +225,19 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.stainless_power_bus.title}"
-			x: 0d
-			y: -9.5d
+			x: 6d
+			y: 0d
 		}
 		{
 			dependencies: ["3A1500000000001B"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.purpose}"
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.step.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.step.2}"
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.step.3}"
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.success}"
 				"{industrial_frontier.quest.v2.p5.stainless_ingots.task}"
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.stainless_ingots.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.stainless_ingots.next}"
 			]
 			icon: "gtceu:stainless_steel_ingot"
 			id: "3A1500000000001A"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.stainless_ingots.lead}"
 			tags: ["mainline", "metallurgy", "stainless_steel", "machine_output"]
 			tasks: [
 				{
@@ -276,27 +255,19 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.stainless_ingots.title}"
-			x: 0d
-			y: -7.3d
+			x: 8d
+			y: 0d
 		}
 		{
 			dependencies: ["3A1500000000001A"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.hv_materials.purpose}"
-				"{industrial_frontier.quest.v2.p5.hv_materials.step.1}"
-				"{industrial_frontier.quest.v2.p5.hv_materials.step.2}"
-				"{industrial_frontier.quest.v2.p5.hv_materials.success}"
 				"{industrial_frontier.quest.v2.p5.hv_materials.task}"
-				"{industrial_frontier.quest.v2.p5.hv_materials.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.hv_materials.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.hv_materials.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.hv_materials.next}"
 			]
 			icon: "gtceu:stainless_steel_plate"
 			id: "3A15000000000014"
 			shape: "hexagon"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p5.hv_materials.lead}"
+			size: 1d
 			tags: ["mainline", "metallurgy", "hv", "material_bridge"]
 			tasks: [
 				{
@@ -314,30 +285,21 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.hv_materials.title}"
-			x: 3d
-			y: -7.3d
+			x: 10d
+			y: 0d
 		}
 		{
 			dependencies: ["3A15000000000014"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.hv_source.purpose}"
-				"{industrial_frontier.quest.v2.p5.hv_source.step.1}"
-				"{industrial_frontier.quest.v2.p5.hv_source.step.2}"
-				"{industrial_frontier.quest.v2.p5.hv_source.step.3}"
-				"{industrial_frontier.quest.v2.p5.hv_source.success}"
 				"{industrial_frontier.quest.v2.p5.hv_source.task}"
-				"{industrial_frontier.quest.v2.p5.hv_source.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.hv_source.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.hv_source.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.hv_source.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.hv_source.proof_help.3}"
-				"{industrial_frontier.quest.v2.p5.hv_source.next}"
 			]
 			icon: "gtceu:hv_steam_turbine"
 			id: "3A15000000000011"
 			shape: "gear"
 			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p5.hv_source.lead}"
 			tags: ["mainline", "hv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -353,16 +315,6 @@
 					type: "item"
 				}
 				{
-					id: "4A15000000000033"
-					block_type: 1
-					block: "industrial_frontier:power/hv_generators"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.hv_source.generator_use.objective}"
-					type: "questsadditions:use"
-				}
-				{
 					id: "4A15000000000038"
 					count: 4L
 					item: {
@@ -375,30 +327,21 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.hv_source.title}"
-			x: 3d
-			y: -6d
+			x: 12d
+			y: 0d
 		}
 		{
 			dependencies: ["3A15000000000011"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.hv_buffer.purpose}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.step.1}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.step.2}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.step.3}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.success}"
 				"{industrial_frontier.quest.v2.p5.hv_buffer.task}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.hv_buffer.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.hv_buffer.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.proof_help.3}"
-				"{industrial_frontier.quest.v2.p5.hv_buffer.next}"
 			]
 			icon: "gtceu:hv_battery_buffer_4x"
 			id: "3A15000000000012"
 			shape: "square"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.hv_buffer.lead}"
+			size: 1.1d
 			tags: ["mainline", "hv", "power", "tier_bridge"]
 			tasks: [
 				{
@@ -424,40 +367,22 @@
 					title: "{industrial_frontier.task.v2.p5.hv_buffer.batteries.objective}"
 					type: "item"
 				}
-				{
-					id: "4A15000000000035"
-					block_type: 0
-					block: "gtceu:hv_battery_buffer_4x"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.hv_buffer.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.hv_buffer.title}"
-			x: 3d
-			y: -4.7d
+			x: 14d
+			y: 0d
 		}
 		{
 			dependencies: ["3A15000000000012"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.hv_components.purpose}"
-				"{industrial_frontier.quest.v2.p5.hv_components.step.1}"
-				"{industrial_frontier.quest.v2.p5.hv_components.step.2}"
-				"{industrial_frontier.quest.v2.p5.hv_components.success}"
 				"{industrial_frontier.quest.v2.p5.hv_components.task}"
-				"{industrial_frontier.quest.v2.p5.hv_components.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.hv_components.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.hv_components.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.hv_components.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.hv_components.next}"
 			]
 			icon: "gtceu:hv_machine_hull"
 			id: "3A15000000000013"
 			shape: "diamond"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.hv_components.lead}"
 			tags: ["mainline", "hv", "components", "tier_bridge"]
 			tasks: [
 				{
@@ -484,29 +409,19 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.hv_components.title}"
-			x: 3d
-			y: -3.4d
+			x: 16d
+			y: 0d
 		}
 		{
 			dependencies: ["3A15000000000013"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.purpose}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.step.1}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.step.2}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.step.3}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.success}"
 				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.task}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.hv_chemical_reactor.next}"
 			]
 			icon: "gtceu:hv_chemical_reactor"
 			id: "3A15000000000015"
 			shape: "gear"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p5.hv_chemical_reactor.lead}"
+			size: 1.1d
 			tags: ["mainline", "hv", "chemistry", "machine_before_product"]
 			tasks: [
 				{
@@ -519,41 +434,80 @@
 					title: "{industrial_frontier.task.v2.p5.hv_chemical_reactor.item.objective}"
 					type: "item"
 				}
-				{
-					id: "4A1500000000003B"
-					block_type: 0
-					block: "gtceu:hv_chemical_reactor"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.hv_chemical_reactor.use.objective}"
-					type: "questsadditions:use"
-				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.hv_chemical_reactor.title}"
-			x: 6d
-			y: -6d
+			x: 18d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A15000000000013"]
+			description: [
+				"{industrial_frontier.quest.v2.p5.hv_washery.task}"
+				"{industrial_frontier.quest.v2.p5.hv_washery.proof_help.1}"
+			]
+			icon: "gtceu:hv_ore_washer"
+			id: "3A15000000000010"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "hv", "ore_processing", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A15000000000030"
+					item: {
+						Count: 1
+						id: "gtceu:hv_ore_washer"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p5.hv_washery.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p5.hv_washery.title}"
+			x: 18d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A15000000000010"]
+			description: [
+				"{industrial_frontier.quest.v2.p5.bulk_processing.purpose}"
+				"{industrial_frontier.quest.v2.p5.bulk_processing.task}"
+				"{industrial_frontier.quest.v2.p5.bulk_processing.proof_help.1}"
+			]
+			icon: "gtceu:purified_iron_ore"
+			id: "37AAC2C4C2466FEF"
+			shape: "gear"
+			size: 1.4d
+			tags: ["scale", "ore_processing"]
+			tasks: [
+				{
+					id: "4ACC05026AA4E987"
+					count: 3L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/purified_iron_bearing_ores)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p5.bulk_processing.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p5.bulk_processing.title}"
+			x: 20d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A15000000000015"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.purpose}"
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.step.1}"
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.step.2}"
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.step.3}"
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.success}"
 				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.task}"
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.nitrogen_feedstock.next}"
 			]
 			icon: "gtceu:nitrogen_bucket"
 			id: "3A14000000000019"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.nitrogen_feedstock.lead}"
 			tags: ["mainline", "chemistry", "nitrogen", "source_before_product", "hv"]
 			tasks: [
 				{
@@ -572,27 +526,20 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.nitrogen_feedstock.title}"
-			x: 9d
-			y: -8d
+			x: 20d
+			y: 0.75d
 		}
 		{
 			dependencies: ["3A14000000000019"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.ammonia.purpose}"
-				"{industrial_frontier.quest.v2.p5.ammonia.step.1}"
-				"{industrial_frontier.quest.v2.p5.ammonia.step.2}"
-				"{industrial_frontier.quest.v2.p5.ammonia.success}"
 				"{industrial_frontier.quest.v2.p5.ammonia.task}"
-				"{industrial_frontier.quest.v2.p5.ammonia.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.ammonia.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.ammonia.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.ammonia.next}"
 			]
 			icon: "gtceu:ammonia_bucket"
 			id: "3A15000000000016"
 			shape: "circle"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.ammonia.lead}"
 			tags: ["mainline", "hv", "chemistry", "source_before_product"]
 			tasks: [
 				{
@@ -604,199 +551,19 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.ammonia.title}"
-			x: 9d
-			y: -6d
-		}
-		{
-			dependencies: ["3A15000000000016"]
-			description: [
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.purpose}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.step.1}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.step.2}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.step.3}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.success}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.task}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.proof_help.3}"
-				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.next}"
-			]
-			icon: "gtceu:large_chemical_reactor"
-			id: "3A15000000000017"
-			shape: "gear"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p5.nitric_lcr_setup.lead}"
-			tags: ["mainline", "hv", "chemistry", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A1500000000003D"
-					item: {
-						Count: 1
-						id: "gtceu:large_chemical_reactor"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p5.nitric_lcr_setup.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A1500000000003E"
-					block_type: 0
-					block: "gtceu:large_chemical_reactor"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.nitric_lcr_setup.use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A1500000000003F"
-					fluid: "gtceu:oxygen"
-					amount: 4000L
-					title: "{industrial_frontier.task.v2.p5.nitric_lcr_setup.oxygen.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p5.nitric_lcr_setup.title}"
-			x: 12d
-			y: -6d
-		}
-		{
-			dependencies: ["3A15000000000017"]
-			description: [
-				"{industrial_frontier.quest.v2.p5.nitrogen.purpose}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.step.1}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.step.2}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.success}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.task}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.nitrogen.next}"
-			]
-			icon: "gtceu:nitric_acid_bucket"
-			id: "321947AAE68FE429"
-			shape: "hexagon"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.nitrogen.lead}"
-			tags: ["chemistry", "nitrogen"]
-			tasks: [
-				{
-					id: "4B7658AEED6E4168"
-					fluid: "gtceu:nitric_acid"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p5.nitrogen.fluid.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p5.nitrogen.title}"
-			x: 15d
-			y: -6d
-		}
-		{
-			dependencies: ["3A15000000000013"]
-			description: [
-				"{industrial_frontier.quest.v2.p5.hv_washery.purpose}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.step.1}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.step.2}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.step.3}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.success}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.task}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.hv_washery.next}"
-			]
-			icon: "gtceu:hv_ore_washer"
-			id: "3A15000000000010"
-			shape: "gear"
-			size: 1.25d
-			subtitle: "{industrial_frontier.quest.v2.p5.hv_washery.lead}"
-			tags: ["mainline", "hv", "ore_processing", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A15000000000030"
-					item: {
-						Count: 1
-						id: "gtceu:hv_ore_washer"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p5.hv_washery.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A15000000000031"
-					block_type: 0
-					block: "gtceu:hv_ore_washer"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.hv_washery.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p5.hv_washery.title}"
-			x: 3d
-			y: -2d
-		}
-		{
-			dependencies: ["3A15000000000010"]
-			description: [
-				"{industrial_frontier.quest.v2.p5.bulk_processing.purpose}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.step.1}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.step.2}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.success}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.task}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.bulk_processing.next}"
-			]
-			icon: "gtceu:purified_iron_ore"
-			id: "37AAC2C4C2466FEF"
-			shape: "gear"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p5.bulk_processing.lead}"
-			tags: ["scale", "ore_processing"]
-			tasks: [
-				{
-					id: "4ACC05026AA4E987"
-					count: 3L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/purified_iron_bearing_ores)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p5.bulk_processing.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p5.bulk_processing.title}"
-			x: 3d
-			y: 0d
+			x: 22d
+			y: -1.5d
 		}
 		{
 			dependencies: ["37AAC2C4C2466FEF"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.freight_rail.purpose}"
-				"{industrial_frontier.quest.v2.p5.freight_rail.step.1}"
-				"{industrial_frontier.quest.v2.p5.freight_rail.step.2}"
-				"{industrial_frontier.quest.v2.p5.freight_rail.success}"
 				"{industrial_frontier.quest.v2.p5.freight_rail.task}"
-				"{industrial_frontier.quest.v2.p5.freight_rail.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.freight_rail.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.freight_rail.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.freight_rail.next}"
 			]
 			icon: "create:track"
 			id: "3D2D584B4AC7C5B0"
 			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.freight_rail.lead}"
+			size: 1.1d
 			tags: ["freight", "rail"]
 			tasks: [
 				{
@@ -811,29 +578,22 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.freight_rail.title}"
-			x: 6d
-			y: -2d
+			x: 22d
+			y: 0d
 		}
 		{
 			dependencies: ["37AAC2C4C2466FEF"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.water_route.purpose}"
-				"{industrial_frontier.quest.v2.p5.water_route.step.1}"
-				"{industrial_frontier.quest.v2.p5.water_route.step.2}"
-				"{industrial_frontier.quest.v2.p5.water_route.success}"
 				"{industrial_frontier.quest.v2.p5.water_route.task}"
-				"{industrial_frontier.quest.v2.p5.water_route.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.water_route.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.water_route.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.water_route.proof_help.2}"
 				"{industrial_frontier.quest.v2.p5.water_route.proof_help.3}"
-				"{industrial_frontier.quest.v2.p5.water_route.next}"
 			]
 			icon: "littlelogistics:barge"
 			id: "37C79C0EFF3E5B1B"
 			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.water_route.lead}"
+			size: 1.1d
 			tags: ["freight", "water"]
 			tasks: [
 				{
@@ -870,8 +630,44 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.water_route.title}"
-			x: 6d
-			y: 2d
+			x: 22d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A15000000000016"]
+			description: [
+				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.purpose}"
+				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.task}"
+				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.proof_help.1}"
+				"{industrial_frontier.quest.v2.p5.nitric_lcr_setup.proof_help.2}"
+			]
+			icon: "gtceu:large_chemical_reactor"
+			id: "3A15000000000017"
+			shape: "gear"
+			size: 1.1d
+			tags: ["mainline", "hv", "chemistry", "machine_before_product"]
+			tasks: [
+				{
+					id: "4A1500000000003D"
+					item: {
+						Count: 1
+						id: "gtceu:large_chemical_reactor"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p5.nitric_lcr_setup.item.objective}"
+					type: "item"
+				}
+				{
+					id: "4A1500000000003F"
+					fluid: "gtceu:oxygen"
+					amount: 4000L
+					title: "{industrial_frontier.task.v2.p5.nitric_lcr_setup.oxygen.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p5.nitric_lcr_setup.title}"
+			x: 24d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -880,20 +676,13 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p5.reserve.purpose}"
-				"{industrial_frontier.quest.v2.p5.reserve.step.1}"
-				"{industrial_frontier.quest.v2.p5.reserve.step.2}"
-				"{industrial_frontier.quest.v2.p5.reserve.success}"
 				"{industrial_frontier.quest.v2.p5.reserve.task}"
-				"{industrial_frontier.quest.v2.p5.reserve.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.reserve.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.reserve.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.reserve.next}"
 			]
 			icon: "create:item_vault"
 			id: "32968094534C11AF"
 			shape: "diamond"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p5.reserve.lead}"
+			size: 1.4d
 			tags: ["buffer", "physical_logistics"]
 			tasks: [
 				{
@@ -908,32 +697,109 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.reserve.title}"
-			x: 9d
+			x: 24d
 			y: 0d
 		}
 		{
-			hide_until_deps_complete: true
+			dependencies: ["3D2D584B4AC7C5B0"]
+			description: [
+				"{industrial_frontier.quest.v2.p5.transit_line.task}"
+				"{industrial_frontier.quest.v2.p5.transit_line.proof_help.1}"
+				"{industrial_frontier.quest.v2.p5.transit_line.optional_note}"
+			]
+			icon: "mtr:rail"
+			id: "3015000000000010"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["optional", "city", "passenger"]
+			tasks: [
+				{
+					id: "4015000000000010"
+					item: {
+						Count: 1
+						id: "mtr:rail"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p5.transit_line.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p5.transit_line.title}"
+			x: 24d
+			y: 1.5d
+		}
+		{
+			dependencies: ["32968094534C11AF"]
+			description: [
+				"{industrial_frontier.quest.v2.p5.last_mile.task}"
+				"{industrial_frontier.quest.v2.p5.last_mile.proof_help.1}"
+				"{industrial_frontier.quest.v2.p5.last_mile.optional_note}"
+			]
+			icon: "create:brown_toolbox"
+			id: "363662FEF86FD8D8"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["optional", "last_mile"]
+			tasks: [
+				{
+					id: "4381415A8FC61030"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(create:toolboxes)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p5.last_mile.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p5.last_mile.title}"
+			x: 26d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A15000000000017"]
+			description: [
+				"{industrial_frontier.quest.v2.p5.nitrogen.purpose}"
+				"{industrial_frontier.quest.v2.p5.nitrogen.task}"
+				"{industrial_frontier.quest.v2.p5.nitrogen.proof_help.1}"
+			]
+			icon: "gtceu:nitric_acid_bucket"
+			id: "321947AAE68FE429"
+			shape: "hexagon"
+			size: 1d
+			tags: ["chemistry", "nitrogen"]
+			tasks: [
+				{
+					id: "4B7658AEED6E4168"
+					fluid: "gtceu:nitric_acid"
+					amount: 1000L
+					title: "{industrial_frontier.task.v2.p5.nitrogen.fluid.objective}"
+					type: "fluid"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p5.nitrogen.title}"
+			x: 26d
+			y: 0d
+		}
+		{
 			dependencies: [
 				"32968094534C11AF"
 				"3A20000000000006"
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p5.toms_storage.purpose}"
-				"{industrial_frontier.quest.v2.p5.toms_storage.step.1}"
-				"{industrial_frontier.quest.v2.p5.toms_storage.step.2}"
-				"{industrial_frontier.quest.v2.p5.toms_storage.success}"
 				"{industrial_frontier.quest.v2.p5.toms_storage.task}"
-				"{industrial_frontier.quest.v2.p5.toms_storage.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.toms_storage.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.toms_storage.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.toms_storage.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.toms_storage.next}"
 			]
 			icon: "toms_storage:ts.storage_terminal"
 			id: "3A15000000000001"
 			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p5.toms_storage.lead}"
+			size: 1.4d
 			tags: ["storage", "bridge"]
 			tasks: [
 				{
@@ -958,30 +824,49 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.toms_storage.title}"
-			x: 12d
-			y: 0d
+			x: 26d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3071000000000002"
+				"321947AAE68FE429"
+				"3F5500A5915B1BB6"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.elements.nitrogen.purpose}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.task}"
+				"{industrial_frontier.quest.v2.elements.nitrogen.proof_help.1}"
+			]
+			icon: "gtceu:nitric_acid_bucket"
+			id: "3071000000000005"
+			shape: "circle"
+			size: 1d
+			tags: ["chemistry", "nitrogen", "fertiliser"]
+			tasks: [
+				{
+					id: "4071000000000005"
+					title: "{industrial_frontier.task.v2.elements.nitrogen.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.nitrogen.title}"
+			x: 28d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A15000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.ae2_storage.purpose}"
-				"{industrial_frontier.quest.v2.p5.ae2_storage.step.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_storage.step.2}"
-				"{industrial_frontier.quest.v2.p5.ae2_storage.success}"
 				"{industrial_frontier.quest.v2.p5.ae2_storage.task}"
-				"{industrial_frontier.quest.v2.p5.ae2_storage.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_storage.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.ae2_storage.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.ae2_storage.proof_help.2}"
 				"{industrial_frontier.quest.v2.p5.ae2_storage.proof_help.3}"
 				"{industrial_frontier.quest.v2.p5.ae2_storage.proof_help.4}"
-				"{industrial_frontier.quest.v2.p5.ae2_storage.next}"
 			]
-			icon: "industrial_frontier:textures/gui/icons/process/ae2/digital_material_entry.png"
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/ae2/digital_material_entry.png"}}
 			id: "3E1AB571E2C45782"
 			shape: "diamond"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p5.ae2_storage.lead}"
+			size: 1.1d
 			tags: ["ae2", "storage"]
 			tasks: [
 				{
@@ -1026,23 +911,78 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.ae2_storage.title}"
-			x: 15d
-			y: 0d
+			x: 28d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3A23000000000008"
+				"3A23000000000007"
+				"3E1AB571E2C45782"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.control.factory_supervision.purpose}"
+				"{industrial_frontier.quest.v2.control.factory_supervision.task}"
+				"{industrial_frontier.quest.v2.control.factory_supervision.proof_help.1}"
+			]
+			icon: "advancedperipherals:me_bridge"
+			id: "3A23000000000009"
+			shape: "hexagon"
+			size: 1.4d
+			tags: ["advanced_peripherals", "ae2", "monitoring"]
+			tasks: [
+				{
+					id: "4A23000000000012"
+					item: {
+						Count: 1
+						id: "advancedperipherals:energy_detector"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.control.factory_supervision.energy.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.control.factory_supervision.title}"
+			x: 30d
+			y: -2.25d
+		}
+		{
+			dependencies: [
+				"3071000000000004"
+				"3071000000000005"
+				"3071000000000006"
+				"37AAC2C4C2466FEF"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.elements.gtec_brief.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_brief.proof_help.1}"
+			]
+			icon: "gtceu:platinum_dust"
+			id: "3A71000000000001"
+			shape: "hexagon"
+			size: 1d
+			tags: ["chemistry", "gtec", "separation", "rare_metals"]
+			tasks: [
+				{
+					id: "4A71000000000001"
+					title: "{industrial_frontier.task.v2.elements.gtec_brief.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.gtec_brief.title}"
+			x: 30d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3E1AB571E2C45782"]
 			description: [
-				"{industrial_frontier.quest.v2.p5.ae2_channels.purpose}"
-				"{industrial_frontier.quest.v2.p5.ae2_channels.success}"
 				"{industrial_frontier.quest.v2.p5.ae2_channels.task}"
 				"{industrial_frontier.quest.v2.p5.ae2_channels.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_channels.next}"
 			]
 			icon: "ae2:controller"
 			id: "396FA3718669D4AE"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.ae2_channels.lead}"
 			tags: ["ae2", "channels"]
 			tasks: [
 				{
@@ -1057,29 +997,107 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.ae2_channels.title}"
-			x: 18d
+			x: 30d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3A20000000000006"
+				"3E1AB571E2C45782"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.storage.handover.task}"
+				"{industrial_frontier.quest.v2.storage.handover.proof_help.1}"
+				"{industrial_frontier.quest.v2.storage.handover.optional_note}"
+			]
+			icon: "ae2:controller"
+			id: "3020000000000007"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["storage", "ae2", "architecture"]
+			tasks: [
+				{
+					id: "4020000000000007"
+					title: "{industrial_frontier.task.v2.storage.handover.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.storage.handover.title}"
+			x: 30d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3A71000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_pgm.proof_help.1}"
+			]
+			icon: "gtceu:platinum_dust"
+			id: "3A71000000000002"
+			shape: "gear"
+			size: 1d
+			tags: ["chemistry", "gtec", "platinum", "separation"]
+			tasks: [
+				{
+					id: "4A71000000000002"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/platinum_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.elements.gtec_pgm.platinum.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.gtec_pgm.title}"
+			x: 32d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A71000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_rare_earth.proof_help.1}"
+			]
+			icon: "gtceu:neodymium_dust"
+			id: "3A71000000000003"
+			shape: "gear"
+			size: 1d
+			tags: ["chemistry", "gtec", "rare_earth", "separation"]
+			tasks: [
+				{
+					id: "4A71000000000003"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/neodymium_dusts)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.elements.gtec_rare_earth.neodymium.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.gtec_rare_earth.title}"
+			x: 32d
 			y: 0d
 		}
 		{
 			dependencies: ["396FA3718669D4AE"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.ae2_patterns.purpose}"
-				"{industrial_frontier.quest.v2.p5.ae2_patterns.step.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_patterns.step.2}"
-				"{industrial_frontier.quest.v2.p5.ae2_patterns.success}"
 				"{industrial_frontier.quest.v2.p5.ae2_patterns.task}"
-				"{industrial_frontier.quest.v2.p5.ae2_patterns.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_patterns.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.ae2_patterns.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.ae2_patterns.proof_help.2}"
 				"{industrial_frontier.quest.v2.p5.ae2_patterns.proof_help.3}"
-				"{industrial_frontier.quest.v2.p5.ae2_patterns.next}"
 			]
 			icon: "ae2:pattern_provider"
 			id: "3B135BC312CBE262"
 			shape: "diamond"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.ae2_patterns.lead}"
+			size: 1.4d
 			tags: ["ae2", "patterns"]
 			tasks: [
 				{
@@ -1116,27 +1134,70 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.ae2_patterns.title}"
-			x: 21d
+			x: 32d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3A71000000000002"
+				"3A71000000000003"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.elements.gtec_balance.task}"
+				"{industrial_frontier.quest.v2.elements.gtec_balance.proof_help.1}"
+			]
+			icon: "gtceu:large_chemical_reactor"
+			id: "3A71000000000004"
+			shape: "octagon"
+			size: 1d
+			tags: ["chemistry", "gtec", "balance", "closed_cycle"]
+			tasks: [
+				{
+					id: "4A71000000000004"
+					title: "{industrial_frontier.task.v2.elements.gtec_balance.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.gtec_balance.title}"
+			x: 34d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3071000000000007"
+				"3B135BC312CBE262"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.elements.silicon.task}"
+				"{industrial_frontier.quest.v2.elements.silicon.proof_help.1}"
+			]
+			icon: "gtceu:silicon_dust"
+			id: "3071000000000008"
+			shape: "circle"
+			size: 1d
+			tags: ["chemistry", "silicon", "electronics"]
+			tasks: [
+				{
+					id: "4071000000000008"
+					title: "{industrial_frontier.task.v2.elements.silicon.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.elements.silicon.title}"
+			x: 34d
 			y: 0d
 		}
 		{
 			dependencies: ["3B135BC312CBE262"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.ae2_autocraft.purpose}"
-				"{industrial_frontier.quest.v2.p5.ae2_autocraft.step.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_autocraft.step.2}"
-				"{industrial_frontier.quest.v2.p5.ae2_autocraft.success}"
 				"{industrial_frontier.quest.v2.p5.ae2_autocraft.task}"
-				"{industrial_frontier.quest.v2.p5.ae2_autocraft.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_autocraft.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.ae2_autocraft.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_autocraft.next}"
 			]
 			icon: "ae2:1k_crafting_storage"
 			id: "3A2D5B8D711F4016"
 			shape: "gear"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p5.ae2_autocraft.lead}"
+			size: 1.4d
 			tags: ["ae2", "autocrafting"]
 			tasks: [
 				{
@@ -1151,23 +1212,20 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.ae2_autocraft.title}"
-			x: 24d
-			y: 0d
+			x: 34d
+			y: 1.5d
 		}
 		{
 			dependencies: ["3A2D5B8D711F4016"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.ae2_recovery.purpose}"
-				"{industrial_frontier.quest.v2.p5.ae2_recovery.success}"
 				"{industrial_frontier.quest.v2.p5.ae2_recovery.task}"
 				"{industrial_frontier.quest.v2.p5.ae2_recovery.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.ae2_recovery.next}"
 			]
 			icon: "ae2:drive"
 			id: "3015000000000007"
 			shape: "square"
 			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.ae2_recovery.lead}"
 			tags: ["ae2", "recovery"]
 			tasks: [
 				{
@@ -1177,82 +1235,8 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.ae2_recovery.title}"
-			x: 27d
+			x: 36d
 			y: 0d
-		}
-		{
-			dependencies: ["3D2D584B4AC7C5B0"]
-			description: [
-				"{industrial_frontier.quest.v2.p5.transit_line.purpose}"
-				"{industrial_frontier.quest.v2.p5.transit_line.step.1}"
-				"{industrial_frontier.quest.v2.p5.transit_line.success}"
-				"{industrial_frontier.quest.v2.p5.transit_line.task}"
-				"{industrial_frontier.quest.v2.p5.transit_line.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.transit_line.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p5.transit_line.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.transit_line.next}"
-				"{industrial_frontier.quest.v2.p5.transit_line.optional_note}"
-			]
-			icon: "mtr:rail"
-			id: "3015000000000010"
-			optional: true
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.transit_line.lead}"
-			tags: ["optional", "city", "passenger"]
-			tasks: [
-				{
-					id: "4015000000000010"
-					item: {
-						Count: 1
-						id: "mtr:rail"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p5.transit_line.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p5.transit_line.title}"
-			x: 9d
-			y: -4d
-		}
-		{
-			dependencies: ["32968094534C11AF"]
-			description: [
-				"{industrial_frontier.quest.v2.p5.last_mile.purpose}"
-				"{industrial_frontier.quest.v2.p5.last_mile.step.1}"
-				"{industrial_frontier.quest.v2.p5.last_mile.success}"
-				"{industrial_frontier.quest.v2.p5.last_mile.task}"
-				"{industrial_frontier.quest.v2.p5.last_mile.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.last_mile.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p5.last_mile.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.last_mile.next}"
-				"{industrial_frontier.quest.v2.p5.last_mile.optional_note}"
-			]
-			icon: "create:brown_toolbox"
-			id: "363662FEF86FD8D8"
-			optional: true
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p5.last_mile.lead}"
-			tags: ["optional", "last_mile"]
-			tasks: [
-				{
-					id: "4381415A8FC61030"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(create:toolboxes)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p5.last_mile.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p5.last_mile.title}"
-			x: 12d
-			y: 4d
 		}
 		{
 			dependencies: [
@@ -1262,22 +1246,14 @@
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p5.contracts.purpose}"
-				"{industrial_frontier.quest.v2.p5.contracts.step.1}"
-				"{industrial_frontier.quest.v2.p5.contracts.step.2}"
-				"{industrial_frontier.quest.v2.p5.contracts.step.3}"
-				"{industrial_frontier.quest.v2.p5.contracts.success}"
 				"{industrial_frontier.quest.v2.p5.contracts.task}"
-				"{industrial_frontier.quest.v2.p5.contracts.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.contracts.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.contracts.proof_help.1}"
 				"{industrial_frontier.quest.v2.p5.contracts.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.contracts.next}"
 			]
 			icon: "minecraft:writable_book"
 			id: "344C0C54261EBEF2"
 			shape: "octagon"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p5.contracts.lead}"
+			size: 1.4d
 			tags: ["contract", "flow"]
 			tasks: [
 				{
@@ -1305,65 +1281,301 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.contracts.title}"
-			x: 30d
+			x: 38d
 			y: 0d
 		}
 		{
 			dependencies: ["344C0C54261EBEF2"]
 			description: [
 				"{industrial_frontier.quest.v2.p5.commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p5.commissioning.step.1}"
-				"{industrial_frontier.quest.v2.p5.commissioning.step.2}"
-				"{industrial_frontier.quest.v2.p5.commissioning.step.3}"
-				"{industrial_frontier.quest.v2.p5.commissioning.success}"
 				"{industrial_frontier.quest.v2.p5.commissioning.task}"
-				"{industrial_frontier.quest.v2.p5.commissioning.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p5.commissioning.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p5.commissioning.proof_help.1}"
-				"{industrial_frontier.quest.v2.p5.commissioning.proof_help.2}"
-				"{industrial_frontier.quest.v2.p5.commissioning.proof_help.3}"
-				"{industrial_frontier.quest.v2.p5.commissioning.next}"
 			]
 			icon: "create:railway_casing"
 			id: "39399468A06BC9EC"
 			shape: "gear"
-			size: 2d
-			subtitle: "{industrial_frontier.quest.v2.p5.commissioning.lead}"
+			size: 1.8d
 			tags: ["if_commissioning_p5", "commissioning"]
 			tasks: [
 				{
 					id: "43E760C4DE082CD3"
-					block_type: 0
-					block: "create:item_vault"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "create:item_vault"
+					}
+					consume_items: false
 					title: "{industrial_frontier.task.v2.p5.commissioning.reserve.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4AB099F6524C08E2"
-					block_type: 1
-					block: "toms_storage:remote_activate"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.commissioning.toms.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "44083979DD220360"
-					block_type: 0
-					block: "ae2:drive"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p5.commissioning.ae2.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p5.commissioning.title}"
-			x: 33d
+			x: 40d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A22000000000011"
+				"3A2200000000000E"
+				"344C0C54261EBEF2"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.regional_supply.purpose}"
+				"{industrial_frontier.quest.v2.settlement.regional_supply.task}"
+				"{industrial_frontier.quest.v2.settlement.regional_supply.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.regional_supply.proof_help.2}"
+			]
+			icon: "minecolonies:blockhutwarehouse"
+			id: "3A22000000000012"
+			shape: "octagon"
+			size: 1.4d
+			tags: ["city", "p5", "regional", "contract"]
+			tasks: [
+				{
+					id: "4B22000000000048"
+					count: 16L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:storage/long_term_reserve)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.settlement.regional_supply.reserve.objective}"
+					type: "item"
+				}
+				{
+					id: "4B22000000000049"
+					count: 8L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:storage/returnable_food_container)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.settlement.regional_supply.containers.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.regional_supply.title}"
+			x: 40d
+			y: 0.75d
+		}
+		{
+			dependencies: ["39399468A06BC9EC"]
+			description: [
+				"{industrial_frontier.quest.v2.mastery.intro.task}"
+				"{industrial_frontier.quest.v2.mastery.intro.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.intro.optional_note}"
+			]
+			icon: "create:clipboard"
+			id: "3072000000000001"
+			optional: true
+			shape: "gear"
+			size: 1d
+			tags: ["mastery", "introduction", "optional"]
+			tasks: [
+				{
+					id: "4072000000000001"
+					title: "{industrial_frontier.task.v2.mastery.intro.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.mastery.intro.title}"
+			x: 42d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A22000000000012"
+				"39399468A06BC9EC"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.settlement.guards.purpose}"
+				"{industrial_frontier.quest.v2.settlement.guards.task}"
+				"{industrial_frontier.quest.v2.settlement.guards.proof_help.1}"
+				"{industrial_frontier.quest.v2.settlement.guards.proof_help.2}"
+			]
+			icon: "minecolonies:blockhutguardtower"
+			id: "3A22000000000018"
+			shape: "hexagon"
+			size: 1.4d
+			tags: ["city", "p5", "defence", "minecolonies"]
+			tasks: [
+				{
+					id: "4B2200000000004C"
+					block_type: 0
+					block: "minecolonies:blockhutguardtower"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.guards.tower.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4B2200000000004E"
+					block_type: 0
+					block: "minecolonies:blockhutbarracks"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.settlement.guards.barracks.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.settlement.guards.title}"
+			x: 42d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3072000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.task}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.where_it_stopped.optional_note}"
+			]
+			icon: "minecraft:comparator"
+			id: "3072000000000002"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["mastery", "diagnostics", "buffers", "optional"]
+			tasks: [
+				{
+					id: "4072000000000002"
+					title: "{industrial_frontier.task.v2.mastery.where_it_stopped.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.mastery.where_it_stopped.title}"
+			x: 44d
+			y: 0d
+		}
+		{
+			dependencies: ["3072000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.mastery.reserve_math.task}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.reserve_math.optional_note}"
+			]
+			icon: "create:item_vault"
+			id: "3072000000000003"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["mastery", "buffers", "capacity", "optional"]
+			tasks: [
+				{
+					id: "4072000000000003"
+					title: "{industrial_frontier.task.v2.mastery.reserve_math.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.mastery.reserve_math.title}"
+			x: 46d
+			y: 0d
+		}
+		{
+			dependencies: ["3072000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.task}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.expand_without_rebuild.optional_note}"
+			]
+			icon: "minecraft:scaffolding"
+			id: "3072000000000004"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["mastery", "layout", "expansion", "optional"]
+			tasks: [
+				{
+					id: "4072000000000004"
+					title: "{industrial_frontier.task.v2.mastery.expand_without_rebuild.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.mastery.expand_without_rebuild.title}"
+			x: 48d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3072000000000004"
+				"3B135BC312CBE262"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.mastery.boring_work.purpose}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.task}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.boring_work.optional_note}"
+			]
+			icon: "ae2:pattern_provider"
+			id: "3072000000000005"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["mastery", "automation", "manual_work", "optional"]
+			tasks: [
+				{
+					id: "4072000000000005"
+					title: "{industrial_frontier.task.v2.mastery.boring_work.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.mastery.boring_work.title}"
+			x: 50d
+			y: 0d
+		}
+		{
+			dependencies: ["3072000000000005"]
+			description: [
+				"{industrial_frontier.quest.v2.mastery.power_discipline.task}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.power_discipline.optional_note}"
+			]
+			icon: "minecraft:lever"
+			id: "3072000000000006"
+			optional: true
+			shape: "rsquare"
+			size: 1d
+			tags: ["mastery", "power", "load_shedding", "optional"]
+			tasks: [
+				{
+					id: "4072000000000006"
+					title: "{industrial_frontier.task.v2.mastery.power_discipline.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.mastery.power_discipline.title}"
+			x: 52d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3072000000000006"
+				"3072000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.mastery.handover.task}"
+				"{industrial_frontier.quest.v2.mastery.handover.proof_help.1}"
+				"{industrial_frontier.quest.v2.mastery.handover.optional_note}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3072000000000007"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["mastery", "documentation", "handover", "optional"]
+			tasks: [
+				{
+					id: "4072000000000007"
+					title: "{industrial_frontier.task.v2.mastery.handover.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.mastery.handover.title}"
+			x: 54d
 			y: 0d
 		}
 	]

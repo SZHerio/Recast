@@ -1,0 +1,14 @@
+{
+  "__comment": "Предметная пара тега блоков machines/lv_plus_benders. Задание засчитывает изготовленный листогиб любого уровня от LV и выше.",
+  "replace": false,
+  "values": [
+    "gtceu:lv_bender",
+    "gtceu:mv_bender",
+    "gtceu:hv_bender",
+    "gtceu:ev_bender",
+    "gtceu:iv_bender",
+    "gtceu:luv_bender",
+    "gtceu:zpm_bender",
+    "gtceu:uv_bender"
+  ]
+}

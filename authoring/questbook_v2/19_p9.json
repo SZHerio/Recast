@@ -5,12 +5,21 @@
     "alias": "if.chapter.v2.p9",
     "engine_id": "2019000000000001",
     "filename": "19_p9",
-    "group": {"alias": "if.group.v2.mainline", "engine_id": "1000000000000004", "title_ru": "Главная линия"},
+    "group": {
+      "alias": "if.group.v2.mainline",
+      "engine_id": "1000000000000004",
+      "title_ru": "Главная линия"
+    },
     "order": 19,
     "icon": "gcyr:dyson_swarm_satellite",
     "epoch": "P9",
-    "tags": ["mainline", "finale", "resilience", "megaproject"],
-    "hide_until_reached": true,
+    "tags": [
+      "mainline",
+      "finale",
+      "resilience",
+      "megaproject"
+    ],
+    "hide_until_reached": false,
     "text_ru": {
       "title": "P9 — Устойчивая индустриальная цивилизация",
       "subtitle": "Финал проверяет не стоимость трофея, а способность системы производить, чинить и восстанавливать себя",
@@ -21,155 +30,1791 @@
     },
     "editorial": {
       "voice": "Главный инженер цивилизации: говорит о воспроизводимости, ремонтопригодности и последствиях выбора, а не о коллекции дорогих блоков.",
-      "tone_rules": ["Каждую финальную цель связывать с общей устойчивой основой.", "Отделять подготовительный предмет от работающего мегапроекта.", "Разрешать разные финалы без скрытого обязательного лучшего варианта."],
-      "avoid": ["Не требовать все финальные проекты одновременно.", "Не считать склад расходников замкнутым циклом.", "Не завершать сборку ручной галочкой после крафта дорогого предмета."]
+      "tone_rules": [
+        "Каждую финальную цель связывать с общей устойчивой основой.",
+        "Отделять подготовительный предмет от работающего мегапроекта.",
+        "Разрешать разные финалы без скрытого обязательного лучшего варианта."
+      ],
+      "avoid": [
+        "Не требовать все финальные проекты одновременно.",
+        "Не считать склад расходников замкнутым циклом.",
+        "Не завершать сборку ручной галочкой после крафта дорогого предмета."
+      ]
     }
   },
   "quests": [
     {
-      "alias": "if.quest.v2.p9.brief", "engine_id": "3019000000000001", "epoch": "P9", "role": "knowledge", "requirement": "required", "icon": "gcyr:dyson_swarm_satellite", "tags": ["root", "mainline"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p8.commissioning", "reason": "Финальная устойчивость опирается на принятую орбитально-планетарную сеть и жизнеспособную колонию P8.", "evidence": ["authoring/questbook_v2/18_p8.json"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.brief.read", "engine_id": "4019000000000001", "type": "checkmark", "status": "verified", "text_ru": {"objective": "Прочитайте критерии финальной системы.", "help": "Отметка подтверждает чтение; эксплуатационные способности проверяются отдельными задачами."}}],
-      "text_ru": {"title_ru": "Финал — это способность продолжать", "lead_ru": "P8 связал дальние площадки; P9 проверит, переживёт ли эта цивилизация нехватку, износ и потерю одного узла.", "purpose_ru": "Сначала создайте общую основу, обязательную для любого финала: местное производство запасных частей, возврат отходов в полезные потоки, обслуживание по признакам износа и восстановление после управляемого отказа. Затем выберите один мегапроект.", "steps_ru": [], "success_ru": "Вы понимаете четыре общих критерия и видите три равноправных финальных пути после них.", "diagnostics_ru": [], "next_ru": "Начните с местной промышленной ячейки, способной воспроизводить собственные расходники без постоянной доставки с Земли.", "task_text_ru": "Прочитайте вводную карту P9."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Смысл старой вводной сохранён и усилен явной общей основой."},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Три мегапроекта, общий обязательный путь и переход из P8 прошли четыре редакторских проверки."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "doc", "id": "kubejs/server_scripts/40_balance/m8_endgame_programme.js", "evidence": ["Критерий устойчивой цивилизации и финальные мегапроекты"]}],
-      "grind": {"class": "NONE", "automation_before_bulk": false, "rationale_ru": "Вводная не требует ресурсов."},
-      "layout": {"x": 0, "y": 0, "shape": "gear", "size": 2}
+      "alias": "if.quest.v2.p9.brief",
+      "engine_id": "3019000000000001",
+      "epoch": "P9",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "gcyr:dyson_swarm_satellite",
+      "tags": [
+        "root",
+        "mainline"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p8.commissioning",
+            "reason": "Финальная устойчивость опирается на принятую орбитально-планетарную сеть и жизнеспособную колонию P8.",
+            "evidence": [
+              "authoring/questbook_v2/18_p8.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.brief.read",
+          "engine_id": "4019000000000001",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте критерии финальной системы.",
+            "help": "Отметка подтверждает чтение; эксплуатационные способности проверяются отдельными задачами."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Что считается финалом",
+        "task_text_ru": "Прочитайте вводную карту P9."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Смысл старой вводной сохранён и усилен явной общей основой."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Три мегапроекта, общий обязательный путь и переход из P8 прошли четыре редакторских проверки."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "doc",
+          "id": "kubejs/server_scripts/40_balance/08_endgame_programme.js",
+          "evidence": [
+            "Критерий устойчивой цивилизации и финальные мегапроекты"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": false,
+        "rationale_ru": "Вводная не требует ресурсов."
+      },
+      "layout": {
+        "x": 0.0,
+        "y": 0.0,
+        "shape": "gear",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.local_industry", "engine_id": "3A19000000000001", "epoch": "P9", "role": "automation", "requirement": "required", "icon": "gtceu:iv_assembler", "tags": ["foundation", "local_industry", "colony"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.brief", "reason": "Любой финальный проект начинается с воспроизводимой местной промышленной ячейки.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.local_industry.assembler", "engine_id": "4A19000000000001", "type": "item", "status": "verified", "text_ru": {"objective": "Предъявите сборщик IV GregTech.", "help": "IV уже освоен в P7. Перевезите прежнюю машину или соберите вторую только если она действительно нужна удалённой площадке."}, "item": {"id": "gtceu:iv_assembler", "count": 1, "consume": false}}, {"alias": "if.task.v2.p9.local_industry.audit", "engine_id": "4A19000000000002", "type": "use", "status": "verified", "text_ru": {"objective": "После местного выпуска детали откройте сборщик IV.", "help": "Открытие интерфейса завершает сборочный этап. Происхождение материалов проверьте по журналу местного склада."}, "use": {"block": "gtceu:iv_assembler", "count": 1, "item_interaction": false, "check_item": false}}, {"alias": "if.task.v2.p9.local_industry.centrifuge_item", "engine_id": "4A1900000000000C", "type": "item", "status": "verified", "text_ru": {"objective": "Предъявите центрифугу IV GregTech.", "help": "Она нужна следующему замкнутому контуру. IV выбран сознательно: эту ступень проще воспроизводить и обслуживать на удалённой площадке, чем LuV."}, "item": {"id": "gtceu:iv_centrifuge", "count": 1, "consume": false}}, {"alias": "if.task.v2.p9.local_industry.centrifuge_use", "engine_id": "4A1900000000000D", "type": "use", "status": "verified", "text_ru": {"objective": "Установите и откройте центрифугу IV.", "help": "Подготовьте отдельные выходы полезной фракции и остатка до трёхцикловой проверки следующего задания."}, "use": {"block": "gtceu:iv_centrifuge", "count": 1, "item_interaction": false, "check_item": false}}],
-      "text_ru": {"title_ru": "Запасная часть производится на месте", "lead_ru": "Колония P8 умеет жить без рейса; теперь её промышленность должна уметь чинить и перерабатывать сама себя.", "purpose_ru": "Сборщик IV выпускает запасные части, центрифуга IV разделяет возвратные потоки. Это не откат после LuV: для удалённой ячейки сознательно выбрана более простая ступень, которую уже освоили в P7 и легче воспроизвести местными материалами.", "steps_ru": ["Выберите критическую машину и определите деталь, отсутствие которой чаще всего её останавливает.", "Перевезите прежний сборщик IV или соберите второй, если это оправдано логистикой; рядом установите центрифугу IV.", "Изготовьте контрольную запасную часть без обязательного ингредиента с Земли, откройте сборщик и подготовьте раздельные выходы центрифуги."], "success_ru": "Сборщик и центрифуга IV доступны на удалённой площадке, а контрольная запасная часть произведена местными силами.", "diagnostics_ru": ["Если цепь упирается в земной полуфабрикат, перенесите его производство либо организуйте местное восстановление из отходов.", "Если машина простаивает из-за инструмента, включите его в перечень местных расходников.", "Если центрифуга смешивает выходы, остановите подачу и разведите полезную фракцию с остатком по отдельным буферам."], "next_ru": "Используйте принятую центрифугу, чтобы вернуть отходы и побочные продукты в производственный контур.", "task_text_ru": "Подготовьте сборщик и центрифугу IV, затем откройте их после местной контрольной операции."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["ID машины подтверждён census; проверка происхождения входов остаётся блокером."]},
-      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "gtceu:iv_assembler", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "item", "id": "gtceu:iv_centrifuge", "evidence": ["kubejs/exported/gtceu_item_census.json"]}, {"kind": "mechanic", "id": "industrial_frontier:local_industry", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}],
-      "grind": {"class": "GREEN", "training_batch": 2, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/local_industry", "rationale_ru": "Обе IV-машины остаются рабочими активами; сборщик можно перенести из P7, а одна запасная часть проверяет воспроизводимость без складской партии."},
-      "layout": {"x": 3, "y": 0, "shape": "gear", "size": 1.25}
+      "alias": "if.quest.v2.p9.local_industry",
+      "engine_id": "3A19000000000001",
+      "epoch": "P9",
+      "role": "automation",
+      "requirement": "required",
+      "icon": "gtceu:iv_assembler",
+      "tags": [
+        "foundation",
+        "local_industry",
+        "colony"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.brief",
+            "reason": "Любой финальный проект начинается с воспроизводимой местной промышленной ячейки.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.local_industry.assembler",
+          "engine_id": "4A19000000000001",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Предъявите сборщик IV GregTech.",
+            "help": "IV уже освоен в P7. Перевезите прежнюю машину или соберите вторую только если она действительно нужна удалённой площадке."
+          },
+          "item": {
+            "id": "gtceu:iv_assembler",
+            "count": 1,
+            "consume": false
+          }
+        },
+        {
+          "alias": "if.task.v2.p9.local_industry.centrifuge_item",
+          "engine_id": "4A1900000000000C",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Предъявите центрифугу IV GregTech.",
+            "help": "Она нужна следующему замкнутому контуру. IV выбран сознательно: эту ступень проще воспроизводить и обслуживать на удалённой площадке, чем LuV."
+          },
+          "item": {
+            "id": "gtceu:iv_centrifuge",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Запасная часть производится на месте",
+        "purpose_ru": "Запчасти пора делать на месте. Возить болты через полсистемы — это не цивилизация, а вечная беготня.",
+        "task_text_ru": "Подготовьте сборщик и центрифугу IV, затем откройте их после местной контрольной операции."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gtceu:iv_assembler",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:iv_centrifuge",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:local_industry",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 2,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/local_industry",
+        "rationale_ru": "Обе IV-машины остаются рабочими активами; сборщик можно перенести из P7, а одна запасная часть проверяет воспроизводимость без складской партии."
+      },
+      "layout": {
+        "x": 2.0,
+        "y": 0.0,
+        "shape": "gear",
+        "size": 1.4
+      }
     },
     {
-      "alias": "if.quest.v2.p9.closed_loop", "engine_id": "3A19000000000002", "epoch": "P9", "role": "automation", "requirement": "required", "icon": "gtceu:iv_centrifuge", "tags": ["foundation", "closed_loop", "recycling"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.local_industry", "reason": "Замыкание начинается с местной линии, чьи реальные отходы можно измерить и вернуть.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.closed_loop.audit", "engine_id": "4A19000000000003", "type": "use", "status": "verified", "text_ru": {"objective": "После трёх циклов откройте центрифугу IV GregTech.", "help": "Открытие интерфейса завершает задание; материальный баланс сравните по подписанным буферам."}, "use": {"block": "gtceu:iv_centrifuge", "count": 1, "item_interaction": false, "check_item": false}}],
-      "text_ru": {"title_ru": "Отход возвращается как сырьё", "lead_ru": "Местная ячейка производит детали; теперь её побочные продукты не должны бесконечно наполнять новый склад.", "purpose_ru": "Замкнутый контур возвращает воду, растворители, металлы и пригодные компоненты в следующий цикл. Полностью без потерь бывает только схема на бумаге. Задание завершается открытием центрифуги после того, как вы сравните материальный баланс по подписанным буферам.", "steps_ru": ["Выберите одну местную цепь и подпишите её внешние входы, полезный выход, возвращаемые потоки и конечный отход.", "Соедините возвраты через отдельные буферы, чтобы они не блокировали основной продукт.", "Проведите три цикла, сравните подпитку с продукцией и затем откройте центрифугу IV."], "success_ru": "Вы сравнили три цикла, убедились в безопасном выходе остатка и открыли центрифугу для итоговой сверки.", "diagnostics_ru": ["Если возврат останавливает производство, добавьте буфер и отдельный маршрут избытка.", "Если подпитка растёт с каждым циклом, найдите скрытый слив, неверный рецепт или смешение чистого и загрязнённого потока.", "Если отход исчезает без учёта, контур нельзя считать проверенным."], "next_ru": "Стабильный материальный баланс позволяет перейти от аварийного ремонта к плановому обслуживанию.", "task_text_ru": "После трёх циклов откройте центрифугу IV GregTech."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Старая галочка заменена требованием измеримого баланса."},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Автоматически проверяется открытие центрифуги; материальный баланс трёх циклов явно оставлен самостоятельной проверкой по буферам."]},
-      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:closed_material_loop", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}, {"kind": "item", "id": "gtceu:iv_centrifuge", "evidence": ["kubejs/exported/gtceu_item_census.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 3, "expected_runs": 3, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/closed_loop", "rationale_ru": "Три цикла нужны для наблюдения накопления, но не превращают проверку в длительный гринд."},
-      "layout": {"x": 6, "y": 0, "shape": "gear", "size": 1.25}
+      "alias": "if.quest.v2.p9.closed_loop",
+      "engine_id": "3A19000000000002",
+      "epoch": "P9",
+      "role": "automation",
+      "requirement": "required",
+      "icon": "gtceu:iv_centrifuge",
+      "tags": [
+        "foundation",
+        "closed_loop",
+        "recycling"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.local_industry",
+            "reason": "Замыкание начинается с местной линии, чьи реальные отходы можно измерить и вернуть.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.closed_loop.audit",
+          "engine_id": "4A19000000000003",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте: Превосходная центрифуга.",
+            "help": "Открытие интерфейса завершает задание; материальный баланс сравните по подписанным буферам."
+          },
+          "item": {
+            "id": "gtceu:iv_centrifuge",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Отход возвращается как сырьё",
+        "purpose_ru": "Отход возвращается сырьём. С этого момента новые месторождения вам больше не нужны.",
+        "task_text_ru": "После трёх циклов откройте центрифугу IV GregTech."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Старая галочка заменена требованием измеримого баланса."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:closed_material_loop",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:iv_centrifuge",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 3,
+        "expected_runs": 3,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/closed_loop",
+        "rationale_ru": "Три цикла нужны для наблюдения накопления, но не превращают проверку в длительный гринд."
+      },
+      "layout": {
+        "x": 4.0,
+        "y": 0.0,
+        "shape": "gear",
+        "size": 1.4
+      }
     },
     {
-      "alias": "if.quest.v2.p9.maintenance", "engine_id": "3A19000000000003", "epoch": "P9", "role": "diagnostics", "requirement": "required", "icon": "gtceu:maintenance_hatch", "tags": ["foundation", "maintenance", "spares"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.closed_loop", "reason": "Плановое обслуживание опирается на воспроизводимые детали и учтённые материальные потоки.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.maintenance.audit", "engine_id": "4A19000000000004", "type": "use", "status": "verified", "text_ru": {"objective": "После ремонта откройте люк обслуживания GregTech.", "help": "Открытие интерфейса завершает проверку после предупреждения, замены детали и повторного запуска."}, "use": {"block": "gtceu:maintenance_hatch", "count": 1, "item_interaction": false, "check_item": false}}],
-      "text_ru": {"title_ru": "Ремонт до аварии", "lead_ru": "Замкнутая линия умеет возвращать материал; теперь она должна предупреждать о необходимости вмешательства заранее.", "purpose_ru": "Плановое обслуживание начинается с измеримого признака: падения производительности, роста температуры, расхода ресурса или предупреждения машины. Задание завершается открытием люка после ремонта; своевременность предупреждения и восстановление проверяйте по работе установки.", "steps_ru": ["Выберите одну критическую установку и определите ранний признак обслуживания.", "Положите локально произведённую запасную часть в подписанный ремонтный запас.", "После предупреждения остановите установку, замените деталь, верните отход в контур, повторно запустите линию и откройте люк обслуживания."], "success_ru": "Вы обслужили установку по раннему признаку, восстановили штатную производительность и открыли люк для итоговой сверки.", "diagnostics_ru": ["Если ремонт начинается только после остановки линии, снизьте порог предупреждения.", "Если новая деталь не восстанавливает режим, проверьте остальные причины: питание, охлаждение, засорение выхода и неверный рецепт.", "Если снятая деталь выбрасывается, добавьте маршрут восстановления до следующего цикла."], "next_ru": "Осталось проверить всю систему управляемым отказом и восстановлением без ручного спасения каждого узла.", "task_text_ru": "После полного обслуживания откройте люк GregTech."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Системное событие обслуживания пока не реализовано."]},
-      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:maintenance_cycle", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}, {"kind": "block", "id": "gtceu:maintenance_hatch", "evidence": ["kubejs/exported/gtceu_item_census.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/maintenance", "rationale_ru": "Один полный ремонтный цикл проверяет процедуру без искусственного износа многих машин."},
-      "layout": {"x": 9, "y": 0, "shape": "gear", "size": 1.25}
+      "alias": "if.quest.v2.p9.maintenance",
+      "engine_id": "3A19000000000003",
+      "epoch": "P9",
+      "role": "diagnostics",
+      "requirement": "required",
+      "icon": "gtceu:maintenance_hatch",
+      "tags": [
+        "foundation",
+        "maintenance",
+        "spares"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.closed_loop",
+            "reason": "Плановое обслуживание опирается на воспроизводимые детали и учтённые материальные потоки.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.maintenance.audit",
+          "engine_id": "4A19000000000004",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте: Люк обслуживания.",
+            "help": "Открытие интерфейса завершает проверку после предупреждения, замены детали и повторного запуска."
+          },
+          "item": {
+            "id": "gtceu:maintenance_hatch",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Ремонт до аварии",
+        "purpose_ru": "Чинить до поломки выходит дешевле, чем после. Заведите обслуживание в расписание, пока оно не стало срочным.",
+        "task_text_ru": "После полного обслуживания откройте люк GregTech."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:maintenance_cycle",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "gtceu:maintenance_hatch",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/maintenance",
+        "rationale_ru": "Один полный ремонтный цикл проверяет процедуру без искусственного износа многих машин."
+      },
+      "layout": {
+        "x": 6.0,
+        "y": 0.0,
+        "shape": "gear",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.resilience", "engine_id": "3A19000000000004", "epoch": "P9", "role": "recovery", "requirement": "required", "icon": "ae2:energy_cell", "tags": ["foundation", "resilience", "recovery"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.maintenance", "reason": "Испытание отказом проводят после подготовки запасов, процедуры остановки и маршрута восстановления.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.resilience.audit", "engine_id": "4A19000000000005", "type": "use", "status": "verified", "text_ru": {"objective": "После восстановления откройте любую энергетическую ячейку AE2 из списка задачи.", "help": "Подойдёт обычная или плотная энергетическая ячейка. Открытие интерфейса завершает задание; сам отказ, переход на резерв и возврат к обычному режиму проверьте по трём шагам."}, "use": {"block_tag": "industrial_frontier:ae2/energy_cells", "count": 1, "item_interaction": false, "check_item": false}}],
-      "text_ru": {"title_ru": "Один отказ не останавливает цивилизацию", "lead_ru": "Локальное производство и обслуживание готовы; теперь система должна доказать устойчивость, а не обещать её запасами.", "purpose_ru": "Выберите один реальный узел и отключите его контролируемо. Критические потребители переходят на резерв, предупреждение называет причину, а восстановление возвращает нормальный режим. После испытания откройте энергетическую ячейку, чтобы завершить задание.", "steps_ru": ["Зафиксируйте штатные уровни ключевых буферов и выберите безопасное окно испытания.", "Отключите один узел, не ломая его блоки и не уничтожая содержимое.", "Дождитесь резерва, устраните причину, проверьте возврат обычной схемы и откройте энергетическую ячейку AE2."], "success_ru": "Критические системы пережили один отказ, а энергетическая ячейка открыта после восстановления штатного режима.", "diagnostics_ru": ["Если отказ вызывает каскад, разделите критические и промышленные шины и добавьте ограничители потока.", "Если резерв включается, но не возвращается обратно, проверьте приоритеты и условие снятия аварийного режима.", "Если восстановление требует ручной перекладки многих предметов, автоматизируйте путь возврата до финального проекта."], "next_ru": "Общая основа готова. Выберите один из трёх финальных проектов и докажите его работу.", "task_text_ru": "После испытания отказом откройте энергетическую ячейку AE2."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Сценарий не должен разрушать постройки; контракт испытания остаётся блокером."]},
-      "teaching_sections": [{"kind": "recovery", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:resilience_test", "evidence": ["kubejs/server_scripts/40_balance/m8_operations.js"]}, {"kind": "block_tag", "id": "industrial_frontier:ae2/energy_cells", "evidence": ["config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/blocks/ae2/energy_cells.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/resilience", "rationale_ru": "Одно контролируемое испытание показывает архитектуру; повторять аварии ради счётчика не нужно."},
-      "layout": {"x": 12, "y": 0, "shape": "octagon", "size": 1.5}
+      "alias": "if.quest.v2.p9.resilience",
+      "engine_id": "3A19000000000004",
+      "epoch": "P9",
+      "role": "recovery",
+      "requirement": "required",
+      "icon": "ae2:energy_cell",
+      "tags": [
+        "foundation",
+        "resilience",
+        "recovery"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.maintenance",
+            "reason": "Испытание отказом проводят после подготовки запасов, процедуры остановки и маршрута восстановления.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.resilience.audit",
+          "engine_id": "4A19000000000005",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте энергетическую ячейку МЭ-сети: обычную или плотную.",
+            "help": "Подойдёт обычная или плотная энергетическая ячейка. Открытие интерфейса завершает задание; сам отказ, переход на резерв и возврат к обычному режиму проверьте по трём шагам."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:ae2/energy_cells",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Проверка на отказ узла",
+        "purpose_ru": "Проверьте себя честно: выключите один узел и посмотрите, что станет со всем остальным.",
+        "task_text_ru": "После испытания отказом откройте энергетическую ячейку AE2."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:resilience_test",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/08_operations.js"
+          ]
+        },
+        {
+          "kind": "block_tag",
+          "id": "industrial_frontier:ae2/energy_cells",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/blocks/ae2/energy_cells.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/resilience",
+        "rationale_ru": "Одно контролируемое испытание показывает архитектуру; повторять аварии ради счётчика не нужно."
+      },
+      "layout": {
+        "x": 8.0,
+        "y": 0.0,
+        "shape": "octagon",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.swarm_line", "engine_id": "3019000000000002", "epoch": "P9", "role": "optional_mastery", "requirement": "optional", "icon": "gcyr:dyson_swarm_satellite", "tags": ["final_path", "dyson", "automation"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.resilience", "reason": "Серийный рой запускается только после общей проверки устойчивости и обслуживания.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.swarm_line.item", "engine_id": "4019000000000002", "type": "item", "status": "verified", "text_ru": {"objective": "Соберите первый спутник роя Дайсона GCYR.", "help": "Один спутник подтверждает готовность образца; серийный выпуск, вывод и отдача энергии проверяются в следующем задании."}, "item": {"id": "gcyr:dyson_swarm_satellite", "count": 1, "consume": false}}],
-      "text_ru": {"title_ru": "Первый аппарат серийной линии", "lead_ru": "Общая основа переживает отказ; один из возможных финалов проверит масштаб орбитального производства.", "purpose_ru": "Первый спутник служит эталоном для автоматической линии. Он должен иметь стабильный рецепт, отдельные буферы материалов и понятный темп выпуска; ручная сборка последующих аппаратов не считается роем.", "steps_ru": ["Соберите один эталонный спутник и запишите расход ключевых материалов.", "По этому расходу рассчитайте входные буферы и темп линии до массового заказа."], "success_ru": "Первый спутник роя готов, а его рецепт подготовлен к серийному воспроизведению.", "diagnostics_ru": ["Если один компонент требует ручной перекладки, автоматизируйте его до запуска серии.", "Если буфер опустошается за один аппарат, увеличьте размер партии только после устранения узкого места."], "next_ru": "Постройте непрерывный выпуск, вывод на орбиту, передачу энергии и обслуживание роя.", "task_text_ru": "Соберите первый спутник роя Дайсона GCYR.", "optional_note_ru": "Это один из трёх финальных путей; автономная колония или квантовый комплекс также могут завершить сборку."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Способность и item-proof совпадают со старым квестом; ID сохранён для carry."},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Item ID подтверждён локальным GCYR JAR."]},
-      "teaching_sections": [{"kind": "automation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru", "text_ru.optional_note_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "gcyr:dyson_swarm_satellite", "evidence": ["mods/gcyr-1.20.1-0.2.9.jar!assets/gcyr/lang/en_us.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/swarm_line", "rationale_ru": "До автоматизации требуется только один эталонный аппарат."},
-      "layout": {"x": 15, "y": -4, "shape": "diamond", "size": 1}
+      "alias": "if.quest.v2.p9.colony_autonomy",
+      "engine_id": "3A19000000000006",
+      "epoch": "P9",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "gcyr:proxima_centauri_b_grassy_turf",
+      "tags": [
+        "final_path",
+        "colony",
+        "autonomy"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.resilience",
+            "reason": "Финальная автономия колонии опирается на общую местную промышленность, обслуживание и испытание отказом.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.colony_autonomy.oxygen",
+          "engine_id": "4A19000000000007",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте кислородный распределитель уровня IV или выше.",
+            "help": "Подойдёт любой распределитель из списка задачи; улучшение жизнеобеспечения не требует возвращать старую модель."
+          },
+          "item_tag": {
+            "id": "industrial_frontier:gcyr/oxygen_spreaders",
+            "count": 1
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Вторая точка опоры",
+        "purpose_ru": "Вторая точка опоры страхует первую. Если она тянет сама, потеря связи перестаёт быть бедой.",
+        "task_text_ru": "После автономного цикла откройте распределитель кислорода и местный сборщик IV.",
+        "optional_note_ru": "Выполнение этого пути достаточно для выбора финала; рой Дайсона и квантовый комплекс необязательны."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Старые colony_life и colony_industry объединены в один строгий эксплуатационный критерий после общей основы."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:proxima_colony",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+          ]
+        },
+        {
+          "kind": "dimension",
+          "id": "gcyr:proxima_centauri_b",
+          "evidence": [
+            "mods/gcyr-1.20.1-0.2.9.jar!data/gcyr/dimension/proxima_centauri_b.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/colony_autonomy",
+        "rationale_ru": "Один полный аудит и один отказ проверяют автономию без длительного искусственного ожидания."
+      },
+      "layout": {
+        "x": 10.0,
+        "y": -1.5,
+        "shape": "octagon",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.swarm_operational", "engine_id": "3A19000000000005", "epoch": "P9", "role": "optional_mastery", "requirement": "optional", "icon": "gcyr:dyson_swarm_satellite", "tags": ["final_path", "dyson", "operation"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.swarm_line", "reason": "Рабочий рой опирается на эталонный аппарат и автоматизированную серийную линию.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.swarm_operational.receiver", "engine_id": "4A19000000000006", "type": "use", "status": "verified", "text_ru": {"objective": "После полного цикла роя откройте приёмник луча GCYR.", "help": "Открытие интерфейса завершает задание; выпуск, вывод и замену спутника проверьте по буферам линии."}, "use": {"block": "gcyr:beam_receiver", "count": 1, "item_interaction": false, "check_item": false}}],
-      "text_ru": {"title_ru": "Рой производит и обслуживает себя", "lead_ru": "Эталонный спутник готов; финальный проект начинается там, где заканчивается ручная сборка.", "purpose_ru": "Рабочий рой включает автоматический выпуск аппаратов, постоянный вывод, наземный приём энергии и ремонтный запас. После самостоятельной проверки всех четырёх частей откройте приёмник луча, чтобы завершить задание; один интерфейс сам по себе не доказывает работу всего роя.", "steps_ru": ["Автоматизируйте спутник от входных материалов до выходного буфера.", "Свяжите выпуск с пусковым темпом и наземным приёмником энергии.", "Смоделируйте потерю одного аппарата, дождитесь автоматического восполнения и затем откройте приёмник луча."], "success_ru": "Вы проверили серийный выпуск, вывод и замену аппарата, а затем открыли приёмник после появления измеримой энергии.", "diagnostics_ru": ["Если спутники копятся на складе, узкое место находится в выводе, а не в производстве.", "Если энергия исчезает при краткой остановке пуска, увеличьте наземный резерв.", "Если ремонт требует полной ручной партии, линия ещё не стала финальной системой."], "next_ru": "Работающий рой может стать выбранным финальным проектом и открыть общую заключительную проверку.", "task_text_ru": "После полного цикла роя откройте приёмник луча GCYR.", "optional_note_ru": "Выполнение этого пути достаточно для выбора финала; строить два других мегапроекта не требуется."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Событийная модель роя остаётся блокером; предмет не выдаётся за эксплуатацию."]},
-      "teaching_sections": [{"kind": "automation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru", "text_ru.optional_note_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:dyson_swarm", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}, {"kind": "item", "id": "gcyr:dyson_swarm_satellite", "evidence": ["mods/gcyr-1.20.1-0.2.9.jar!assets/gcyr/lang/en_us.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 2, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/swarm_operational", "rationale_ru": "Проверяется повторяемая система и одна замена, а не искусственно большое число спутников."},
-      "layout": {"x": 18, "y": -4, "shape": "octagon", "size": 1.5}
+      "alias": "if.quest.v2.p9.quantum",
+      "engine_id": "3019000000000006",
+      "epoch": "P9",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "nuclearcraft:quantum_transformer",
+      "tags": [
+        "final_path",
+        "nuclearcraft",
+        "quantum"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.resilience",
+            "reason": "Квантовая вершина открывается после общей устойчивой промышленной основы.",
+            "evidence": [
+              "kubejs/server_scripts/10_progression/08_late_epoch_gate.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.quantum.item",
+          "engine_id": "4019000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Соберите квантовый трансформатор NuclearCraft.",
+            "help": "Предмет подтверждает вершину сборочной лестницы, но не работающий энергетико-материальный цикл."
+          },
+          "item": {
+            "id": "nuclearcraft:quantum_transformer",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Вершина ускорительной ветви",
+        "task_text_ru": "Соберите квантовый трансформатор NuclearCraft.",
+        "optional_note_ru": "Это один из трёх финальных путей; рой Дайсона или автономная колония также могут завершить сборку."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Способность и item-proof совпадают со старым квестом; ID сохранён для carry."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Item ID и pack-рецепт подтверждены локальными файлами."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "nuclearcraft:quantum_transformer",
+          "evidence": [
+            "mods/NuclearCraft-1.20.1-1.2.34.jar!assets/nuclearcraft/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "recipe",
+          "id": "industrial_frontier:nuclearcraft/quantum_transformer",
+          "evidence": [
+            "kubejs/server_scripts/10_progression/08_late_epoch_gate.js"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/quantum",
+        "rationale_ru": "Один контроллер открывает проект; дублировать вершину ради количества не требуется."
+      },
+      "layout": {
+        "x": 10.0,
+        "y": 0.0,
+        "shape": "diamond",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.colony_autonomy", "engine_id": "3A19000000000006", "epoch": "P9", "role": "optional_mastery", "requirement": "optional", "icon": "gcyr:proxima_centauri_b_grassy_turf", "tags": ["final_path", "colony", "autonomy"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.resilience", "reason": "Финальная автономия колонии опирается на общую местную промышленность, обслуживание и испытание отказом.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.colony_autonomy.oxygen", "engine_id": "4A19000000000007", "type": "use", "status": "verified", "text_ru": {"objective": "После автономного цикла откройте распределитель кислорода уровня IV или выше.", "help": "Подойдёт любой распределитель из списка задачи; улучшение жизнеобеспечения не требует возвращать старую модель."}, "use": {"block_tag": "industrial_frontier:gcyr/oxygen_spreaders", "count": 1, "item_interaction": false, "check_item": false}}, {"alias": "if.task.v2.p9.colony_autonomy.assembler", "engine_id": "4A1900000000000B", "type": "use", "status": "verified", "text_ru": {"objective": "Откройте местный сборщик IV после ремонта.", "help": "Открытие второго интерфейса завершает проверку местной промышленности и запасных частей."}, "use": {"block": "gtceu:iv_assembler", "count": 1, "item_interaction": false, "check_item": false}}],
-      "text_ru": {"title_ru": "Вторая точка опоры", "lead_ru": "Общая основа уже доказана; теперь колония может стать цивилизацией, а не дальним подразделением Земли.", "purpose_ru": "Автономная колония производит воздух, воду, пищу, энергию и критические запасные части на месте. После самостоятельной проверки запасов и происхождения материалов откройте два контрольных интерфейса, чтобы завершить задание.", "steps_ru": ["Отключите регулярный импорт расходников с Земли, сохранив канал связи и аварийный рейс.", "Проведите полный цикл местного производства, обслуживания и возврата отходов.", "Повторите отказ одного узла, восстановите его местными средствами, затем откройте распределитель кислорода и сборщик IV."], "success_ru": "Колония прошла автономный цикл на местных запасах, а контрольные интерфейсы жизнеобеспечения и промышленности открыты.", "diagnostics_ru": ["Если импорт всё ещё содержит еду, воздух или обычные детали, перенесите их производство на место.", "Если местный цикл зависит от единственного невоспроизводимого инструмента, включите его замену в промышленную ячейку.", "Если аварийный рейс стал постоянным, колония вернулась к состоянию снабжаемого форпоста."], "next_ru": "Автономная колония может стать выбранным финальным проектом.", "task_text_ru": "После автономного цикла откройте распределитель кислорода и местный сборщик IV.", "optional_note_ru": "Выполнение этого пути достаточно для выбора финала; рой Дайсона и квантовый комплекс необязательны."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Старые colony_life и colony_industry объединены в один строгий эксплуатационный критерий после общей основы."},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Аудит автономии остаётся блокером до появления серверных измерителей."]},
-      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru", "text_ru.optional_note_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:proxima_colony", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}, {"kind": "dimension", "id": "gcyr:proxima_centauri_b", "evidence": ["mods/gcyr-1.20.1-0.2.9.jar!data/gcyr/dimension/proxima_centauri_b.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/colony_autonomy", "rationale_ru": "Один полный аудит и один отказ проверяют автономию без длительного искусственного ожидания."},
-      "layout": {"x": 15, "y": 0, "shape": "octagon", "size": 1.5}
+      "alias": "if.quest.v2.p9.swarm_line",
+      "engine_id": "3019000000000002",
+      "epoch": "P9",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "gcyr:dyson_swarm_satellite",
+      "tags": [
+        "final_path",
+        "dyson",
+        "automation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.resilience",
+            "reason": "Серийный рой запускается только после общей проверки устойчивости и обслуживания.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.swarm_line.item",
+          "engine_id": "4019000000000002",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Соберите первый спутник роя Дайсона GCYR.",
+            "help": "Один спутник подтверждает готовность образца; серийный выпуск, вывод и отдача энергии проверяются в следующем задании."
+          },
+          "item": {
+            "id": "gcyr:dyson_swarm_satellite",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Первый аппарат серийной линии",
+        "task_text_ru": "Соберите первый спутник роя Дайсона GCYR.",
+        "optional_note_ru": "Это один из трёх финальных путей; автономная колония или квантовый комплекс также могут завершить сборку."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Способность и item-proof совпадают со старым квестом; ID сохранён для carry."
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Item ID подтверждён локальным GCYR JAR."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "automation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "item",
+          "id": "gcyr:dyson_swarm_satellite",
+          "evidence": [
+            "mods/gcyr-1.20.1-0.2.9.jar!assets/gcyr/lang/en_us.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 1,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/swarm_line",
+        "rationale_ru": "До автоматизации требуется только один эталонный аппарат."
+      },
+      "layout": {
+        "x": 10.0,
+        "y": 1.5,
+        "shape": "diamond",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.quantum", "engine_id": "3019000000000006", "epoch": "P9", "role": "optional_mastery", "requirement": "optional", "icon": "nuclearcraft:quantum_transformer", "tags": ["final_path", "nuclearcraft", "quantum"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.resilience", "reason": "Квантовая вершина открывается после общей устойчивой промышленной основы.", "evidence": ["kubejs/server_scripts/10_progression/m8_late_epoch_gate.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.quantum.item", "engine_id": "4019000000000006", "type": "item", "status": "verified", "text_ru": {"objective": "Соберите квантовый трансформатор NuclearCraft.", "help": "Предмет подтверждает вершину сборочной лестницы, но не работающий энергетико-материальный цикл."}, "item": {"id": "nuclearcraft:quantum_transformer", "count": 1, "consume": false}}],
-      "text_ru": {"title_ru": "Вершина ускорительной ветви", "lead_ru": "Общая промышленность выдерживает отказ; третий финальный путь превращает энергию в управляемый материальный процесс.", "purpose_ru": "Квантовый трансформатор завершает лестницу NuclearCraft и связывает экстремальные материалы с энергией ZPM. Он становится финальным проектом только после включения в воспроизводимый контур с входами, выходом, охлаждением и резервом.", "steps_ru": ["Соберите трансформатор по рецепту P9 и подготовьте отдельную площадку с энергетическим буфером.", "До запуска определите полезный продукт, его потребителя и безопасный маршрут побочных потоков."], "success_ru": "Квантовый трансформатор готов к включению в финальный производственный контур.", "diagnostics_ru": ["Если рецепт закрыт, проверьте генератор поля ZPM, нейтрониевую раму и пространственную смесь.", "Если машина собирается раньше инфраструктуры, не запускайте её от общей шины без резерва и ограничения нагрузки."], "next_ru": "Запустите повторяемый цикл, передайте продукт потребителю и переживите краткую потерю питания.", "task_text_ru": "Соберите квантовый трансформатор NuclearCraft.", "optional_note_ru": "Это один из трёх финальных путей; рой Дайсона или автономная колония также могут завершить сборку."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Способность и item-proof совпадают со старым квестом; ID сохранён для carry."},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Item ID и pack-рецепт подтверждены локальными файлами."]},
-      "teaching_sections": [{"kind": "purpose", "source_fields": ["text_ru.purpose_ru", "text_ru.optional_note_ru"]}, {"kind": "setup", "source_fields": ["text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "item", "id": "nuclearcraft:quantum_transformer", "evidence": ["mods/NuclearCraft-1.20.1-1.2.33.jar!assets/nuclearcraft/lang/en_us.json"]}, {"kind": "recipe", "id": "industrial_frontier:m8/nuclearcraft/quantum_transformer", "evidence": ["kubejs/server_scripts/10_progression/m8_late_epoch_gate.js"]}],
-      "grind": {"class": "GREEN", "training_batch": 1, "expected_runs": 1, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/quantum", "rationale_ru": "Один контроллер открывает проект; дублировать вершину ради количества не требуется."},
-      "layout": {"x": 15, "y": 4, "shape": "diamond", "size": 1}
+      "alias": "if.quest.v2.p9.quantum_operational",
+      "engine_id": "3A19000000000007",
+      "epoch": "P9",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "nuclearcraft:quantum_transformer",
+      "tags": [
+        "final_path",
+        "nuclearcraft",
+        "operation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.quantum",
+            "reason": "Эксплуатационное испытание начинается после сборки трансформатора и подготовки его роли.",
+            "evidence": [
+              "kubejs/server_scripts/10_progression/08_late_epoch_gate.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.quantum_operational.audit",
+          "engine_id": "4A19000000000008",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте: Квантовый трансформатор.",
+            "help": "Открытие интерфейса завершает задание; повторяемый выход, работу потребителя и восстановление питания проверьте по шагам."
+          },
+          "item": {
+            "id": "nuclearcraft:quantum_transformer",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Энергия становится полезным материалом",
+        "purpose_ru": "Энергия превращается в материал. Дорого, зато больше не зависит от того, что лежит в земле.",
+        "task_text_ru": "После двух циклов и испытания резерва откройте квантовый трансформатор.",
+        "optional_note_ru": "Выполнение этого пути достаточно для выбора финала; два других мегапроекта остаются добровольными."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:quantum_complex",
+          "evidence": [
+            "kubejs/server_scripts/10_progression/08_late_epoch_gate.js"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "nuclearcraft:quantum_transformer",
+          "evidence": [
+            "mods/NuclearCraft-1.20.1-1.2.34.jar!assets/nuclearcraft/lang/en_us.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 2,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/quantum_operational",
+        "rationale_ru": "Два цикла и один короткий отказ проверяют повторяемость без массового расхода поздних материалов."
+      },
+      "layout": {
+        "x": 12.0,
+        "y": -0.75,
+        "shape": "octagon",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.quantum_operational", "engine_id": "3A19000000000007", "epoch": "P9", "role": "optional_mastery", "requirement": "optional", "icon": "nuclearcraft:quantum_transformer", "tags": ["final_path", "nuclearcraft", "operation"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.quantum", "reason": "Эксплуатационное испытание начинается после сборки трансформатора и подготовки его роли.", "evidence": ["kubejs/server_scripts/10_progression/m8_late_epoch_gate.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.quantum_operational.audit", "engine_id": "4A19000000000008", "type": "use", "status": "verified", "text_ru": {"objective": "После двух циклов откройте квантовый трансформатор.", "help": "Открытие интерфейса завершает задание; повторяемый выход, работу потребителя и восстановление питания проверьте по шагам."}, "use": {"block": "nuclearcraft:quantum_transformer", "count": 1, "item_interaction": false, "check_item": false}}],
-      "text_ru": {"title_ru": "Энергия становится полезным материалом", "lead_ru": "Трансформатор собран; теперь его работа должна поддерживать реальную цепь, а не существовать ради красивого интерфейса.", "purpose_ru": "Финальный квантовый комплекс принимает воспроизводимые входы, выдаёт выбранный материал и сразу передаёт его потребителю. Проверьте два цикла и восстановление питания, а затем откройте трансформатор, чтобы завершить задание.", "steps_ru": ["Настройте один повторяемый рецепт и автоматическую подачу всех входов.", "Свяжите выход с реальным потребителем либо складом с нижним и верхним порогом.", "Проведите два цикла, кратко отключите питание, восстановите работу через резерв и затем откройте трансформатор."], "success_ru": "Два цикла завершены, продукт передан потребителю, питание восстановлено, а трансформатор открыт для итоговой сверки.", "diagnostics_ru": ["Если первый цикл проходит, а второй блокируется, проверьте выход и возврат тары.", "Если запуск гасит сеть, увеличьте локальный буфер и ограничьте некритические потребители.", "Если продукт копится без применения, выберите реального потребителя до повторной проверки."], "next_ru": "Работающий квантовый комплекс может стать выбранным финальным проектом.", "task_text_ru": "После двух циклов и испытания резерва откройте квантовый трансформатор.", "optional_note_ru": "Выполнение этого пути достаточно для выбора финала; два других мегапроекта остаются добровольными."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Эксплуатационный сигнал остаётся блокером; item-proof вынесен в предыдущую задачу."]},
-      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru", "text_ru.optional_note_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:quantum_complex", "evidence": ["kubejs/server_scripts/10_progression/m8_late_epoch_gate.js"]}, {"kind": "item", "id": "nuclearcraft:quantum_transformer", "evidence": ["mods/NuclearCraft-1.20.1-1.2.33.jar!assets/nuclearcraft/lang/en_us.json"]}],
-      "grind": {"class": "GREEN", "training_batch": 2, "expected_runs": 2, "automation_before_bulk": true, "budget_ref": "industrial_frontier:grind/p9/quantum_operational", "rationale_ru": "Два цикла и один короткий отказ проверяют повторяемость без массового расхода поздних материалов."},
-      "layout": {"x": 18, "y": 4, "shape": "octagon", "size": 1.5}
+      "alias": "if.quest.v2.p9.swarm_operational",
+      "engine_id": "3A19000000000005",
+      "epoch": "P9",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "gcyr:dyson_swarm_satellite",
+      "tags": [
+        "final_path",
+        "dyson",
+        "operation"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.swarm_line",
+            "reason": "Рабочий рой опирается на эталонный аппарат и автоматизированную серийную линию.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.swarm_operational.receiver",
+          "engine_id": "4A19000000000006",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте: Приёмник луча.",
+            "help": "Открытие интерфейса завершает задание; выпуск, вывод и замену спутника проверьте по буферам линии."
+          },
+          "item": {
+            "id": "gcyr:beam_receiver",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Рой производит и обслуживает себя",
+        "purpose_ru": "Рой сам себя делает и сам себя чинит. Ваше дело — задать правила и не лезть под руку.",
+        "task_text_ru": "После полного цикла роя откройте приёмник луча GCYR.",
+        "optional_note_ru": "Выполнение этого пути достаточно для выбора финала; строить два других мегапроекта не требуется."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "automation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru",
+            "text_ru.optional_note_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:dyson_swarm",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gcyr:dyson_swarm_satellite",
+          "evidence": [
+            "mods/gcyr-1.20.1-0.2.9.jar!assets/gcyr/lang/en_us.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "GREEN",
+        "training_batch": 1,
+        "expected_runs": 2,
+        "automation_before_bulk": true,
+        "budget_ref": "industrial_frontier:grind/p9/swarm_operational",
+        "rationale_ru": "Проверяется повторяемая система и одна замена, а не искусственно большое число спутников."
+      },
+      "layout": {
+        "x": 12.0,
+        "y": 0.75,
+        "shape": "octagon",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.final_choice", "engine_id": "3A19000000000008", "epoch": "P9", "role": "knowledge", "requirement": "required", "icon": "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png", "tags": ["finale", "choice", "any_of"],
-      "dependency": {"mode": "ANY_OF", "edges": [{"quest": "if.quest.v2.p9.swarm_operational", "reason": "Рабочий рой является полноценным финалом масштаба энергии и орбитального производства.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}, {"quest": "if.quest.v2.p9.colony_autonomy", "reason": "Автономная колония является полноценным финалом межзвёздной устойчивости.", "evidence": ["kubejs/server_scripts/40_balance/m8_endgame_programme.js"]}, {"quest": "if.quest.v2.p9.quantum_operational", "reason": "Рабочий квантовый комплекс является полноценным финалом высокоэнергетического производства.", "evidence": ["kubejs/server_scripts/10_progression/m8_late_epoch_gate.js"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.final_choice.read", "engine_id": "4A19000000000009", "type": "checkmark", "status": "verified", "text_ru": {"objective": "Зафиксируйте в журнале выбранный финальный проект.", "help": "Для доступа к этому заданию уже достаточно завершить один из трёх финальных путей; отметка лишь записывает ваш выбор."}}],
-      "text_ru": {"title_ru": "Один честный финал", "lead_ru": "Общая основа была обязательной, но цивилизация вправе выбрать, какой масштабный ответ станет её наследием.", "purpose_ru": "Достаточно завершить любой один путь: рой Дайсона, автономную колонию или квантовый комплекс. После прохождения выбранной ветви эта справочная отметка фиксирует решение и не требует строить два остальных проекта.", "steps_ru": [], "success_ru": "Один финальный проект завершён, выбор записан, а остальные пути остаются добровольными продолжениями.", "diagnostics_ru": [], "next_ru": "Заключительная проверка подтвердит завершение P9 и сохранит доступ к непройденным проектам.", "task_text_ru": "Запишите выбранный финальный проект в журнале."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Условие «любой один» прошло статическую семантическую проверку; игровое испытание остаётся за пользователем."]},
-      "teaching_sections": [{"kind": "alternatives", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "quest", "id": "if.quest.v2.p9.swarm_operational", "evidence": ["authoring/questbook_v2/19_p9.json"]}, {"kind": "quest", "id": "if.quest.v2.p9.colony_autonomy", "evidence": ["authoring/questbook_v2/19_p9.json"]}, {"kind": "quest", "id": "if.quest.v2.p9.quantum_operational", "evidence": ["authoring/questbook_v2/19_p9.json"]}],
-      "grind": {"class": "NONE", "automation_before_bulk": true, "rationale_ru": "Выбор проверяет уже завершённый проект и не добавляет четвёртый ресурсный барьер."},
-      "layout": {"x": 22, "y": 0, "shape": "gear", "size": 1.75}
+      "alias": "if.quest.v2.p9.final_choice",
+      "engine_id": "3A19000000000008",
+      "epoch": "P9",
+      "role": "knowledge",
+      "requirement": "required",
+      "icon": "industrial_frontier:textures/gui/icons/process/future/strategic_demand.png",
+      "tags": [
+        "finale",
+        "choice",
+        "any_of"
+      ],
+      "dependency": {
+        "mode": "ANY_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.swarm_operational",
+            "reason": "Рабочий рой является полноценным финалом масштаба энергии и орбитального производства.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p9.colony_autonomy",
+            "reason": "Автономная колония является полноценным финалом межзвёздной устойчивости.",
+            "evidence": [
+              "kubejs/server_scripts/40_balance/08_endgame_programme.js"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p9.quantum_operational",
+            "reason": "Рабочий квантовый комплекс является полноценным финалом высокоэнергетического производства.",
+            "evidence": [
+              "kubejs/server_scripts/10_progression/08_late_epoch_gate.js"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.final_choice.read",
+          "engine_id": "4A19000000000009",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Зафиксируйте в журнале выбранный финальный проект.",
+            "help": "Для доступа к этому заданию уже достаточно завершить один из трёх финальных путей; отметка лишь записывает ваш выбор."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Финал сборки",
+        "purpose_ru": "Финал тут один и честный: не предмет в сундуке, а хозяйство, которое работает без вас.",
+        "task_text_ru": "Запишите выбранный финальный проект в журнале."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "alternatives",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p9.swarm_operational",
+          "evidence": [
+            "authoring/questbook_v2/19_p9.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p9.colony_autonomy",
+          "evidence": [
+            "authoring/questbook_v2/19_p9.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p9.quantum_operational",
+          "evidence": [
+            "authoring/questbook_v2/19_p9.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": true,
+        "rationale_ru": "Выбор проверяет уже завершённый проект и не добавляет четвёртый ресурсный барьер."
+      },
+      "layout": {
+        "x": 14.0,
+        "y": 0.0,
+        "shape": "gear",
+        "size": 1.0
+      }
     },
     {
-      "alias": "if.quest.v2.p9.commissioning", "engine_id": "3A19000000000009", "epoch": "P9", "role": "commissioning", "requirement": "required", "icon": "industrial_frontier:textures/gui/icons/epochs/p9.png", "tags": ["if_commissioning_p9", "commissioning", "finale"],
-      "dependency": {"mode": "ALL_OF", "edges": [{"quest": "if.quest.v2.p9.final_choice", "reason": "Заключительная приёмка следует только после общей основы и одного честно завершённого мегапроекта.", "evidence": ["authoring/questbook_v2/19_p9.json"]}]},
-      "proofs": [{"alias": "if.task.v2.p9.commissioning.energy", "engine_id": "4A1900000000000A", "type": "energy", "status": "verified", "text_ru": {"objective": "Передайте 1 000 000 FE в финальный резерв.", "help": "Энергия служит последней нагрузочной пробой. Общая основа и один выбранный проект уже обязательны по зависимостям."}, "energy": {"amount": 1000000}}],
-      "text_ru": {"title_ru": "Цивилизация принята в эксплуатацию", "lead_ru": "Общая система воспроизводит себя, переживает один отказ и поддерживает выбранный мегапроект.", "purpose_ru": "Это единственная заключительная точка P9. Предыдущие задания уже требуют общую основу и один финальный путь; здесь проводится небольшое испытание общего энергетического резерва. Остальные два проекта строить не нужно, и после финала они остаются доступными.", "steps_ru": ["Проверьте, что выбранный проект остаётся в рабочем состоянии после своего испытания.", "Сверьте местное производство, замкнутый контур, обслуживание и восстановление по последним записям проверок.", "Передайте контрольный объём энергии в финальный резерв."], "success_ru": "Контрольный объём энергии принят после завершения обязательной основы и одного проекта, поэтому P9 отмечается завершённой один раз.", "diagnostics_ru": ["Если завершение требует все три проекта, проверьте задание выбора: оно должно открываться после любого одного финального пути.", "Если энергия не принимается, проверьте доступный объём и предел передачи.", "Если после финала какие-либо ветви исчезают, сообщите об ошибке автору сборки: завершение кампании не должно обрезать свободную игру."], "next_ru": "Продолжайте развивать города, дипломатию, проекты и необязательные специализации без новой обязательной эпохи.", "task_text_ru": "Передайте 1 000 000 FE в финальный резерв."},
-      "authorship": {"primary_language": "ru", "origin": "human_authored", "machine_translation": false, "editorial_note": "Финал остаётся заблокирован до честного события выбора и однократного завершения."},
-      "editorial_review": {"state": "RU_READY", "marks": ["RU_PRIMARY_DRAFTED", "RU_TECH_CHECKED", "RU_STYLE_REVIEWED", "RU_FLOW_REVIEWED"], "review_notes": ["Четыре редакторских прохода и переход через один выбранный финал проверены статически; игру проверяет пользователь."]},
-      "teaching_sections": [{"kind": "operation", "source_fields": ["text_ru.purpose_ru", "text_ru.steps_ru"]}, {"kind": "output", "source_fields": ["text_ru.success_ru", "text_ru.task_text_ru"]}, {"kind": "diagnostics", "source_fields": ["text_ru.diagnostics_ru"]}, {"kind": "downstream", "source_fields": ["text_ru.next_ru"]}],
-      "content_refs": [{"kind": "mechanic", "id": "industrial_frontier:tech_epoch", "evidence": ["kubejs/server_scripts/40_balance/m3_threat_director.js"]}, {"kind": "quest", "id": "if.quest.v2.p9.final_choice", "evidence": ["authoring/questbook_v2/19_p9.json"]}],
-      "grind": {"class": "NONE", "automation_before_bulk": true, "rationale_ru": "Заключительная приёмка не требует новых предметов и проверяет уже построенные способности."},
-      "layout": {"x": 25, "y": 0, "shape": "gear", "size": 2},
-      "commissioning": {"epoch": "P9", "advances_to": "COMPLETE", "required_branch_ends": ["if.quest.v2.p9.final_choice"], "epoch_state_evidence": ["kubejs/server_scripts/10_progression/quest_commissioning_bridge.js", "docs/registries/quest_epoch_bridge.json"]}
+      "alias": "if.quest.v2.marathon.finale",
+      "engine_id": "3073000000000006",
+      "epoch": "P9",
+      "role": "knowledge",
+      "requirement": "optional",
+      "icon": "minecraft:nether_star",
+      "tags": [
+        "marathon",
+        "finale",
+        "legacy",
+        "optional"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.marathon.energy",
+            "reason": "Финальная цель опирается на осознанную энергетику.",
+            "evidence": [
+              "authoring/questbook_v2/73_marathon_choices.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.marathon.logistics",
+            "reason": "Финальная цель требует понятной сети снабжения между её участками.",
+            "evidence": [
+              "authoring/questbook_v2/73_marathon_choices.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.marathon.nuclear",
+            "reason": "Поздний проект должен учитывать риск и полный жизненный цикл материалов.",
+            "evidence": [
+              "authoring/questbook_v2/73_marathon_choices.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.marathon.space",
+            "reason": "Сравнение будущего фабрики становится полным после освоения космической инфраструктуры.",
+            "evidence": [
+              "authoring/questbook_v2/73_marathon_choices.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p9.final_choice",
+            "reason": "Справочник подводит итог после того, как основная кампания уже предложила выбор позднего наследия.",
+            "evidence": [
+              "authoring/questbook_v2/19_p9.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.marathon.finale.read",
+          "engine_id": "4073000000000006",
+          "type": "checkmark",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Прочитайте сравнение мегапроекта и сети самостоятельных колоний.",
+            "help": "Финальная памятка не требует отказываться от уже выбранного окончания."
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Один великий объект или множество живых миров",
+        "task_text_ru": "Ознакомьтесь с двумя подходами к финальному наследию кампании.",
+        "optional_note_ru": "Это размышление после основной линии, а не дополнительное условие победы."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "setup",
+          "source_fields": [
+            "text_ru.steps_ru",
+            "text_ru.success_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p9.final_choice",
+          "evidence": [
+            "authoring/questbook_v2/19_p9.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p9.colony_autonomy",
+          "evidence": [
+            "authoring/questbook_v2/19_p9.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "training_batch": 0,
+        "expected_runs": 0,
+        "automation_before_bulk": true,
+        "rationale_ru": "Финальная памятка не добавляет второй проект к уже завершённой кампании."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": -0.75,
+        "shape": "diamond",
+        "size": 1.0
+      }
+    },
+    {
+      "alias": "if.quest.v2.p9.commissioning",
+      "engine_id": "3A19000000000009",
+      "epoch": "P9",
+      "role": "commissioning",
+      "requirement": "required",
+      "icon": "industrial_frontier:textures/gui/icons/epochs/p9.png",
+      "tags": [
+        "if_commissioning_p9",
+        "commissioning",
+        "finale"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.p9.final_choice",
+            "reason": "Заключительная приёмка следует только после общей основы и одного честно завершённого мегапроекта.",
+            "evidence": [
+              "authoring/questbook_v2/19_p9.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.p9.commissioning.energy",
+          "engine_id": "4A1900000000000A",
+          "type": "energy",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Передайте 1 000 000 FE в финальный резерв.",
+            "help": "Энергия служит последней нагрузочной пробой. Общая основа и один выбранный проект уже обязательны по зависимостям."
+          },
+          "energy": {
+            "amount": 1000000
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Цивилизация принята в эксплуатацию",
+        "purpose_ru": "Производство замкнуто, колонии живут, отказ одного узла ничего не рушит. Цивилизация принята.",
+        "task_text_ru": "Передайте 1 000 000 FE в финальный резерв."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false,
+        "editorial_note": "Финал остаётся заблокирован до честного события выбора и однократного завершения."
+      },
+      "editorial_review": {
+        "state": "RU_REVIEWED",
+        "marks": [
+          "RU_WRITTEN",
+          "RU_REVIEWED"
+        ],
+        "review_notes": [
+          "Переписано по стандарту от 10 августа 2026 года."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "operation",
+          "source_fields": [
+            "text_ru.purpose_ru",
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "mechanic",
+          "id": "industrial_frontier:tech_epoch",
+          "evidence": [
+            "kubejs/server_scripts/40_balance/03_threat_director.js"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p9.final_choice",
+          "evidence": [
+            "authoring/questbook_v2/19_p9.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": true,
+        "rationale_ru": "Заключительная приёмка не требует новых предметов и проверяет уже построенные способности."
+      },
+      "layout": {
+        "x": 16.0,
+        "y": 0.75,
+        "shape": "gear",
+        "size": 1.8
+      },
+      "commissioning": {
+        "epoch": "P9",
+        "advances_to": "COMPLETE",
+        "required_branch_ends": [
+          "if.quest.v2.p9.final_choice"
+        ],
+        "epoch_state_evidence": [
+          "kubejs/server_scripts/10_progression/quest_commissioning_bridge.js",
+          "docs/registries/quest_epoch_bridge.json"
+        ]
+      }
+    },
+    {
+      "alias": "if.quest.v2.settlement.autonomous_network",
+      "engine_id": "3A2200000000001B",
+      "epoch": "P9",
+      "role": "optional_mastery",
+      "requirement": "optional",
+      "icon": "ae2:energy_cell",
+      "tags": [
+        "city",
+        "p9",
+        "autonomy",
+        "network",
+        "optional"
+      ],
+      "dependency": {
+        "mode": "ALL_OF",
+        "edges": [
+          {
+            "quest": "if.quest.v2.settlement.offworld_branch",
+            "reason": "Сеть автономных поселений вырастает из уже проверенного наземного города и снабжаемого внеземного филиала.",
+            "evidence": [
+              "authoring/questbook_v2/22_settlement.json"
+            ]
+          },
+          {
+            "quest": "if.quest.v2.p9.commissioning",
+            "reason": "Финальный городской аудит открывается только после приёмки местной промышленности, замкнутых циклов и устойчивости основной системы.",
+            "evidence": [
+              "authoring/questbook_v2/19_p9.json"
+            ]
+          }
+        ]
+      },
+      "proofs": [
+        {
+          "alias": "if.task.v2.settlement.autonomous_network.townhall",
+          "engine_id": "4B2200000000005D",
+          "type": "item",
+          "status": "verified",
+          "text_ru": {
+            "objective": "Изготовьте: Ратуша.",
+            "help": "Проверьте жителей и запросы; открытие интерфейса не доказывает автономность само по себе."
+          },
+          "item": {
+            "id": "minecolonies:blockhuttownhall",
+            "count": 1,
+            "consume": false
+          }
+        }
+      ],
+      "text_ru": {
+        "title_ru": "Сеть автономных поселений",
+        "task_text_ru": "После аудита сети откройте ратушу, распределитель кислорода, местный сборщик и энергетическую ячейку.",
+        "optional_note_ru": "Это добровольный финал городской программы; он не открывает и не блокирует технологические эпохи."
+      },
+      "authorship": {
+        "primary_language": "ru",
+        "origin": "human_authored",
+        "machine_translation": false
+      },
+      "editorial_review": {
+        "state": "RU_READY",
+        "marks": [
+          "RU_PRIMARY_DRAFTED",
+          "RU_TECH_CHECKED",
+          "RU_STYLE_REVIEWED",
+          "RU_FLOW_REVIEWED"
+        ],
+        "review_notes": [
+          "Все четыре блока подтверждены локально; текст прямо ограничивает доказательную силу интерфейсных задач."
+        ]
+      },
+      "teaching_sections": [
+        {
+          "kind": "purpose",
+          "source_fields": [
+            "text_ru.lead_ru",
+            "text_ru.purpose_ru"
+          ]
+        },
+        {
+          "kind": "recovery",
+          "source_fields": [
+            "text_ru.steps_ru"
+          ]
+        },
+        {
+          "kind": "output",
+          "source_fields": [
+            "text_ru.success_ru",
+            "text_ru.task_text_ru"
+          ]
+        },
+        {
+          "kind": "diagnostics",
+          "source_fields": [
+            "text_ru.diagnostics_ru"
+          ]
+        },
+        {
+          "kind": "downstream",
+          "source_fields": [
+            "text_ru.next_ru",
+            "text_ru.optional_note_ru"
+          ]
+        }
+      ],
+      "content_refs": [
+        {
+          "kind": "block",
+          "id": "minecolonies:blockhuttownhall",
+          "evidence": [
+            "mods/minecolonies-1.20.1-1.1.1274.jar!assets/minecolonies/blockstates/blockhuttownhall.json"
+          ]
+        },
+        {
+          "kind": "block",
+          "id": "gcyr:iv_oxygen_spreader",
+          "evidence": [
+            "mods/gcyr-1.20.1-0.2.9.jar!assets/gcyr/lang/en_us.json"
+          ]
+        },
+        {
+          "kind": "item",
+          "id": "gtceu:iv_assembler",
+          "evidence": [
+            "kubejs/exported/gtceu_item_census.json"
+          ]
+        },
+        {
+          "kind": "block_tag",
+          "id": "industrial_frontier:ae2/energy_cells",
+          "evidence": [
+            "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/blocks/ae2/energy_cells.json"
+          ]
+        },
+        {
+          "kind": "quest",
+          "id": "if.quest.v2.p9.commissioning",
+          "evidence": [
+            "authoring/questbook_v2/19_p9.json"
+          ]
+        }
+      ],
+      "grind": {
+        "class": "NONE",
+        "automation_before_bulk": true,
+        "rationale_ru": "Финальная проверка повторно использует уже построенные интерфейсы и не добавляет ни ресурсной партии, ни обязательного нового поселения."
+      },
+      "layout": {
+        "x": 18.0,
+        "y": 0.0,
+        "shape": "gear",
+        "size": 1.0
+      }
     }
   ]
 }

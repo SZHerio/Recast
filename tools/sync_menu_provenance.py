@@ -17,7 +17,7 @@ from PIL import Image
 
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-REGISTRY_PATH = ROOT / "docs" / "registries" / "m9_asset_provenance.json"
+REGISTRY_PATH = ROOT / "docs" / "registries" / "asset_provenance.json"
 
 
 def file_metadata(relative_path: str) -> dict[str, object]:
@@ -67,8 +67,8 @@ SOURCE_RECORDS = {
         "Знак «Орбитальная литейная»: шестигранная стальная рама, единый силуэт реактора и ракеты, орбитальная дуга и один расплавленный оранжевый шов; рассчитан на чтение от 16 пикселей.",
         "Orbital Foundry emblem: a steel hexagonal frame, unified reactor-and-rocket silhouette, one orbital arc and one molten-orange seam, designed to read from 16 pixels.",
         [
-            "industrial_frontier:asset/gui/icon_16",
-            "industrial_frontier:asset/gui/icon_32",
+            # Иконки 16 и 32 рисуются по пиксельной сетке, а не уменьшаются из
+            # знака, поэтому продуктами этого исходника они не являются.
             "industrial_frontier:asset/gui/icon_64",
             "industrial_frontier:asset/gui/icon_128",
             "industrial_frontier:asset/gui/icon_256",

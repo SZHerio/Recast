@@ -1,32 +1,24 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
-	hide_quest_until_deps_visible: true
 	filename: "10_p0"
 	group: "1000000000000004"
-	icon: "industrial_frontier:textures/gui/icons/epochs/p0.png"
+	icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p0.png"}}
 	id: "2010000000000001"
 	order_index: 10
 	quest_links: [ ]
 	quests: [
 		{
-			hide_until_deps_complete: true
 			dependencies: ["3A00000000000002"]
 			description: [
 				"{industrial_frontier.quest.v2.p0.brief.purpose}"
-				"{industrial_frontier.quest.v2.p0.brief.step.1}"
-				"{industrial_frontier.quest.v2.p0.brief.step.2}"
-				"{industrial_frontier.quest.v2.p0.brief.success}"
 				"{industrial_frontier.quest.v2.p0.brief.task}"
-				"{industrial_frontier.quest.v2.p0.brief.diagnostic.1}"
 				"{industrial_frontier.quest.v2.p0.brief.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.brief.next}"
 			]
 			icon: "minecraft:map"
 			id: "3010000000000001"
 			shape: "gear"
-			size: 1.5d
-			subtitle: "{industrial_frontier.quest.v2.p0.brief.lead}"
+			size: 1d
 			tags: ["mainline", "briefing"]
 			tasks: [
 				{
@@ -42,50 +34,159 @@
 		{
 			dependencies: ["3010000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p0.seasons.purpose}"
-				"{industrial_frontier.quest.v2.p0.seasons.step.1}"
-				"{industrial_frontier.quest.v2.p0.seasons.step.2}"
-				"{industrial_frontier.quest.v2.p0.seasons.success}"
-				"{industrial_frontier.quest.v2.p0.seasons.task}"
-				"{industrial_frontier.quest.v2.p0.seasons.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.seasons.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p0.seasons.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.seasons.next}"
+				"{industrial_frontier.quest.v2.defence.melee.task}"
+				"{industrial_frontier.quest.v2.defence.melee.proof_help.1}"
 			]
-			icon: "minecraft:clock"
-			id: "3010000000000002"
-			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p0.seasons.lead}"
-			tags: ["mainline", "environment"]
+			icon: "magistuarmory:iron_bastardsword"
+			id: "3B4E5CE2A065CDA5"
+			shape: "diamond"
+			size: 1d
+			tags: ["defence", "melee", "p0"]
 			tasks: [
 				{
-					id: "4010000000000002"
-					title: "{industrial_frontier.task.v2.p0.seasons.read.objective}"
-					type: "checkmark"
+					id: "43093DB11FB8DCEF"
+					item: {
+						Count: 1
+						id: "magistuarmory:iron_bastardsword"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.defence.melee.item.objective}"
+					type: "item"
 				}
 			]
-			title: "{industrial_frontier.quest.v2.p0.seasons.title}"
+			title: "{industrial_frontier.quest.v2.defence.melee.title}"
 			x: 2d
-			y: 0d
+			y: -5.25d
 		}
 		{
-			dependencies: ["3010000000000002"]
+			dependencies: ["3010000000000001"]
 			description: [
-				"{industrial_frontier.quest.v2.p0.logs.purpose}"
-				"{industrial_frontier.quest.v2.p0.logs.step.1}"
-				"{industrial_frontier.quest.v2.p0.logs.step.2}"
-				"{industrial_frontier.quest.v2.p0.logs.success}"
+				"{industrial_frontier.quest.v2.p0.food_crop.task}"
+				"{industrial_frontier.quest.v2.p0.food_crop.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.food_crop.optional_note}"
+			]
+			icon: "minecraft:bread"
+			id: "3A10000000000004"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["choice", "food", "crop_route"]
+			tasks: [
+				{
+					id: "4A10000000000005"
+					count: 4L
+					item: {
+						Count: 1
+						id: "minecraft:bread"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p0.food_crop.bread.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.food_crop.title}"
+			x: 2d
+			y: -3.75d
+		}
+		{
+			dependencies: ["3010000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.food_hunt.task}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.food_hunt.optional_note}"
+			]
+			icon: "minecraft:cooked_beef"
+			id: "3A10000000000005"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["choice", "food", "hunting_route"]
+			tasks: [
+				{
+					id: "4A10000000000006"
+					count: 4L
+					item: {
+						Count: 1
+						id: "minecraft:cooked_beef"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p0.food_hunt.beef.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.food_hunt.title}"
+			x: 2d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3010000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.food_root.task}"
+				"{industrial_frontier.quest.v2.p0.food_root.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.food_root.optional_note}"
+			]
+			icon: "minecraft:baked_potato"
+			id: "3A10000000000006"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["choice", "food", "foraging_route"]
+			tasks: [
+				{
+					id: "4A10000000000007"
+					count: 4L
+					item: {
+						Count: 1
+						id: "minecraft:baked_potato"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p0.food_root.potato.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.food_root.title}"
+			x: 2d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3010000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.iron_source.task}"
+				"{industrial_frontier.quest.v2.p0.iron_source.proof_help.1}"
+			]
+			icon: "gtceu:raw_magnetite"
+			id: "3A10000000000007"
+			shape: "hexagon"
+			size: 1d
+			tags: ["mainline", "geology", "source_product_split"]
+			tasks: [
+				{
+					id: "4A1000000000000A"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/early_iron)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p0.iron_source.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.iron_source.title}"
+			x: 2d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3010000000000001"]
+			description: [
 				"{industrial_frontier.quest.v2.p0.logs.task}"
-				"{industrial_frontier.quest.v2.p0.logs.diagnostic.1}"
 				"{industrial_frontier.quest.v2.p0.logs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.logs.next}"
 			]
 			icon: "minecraft:oak_log"
 			id: "3A10000000000001"
 			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p0.logs.lead}"
+			size: 1d
 			tags: ["mainline", "materials"]
 			tasks: [
 				{
@@ -103,448 +204,94 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p0.logs.title}"
+			x: 2d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3010000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.seasons.task}"
+				"{industrial_frontier.quest.v2.p0.seasons.proof_help.1}"
+			]
+			icon: "minecraft:clock"
+			id: "3010000000000002"
+			shape: "square"
+			size: 1d
+			tags: ["mainline", "environment"]
+			tasks: [
+				{
+					id: "4010000000000002"
+					title: "{industrial_frontier.task.v2.p0.seasons.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.seasons.title}"
+			x: 2d
+			y: 3.75d
+		}
+		{
+			dependencies: ["3010000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.world.useful_catch.task}"
+				"{industrial_frontier.quest.v2.world.useful_catch.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.useful_catch.optional_note}"
+			]
+			icon: "aquaculture:atlantic_cod"
+			id: "3050000000000006"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["world", "fishing", "food_processing"]
+			tasks: [
+				{
+					id: "4050000000000006"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/aquaculture_catch)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.world.useful_catch.fish.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.world.useful_catch.title}"
+			x: 2d
+			y: 5.25d
+		}
+		{
+			dependencies: ["3B4E5CE2A065CDA5"]
+			description: [
+				"{industrial_frontier.quest.v2.defence.discipline.task}"
+				"{industrial_frontier.quest.v2.defence.discipline.proof_help.1}"
+			]
+			icon: "minecraft:iron_chestplate"
+			id: "3021000000000006"
+			shape: "square"
+			size: 1d
+			tags: ["defence", "recovery", "safety"]
+			tasks: [
+				{
+					id: "4021000000000006"
+					title: "{industrial_frontier.task.v2.defence.discipline.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.defence.discipline.title}"
 			x: 4d
-			y: 0d
-		}
-		{
-			dependencies: ["3A10000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.planks.purpose}"
-				"{industrial_frontier.quest.v2.p0.planks.step.1}"
-				"{industrial_frontier.quest.v2.p0.planks.step.2}"
-				"{industrial_frontier.quest.v2.p0.planks.success}"
-				"{industrial_frontier.quest.v2.p0.planks.task}"
-				"{industrial_frontier.quest.v2.p0.planks.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.planks.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.planks.next}"
-			]
-			icon: "minecraft:oak_planks"
-			id: "3A10000000000002"
-			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p0.planks.lead}"
-			tags: ["mainline", "material_forms"]
-			tasks: [
-				{
-					id: "4A10000000000002"
-					count: 4L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/wood_planks)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p0.planks.items.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.planks.title}"
-			x: 6d
-			y: 0d
-		}
-		{
-			dependencies: ["3A10000000000002"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.crafting_table.purpose}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.step.1}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.step.2}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.success}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.task}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.proof_help.2}"
-				"{industrial_frontier.quest.v2.p0.crafting_table.next}"
-			]
-			icon: "minecraft:crafting_table"
-			id: "38A095554A2A0333"
-			shape: "square"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p0.crafting_table.lead}"
-			tags: ["mainline", "workstation"]
-			tasks: [
-				{
-					id: "497C444A12FF6BCC"
-					item: {
-						Count: 1
-						id: "minecraft:crafting_table"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p0.crafting_table.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4A691EFA87F0BB2D"
-					block_type: 0
-					block: "minecraft:crafting_table"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p0.crafting_table.use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.crafting_table.title}"
-			x: 8d
-			y: 0d
-		}
-		{
-			dependencies: ["38A095554A2A0333"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.camp_kit.purpose}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.step.1}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.step.2}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.success}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.task}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.2}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.3}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.4}"
-				"{industrial_frontier.quest.v2.p0.camp_kit.next}"
-			]
-			icon: "minecraft:white_bed"
-			id: "3A10000000000003"
-			shape: "rsquare"
-			size: 1.4d
-			subtitle: "{industrial_frontier.quest.v2.p0.camp_kit.lead}"
-			tags: ["mainline", "camp"]
-			tasks: [
-				{
-					id: "4A10000000000015"
-					block_type: 1
-					block: "minecraft:beds"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p0.camp_kit.bed_place.objective}"
-					type: "questsadditions:place"
-				}
-				{
-					id: "4A10000000000016"
-					block_type: 1
-					block: "minecraft:beds"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p0.camp_kit.bed_use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4A10000000000017"
-					block_type: 0
-					block: "minecraft:furnace"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p0.camp_kit.furnace_place.objective}"
-					type: "questsadditions:place"
-				}
-				{
-					id: "4A10000000000018"
-					block_type: 0
-					block: "minecraft:furnace"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p0.camp_kit.furnace_use.objective}"
-					type: "questsadditions:use"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.camp_kit.title}"
-			x: 10d
-			y: 0d
-		}
-		{
-			dependencies: ["3A10000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.food_crop.purpose}"
-				"{industrial_frontier.quest.v2.p0.food_crop.step.1}"
-				"{industrial_frontier.quest.v2.p0.food_crop.success}"
-				"{industrial_frontier.quest.v2.p0.food_crop.task}"
-				"{industrial_frontier.quest.v2.p0.food_crop.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.food_crop.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.food_crop.next}"
-				"{industrial_frontier.quest.v2.p0.food_crop.optional_note}"
-			]
-			icon: "minecraft:bread"
-			id: "3A10000000000004"
-			optional: true
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p0.food_crop.lead}"
-			tags: ["choice", "food", "crop_route"]
-			tasks: [
-				{
-					id: "4A10000000000005"
-					count: 4L
-					item: {
-						Count: 1
-						id: "minecraft:bread"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p0.food_crop.bread.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.food_crop.title}"
-			x: 12d
-			y: -3d
-		}
-		{
-			dependencies: ["3A10000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.food_hunt.purpose}"
-				"{industrial_frontier.quest.v2.p0.food_hunt.step.1}"
-				"{industrial_frontier.quest.v2.p0.food_hunt.success}"
-				"{industrial_frontier.quest.v2.p0.food_hunt.task}"
-				"{industrial_frontier.quest.v2.p0.food_hunt.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.food_hunt.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.food_hunt.next}"
-				"{industrial_frontier.quest.v2.p0.food_hunt.optional_note}"
-			]
-			icon: "minecraft:cooked_beef"
-			id: "3A10000000000005"
-			optional: true
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p0.food_hunt.lead}"
-			tags: ["choice", "food", "hunting_route"]
-			tasks: [
-				{
-					id: "4A10000000000006"
-					count: 4L
-					item: {
-						Count: 1
-						id: "minecraft:cooked_beef"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p0.food_hunt.beef.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.food_hunt.title}"
-			x: 12d
-			y: -1d
-		}
-		{
-			dependencies: ["3A10000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.food_root.purpose}"
-				"{industrial_frontier.quest.v2.p0.food_root.step.1}"
-				"{industrial_frontier.quest.v2.p0.food_root.success}"
-				"{industrial_frontier.quest.v2.p0.food_root.task}"
-				"{industrial_frontier.quest.v2.p0.food_root.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.food_root.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.food_root.next}"
-				"{industrial_frontier.quest.v2.p0.food_root.optional_note}"
-			]
-			icon: "minecraft:baked_potato"
-			id: "3A10000000000006"
-			optional: true
-			shape: "circle"
-			size: 1d
-			subtitle: "{industrial_frontier.quest.v2.p0.food_root.lead}"
-			tags: ["choice", "food", "foraging_route"]
-			tasks: [
-				{
-					id: "4A10000000000007"
-					count: 4L
-					item: {
-						Count: 1
-						id: "minecraft:baked_potato"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p0.food_root.potato.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.food_root.title}"
-			x: 12d
-			y: 1d
-		}
-		{
-			dependencies: ["3A10000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.food_ready.purpose}"
-				"{industrial_frontier.quest.v2.p0.food_ready.step.1}"
-				"{industrial_frontier.quest.v2.p0.food_ready.step.2}"
-				"{industrial_frontier.quest.v2.p0.food_ready.success}"
-				"{industrial_frontier.quest.v2.p0.food_ready.task}"
-				"{industrial_frontier.quest.v2.p0.food_ready.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.food_ready.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p0.food_ready.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.food_ready.next}"
-			]
-			icon: "minecraft:bread"
-			id: "3010000000000004"
-			shape: "hexagon"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p0.food_ready.lead}"
-			tags: ["mainline", "choice_join", "food"]
-			tasks: [
-				{
-					id: "4010000000000004"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/field)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p0.food_ready.ration.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.food_ready.title}"
-			x: 14d
-			y: -1d
-		}
-		{
-			dependencies: ["3A10000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.map.purpose}"
-				"{industrial_frontier.quest.v2.p0.map.step.1}"
-				"{industrial_frontier.quest.v2.p0.map.step.2}"
-				"{industrial_frontier.quest.v2.p0.map.success}"
-				"{industrial_frontier.quest.v2.p0.map.task}"
-				"{industrial_frontier.quest.v2.p0.map.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.map.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.map.next}"
-			]
-			icon: "minecraft:filled_map"
-			id: "3010000000000005"
-			shape: "square"
-			size: 1.2d
-			subtitle: "{industrial_frontier.quest.v2.p0.map.lead}"
-			tags: ["mainline", "navigation"]
-			tasks: [
-				{
-					id: "4010000000000005"
-					title: "{industrial_frontier.task.v2.p0.map.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.map.title}"
-			x: 12d
-			y: 3d
-		}
-		{
-			dependencies: ["3010000000000005"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.loss.purpose}"
-				"{industrial_frontier.quest.v2.p0.loss.step.1}"
-				"{industrial_frontier.quest.v2.p0.loss.step.2}"
-				"{industrial_frontier.quest.v2.p0.loss.success}"
-				"{industrial_frontier.quest.v2.p0.loss.task}"
-				"{industrial_frontier.quest.v2.p0.loss.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.loss.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.loss.next}"
-			]
-			icon: "minecraft:recovery_compass"
-			id: "3010000000000007"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "{industrial_frontier.quest.v2.p0.loss.lead}"
-			tags: ["mainline", "recovery"]
-			tasks: [
-				{
-					id: "4010000000000007"
-					title: "{industrial_frontier.task.v2.p0.loss.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.loss.title}"
-			x: 14d
-			y: 3d
-		}
-		{
-			dependencies: ["3010000000000007"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.prospect.purpose}"
-				"{industrial_frontier.quest.v2.p0.prospect.step.1}"
-				"{industrial_frontier.quest.v2.p0.prospect.step.2}"
-				"{industrial_frontier.quest.v2.p0.prospect.success}"
-				"{industrial_frontier.quest.v2.p0.prospect.task}"
-				"{industrial_frontier.quest.v2.p0.prospect.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.prospect.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p0.prospect.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.prospect.next}"
-			]
-			icon: "industrial_frontier:textures/gui/icons/process/geology/ore_sources.png"
-			id: "35DDD1065975E5CA"
-			shape: "gear"
-			size: 1.4d
-			subtitle: "{industrial_frontier.quest.v2.p0.prospect.lead}"
-			tags: ["mainline", "geology"]
-			tasks: [
-				{
-					id: "4964FF10DD1B02A8"
-					title: "{industrial_frontier.task.v2.p0.prospect.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.prospect.title}"
-			x: 16d
-			y: 3d
-		}
-		{
-			dependencies: ["35DDD1065975E5CA"]
-			description: [
-				"{industrial_frontier.quest.v2.p0.iron_source.purpose}"
-				"{industrial_frontier.quest.v2.p0.iron_source.step.1}"
-				"{industrial_frontier.quest.v2.p0.iron_source.step.2}"
-				"{industrial_frontier.quest.v2.p0.iron_source.success}"
-				"{industrial_frontier.quest.v2.p0.iron_source.task}"
-				"{industrial_frontier.quest.v2.p0.iron_source.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.iron_source.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p0.iron_source.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.iron_source.next}"
-			]
-			icon: "gtceu:raw_magnetite"
-			id: "3A10000000000007"
-			shape: "hexagon"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p0.iron_source.lead}"
-			tags: ["mainline", "geology", "source_product_split"]
-			tasks: [
-				{
-					id: "4A1000000000000A"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/early_iron)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p0.iron_source.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p0.iron_source.title}"
-			x: 18d
-			y: 3d
+			y: -2.25d
 		}
 		{
 			dependencies: ["3A10000000000007"]
 			description: [
-				"{industrial_frontier.quest.v2.p0.iron_product.purpose}"
-				"{industrial_frontier.quest.v2.p0.iron_product.step.1}"
-				"{industrial_frontier.quest.v2.p0.iron_product.step.2}"
-				"{industrial_frontier.quest.v2.p0.iron_product.success}"
 				"{industrial_frontier.quest.v2.p0.iron_product.task}"
-				"{industrial_frontier.quest.v2.p0.iron_product.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.iron_product.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p0.iron_product.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.iron_product.next}"
 			]
 			icon: "minecraft:iron_ingot"
 			id: "3A10000000000008"
 			shape: "rsquare"
-			size: 1.4d
-			subtitle: "{industrial_frontier.quest.v2.p0.iron_product.lead}"
+			size: 1d
 			tags: ["mainline", "materials", "source_product_split"]
 			tasks: [
 				{
@@ -562,27 +309,105 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p0.iron_product.title}"
-			x: 20d
-			y: 3d
+			x: 4d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A10000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.planks.task}"
+				"{industrial_frontier.quest.v2.p0.planks.proof_help.1}"
+			]
+			icon: "minecraft:oak_planks"
+			id: "3A10000000000002"
+			shape: "square"
+			size: 1d
+			tags: ["mainline", "material_forms"]
+			tasks: [
+				{
+					id: "4A10000000000002"
+					count: 4L
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/wood_planks)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p0.planks.items.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.planks.title}"
+			x: 4d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3050000000000006"]
+			description: [
+				"{industrial_frontier.quest.v2.world.fish_processing.task}"
+				"{industrial_frontier.quest.v2.world.fish_processing.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.fish_processing.optional_note}"
+			]
+			icon: "aquaculture:fish_fillet_raw"
+			id: "3A50000000000007"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["world", "fishing", "food_processing", "source_before_product"]
+			tasks: [
+				{
+					id: "4A50000000000006"
+					item: {
+						Count: 1
+						id: "aquaculture:fish_fillet_raw"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.world.useful_catch.fillet.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.world.fish_processing.title}"
+			x: 4d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3A10000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.crafting_table.task}"
+				"{industrial_frontier.quest.v2.p0.crafting_table.proof_help.1}"
+			]
+			icon: "minecraft:crafting_table"
+			id: "38A095554A2A0333"
+			shape: "square"
+			size: 1.1d
+			tags: ["mainline", "workstation"]
+			tasks: [
+				{
+					id: "497C444A12FF6BCC"
+					item: {
+						Count: 1
+						id: "minecraft:crafting_table"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.p0.crafting_table.item.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.crafting_table.title}"
+			x: 6d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3A10000000000008"]
 			description: [
-				"{industrial_frontier.quest.v2.p0.iron_consumer.purpose}"
-				"{industrial_frontier.quest.v2.p0.iron_consumer.step.1}"
-				"{industrial_frontier.quest.v2.p0.iron_consumer.step.2}"
-				"{industrial_frontier.quest.v2.p0.iron_consumer.success}"
 				"{industrial_frontier.quest.v2.p0.iron_consumer.task}"
-				"{industrial_frontier.quest.v2.p0.iron_consumer.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.iron_consumer.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p0.iron_consumer.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.iron_consumer.next}"
 			]
 			icon: "gtceu:iron_pickaxe"
 			id: "3A10000000000009"
 			shape: "square"
-			size: 1.3d
-			subtitle: "{industrial_frontier.quest.v2.p0.iron_consumer.lead}"
+			size: 1d
 			tags: ["mainline", "materials", "first_consumer"]
 			tasks: [
 				{
@@ -599,57 +424,1139 @@
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p0.iron_consumer.title}"
-			x: 22d
+			x: 6d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A10000000000009"]
+			description: [
+				"{industrial_frontier.quest.v2.defence.ladder.task}"
+				"{industrial_frontier.quest.v2.defence.ladder.proof_help.1}"
+			]
+			icon: "minecraft:shield"
+			id: "3021000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["defence", "progression"]
+			tasks: [
+				{
+					id: "4021000000000001"
+					title: "{industrial_frontier.task.v2.defence.ladder.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.defence.ladder.title}"
+			x: 8d
+			y: -0.75d
+		}
+		{
+			dependencies: ["38A095554A2A0333"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.camp_kit.purpose}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.task}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.1}"
+				"{industrial_frontier.quest.v2.p0.camp_kit.proof_help.2}"
+			]
+			icon: "minecraft:white_bed"
+			id: "3A10000000000003"
+			shape: "rsquare"
+			size: 1.4d
+			tags: ["mainline", "camp"]
+			tasks: [
+				{
+					id: "4A10000000000015"
+					block_type: 1
+					block: "minecraft:beds"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.p0.camp_kit.bed_place.objective}"
+					type: "questsadditions:place"
+				}
+				{
+					id: "4A10000000000017"
+					block_type: 0
+					block: "minecraft:furnace"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.p0.camp_kit.furnace_place.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.camp_kit.title}"
+			x: 8d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3A10000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.food_ready.purpose}"
+				"{industrial_frontier.quest.v2.p0.food_ready.task}"
+				"{industrial_frontier.quest.v2.p0.food_ready.proof_help.1}"
+			]
+			icon: "minecraft:bread"
+			id: "3010000000000004"
+			shape: "hexagon"
+			size: 1.4d
+			tags: ["mainline", "choice_join", "food"]
+			tasks: [
+				{
+					id: "4010000000000004"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/field)"
+						}
+					}
+					title: "{industrial_frontier.task.v2.p0.food_ready.ration.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.food_ready.title}"
+			x: 10d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A10000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.map.task}"
+				"{industrial_frontier.quest.v2.p0.map.proof_help.1}"
+			]
+			icon: "minecraft:filled_map"
+			id: "3010000000000005"
+			shape: "square"
+			size: 1d
+			tags: ["mainline", "navigation"]
+			tasks: [
+				{
+					id: "4010000000000005"
+					title: "{industrial_frontier.task.v2.p0.map.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.map.title}"
+			x: 10d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3010000000000005"
+				"3021000000000006"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.defence.reconnaissance.purpose}"
+				"{industrial_frontier.quest.v2.defence.reconnaissance.task}"
+				"{industrial_frontier.quest.v2.defence.reconnaissance.proof_help.1}"
+				"{industrial_frontier.quest.v2.defence.reconnaissance.optional_note}"
+			]
+			icon: "minecraft:filled_map"
+			id: "3204C3EB1C4E9763"
+			optional: true
+			shape: "hexagon"
+			size: 1.2d
+			tags: ["defence", "reconnaissance", "factions"]
+			tasks: [
+				{
+					id: "4676EC6FB6D9856F"
+					structure: "#industrial_frontier:faction_base"
+					title: "{industrial_frontier.task.v2.defence.reconnaissance.structure.objective}"
+					type: "structure"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.defence.reconnaissance.title}"
+			x: 12d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3010000000000005"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.overview.task}"
+				"{industrial_frontier.quest.v2.factions.overview.proof_help.1}"
+			]
+			icon: "minecraft:compass"
+			id: "3025000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["factions", "status"]
+			tasks: [
+				{
+					id: "4025000000000001"
+					title: "{industrial_frontier.task.v2.factions.overview.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.overview.title}"
+			x: 12d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3010000000000005"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.loss.purpose}"
+				"{industrial_frontier.quest.v2.p0.loss.task}"
+				"{industrial_frontier.quest.v2.p0.loss.proof_help.1}"
+			]
+			icon: "minecraft:recovery_compass"
+			id: "3010000000000007"
+			shape: "circle"
+			size: 1d
+			tags: ["mainline", "recovery"]
+			tasks: [
+				{
+					id: "4010000000000007"
+					title: "{industrial_frontier.task.v2.p0.loss.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.loss.title}"
+			x: 12d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3010000000000005"]
+			description: [
+				"{industrial_frontier.quest.v2.world.field_brief.task}"
+				"{industrial_frontier.quest.v2.world.field_brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.field_brief.optional_note}"
+			]
+			icon: "minecraft:compass"
+			id: "3050000000000001"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["world", "fieldwork", "orientation"]
+			tasks: [
+				{
+					id: "4050000000000001"
+					title: "{industrial_frontier.task.v2.world.field_brief.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.world.field_brief.title}"
+			x: 12d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3050000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.atlas.brief.task}"
+				"{industrial_frontier.quest.v2.atlas.brief.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.brief.optional_note}"
+			]
+			icon: "minecraft:filled_map"
+			id: "3051000000000001"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["world", "expedition", "planning"]
+			tasks: [
+				{
+					id: "4051000000000001"
+					title: "{industrial_frontier.task.v2.atlas.brief.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.atlas.brief.title}"
+			x: 14d
+			y: -9.75d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.social_state.purpose}"
+				"{industrial_frontier.quest.v2.diplomacy.social_state.task}"
+				"{industrial_frontier.quest.v2.diplomacy.social_state.proof_help.1}"
+			]
+			icon: "minecraft:shield"
+			id: "3045000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["diplomacy", "state"]
+			tasks: [
+				{
+					id: "4045000000000001"
+					title: "{industrial_frontier.task.v2.diplomacy.social_state.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.social_state.title}"
+			x: 14d
+			y: -8.25d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.ash_root.task}"
+				"{industrial_frontier.quest.v2.factions.ash_root.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.ash_root.optional_note}"
+			]
+			icon: "minecraft:oak_sapling"
+			id: "3A2500000000000B"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["factions", "ash_root", "ecology"]
+			tasks: [
+				{
+					id: "4A2500000000000B"
+					title: "{industrial_frontier.task.v2.factions.ash_root.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.ash_root.title}"
+			x: 14d
+			y: -6.75d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.first_base.purpose}"
+				"{industrial_frontier.quest.v2.factions.first_base.task}"
+				"{industrial_frontier.quest.v2.factions.first_base.proof_help.1}"
+			]
+			icon: "minecraft:campfire"
+			id: "3A8CF713DE372BBC"
+			shape: "gear"
+			size: 1.2d
+			tags: ["factions", "bases", "first_contact"]
+			tasks: [
+				{
+					id: "46E7754074BDA2B0"
+					structure: "#industrial_frontier:faction_base"
+					title: "{industrial_frontier.task.v2.factions.first_base.structure.objective}"
+					type: "structure"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.first_base.title}"
+			x: 14d
+			y: -5.25d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.free_caravans.task}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.free_caravans.optional_note}"
+			]
+			icon: "minecraft:minecart"
+			id: "3A25000000000009"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["factions", "free_caravans", "trade"]
+			tasks: [
+				{
+					id: "4A25000000000009"
+					title: "{industrial_frontier.task.v2.factions.free_caravans.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.free_caravans.title}"
+			x: 14d
+			y: -3.75d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.helios.task}"
+				"{industrial_frontier.quest.v2.factions.helios.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.helios.optional_note}"
+			]
+			icon: "minecraft:spyglass"
+			id: "3A2500000000000A"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["factions", "helios", "research"]
+			tasks: [
+				{
+					id: "4A2500000000000A"
+					title: "{industrial_frontier.task.v2.factions.helios.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.helios.title}"
+			x: 14d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.meridian.task}"
+				"{industrial_frontier.quest.v2.factions.meridian.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.meridian.optional_note}"
+			]
+			icon: "minecraft:rail"
+			id: "3A25000000000008"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["factions", "meridian", "industry"]
+			tasks: [
+				{
+					id: "4A25000000000008"
+					title: "{industrial_frontier.task.v2.factions.meridian.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.meridian.title}"
+			x: 14d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.scar.task}"
+				"{industrial_frontier.quest.v2.factions.scar.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.scar.optional_note}"
+			]
+			icon: "minecraft:tripwire_hook"
+			id: "3A2500000000000C"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["factions", "scar", "mercenaries"]
+			tasks: [
+				{
+					id: "4A2500000000000C"
+					title: "{industrial_frontier.task.v2.factions.scar.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.scar.title}"
+			x: 14d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3025000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.zemlemer.task}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.proof_help.1}"
+				"{industrial_frontier.quest.v2.factions.zemlemer.optional_note}"
+			]
+			icon: "minecraft:bell"
+			id: "3A25000000000007"
+			optional: true
+			shape: "hexagon"
+			size: 1d
+			tags: ["factions", "zemlemer", "city"]
+			tasks: [
+				{
+					id: "4A25000000000007"
+					title: "{industrial_frontier.task.v2.factions.zemlemer.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.zemlemer.title}"
+			x: 14d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3010000000000007"]
+			description: [
+				"{industrial_frontier.quest.v2.p0.prospect.task}"
+				"{industrial_frontier.quest.v2.p0.prospect.proof_help.1}"
+			]
+			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/geology/ore_sources.png"}}
+			id: "35DDD1065975E5CA"
+			shape: "gear"
+			size: 1d
+			tags: ["mainline", "geology"]
+			tasks: [
+				{
+					id: "4964FF10DD1B02A8"
+					title: "{industrial_frontier.task.v2.p0.prospect.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.p0.prospect.title}"
+			x: 14d
+			y: 3.75d
+		}
+		{
+			dependencies: ["3050000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.world.biome_survey.purpose}"
+				"{industrial_frontier.quest.v2.world.biome_survey.task}"
+				"{industrial_frontier.quest.v2.world.biome_survey.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.biome_survey.optional_note}"
+			]
+			icon: "biomesoplenty:maple_sapling"
+			id: "3050000000000002"
+			optional: true
+			shape: "circle"
+			size: 1.2d
+			tags: ["world", "biome", "city_planning"]
+			tasks: [
+				{
+					id: "4050000000000002"
+					biome: "#industrial_frontier:field_biomes"
+					title: "{industrial_frontier.task.v2.world.biome_survey.visit.objective}"
+					type: "biome"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.world.biome_survey.title}"
+			x: 14d
+			y: 5.25d
+		}
+		{
+			dependencies: [
+				"3A10000000000008"
+				"3050000000000001"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.world.fishing_station.task}"
+				"{industrial_frontier.quest.v2.world.fishing_station.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.fishing_station.proof_help.2}"
+				"{industrial_frontier.quest.v2.world.fishing_station.optional_note}"
+			]
+			icon: "aquaculture:iron_fishing_rod"
+			id: "3050000000000005"
+			optional: true
+			shape: "gear"
+			size: 1d
+			tags: ["world", "fishing", "food"]
+			tasks: [
+				{
+					id: "4050000000000005"
+					item: {
+						Count: 1
+						id: "aquaculture:iron_fishing_rod"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.world.fishing_station.rod.objective}"
+					type: "item"
+				}
+				{
+					id: "4A50000000000005"
+					block_type: 0
+					block: "aquaculture:tackle_box"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.world.fishing_station.tackle_box.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.world.fishing_station.title}"
+			x: 14d
+			y: 6.75d
+		}
+		{
+			dependencies: [
+				"3010000000000002"
+				"3050000000000001"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.world.season_station.task}"
+				"{industrial_frontier.quest.v2.world.season_station.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.season_station.proof_help.2}"
+				"{industrial_frontier.quest.v2.world.season_station.optional_note}"
+			]
+			icon: "sereneseasons:season_sensor"
+			id: "3050000000000003"
+			optional: true
+			shape: "gear"
+			size: 1.1d
+			tags: ["world", "seasons", "agriculture"]
+			tasks: [
+				{
+					id: "4050000000000003"
+					item: {
+						Count: 1
+						id: "sereneseasons:calendar"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.world.season_station.calendar.objective}"
+					type: "item"
+				}
+				{
+					id: "4A50000000000003"
+					block_type: 0
+					block: "sereneseasons:season_sensor"
+					value: 1L
+					replace: false
+					replaced: "minecraft:air"
+					title: "{industrial_frontier.task.v2.world.season_station.sensor.objective}"
+					type: "questsadditions:place"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.world.season_station.title}"
+			x: 14d
+			y: 8.25d
+		}
+		{
+			dependencies: ["3050000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.world.wildlife_watch.purpose}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.task}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.proof_help.1}"
+				"{industrial_frontier.quest.v2.world.wildlife_watch.optional_note}"
+			]
+			icon: "alexsmobs:animal_dictionary"
+			id: "3050000000000004"
+			optional: true
+			shape: "circle"
+			size: 1.2d
+			tags: ["world", "wildlife", "ecology"]
+			tasks: [
+				{
+					id: "4050000000000004"
+					item: {
+						Count: 1
+						id: "alexsmobs:animal_dictionary"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.world.wildlife_watch.dictionary.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.world.wildlife_watch.title}"
+			x: 14d
+			y: 9.75d
+		}
+		{
+			dependencies: [
+				"3051000000000001"
+				"35DDD1065975E5CA"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.atlas.cave_survey.task}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.cave_survey.optional_note}"
+			]
+			icon: "minecraft:deepslate"
+			id: "3051000000000003"
+			optional: true
+			shape: "diamond"
+			size: 1d
+			tags: ["world", "caves", "geology"]
+			tasks: [
+				{
+					id: "4051000000000003"
+					item: {
+						Count: 1
+						id: "minecraft:deepslate"
+					}
+					consume_items: false
+					title: "{industrial_frontier.task.v2.atlas.cave_survey.sample.objective}"
+					type: "item"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.atlas.cave_survey.title}"
+			x: 16d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3051000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.atlas.overworld_site.purpose}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.task}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.proof_help.1}"
+				"{industrial_frontier.quest.v2.atlas.overworld_site.optional_note}"
+			]
+			icon: "minecraft:map"
+			id: "3051000000000002"
+			optional: true
+			shape: "circle"
+			size: 1.2d
+			tags: ["world", "overworld", "structures"]
+			tasks: [
+				{
+					id: "4051000000000002"
+					structure: "#industrial_frontier:expedition_overworld"
+					title: "{industrial_frontier.task.v2.atlas.overworld_site.structure.objective}"
+					type: "structure"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.atlas.overworld_site.title}"
+			x: 16d
+			y: -3d
+		}
+		{
+			dependencies: ["3045000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.affiliation.purpose}"
+				"{industrial_frontier.quest.v2.diplomacy.affiliation.task}"
+				"{industrial_frontier.quest.v2.diplomacy.affiliation.proof_help.1}"
+			]
+			icon: "minecraft:player_head"
+			id: "3045000000000004"
+			shape: "square"
+			size: 1d
+			tags: ["diplomacy", "affiliation"]
+			tasks: [
+				{
+					id: "4045000000000004"
+					title: "{industrial_frontier.task.v2.diplomacy.affiliation.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.affiliation.title}"
+			x: 16d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3045000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.epoch.task}"
+				"{industrial_frontier.quest.v2.diplomacy.epoch.proof_help.1}"
+			]
+			icon: "minecraft:clock"
+			id: "3045000000000002"
+			shape: "rsquare"
+			size: 1d
+			tags: ["diplomacy", "epoch"]
+			tasks: [
+				{
+					id: "4045000000000002"
+					title: "{industrial_frontier.task.v2.diplomacy.epoch.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.epoch.title}"
+			x: 16d
+			y: 0d
+		}
+		{
+			dependencies: ["3A8CF713DE372BBC"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.base_growth.task}"
+				"{industrial_frontier.quest.v2.factions.base_growth.proof_help.1}"
+			]
+			icon: "minecraft:stone_bricks"
+			id: "3A2500000000000D"
+			shape: "rsquare"
+			size: 1d
+			tags: ["factions", "bases", "growth"]
+			tasks: [
+				{
+					id: "4A2500000000000D"
+					title: "{industrial_frontier.task.v2.factions.base_growth.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.base_growth.title}"
+			x: 16d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3A8CF713DE372BBC"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.envoy.task}"
+				"{industrial_frontier.quest.v2.factions.envoy.proof_help.1}"
+			]
+			icon: "minecraft:paper"
+			id: "3025000000000003"
+			shape: "circle"
+			size: 1d
+			tags: ["factions", "envoy", "dialogue"]
+			tasks: [
+				{
+					id: "4025000000000003"
+					title: "{industrial_frontier.task.v2.factions.envoy.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.envoy.title}"
+			x: 16d
 			y: 3d
 		}
 		{
 			dependencies: [
 				"3010000000000004"
 				"3A10000000000009"
+				"3010000000000002"
+				"3010000000000005"
+				"3010000000000007"
+				"35DDD1065975E5CA"
 			]
 			description: [
 				"{industrial_frontier.quest.v2.p0.commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p0.commissioning.step.1}"
-				"{industrial_frontier.quest.v2.p0.commissioning.step.2}"
-				"{industrial_frontier.quest.v2.p0.commissioning.success}"
 				"{industrial_frontier.quest.v2.p0.commissioning.task}"
-				"{industrial_frontier.quest.v2.p0.commissioning.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p0.commissioning.diagnostic.2}"
 				"{industrial_frontier.quest.v2.p0.commissioning.proof_help.1}"
-				"{industrial_frontier.quest.v2.p0.commissioning.proof_help.2}"
-				"{industrial_frontier.quest.v2.p0.commissioning.next}"
 			]
 			icon: "create:cogwheel"
 			id: "3DD22A44EA12FD23"
 			shape: "diamond"
-			size: 1.6d
-			subtitle: "{industrial_frontier.quest.v2.p0.commissioning.lead}"
+			size: 1.8d
 			tags: ["mainline", "if_commissioning_p0"]
 			tasks: [
 				{
 					id: "41408DFEECDC8581"
-					block_type: 0
-					block: "minecraft:crafting_table"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
+					item: {
+						Count: 1
+						id: "minecraft:crafting_table"
+					}
+					consume_items: false
 					title: "{industrial_frontier.task.v2.p0.exit.workbench_use.objective}"
-					type: "questsadditions:use"
-				}
-				{
-					id: "4CF20225553E38E0"
-					block_type: 0
-					block: "minecraft:furnace"
-					value: 1L
-					checkItem: false
-					isItemInteraction: false
-					title: "{industrial_frontier.task.v2.p0.exit.furnace_use.objective}"
-					type: "questsadditions:use"
+					type: "item"
 				}
 			]
 			title: "{industrial_frontier.quest.v2.p0.commissioning.title}"
+			x: 16d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"3045000000000004"
+				"3025000000000003"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.dialogue_scope.task}"
+				"{industrial_frontier.quest.v2.diplomacy.dialogue_scope.proof_help.1}"
+				"{industrial_frontier.quest.v2.diplomacy.dialogue_scope.optional_note}"
+			]
+			icon: "minecraft:book"
+			id: "3A4500000000000A"
+			optional: true
+			shape: "circle"
+			size: 1d
+			tags: ["diplomacy", "dialogue", "npc"]
+			tasks: [
+				{
+					id: "4A4500000000000A"
+					title: "{industrial_frontier.task.v2.diplomacy.dialogue_scope.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.dialogue_scope.title}"
+			x: 18d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3045000000000002"]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.reputation.task}"
+				"{industrial_frontier.quest.v2.diplomacy.reputation.proof_help.1}"
+			]
+			icon: "minecraft:paper"
+			id: "3045000000000003"
+			shape: "diamond"
+			size: 1d
+			tags: ["diplomacy", "reputation"]
+			tasks: [
+				{
+					id: "4045000000000003"
+					title: "{industrial_frontier.task.v2.diplomacy.reputation.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.reputation.title}"
+			x: 18d
+			y: 0d
+		}
+		{
+			dependencies: ["3025000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.reputation.task}"
+				"{industrial_frontier.quest.v2.factions.reputation.proof_help.1}"
+			]
+			icon: "minecraft:emerald"
+			id: "3025000000000004"
+			shape: "diamond"
+			size: 1d
+			tags: ["factions", "reputation"]
+			tasks: [
+				{
+					id: "4025000000000004"
+					title: "{industrial_frontier.task.v2.factions.reputation.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.reputation.title}"
+			x: 18d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3045000000000003"]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.treaty.task}"
+				"{industrial_frontier.quest.v2.diplomacy.treaty.proof_help.1}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3045000000000006"
+			shape: "square"
+			size: 1d
+			tags: ["diplomacy", "treaty"]
+			tasks: [
+				{
+					id: "4045000000000006"
+					title: "{industrial_frontier.task.v2.diplomacy.treaty.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.treaty.title}"
+			x: 20d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3025000000000004"]
+			description: [
+				"{industrial_frontier.quest.v2.factions.treaties.task}"
+				"{industrial_frontier.quest.v2.factions.treaties.proof_help.1}"
+			]
+			icon: "minecraft:writable_book"
+			id: "3025000000000005"
+			shape: "square"
+			size: 1d
+			tags: ["factions", "treaties"]
+			tasks: [
+				{
+					id: "4025000000000005"
+					title: "{industrial_frontier.task.v2.factions.treaties.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.treaties.title}"
+			x: 20d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3045000000000006"
+				"3045000000000004"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.operation.task}"
+				"{industrial_frontier.quest.v2.diplomacy.operation.proof_help.1}"
+			]
+			icon: "minecraft:spyglass"
+			id: "3045000000000005"
+			shape: "octagon"
+			size: 1d
+			tags: ["diplomacy", "operation"]
+			tasks: [
+				{
+					id: "4045000000000005"
+					title: "{industrial_frontier.task.v2.diplomacy.operation.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.operation.title}"
 			x: 22d
-			y: 1d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3025000000000005"
+				"3A2500000000000D"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.factions.operations.task}"
+				"{industrial_frontier.quest.v2.factions.operations.proof_help.1}"
+			]
+			icon: "minecraft:bell"
+			id: "3025000000000006"
+			shape: "octagon"
+			size: 1d
+			tags: ["factions", "operations", "warning"]
+			tasks: [
+				{
+					id: "4025000000000006"
+					title: "{industrial_frontier.task.v2.factions.operations.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.factions.operations.title}"
+			x: 22d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3045000000000005"]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.loot.task}"
+				"{industrial_frontier.quest.v2.diplomacy.loot.proof_help.1}"
+			]
+			icon: "minecraft:chest"
+			id: "3045000000000007"
+			shape: "square"
+			size: 1d
+			tags: ["diplomacy", "loot", "progression"]
+			tasks: [
+				{
+					id: "4045000000000007"
+					title: "{industrial_frontier.task.v2.diplomacy.loot.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.loot.title}"
+			x: 24d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3025000000000006"]
+			description: [
+				"{industrial_frontier.quest.v2.operations.trigger.task}"
+				"{industrial_frontier.quest.v2.operations.trigger.proof_help.1}"
+			]
+			icon: "minecraft:shield"
+			id: "3046000000000001"
+			shape: "gear"
+			size: 1d
+			tags: ["operations", "reputation"]
+			tasks: [
+				{
+					id: "4046000000000001"
+					title: "{industrial_frontier.task.v2.operations.trigger.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.operations.trigger.title}"
+			x: 24d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3045000000000005"
+				"3045000000000007"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.diplomacy.recovery.purpose}"
+				"{industrial_frontier.quest.v2.diplomacy.recovery.task}"
+				"{industrial_frontier.quest.v2.diplomacy.recovery.proof_help.1}"
+			]
+			icon: "minecraft:golden_apple"
+			id: "3045000000000008"
+			shape: "diamond"
+			size: 1d
+			tags: ["diplomacy", "recovery"]
+			tasks: [
+				{
+					id: "4045000000000008"
+					title: "{industrial_frontier.task.v2.diplomacy.recovery.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.diplomacy.recovery.title}"
+			x: 26d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3046000000000001"]
+			description: [
+				"{industrial_frontier.quest.v2.operations.lifecycle.task}"
+				"{industrial_frontier.quest.v2.operations.lifecycle.proof_help.1}"
+			]
+			icon: "minecraft:clock"
+			id: "3A46000000000007"
+			shape: "circle"
+			size: 1d
+			tags: ["operations", "timing"]
+			tasks: [
+				{
+					id: "4A46000000000007"
+					title: "{industrial_frontier.task.v2.operations.lifecycle.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.operations.lifecycle.title}"
+			x: 26d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3A46000000000007"
+				"3045000000000006"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.operations.operation_diplomacy.task}"
+				"{industrial_frontier.quest.v2.operations.operation_diplomacy.proof_help.1}"
+			]
+			icon: "minecraft:written_book"
+			id: "3046000000000005"
+			shape: "rsquare"
+			size: 1d
+			tags: ["operations", "treaties", "negotiation"]
+			tasks: [
+				{
+					id: "4046000000000005"
+					title: "{industrial_frontier.task.v2.operations.operation_diplomacy.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.operations.operation_diplomacy.title}"
+			x: 28d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3A46000000000007"
+				"3045000000000002"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.operations.operation_types.purpose}"
+				"{industrial_frontier.quest.v2.operations.operation_types.task}"
+				"{industrial_frontier.quest.v2.operations.operation_types.proof_help.1}"
+			]
+			icon: "minecraft:spyglass"
+			id: "3046000000000004"
+			shape: "hexagon"
+			size: 1d
+			tags: ["operations", "epoch"]
+			tasks: [
+				{
+					id: "4046000000000004"
+					title: "{industrial_frontier.task.v2.operations.operation_types.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.operations.operation_types.title}"
+			x: 28d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3046000000000004"
+				"3021000000000001"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.operations.squad_tiers.task}"
+				"{industrial_frontier.quest.v2.operations.squad_tiers.proof_help.1}"
+			]
+			icon: "minecraft:iron_helmet"
+			id: "3046000000000002"
+			shape: "rsquare"
+			size: 1d
+			tags: ["operations", "squads", "weapons"]
+			tasks: [
+				{
+					id: "4046000000000002"
+					title: "{industrial_frontier.task.v2.operations.squad_tiers.read.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.operations.squad_tiers.title}"
+			x: 30d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"3046000000000002"
+				"3046000000000005"
+			]
+			description: [
+				"{industrial_frontier.quest.v2.operations.response.purpose}"
+				"{industrial_frontier.quest.v2.operations.response.task}"
+				"{industrial_frontier.quest.v2.operations.response.proof_help.1}"
+			]
+			icon: "minecraft:compass"
+			id: "3A46000000000008"
+			shape: "hexagon"
+			size: 1d
+			tags: ["operations", "response", "status"]
+			tasks: [
+				{
+					id: "4A46000000000008"
+					title: "{industrial_frontier.task.v2.operations.response.plan.objective}"
+					type: "checkmark"
+				}
+			]
+			title: "{industrial_frontier.quest.v2.operations.response.title}"
+			x: 32d
+			y: 0d
 		}
 	]
 	subtitle: [

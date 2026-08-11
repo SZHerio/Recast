@@ -32,5 +32,6 @@
   "item.projectred_integration.toggle_latch_gate": "Переключаемая защёлка",
   "item.projectred_integration.transparent_latch_gate": "Прозрачная защёлка",
   "item.projectred_integration.xnor_gate": "Логический элемент «Исключающее ИЛИ-НЕ»",
-  "item.projectred_integration.xor_gate": "Логический элемент «Исключающее ИЛИ»"
+  "item.projectred_integration.xor_gate": "Логический элемент «Исключающее ИЛИ»",
+  "itemGroup.projectred_integration": "Project Red: логика"
 }

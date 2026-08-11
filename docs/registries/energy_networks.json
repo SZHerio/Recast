@@ -1,0 +1,452 @@
+{
+  "schema_version": 1,
+  "namespace": "industrial_frontier",
+  "registry_id": "industrial_frontier:energy_networks",
+  "status": "STATIC_COMPLETE_USER_GATE_PENDING",
+  "scope_ru": "Статическая карта установленных SU/EU/FE/AE-сетей, неэлектрических носителей THERMAL/STEAM, разрешённых односторонних преобразований, физических мостов и заблокированного HBM-placeholder. Числа runtime не считаются принятыми до теста владельца.",
+  "networks": [
+    {
+      "network_id": "industrial_frontier:energy/create_su",
+      "status": "ACTIVE_INSTALLED",
+      "unit_symbol": "SU",
+      "owner_domain_ref": "industrial_frontier:domain/mechanical_engineering",
+      "installed_mod_ids": [
+        "create"
+      ],
+      "boundary_ru": "Кинетическая сеть Create сохраняет собственную механику напряжения/скорости и не подключается напрямую к EU, FE или AE.",
+      "endpoint_examples": [
+        "create:shaft",
+        "create:cogwheel"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/create_jar",
+        "industrial_frontier:evidence/energy/constitution"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static"
+      ]
+    },
+    {
+      "network_id": "industrial_frontier:energy/gtceu_eu",
+      "status": "ACTIVE_INSTALLED",
+      "unit_symbol": "EU",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "installed_mod_ids": [
+        "gtceu"
+      ],
+      "boundary_ru": "GTCEu EU использует собственные напряжения и кабельную дисциплину; обратный импорт FE через конвертеры выключен.",
+      "endpoint_examples": [],
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_jar",
+        "industrial_frontier:evidence/energy/gtceu_config"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static",
+        "industrial_frontier:gate/energy/runtime_cycle_test"
+      ]
+    },
+    {
+      "network_id": "industrial_frontier:energy/forge_fe",
+      "status": "ACTIVE_PLATFORM_API",
+      "unit_symbol": "FE",
+      "owner_domain_ref": "industrial_frontier:domain/shared_energy_interface",
+      "installed_mod_ids": [],
+      "boundary_ru": "FE является общим API-переносом, но не получает универсальный кабель или автоматический двусторонний мост ко всем системам.",
+      "endpoint_examples": [
+        "ae2:energy_acceptor"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/ae2_acceptor_guide",
+        "industrial_frontier:evidence/energy/constitution"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static",
+        "industrial_frontier:gate/energy/runtime_cycle_test"
+      ]
+    },
+    {
+      "network_id": "industrial_frontier:energy/ae2_ae",
+      "status": "ACTIVE_INSTALLED",
+      "unit_symbol": "AE",
+      "owner_domain_ref": "industrial_frontier:domain/digital_factory",
+      "installed_mod_ids": [
+        "ae2"
+      ],
+      "boundary_ru": "AE — внутренняя энергия МЭ-сети; внешний FE входит через специализированный приёмщик, обратный экспорт не разрешён.",
+      "endpoint_examples": [
+        "ae2:energy_acceptor",
+        "ae2:energy_cell",
+        "ae2:controller"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/ae2_jar",
+        "industrial_frontier:evidence/energy/ae2_acceptor_guide"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static",
+        "industrial_frontier:gate/energy/runtime_cycle_test"
+      ]
+    },
+    {
+      "network_id": "industrial_frontier:energy/process_heat",
+      "status": "ACTIVE_CONTRACTUAL_CARRIER",
+      "unit_symbol": "THERMAL",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "installed_mod_ids": [],
+      "boundary_ru": "Тепло — локальное условие процесса и парогенерации, а не универсальная кабельная сеть. Температурные классы и стоимость задаёт конкретная машина или рецепт.",
+      "endpoint_examples": [],
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/m2_heated_recipe",
+        "industrial_frontier:evidence/energy/constitution"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static",
+        "industrial_frontier:gate/energy/thermal_steam_user_test"
+      ]
+    },
+    {
+      "network_id": "industrial_frontier:energy/gtceu_steam",
+      "status": "ACTIVE_INSTALLED",
+      "unit_symbol": "mB_STEAM",
+      "owner_domain_ref": "industrial_frontier:domain/industrial_chemistry_metallurgy",
+      "installed_mod_ids": [
+        "gtceu"
+      ],
+      "boundary_ru": "gtceu:steam является вещественным теплоносителем в трубах и машинах, а не эквивалентом EU/FE/AE; вода, тепло, расход и возможный конденсат учитываются отдельно.",
+      "endpoint_examples": [
+        "gtceu:steam"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_steam_tag",
+        "industrial_frontier:evidence/energy/gtceu_jar"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static",
+        "industrial_frontier:gate/energy/thermal_steam_user_test"
+      ]
+    },
+    {
+      "network_id": "industrial_frontier:energy/hbm_reserved",
+      "status": "ACTIVE_INSTALLED",
+      "unit_symbol": "HE",
+      "owner_domain_ref": "industrial_frontier:domain/strategic_nuclear_program",
+      "installed_mod_ids": [
+        "hbm_ntm_rebirth"
+      ],
+      "boundary_ru": "HE — четвёртая и последняя энергетическая единица сборки, замкнутая на себя. Она питает только машины HBM и не имеет конвертера ни в EU, ни в FE: стратегический домен обязан строить собственную генерацию, а не подключаться к городской сети.",
+      "endpoint_examples": [
+        "hbm_ntm_rebirth:machine_assembly_machine",
+        "hbm_ntm_rebirth:machine_diesel",
+        "hbm_ntm_rebirth:machine_battery_socket"
+      ],
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/constitution"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/future_hbm"
+      ]
+    }
+  ],
+  "converters": [
+    {
+      "converter_id": "industrial_frontier:converter/gtceu_native_eu_to_fe",
+      "status": "ACTIVE_CONFIGURED",
+      "source_network_ref": "industrial_frontier:energy/gtceu_eu",
+      "target_network_ref": "industrial_frontier:energy/forge_fe",
+      "direction": "ONE_WAY",
+      "input_units": 1,
+      "output_units": 4,
+      "max_rate": null,
+      "reverse_path_allowed": false,
+      "implementation_refs": [
+        "config/gtceu.yaml#compatibility.energy.nativeEUToFE",
+        "config/gtceu.yaml#compatibility.energy.euToFeRatio"
+      ],
+      "cycle_audit": "USER_TEST_REQUIRED",
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_config"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static",
+        "industrial_frontier:gate/energy/runtime_cycle_test"
+      ]
+    },
+    {
+      "converter_id": "industrial_frontier:converter/gtceu_fe_to_eu_disabled",
+      "status": "DISABLED_BY_CONFIG",
+      "source_network_ref": "industrial_frontier:energy/forge_fe",
+      "target_network_ref": "industrial_frontier:energy/gtceu_eu",
+      "direction": "ONE_WAY",
+      "input_units": 4,
+      "output_units": 1,
+      "max_rate": null,
+      "reverse_path_allowed": false,
+      "implementation_refs": [
+        "config/gtceu.yaml#compatibility.energy.enableFEConverters",
+        "config/gtceu.yaml#compatibility.energy.feToEuRatio"
+      ],
+      "cycle_audit": "STATIC_CLOSED",
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_config"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static"
+      ]
+    },
+    {
+      "converter_id": "industrial_frontier:converter/ae2_fe_to_ae",
+      "status": "ACTIVE_CONFIGURED",
+      "source_network_ref": "industrial_frontier:energy/forge_fe",
+      "target_network_ref": "industrial_frontier:energy/ae2_ae",
+      "direction": "ONE_WAY",
+      "input_units": 2,
+      "output_units": 1,
+      "max_rate": null,
+      "reverse_path_allowed": false,
+      "implementation_refs": [
+        "ae2:energy_acceptor",
+        "ae2:controller"
+      ],
+      "cycle_audit": "USER_TEST_REQUIRED",
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/ae2_acceptor_guide"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/installed_static",
+        "industrial_frontier:gate/energy/runtime_cycle_test"
+      ]
+    },
+    {
+      "converter_id": "industrial_frontier:converter/future_hbm_to_fe",
+      "status": "GATED_NOT_INSTALLED",
+      "source_network_ref": "industrial_frontier:energy/hbm_reserved",
+      "target_network_ref": "industrial_frontier:energy/forge_fe",
+      "direction": "ONE_WAY",
+      "input_units": null,
+      "output_units": null,
+      "max_rate": null,
+      "reverse_path_allowed": false,
+      "implementation_refs": [],
+      "cycle_audit": "BLOCKED_NOT_INSTALLED",
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/constitution"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/future_hbm"
+      ]
+    }
+  ],
+  "physical_bridges": [
+    {
+      "bridge_id": "industrial_frontier:energy_bridge/heat_to_gtceu_steam",
+      "status": "ACTIVE_CONTRACTUAL",
+      "source_network_ref": "industrial_frontier:energy/process_heat",
+      "target_network_ref": "industrial_frontier:energy/gtceu_steam",
+      "direction": "ONE_WAY",
+      "physical_basis_ru": "Учтённое тепло кипятит подготовленную воду и создаёт вещественный поток gtceu:steam; это машинный процесс, а не числовой энергетический конвертер.",
+      "resource_input_refs": [
+        "industrial_frontier:substance/raw_water"
+      ],
+      "resource_output_refs": [
+        "industrial_frontier:substance/steam"
+      ],
+      "implementation_refs": [
+        "docs/registries/substance_passports.json",
+        "docs/registries/material_forms.json"
+      ],
+      "reverse_path_allowed": false,
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_steam_tag",
+        "industrial_frontier:evidence/energy/constitution"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/thermal_steam_user_test"
+      ]
+    },
+    {
+      "bridge_id": "industrial_frontier:energy_bridge/gtceu_steam_to_eu",
+      "status": "ACTIVE_VENDOR_USER_GATE",
+      "source_network_ref": "industrial_frontier:energy/gtceu_steam",
+      "target_network_ref": "industrial_frontier:energy/gtceu_eu",
+      "direction": "ONE_WAY",
+      "physical_basis_ru": "Пар может выполнять работу в утверждённом GTCEu-генераторе и выдавать EU; коэффициент, расход и возврат воды не фиксируются без теста владельца.",
+      "resource_input_refs": [
+        "industrial_frontier:substance/steam"
+      ],
+      "resource_output_refs": [],
+      "implementation_refs": [],
+      "reverse_path_allowed": false,
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_jar",
+        "industrial_frontier:evidence/energy/gtceu_steam_tag"
+      ],
+      "gate_refs": [
+        "industrial_frontier:gate/energy/thermal_steam_user_test",
+        "industrial_frontier:gate/energy/runtime_cycle_test"
+      ]
+    }
+  ],
+  "forbidden_links": [
+    {
+      "link_id": "industrial_frontier:energy_link/su_to_eu_direct",
+      "source_network_ref": "industrial_frontier:energy/create_su",
+      "target_network_ref": "industrial_frontier:energy/gtceu_eu",
+      "reason_ru": "Прямой универсальный мост стирает самостоятельность механики и электрической инфраструктуры.",
+      "status": "FORBIDDEN"
+    },
+    {
+      "link_id": "industrial_frontier:energy_link/fe_to_eu_runtime",
+      "source_network_ref": "industrial_frontier:energy/forge_fe",
+      "target_network_ref": "industrial_frontier:energy/gtceu_eu",
+      "reason_ru": "Обратный FE→EU путь создаёт риск дешёвого обхода GTCEu-генерации и энергетической петли.",
+      "status": "FORBIDDEN"
+    },
+    {
+      "link_id": "industrial_frontier:energy_link/ae_to_fe_export",
+      "source_network_ref": "industrial_frontier:energy/ae2_ae",
+      "target_network_ref": "industrial_frontier:energy/forge_fe",
+      "reason_ru": "AE2 в текущем контракте является потребителем энергии и не экспортирует FE.",
+      "status": "FORBIDDEN"
+    },
+    {
+      "link_id": "industrial_frontier:energy_link/hbm_universal_bridge",
+      "source_network_ref": "industrial_frontier:energy/hbm_reserved",
+      "target_network_ref": "industrial_frontier:energy/forge_fe",
+      "reason_ru": "HBM-порт не выбран; любой коэффициент или кабель до аудита был бы выдуманным runtime-контентом.",
+      "status": "GATED_NOT_INSTALLED"
+    },
+    {
+      "link_id": "industrial_frontier:energy_link/thermal_universal_cable",
+      "source_network_ref": "industrial_frontier:energy/process_heat",
+      "target_network_ref": "industrial_frontier:energy/forge_fe",
+      "reason_ru": "Локальное технологическое тепло не является FE и не передаётся универсальным кабелем без конкретного физического устройства.",
+      "status": "FORBIDDEN"
+    },
+    {
+      "link_id": "industrial_frontier:energy_link/steam_to_ae_direct",
+      "source_network_ref": "industrial_frontier:energy/gtceu_steam",
+      "target_network_ref": "industrial_frontier:energy/ae2_ae",
+      "reason_ru": "Вещественный поток пара не питает МЭ-сеть напрямую; допустим только последовательный физический путь steam→EU→FE→AE с потерями и владельческими gates.",
+      "status": "FORBIDDEN"
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "industrial_frontier:gate/energy/installed_static",
+      "status": "CLOSED_STATIC",
+      "requirement_ru": "Подтвердить JAR, конфигурационные ключи и документированные односторонние endpoints без запуска Minecraft.",
+      "owner": "CODEX",
+      "blocks_runtime_claim": false,
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_config",
+        "industrial_frontier:evidence/energy/ae2_acceptor_guide"
+      ]
+    },
+    {
+      "gate_id": "industrial_frontier:gate/energy/runtime_cycle_test",
+      "status": "OPEN_USER_TEST",
+      "requirement_ru": "Владелец измеряет фактическое направление, пропускную способность и отсутствие замкнутой петли EU→FE→AE и соседних FE-устройств.",
+      "owner": "PACK_OWNER",
+      "blocks_runtime_claim": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_config",
+        "industrial_frontier:evidence/energy/ae2_acceptor_guide"
+      ]
+    },
+    {
+      "gate_id": "industrial_frontier:gate/energy/thermal_steam_user_test",
+      "status": "OPEN_USER_TEST",
+      "requirement_ru": "Владелец измеряет фактический расход воды и пара, EU-выход, конденсат/потери и отсутствие цикла steam→EU→heat→steam на установленных машинах.",
+      "owner": "PACK_OWNER",
+      "blocks_runtime_claim": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/gtceu_steam_tag",
+        "industrial_frontier:evidence/energy/gtceu_jar"
+      ]
+    },
+    {
+      "gate_id": "industrial_frontier:gate/energy/future_hbm",
+      "status": "BLOCKED_NOT_INSTALLED",
+      "requirement_ru": "Выбрать и установить один HBM-порт, затем извлечь его единицы, endpoints и коэффициенты до разрешения единственного моста.",
+      "owner": "SHARED",
+      "blocks_runtime_claim": true,
+      "evidence_refs": [
+        "industrial_frontier:evidence/energy/constitution"
+      ]
+    }
+  ],
+  "source_evidence": [
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/create_jar",
+      "type": "INSTALLED_JAR",
+      "path": "mods/create-1.20.1-6.0.8.jar",
+      "locator": "mod id create and kinetic content",
+      "observed": "Create is installed and provides its own kinetic SU network.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/gtceu_jar",
+      "type": "INSTALLED_JAR",
+      "path": "mods/gtceu-1.20.1-7.5.3.jar",
+      "locator": "mod id gtceu and EU machines/cables",
+      "observed": "GTCEu is installed and provides its own EU network.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/ae2_jar",
+      "type": "INSTALLED_JAR",
+      "path": "mods/appliedenergistics2-forge-15.4.10.jar",
+      "locator": "mod id ae2 and AE energy content",
+      "observed": "AE2 is installed and provides its internal AE network.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/gtceu_config",
+      "type": "CONFIG_VALUE",
+      "path": "config/gtceu.yaml",
+      "locator": "compatibility.energy",
+      "observed": "nativeEUToFE=true, enableFEConverters=false, feToEuRatio=4, euToFeRatio=4.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/ae2_acceptor_guide",
+      "type": "JAR_INTERNAL_PATH",
+      "path": "mods/appliedenergistics2-forge-15.4.10.jar!/assets/ae2/ae2guide/items-blocks-machines/energy_acceptor.md",
+      "locator": "Forge conversion ratio",
+      "observed": "The installed guide states 2 FE = 1 AE and describes Energy Acceptor/controller input.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/constitution",
+      "type": "DESIGN_DOCUMENT",
+      "path": "docs/TECHNOLOGY_FEDERATION.md",
+      "locator": "section 6",
+      "observed": "SU, EU, FE and future HBM energy stay distinct; universal cables and unbounded bidirectional converters are forbidden.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/gtceu_steam_tag",
+      "type": "AUTHOR_DECISION",
+      "path": "config/paxi/datapacks/IndustrialFrontier-Data/data/industrial_frontier/tags/fluids/materials/steam.json",
+      "locator": "values[0]",
+      "observed": "The authored pack tag resolves the canonical installed steam carrier to exact ID gtceu:steam.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    },
+    {
+      "evidence_id": "industrial_frontier:evidence/energy/m2_heated_recipe",
+      "type": "AUTHOR_DECISION",
+      "path": "kubejs/server_scripts/30_integrations/02_process_ownership.js",
+      "locator": "industrial_frontier:create/brass_from_copper_zinc .heated()",
+      "observed": "The current pack already uses heat as an explicit local process condition rather than an electrical network.",
+      "verified_on": "2026-08-02",
+      "static_only": true
+    }
+  ]
+}

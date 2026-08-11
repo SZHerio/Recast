@@ -102,12 +102,12 @@ function Assert-Png([string]$RelativePath, [int]$Width, [int]$Height, [string]$M
 }
 
 try {
-    $registryPath = Resolve-MenuPath 'docs/registries/m9_menu_visuals.json'
-    $schemaPath = Resolve-MenuPath 'authoring/schemas/m9_menu_visuals.schema.json'
+    $registryPath = Resolve-MenuPath 'docs/registries/menu_visuals.json'
+    $schemaPath = Resolve-MenuPath 'authoring/schemas/menu_visuals.schema.json'
     $registryRaw = Get-Content -Raw -LiteralPath $registryPath -Encoding UTF8
     $registry = $registryRaw | ConvertFrom-Json
     $schema = Get-Content -Raw -LiteralPath $schemaPath -Encoding UTF8 | ConvertFrom-Json
-    if ([string]$registry.registry_id -ne 'industrial_frontier:m9/menu_visuals_v2') { Add-MenuError 'Unexpected menu registry ID.' }
+    if ([string]$registry.registry_id -ne 'industrial_frontier:menu_visuals_v2') { Add-MenuError 'Unexpected menu registry ID.' }
     if ([string]$registry.status -ne 'IMPLEMENTED_STATIC_UNTESTED') { Add-MenuError 'Menu status must remain IMPLEMENTED_STATIC_UNTESTED until the owner runs Minecraft.' }
     if (-not [bool]$registry.no_game_launch) { Add-MenuError 'Menu contract must state no_game_launch=true.' }
     if ([string]$registry.translation_scope -ne 'EXCLUDED_NO_FILES_TOUCHED') { Add-MenuError 'Translation scope is not explicitly excluded.' }
@@ -231,9 +231,7 @@ try {
     $layout = Get-Content -Raw -LiteralPath $layoutPath -Encoding UTF8
     foreach ($token in @(
         '[source:local]/config/fancymenu/assets/menu/base.png',
-        'parallax = true',
-        'parallax_intensity_x = 0.025',
-        'parallax_intensity_y = 0.014',
+        'parallax = false',
         'invert_parallax = false',
         '[source:local]/config/fancymenu/assets/ui/icon_button_normal.png'
     )) {
@@ -246,11 +244,18 @@ try {
     if ($layout -match '(?m)^\s*enable_parallax\s*=\s*true\s*$') {
         Add-MenuError 'The title layout must not contain separate cursor-parallax elements after the F11 resize defect.'
     }
-    if ([regex]::Matches($layout, '(?m)^\s*parallax\s*=\s*true\s*$').Count -ne 1) {
-        Add-MenuError 'Exactly one always-present menu background must provide cursor parallax.'
+    # Решение владельца от 11 августа 2026 года: фон за курсором не ездит.
+    if ([regex]::Matches($layout, '(?m)^\s*parallax\s*=\s*true\s*$').Count -ne 0) {
+        Add-MenuError 'The menu background must stay still; cursor parallax is disabled by owner decision.'
     }
-    if ([regex]::Matches($layout, '(?m)^\s*nine_slice_custom_background\s*=\s*true\s*$').Count -ne 10) {
-        Add-MenuError 'All eight action buttons and two compact buttons must use nine-slicing.'
+    if ($layout -match '(?m)^\s*parallax_intensity_[xy]\s*=') {
+        Add-MenuError 'Parallax intensity keys must be absent while the background is static.'
+    }
+    if ([regex]::Matches($layout, '(?m)^\s*nine_slice_custom_background\s*=\s*true\s*$').Count -ne 15) {
+        Add-MenuError 'All eight visible custom buttons and the seven hidden compatibility widgets must retain nine-slice styling.'
+    }
+    if ([regex]::Matches($layout, 'action_type:mimicbutton').Count -ne 5) {
+        Add-MenuError 'The five visible main-menu buttons must use mimicbutton actions instead of rendering the grey vanilla widgets.'
     }
     if ($layout -match '(?m)^\s*slide\s*=\s*true\s*$') { Add-MenuError 'The stable title background must not slide.' }
     if ($layout -match '(?m)^\s*action\s*=\s*(?:setscale|autoscale)\s*$') {
@@ -262,12 +267,23 @@ try {
         Add-MenuError 'Missing title-panel element.'
     }
     else {
-        $expectedPanel = @{ anchor_point = 'top-left'; x = '8'; y = '4'; width = '214'; height = '258' }
+        # Minecraft подбирает масштаб интерфейса так, что логический экран
+        # никогда не меньше 320x240. Композиция обязана укладываться в эту
+        # гарантированную высоту: панель 222 плюс поля по 9 сверху и снизу.
+        # Раньше стек занимал 262 и на 320x240 разъезжался.
+        $expectedPanel = @{ anchor_point = 'mid-left'; x = '12'; y = '-111'; width = '208'; height = '222' }
         foreach ($setting in $expectedPanel.Keys) {
             if ((Get-BlockSetting $panelBlock $setting) -ne $expectedPanel[$setting]) {
-                Add-MenuError "Title-panel setting '$setting' must be '$($expectedPanel[$setting])' for the 480x270 maximum-GUI-scale viewport."
+                Add-MenuError "Title-panel setting '$setting' must be '$($expectedPanel[$setting])' for the guaranteed 320x240 viewport."
             }
         }
+        $panelHeight = [int](Get-BlockSetting $panelBlock 'height')
+        if ($panelHeight -gt 224) {
+            Add-MenuError "Title panel is $panelHeight tall; it must stay within the guaranteed 240-pixel logical height."
+        }
+    }
+    if ([regex]::Matches($layout, '(?m)^\s*stay_on_screen\s*=\s*true\s*$').Count -ne 0) {
+        Add-MenuError 'No element may clamp itself to the screen: independent clamping is what broke the composition.'
     }
     foreach ($removedId in @('recast_service_hint', 'recast_build_label')) {
         if (-not [string]::IsNullOrWhiteSpace((Get-ElementBlock $layout $removedId))) {
@@ -279,8 +295,13 @@ try {
             Add-MenuError "Vanilla title widget '$widgetId' must be hidden by its real FancyMenu 3.9.9 identifier."
         }
     }
-    if ($layout -notmatch '(?s)instance_identifier\s*=\s*title_screen_copyright_button\s+anchor_point\s*=\s*top-left\s+x\s*=\s*-1000\s+y\s*=\s*-1000\s+width\s*=\s*1\s+height\s*=\s*1\s+stay_on_screen\s*=\s*false') {
-        Add-MenuError 'Copyright widget must be moved off-screen; FancyMenu 3.9.9 intentionally refuses to hide it.'
+    foreach ($widgetId in @('mc_titlescreen_singleplayer_button', 'mc_titlescreen_multiplayer_button', 'forge_titlescreen_mods_button', 'mc_titlescreen_options_button', 'mc_titlescreen_quit_button')) {
+        if ($layout -notmatch "(?s)instance_identifier\s*=\s*$([regex]::Escape($widgetId)).*?is_hidden\s*=\s*true") {
+            Add-MenuError "Vanilla action widget '$widgetId' must remain hidden behind its white mimic button."
+        }
+    }
+    if ($layout -notmatch '(?s)instance_identifier\s*=\s*title_screen_copyright_button\s+label\s*=\s*\{"text":""\}\s+label_base_color\s*=\s*#00FFFFFF\s+label_hover_color\s*=\s*#00FFFFFF\s+base_opacity\s*=\s*0\.0\s+anchor_point\s*=\s*top-left\s+x\s*=\s*-1000\s+y\s*=\s*-1000\s+width\s*=\s*1\s+height\s*=\s*1\s+stay_on_screen\s*=\s*false') {
+        Add-MenuError 'Copyright widget must have an empty transparent label, zero opacity and an off-screen 1x1 fallback.'
     }
     Add-MenuPass 'FancyMenu moving background, native 480x270-safe panel and exact hidden-widget contracts validated.'
 }
@@ -311,7 +332,7 @@ try {
         if ($loadingLayout -match 'industrial_frontier\.loading\.' -or $loadingLayout -match '"placeholder"\s*:\s*"local"') {
             Add-MenuError "Loading layout '$name' contains a localization lookup that is unavailable before Paxi resource loading."
         }
-        foreach ($expected in @('width = 200', 'height = 67', 'width = 420', 'height = 72', 'width = 388', 'width = 376')) {
+        foreach ($expected in @('width = 200', 'height = 67', 'width = 420', 'height = 104', 'y = -112', 'height = 30', 'height = 18', 'height = 16', 'width = 388', 'width = 376')) {
             if (-not $loadingLayout.Contains($expected)) {
                 Add-MenuError "Loading layout '$name' is missing compact geometry token '$expected'."
             }
@@ -324,7 +345,7 @@ catch {
 }
 
 try {
-    $provenancePath = Resolve-MenuPath 'docs/registries/m9_asset_provenance.json'
+    $provenancePath = Resolve-MenuPath 'docs/registries/asset_provenance.json'
     $provenance = Get-Content -Raw -LiteralPath $provenancePath -Encoding UTF8 | ConvertFrom-Json
     $byPath = @{}
     foreach ($asset in @($provenance.assets)) { $byPath[[string]$asset.path] = $asset }
