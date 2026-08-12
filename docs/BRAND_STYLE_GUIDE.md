@@ -81,7 +81,7 @@ lockup содержит только имена `MINECRAFT` и `RECAST`, а жа
 
 ## 5. Композиция экранов
 
-Эталонная сетка FancyMenu — **854×480**, масштабирование автоматическое.
+Эталонная сетка FancyMenu — **640×360**, масштабирование автоматическое.
 Основные действия главного меню находятся в левой 34-процентной безопасной
 панели. Сцена строится из трёх согласованных планов: неподвижного дальнего
 города, среднего химико-логистического контура и ближних труб/ограждений.
@@ -152,7 +152,10 @@ lockup содержит только имена `MINECRAFT` и `RECAST`, а жа
 
 | Путь | Назначение |
 |---|---|
-| `brand_source/1.png` … `brand_source/6.png` | неизменяемые исходные знак, hero-кадры и обложка |
+| `docs/visual_previews/main_menu_concepts/logo_minecraft_recast_semibold_study.png` | утверждённый неизменяемый лист логотипа v3 |
+| `brand_source/title_lockup_orbital_foundry_v3.png` | прозрачный горизонтальный MINECRAFT / RECAST lockup |
+| `brand_source/orbital_foundry_mark_v3.png` | прозрачный квадратный знак «литейная → орбита» |
+| `brand_source/1.png` … `brand_source/6.png` | архивные исходные знак, hero-кадры и обложка |
 | `config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/textures/gui/` | канонические pack-ассеты |
 | `config/fancymenu/assets/` | копии hero/UI-ассетов для FancyMenu и Drippy |
 | `textures/gui/icons/epochs/` | P0–P9 |
@@ -163,14 +166,13 @@ lockup содержит только имена `MINECRAFT` и `RECAST`, а жа
 | `textures/gui/operations/` | девять стадий операций |
 | `assets/fonts/` | Lato и текст OFL |
 
-Порядок воспроизводимой сборки:
+Порядок воспроизводимой пересборки утверждённого бренда:
 
-1. `python tools/install_brand_assets.py` — преобразует сохранённые исходные
-   кадры в канонические menu/loading/cover/icon без изменения оригиналов.
-2. `python tools/generate_brand.py` — собирает языконезависимый wordmark из
-   принятого знака и локальных шрифтов.
-3. `python tools/generate_m9_visuals.py` — создаёт системные иконки и UI-текстуры
-   и синхронизирует одобренные hero-кадры с FancyMenu.
+1. `python tools/prepare_approved_logo.py` — отделяет от одобренного листа
+   прозрачные lockup и mark без перерисовки утверждённой композиции.
+2. `python tools/build_menu_visuals.py --brand-only` — синхронизирует только
+   logo/mark/icon с Paxi, FancyMenu и `pack_icon.png`, не трогая фон и кнопки.
+3. `python tools/sync_menu_provenance.py` — обновляет хэши и происхождение.
 4. `powershell -File tools/validate_m9_visuals.ps1` — проверяет реестр, SHA-256,
    размеры PNG, локализацию, layout-ссылки и квестовые иконки без запуска игры.
 
@@ -178,3 +180,12 @@ lockup содержит только имена `MINECRAFT` и `RECAST`, а жа
 пересборке. Provenance-реестр отдельно хранит их хэши, дату создания, статус
 сохранности исходного промпта, RU/EN-описание и прямые выходные ассеты. Любая
 замена изображения требует обновления этой цепочки.
+
+## 9. Отчёты о внедрении
+
+Фактическое внедрение утверждённого логотипа v3, перечень runtime-ресурсов,
+результаты статической проверки и оставшаяся пользовательская приёмка записаны
+в [`MAIN_MENU_BRAND_IMPLEMENTATION_2026-08-12.md`](MAIN_MENU_BRAND_IMPLEMENTATION_2026-08-12.md).
+
+Архивный [`history/M9_MENU_VISUAL_REFRESH.md`](history/M9_MENU_VISUAL_REFRESH.md)
+описывает предыдущий срез v2 и не заменяет текущий отчёт.

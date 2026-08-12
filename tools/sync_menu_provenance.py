@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Synchronize M9 provenance records after the Recast v2 menu build.
+"""Synchronize M9 provenance records after the canonical Recast menu build.
 
 This is a mechanical registry updater.  It never launches Minecraft and it
 does not inspect or modify localization files.
@@ -62,13 +62,13 @@ def source_record(
 SOURCE_RECORDS = {
     "industrial_frontier:source/brand/mark": source_record(
         "industrial_frontier:source/brand/mark",
-        "brand_source/orbital_foundry_icon_v2.png",
-        "2026-08-08T16:18:00+03:00",
-        "Знак «Орбитальная литейная»: шестигранная стальная рама, единый силуэт реактора и ракеты, орбитальная дуга и один расплавленный оранжевый шов; рассчитан на чтение от 16 пикселей.",
-        "Orbital Foundry emblem: a steel hexagonal frame, unified reactor-and-rocket silhouette, one orbital arc and one molten-orange seam, designed to read from 16 pixels.",
+        "brand_source/orbital_foundry_mark_v3.png",
+        "2026-08-12T07:25:00+03:00",
+        "Утверждённый знак Recast: литейная печь и завод внутри разомкнутого стального кольца, стартовая башня, траектория к звезде и один расплавленный янтарный поток.",
+        "Approved Recast emblem: a foundry furnace and factory inside a broken steel ring, launch tower, trajectory star and one molten-amber stream.",
         [
-            # Иконки 16 и 32 рисуются по пиксельной сетке, а не уменьшаются из
-            # знака, поэтому продуктами этого исходника они не являются.
+            "industrial_frontier:asset/gui/icon_16",
+            "industrial_frontier:asset/gui/icon_32",
             "industrial_frontier:asset/gui/icon_64",
             "industrial_frontier:asset/gui/icon_128",
             "industrial_frontier:asset/gui/icon_256",
@@ -104,10 +104,10 @@ SOURCE_RECORDS = {
     ),
     "industrial_frontier:source/brand/title_lockup": source_record(
         "industrial_frontier:source/brand/title_lockup",
-        "brand_source/title_lockup_v2.png",
-        "2026-08-08T16:20:00+03:00",
-        "Собственный двухстрочный игровой логотип MINECRAFT / RECAST из холодной стали с единым литейным швом и без сторонней графики.",
-        "Original two-line MINECRAFT / RECAST game-title lockup in cold steel with one casting seam and no third-party artwork.",
+        "brand_source/title_lockup_orbital_foundry_v3.png",
+        "2026-08-12T07:25:00+03:00",
+        "Утверждённый горизонтальный логотип MINECRAFT / RECAST: завод и стартовая инфраструктура объединены со строгим полужирным инженерным словесным знаком.",
+        "Approved MINECRAFT / RECAST horizontal lockup combining foundry and launch infrastructure with a strict semibold engineering wordmark.",
         ["industrial_frontier:asset/gui/logo"],
     ),
 }
@@ -157,16 +157,11 @@ for size in (16, 32, 64, 128, 256):
         "resource_location": f"industrial_frontier:textures/gui/icon_{size}.png",
         "source_type": "PROJECT_GENERATED",
     }
-    if size <= 32:
-        icon_spec["source_note"] = (
-            "Dedicated Recast micro-mark drawn directly on a 16px grid by tools/build_menu_visuals.py; "
-            "the 32px delivery uses nearest-neighbour scaling and is not a downsampled illustration."
-        )
-    else:
-        icon_spec["source_artwork_id"] = "industrial_frontier:source/brand/mark"
-        icon_spec["source_note"] = (
-            "Size-specific orbital-foundry icon built from the accepted source artwork by tools/build_menu_visuals.py."
-        )
+    icon_spec["source_artwork_id"] = "industrial_frontier:source/brand/mark"
+    icon_spec["source_note"] = (
+        "Size-specific foundry-to-orbit icon downsampled from the approved transparent master with Lanczos; "
+        "64px and smaller deliveries receive deterministic contrast and unsharp-mask compensation."
+    )
     ASSET_SPECS[f"config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/textures/gui/icon_{size}.png"] = icon_spec
 
 ASSET_SPECS["config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial_frontier/textures/gui/mark.png"] = {
@@ -174,7 +169,7 @@ ASSET_SPECS["config/paxi/resourcepacks/IndustrialFrontier-Core/assets/industrial
     "resource_location": "industrial_frontier:textures/gui/mark.png",
     "source_type": "PROJECT_GENERATED",
     "source_artwork_id": "industrial_frontier:source/brand/mark",
-    "source_note": "512px canonical orbital-foundry mark built by tools/build_menu_visuals.py.",
+    "source_note": "512px canonical foundry-to-orbit mark built from the approved transparent v3 master.",
 }
 
 DERIVED = {
@@ -252,7 +247,7 @@ def main() -> int:
     registry["assets"] = sorted(old_assets.values(), key=lambda entry: entry["path"])
     registry["generator"]["method"] = (
         "Deterministic Pillow rendering for symbols and UI states; accepted ImageGen artwork is reframed and alpha-preserved by "
-        "tools/build_menu_visuals.py; 16/32px window icons are direct pixel-grid micro-marks; FancyMenu delivery copies are "
+        "tools/build_menu_visuals.py; window icons are Lanczos derivatives of the transparent mark master; FancyMenu delivery copies are "
         "byte-identical to canonical resource-pack assets."
     )
 

@@ -25,6 +25,12 @@ customization {
   keepaspectratio = true
 }
 
+customization {
+  action = autoscale
+  basewidth = 640
+  baseheight = 360
+}
+
 element {
   source = [source:local]/config/fancymenu/assets/ui/panel.png
   repeat_texture = false
@@ -67,9 +73,9 @@ element {
   instance_identifier = recast_title_tagline
   anchor_point = mid-left
   x = 24
-  y = -51
+  y = -53
   width = 184
-  height = 10
+  height = 12
   stay_on_screen = false
 }
 
@@ -85,9 +91,9 @@ element {
   instance_identifier = recast_title_tagline_2
   anchor_point = mid-left
   x = 24
-  y = -40
+  y = -41
   width = 184
-  height = 10
+  height = 12
   stay_on_screen = false
 }
 
@@ -511,14 +517,13 @@ vanilla_button {
   [executable_block:recast_hide_copyright_actions][type:generic] = [executables:]
   element_type = vanilla_button
   instance_identifier = title_screen_copyright_button
-  label = {"text":""}
-  label_base_color = #00FFFFFF
-  label_hover_color = #00FFFFFF
-  base_opacity = 0.0
-  anchor_point = top-left
-  x = -1000
-  y = -1000
-  width = 1
-  height = 1
+  label_base_color = #FF8A939C
+  label_hover_color = #FF8A939C
+  base_opacity = 1.0
+  anchor_point = bottom-left
+  x = 4
+  y = -12
+  width = 260
+  height = 10
   stay_on_screen = false
 }

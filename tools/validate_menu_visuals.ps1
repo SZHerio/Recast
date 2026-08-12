@@ -258,8 +258,17 @@ try {
         Add-MenuError 'The five visible main-menu buttons must use mimicbutton actions instead of rendering the grey vanilla widgets.'
     }
     if ($layout -match '(?m)^\s*slide\s*=\s*true\s*$') { Add-MenuError 'The stable title background must not slide.' }
-    if ($layout -match '(?m)^\s*action\s*=\s*(?:setscale|autoscale)\s*$') {
-        Add-MenuError 'Title layout must use the native GUI coordinate space; scale actions break maximum-GUI-scale geometry.'
+    # Решение владельца от 11 августа 2026 года: размер меню не должен зависеть
+    # от выбранного игроком масштаба интерфейса. Это делает автомасштаб: макет
+    # живёт в поле 640x360 и приводится к экрану независимо от настройки.
+    if ($layout -notmatch '(?m)^\s*action\s*=\s*autoscale\s*$') {
+        Add-MenuError 'Title layout must use autoscale so the menu size does not follow the GUI scale setting.'
+    }
+    foreach ($token in @('basewidth = 640', 'baseheight = 360')) {
+        if (-not $layout.Contains($token)) { Add-MenuError "Autoscale base is missing token: $token" }
+    }
+    if ($layout -match '(?m)^\s*action\s*=\s*setscale\s*$') {
+        Add-MenuError 'Fixed setscale must not be combined with autoscale.'
     }
 
     $panelBlock = Get-ElementBlock $layout 'recast_title_panel'
@@ -267,19 +276,18 @@ try {
         Add-MenuError 'Missing title-panel element.'
     }
     else {
-        # Minecraft подбирает масштаб интерфейса так, что логический экран
-        # никогда не меньше 320x240. Композиция обязана укладываться в эту
-        # гарантированную высоту: панель 222 плюс поля по 9 сверху и снизу.
-        # Раньше стек занимал 262 и на 320x240 разъезжался.
+        # Геометрия живёт в базовом поле автомасштаба 640x360 и привязана к
+        # середине левого края, поэтому не зависит ни от размера окна, ни от
+        # выбранного масштаба интерфейса.
         $expectedPanel = @{ anchor_point = 'mid-left'; x = '12'; y = '-111'; width = '208'; height = '222' }
         foreach ($setting in $expectedPanel.Keys) {
             if ((Get-BlockSetting $panelBlock $setting) -ne $expectedPanel[$setting]) {
-                Add-MenuError "Title-panel setting '$setting' must be '$($expectedPanel[$setting])' for the guaranteed 320x240 viewport."
+                Add-MenuError "Title-panel setting '$setting' must be '$($expectedPanel[$setting])' inside the 640x360 autoscale base."
             }
         }
         $panelHeight = [int](Get-BlockSetting $panelBlock 'height')
-        if ($panelHeight -gt 224) {
-            Add-MenuError "Title panel is $panelHeight tall; it must stay within the guaranteed 240-pixel logical height."
+        if ($panelHeight -gt 332) {
+            Add-MenuError "Title panel is $panelHeight tall; it must leave margins inside the 360-pixel autoscale base."
         }
     }
     if ([regex]::Matches($layout, '(?m)^\s*stay_on_screen\s*=\s*true\s*$').Count -ne 0) {
@@ -300,10 +308,13 @@ try {
             Add-MenuError "Vanilla action widget '$widgetId' must remain hidden behind its white mimic button."
         }
     }
-    if ($layout -notmatch '(?s)instance_identifier\s*=\s*title_screen_copyright_button\s+label\s*=\s*\{"text":""\}\s+label_base_color\s*=\s*#00FFFFFF\s+label_hover_color\s*=\s*#00FFFFFF\s+base_opacity\s*=\s*0\.0\s+anchor_point\s*=\s*top-left\s+x\s*=\s*-1000\s+y\s*=\s*-1000\s+width\s*=\s*1\s+height\s*=\s*1\s+stay_on_screen\s*=\s*false') {
-        Add-MenuError 'Copyright widget must have an empty transparent label, zero opacity and an off-screen 1x1 fallback.'
+    # Копирайт Mojang обязан оставаться читаемым, и его место — внизу экрана.
+    # Прежний приём с уносом за границу экрана не работал: подпись всё равно
+    # рисовалась в левом верхнем углу поверх логотипа.
+    if ($layout -notmatch '(?s)instance_identifier\s*=\s*title_screen_copyright_button\s+label_base_color\s*=\s*#FF8A939C\s+label_hover_color\s*=\s*#FF8A939C\s+base_opacity\s*=\s*1\.0\s+anchor_point\s*=\s*bottom-left\s+x\s*=\s*4\s+y\s*=\s*-12') {
+        Add-MenuError 'Copyright widget must stay legible and anchored to the bottom-left corner.'
     }
-    Add-MenuPass 'FancyMenu moving background, native 480x270-safe panel and exact hidden-widget contracts validated.'
+    Add-MenuPass 'FancyMenu static background, 640x360 autoscale panel and exact hidden-widget contracts validated.'
 }
 catch {
     Add-MenuError "Title-layout validation failed: $($_.Exception.Message)"
@@ -322,8 +333,14 @@ try {
     )
     foreach ($name in $startupLayouts) {
         $startupLayout = Get-Content -Raw -Encoding UTF8 -LiteralPath (Resolve-MenuPath "config/fancymenu/customization/$name")
-        if ($startupLayout -match '(?m)^\s*action\s*=\s*(?:setscale|autoscale)\s*$') {
+        # Титульный экран — единственный layout с autoscale: панель 208×222
+        # привязана к базовой сетке 640×360 и не зависит от GUI scale.
+        $allowedScaling = ($name -eq 'recast_title.txt')
+        if (-not $allowedScaling -and $startupLayout -match '(?m)^\s*action\s*=\s*(?:setscale|autoscale)\s*$') {
             Add-MenuError "Startup layout '$name' must use native GUI coordinates; forced scaling clips at maximum GUI scale."
+        }
+        if ($allowedScaling -and $startupLayout -match '(?m)^\s*action\s*=\s*setscale\s*$') {
+            Add-MenuError "Startup layout '$name' must scale automatically, not at a fixed factor."
         }
     }
 

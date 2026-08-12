@@ -271,7 +271,7 @@ def main() -> int:
     # трогает: иначе запуск затёр бы присланные изображения нарисованными
     # фигурами. Здесь остаётся только то, чего у художника быть не может —
     # типографика поверх готового знака.
-    accepted_lockup = ROOT / "brand_source" / "title_lockup_v2.png"
+    accepted_lockup = ROOT / "brand_source" / "title_lockup_orbital_foundry_v3.png"
     if accepted_lockup.exists():
         source = Image.open(accepted_lockup).convert("RGBA")
         alpha_box = source.getchannel("A").getbbox()

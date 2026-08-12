@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Build the Recast v2 title-menu image set without launching Minecraft.
+"""Build the Recast title-menu image set without launching Minecraft.
 
 The accepted AI artwork lives in ``brand_source``.  This script performs only
-deterministic delivery work: 16:9 framing, alpha-preserving resize, pixel-native
+deterministic delivery work: 16:9 framing, alpha-preserving resize, size-specific
 window icons, compact nine-slice UI textures and static composition previews.
 """
 
@@ -26,8 +26,8 @@ PREVIEW = ROOT / "docs" / "visual_previews"
 BASE_SOURCE = SOURCE / "menu_parallax_base_v2.png"
 MID_SOURCE = SOURCE / "menu_parallax_mid_v2.png"
 NEAR_SOURCE = SOURCE / "menu_parallax_near_v2.png"
-LOGO_SOURCE = SOURCE / "title_lockup_v2.png"
-ICON_SOURCE = SOURCE / "orbital_foundry_icon_v2.png"
+LOGO_SOURCE = SOURCE / "title_lockup_orbital_foundry_v3.png"
+ICON_SOURCE = SOURCE / "orbital_foundry_mark_v3.png"
 
 DEEP = (20, 24, 28, 255)
 SURFACE = (30, 37, 43, 232)
@@ -189,6 +189,32 @@ def processed_icon(source: Image.Image, size: int) -> Image.Image:
         icon = ImageEnhance.Contrast(icon).enhance(1.16)
         icon = icon.filter(ImageFilter.UnsharpMask(radius=max(0.5, size / 48), percent=125, threshold=2))
     return icon
+
+
+def build_brand_products() -> tuple[dict[pathlib.Path, Image.Image], Image.Image]:
+    """Build only the lockup, mark and icon delivery chain.
+
+    This intentionally stays separate from the broad menu build so an approved
+    identity update cannot rewrite the background, button or panel artwork.
+    """
+    logo = place_contain(crop_alpha(Image.open(LOGO_SOURCE)), (1536, 512), padding=12)
+    icon_source = Image.open(ICON_SOURCE).convert("RGBA")
+    products: dict[pathlib.Path, Image.Image] = {
+        GUI / "logo.png": logo,
+        GUI / "mark.png": processed_icon(icon_source, 512),
+        FM / "logo.png": logo,
+        FM / "mark.png": processed_icon(icon_source, 512),
+    }
+
+    for size in (256, 128, 64, 32, 16):
+        icon = processed_icon(icon_source, size)
+        products[GUI / f"icon_{size}.png"] = icon
+        if size in (16, 32):
+            products[FM / f"icon_{size}.png"] = icon
+        if size == 256:
+            products[ROOT / "pack_icon.png"] = icon
+
+    return products, logo
 
 
 def build_preview(
@@ -399,34 +425,32 @@ def build_loading_preview(logo: Image.Image, panel: Image.Image) -> Image.Image:
 def main() -> int:
     require_sources()
 
+    brand_only = "--brand-only" in sys.argv[1:]
+    brand_products, logo = build_brand_products()
+    if brand_only:
+        for path, image in brand_products.items():
+            save(image, path)
+        print(f"brand_visuals={len(brand_products)}")
+        for path in sorted(brand_products, key=lambda value: value.as_posix()):
+            with Image.open(path) as image:
+                print(f"  {path.relative_to(ROOT).as_posix()} {image.width}x{image.height} {image.mode}")
+        return 0
+
     base = fit_16_9(Image.open(BASE_SOURCE).convert("RGB"))
     mid = fit_16_9(Image.open(MID_SOURCE).convert("RGBA"))
     near = fit_16_9(Image.open(NEAR_SOURCE).convert("RGBA"))
-    logo = place_contain(crop_alpha(Image.open(LOGO_SOURCE)), (1536, 512), padding=12)
-    icon_source = Image.open(ICON_SOURCE).convert("RGBA")
 
     products: dict[pathlib.Path, Image.Image] = {
         GUI / "menu" / "base.png": base,
         GUI / "menu" / "mid.png": mid,
         GUI / "menu" / "near.png": near,
         GUI / "background.png": base.resize((1920, 1080), RESAMPLE),
-        GUI / "logo.png": logo,
-        GUI / "mark.png": processed_icon(icon_source, 512),
         FM / "menu" / "base.png": base,
         FM / "menu" / "mid.png": mid,
         FM / "menu" / "near.png": near,
         FM / "background.png": base.resize((1920, 1080), RESAMPLE),
-        FM / "logo.png": logo,
-        FM / "mark.png": processed_icon(icon_source, 512),
     }
-
-    for size in (256, 128, 64, 32, 16):
-        icon = processed_icon(icon_source, size)
-        products[GUI / f"icon_{size}.png"] = icon
-        if size in (16, 32):
-            products[FM / f"icon_{size}.png"] = icon
-        if size == 256:
-            products[ROOT / "pack_icon.png"] = icon
+    products.update(brand_products)
 
     buttons = {state: button_texture(state) for state in ("normal", "hover", "inactive")}
     compact = {state: icon_button_texture(state) for state in ("normal", "hover", "inactive")}

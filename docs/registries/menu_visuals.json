@@ -2,7 +2,7 @@
   "$schema": "../../authoring/schemas/menu_visuals.schema.json",
   "schema_version": 1,
   "registry_id": "industrial_frontier:menu_visuals_v2",
-  "build_id": "IF-M10-MENU-0001",
+  "build_id": "IF-M10-MENU-0002",
   "status": "IMPLEMENTED_STATIC_UNTESTED",
   "no_game_launch": true,
   "translation_scope": "EXCLUDED_NO_FILES_TOUCHED",
@@ -15,8 +15,8 @@
     "builder_path": "tools/build_menu_visuals.py",
     "validator_path": "tools/validate_menu_visuals.ps1",
     "reference_canvas": {
-      "width": 854,
-      "height": 480
+      "width": 640,
+      "height": 360
     }
   },
   "art_direction": {
@@ -90,7 +90,7 @@
   ],
   "ui": {
     "logo": {
-      "source_path": "brand_source/title_lockup_v2.png",
+      "source_path": "brand_source/title_lockup_orbital_foundry_v3.png",
       "runtime_path": "config/fancymenu/assets/logo.png",
       "width": 1536,
       "height": 512,
@@ -146,8 +146,8 @@
     }
   },
   "icon": {
-    "source_path": "brand_source/orbital_foundry_icon_v2.png",
-    "concept": "ORBITAL_FOUNDRY_WITH_RECAST_MICROMARK",
+    "source_path": "brand_source/orbital_foundry_mark_v3.png",
+    "concept": "FOUNDRY_TO_ORBIT_EMBLEM",
     "window_icon_design": "SMOOTH_ALPHA_MASTER_LANCZOS_DOWNSCALE",
     "runtime_sizes": [
       16,
