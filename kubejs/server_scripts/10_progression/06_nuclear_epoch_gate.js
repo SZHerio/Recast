@@ -19,13 +19,13 @@
 // цепную реакцию.
 //
 // Все ID GregTech сверены с живой переписью kubejs/exported/gtceu_item_census.json,
-// все ID NuclearCraft — с data/nuclearcraft/ внутри JAR 1.2.33.
+// все ID NuclearCraft — с data/nuclearcraft/ внутри установленного JAR 1.2.34.
 ServerEvents.recipes((event) => {
   // --- Вход в домен. ---
 
   // Первая машина переработки. Свинец и кремень заменены сталью и
-  // электроникой HV: к шестой эпохе это уже освоенный уровень, но добраться
-  // до него раньше пятой невозможно.
+  // электроникой HV. Точную границу P5 -> P6 задаёт встроенный RecipeJS.stage,
+  // который Threat Director синхронизирует из командного tech_epoch.
   event.remove({ id: 'nuclearcraft:manufactory' })
   event.shaped('nuclearcraft:manufactory', [
     'ABA',
@@ -36,7 +36,7 @@ ServerEvents.recipes((event) => {
     B: 'gtceu:hv_voltage_coil',
     C: 'gtceu:hv_electric_motor',
     D: 'gtceu:hv_machine_hull'
-  }).id('industrial_frontier:nuclearcraft/manufactory')
+  }).stage('industrial_frontier:p6').id('industrial_frontier:nuclearcraft/manufactory')
 
   // Сплавная печь. Именно она даёт ферробор, прочный сплав и остальные
   // конструкционные материалы домена.
@@ -50,7 +50,7 @@ ServerEvents.recipes((event) => {
     B: 'gtceu:hv_sensor',
     C: 'minecraft:blast_furnace',
     D: 'gtceu:hv_machine_hull'
-  }).id('industrial_frontier:nuclearcraft/alloy_smelter')
+  }).stage('industrial_frontier:p6').id('industrial_frontier:nuclearcraft/alloy_smelter')
 
   // --- Рубеж цепной реакции. ---
   //
@@ -68,7 +68,26 @@ ServerEvents.recipes((event) => {
     B: 'nuclearcraft:plate_advanced',
     C: 'nuclearcraft:basic_electric_circuit',
     D: 'gtceu:hv_robot_arm'
-  }).id('industrial_frontier:nuclearcraft/fission_reactor_controller')
+  }).stage('industrial_frontier:p6').id('industrial_frontier:nuclearcraft/fission_reactor_controller')
+
+  // --- Полный комплект химической защиты. ---
+  //
+  // NuclearCraft содержит штатный рецепт сапог, но в живом recipe_index он не
+  // зарегистрирован, тогда как остальные три части комплекта доступны. Здесь
+  // повторён рецепт из установленного JAR, чтобы обязательная защита до пуска
+  // не зависела от пропавшего datapack-рецепта.
+  event.remove({ id: 'nuclearcraft:hazmat_boots' })
+  event.shaped('nuclearcraft:hazmat_boots', [
+    'BIB',
+    'YLY',
+    'YWY'
+  ], {
+    B: 'nuclearcraft:bioplastic',
+    I: '#forge:ingots/steel',
+    L: 'minecraft:leather_boots',
+    W: 'minecraft:black_wool',
+    Y: 'nuclearcraft:light'
+  }).stage('industrial_frontier:p6').id('industrial_frontier:nuclearcraft/hazmat_boots')
 
   // --- Что НЕ открывается в шестой эпохе. ---
   //
@@ -94,6 +113,6 @@ ServerEvents.recipes((event) => {
   laterEpochs.forEach((recipeId) => event.remove({ id: recipeId }))
 
   console.info(
-    `[Recast] Ворота P6: вход в атомный домен перенесён за сталь и электронику HV, ${laterEpochs.length} установок синтеза и ускорителей отложены до своих эпох.`
+    `[Recast] Ворота P6: 3 входных рецепта требуют team stage P6 и электронику HV, ${laterEpochs.length} установок синтеза и ускорителей отложены до своих эпох.`
   )
 })

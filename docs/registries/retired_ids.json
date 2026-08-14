@@ -3587,6 +3587,226 @@
         "authoring/questbook_v2_dissolved/73_marathon_choices.json"
       ],
       "successor_alias": "if.chapter.v2.p6"
+    },
+    {
+      "engine_id": "4A12000000000015",
+      "kind": "task",
+      "old_alias": "if.task.v2.p2.brass_mixer.item",
+      "parent_old_engine_id": "3A12000000000009",
+      "parent_old_alias": "if.quest.v2.p2.brass_mixer",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "successor_alias": "if.quest.v2.p1.basin",
+      "reason_ru": "Повторная проверка смесителя удалена: рабочие чаша и смеситель уже приняты в P1, а P2 добавляет только нагрев и латунный выход.",
+      "evidence": [
+        "authoring/questbook_v2/11_p1.json",
+        "authoring/questbook_v2/12_p2.json",
+        "build/questbook_v2_current/chapters/12_p2.snbt",
+        "docs/QUESTBOOK_CONTENT_STANDARD.md"
+      ]
+    },
+    {
+      "engine_id": "4A12000000000016",
+      "kind": "task",
+      "old_alias": "if.task.v2.p2.brass_mixer.place",
+      "parent_old_engine_id": "3A12000000000009",
+      "parent_old_alias": "if.quest.v2.p2.brass_mixer",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "retire",
+      "successor_alias": "if.quest.v2.p1.basin",
+      "reason_ru": "Повторная установка смесителя удалена: P2 использует принятую механическую линию и проверяет новую горелку перед латунью.",
+      "evidence": [
+        "authoring/questbook_v2/11_p1.json",
+        "authoring/questbook_v2/12_p2.json",
+        "build/questbook_v2_current/chapters/12_p2.snbt",
+        "docs/QUESTBOOK_CONTENT_STANDARD.md"
+      ]
+    },
+    {
+      "engine_id": "3013000000000005",
+      "kind": "quest",
+      "old_alias": "if.quest.p3.signal",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.signal",
+      "reason_ru": "Старая партия из восьми единиц редстоуновой пыли не закрывает фактическую потребность первой схемы LV и двух двигателей.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json"
+      ]
+    },
+    {
+      "engine_id": "4013000000000005",
+      "kind": "task",
+      "old_alias": "if.task.p3.signal",
+      "parent_old_engine_id": "3013000000000005",
+      "parent_old_alias": "if.quest.p3.signal",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p3.signal",
+      "reason_ru": "Прежняя задача проверяла восемь единиц редстоуновой пыли, но фактический комплект первой схемы LV и двух двигателей требует двадцать.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "authoring/quests/13_p3_electrification.json",
+        "authoring/questbook_v2/13_p3.json",
+        "authoring/questbook_v2/migrations/qr3_p0_p3.json"
+      ]
+    },
+    {
+      "engine_id": "3015000000000007",
+      "kind": "quest",
+      "old_alias": "if.quest.p5.ae2_recovery",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_recovery",
+      "reason_ru": "Старая отметка о чтении не подтверждает наличие энергетического резерва и новый порядок восстановления ME-сети.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "docs/registries/quest_qr0_proof_contracts.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "authoring/questbook_v2/15_p5.json"
+      ]
+    },
+    {
+      "engine_id": "4015000000000007",
+      "kind": "task",
+      "old_alias": "if.task.p5.ae2_recovery",
+      "parent_old_engine_id": "3015000000000007",
+      "parent_old_alias": "if.quest.p5.ae2_recovery",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.p5.ae2_recovery",
+      "reason_ru": "Прежняя галочка заменена отдельной проверкой энергетического резерва и обновлённой инструкцией восстановления.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "docs/registries/quest_qr0_proof_contracts.json",
+        "authoring/questbook_v2/migrations/p4_p6_aliases.json",
+        "authoring/questbook_v2/15_p5.json"
+      ]
+    },
+    {
+      "engine_id": "3071000000000008",
+      "kind": "quest",
+      "old_alias": "if.quest.elements.silicon",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.elements.silicon",
+      "reason_ru": "Старая справочная карточка о кремнии заменена практическим входом в AE2 с метеоритными прессами и кварцем.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "docs/registries/quest_qr0_proof_contracts.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "authoring/questbook_v2/15_p5.json"
+      ]
+    },
+    {
+      "engine_id": "4071000000000008",
+      "kind": "task",
+      "old_alias": "if.task.elements.silicon",
+      "parent_old_engine_id": "3071000000000008",
+      "parent_old_alias": "if.quest.elements.silicon",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "review",
+      "successor_alias": "if.quest.v2.elements.silicon",
+      "reason_ru": "Прежняя галочка не доказывает получение четырёх прессов и кварца, необходимых для первой процессорной линии AE2.",
+      "evidence": [
+        "docs/registries/stable_ids.json",
+        "docs/registries/quest_qr0_proof_contracts.json",
+        "authoring/questbook_v2/migrations/chemistry_academy_v2.json",
+        "authoring/questbook_v2/15_p5.json"
+      ]
+    },
+    {
+      "engine_id": "4A16000000000044",
+      "kind": "task",
+      "old_alias": "if.task.v2.p6.fuel_reactor_setup.reuse",
+      "parent_old_engine_id": "3A1600000000001B",
+      "parent_old_alias": "if.quest.v2.p6.fuel_reactor_setup",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "reset",
+      "successor_alias": "if.quest.v2.p6.fuel_reactor_setup",
+      "reason_ru": "Повторное владение химическим реактором заменено проверкой взаимодействия с подготовленной машиной.",
+      "evidence": [
+        "authoring/questbook_v2/16_p6.json",
+        "docs/QUESTBOOK_CONTENT_STANDARD.md"
+      ]
+    },
+    {
+      "engine_id": "4A16000000000048",
+      "kind": "task",
+      "old_alias": "if.task.v2.p6.reactor_commissioning.use",
+      "parent_old_engine_id": "3A1600000000002A",
+      "parent_old_alias": "if.quest.v2.p6.reactor_commissioning",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "reset",
+      "successor_alias": "if.quest.v2.p6.reactor_commissioning",
+      "reason_ru": "Предмет контроллера не доказывал взаимодействие со сформированным реактором и был заменён use-проверкой.",
+      "evidence": [
+        "authoring/questbook_v2/16_p6.json",
+        "docs/QUESTBOOK_CONTENT_STANDARD.md"
+      ]
+    },
+    {
+      "engine_id": "4A16000000000049",
+      "kind": "task",
+      "old_alias": "if.task.v2.p6.reactor_commissioning.confirm",
+      "parent_old_engine_id": "3A1600000000002A",
+      "parent_old_alias": "if.quest.v2.p6.reactor_commissioning",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "reset",
+      "successor_alias": "if.quest.v2.p6.reactor_commissioning",
+      "reason_ru": "Ручная галочка настройки реактора удалена; рабочий пуск теперь доказывается полученным паром.",
+      "evidence": [
+        "authoring/questbook_v2/16_p6.json",
+        "docs/QUESTBOOK_CONTENT_STANDARD.md"
+      ]
+    },
+    {
+      "engine_id": "4A1600000000004B",
+      "kind": "task",
+      "old_alias": "if.task.v2.p6.condensate_return.confirm",
+      "parent_old_engine_id": "3A1600000000002C",
+      "parent_old_alias": "if.quest.v2.p6.condensate_return",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "reset",
+      "successor_alias": "if.quest.v2.p6.condensate_return",
+      "reason_ru": "Ручное подтверждение возврата воды заменено измеряемым объёмом технической воды на выходе теплообменника.",
+      "evidence": [
+        "authoring/questbook_v2/16_p6.json",
+        "docs/QUESTBOOK_CONTENT_STANDARD.md"
+      ]
+    },
+    {
+      "engine_id": "4A1600000000004C",
+      "kind": "task",
+      "old_alias": "if.task.v2.p6.condensate_return.use",
+      "parent_old_engine_id": "3A1600000000002C",
+      "parent_old_alias": "if.quest.v2.p6.condensate_return",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "reset",
+      "successor_alias": "if.quest.v2.p6.condensate_return",
+      "reason_ru": "Владение контроллером теплообменника заменено проверкой открытия установленного контроллера.",
+      "evidence": [
+        "authoring/questbook_v2/16_p6.json",
+        "docs/QUESTBOOK_CONTENT_STANDARD.md"
+      ]
+    },
+    {
+      "engine_id": "4F03B79A251B77C5",
+      "kind": "task",
+      "old_alias": "if.task.v2.p6.commissioning.reactor",
+      "parent_old_engine_id": "3BAFBFB90BC9F168",
+      "parent_old_alias": "if.quest.v2.p6.commissioning",
+      "retired_in": "industrial_frontier:quest_source_v2",
+      "migration_policy": "reset",
+      "successor_alias": "if.quest.v2.p6.commissioning",
+      "reason_ru": "Один предмет-контроллер не доказывал полный тепловой и топливный цикл; финал теперь опирается на обязательных предков.",
+      "evidence": [
+        "authoring/questbook_v2/16_p6.json",
+        "docs/QUEST_SYSTEM_REBUILD_PLAN.md"
+      ]
     }
   ]
 }

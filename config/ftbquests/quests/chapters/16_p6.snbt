@@ -1,1663 +1,1734 @@
 {
-	default_hide_dependency_lines: false
-	default_quest_shape: "square"
-	filename: "16_p6"
-	group: "1000000000000004"
-	icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/epochs/p6.png"}}
-	id: "2016000000000001"
-	order_index: 16
-	quest_links: [ ]
-	quests: [
-		{
-			dependencies: ["39399468A06BC9EC"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.brief.task}"
-				"{industrial_frontier.quest.v2.p6.brief.proof_help.1}"
-			]
-			icon: "nuclearcraft:fission_reactor_controller"
-			id: "3016000000000001"
-			shape: "gear"
-			size: 1d
-			tags: ["root", "nuclear"]
-			tasks: [
-				{
-					id: "4016000000000001"
-					title: "{industrial_frontier.task.v2.p6.brief.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.brief.title}"
-			x: 0d
-			y: 0d
-		}
-		{
-			dependencies: ["3016000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.acid_inputs.purpose}"
-				"{industrial_frontier.quest.v2.p6.acid_inputs.task}"
-				"{industrial_frontier.quest.v2.p6.acid_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.acid_inputs.proof_help.2}"
-				"{industrial_frontier.quest.v2.p6.acid_inputs.proof_help.3}"
-			]
-			icon: "gtceu:hydrochloric_acid_bucket"
-			id: "3A16000000000024"
-			shape: "square"
-			size: 1d
-			tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000040"
-					fluid: "gtceu:chlorine"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.acid_inputs.chlorine.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A16000000000041"
-					fluid: "gtceu:hydrogen"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.acid_inputs.hydrogen.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A16000000000042"
-					fluid: "gtceu:nitric_acid"
-					amount: 250L
-					title: "{industrial_frontier.task.v2.p6.acid_inputs.nitric.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.acid_inputs.title}"
-			x: 2d
-			y: -2.25d
-		}
-		{
-			dependencies: ["3016000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.feedstock.purpose}"
-				"{industrial_frontier.quest.v2.p6.feedstock.task}"
-				"{industrial_frontier.quest.v2.p6.feedstock.proof_help.1}"
-			]
-			icon: "nuclearcraft:uranium_chunk"
-			id: "3A16000000000010"
-			shape: "diamond"
-			size: 1d
-			tags: ["fuel_cycle", "source", "uranium", "one_of"]
-			tasks: [
-				{
-					id: "4A16000000000020"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/uranium_ores)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.feedstock.ore.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.feedstock.title}"
-			x: 2d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3016000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.materials.purpose}"
-				"{industrial_frontier.quest.v2.p6.materials.task}"
-				"{industrial_frontier.quest.v2.p6.materials.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.materials.proof_help.2}"
-			]
-			icon: "nuclearcraft:graphite_block"
-			id: "38443CC596A66B7C"
-			shape: "circle"
-			size: 1d
-			tags: ["materials", "shielding"]
-			tasks: [
-				{
-					id: "4884C736CAFC4107"
-					item: {
-						Count: 1
-						id: "nuclearcraft:graphite_block"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.materials.graphite.objective}"
-					type: "item"
-				}
-				{
-					id: "43F1BCF14B43BDC4"
-					count: 2L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/lead_plates)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.materials.lead.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.materials.title}"
-			x: 2d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3016000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.technical_water_inputs.task}"
-				"{industrial_frontier.quest.v2.p6.technical_water_inputs.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.technical_water_inputs.proof_help.2}"
-			]
-			icon: "nuclearcraft:technical_water_bucket"
-			id: "3A16000000000028"
-			shape: "circle"
-			size: 1d
-			tags: ["water", "reactor", "source_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000045"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/coal_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.technical_water_inputs.coal.objective}"
-					type: "item"
-				}
-				{
-					id: "4A16000000000046"
-					fluid: "minecraft:water"
-					amount: 5000L
-					title: "{industrial_frontier.task.v2.p6.technical_water_inputs.water.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.technical_water_inputs.title}"
-			x: 2d
-			y: 2.25d
-		}
-		{
-			dependencies: ["38443CC596A66B7C"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.entry.task}"
-				"{industrial_frontier.quest.v2.p6.entry.proof_help.1}"
-			]
-			icon: "nuclearcraft:manufactory"
-			id: "3016000000000003"
-			shape: "gear"
-			size: 1.1d
-			tags: ["machine", "preparation"]
-			tasks: [
-				{
-					id: "4016000000000003"
-					item: {
-						Count: 1
-						id: "nuclearcraft:manufactory"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.entry.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.entry.title}"
-			x: 4d
-			y: -2.25d
-		}
-		{
-			dependencies: ["3A16000000000024"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.purpose}"
-				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.task}"
-				"{industrial_frontier.quest.v2.p6.hydrochloric_acid.proof_help.1}"
-			]
-			icon: "gtceu:hydrochloric_acid_bucket"
-			id: "3A16000000000025"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000043"
-					fluid: "gtceu:hydrochloric_acid"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.hydrochloric_acid.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.hydrochloric_acid.title}"
-			x: 4d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000010"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.leaching_setup.purpose}"
-				"{industrial_frontier.quest.v2.p6.leaching_setup.task}"
-				"{industrial_frontier.quest.v2.p6.leaching_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:leacher"
-			id: "3A16000000000011"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "leaching", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000021"
-					item: {
-						Count: 1
-						id: "nuclearcraft:leacher"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.leaching_setup.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.leaching_setup.title}"
-			x: 4d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A16000000000028"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.technical_water.task}"
-				"{industrial_frontier.quest.v2.p6.technical_water.proof_help.1}"
-			]
-			icon: "nuclearcraft:technical_water_bucket"
-			id: "3A16000000000029"
-			shape: "circle"
-			size: 1d
-			tags: ["water", "reactor", "processed_form"]
-			tasks: [
-				{
-					id: "4A16000000000047"
-					fluid: "nuclearcraft:technical_water"
-					amount: 5000L
-					title: "{industrial_frontier.task.v2.p6.technical_water.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.technical_water.title}"
-			x: 4d
-			y: 2.25d
-		}
-		{
-			dependencies: ["3016000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.task}"
-				"{industrial_frontier.quest.v2.p6.alloy_smelter_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:alloy_smelter"
-			id: "3A1600000000001E"
-			shape: "gear"
-			size: 1.1d
-			tags: ["alloys", "machine", "machine_before_product"]
-			tasks: [
-				{
-					id: "43315069119F5C0F"
-					item: {
-						Count: 1
-						id: "nuclearcraft:alloy_smelter"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.alloys.machine.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.alloy_smelter_setup.title}"
-			x: 6d
-			y: -2.25d
-		}
-		{
-			dependencies: ["3A16000000000025"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.purpose}"
-				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.task}"
-				"{industrial_frontier.quest.v2.p6.chemical_reactor_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:chemical_reactor"
-			id: "3A16000000000026"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "chemistry", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A1600000000002F"
-					item: {
-						Count: 1
-						id: "nuclearcraft:chemical_reactor"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.fuel_setup.reactor_item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.chemical_reactor_setup.title}"
-			x: 6d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000029"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.reactor.purpose}"
-				"{industrial_frontier.quest.v2.p6.reactor.step.1}"
-				"{industrial_frontier.quest.v2.p6.reactor.step.2}"
-				"{industrial_frontier.quest.v2.p6.reactor.step.3}"
-				"{industrial_frontier.quest.v2.p6.reactor.task}"
-				"{industrial_frontier.quest.v2.p6.reactor.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p6.reactor.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p6.reactor.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.reactor.proof_help.2}"
-			]
-			icon: "nuclearcraft:fission_reactor_controller"
-			id: "35B8D3144F0654A2"
-			shape: "gear"
-			size: 1.1d
-			tags: ["reactor", "place"]
-			tasks: [
-				{
-					id: "4AC050678D11CAE3"
-					block_type: 0
-					block: "nuclearcraft:fission_reactor_controller"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p6.reactor.controller.objective}"
-					type: "questsadditions:place"
-				}
-				{
-					id: "424CF77FFBB42232"
-					block_type: 0
-					block: "nuclearcraft:fission_reactor_solid_fuel_cell"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p6.reactor.cell.objective}"
-					type: "questsadditions:place"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.reactor.title}"
-			x: 6d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A16000000000011"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.slurry.purpose}"
-				"{industrial_frontier.quest.v2.p6.slurry.task}"
-				"{industrial_frontier.quest.v2.p6.slurry.proof_help.1}"
-			]
-			icon: "nuclearcraft:uranium_slurry_bucket"
-			id: "3A16000000000012"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "leaching", "product"]
-			tasks: [
-				{
-					id: "4A16000000000024"
-					fluid: "nuclearcraft:uranium_slurry"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.slurry.product.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.slurry.title}"
-			x: 6d
-			y: 2.25d
-		}
-		{
-			dependencies: ["3A1600000000001E"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.alloys.task}"
-				"{industrial_frontier.quest.v2.p6.alloys.proof_help.1}"
-			]
-			icon: "nuclearcraft:alloy_smelter"
-			id: "367768A6A9219BCB"
-			shape: "circle"
-			size: 1d
-			tags: ["alloys", "machine"]
-			tasks: [
-				{
-					id: "40AD17A0B6A3742E"
-					count: 2L
-					item: {
-						Count: 1
-						id: "nuclearcraft:tough_alloy_ingot"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.alloys.product.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.alloys.title}"
-			x: 8d
-			y: -2.25d
-		}
-		{
-			dependencies: ["3A16000000000026"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.aqua_regia.purpose}"
-				"{industrial_frontier.quest.v2.p6.aqua_regia.task}"
-				"{industrial_frontier.quest.v2.p6.aqua_regia.proof_help.1}"
-			]
-			icon: "nuclearcraft:aqua_regia_acid_bucket"
-			id: "3A16000000000027"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000023"
-					fluid: "nuclearcraft:aqua_regia_acid"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.slurry.aqua_regia.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.aqua_regia.title}"
-			x: 8d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000012"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.purification_setup.task}"
-				"{industrial_frontier.quest.v2.p6.purification_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:centrifuge"
-			id: "3A16000000000013"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "purification", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000025"
-					item: {
-						Count: 1
-						id: "nuclearcraft:centrifuge"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.purification_setup.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.purification_setup.title}"
-			x: 8d
-			y: 0.75d
-		}
-		{
-			dependencies: ["35B8D3144F0654A2"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.step.1}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.step.2}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.step.3}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.task}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.diagnostic.1}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.diagnostic.2}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.reactor_commissioning.proof_help.2}"
-			]
-			icon: "nuclearcraft:fission_reactor_controller"
-			id: "3A1600000000002A"
-			shape: "octagon"
-			size: 1.2d
-			tags: ["reactor", "commissioning", "boiling"]
-			tasks: [
-				{
-					id: "4A16000000000049"
-					title: "{industrial_frontier.task.v2.p6.reactor_commissioning.confirm.objective}"
-					type: "checkmark"
-				}
-				{
-					id: "4A16000000000048"
-					item: {
-						Count: 1
-						id: "nuclearcraft:fission_reactor_controller"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.reactor_commissioning.use.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.reactor_commissioning.title}"
-			x: 8d
-			y: 2.25d
-		}
-		{
-			dependencies: ["3A1600000000002A"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.high_pressure_steam.purpose}"
-				"{industrial_frontier.quest.v2.p6.high_pressure_steam.task}"
-				"{industrial_frontier.quest.v2.p6.high_pressure_steam.proof_help.1}"
-			]
-			icon: "nuclearcraft:high_pressure_steam_bucket"
-			id: "3A16000000000020"
-			shape: "circle"
-			size: 1.2d
-			tags: ["heat", "steam", "source_before_processed"]
-			tasks: [
-				{
-					id: "4A1600000000003B"
-					fluid: "nuclearcraft:high_pressure_steam"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.high_pressure_steam.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.high_pressure_steam.title}"
-			x: 10d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000013"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.purification.task}"
-				"{industrial_frontier.quest.v2.p6.purification.proof_help.1}"
-			]
-			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/gtceu/uranium_preparation.png"}}
-			id: "308477F0C074B847"
-			shape: "diamond"
-			size: 1d
-			tags: ["fuel_cycle", "purification"]
-			tasks: [
-				{
-					id: "48E07C0707994F62"
-					fluid: "nuclearcraft:uranium_clean_slurry"
-					amount: 800L
-					title: "{industrial_frontier.task.v2.p6.purification.fluid.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.purification.title}"
-			x: 10d
-			y: 0.75d
-		}
-		{
-			dependencies: ["308477F0C074B847"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.conversion_setup.task}"
-				"{industrial_frontier.quest.v2.p6.conversion_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:crystallizer"
-			id: "3A16000000000014"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "conversion", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000027"
-					item: {
-						Count: 1
-						id: "nuclearcraft:crystallizer"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.conversion_setup.crystallizer_item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.conversion_setup.title}"
-			x: 12d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000020"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.turbine_setup.purpose}"
-				"{industrial_frontier.quest.v2.p6.turbine_setup.task}"
-				"{industrial_frontier.quest.v2.p6.turbine_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:turbine_controller"
-			id: "3A16000000000021"
-			shape: "gear"
-			size: 1.1d
-			tags: ["power", "turbine", "machine_before_product"]
-			tasks: [
-				{
-					id: "439B81E54471DE6C"
-					block_type: 0
-					block: "nuclearcraft:turbine_controller"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p6.turbine.place.objective}"
-					type: "questsadditions:place"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.turbine_setup.title}"
-			x: 12d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A16000000000021"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.turbine.purpose}"
-				"{industrial_frontier.quest.v2.p6.turbine.task}"
-				"{industrial_frontier.quest.v2.p6.turbine.proof_help.1}"
-			]
-			icon: "nuclearcraft:turbine_controller"
-			id: "338A637EDDC24C44"
-			shape: "gear"
-			size: 1.2d
-			tags: ["power", "turbine"]
-			tasks: [
-				{
-					id: "484FF829167E8BED"
-					fluid: "nuclearcraft:low_pressure_steam"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.turbine.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.turbine.title}"
-			x: 14d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000014"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.uranium_dust.task}"
-				"{industrial_frontier.quest.v2.p6.uranium_dust.proof_help.1}"
-			]
-			icon: "nuclearcraft:uranium_dust"
-			id: "3A16000000000019"
-			shape: "diamond"
-			size: 1d
-			tags: ["fuel_cycle", "conversion", "source_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000037"
-					count: 4L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/uranium_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.uranium_dust.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.uranium_dust.title}"
-			x: 14d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A16000000000019"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.enricher_setup.task}"
-				"{industrial_frontier.quest.v2.p6.enricher_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:fluid_enricher"
-			id: "3A1600000000001A"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "conversion", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000029"
-					item: {
-						Count: 1
-						id: "nuclearcraft:fluid_enricher"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.conversion_setup.enricher_item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.enricher_setup.title}"
-			x: 16d
-			y: -0.75d
-		}
-		{
-			dependencies: ["338A637EDDC24C44"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.low_quality_steam.purpose}"
-				"{industrial_frontier.quest.v2.p6.low_quality_steam.task}"
-				"{industrial_frontier.quest.v2.p6.low_quality_steam.proof_help.1}"
-			]
-			icon: "nuclearcraft:low_quality_steam_bucket"
-			id: "3A1600000000002B"
-			shape: "circle"
-			size: 1.2d
-			tags: ["power", "turbine", "closed_loop"]
-			tasks: [
-				{
-					id: "4A1600000000004A"
-					fluid: "nuclearcraft:low_quality_steam"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.p6.low_quality_steam.output.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.low_quality_steam.title}"
-			x: 16d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A1600000000001A"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.conversion.task}"
-				"{industrial_frontier.quest.v2.p6.conversion.proof_help.1}"
-			]
-			icon: "nuclearcraft:uranium_oxide_bucket"
-			id: "3A16000000000001"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "conversion"]
-			tasks: [
-				{
-					id: "4A16000000000003"
-					fluid: "nuclearcraft:uranium_oxide"
-					amount: 270L
-					title: "{industrial_frontier.task.v2.p6.conversion.fluid.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.conversion.title}"
-			x: 18d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A1600000000002B"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.heat_loop.task}"
-				"{industrial_frontier.quest.v2.p6.heat_loop.proof_help.1}"
-			]
-			icon: "nuclearcraft:heat_exchanger_controller"
-			id: "3415FA3A4B96A721"
-			shape: "diamond"
-			size: 1.1d
-			tags: ["heat", "closed_loop"]
-			tasks: [
-				{
-					id: "480C70143A61F39E"
-					block_type: 0
-					block: "nuclearcraft:heat_exchanger_controller"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p6.heat_loop.place.objective}"
-					type: "questsadditions:place"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.heat_loop.title}"
-			x: 18d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3415FA3A4B96A721"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.condensate_return.purpose}"
-				"{industrial_frontier.quest.v2.p6.condensate_return.task}"
-				"{industrial_frontier.quest.v2.p6.condensate_return.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.condensate_return.proof_help.2}"
-			]
-			icon: "nuclearcraft:technical_water_bucket"
-			id: "3A1600000000002C"
-			shape: "circle"
-			size: 1.2d
-			tags: ["closed_loop", "water", "commissioning"]
-			tasks: [
-				{
-					id: "4A1600000000004B"
-					title: "{industrial_frontier.task.v2.p6.condensate_return.confirm.objective}"
-					type: "checkmark"
-				}
-				{
-					id: "4A1600000000004C"
-					item: {
-						Count: 1
-						id: "nuclearcraft:heat_exchanger_controller"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.condensate_return.use.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.condensate_return.title}"
-			x: 20d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.yellowcake.task}"
-				"{industrial_frontier.quest.v2.p6.yellowcake.proof_help.1}"
-			]
-			icon: "nuclearcraft:yellowcake_dust"
-			id: "3A1600000000001F"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "conversion", "crystallizer_reuse", "source_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000030"
-					count: 10L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/yellowcake_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.conversion.yellowcake.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.yellowcake.title}"
-			x: 20d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A1600000000001F"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.enrichment_setup.task}"
-				"{industrial_frontier.quest.v2.p6.enrichment_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:isotope_separator"
-			id: "3A16000000000015"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "enrichment", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A1600000000002B"
-					item: {
-						Count: 1
-						id: "nuclearcraft:isotope_separator"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.enrichment_setup.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.enrichment_setup.title}"
-			x: 22d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A1600000000002C"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.spent_fuel.task}"
-				"{industrial_frontier.quest.v2.p6.spent_fuel.proof_help.1}"
-			]
-			icon: "nuclearcraft:depleted_fuel_uranium_leu_235"
-			id: "3A16000000000003"
-			shape: "octagon"
-			size: 1d
-			tags: ["fuel_cycle", "spent_fuel"]
-			tasks: [
-				{
-					id: "4A1600000000000D"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:depleted_reactor_fuel/uranium/leu-235)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.spent_fuel.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.spent_fuel.title}"
-			x: 22d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A16000000000015"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.enrichment.task}"
-				"{industrial_frontier.quest.v2.p6.enrichment.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.enrichment.proof_help.2}"
-			]
-			icon: "nuclearcraft:isotope_separator"
-			id: "368B35F2402D0C6F"
-			shape: "gear"
-			size: 1d
-			tags: ["fuel_cycle", "enrichment"]
-			tasks: [
-				{
-					id: "43522B3F0EB6B196"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/235)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.enrichment.u235.objective}"
-					type: "item"
-				}
-				{
-					id: "4BF4EE28F82F2DE9"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/238)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.enrichment.u238.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.enrichment.title}"
-			x: 24d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000003"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.reprocessor_setup.task}"
-				"{industrial_frontier.quest.v2.p6.reprocessor_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:fuel_reprocessor"
-			id: "3A1600000000001D"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "reprocessing", "machine_before_product"]
-			tasks: [
-				{
-					id: "4466E6169418A105"
-					item: {
-						Count: 1
-						id: "nuclearcraft:fuel_reprocessor"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.reprocessing.machine.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.reprocessor_setup.title}"
-			x: 24d
-			y: 0.75d
-		}
-		{
-			dependencies: ["368B35F2402D0C6F"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.fuel_setup.task}"
-				"{industrial_frontier.quest.v2.p6.fuel_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:melter"
-			id: "3A16000000000016"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "fuel", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A1600000000002D"
-					item: {
-						Count: 1
-						id: "nuclearcraft:melter"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.fuel_setup.melter_item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.fuel_setup.title}"
-			x: 26d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A1600000000001D"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.reprocessing.purpose}"
-				"{industrial_frontier.quest.v2.p6.reprocessing.task}"
-				"{industrial_frontier.quest.v2.p6.reprocessing.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.reprocessing.proof_help.2}"
-			]
-			icon: "nuclearcraft:fuel_reprocessor"
-			id: "3A40ABAB6D92B027"
-			shape: "gear"
-			size: 1.2d
-			tags: ["fuel_cycle", "reprocessing"]
-			tasks: [
-				{
-					id: "46B829C344E02905"
-					count: 4L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/238)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.reprocessing.u238.objective}"
-					type: "item"
-				}
-				{
-					id: "48D71AB82F1EE281"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/plutonium/239)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.reprocessing.pu239.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.reprocessing.title}"
-			x: 26d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A40ABAB6D92B027"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.isotopes.task}"
-				"{industrial_frontier.quest.v2.p6.isotopes.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.isotopes.optional_note}"
-			]
-			icon: "nuclearcraft:decay_hastener"
-			id: "3A16000000000017"
-			optional: true
-			shape: "circle"
-			size: 1d
-			tags: ["optional", "isotopes", "decay", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000034"
-					item: {
-						Count: 1
-						id: "nuclearcraft:decay_hastener"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.isotopes.machine.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.isotopes.title}"
-			x: 28d
-			y: -1.5d
-		}
-		{
-			dependencies: ["3A16000000000016"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.liquid_isotopes.task}"
-				"{industrial_frontier.quest.v2.p6.liquid_isotopes.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.liquid_isotopes.proof_help.2}"
-			]
-			icon: "nuclearcraft:uranium_235_bucket"
-			id: "3A16000000000022"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "fuel", "source_before_processed"]
-			tasks: [
-				{
-					id: "4A1600000000003D"
-					fluid: "nuclearcraft:uranium_235"
-					amount: 30L
-					title: "{industrial_frontier.task.v2.p6.liquid_isotopes.u235.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4A1600000000003E"
-					fluid: "nuclearcraft:uranium_238"
-					amount: 270L
-					title: "{industrial_frontier.task.v2.p6.liquid_isotopes.u238.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.liquid_isotopes.title}"
-			x: 28d
-			y: 0d
-		}
-		{
-			dependencies: ["3A40ABAB6D92B027"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.waste_storage.purpose}"
-				"{industrial_frontier.quest.v2.p6.waste_storage.task}"
-				"{industrial_frontier.quest.v2.p6.waste_storage.proof_help.1}"
-			]
-			icon: "nuclearcraft:basic_barrel"
-			id: "3A16000000000004"
-			shape: "octagon"
-			size: 1.1d
-			tags: ["waste", "storage"]
-			tasks: [
-				{
-					id: "4A16000000000010"
-					block_type: 0
-					block: "nuclearcraft:basic_barrel"
-					value: 1L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.p6.waste_storage.place.objective}"
-					type: "questsadditions:place"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.waste_storage.title}"
-			x: 28d
-			y: 1.5d
-		}
-		{
-			dependencies: [
-				"3071000000000007"
-				"3A16000000000004"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.elements.nuclear.task}"
-				"{industrial_frontier.quest.v2.elements.nuclear.proof_help.1}"
-			]
-			icon: "nuclearcraft:basic_barrel"
-			id: "3071000000000009"
-			shape: "octagon"
-			size: 1d
-			tags: ["chemistry", "nuclear", "closed_cycle"]
-			tasks: [
-				{
-					id: "4071000000000009"
-					title: "{industrial_frontier.task.v2.elements.nuclear.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.elements.nuclear.title}"
-			x: 30d
-			y: -2.25d
-		}
-		{
-			dependencies: ["3A16000000000004"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.commissioning.purpose}"
-				"{industrial_frontier.quest.v2.p6.commissioning.task}"
-				"{industrial_frontier.quest.v2.p6.commissioning.proof_help.1}"
-			]
-			icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/future/civil_nuclear_cycle.png"}}
-			id: "3BAFBFB90BC9F168"
-			shape: "gear"
-			size: 1.8d
-			tags: ["if_commissioning_p6", "commissioning"]
-			tasks: [
-				{
-					id: "4F03B79A251B77C5"
-					item: {
-						Count: 1
-						id: "nuclearcraft:fission_reactor_controller"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.commissioning.reactor.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.commissioning.title}"
-			x: 30d
-			y: -0.75d
-		}
-		{
-			dependencies: ["3A16000000000017"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.decay_product.task}"
-				"{industrial_frontier.quest.v2.p6.decay_product.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.decay_product.optional_note}"
-			]
-			icon: "nuclearcraft:radium_dust"
-			id: "3A16000000000018"
-			optional: true
-			shape: "circle"
-			size: 1d
-			tags: ["optional", "isotopes", "decay", "product"]
-			tasks: [
-				{
-					id: "4A16000000000036"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/radium_dusts)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.decay_product.radium.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.decay_product.title}"
-			x: 30d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A16000000000022"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.purpose}"
-				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.task}"
-				"{industrial_frontier.quest.v2.p6.fuel_reactor_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:chemical_reactor"
-			id: "3A1600000000001B"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "fuel", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000044"
-					item: {
-						Count: 1
-						id: "nuclearcraft:chemical_reactor"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.fuel_reactor_setup.reuse.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.fuel_reactor_setup.title}"
-			x: 30d
-			y: 2.25d
-		}
-		{
-			dependencies: [
-				"3071000000000003"
-				"3071000000000008"
-				"3071000000000009"
-				"3A71000000000004"
-				"3A70000000000007"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.elements.index.purpose}"
-				"{industrial_frontier.quest.v2.elements.index.task}"
-				"{industrial_frontier.quest.v2.elements.index.proof_help.1}"
-			]
-			icon: "minecraft:written_book"
-			id: "3A71000000000005"
-			shape: "hexagon"
-			size: 1d
-			tags: ["chemistry", "index", "summary"]
-			tasks: [
-				{
-					id: "4A71000000000005"
-					title: "{industrial_frontier.task.v2.elements.index.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.elements.index.title}"
-			x: 32d
-			y: -3d
-		}
-		{
-			dependencies: ["3BAFBFB90BC9F168"]
-			description: [
-				"{industrial_frontier.quest.v2.marathon.intro.purpose}"
-				"{industrial_frontier.quest.v2.marathon.intro.task}"
-				"{industrial_frontier.quest.v2.marathon.intro.proof_help.1}"
-				"{industrial_frontier.quest.v2.marathon.intro.optional_note}"
-			]
-			icon: "minecraft:filled_map"
-			id: "3073000000000001"
-			optional: true
-			shape: "gear"
-			size: 1d
-			tags: ["marathon", "decision_framework", "optional"]
-			tasks: [
-				{
-					id: "4073000000000001"
-					title: "{industrial_frontier.task.v2.marathon.intro.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.marathon.intro.title}"
-			x: 32d
-			y: -1.5d
-		}
-		{
-			dependencies: ["3A1600000000001B"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.liquid_fuel.task}"
-				"{industrial_frontier.quest.v2.p6.liquid_fuel.proof_help.1}"
-			]
-			icon: "nuclearcraft:fuel_uranium_leu_235_bucket"
-			id: "3A16000000000023"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "fuel", "source_before_processed"]
-			tasks: [
-				{
-					id: "4A1600000000003F"
-					fluid: "nuclearcraft:fuel_uranium_leu_235"
-					amount: 90L
-					title: "{industrial_frontier.task.v2.p6.liquid_fuel.leu235.objective}"
-					type: "fluid"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.liquid_fuel.title}"
-			x: 32d
-			y: 0d
-		}
-		{
-			dependencies: [
-				"3A22000000000012"
-				"3A22000000000018"
-				"3A2200000000000A"
-				"3BAFBFB90BC9F168"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.settlement.atomic_services.purpose}"
-				"{industrial_frontier.quest.v2.settlement.atomic_services.task}"
-				"{industrial_frontier.quest.v2.settlement.atomic_services.proof_help.1}"
-				"{industrial_frontier.quest.v2.settlement.atomic_services.proof_help.2}"
-			]
-			icon: "nuclearcraft:fission_reactor_controller"
-			id: "3A22000000000014"
-			shape: "octagon"
-			size: 1.4d
-			tags: ["city", "p6", "utilities", "integration"]
-			tasks: [
-				{
-					id: "4B22000000000057"
-					fluid: "gtceu:distilled_water"
-					amount: 1000L
-					title: "{industrial_frontier.task.v2.settlement.atomic_services.water.objective}"
-					type: "fluid"
-				}
-				{
-					id: "4B22000000000058"
-					count: 8L
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/city)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.settlement.atomic_services.rations.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.settlement.atomic_services.title}"
-			x: 32d
-			y: 1.5d
-		}
-		{
-			dependencies: [
-				"3BAFBFB90BC9F168"
-				"3A22000000000012"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.settlement.multibuilder.purpose}"
-				"{industrial_frontier.quest.v2.settlement.multibuilder.task}"
-				"{industrial_frontier.quest.v2.settlement.multibuilder.proof_help.1}"
-				"{industrial_frontier.quest.v2.settlement.multibuilder.proof_help.2}"
-				"{industrial_frontier.quest.v2.settlement.multibuilder.optional_note}"
-			]
-			icon: "mbtool:mbtool"
-			id: "3A22000000000013"
-			optional: true
-			shape: "diamond"
-			size: 1d
-			tags: ["city", "p6", "construction", "anti_grind", "optional"]
-			tasks: [
-				{
-					id: "4B22000000000050"
-					item: {
-						Count: 1
-						id: "mbtool:mbtool"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.settlement.multibuilder.item.objective}"
-					type: "item"
-				}
-				{
-					id: "4B22000000000051"
-					block_type: 0
-					block: "nuclearcraft:fission_reactor_casing"
-					value: 8L
-					replace: false
-					replaced: "minecraft:air"
-					title: "{industrial_frontier.task.v2.settlement.multibuilder.casing.objective}"
-					type: "questsadditions:place"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.settlement.multibuilder.title}"
-			x: 32d
-			y: 3d
-		}
-		{
-			dependencies: ["3073000000000001"]
-			description: [
-				"{industrial_frontier.quest.v2.marathon.energy.purpose}"
-				"{industrial_frontier.quest.v2.marathon.energy.task}"
-				"{industrial_frontier.quest.v2.marathon.energy.proof_help.1}"
-				"{industrial_frontier.quest.v2.marathon.energy.optional_note}"
-			]
-			icon: "gtceu:lv_battery_buffer_4x"
-			id: "3073000000000002"
-			optional: true
-			shape: "rsquare"
-			size: 1d
-			tags: ["marathon", "energy", "comparison", "optional"]
-			tasks: [
-				{
-					id: "4073000000000002"
-					title: "{industrial_frontier.task.v2.marathon.energy.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.marathon.energy.title}"
-			x: 34d
-			y: -2.25d
-		}
-		{
-			dependencies: [
-				"3073000000000001"
-				"39399468A06BC9EC"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.marathon.logistics.purpose}"
-				"{industrial_frontier.quest.v2.marathon.logistics.task}"
-				"{industrial_frontier.quest.v2.marathon.logistics.proof_help.1}"
-				"{industrial_frontier.quest.v2.marathon.logistics.optional_note}"
-			]
-			icon: "create:track"
-			id: "3073000000000003"
-			optional: true
-			shape: "rsquare"
-			size: 1d
-			tags: ["marathon", "logistics", "comparison", "optional"]
-			tasks: [
-				{
-					id: "4073000000000003"
-					title: "{industrial_frontier.task.v2.marathon.logistics.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.marathon.logistics.title}"
-			x: 34d
-			y: -0.75d
-		}
-		{
-			dependencies: [
-				"3073000000000001"
-				"3BAFBFB90BC9F168"
-			]
-			description: [
-				"{industrial_frontier.quest.v2.marathon.nuclear.purpose}"
-				"{industrial_frontier.quest.v2.marathon.nuclear.task}"
-				"{industrial_frontier.quest.v2.marathon.nuclear.proof_help.1}"
-				"{industrial_frontier.quest.v2.marathon.nuclear.optional_note}"
-			]
-			icon: "nuclearcraft:fission_reactor_controller"
-			id: "3073000000000004"
-			optional: true
-			shape: "rsquare"
-			size: 1d
-			tags: ["marathon", "nuclear", "comparison", "optional"]
-			tasks: [
-				{
-					id: "4073000000000004"
-					title: "{industrial_frontier.task.v2.marathon.nuclear.read.objective}"
-					type: "checkmark"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.marathon.nuclear.title}"
-			x: 34d
-			y: 0.75d
-		}
-		{
-			dependencies: ["3A16000000000023"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.fuel_former_setup.task}"
-				"{industrial_frontier.quest.v2.p6.fuel_former_setup.proof_help.1}"
-			]
-			icon: "nuclearcraft:ingot_former"
-			id: "3A1600000000001C"
-			shape: "gear"
-			size: 1.1d
-			tags: ["fuel_cycle", "fuel", "machine_before_product"]
-			tasks: [
-				{
-					id: "4A16000000000032"
-					item: {
-						Count: 1
-						id: "nuclearcraft:ingot_former"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.fuel_setup.former_item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.fuel_former_setup.title}"
-			x: 34d
-			y: 2.25d
-		}
-		{
-			dependencies: ["3A1600000000001C"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.fuel_form.task}"
-				"{industrial_frontier.quest.v2.p6.fuel_form.proof_help.1}"
-			]
-			icon: "nuclearcraft:fuel_uranium_leu_235"
-			id: "3A16000000000002"
-			shape: "circle"
-			size: 1d
-			tags: ["fuel_cycle", "fuel"]
-			tasks: [
-				{
-					id: "4A16000000000006"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:reactor_fuel/uranium/leu-235)"
-						}
-					}
-					title: "{industrial_frontier.task.v2.p6.fuel_form.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.fuel_form.title}"
-			x: 36d
-			y: 0d
-		}
-		{
-			dependencies: ["3A16000000000002"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.purpose}"
-				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.task}"
-				"{industrial_frontier.quest.v2.p6.fuel_cell_hardware.proof_help.1}"
-			]
-			icon: "nuclearcraft:fission_reactor_solid_fuel_cell"
-			id: "3016000000000007"
-			shape: "diamond"
-			size: 1.1d
-			tags: ["fuel_cycle", "reactor_hardware"]
-			tasks: [
-				{
-					id: "4016000000000007"
-					item: {
-						Count: 1
-						id: "nuclearcraft:fission_reactor_solid_fuel_cell"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.fuel_cell_hardware.item.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.fuel_cell_hardware.title}"
-			x: 38d
-			y: 0d
-		}
-		{
-			dependencies: ["3016000000000007"]
-			description: [
-				"{industrial_frontier.quest.v2.p6.dosimetry.purpose}"
-				"{industrial_frontier.quest.v2.p6.dosimetry.task}"
-				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.1}"
-				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.2}"
-				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.3}"
-				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.4}"
-				"{industrial_frontier.quest.v2.p6.dosimetry.proof_help.5}"
-			]
-			icon: "nuclearcraft:geiger_counter"
-			id: "3358E71B3626219E"
-			shape: "octagon"
-			size: 1d
-			tags: ["safety", "dosimetry"]
-			tasks: [
-				{
-					id: "463D8F1A03E7071D"
-					item: {
-						Count: 1
-						id: "nuclearcraft:geiger_counter"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.dosimetry.counter.objective}"
-					type: "item"
-				}
-				{
-					id: "4BD91AA89E1EDED3"
-					item: {
-						Count: 1
-						id: "nuclearcraft:hazmat_mask"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.dosimetry.mask.objective}"
-					type: "item"
-				}
-				{
-					id: "4F8C09537C4E68E8"
-					item: {
-						Count: 1
-						id: "nuclearcraft:hazmat_chest"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.dosimetry.chest.objective}"
-					type: "item"
-				}
-				{
-					id: "42D8B55EFF70D968"
-					item: {
-						Count: 1
-						id: "nuclearcraft:hazmat_pants"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.dosimetry.pants.objective}"
-					type: "item"
-				}
-				{
-					id: "427220E7E6FF484F"
-					item: {
-						Count: 1
-						id: "nuclearcraft:hazmat_boots"
-					}
-					consume_items: false
-					title: "{industrial_frontier.task.v2.p6.dosimetry.boots.objective}"
-					type: "item"
-				}
-			]
-			title: "{industrial_frontier.quest.v2.p6.dosimetry.title}"
-			x: 40d
-			y: 0d
-		}
-	]
-	subtitle: [
-		"{industrial_frontier.chapter.v2.p6.subtitle.1}"
-		"{industrial_frontier.chapter.v2.p6.subtitle.2}"
-		"{industrial_frontier.chapter.v2.p6.subtitle.3}"
-	]
-	title: "{industrial_frontier.chapter.v2.p6.title}"
+default_hide_dependency_lines: false
+default_quest_shape: "square"
+filename: "16_p6"
+group: "1000000000000004"
+icon: "kubejs:quest_icon_p6"
+id: "2016000000000001"
+order_index: 16
+quest_links: [ ]
+quests: [
+{
+dependencies: ["39399468A06BC9EC"]
+description: [
+"{if.432e569..purpose}"
+"{if.432e569..task}"
+]
+icon: "nuclearcraft:fission_reactor_controller"
+id: "3016000000000001"
+shape: "gear"
+size: 1.3d
+tags: ["root", "nuclear"]
+tasks: [
+{
+id: "4016000000000001"
+title: "{if.6356282.o}"
+type: "checkmark"
+}
+]
+title: "{if.432e569..title}"
+x: 2d
+y: 0d
+}
+{
+dependencies: ["3016000000000001"]
+description: [
+"{if.123b1af..purpose}"
+"{if.123b1af..task}"
+]
+icon: "gtceu:hydrochloric_acid_bucket"
+id: "3A16000000000024"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
+tasks: [
+{
+id: "4A16000000000040"
+fluid: "gtceu:chlorine"
+amount: 1000L
+title: "{if.2e5802a.o}"
+type: "fluid"
+}
+{
+id: "4A16000000000041"
+fluid: "gtceu:hydrogen"
+amount: 1000L
+title: "{if.22e8906.o}"
+type: "fluid"
+}
+{
+id: "4A16000000000042"
+fluid: "gtceu:nitric_acid"
+amount: 250L
+title: "{if.26195bb.o}"
+type: "fluid"
+}
+]
+title: "{if.123b1af..title}"
+x: 2d
+y: -2d
+}
+{
+dependencies: ["3016000000000001"]
+description: [
+"{if.0807325..purpose}"
+"{if.0807325..task}"
+]
+icon: "nuclearcraft:uranium_chunk"
+id: "3A16000000000010"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "source", "uranium", "one_of"]
+tasks: [
+{
+id: "4A16000000000020"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/uranium_ores)"
+}
+}
+title: "{if.07dadb6.o}"
+type: "item"
+}
+]
+title: "{if.0807325..title}"
+x: 2d
+y: 2d
+}
+{
+dependencies: ["3016000000000001"]
+description: [
+"{if.9cf378b..purpose}"
+"{if.9cf378b..task}"
+]
+icon: "nuclearcraft:graphite_block"
+id: "38443CC596A66B7C"
+shape: "rsquare"
+size: 1d
+tags: ["materials", "shielding"]
+tasks: [
+{
+id: "4884C736CAFC4107"
+item: {
+Count: 1
+id: "nuclearcraft:graphite_block"
+}
+consume_items: false
+title: "{if.37b9d9d.o}"
+type: "item"
+}
+{
+id: "43F1BCF14B43BDC4"
+count: 2L
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/lead_plates)"
+}
+}
+title: "{if.125f601.o}"
+type: "item"
+}
+]
+title: "{if.9cf378b..title}"
+x: 2d
+y: -6d
+}
+{
+dependencies: ["3016000000000001"]
+description: [
+"{if.7db1b7f..task}"
+]
+icon: "nuclearcraft:technical_water_bucket"
+id: "3A16000000000028"
+shape: "rsquare"
+size: 1d
+tags: ["water", "reactor", "source_before_product"]
+tasks: [
+{
+id: "4A16000000000045"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/coal_dusts)"
+}
+}
+title: "{if.28de11d.o}"
+type: "item"
+}
+{
+id: "4A16000000000046"
+fluid: "minecraft:water"
+amount: 5000L
+title: "{if.ffc8900.o}"
+type: "fluid"
+}
+]
+title: "{if.7db1b7f..title}"
+x: 2d
+y: 12d
+}
+{
+dependencies: ["38443CC596A66B7C"]
+description: [
+"{if.4274795..purpose}"
+"{if.4274795..task}"
+]
+icon: "nuclearcraft:manufactory"
+id: "3016000000000003"
+shape: "rsquare"
+size: 1d
+tags: ["machine", "preparation"]
+tasks: [
+{
+id: "4016000000000003"
+item: {
+Count: 1
+id: "nuclearcraft:manufactory"
+}
+consume_items: false
+title: "{if.5c88ea2.o}"
+type: "item"
+}
+]
+title: "{if.4274795..title}"
+x: 4d
+y: -6d
+}
+{
+dependencies: ["3A16000000000024"]
+description: [
+"{if.97c5743..purpose}"
+"{if.97c5743..task}"
+]
+icon: "gtceu:hydrochloric_acid_bucket"
+id: "3A16000000000025"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
+tasks: [
+{
+id: "4A16000000000043"
+fluid: "gtceu:hydrochloric_acid"
+amount: 1000L
+title: "{if.75c8aa8.o}"
+type: "fluid"
+}
+]
+title: "{if.97c5743..title}"
+x: 4d
+y: -2d
+}
+{
+dependencies: [
+"3A16000000000010"
+"367768A6A9219BCB"
+]
+description: [
+"{if.e24e21e..purpose}"
+"{if.e24e21e..task}"
+]
+icon: "nuclearcraft:leacher"
+id: "3A16000000000011"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "leaching", "machine_before_product"]
+tasks: [
+{
+id: "4A16000000000021"
+item: {
+Count: 1
+id: "nuclearcraft:leacher"
+}
+consume_items: false
+title: "{if.ccff78d.o}"
+type: "item"
+}
+]
+title: "{if.e24e21e..title}"
+x: 8d
+y: 2d
+}
+{
+dependencies: [
+"3A16000000000028"
+"3A1600000000001A"
+]
+description: [
+"{if.d34222f..purpose}"
+"{if.d34222f..task}"
+]
+icon: "nuclearcraft:technical_water_bucket"
+id: "3A16000000000029"
+shape: "rsquare"
+size: 1d
+tags: ["water", "reactor", "processed_form"]
+tasks: [
+{
+id: "4A16000000000047"
+fluid: "nuclearcraft:technical_water"
+amount: 5000L
+title: "{if.f0f8f6c.o}"
+type: "fluid"
+}
+]
+title: "{if.d34222f..title}"
+x: 8d
+y: 12d
+}
+{
+dependencies: ["3016000000000003"]
+description: [
+"{if.2e717f4..task}"
+]
+icon: "nuclearcraft:alloy_smelter"
+id: "3A1600000000001E"
+shape: "rsquare"
+size: 1d
+tags: ["alloys", "machine", "machine_before_product"]
+tasks: [
+{
+id: "43315069119F5C0F"
+item: {
+Count: 1
+id: "nuclearcraft:alloy_smelter"
+}
+consume_items: false
+title: "{if.a5a2273.o}"
+type: "item"
+}
+]
+title: "{if.2e717f4..title}"
+x: 6d
+y: -6d
+}
+{
+dependencies: [
+"3A16000000000025"
+"3A16000000000011"
+]
+description: [
+"{if.f7ae005..purpose}"
+"{if.f7ae005..task}"
+]
+icon: "nuclearcraft:chemical_reactor"
+id: "3A16000000000026"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "chemistry", "machine_before_product"]
+tasks: [
+{
+id: "4A1600000000002F"
+item: {
+Count: 1
+id: "nuclearcraft:chemical_reactor"
+}
+consume_items: false
+title: "{if.dd09746.o}"
+type: "item"
+}
+]
+title: "{if.f7ae005..title}"
+x: 8d
+y: -2d
+}
+{
+dependencies: [
+"3A16000000000029"
+"3A16000000000004"
+]
+description: [
+"{if.83d9872..purpose}"
+"{if.83d9872..step.1}"
+"{if.83d9872..step.2}"
+"{if.83d9872..step.3}"
+"{if.83d9872..task}"
+"{if.83d9872..diagnostic.1}"
+"{if.83d9872..diagnostic.2}"
+]
+icon: "nuclearcraft:fission_reactor_controller"
+id: "35B8D3144F0654A2"
+shape: "rsquare"
+size: 1.2d
+tags: ["reactor", "place"]
+tasks: [
+{
+id: "4AC050678D11CAE3"
+block_type: 0
+block: "nuclearcraft:fission_reactor_controller"
+value: 1L
+replace: false
+replaced: "minecraft:air"
+title: "{if.28b2e1c.o}"
+type: "questsadditions:place"
+}
+{
+id: "424CF77FFBB42232"
+block_type: 0
+block: "nuclearcraft:fission_reactor_solid_fuel_cell"
+value: 1L
+replace: false
+replaced: "minecraft:air"
+title: "{if.7c87fc8.o}"
+type: "questsadditions:place"
+}
+]
+title: "{if.83d9872..title}"
+x: 42d
+y: 12d
+}
+{
+dependencies: [
+"3A16000000000011"
+"3A16000000000027"
+]
+description: [
+"{if.e02bbec..purpose}"
+"{if.e02bbec..task}"
+]
+icon: "nuclearcraft:uranium_slurry_bucket"
+id: "3A16000000000012"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "leaching", "product"]
+tasks: [
+{
+id: "4A16000000000024"
+fluid: "nuclearcraft:uranium_slurry"
+amount: 1000L
+title: "{if.58f7022.o}"
+type: "fluid"
+}
+]
+title: "{if.e02bbec..title}"
+x: 10d
+y: 2d
+}
+{
+dependencies: ["3A1600000000001E"]
+description: [
+"{if.4f48ebb..purpose}"
+"{if.4f48ebb..task}"
+]
+icon: "nuclearcraft:alloy_smelter"
+id: "367768A6A9219BCB"
+shape: "rsquare"
+size: 1d
+tags: ["alloys", "machine"]
+tasks: [
+{
+id: "40AD17A0B6A3742E"
+count: 2L
+item: {
+Count: 1
+id: "nuclearcraft:tough_alloy_ingot"
+}
+consume_items: false
+title: "{if.59c7aad.o}"
+type: "item"
+}
+]
+title: "{if.4f48ebb..title}"
+x: 8d
+y: -6d
+}
+{
+dependencies: ["3A16000000000026"]
+description: [
+"{if.1abe84f..purpose}"
+"{if.1abe84f..task}"
+]
+icon: "nuclearcraft:aqua_regia_acid_bucket"
+id: "3A16000000000027"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "chemistry", "acid", "source_before_product"]
+tasks: [
+{
+id: "4A16000000000023"
+fluid: "nuclearcraft:aqua_regia_acid"
+amount: 1000L
+title: "{if.2e65c8d.o}"
+type: "fluid"
+}
+]
+title: "{if.1abe84f..title}"
+x: 10d
+y: -2d
+}
+{
+dependencies: ["3A16000000000012"]
+description: [
+"{if.8303845..purpose}"
+"{if.8303845..task}"
+]
+icon: "nuclearcraft:centrifuge"
+id: "3A16000000000013"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "purification", "machine_before_product"]
+tasks: [
+{
+id: "4A16000000000025"
+item: {
+Count: 1
+id: "nuclearcraft:centrifuge"
+}
+consume_items: false
+title: "{if.b400b61.o}"
+type: "item"
+}
+]
+title: "{if.8303845..title}"
+x: 12d
+y: 2d
+}
+{
+dependencies: ["35B8D3144F0654A2"]
+description: [
+"{if.44be32c..purpose}"
+"{if.44be32c..step.1}"
+"{if.44be32c..step.2}"
+"{if.44be32c..step.3}"
+"{if.44be32c..task}"
+"{if.44be32c..diagnostic.1}"
+"{if.44be32c..diagnostic.2}"
+]
+icon: "nuclearcraft:fission_reactor_controller"
+id: "3A1600000000002A"
+shape: "rsquare"
+size: 1d
+tags: ["reactor", "commissioning", "boiling"]
+tasks: [
+{
+id: "4A1600000000004E"
+block_type: 0
+block: "nuclearcraft:fission_reactor_controller"
+value: 1L
+checkItem: false
+isItemInteraction: false
+title: "{if.e11eeb2.o}"
+type: "questsadditions:use"
+}
+]
+title: "{if.44be32c..title}"
+x: 44d
+y: 12d
+}
+{
+dependencies: ["3A1600000000002A"]
+description: [
+"{if.6a3f525..purpose}"
+"{if.6a3f525..task}"
+]
+icon: "nuclearcraft:high_pressure_steam_bucket"
+id: "3A16000000000020"
+shape: "rsquare"
+size: 1d
+tags: ["heat", "steam", "source_before_processed"]
+tasks: [
+{
+id: "4A1600000000003B"
+fluid: "nuclearcraft:high_pressure_steam"
+amount: 1000L
+title: "{if.4925a25.o}"
+type: "fluid"
+}
+]
+title: "{if.6a3f525..title}"
+x: 46d
+y: 12d
+}
+{
+dependencies: ["3A16000000000013"]
+description: [
+"{if.a55087a..purpose}"
+"{if.a55087a..task}"
+]
+icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/gtceu/uranium_preparation.png"}}
+id: "308477F0C074B847"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "purification"]
+tasks: [
+{
+id: "48E07C0707994F62"
+fluid: "nuclearcraft:uranium_clean_slurry"
+amount: 800L
+title: "{if.a19b8ed.o}"
+type: "fluid"
+}
+]
+title: "{if.a55087a..title}"
+x: 14d
+y: 2d
+}
+{
+dependencies: ["308477F0C074B847"]
+description: [
+"{if.4fc8614..purpose}"
+"{if.4fc8614..task}"
+]
+icon: "nuclearcraft:crystallizer"
+id: "3A16000000000014"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "conversion", "machine_before_product"]
+tasks: [
+{
+id: "4A16000000000027"
+item: {
+Count: 1
+id: "nuclearcraft:crystallizer"
+}
+consume_items: false
+title: "{if.eaeae14.o}"
+type: "item"
+}
+]
+title: "{if.4fc8614..title}"
+x: 16d
+y: 2d
+}
+{
+dependencies: ["3A16000000000020"]
+description: [
+"{if.48295c6..purpose}"
+"{if.48295c6..task}"
+]
+icon: "nuclearcraft:turbine_controller"
+id: "3A16000000000021"
+shape: "rsquare"
+size: 1.2d
+tags: ["power", "turbine", "machine_before_product"]
+tasks: [
+{
+id: "439B81E54471DE6C"
+block_type: 0
+block: "nuclearcraft:turbine_controller"
+value: 1L
+replace: false
+replaced: "minecraft:air"
+title: "{if.34eff1c.o}"
+type: "questsadditions:place"
+}
+]
+title: "{if.48295c6..title}"
+x: 46d
+y: 16d
+}
+{
+dependencies: ["3A16000000000021"]
+description: [
+"{if.09c39ca..purpose}"
+"{if.09c39ca..task}"
+]
+icon: "nuclearcraft:turbine_controller"
+id: "338A637EDDC24C44"
+shape: "rsquare"
+size: 1d
+tags: ["power", "turbine"]
+tasks: [
+{
+id: "484FF829167E8BED"
+fluid: "nuclearcraft:low_pressure_steam"
+amount: 1000L
+title: "{if.18d8d87.o}"
+type: "fluid"
+}
+{
+id: "4A1600000000004F"
+value: 10000L
+title: "{if.1234691.o}"
+type: "forge_energy"
+}
+]
+title: "{if.09c39ca..title}"
+x: 48d
+y: 16d
+}
+{
+dependencies: ["3A16000000000014"]
+description: [
+"{if.057308e..purpose}"
+"{if.057308e..task}"
+]
+icon: "nuclearcraft:uranium_dust"
+id: "3A16000000000019"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "conversion", "source_before_product"]
+tasks: [
+{
+id: "4A16000000000037"
+count: 4L
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/uranium_dusts)"
+}
+}
+title: "{if.24e6188.o}"
+type: "item"
+}
+]
+title: "{if.057308e..title}"
+x: 18d
+y: 2d
+}
+{
+dependencies: ["367768A6A9219BCB"]
+description: [
+"{if.8ca6117..purpose}"
+"{if.8ca6117..task}"
+]
+icon: "nuclearcraft:fluid_enricher"
+id: "3A1600000000001A"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "conversion", "machine_before_product"]
+tasks: [
+{
+id: "4A16000000000029"
+item: {
+Count: 1
+id: "nuclearcraft:fluid_enricher"
+}
+consume_items: false
+title: "{if.b2a8816.o}"
+type: "item"
+}
+]
+title: "{if.8ca6117..title}"
+x: 8d
+y: 10d
+}
+{
+dependencies: ["338A637EDDC24C44"]
+description: [
+"{if.96dced6..purpose}"
+"{if.96dced6..task}"
+]
+icon: "nuclearcraft:low_quality_steam_bucket"
+id: "3A1600000000002B"
+shape: "rsquare"
+size: 1d
+tags: ["power", "turbine", "closed_loop"]
+tasks: [
+{
+id: "4A1600000000004A"
+fluid: "nuclearcraft:low_quality_steam"
+amount: 1000L
+title: "{if.d8b81f9.o}"
+type: "fluid"
+}
+]
+title: "{if.96dced6..title}"
+x: 50d
+y: 16d
+}
+{
+dependencies: [
+"3A16000000000019"
+"3A1600000000001A"
+]
+description: [
+"{if.adf741f..purpose}"
+"{if.adf741f..task}"
+]
+icon: "nuclearcraft:uranium_oxide_bucket"
+id: "3A16000000000001"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "conversion"]
+tasks: [
+{
+id: "4A16000000000003"
+fluid: "nuclearcraft:uranium_oxide"
+amount: 270L
+title: "{if.61f53f4.o}"
+type: "fluid"
+}
+]
+title: "{if.adf741f..title}"
+x: 18d
+y: 10d
+}
+{
+dependencies: ["3A1600000000002B"]
+description: [
+"{if.8efa5ab..purpose}"
+"{if.8efa5ab..task}"
+]
+icon: "nuclearcraft:heat_exchanger_controller"
+id: "3415FA3A4B96A721"
+shape: "rsquare"
+size: 1d
+tags: ["heat", "closed_loop"]
+tasks: [
+{
+id: "480C70143A61F39E"
+block_type: 0
+block: "nuclearcraft:heat_exchanger_controller"
+value: 1L
+replace: false
+replaced: "minecraft:air"
+title: "{if.602817d.o}"
+type: "questsadditions:place"
+}
+]
+title: "{if.8efa5ab..title}"
+x: 52d
+y: 16d
+}
+{
+dependencies: ["3415FA3A4B96A721"]
+description: [
+"{if.32309b2..purpose}"
+"{if.32309b2..task}"
+]
+icon: "nuclearcraft:technical_water_bucket"
+id: "3A1600000000002C"
+shape: "rsquare"
+size: 1d
+tags: ["closed_loop", "water", "commissioning"]
+tasks: [
+{
+id: "4A16000000000050"
+fluid: "nuclearcraft:technical_water"
+amount: 1000L
+title: "{if.509609d.o}"
+type: "fluid"
+}
+{
+id: "4A16000000000051"
+block_type: 0
+block: "nuclearcraft:heat_exchanger_controller"
+value: 1L
+checkItem: false
+isItemInteraction: false
+title: "{if.41cfd21.o}"
+type: "questsadditions:use"
+}
+]
+title: "{if.32309b2..title}"
+x: 54d
+y: 16d
+}
+{
+dependencies: ["3A16000000000001"]
+description: [
+"{if.f5942cb..purpose}"
+"{if.f5942cb..task}"
+]
+icon: "nuclearcraft:yellowcake_dust"
+id: "3A1600000000001F"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "conversion", "crystallizer_reuse", "source_before_product"]
+tasks: [
+{
+id: "4A16000000000030"
+count: 10L
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:quest_sources/yellowcake_dusts)"
+}
+}
+title: "{if.74bfd05.o}"
+type: "item"
+}
+]
+title: "{if.f5942cb..title}"
+x: 20d
+y: 10d
+}
+{
+dependencies: ["3A1600000000001F"]
+description: [
+"{if.588377b..task}"
+]
+icon: "nuclearcraft:isotope_separator"
+id: "3A16000000000015"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "enrichment", "machine_before_product"]
+tasks: [
+{
+id: "4A1600000000002B"
+item: {
+Count: 1
+id: "nuclearcraft:isotope_separator"
+}
+consume_items: false
+title: "{if.97baeb1.o}"
+type: "item"
+}
+]
+title: "{if.588377b..title}"
+x: 22d
+y: 10d
+}
+{
+dependencies: ["3A16000000000020"]
+description: [
+"{if.92007ed..purpose}"
+"{if.92007ed..task}"
+]
+icon: "nuclearcraft:depleted_fuel_uranium_leu_235"
+id: "3A16000000000003"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "spent_fuel"]
+tasks: [
+{
+id: "4A1600000000000D"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:depleted_reactor_fuel/uranium/leu-235)"
+}
+}
+title: "{if.9cbca36.o}"
+type: "item"
+}
+]
+title: "{if.92007ed..title}"
+x: 46d
+y: 8d
+}
+{
+dependencies: ["3A16000000000015"]
+description: [
+"{if.2a24bc5..purpose}"
+"{if.2a24bc5..task}"
+]
+icon: "nuclearcraft:isotope_separator"
+id: "368B35F2402D0C6F"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "enrichment"]
+tasks: [
+{
+id: "43522B3F0EB6B196"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/235)"
+}
+}
+title: "{if.d2d2334.o}"
+type: "item"
+}
+{
+id: "4BF4EE28F82F2DE9"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/238)"
+}
+}
+title: "{if.7d6fb57.o}"
+type: "item"
+}
+]
+title: "{if.2a24bc5..title}"
+x: 24d
+y: 10d
+}
+{
+dependencies: ["3A16000000000003"]
+description: [
+"{if.03d2178..purpose}"
+"{if.03d2178..task}"
+]
+icon: "nuclearcraft:fuel_reprocessor"
+id: "3A1600000000001D"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "reprocessing", "machine_before_product"]
+tasks: [
+{
+id: "4466E6169418A105"
+item: {
+Count: 1
+id: "nuclearcraft:fuel_reprocessor"
+}
+consume_items: false
+title: "{if.f999aa9.o}"
+type: "item"
+}
+]
+title: "{if.03d2178..title}"
+x: 48d
+y: 8d
+}
+{
+dependencies: ["368B35F2402D0C6F"]
+description: [
+"{if.dac63c1..purpose}"
+"{if.dac63c1..task}"
+]
+icon: "nuclearcraft:melter"
+id: "3A16000000000016"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "fuel", "machine_before_product"]
+tasks: [
+{
+id: "4A1600000000002D"
+item: {
+Count: 1
+id: "nuclearcraft:melter"
+}
+consume_items: false
+title: "{if.bb8fe7e.o}"
+type: "item"
+}
+]
+title: "{if.dac63c1..title}"
+x: 26d
+y: 10d
+}
+{
+dependencies: ["3A1600000000001D"]
+description: [
+"{if.86abf27..purpose}"
+"{if.86abf27..task}"
+]
+icon: "nuclearcraft:fuel_reprocessor"
+id: "3A40ABAB6D92B027"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "reprocessing"]
+tasks: [
+{
+id: "46B829C344E02905"
+count: 4L
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/uranium/238)"
+}
+}
+title: "{if.ef7ed6f.o}"
+type: "item"
+}
+{
+id: "48D71AB82F1EE281"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/plutonium/239)"
+}
+}
+title: "{if.c50bb55.o}"
+type: "item"
+}
+]
+title: "{if.86abf27..title}"
+x: 50d
+y: 8d
+}
+{
+dependencies: ["3A40ABAB6D92B027"]
+description: [
+"{if.ad6b839..purpose}"
+"{if.ad6b839..task}"
+]
+icon: "nuclearcraft:caesium_137_dust"
+id: "3A1600000000002D"
+shape: "rsquare"
+size: 1.1d
+tags: ["spent_fuel", "waste", "storage"]
+tasks: [
+{
+id: "4A16000000000053"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/plutonium/242)"
+}
+}
+title: "{if.4975701.o}"
+type: "item"
+}
+{
+id: "4A16000000000054"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:isotopes/americium/243)"
+}
+}
+title: "{if.b9bc229.o}"
+type: "item"
+}
+{
+id: "4A16000000000055"
+item: {
+Count: 1
+id: "nuclearcraft:strontium_90_dust"
+}
+consume_items: false
+title: "{if.dba0c73.o}"
+type: "item"
+}
+{
+id: "4A16000000000056"
+item: {
+Count: 1
+id: "nuclearcraft:caesium_137_dust"
+}
+consume_items: false
+title: "{if.bc6b61c.o}"
+type: "item"
+}
+]
+title: "{if.ad6b839..title}"
+x: 52d
+y: 8d
+}
+{
+dependencies: ["3A40ABAB6D92B027"]
+description: [
+"{if.5fb5895..task}"
+"{if.5fb5895..optional_note}"
+]
+icon: "nuclearcraft:decay_hastener"
+id: "3A16000000000017"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["optional", "isotopes", "decay", "machine_before_product"]
+tasks: [
+{
+id: "4A16000000000034"
+item: {
+Count: 1
+id: "nuclearcraft:decay_hastener"
+}
+consume_items: false
+title: "{if.c9f1711.o}"
+type: "item"
+}
+]
+title: "{if.5fb5895..title}"
+x: 50d
+y: 4d
+}
+{
+dependencies: ["3A16000000000016"]
+description: [
+"{if.98bfea1..purpose}"
+"{if.98bfea1..task}"
+]
+icon: "nuclearcraft:uranium_235_bucket"
+id: "3A16000000000022"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "fuel", "source_before_processed"]
+tasks: [
+{
+id: "4A1600000000003D"
+fluid: "nuclearcraft:uranium_235"
+amount: 30L
+title: "{if.99f9bb1.o}"
+type: "fluid"
+}
+{
+id: "4A1600000000003E"
+fluid: "nuclearcraft:uranium_238"
+amount: 270L
+title: "{if.364a85c.o}"
+type: "fluid"
+}
+]
+title: "{if.98bfea1..title}"
+x: 28d
+y: 10d
+}
+{
+dependencies: ["3358E71B3626219E"]
+description: [
+"{if.5d3f3db..purpose}"
+"{if.5d3f3db..task}"
+]
+icon: "nuclearcraft:basic_barrel"
+id: "3A16000000000004"
+shape: "rsquare"
+size: 1d
+tags: ["waste", "storage"]
+tasks: [
+{
+id: "4A16000000000010"
+block_type: 0
+block: "nuclearcraft:basic_barrel"
+value: 1L
+replace: false
+replaced: "minecraft:air"
+title: "{if.4c2f1a3.o}"
+type: "questsadditions:place"
+}
+]
+title: "{if.5d3f3db..title}"
+x: 40d
+y: 12d
+}
+{
+dependencies: [
+"3071000000000007"
+"3A1600000000002D"
+]
+description: [
+"{if.ebdd6a3..task}"
+"{if.ebdd6a3..optional_note}"
+]
+icon: "nuclearcraft:basic_barrel"
+id: "3071000000000009"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["chemistry", "nuclear", "closed_cycle"]
+tasks: [
+{
+id: "4071000000000009"
+title: "{if.792ef6b.o}"
+type: "checkmark"
+}
+]
+title: "{if.ebdd6a3..title}"
+x: 52d
+y: 6d
+}
+{
+dependencies: [
+"3A1600000000002C"
+"3A1600000000002D"
+]
+description: [
+"{if.3d3d2d4..purpose}"
+"{if.3d3d2d4..task}"
+]
+icon: {Count: 1b, id: "ftbquests:custom_icon", tag: {Icon: "industrial_frontier:textures/gui/icons/process/future/civil_nuclear_cycle.png"}}
+id: "3BAFBFB90BC9F168"
+shape: "diamond"
+size: 1.8d
+tags: ["if_commissioning_p6", "commissioning"]
+tasks: [
+{
+id: "4A16000000000057"
+block_type: 0
+block: "nuclearcraft:fission_reactor_controller"
+value: 1L
+checkItem: false
+isItemInteraction: false
+title: "{if.304c6c8.o}"
+type: "questsadditions:use"
+}
+{
+id: "4A16000000000058"
+block_type: 0
+block: "nuclearcraft:turbine_controller"
+value: 1L
+checkItem: false
+isItemInteraction: false
+title: "{if.806eb21.o}"
+type: "questsadditions:use"
+}
+{
+id: "4A16000000000059"
+block_type: 0
+block: "nuclearcraft:fuel_reprocessor"
+value: 1L
+checkItem: false
+isItemInteraction: false
+title: "{if.9ec9098.o}"
+type: "questsadditions:use"
+}
+{
+id: "4A1600000000005A"
+block_type: 0
+block: "nuclearcraft:basic_barrel"
+value: 1L
+checkItem: false
+isItemInteraction: false
+title: "{if.da368b5.o}"
+type: "questsadditions:use"
+}
+]
+title: "{if.3d3d2d4..title}"
+x: 54d
+y: 8d
+}
+{
+dependencies: ["3A16000000000017"]
+description: [
+"{if.9bb808f..task}"
+"{if.9bb808f..optional_note}"
+]
+icon: "nuclearcraft:radium_dust"
+id: "3A16000000000018"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["optional", "isotopes", "decay", "product"]
+tasks: [
+{
+id: "4A16000000000036"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:materials/radium_dusts)"
+}
+}
+title: "{if.d747377.o}"
+type: "item"
+}
+]
+title: "{if.9bb808f..title}"
+x: 52d
+y: 4d
+}
+{
+dependencies: ["3A16000000000022"]
+description: [
+"{if.d97b12d..purpose}"
+"{if.d97b12d..task}"
+]
+icon: "nuclearcraft:chemical_reactor"
+id: "3A1600000000001B"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "fuel", "machine_before_product"]
+tasks: [
+{
+id: "4A1600000000004D"
+block_type: 0
+block: "nuclearcraft:chemical_reactor"
+value: 1L
+checkItem: false
+isItemInteraction: false
+title: "{if.e33b98c.o}"
+type: "questsadditions:use"
+}
+]
+title: "{if.d97b12d..title}"
+x: 30d
+y: 10d
+}
+{
+dependencies: [
+"3071000000000003"
+"3F15000000000001"
+"3071000000000009"
+"3A70000000000007"
+]
+description: [
+"{if.af11b91..task}"
+"{if.af11b91..optional_note}"
+]
+icon: "minecraft:written_book"
+id: "3A71000000000005"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["chemistry", "index", "summary"]
+tasks: [
+{
+id: "4A71000000000005"
+title: "{if.eb62098.o}"
+type: "checkmark"
+}
+]
+title: "{if.af11b91..title}"
+x: 54d
+y: 6d
+}
+{
+dependencies: ["3BAFBFB90BC9F168"]
+description: [
+"{if.25be424..task}"
+"{if.25be424..optional_note}"
+]
+icon: "minecraft:filled_map"
+id: "3073000000000001"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["marathon", "decision_framework", "optional"]
+tasks: [
+{
+id: "4073000000000001"
+title: "{if.d473fc8.o}"
+type: "checkmark"
+}
+]
+title: "{if.25be424..title}"
+x: 56d
+y: 8d
+}
+{
+dependencies: ["3A1600000000001B"]
+description: [
+"{if.9121f59..purpose}"
+"{if.9121f59..task}"
+]
+icon: "nuclearcraft:fuel_uranium_leu_235_bucket"
+id: "3A16000000000023"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "fuel", "source_before_processed"]
+tasks: [
+{
+id: "4A1600000000003F"
+fluid: "nuclearcraft:fuel_uranium_leu_235"
+amount: 90L
+title: "{if.bb77aff.o}"
+type: "fluid"
+}
+]
+title: "{if.9121f59..title}"
+x: 32d
+y: 10d
+}
+{
+dependencies: [
+"3A22000000000012"
+"3A22000000000018"
+"3A2200000000000A"
+"3BAFBFB90BC9F168"
+]
+description: [
+"{if.49e5a2b..purpose}"
+"{if.49e5a2b..task}"
+"{if.49e5a2b..optional_note}"
+]
+icon: "nuclearcraft:fission_reactor_controller"
+id: "3A22000000000014"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["city", "p6", "utilities", "integration"]
+tasks: [
+{
+id: "4B22000000000057"
+fluid: "gtceu:distilled_water"
+amount: 1000L
+title: "{if.866ae4a.o}"
+type: "fluid"
+}
+{
+id: "4B22000000000058"
+count: 8L
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(industrial_frontier:rations/city)"
+}
+}
+title: "{if.623d766.o}"
+type: "item"
+}
+]
+title: "{if.49e5a2b..title}"
+x: 54d
+y: 10d
+}
+{
+dependencies: [
+"3BAFBFB90BC9F168"
+"3A22000000000012"
+]
+description: [
+"{if.edcb8fd..purpose}"
+"{if.edcb8fd..task}"
+"{if.edcb8fd..optional_note}"
+]
+icon: "mbtool:mbtool"
+id: "3A22000000000013"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["city", "p6", "construction", "anti_grind", "optional"]
+tasks: [
+{
+id: "4B22000000000050"
+item: {
+Count: 1
+id: "mbtool:mbtool"
+}
+consume_items: false
+title: "{if.b7dfb4a.o}"
+type: "item"
+}
+{
+id: "4B22000000000051"
+block_type: 0
+block: "nuclearcraft:fission_reactor_casing"
+value: 8L
+replace: false
+replaced: "minecraft:air"
+title: "{if.f1f195a.o}"
+type: "questsadditions:place"
+}
+]
+title: "{if.edcb8fd..title}"
+x: 54d
+y: 12d
+}
+{
+dependencies: ["3073000000000001"]
+description: [
+"{if.35fd76b..task}"
+"{if.35fd76b..optional_note}"
+]
+icon: "gtceu:lv_battery_buffer_4x"
+id: "3073000000000002"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["marathon", "energy", "comparison", "optional"]
+tasks: [
+{
+id: "4073000000000002"
+title: "{if.cac56fa.o}"
+type: "checkmark"
+}
+]
+title: "{if.35fd76b..title}"
+x: 56d
+y: 2d
+}
+{
+dependencies: [
+"3073000000000001"
+"39399468A06BC9EC"
+]
+description: [
+"{if.e954d6d..task}"
+"{if.e954d6d..optional_note}"
+]
+icon: "create:track"
+id: "3073000000000003"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["marathon", "logistics", "comparison", "optional"]
+tasks: [
+{
+id: "4073000000000003"
+title: "{if.312f240.o}"
+type: "checkmark"
+}
+]
+title: "{if.e954d6d..title}"
+x: 56d
+y: 4d
+}
+{
+dependencies: ["3073000000000001"]
+description: [
+"{if.f9f667c..task}"
+"{if.f9f667c..optional_note}"
+]
+icon: "nuclearcraft:fission_reactor_controller"
+id: "3073000000000004"
+optional: true
+shape: "rsquare"
+size: 1d
+tags: ["marathon", "nuclear", "comparison", "optional"]
+tasks: [
+{
+id: "4073000000000004"
+title: "{if.5d3a4d2.o}"
+type: "checkmark"
+}
+]
+title: "{if.f9f667c..title}"
+x: 56d
+y: 6d
+}
+{
+dependencies: ["3A16000000000023"]
+description: [
+"{if.bb89776..task}"
+]
+icon: "nuclearcraft:ingot_former"
+id: "3A1600000000001C"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "fuel", "machine_before_product"]
+tasks: [
+{
+id: "4A16000000000032"
+item: {
+Count: 1
+id: "nuclearcraft:ingot_former"
+}
+consume_items: false
+title: "{if.2ca82ef.o}"
+type: "item"
+}
+]
+title: "{if.bb89776..title}"
+x: 34d
+y: 10d
+}
+{
+dependencies: ["3A1600000000001C"]
+description: [
+"{if.304e2e2..purpose}"
+"{if.304e2e2..task}"
+]
+icon: "nuclearcraft:fuel_uranium_leu_235"
+id: "3A16000000000002"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "fuel"]
+tasks: [
+{
+id: "4A16000000000006"
+item: {
+Count: 1
+id: "ftbfiltersystem:smart_filter"
+tag: {
+"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(nuclearcraft:reactor_fuel/uranium/leu-235)"
+}
+}
+title: "{if.fea3f1f.o}"
+type: "item"
+}
+]
+title: "{if.304e2e2..title}"
+x: 36d
+y: 10d
+}
+{
+dependencies: ["3A16000000000002"]
+description: [
+"{if.c358fa8..purpose}"
+"{if.c358fa8..task}"
+]
+icon: "nuclearcraft:fission_reactor_solid_fuel_cell"
+id: "3016000000000007"
+shape: "rsquare"
+size: 1d
+tags: ["fuel_cycle", "reactor_hardware"]
+tasks: [
+{
+id: "4016000000000007"
+item: {
+Count: 1
+id: "nuclearcraft:fission_reactor_solid_fuel_cell"
+}
+consume_items: false
+title: "{if.9b01dd6.o}"
+type: "item"
+}
+]
+title: "{if.c358fa8..title}"
+x: 38d
+y: 10d
+}
+{
+dependencies: ["3016000000000007"]
+description: [
+"{if.157bbef..purpose}"
+"{if.157bbef..task}"
+]
+icon: "nuclearcraft:geiger_counter"
+id: "3358E71B3626219E"
+shape: "rsquare"
+size: 1d
+tags: ["safety", "dosimetry"]
+tasks: [
+{
+id: "463D8F1A03E7071D"
+item: {
+Count: 1
+id: "nuclearcraft:geiger_counter"
+}
+consume_items: false
+title: "{if.252ca8a.o}"
+type: "item"
+}
+{
+id: "4A16000000000052"
+item: {
+Count: 1
+id: "nuclearcraft:dosimeter"
+}
+consume_items: false
+title: "{if.6373d21.o}"
+type: "item"
+}
+{
+id: "4BD91AA89E1EDED3"
+item: {
+Count: 1
+id: "nuclearcraft:hazmat_mask"
+}
+consume_items: false
+title: "{if.8a019dd.o}"
+type: "item"
+}
+{
+id: "4F8C09537C4E68E8"
+item: {
+Count: 1
+id: "nuclearcraft:hazmat_chest"
+}
+consume_items: false
+title: "{if.930fa27.o}"
+type: "item"
+}
+{
+id: "42D8B55EFF70D968"
+item: {
+Count: 1
+id: "nuclearcraft:hazmat_pants"
+}
+consume_items: false
+title: "{if.006ec90.o}"
+type: "item"
+}
+{
+id: "427220E7E6FF484F"
+item: {
+Count: 1
+id: "nuclearcraft:hazmat_boots"
+}
+consume_items: false
+title: "{if.0e9b415.o}"
+type: "item"
+}
+]
+title: "{if.157bbef..title}"
+x: 40d
+y: 10d
+}
+]
+subtitle: [
+"{if.a4365f9..subtitle.1}"
+"{if.a4365f9..subtitle.2}"
+"{if.a4365f9..subtitle.3}"
+]
+title: "{if.a4365f9..title}"
 }
